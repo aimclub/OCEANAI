@@ -1,0 +1,2 @@
+include ocean/modules/locales/en/LC_MESSAGES/*.mo
+include ocean/modules/locales/ru/LC_MESSAGES/*.mo
