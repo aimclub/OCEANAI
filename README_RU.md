@@ -1,4 +1,4 @@
-# [ocean](https://github.com/DmitryRyumin/ocean/blob/main/README_RU.md)
+# [OCEAN](https://github.com/DmitryRyumin/ocean/blob/main/README_RU.md)
 
 ![PyPI](https://img.shields.io/pypi/v/ocean)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/ocean)
