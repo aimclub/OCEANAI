@@ -7,7 +7,7 @@ MIN_PYTHON_VERSION = (3, 9)
 if sys.version_info[:2] < MIN_PYTHON_VERSION:
     raise RuntimeError('Python version required = {}.{}'.format(MIN_PYTHON_VERSION[0], MIN_PYTHON_VERSION[1]))
 
-import ocean
+import oceanai
 
 REQUIRED_PACKAGES = [
 
@@ -37,15 +37,15 @@ Topic :: Scientific/Engineering :: Image Recognition
 Topic :: Software Development
 Topic :: Software Development :: Libraries
 Topic :: Software Development :: Libraries :: Python Modules
-Topic :: Software Development :: Documentation
-Topic :: Software Development :: Documentation :: Sphinx
-Topic :: Software Development :: Sound/Audio
-Topic :: Software Development :: Sound/Audio :: Analysis
-Topic :: Software Development :: Sound/Audio :: Speech
+Topic :: Documentation
+Topic :: Documentation :: Sphinx
+Topic :: Multimedia :: Sound/Audio
+Topic :: Multimedia :: Sound/Audio :: Analysis
+Topic :: Multimedia :: Sound/Audio :: Speech
 Topic :: Software Development :: Libraries
-Topic :: Software Development :: Python Modules
+Topic :: Software Development :: Libraries :: Python Modules
 Topic :: Software Development :: Localization
-Topic :: Software Development :: Utilities
+Topic :: Utilities
 Operating System :: MacOS :: MacOS X
 Operating System :: Microsoft :: Windows
 Operating System :: POSIX :: Linux
@@ -58,20 +58,20 @@ with open('README.md', 'r') as fh:
     long_description = fh.read()
 
     setup(
-        name = ocean.__name__,
+        name = oceanai.__name__,
         packages = find_packages(),
-        license = ocean.__license__,
-        version = ocean.__release__,
-        author = ocean.__author__en__,
-        author_email = ocean.__email__,
-        maintainer = ocean.__maintainer__en__,
-        maintainer_email = ocean.__maintainer_email__,
-        url = ocean.__uri__,
-        description = ocean.__summary__,
+        license = oceanai.__license__,
+        version = oceanai.__release__,
+        author = oceanai.__author__en__,
+        author_email = oceanai.__email__,
+        maintainer = oceanai.__maintainer__en__,
+        maintainer_email = oceanai.__maintainer_email__,
+        url = oceanai.__uri__,
+        description = oceanai.__summary__,
         long_description = long_description,
         long_description_content_type = 'text/markdown',
         install_requires=REQUIRED_PACKAGES,
-        keywords = ['big5', 'MachineLearning', 'Statistics', 'ComputerVision', 'ArtificialIntelligence',
+        keywords = ['oceanai', 'MachineLearning', 'Statistics', 'ComputerVision', 'ArtificialIntelligence',
                     'Preprocessing'],
         include_package_data = True,
         classifiers = [_f for _f in CLASSIFIERS.split('\n') if _f],
@@ -80,9 +80,9 @@ with open('README.md', 'r') as fh:
             'console_scripts': [],
         },
         project_urls = {
-            'Bug Reports': 'https://github.com/DmitryRyumin/ocean/issues',
-            'Documentation': 'https://ocean.readthedocs.io',
-            'Source Code': 'https://github.com/DmitryRyumin/ocean/tree/main/ocean',
-            'Download': 'https://github.com/DmitryRyumin/ocean/tags',
+            'Bug Reports': 'https://github.com/DmitryRyumin/oceanai/issues',
+            'Documentation': 'https://oceanai.readthedocs.io',
+            'Source Code': 'https://github.com/DmitryRyumin/oceanai/tree/main/ocean',
+            'Download': 'https://github.com/DmitryRyumin/oceanai/tags',
         },
     )

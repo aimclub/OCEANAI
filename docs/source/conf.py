@@ -44,24 +44,24 @@ sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 # Импорт проекта
 # ######################################################################################################################
 
-import ocean
+import oceanai
 
 # ######################################################################################################################
 # Информация о проекте (Project information)
 # ######################################################################################################################
 
 # Название задокументированного проекта
-project = ocean.__title__
+project = oceanai.__title__
 
 # Автор(ы) проекта
-author = ocean.__author__en__
+author = oceanai.__author__en__
 
 # Авторские права
-copyright = ocean.__copyright__
+copyright = oceanai.__copyright__
 
 # Версия проекта
-version = ocean.__version__
-release = ocean.__release__
+version = oceanai.__version__
+release = oceanai.__release__
 
 # ######################################################################################################################
 # Основные настройки (General configuration)
@@ -126,7 +126,7 @@ autodoc_default_options = {
 autodoc_mock_imports = []
 
 github_username = 'dmitryryumin'
-github_repository = 'ocean'
+github_repository = 'oceanai'
 
 panels_add_bootstrap_css = True
 panels_delimiters = (r"^\-{3,}$", r"^\^{3,}$", r"^\+{3,}$")
@@ -168,5 +168,5 @@ latex_elements = {
 }
 
 latex_documents = [
-  ('index', 'PDF.tex', u'PDF', u'ocean', 'manual'),
+  ('index', 'PDF.tex', u'PDF', u'oceanai', 'manual'),
 ]

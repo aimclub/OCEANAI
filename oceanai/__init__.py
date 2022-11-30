@@ -3,9 +3,9 @@ __all__ = (
     '__license__', '__copyright__', '__maintainer__ru__', '__maintainer__en__', '__maintainer_email__'
 )
 
-__title__ = 'ocean'
-__summary__ = 'ocean'
-__uri__ = 'https://github.com/DmitryRyumin/ocean'
+__title__ = 'oceanai'
+__summary__ = 'oceanai'
+__uri__ = 'https://github.com/DmitryRyumin/oceanai'
 
 __version__ = '1.0'
 __release__ = __version__ + '.0-a0'

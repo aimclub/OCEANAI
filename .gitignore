@@ -168,8 +168,8 @@ dmypy.json
 .pyre/
 
 # Custom
-ocean/samples/
-ocean/models/
-ocean/dataset/
-ocean/__garbage__.py
-ocean/samples/__test__.py
+oceanai/samples/
+oceanai/models/
+oceanai/dataset/
+oceanai/__garbage__.py
+oceanai/samples/__test__.py
