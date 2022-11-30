@@ -13,7 +13,7 @@
 
 ---
 
->  **[ocean](https://github.com/DmitryRyumin/ocean)** - is an open-source library consisting of a set of algorithms for intellectual analysis of human behavior based on its multimodal data for automatic human personality traits assessment to perform professional duties.
+>  **[OCEAN](https://github.com/DmitryRyumin/ocean)** - is an open-source library consisting of a set of algorithms for intellectual analysis of human behavior based on its multimodal data for automatic human personality traits assessment to perform professional duties.
 
 ---
 
