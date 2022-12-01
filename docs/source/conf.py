@@ -80,7 +80,6 @@ extensions = [
     'sphinx_toolbox.sidebar_links',
     'sphinx_toolbox.github',
     'sphinx_design',
-    'nbsphinx',
 ]
 
 # Локализация (язык): https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-language
