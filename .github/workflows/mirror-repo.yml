@@ -20,7 +20,7 @@ jobs:
         with:
           fetch-depth: 0
       - id: mirror
-        uses: DmitryRyumin/OCEANAI/.github/workflows/mirror-repo.yml@main
+        uses: DmitryRyumin/OCEANAI/mirror-repo@main
         continue-on-error: true
         with:
           REMOTE: ${{ inputs.GITLAB_URL }}
