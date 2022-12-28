@@ -1,0 +1,68 @@
+# English translation.
+# Copyright (C) 2022. Speech and Multimodal Interfaces Laboratory Team
+# This file is distributed under the same license as the big5 package.
+# Elena Ryumina <ryumina_ev@mail.ru>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  1.0\n"
+"Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
+"POT-Creation-Date: 2022-12-01 11:06+0300\n"
+"PO-Revision-Date: 2022-12-01 09:13+0300\n"
+"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin <dl_03.03.1991@mail.ru>"
+"<dl_03.03.1991@mail.ru>\n"
+"Language-Team: English <ryumina_ev@mail.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../source/faq.rst:2 9931a6406c1447f68f3ac2492bb12f1e
+msgid "Ответы на часто задаваемые вопросы"
+msgstr "FAQ"
+
+#: ../../source/faq.rst:4 0136f00c4454474bbc2fdffc9a9b38ab
+msgid "Это список часто задаваемых вопросов о `OCEANAI` и ответов на них."
+msgstr "This is a list of FAQ about `OCEANAI` and the answers to them."
+
+#: ../../source/faq.rst:-1 57285f82b25847c7888f4d73a1fc7c88
+msgid "`OCEANAI` это?"
+msgstr "What is `OCEANAI`?"
+
+#: ../../source/faq.rst:8 c976ad44f879460398b784c19bdc053a
+msgid ""
+"*Библиотека с открытым исходным кодом, состоящая из набора алгоритмов "
+"интеллектуального анализа поведения человека на основе его "
+"мультимодальных данных для автоматического оценивания уровня отдельных "
+"персональных качеств личности человека для выполнения профессиональных "
+"обязанностей. Библиотека оценивает 5 качеств: открытость опыту, "
+"добросовестность, экстраверсия, доброжелательность, нейротизм/невротизм.*"
+msgstr ""
+"*An open-source library consisting of a set of algorithms for "
+"intellectual analysis of human behavior based on multimodal data for automatic personal traits assessment to "
+"performance of professional duties. The library evaluates 5 traits: "
+"Openness to experience, Conscientiousness, Extraversion, Agreeableness, "
+"Neuroticism.*"
+
+#: ../../source/faq.rst:-1 0ac6446d8bab4517a35cf351a7e48de9
+msgid "Почему библиотека называется `OCEANAI`?"
+msgstr "Why it is named `OCEANAI`?"
+
+#: ../../source/faq.rst:12 81a9147bdfdf4832a336bc815c880773
+msgid ""
+"*OCEAN - это аббревиатура 5 персональных качеств (Openness, "
+"Conscientiousness, Extraversion, Agreeableness, Neuroticism), а AI - это "
+"аббревиатура искусственного интеллекта.*"
+msgstr "*OCEAN is an abbreviation for 5 personal traits (Openness, "
+"Conscientiousness, Extraversion, Agreeableness, Neuroticism), and AI is "
+"Artificial Intelligence abbreviation.*"
+
+#: ../../source/faq.rst:-1 6754a491df854e1aa0befe4679303fc0
+msgid "Можно ли установить `OCEANAI` с помошью pip?"
+msgstr "Can I install `OCEANAI` using pip?"
+
+#: ../../source/faq.rst:16 1d1f60d43aad40f8b0e14ed3c00db939
+msgid ""
+"*Да, для этого нужно перейти по* `ссылке "
+"<https://pypi.org/project/oceanai>`_."
+msgstr "*Yes, follow the* `link <https://pypi.org/project/oceanai>`_."

@@ -1,0 +1,188 @@
+# English translation.
+# Copyright (C) 2022. Speech and Multimodal Interfaces Laboratory Team
+# This file is distributed under the same license as the big5 package.
+# Elena Ryumina <ryumina_ev@mail.ru>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  1.0\n"
+"Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
+"POT-Creation-Date: 2022-12-01 11:06+0300\n"
+"PO-Revision-Date: 2022-12-01 09:13+0300\n"
+"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin <dl_03.03.1991@mail.ru>"
+"<dl_03.03.1991@mail.ru>\n"
+"Language-Team: English <ryumina_ev@mail.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../source/user_guide/installation.rst:4
+msgid "Содержание:"
+msgstr "Contents:"
+
+#: ../../source/user_guide/installation.rst:2 eeaaa84e583d4b178207c21ae533162b
+msgid "Установка и обновление"
+msgstr "Installation and Update"
+
+#: ../../source/user_guide/installation.rst:10 45263f50c85c44a19b32ed55f3e0a166
+msgid "Установка с помощью `PyPi <https://pypi.org/project/oceanai/>`_"
+msgstr "Installation with `PyPi <https://pypi.org/project/oceanai/>`_"
+
+#: ../../source/user_guide/installation.rst:12 6544fd922bee44b48a69fed569639bf2
+msgid "pip install oceanai"
+msgstr "pip install oceanai"
+
+#: ../../source/user_guide/installation.rst:17 1f9bc061202345f587a6e1c862182c5f
+msgid "Обновление с помощью `PyPi <https://pypi.org/project/oceanai/>`_"
+msgstr "Update with `PyPi <https://pypi.org/project/oceanai/>`_"
+
+#: ../../source/user_guide/installation.rst:19 ed136c8f69d1434cb5d0ab337c1aa804
+msgid "pip install --upgrade oceanai"
+msgstr "pip install --upgrade oceanai"
+
+#: ../../source/user_guide/installation.rst:24 22b2b3d5ad504a8c9876953326db899e
+msgid "Зависимости"
+msgstr "Dependencies"
+
+#: ../../source/user_guide/installation.rst:26 f41460be1e374ac393c68bb229d2a870
+msgid "Устанавливаются автоматически"
+msgstr "Installed automatically"
+
+#: ../../source/user_guide/installation.rst:1 a067c75a216942fbaa03e9a9149f035c
+msgid "Библиотека"
+msgstr "The library"
+
+#: ../../source/user_guide/installation.rst:1 4823e20e94f3493eb43ebde0de3e70f1
+msgid "Рекомендуемая версия"
+msgstr "Recommended Version"
+
+#: ../../source/user_guide/installation.rst:1 6a9c02442f1944e9bc52581c9dcd59d6
+msgid "Текущая версия"
+msgstr "Current version"
+
+#: ../../source/user_guide/installation.rst:1 f4b015f6861741a68d9438fe89ecfe28
+msgid "ipython"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 0a60ca873b8c4823bd6fefe8098cbab6
+msgid "8.7.0"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 046c5927bc1a461b8d4c77d3e8f2362b
+msgid "jupyterlab"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 d76a34081b18404387b52b23441401a1
+msgid "3.5.0"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 130899435523471e97bb74bca95cb248
+msgid "tensorflow"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 021a222b1d5241ee9165cdbc2425689d
+#: f9b71ff3eb804401aaf9a634d667e37b
+msgid "2.11.0"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 c591a1db5b8b47c8b219911eca8cb73b
+msgid "keras"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 b09ea7af19034a59bca11a2cbffe145e
+msgid "Keras-Applications"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 4f2e6d93f7c9423a87ee1fc5f6860a04
+msgid "1.0.8"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 06ce1cef348141b39e6b3553322d70a0
+msgid "numpy"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 ff2b29b6ceb44026ba39ab94a17a0116
+msgid "1.23.5"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 0a55da2ddeaa4b95abfec3b59608f67a
+msgid "scipy"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 487611ed1d084e0eba0e7df26057c457
+msgid "1.9.3"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 6ff01f2c604e41838b341f23e71196ba
+msgid "pandas"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 01fe6913842c4bfd96946774835b99cf
+msgid "1.5.2"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 5c5536758b194859b1b3d990e1604e82
+msgid "requests"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 b6702f92f3524fb596138dbb0e52c359
+msgid "2.28.1"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 3755768d276c425d8cadb637f2f6fc1b
+msgid "opensmile"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 5f7a6de842f3427a819fa7788ba370cb
+msgid "2.4.1"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 77766ea357ea407bb01777df2d36c6ee
+msgid "librosa"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 668069884ea24941b1dd6f1676a1de95
+msgid "0.9.2"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 d125ce7203b845b69570d36aa6e46d16
+msgid "audioread"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 98d1a88f7b0f4423a3686961fc00d838
+msgid "3.0.0"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 5638e90de8cb4292b7a2eae3c28526dc
+msgid "scikit-learn"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 c8ca5246b6fa4dde89838bcce1563a6e
+msgid "1.1.3"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 b1d2f24b728f4a829cbd6286c429fd51
+msgid "opencv-contrib-python"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 060eeed5e8ed4c768b22665dc5945439
+msgid "4.6.0.66"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 c59b6dee8a934835bcd4e47b5312286d
+msgid "pymediainfo"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 98ac7f2e4e0b4ae19ba626db67470e0d
+msgid "6.0.1"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 22c09edc95eb41d9a7a7c97e926f5f23
+msgid "mediapipe"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 908c25f0d945459cbf4261e1046bc1fd
+msgid "0.9.0"
+msgstr ""
+

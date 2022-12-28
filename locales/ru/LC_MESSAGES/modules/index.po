@@ -1,0 +1,107 @@
+# Russian translation.
+# Copyright (C) 2022. Speech and Multimodal Interfaces Laboratory Team
+# This file is distributed under the same license as the big5 package.
+# Elena Ryumina <ryumina_ev@mail.ru>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  1.0\n"
+"Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
+"POT-Creation-Date: 2022-12-01 11:06+0300\n"
+"PO-Revision-Date: 2022-12-01 09:13+0300\n"
+"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin <dl_03.03.1991@mail.ru>"
+"<dl_03.03.1991@mail.ru>\n"
+"Language-Team: Russian <ryumina_ev@mail.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../source/modules/index.rst:4
+msgid "Содержание:"
+msgstr ""
+
+#: ../../source/modules/index.rst:2 b4a90ebeb9044055819e89604ab9f58f
+msgid "Модули"
+msgstr ""
+
+#: ../../source/modules/index.rst:21 9d5c4e433f2347b7a6f6ff707c3516a9
+msgid ":doc:`core/exceptions`"
+msgstr ""
+
+#: ../../source/modules/index.rst:21 22cad69e814b4e4d9a46c2cfa0596167
+msgid "Документация для файла ``modules/core/exceptions.py``"
+msgstr ""
+
+#: ../../source/modules/index.rst:24 edf13735e66e403abaff1bb84575d6a6
+msgid ":doc:`core/language`"
+msgstr ""
+
+#: ../../source/modules/index.rst:24 8c7b16f168344cdb99716aefa88e6523
+msgid "Документация для файла ``modules/core/language.py``"
+msgstr ""
+
+#: ../../source/modules/index.rst:27 9e78020051274bcebb91a3f8a155a1ce
+msgid ":doc:`core/messages`"
+msgstr ""
+
+#: ../../source/modules/index.rst:27 f9be45a113a3411495a554bda2ed12f9
+msgid "Документация для файла ``modules/core/messages.py``"
+msgstr ""
+
+#: ../../source/modules/index.rst:30 afdab3c2ba1a4163aa5915837864d720
+msgid ":doc:`core/settings`"
+msgstr ""
+
+#: ../../source/modules/index.rst:30 2f56b3c9caa74cc68dd06e55fb78eadc
+msgid "Документация для файла ``modules/core/settings.py``"
+msgstr ""
+
+#: ../../source/modules/index.rst:33 73299a6b15534822adc2afae52512b4b
+msgid ":doc:`core/core`"
+msgstr ""
+
+#: ../../source/modules/index.rst:33 f6d782d0b00a474ab93d4eef3b65e70b
+msgid "Документация для файла ``modules/core/core.py``"
+msgstr ""
+
+#: ../../source/modules/index.rst:36 e3c88eebda124f238f81a293b884098c
+msgid ":doc:`lab/download`"
+msgstr ""
+
+#: ../../source/modules/index.rst:36 fce4a6439fa54d3a94daaa6e193b3163
+msgid "Документация для файла ``modules/lab/download.py``"
+msgstr ""
+
+#: ../../source/modules/index.rst:39 79d75e0a0cfa47f491f312f76383aa8e
+msgid ":doc:`lab/audio`"
+msgstr ""
+
+#: ../../source/modules/index.rst:39 6477c1daca47452aad039cca7679a6cd
+msgid "Документация для файла ``modules/lab/audio.py``"
+msgstr ""
+
+#: ../../source/modules/index.rst:42 addb001dde7e4e88a542e03e0ff5274e
+msgid ":doc:`lab/video`"
+msgstr ""
+
+#: ../../source/modules/index.rst:42 23eb96d97b8944a5bee4aeec839d617d
+msgid "Документация для файла ``modules/lab/video.py``"
+msgstr ""
+
+#: ../../source/modules/index.rst:45 331f1f1aa98e4bdeb70632a8cf94d737
+msgid ":doc:`lab/prediction`"
+msgstr ""
+
+#: ../../source/modules/index.rst:45 67fd2d9892e54cc592d0e431c6459447
+msgid "Документация для файла ``modules/lab/prediction.py``"
+msgstr ""
+
+#: ../../source/modules/index.rst:47 8f59cd07b0184a2aa74f6a580603e29e
+msgid ":doc:`lab/build`"
+msgstr ""
+
+#: ../../source/modules/index.rst:48 efa4d29fd2f3467aaee114b0583d5b22
+msgid "Документация для файла ``modules/lab/build.py``"
+msgstr ""
+

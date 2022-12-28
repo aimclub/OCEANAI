@@ -1,0 +1,206 @@
+# English translation.
+# Copyright (C) 2022. Speech and Multimodal Interfaces Laboratory Team
+# This file is distributed under the same license as the big5 package.
+# Elena Ryumina <ryumina_ev@mail.ru>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  1.0\n"
+"Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
+"POT-Creation-Date: 2022-12-11 13:17+0300\n"
+"PO-Revision-Date: 2022-12-11 13:17+0300\n"
+"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
+"<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
+"Language-Team: English <ryumina_ev@mail.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:9
+#: 732b82daf8034d179ed9c7a7cede116c
+msgid "Извлечение признаков из акустического сигнала"
+msgstr "Extracting features from an acoustic signal"
+
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:11
+#: 5617beba0ec24777b512917a2b394be2
+msgid "<hr>"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:25
+#: c9244fcde2724554b8ebc05990c751fd
+msgid "Импорт необходимых инструментов"
+msgstr "Import required packages"
+
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:-1
+#: 24e4376cfd7541528731ebec1dfd291a
+msgid "[2]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:-1
+#: 7fd5ee5254664ffe942928cedbdd8047
+msgid "from oceanai.modules.lab.build import Run"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:47
+#: b473403c41c7494eac86d897229e1039
+msgid ""
+"<pre>\n"
+"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
+"</pre>"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:53
+#: 5afb257f9b8d48f48c3d527a029b6675
+msgid ""
+"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
+"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
+"\\end{sphinxVerbatim}"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:60
+#: bee237367f7a4e25865ecc94611a5a98
+msgid "INFO: Created TensorFlow Lite XNNPACK delegate for CPU."
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:72
+#: 85d4dce3e9ba42de976e7ff676d29eff
+msgid "Сборка"
+msgstr "Build"
+
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:-1
+#: c8e8a421e4784ebf9e955c3a9b567ed2
+msgid "[3]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:-1
+#: 1ac02777a6694635924eeb189c2f9d36
+msgid ""
+"_b5 = Run(\n"
+"    lang = 'ru', # Язык\n"
+"    color_simple = '#FFF', # Цвет обычного текста (шестнадцатеричный код)"
+"\n"
+"    color_info = '#1776D2', # Цвет текста содержащего информацию "
+"(шестнадцатеричный код)\n"
+"    color_err = '#FF0000', # Цвет текста содержащего ошибку "
+"(шестнадцатеричный код)\n"
+"    color_true = '#008001', # Цвет текста содержащего положительную "
+"информацию (шестнадцатеричный код)\n"
+"    bold_text = True, # Жирное начертание текста\n"
+"    num_to_df_display = 30, # Количество строк для отображения в таблицах"
+"\n"
+"    text_runtime = 'Время выполнения', # Текст времени выполнения\n"
+"    metadata = True # Отображение информации о библиотеке\n"
+")"
+msgstr ""
+"_b5 = Run(\n"
+"    lang = 'en', # Language\n"
+"    color_simple = '#FFF', # Plain text color (hexadecimal code)\n"
+"    color_info = '#1776D2', # The color of the text containing the "
+"information (hexadecimal code)\n"
+"    color_err = '#FF0000', # Error text color (hexadecimal code)\n"
+"    color_true = '#008001', # Text color containing positive information "
+"(hexadecimal code)\n"
+"    bold_text = True, # Bold text\n"
+"    num_to_df_display = 30, # Number of rows to display in tables\n"
+"    text_runtime = 'Runtime', # Runtime text\n"
+"    metadata = True # Displaying information about library\n"
+")"
+
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:102
+#: 6aa91ed73f4d49249fe95513b87635fe
+msgid ""
+"\\ **[2022-12-11 13:16:18] OCEANAI - персональные качества личности "
+"человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
+"        Рюмин Дмитрий [dl_03.03.1991@mail.ru]        Карпов Алексей "
+"[karpov@iias.spb.su]    Сопровождающие:        Рюмина Елена "
+"[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
+"Версия: 1.0.0a2    Лицензия: BSD License"
+msgstr ""
+"\\ **[2022-12-11 13:16:18] OCEANAI - personal traits:**\\     Authors:        Elena Ryumina [ryumina_ev@mail.ru]"
+"        Dmitry Ryumin [dl_03.03.1991@mail.ru]        Alexey Karpov "
+"[karpov@iias.spb.su]    Maintainers:        Elena Ryumina "
+"[ryumina_ev@mail.ru]        Dmitry Ryumin [dl_03.03.1991@mail.ru]    "
+"Version: 1.0.0a2    License: BSD License"
+
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:104
+#: 45b2014eef6b43efa3e5aa6a76e49152
+msgid "</p>"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:118
+#: 931594ae1a854372a1263421030fb9c3
+msgid "Процесс извлечения акустических признаков"
+msgstr "Acoustic feature extraction process"
+
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:-1
+#: 03243f1ffb5949739e75c9c9e55db749
+msgid "[4]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:-1
+#: fc26ac598e2244188e6b3551ad9057ce
+msgid ""
+"# Настройки ядра\n"
+"sr = 44100 # Частота дискретизации\n"
+"# Путь к аудио или видеофайлу\n"
+"path = "
+"'/Users/dl/GitHub/OCEANAI.private/oceanai/dataset/test80_01/glgfB3vFewc.004.mp4'"
+"\n"
+"\n"
+"hc_features, melspectrogram_features = _b5.get_acoustic_features(\n"
+"    path = path, # Путь к аудио или видеофайлу\n"
+"    sr = sr, # Частота дискретизации\n"
+"    window = 2, # Размер окна сегмента сигнала (в секундах)\n"
+"    step = 1, # Шаг сдвига окна сегмента сигнала (в секундах)\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+"# Core settings\n"
+"sr = 44100 # Sampling frequency\n"
+"# Path to the audio or video file\n"
+"path = "
+"'/Users/dl/GitHub/OCEANAI.private/oceanai/dataset/test80_01/glgfB3vFewc.004.mp4'"
+"\n"
+"\n"
+"hc_features, melspectrogram_features = _b5.get_acoustic_features(\n"
+"    path = path, # Path to the audio or video file\n"
+"    sr = sr, # Sampling frequency\n"
+"    window = 2, # Signal segment window size (in seconds)\n"
+"    step = 1, # Signal segment window shift step (in seconds)\n"
+"    out = True, # Display\n"
+"    runtime = True, # Runtime count\n"
+"    run = True # Run blocking\n"
+")"
+
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:152
+#: aa9012573d984da0b96644686c74dc7c
+msgid ""
+"\\ **[2022-12-11 13:16:52] Извлечение признаков (экспертных и лог "
+"мел-спектрограмм) из акустического сигнала …**"
+msgstr ""
+"\\ **[2022-12-11 13:16:52] Extraction of features (expert and mel-"
+"spectrograms) from an acoustic signal …**"
+
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:163
+#: 535df08df63e46f6851831dfac23f08e
+msgid ""
+"\\ **[2022-12-11 13:16:55] Статистика извлеченных признаков из "
+"акустического сигнала:**\\     Общее количество сегментов с:        1. "
+"экспертными признаками: 12        2. лог мел-спектрограммами: 12    "
+"Размерность матрицы экспертных признаков одного сегмента: 196 ✕ 25    "
+"Размерность тензора с лог мел-спектрограммами одного сегмента: 224 ✕ 224 "
+"✕ 3"
+msgstr ""
+"\\ **[2022-12-11 13:16:55] Statistics of the features extracted from the "
+"acoustic signal:**\\     Total number of segments with:        1. expert "
+"features: 12        2. mel-spectrogram log: 12    Dimension of the matrix"
+" of expert features of one segment: 196 ✕ 25    Dimension of the tensor "
+"with log mel-spectrograms of one segment: 224 ✕ 224 ✕ 3"
+
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:173
+#: 9baff399ea4d4471b9d5356f146d2d6b
+msgid "— Время выполнения: 2.161 сек. —"
+msgstr "— Runtime: 2.161 sec. —"

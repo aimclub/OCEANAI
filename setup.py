@@ -10,7 +10,22 @@ if sys.version_info[:2] < MIN_PYTHON_VERSION:
 import oceanai
 
 REQUIRED_PACKAGES = [
-
+    'ipython >= 8.7.0',
+    'jupyterlab >= 3.5.0',
+    'tensorflow >= 2.11.0',
+    'keras >= 2.11.0',
+    'Keras-Applications>=1.0.8',
+    'numpy >= 1.23.5',
+    'scipy >= 1.9.3',
+    'pandas >= 1.5.2',
+    'requests >= 2.28.1',
+    'opensmile >= 2.4.1',
+    'librosa >= 0.9.2',
+    'audioread >= 3.0.0',
+    'scikit-learn >= 1.1.3',
+    'opencv-contrib-python >= 4.6.0.66',
+    'pymediainfo >= 6.0.1',
+    'mediapipe >= 0.9.0',
 ]
 
 CLASSIFIERS = """\
@@ -71,7 +86,7 @@ with open('README.md', 'r') as fh:
         long_description = long_description,
         long_description_content_type = 'text/markdown',
         install_requires=REQUIRED_PACKAGES,
-        keywords = ['oceanai', 'MachineLearning', 'Statistics', 'ComputerVision', 'ArtificialIntelligence',
+        keywords = ['OCEAN-AI', 'MachineLearning', 'Statistics', 'ComputerVision', 'ArtificialIntelligence',
                     'Preprocessing'],
         include_package_data = True,
         classifiers = [_f for _f in CLASSIFIERS.split('\n') if _f],
@@ -82,7 +97,7 @@ with open('README.md', 'r') as fh:
         project_urls = {
             'Bug Reports': 'https://github.com/DmitryRyumin/oceanai/issues',
             'Documentation': 'https://oceanai.readthedocs.io',
-            'Source Code': 'https://github.com/DmitryRyumin/oceanai/tree/main/ocean',
+            'Source Code': 'https://github.com/DmitryRyumin/oceanai/tree/main/oceanai',
             'Download': 'https://github.com/DmitryRyumin/oceanai/tags',
         },
     )

@@ -25,6 +25,8 @@ from unittest.mock import MagicMock
 PATH_TO_SOURCE = os.path.abspath(os.path.dirname(__file__))
 PATH_TO_ROOT = os.path.join(PATH_TO_SOURCE, '..', '..')
 
+from pathlib import Path
+
 sys.path.insert(0, os.path.abspath(PATH_TO_ROOT))
 
 # ######################################################################################################################
@@ -36,7 +38,9 @@ class Mock(MagicMock):
     def __getattr__(cls, name): return MagicMock()
 
 MOCK_MODULES = [
-    'mediapipe', 'librosa', 'librosa.display', 'audioread', 'soundfile'
+    'tensorflow', 'keras', 'Keras-Applications', 'numpy', 'scipy', 'pandas', 'requests', 'opensmile', 'librosa',
+    'librosa.display', 'audioread', 'soundfile', 'scikit-learn', 'opencv-contrib-python', 'pymediainfo', 'mediapipe',
+    'pytest'
 ]
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
@@ -69,8 +73,10 @@ release = oceanai.__release__
 
 # Расширения: https://www.sphinx-doc.org/en/master/usage/extensions
 extensions = [
+    'sphinx.ext.duration',
     'sphinx.ext.mathjax',             # Отображение формул (JavaScript)
     'sphinx.ext.napoleon',            # Документация в стиле NumPy или Google
+    'sphinx.ext.todo',
     'sphinx.ext.viewcode',            # Добавление ссылки на исходный код
     'sphinx.ext.inheritance_diagram', # Добавление диаграммы классов
     'sphinx.ext.autodoc.typehints',   # Поддержка подсказок типа (PEP 484)
@@ -80,6 +86,9 @@ extensions = [
     'sphinx_toolbox.sidebar_links',
     'sphinx_toolbox.github',
     'sphinx_design',
+    'nbsphinx',
+    'sphinx_copybutton',
+    'IPython.sphinxext.ipython_console_highlighting'
 ]
 
 # Локализация (язык): https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-language
@@ -88,7 +97,7 @@ extensions = [
 # sphinx-intl update -p docs/build/gettext -l en -l ru
 # sphinx-build -a -b html -D language=en ./docs/source ./docs/build/en
 #
-# Нужно в файле: /Users/dl/@DmitryRyumin/Python/envs/BIG5/lib/python3.9/site-packages/sphinx/util/osutil.py
+# Нужно в файле: /Users/dl/@DmitryRyumin/Python/envs/OCEANAI/lib/python3.9/site-packages/sphinx/util/osutil.py
 # Поменять:
 # def canon_path(nativepath: str) -> str:
 #     if nativepath is None: return ''

@@ -1,0 +1,317 @@
+# English translation.
+# Copyright (C) 2022. Speech and Multimodal Interfaces Laboratory Team
+# This file is distributed under the same license as the big5 package.
+# Elena Ryumina <ryumina_ev@mail.ru>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  1.0\n"
+"Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
+"POT-Creation-Date: 2022-12-11 15:03+0300\n"
+"PO-Revision-Date: 2022-12-11 15:03+0300\n"
+"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
+"<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
+"Language-Team: English <ryumina_ev@mail.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:9
+#: 153fc0897e0b47e79f76cf81960f946d
+msgid "Извлечение признаков из визуального сигнала"
+msgstr "Extracting features from a visual signal"
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:11
+#: beaeddfa8b404e2fb5997b08a74ceb67
+msgid "<hr>"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:25
+#: aec536d628844b2ca81498e6fb26a946
+msgid "Импорт необходимых инструментов"
+msgstr "Import required packages"
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
+#: fe53f168c81c49cda05acfa5750b2fc2
+msgid "[2]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
+#: 6470ac3cb8c94bb59a37477efa65a040
+msgid "from oceanai.modules.lab.build import Run"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:47
+#: 3897c744264944a185893662f1d4957f
+msgid ""
+"<pre>\n"
+"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
+"</pre>"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:53
+#: 0820bf64d85e4602b319b04b4a7602a5
+msgid ""
+"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
+"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
+"\\end{sphinxVerbatim}"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:60
+#: a23b14e2677a43169e02ca993e95c485
+msgid "INFO: Created TensorFlow Lite XNNPACK delegate for CPU."
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:72
+#: 12d408d0b86b49ce81d742cd77bf0031
+msgid "Сборка"
+msgstr "Build"
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
+#: 22f8074cab1a4172a8d0156d5f6ed2cf
+msgid "[3]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
+#: fd489cec56dd481082b6e79db4276194
+msgid ""
+"_b5 = Run(\n"
+"    lang = 'ru', # Язык\n"
+"    color_simple = '#FFF', # Цвет обычного текста (шестнадцатеричный код)"
+"\n"
+"    color_info = '#1776D2', # Цвет текста содержащего информацию "
+"(шестнадцатеричный код)\n"
+"    color_err = '#FF0000', # Цвет текста содержащего ошибку "
+"(шестнадцатеричный код)\n"
+"    color_true = '#008001', # Цвет текста содержащего положительную "
+"информацию (шестнадцатеричный код)\n"
+"    bold_text = True, # Жирное начертание текста\n"
+"    num_to_df_display = 30, # Количество строк для отображения в таблицах"
+"\n"
+"    text_runtime = 'Время выполнения', # Текст времени выполнения\n"
+"    metadata = True # Отображение информации о библиотеке\n"
+")"
+msgstr ""
+"_b5 = Run(\n"
+"    lang = 'en', # Language\n"
+"    color_simple = '#FFF', # Plain text color (hexadecimal code)\n"
+"    color_info = '#1776D2', # The color of the text containing the "
+"information (hexadecimal code)\n"
+"    color_err = '#FF0000', # Error text color (hexadecimal code)\n"
+"    color_true = '#008001', # Text color containing positive information "
+"(hexadecimal code)\n"
+"    bold_text = True, # Bold text\n"
+"    num_to_df_display = 30, # Number of rows to display in tables\n"
+"    text_runtime = 'Runtime', # Runtime text\n"
+"    metadata = True # Displaying information about library\n"
+")"
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:102
+#: c5f541bf36a7463cb0cfa2877e293ce4
+msgid ""
+"\\ **[2022-12-11 15:02:02] OCEANAI - персональные качества личности "
+"человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
+"        Рюмин Дмитрий [dl_03.03.1991@mail.ru]        Карпов Алексей "
+"[karpov@iias.spb.su]    Сопровождающие:        Рюмина Елена "
+"[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
+"Версия: 1.0.0a2    Лицензия: BSD License"
+msgstr ""
+"\\ **[2022-12-11 15:02:02] OCEANAI - personal traits:**\\     Authors:        Elena Ryumina [ryumina_ev@mail.ru]"
+"        Dmitry Ryumin [dl_03.03.1991@mail.ru]        Alexey Karpov "
+"[karpov@iias.spb.su]    Maintainers:        Elena Ryumina "
+"[ryumina_ev@mail.ru]        Dmitry Ryumin [dl_03.03.1991@mail.ru]    "
+"Version: 1.0.0a2    License: BSD License"
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:104
+#: cc9a4f4f26664684bc2119616cb95b3a
+msgid "</p>"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:118
+#: ed28836d22b6498f97f92d1e09a86731
+msgid "Формирование нейросетевой архитектуры модели"
+msgstr "Formation of the neural network architecture of the model"
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
+#: 8d7b805e4a1140c4b0c3bb0314fef2ef
+msgid "[4]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
+#: a8206ec02f4d4f179ba14f9821d91e82
+msgid ""
+"res_load_video_model_deep_fe = _b5.load_video_model_deep_fe(\n"
+"    show_summary = False, # Отображение сформированной нейросетевой "
+"архитектуры модели\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+"res_load_video_model_deep_fe = _b5.load_video_model_deep_fe(\n"
+"    show_summary = False, # Displaying the formed neural network "
+"architecture of the model\n"
+"    out = True, # Display\n"
+"    runtime = True, # Runtime count\n"
+"    run = True # Run blocking\n"
+")"
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:144
+#: ea946d7d138f44a79bc6d8902f16d0a1
+msgid ""
+"\\ **[2022-12-11 15:02:13] Формирование нейросетевой архитектуры для "
+"получения нейросетевых признаков (видео модальность) …**"
+msgstr ""
+"\\ **[2022-12-11 15:02:13] Formation of neural network architecture for "
+"obtaining neural network features (video modality) …**"
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:154
+#: 54abb2a83c204d87826c4a05777047db
+msgid "— Время выполнения: 1.652 сек. —"
+msgstr "— Runtime: 1.652 sec. —"
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:166
+#: 6ed8116184074451a21c115ab34c6adc
+msgid "Загрузка весов нейросетевой модели"
+msgstr "Downloading the weights of the neural network model"
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
+#: 289062afe85f498995e12e6bbca5d29e
+msgid "[5]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
+#: 93ef6fa37764476b98b95806c2d56d8c
+msgid ""
+"# Настройки ядра\n"
+"_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
+"_b5.chunk_size_ = 2000000 # Размер загрузки файла из сети за 1 шаг\n"
+"\n"
+"url = _b5.weights_for_big5_['video']['fe']['sberdisk']\n"
+"\n"
+"res_load_video_model_weights_deep_fe = "
+"_b5.load_video_model_weights_deep_fe(\n"
+"    url = url, # Полный путь к файлу с весами нейросетевой модели\n"
+"    force_reload = True, # Принудительная загрузка файла с весами "
+"нейросетевой модели из сети\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+"# Core settings\n"
+"_b5.path_to_save_ = './models' # Directory to save the file\n"
+"_b5.chunk_size_ = 2000000 # File download size from network in 1 "
+"step\n"
+"\n"
+"url = _b5.weights_for_big5_['video']['fe']['sberdisk']\n"
+"\n"
+"res_load_video_model_weights_deep_fe = _b5.load_video_model_weights_deep_fe(\n"
+"    url = url, # Full path to the file with weights of the neural network"
+" model\n"
+"    force_reload = True, # Forced download of a file with weights of a "
+"neural network model from the network\n"
+"    out = True, # Display\n"
+"    runtime = True, # Runtime count\n"
+"    run = True # Run blocking\n"
+")"
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:199
+#: c081fc220f39443688f617b47df016c2
+msgid ""
+"\\ **[2022-12-11 15:02:35] Загрузка весов нейросетевой модели для "
+"получения нейросетевых признаков (видео модальность) …**"
+msgstr ""
+"\\ **[2022-12-11 15:02:35] Downloading weights of a neural network model "
+"to obtain neural network features (video modality) …**"
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:210
+#: 760bc736837f4a808f652b5b718296ff
+msgid ""
+"\\ **[2022-12-11 15:02:41] Загрузка файла "
+"“weights_2022-11-01_12-27-07.h5” (100.0%) …**"
+msgstr ""
+"\\ **[2022-12-11 15:02:41] File download “weights_2022-11-01_12-27-07.h5”"
+" (100.0%) …**"
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:220
+#: e915ac1339f74f4fbd55066c37791f56
+msgid "— Время выполнения: 6.227 сек. —"
+msgstr "— Runtime: 6.227 sec. —"
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:232
+#: 76a68cd3a10842eba9adc5c48bcc1c10
+msgid "Процесс извлечения визуальных признаков"
+msgstr "Process of extracting visual features"
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
+#: 842078d8ff624ea6a8cf3308dfa201f1
+msgid "[6]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
+#: f2667ca7cb73423981beb0ccdab71da2
+msgid ""
+"# Настройки ядра\n"
+"# Путь к видеофайлу\n"
+"path = "
+"'/Users/dl/GitHub/OCEANAI.private/oceanai/dataset/test80_01/glgfB3vFewc.004.mp4'"
+"\n"
+"\n"
+"hc_features, nn_features = _b5.get_visual_features(\n"
+"    path = path, # Путь к видеофайлу\n"
+"    reduction_fps = 5, # Понижение кадровой частоты\n"
+"    window = 10, # Размер окна сегмента сигнала (в кадрах)\n"
+"    step = 5, # Шаг сдвига окна сегмента сигнала (в кадрах)\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+"# Core settings\n"
+"# Path to video file\n"
+"path = "
+"'/Users/dl/GitHub/OCEANAI.private/oceanai/dataset/test80_01/glgfB3vFewc.004.mp4'"
+"\n"
+"\n"
+"hc_features, nn_features = _b5.get_visual_features(\n"
+"    path = path, # Path to video file\n"
+"    reduction_fps = 5, # Frame rate reduction\n"
+"    window = 10, # Signal segment window size (in frames)\n"
+"    step = 5, # Signal segment window shift step (frames)\n"
+"    out = True, # Display\n"
+"    runtime = True, # Runtime count\n"
+"    run = True # Run blocking\n"
+")"
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:265
+#: dfae308d257e4684a223434f7d6517d5
+msgid ""
+"\\ **[2022-12-11 15:02:57] Извлечение признаков (экспертных и "
+"нейросетевых) из визуального сигнала …**"
+msgstr ""
+"\\ **[2022-12-11 15:02:57] Extraction of features (expert and neural "
+"network) from a visual signal …**"
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:276
+#: f370f3ba5cb942f8b5d760dc581e28ad
+msgid ""
+"\\ **[2022-12-11 15:03:03] Статистика извлеченных признаков из "
+"визуального сигнала:**\\     Общее количество сегментов с:        1. "
+"экспертными признаками: 12        2. нейросетевыми признаками: 12    "
+"Размерность матрицы экспертных признаков одного сегмента: 10 ✕ 115    "
+"Размерность тензора с нейросетевыми признаками одного сегмента: 10 ✕ 512"
+"     Понижение кадровой частоты: с 30 до 5"
+msgstr ""
+"\\ **[2022-12-11 15:03:03] Statistics of extracted features from visual "
+"signal:**\\     Total number of segments since:        1. expert "
+"features: 12        2. neural network features: 12    Dimension of the "
+"matrix of expert features of one segment: 10 ✕ 115    Dimension of the "
+"tensor with neural network features of one segment: 10 ✕ 512     ПFPS "
+"down: with 30 to 5"
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:286
+#: e915ac1339f74f4fbd55066c37791f56
+msgid "— Время выполнения: 6.222 сек. —"
+msgstr "— Runtime: 6.222 sec. —"

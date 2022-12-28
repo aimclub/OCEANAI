@@ -6,22 +6,26 @@
 msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-12-01 11:06+0300\n"
-"PO-Revision-Date: 2022-12-01 09:13+0300\n"
+"Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
+"POT-Creation-Date: 2022-12-11 11:33+0300\n"
+"PO-Revision-Date: 2022-12-11 11:33+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
-"<dl_03.03.1991@mail.ru>\n"
+"<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
 "Language-Team: English <ryumina_ev@mail.ru>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.11.0\n"
 
-#: ../../source/index.rst:-1 b44ae96743514a5bbffebc0ee6a6fd81
+#: ../../source/index.rst:58 fc10cfb3c8c74cf3a333faf2283dffd3
+msgid "Содержание:"
+msgstr "Contents:"
+
+#: ../../source/index.rst:-1 467fd7011d9c4a2daf404ce671eb9868
 msgid "Персональные качества личности человека"
 msgstr "Personality Traits"
 
-#: ../../source/index.rst:-1 c0e400e9b99f4f928b768fc4ae6b90f7
+#: ../../source/index.rst:-1 2b60bdbee7784acdab689c4fa10055de
 msgid ""
 "oceanai, machine learning, statistics, computer vision, artificial "
 "intelligence, preprocessing"
@@ -29,59 +33,163 @@ msgstr ""
 "oceanai, machine learning, statistics, computer vision, artificial "
 "intelligence, preprocessing"
 
-#: ../../source/index.rst:6 82b6a919ac3945ab8fbb05615535b442
+#: ../../source/index.rst:6 83d0e22a45204f3c8ef1a1e2887ad561
 msgid ""
 "Документация библиотеки алгоритмов сильного искусственного интеллекта - "
-"``oceanai``"
-msgstr "Documentation of the Strong AI Algorithm Library - ``oceanai``"
+"``OCEANAI``"
+msgstr "Documentation of the Strong AI Algorithm Library - ``OCEANAI``"
 
-#: ../../source/index.rst:8 da397d14e67f424790f76a84aedc24d8
-#, fuzzy
+#: ../../source/index.rst:8 38c41cddb0254a81b966d3d62ac27556
 msgid ""
 "`OCEANAI <https://github.com/DmitryRyumin/oceanai>`_ - библиотека с "
 "открытым исходным кодом, состоящая из набора алгоритмов интеллектуального"
 " анализа поведения человека на основе его мультимодальных данных для "
 "автоматического оценивания уровня отдельных персональных качеств личности"
-" человека для выполнения профессиональных обязанностей."
+" человека для выполнения профессиональных обязанностей. Библиотека "
+"оценивает 5 качеств: Открытость опыту (**O**\\ p\\ enness), "
+"Добросовестность (**C**\\ o\\ nscientiousness), Экстраверсия (**E**\\ x\\"
+" traversion), Доброжелательность (**A**\\ g\\ reeableness), "
+"Нейротизм/невротизм (**N**\\ e\\ uroticism)."
 msgstr ""
-"`OCEANAI <https://github.com/DmitryRyumin/oceanai>`_ - an open source library "
-"consisting of a set of algorithms for intelligent analysis of human "
-"behavior based on its multimodal data for automatic assessment of "
-"personality traits to perform professional duties."
+"`OCEANAI <https://github.com/DmitryRyumin/oceanai>`_ is an open-source library consisting of a set of algorithms for "
+"intellectual analysis of human behavior based on multimodal data for automatic personal traits assessment to "
+"performance of professional duties. The library evaluates 5 traits: "
+"**O**\\ p\\ enness to experience, **C**\\ o\\ nscientiousness, **E**\\ x\\ traversion, **A**\\ g\\ reeableness, "
+"**N**\\ e\\ uroticism."
 
-#: ../../source/index.rst:-1 fa59d764f0a544afab98aa1aa74e45e3
-msgid "PyPI"
-msgstr "PyPI"
+#: ../../source/index.rst:-1 e49d9afb9e5541f8bcca01d712b0f586
+msgid "PyPI (image)"
+msgstr "PyPI (image)"
 
-#: ../../source/index.rst:-1 61a8607e0b73443ab4973a10b176728c
-msgid "PyPI - Python Version"
-msgstr "PyPI - Python Version"
+#: ../../source/index.rst:-1 b4041c55aa534bf78392b1c250f6b21b
+msgid "PyPI - Python Version (image)"
+msgstr "PyPI - Python Version (image)"
 
-#: ../../source/index.rst:-1 f22a16707be34b17a0c4f6f08d9d9b20
-msgid "PyPI - Implementation"
-msgstr "PyPI - Implementation"
+#: ../../source/index.rst:-1 3b9cb58295f249b895ced06d8c8ce9f4
+msgid "PyPI - Implementation (image)"
+msgstr "PyPI - Implementation (image)"
 
-#: ../../source/index.rst:-1 84894021483948c2a31b4982af976df2
-msgid "GitHub repo size"
-msgstr "GitHub repo size"
+#: ../../source/index.rst:-1 726225dddbd14edba090ed5b5cb43a6d
+msgid "GitHub repo size (image)"
+msgstr "GitHub repo size (image)"
 
-#: ../../source/index.rst:-1 7ceea718554c4d02a52fad2b05d499ec
-msgid "PyPI - Status"
-msgstr "PyPI - Status"
+#: ../../source/index.rst:-1 3adc59b4a1bf4e299ea87234eb28164d
+msgid "PyPI - Status (image)"
+msgstr "PyPI - Status (image)"
 
-#: ../../source/index.rst:-1 8cd228f5e93c4181a8ffcb7efc231155
-msgid "PyPI - License"
-msgstr "PyPI - License"
+#: ../../source/index.rst:-1 a0954360ff834dc5ade539c18d8656e7
+msgid "PyPI - License (image)"
+msgstr "PyPI - License (image)"
 
-#: ../../source/index.rst:-1 ee637d973f034d918dc1c49e8b225a56
-msgid "GitHub top language"
-msgstr "GitHub top language"
+#: ../../source/index.rst:-1 6ba4f5f9600e467a8b5820749ed2cc2a
+msgid "GitHub top language (image)"
+msgstr "GitHub top language (image)"
 
-#: ../../source/index.rst:-1 f4c418f141f1494ab49401cc172928f3
-msgid "Documentation Status"
-msgstr "Documentation Status"
+#: ../../source/index.rst:-1 df7921319a534c28a949ecb41737e12d
+msgid "Documentation Status (image)"
+msgstr "Documentation Status (image)"
 
-#: ../../source/index.rst:32 c510e6589d93482fa5c9b1a9cc72599a
-msgid "Библиотека в разработке"
-msgstr "The library under development"
+#: ../../source/index.rst:30 eb042852c70d46b09f1b22ff4757ebf9
+msgid ""
+"`OCEANAI <https://github.com/DmitryRyumin/oceanai>`_ включает три "
+"основных алгоритма:"
+msgstr ""
+"`OCEANAI <https://github.com/DmitryRyumin/oceanai>`_ includes three main "
+"algorithms:"
 
+#: ../../source/index.rst:32 64e3db280428427a92b7db9c5a2f139a
+msgid "Алгоритм анализа аудиоинформации (ААИ)."
+msgstr "Audio Information Analysis Algorithm (AIA)."
+
+#: ../../source/index.rst:33 c4ef5ae0285142dbbe9a37318d2ff385
+msgid "Алгоритм анализа видеоинформации (АВИ)."
+msgstr "Video Information Analysis Algorithm (VIA)."
+
+#: ../../source/index.rst:34 7c1fbc0c7c3a4934bf59ff8c7d6ca52a
+msgid "Алгоритм мультимодального объединения информации (МОИ)."
+msgstr "Multimodal Fusion Algorithm (MF)."
+
+#: ../../source/index.rst:36 866cc9f060a44b34842c984b34d83587
+msgid ""
+"Алгоритмы ААИ и АВИ реализуют функции сильного искусственного интеллекта "
+"(ИИ) в части комплексирования акустических и визуальных признаков, "
+"построенных на различных принципах (экспертных и нейросетевых), т.е. "
+"данные алгоритмы реализуют подходы композитного (гибридного) ИИ. В "
+"алгоритмах осуществляется необходимая предобработка аудио- и "
+"видеоинформации, вычисление визуальных и акустических признаков и выдача "
+"гипотез предсказаний по ним."
+msgstr ""
+"The AIA and VIA algorithms implement the functions of strong artificial intelligence (AI) in terms of complexing acoustic "
+"and visual features built on different principles (expert and neural network), i.e. these algorithms implement the "
+"approaches of composite (hybrid) AI. The necessary preprocessing is carried out in the algorithms audio and video "
+"information, the calculation of visual and acoustic features and the issuance of prediction personality traits based on them."
+
+#: ../../source/index.rst:38 8bf767d5ef8749f0b679ea120fe35497
+msgid ""
+"Алгоритм МОИ является связующим звеном двух алгоритмов анализа информации"
+" (ААИ и АВИ). Данный алгоритм выполняет взвешенное нейросетевое "
+"объединение гипотез предсказаний полученных с помощью алгоритмов ААИ и "
+"АВИ."
+msgstr ""
+"The MF algorithm is a link between two information analysis algorithms "
+"(AAA and AAV). This algorithm performs a weighted neural network "
+"combination of prediction personality traits obtained using the AIA and VIA "
+"algorithms."
+
+#: ../../source/index.rst:41 52e456fded4342b28181afafa1f71999
+msgid ""
+"Помимо основной задачи - мультимодального оценивания персональных качеств"
+" личности человека, реализованные в `OCEANAI "
+"<https://github.com/DmitryRyumin/oceanai>`_ признаки позволят "
+"исследователям решать другие задачи анализа поведения человека, например "
+"распознавание его аффективных состояний."
+msgstr ""
+"In addition to the main task - multimodal personality traits assessment, "
+" the features implemented in `OCEANAI"
+" <https://github.com/DmitryRyumin/oceanai>`_ features will allow "
+"researchers to solve other problems of analyzing human behavior, for "
+"example, recognizing his affective states."
+
+#: ../../source/index.rst:45 818de67a12654ceebd9573b815046e09
+msgid ""
+"`OCEANAI <https://github.com/DmitryRyumin/oceanai>`_ использует самые "
+"актуальные библиотеки с открытым исходным кодом для обработки аудио и "
+"видеоинформации: `librosa <https://librosa.org/>`_, `openSMILE "
+"<https://audeering.github.io/opensmile-python/>`_, `openCV "
+"<https://pypi.org/project/opencv-python/>`_, `mediapipe "
+"<https://google.github.io/mediapipe/getting_started/python>`_."
+msgstr ""
+"`OCEANAI <https://github.com/DmitryRyumin/oceanai>`_ uses the latest open"
+"-source libraries for audio and video processing: `librosa "
+"<https://librosa.org/>`_, `openSMILE <https://audeering.github.io"
+"/opensmile-python/>`_, `openCV <https://pypi.org/project/opencv-"
+"python/>`_, `mediapipe "
+"<https://google.github.io/mediapipe/getting_started/python>`_."
+
+#: ../../source/index.rst:51 b93ed8aca4d448eeab734074486eb29c
+msgid ""
+"`OCEANAI <https://github.com/DmitryRyumin/oceanai>`_ написана на языке "
+"программирования `python <https://www.python.org/>`_. Нейросетевые модели"
+" реализованы и обучены с использованием библиотеки с открытым исходным "
+"кодом `TensorFlow <https://www.tensorflow.org/>`_."
+msgstr ""
+"`OCEANAI <https://github.com/DmitryRyumin/oceanai>`_ is written in the "
+"`python programming language <https://www.python.org/>`_. Neural network "
+"models are implemented and trained using an open-source library code "
+"`TensorFlow <https://www.tensorflow.org/>`_."
+
+#: ../../source/index.rst:74 0824dd58078b45b6a33d80ab7bd4ee60
+msgid "Индексация"
+msgstr "Indexing"
+
+#: ../../source/index.rst:76 4d003d2d8f27498e9a9283304a13697f
+msgid ":ref:`genindex`"
+msgstr ":ref:`genindex`"
+
+#: ../../source/index.rst:77 91dfa586e7c14d75ba149b054148655b
+msgid ":ref:`modindex`"
+msgstr ":ref:`modindex`"
+
+#: ../../source/index.rst:78 24b43997a00e44d19048d6dcf090a336
+msgid ":ref:`search`"
+msgstr ":ref:`search`"

@@ -1,0 +1,409 @@
+# Russian translation.
+# Copyright (C) 2022. Speech and Multimodal Interfaces Laboratory Team
+# This file is distributed under the same license as the big5 package.
+# Elena Ryumina <ryumina_ev@mail.ru>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  1.0\n"
+"Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
+"POT-Creation-Date: 2022-12-11 12:55+0300\n"
+"PO-Revision-Date: 2022-12-11 12:55+0300\n"
+"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
+"<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
+"Language-Team: Russian <ryumina_ev@mail.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:9
+#: 6dddfbddbf9c490183418a11c0732509
+msgid ""
+"Формирование нейросетевой архитектуры модели и загрузка ее весов для "
+"получения оценок по нейросетевым признакам (аудио модальность)"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:11
+#: f1d14216e0874175bd106e153ced4df4
+msgid "<hr>"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:17
+#: 8527e93c62344cd29db7dc275140b957
+msgid ""
+"``_b5.audio_model_nn_`` - Нейросетевая модель **tf.keras.Model** для "
+"получения оценок по нейросетевым признакам"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:29
+#: 9bbdb78507c344fd84e7572ca394a295
+msgid "Импорт необходимых инструментов"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:-1
+#: dbb7a7e863604cedb24dfea77cd349b3
+msgid "[2]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:-1
+#: f616e49c2d394388bd835c293134158e
+msgid "from oceanai.modules.lab.build import Run"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:51
+#: 1f633ada431243b0b5c157d164d44830
+msgid ""
+"<pre>\n"
+"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
+"</pre>"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:57
+#: 1cacaab61ff74070804b45485755888f
+msgid ""
+"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
+"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
+"\\end{sphinxVerbatim}"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:64
+#: e7a331394a45447dac1ca0082f8d1a17
+msgid "INFO: Created TensorFlow Lite XNNPACK delegate for CPU."
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:76
+#: be0c722171554b69b827e313c1f402c4
+msgid "Сборка"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:-1
+#: 59796a072e364c94bf7afe1a77917152
+msgid "[3]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:-1
+#: eea6dec5e0f84448be8ea64506094d80
+msgid ""
+"_b5 = Run(\n"
+"    lang = 'ru', # Язык\n"
+"    color_simple = '#FFF', # Цвет обычного текста (шестнадцатеричный код)"
+"\n"
+"    color_info = '#1776D2', # Цвет текста содержащего информацию "
+"(шестнадцатеричный код)\n"
+"    color_err = '#FF0000', # Цвет текста содержащего ошибку "
+"(шестнадцатеричный код)\n"
+"    color_true = '#008001', # Цвет текста содержащего положительную "
+"информацию (шестнадцатеричный код)\n"
+"    bold_text = True, # Жирное начертание текста\n"
+"    num_to_df_display = 30, # Количество строк для отображения в таблицах"
+"\n"
+"    text_runtime = 'Время выполнения', # Текст времени выполнения\n"
+"    metadata = True # Отображение информации о библиотеке\n"
+")"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:106
+#: 0c43d9a9bf7746eb9657f9f82faeec04
+msgid ""
+"\\ **[2022-12-11 12:54:28] OCEANAI - персональные качества личности "
+"человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
+"        Рюмин Дмитрий [dl_03.03.1991@mail.ru]        Карпов Алексей "
+"[karpov@iias.spb.su]    Сопровождающие:        Рюмина Елена "
+"[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
+"Версия: 1.0.0a2    Лицензия: BSD License"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:108
+#: 7a7ed32c4e8d4f0db582727387a72a43
+msgid "</p>"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:122
+#: 54344208425b4fd4a770a6b8e0a4328c
+msgid "Формирование нейросетевой архитектуры модели"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:-1
+#: 88f92b4ec2ce4fad800805867ba2b5e1
+msgid "[4]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:-1
+#: bda946fb43bf4d01acdfddd2fbfcc759
+msgid ""
+"res_load_audio_model_nn = _b5.load_audio_model_nn(\n"
+"    show_summary = False, # Отображение сформированной нейросетевой "
+"архитектуры модели\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:148
+#: 6fc7900c022f43d3aee1919eb639881b
+msgid ""
+"\\ **[2022-12-11 12:54:40] Формирование нейросетевой архитектуры для "
+"получения оценок по нейросетевым признакам (аудио модальность) …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:158
+#: 8db462cf9dc54871b16ef7959e9d5967
+msgid "— Время выполнения: 0.383 сек. —"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:170
+#: 745aba7f53ed45d8abea609672467a53
+msgid "Загрузка весов нейросетевой модели"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:-1
+#: 667c519210a145b6922d980ded6193d3
+msgid "[5]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:-1
+#: c0f41b9a17ea46b489f81160f4130098
+msgid ""
+"# Настройки ядра\n"
+"_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
+"_b5.chunk_size_ = 2000000 # Размер загрузки файла из сети за 1 шаг\n"
+"\n"
+"url = _b5.weights_for_big5_['audio']['nn']['sberdisk']\n"
+"\n"
+"res_load_audio_model_weights_nn = _b5.load_audio_model_weights_nn(\n"
+"    url = url, # Полный путь к файлу с весами нейросетевой модели\n"
+"    force_reload = True, # Принудительная загрузка файла с весами "
+"нейросетевой модели из сети\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:203
+#: 9a209850b0254c44861639d3a90f1875
+msgid ""
+"\\ **[2022-12-11 12:55:02] Загрузка весов нейросетевой модели для "
+"получения оценок по нейросетевым признакам (аудио модальность) …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:214
+#: 69916fc890d343be96d7bc01e45ee5f5
+msgid ""
+"\\ **[2022-12-11 12:55:08] Загрузка файла "
+"“weights_2022-05-03_07-46-14.h5” (100.0%) …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:224
+#: 8db462cf9dc54871b16ef7959e9d5967
+msgid "— Время выполнения: 5.421 сек. —"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:236
+#: ffdda7dda73840c4b28e25c6d388a1eb
+msgid "Отображение сформированной нейросетевой архитектуры модели"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:-1
+#: eda89e26622446528cbafb6481d46305
+msgid "[6]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:-1
+#: 8a70760f6343486199d971752d6124bc
+msgid "_b5.audio_model_nn_.summary()"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:257
+#: a2667e6ed9994725b2f3ce285028c11c
+msgid ""
+"<pre>\n"
+"Model: &#34;model&#34;\n"
+"_________________________________________________________________\n"
+" Layer (type)                Output Shape              Param #\n"
+"=================================================================\n"
+" input_1 (InputLayer)        [(None, 224, 224, 3)]     0\n"
+"\n"
+" block1_conv1 (Conv2D)       (None, 224, 224, 64)      1792\n"
+"\n"
+" block1_conv2 (Conv2D)       (None, 224, 224, 64)      36928\n"
+"\n"
+" block1_pool (MaxPooling2D)  (None, 112, 112, 64)      0\n"
+"\n"
+" block2_conv1 (Conv2D)       (None, 112, 112, 128)     73856\n"
+"\n"
+" block2_conv2 (Conv2D)       (None, 112, 112, 128)     147584\n"
+"\n"
+" block2_pool (MaxPooling2D)  (None, 56, 56, 128)       0\n"
+"\n"
+" block3_conv1 (Conv2D)       (None, 56, 56, 256)       295168\n"
+"\n"
+" block3_conv2 (Conv2D)       (None, 56, 56, 256)       590080\n"
+"\n"
+" block3_conv3 (Conv2D)       (None, 56, 56, 256)       590080\n"
+"\n"
+" block3_pool (MaxPooling2D)  (None, 28, 28, 256)       0\n"
+"\n"
+" block4_conv1 (Conv2D)       (None, 28, 28, 512)       1180160\n"
+"\n"
+" block4_conv2 (Conv2D)       (None, 28, 28, 512)       2359808\n"
+"\n"
+" block4_conv3 (Conv2D)       (None, 28, 28, 512)       2359808\n"
+"\n"
+" block4_pool (MaxPooling2D)  (None, 14, 14, 512)       0\n"
+"\n"
+" block5_conv1 (Conv2D)       (None, 14, 14, 512)       2359808\n"
+"\n"
+" block5_conv2 (Conv2D)       (None, 14, 14, 512)       2359808\n"
+"\n"
+" block5_conv3 (Conv2D)       (None, 14, 14, 512)       2359808\n"
+"\n"
+" block5_pool (MaxPooling2D)  (None, 7, 7, 512)         0\n"
+"\n"
+" flatten (Flatten)           (None, 25088)             0\n"
+"\n"
+" dense (Dense)               (None, 512)               12845568\n"
+"\n"
+" dropout (Dropout)           (None, 512)               0\n"
+"\n"
+" dense_1 (Dense)             (None, 256)               131328\n"
+"\n"
+" dense_2 (Dense)             (None, 5)                 1285\n"
+"\n"
+"=================================================================\n"
+"Total params: 27,692,869\n"
+"Trainable params: 27,692,869\n"
+"Non-trainable params: 0\n"
+"_________________________________________________________________\n"
+"</pre>"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:319
+#: c6952cc230044e6f8dd0c867f04c0566
+msgid ""
+"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
+"Model: \"model\"\n"
+"\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_"
+"\n"
+" Layer (type)                Output Shape              Param \\#\n"
+"=================================================================\n"
+" input\\_1 (InputLayer)        [(None, 224, 224, 3)]     0\n"
+"\n"
+" block1\\_conv1 (Conv2D)       (None, 224, 224, 64)      1792\n"
+"\n"
+" block1\\_conv2 (Conv2D)       (None, 224, 224, 64)      36928\n"
+"\n"
+" block1\\_pool (MaxPooling2D)  (None, 112, 112, 64)      0\n"
+"\n"
+" block2\\_conv1 (Conv2D)       (None, 112, 112, 128)     73856\n"
+"\n"
+" block2\\_conv2 (Conv2D)       (None, 112, 112, 128)     147584\n"
+"\n"
+" block2\\_pool (MaxPooling2D)  (None, 56, 56, 128)       0\n"
+"\n"
+" block3\\_conv1 (Conv2D)       (None, 56, 56, 256)       295168\n"
+"\n"
+" block3\\_conv2 (Conv2D)       (None, 56, 56, 256)       590080\n"
+"\n"
+" block3\\_conv3 (Conv2D)       (None, 56, 56, 256)       590080\n"
+"\n"
+" block3\\_pool (MaxPooling2D)  (None, 28, 28, 256)       0\n"
+"\n"
+" block4\\_conv1 (Conv2D)       (None, 28, 28, 512)       1180160\n"
+"\n"
+" block4\\_conv2 (Conv2D)       (None, 28, 28, 512)       2359808\n"
+"\n"
+" block4\\_conv3 (Conv2D)       (None, 28, 28, 512)       2359808\n"
+"\n"
+" block4\\_pool (MaxPooling2D)  (None, 14, 14, 512)       0\n"
+"\n"
+" block5\\_conv1 (Conv2D)       (None, 14, 14, 512)       2359808\n"
+"\n"
+" block5\\_conv2 (Conv2D)       (None, 14, 14, 512)       2359808\n"
+"\n"
+" block5\\_conv3 (Conv2D)       (None, 14, 14, 512)       2359808\n"
+"\n"
+" block5\\_pool (MaxPooling2D)  (None, 7, 7, 512)         0\n"
+"\n"
+" flatten (Flatten)           (None, 25088)             0\n"
+"\n"
+" dense (Dense)               (None, 512)               12845568\n"
+"\n"
+" dropout (Dropout)           (None, 512)               0\n"
+"\n"
+" dense\\_1 (Dense)             (None, 256)               131328\n"
+"\n"
+" dense\\_2 (Dense)             (None, 5)                 1285\n"
+"\n"
+"=================================================================\n"
+"Total params: 27,692,869\n"
+"Trainable params: 27,692,869\n"
+"Non-trainable params: 0\n"
+"\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_"
+"\n"
+"\\end{sphinxVerbatim}"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:382
+#: 8b4539664be9492aacb5cd3c71e952ad
+msgid ""
+"Model: \"model\"\n"
+"_________________________________________________________________\n"
+" Layer (type)                Output Shape              Param #\n"
+"=================================================================\n"
+" input_1 (InputLayer)        [(None, 224, 224, 3)]     0\n"
+"\n"
+" block1_conv1 (Conv2D)       (None, 224, 224, 64)      1792\n"
+"\n"
+" block1_conv2 (Conv2D)       (None, 224, 224, 64)      36928\n"
+"\n"
+" block1_pool (MaxPooling2D)  (None, 112, 112, 64)      0\n"
+"\n"
+" block2_conv1 (Conv2D)       (None, 112, 112, 128)     73856\n"
+"\n"
+" block2_conv2 (Conv2D)       (None, 112, 112, 128)     147584\n"
+"\n"
+" block2_pool (MaxPooling2D)  (None, 56, 56, 128)       0\n"
+"\n"
+" block3_conv1 (Conv2D)       (None, 56, 56, 256)       295168\n"
+"\n"
+" block3_conv2 (Conv2D)       (None, 56, 56, 256)       590080\n"
+"\n"
+" block3_conv3 (Conv2D)       (None, 56, 56, 256)       590080\n"
+"\n"
+" block3_pool (MaxPooling2D)  (None, 28, 28, 256)       0\n"
+"\n"
+" block4_conv1 (Conv2D)       (None, 28, 28, 512)       1180160\n"
+"\n"
+" block4_conv2 (Conv2D)       (None, 28, 28, 512)       2359808\n"
+"\n"
+" block4_conv3 (Conv2D)       (None, 28, 28, 512)       2359808\n"
+"\n"
+" block4_pool (MaxPooling2D)  (None, 14, 14, 512)       0\n"
+"\n"
+" block5_conv1 (Conv2D)       (None, 14, 14, 512)       2359808\n"
+"\n"
+" block5_conv2 (Conv2D)       (None, 14, 14, 512)       2359808\n"
+"\n"
+" block5_conv3 (Conv2D)       (None, 14, 14, 512)       2359808\n"
+"\n"
+" block5_pool (MaxPooling2D)  (None, 7, 7, 512)         0\n"
+"\n"
+" flatten (Flatten)           (None, 25088)             0\n"
+"\n"
+" dense (Dense)               (None, 512)               12845568\n"
+"\n"
+" dropout (Dropout)           (None, 512)               0\n"
+"\n"
+" dense_1 (Dense)             (None, 256)               131328\n"
+"\n"
+" dense_2 (Dense)             (None, 5)                 1285\n"
+"\n"
+"=================================================================\n"
+"Total params: 27,692,869\n"
+"Trainable params: 27,692,869\n"
+"Non-trainable params: 0\n"
+"_________________________________________________________________"
+msgstr ""

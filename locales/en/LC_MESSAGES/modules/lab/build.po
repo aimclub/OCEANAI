@@ -1,0 +1,83 @@
+# English translation.
+# Copyright (C) 2022. Speech and Multimodal Interfaces Laboratory Team
+# This file is distributed under the same license as the big5 package.
+# Elena Ryumina <ryumina_ev@mail.ru>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  1.0\n"
+"Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
+"POT-Creation-Date: 2022-12-04 15:46+0300\n"
+"PO-Revision-Date: 2022-12-01 09:13+0300\n"
+"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
+"<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
+"Language-Team: English <ryumina_ev@mail.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../source/modules/lab/build.rst:2 3cbeb71f5094457fa313b6b1aca43eec
+msgid "Сборка"
+msgstr "Build"
+
+#: 91a7e81b513c45478a18f87c819659f0 oceanai.modules.lab.build.Run:1 of
+msgid "Базовые классы: :py:class:`~oceanai.modules.lab.prediction.Prediction`"
+msgstr "Base classes: :py:class:`~oceanai.modules.lab.prediction.Prediction`"
+
+#: de0a1c09b8c04251b3ae8fbb8e6b5f8f oceanai.modules.lab.build.Run:1 of
+msgid "Класс для сборки"
+msgstr "Class for build"
+
+#: 39050a1aad39464f944d4a75a962fd38 oceanai.modules.lab.build.Run of
+msgid "Параметры"
+msgstr "Options"
+
+#: eeadecb319e34875a2321b61dcde7e1c oceanai.modules.lab.build.Run:3 of
+msgid "Смотреть :attr:`~oceanai.modules.core.language.Language.lang`"
+msgstr "See :attr:`~oceanai.modules.core.language.Language.lang`"
+
+#: 0348cd208e1f4e3c99853032200ac9b6 oceanai.modules.lab.build.Run:5 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_simple`"
+msgstr "See :attr:`~oceanai.modules.core.settings.Settings.color_simple`"
+
+#: 676d573733384e9392101d3dca66ff4a oceanai.modules.lab.build.Run:7 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_info`"
+msgstr "See :attr:`~oceanai.modules.core.settings.Settings.color_info`"
+
+#: 36c4b5d30bdf48b680dd039003b09283 oceanai.modules.lab.build.Run:9 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_err`"
+msgstr "See :attr:`~oceanai.modules.core.settings.Settings.color_err`"
+
+#: 6c14a018c61241198699097cbe7d10ba oceanai.modules.lab.build.Run:11 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_true`"
+msgstr "See :attr:`~oceanai.modules.core.settings.Settings.color_true`"
+
+#: 1e8d3cdfed7943e88585bc3d25b8c799 oceanai.modules.lab.build.Run:13 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.bold_text`"
+msgstr "See :attr:`~oceanai.modules.core.settings.Settings.bold_text`"
+
+#: 110cbb128e93481094a2ca6d61a6c01b oceanai.modules.lab.build.Run:15 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.num_to_df_display`"
+msgstr "See :attr:`~oceanai.modules.core.settings.Settings.num_to_df_display`"
+
+#: 110ffdba1fe44c418f0e64a0174fe017 oceanai.modules.lab.build.Run:17 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.text_runtime`"
+msgstr "See :attr:`~oceanai.modules.core.settings.Settings.text_runtime`"
+
+#: ../../../docstring 0aa475c7148d462f80b3488c572adab4
+#: c76ac9fee0bd486481186f6c05157a95 oceanai.modules.lab.build.Run:19
+#: oceanai.modules.lab.build.Run.metadata:1 of
+msgid "Отображение информации о библиотеке"
+msgstr "Displaying library information"
+
+#: ../../../docstring a2d32195e0b143a78a8cee232041f908
+#: oceanai.modules.lab.build.Run.metadata of
+msgid "type"
+msgstr ""
+
+#: ../../../docstring d48bfd1017964b8f8b33ae0b674ad3ec
+#: oceanai.modules.lab.build.Run.metadata:3 of
+msgid "bool"
+msgstr ""
+

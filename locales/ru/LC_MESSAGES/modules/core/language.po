@@ -1,0 +1,634 @@
+# Russian translation.
+# Copyright (C) 2022. Speech and Multimodal Interfaces Laboratory Team
+# This file is distributed under the same license as the big5 package.
+# Elena Ryumina <ryumina_ev@mail.ru>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  1.0\n"
+"Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
+"POT-Creation-Date: 2022-12-03 15:07+0300\n"
+"PO-Revision-Date: 2022-12-01 09:13+0300\n"
+"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
+"<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
+"Language-Team: Russian <ryumina_ev@mail.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../source/modules/core/language.rst:2 e968ed4b01114b0ba6c5980913e5924b
+msgid "Определение языка"
+msgstr ""
+
+#: e57440f4dddf4a07b50c52a5a9e87bc8 oceanai.modules.core.language.Language:1 of
+msgid "Базовые классы: :py:class:`object`"
+msgstr ""
+
+#: c549edf3977541479f185254ed46a109 oceanai.modules.core.language.Language:1 of
+msgid "Класс для интернационализации (I18N) и локализации (L10N)"
+msgstr ""
+
+#: 882cfbbb129d41d2956bcfd0f1793215 e4d4bad96a894ec6993837ca833de805
+#: oceanai.modules.core.language.Language
+#: oceanai.modules.core.language.Language.__set_locale of
+msgid "Параметры"
+msgstr ""
+
+#: 78c7bf4ecd8c4d008b9b00c617e711e6 800fc942223d41069686fe7b0c51dc24
+#: f7c7a342e54b439caa6856e3e8809a87 oceanai.modules.core.language.Language:3
+#: oceanai.modules.core.language.Language.__set_locale:6
+#: oceanai.modules.core.language.Language.lang_:3 of
+msgid "Язык"
+msgstr ""
+
+#: 4164229d7235429ba0e0f791bec6e04d 5ba5f72b057c425aab0fd7f4d0082afe
+#: oceanai.modules.core.language.Language.__get_languages:1
+#: oceanai.modules.core.language.Language.locales_:1 of
+msgid "Получение поддерживаемых языков"
+msgstr ""
+
+#: 92da5fdfe8b44342bae264e88ed6f6cf b6b37bd2392b44dab46ff814b9700c8b
+#: c395388d7d41416a9b687be3c71586cf
+#: oceanai.modules.core.language.Language.__get_languages:4
+#: oceanai.modules.core.language.Language.__get_locales:4
+#: oceanai.modules.core.language.Language.__set_locale:4 of
+msgid "private (приватный метод)"
+msgstr ""
+
+#: 18e674d6f794462d8ba43579947ff61a 232e1f10e3d140afb2a05b1c6e893e14
+#: 39b6732e412040ce96edd6ba8c397ad2 99bfeec5726b46309454202accef8f6d
+#: a3919576fee34fa1ab201410b1330c3e e5b9ec3e9abb4d329512d389927b8157
+#: oceanai.modules.core.language.Language.__get_languages
+#: oceanai.modules.core.language.Language.__get_locales
+#: oceanai.modules.core.language.Language.__set_locale
+#: oceanai.modules.core.language.Language.lang_
+#: oceanai.modules.core.language.Language.locales_
+#: oceanai.modules.core.language.Language.path_to_locales_ of
+msgid "Результат"
+msgstr ""
+
+#: 13135382fa774f9aab19c5a4d927752f 5c8147925eb943b59bb16347b13f93d8
+#: oceanai.modules.core.language.Language.__get_languages:6
+#: oceanai.modules.core.language.Language.locales_:3 of
+msgid "Список поддерживаемых языков"
+msgstr ""
+
+#: 103b9e11124d446ca22a6289c72057be 2cc762352e294df78af74e84a6bf0d78
+#: 47c2fc6ac5854bd68a2330b64b7a72bf 6384c8d1425a4ff1af0c008526676304
+#: 99db15f962324ebbbe5c181dba9f1199 a85a3761993d42e08bbbbc40bbea438e
+#: oceanai.modules.core.language.Language.__get_languages
+#: oceanai.modules.core.language.Language.__get_locales
+#: oceanai.modules.core.language.Language.__set_locale
+#: oceanai.modules.core.language.Language.lang_
+#: oceanai.modules.core.language.Language.locales_
+#: oceanai.modules.core.language.Language.path_to_locales_ of
+msgid "Тип результата"
+msgstr ""
+
+#: 181220d5b7224dddb8a2618e3fcdf6e0 5b93e7848cf84402a55f377050bc615b
+#: 9a28db37ddb147988074dda33c19f4f8 e3c96fa3defd4f448e35ab6b1d9b545c
+#: oceanai.modules.core.language.Language.__get_languages
+#: oceanai.modules.core.language.Language.__get_locales
+#: oceanai.modules.core.language.Language.locales_
+#: oceanai.modules.core.language.Language.path_to_locales_ of
+msgid "Пример"
+msgstr ""
+
+#: ../../../docstring 2dd41b4f922f409baf424fd07915a663
+#: 7224199aaab24947a3117100108e9efc 739cb8236fbe4f1d9ac551e579132ee0
+#: 8a3fab7601a74ad59d598896755355f2 a4efe9e789974606a9f12dc4a2864230
+#: f965eec981b44f2685a9222cdb9b1aab fc285409cd384a199565a26099525937
+#: oceanai.modules.core.language.Language.__get_languages:11
+#: oceanai.modules.core.language.Language.__get_locales:12
+#: oceanai.modules.core.language.Language.__set_locale:14
+#: oceanai.modules.core.language.Language.lang:12
+#: oceanai.modules.core.language.Language.lang_:8
+#: oceanai.modules.core.language.Language.locales_:8
+#: oceanai.modules.core.language.Language.path_to_locales_:8 of
+msgid ":bdg-success:`Верно` :bdg-light:`-- 1 --`"
+msgstr ""
+
+#: bdfd55a5ec8d41e28c1d85939c491b06
+#: oceanai.modules.core.language.Language.__get_languages:13 of
+msgid ""
+"from oceanai.modules.core.language import Language\n"
+"\n"
+"language = Language(lang = 'ru')\n"
+"language._Language__get_languages()"
+msgstr ""
+
+#: 05c134a3a0b64adfab5250825b7e92ed 95433a36a65340f987736af23bcaa9fe
+#: oceanai.modules.core.language.Language.__get_languages:22
+#: oceanai.modules.core.language.Language.locales_:19 of
+msgid "['ru', 'en']"
+msgstr ""
+
+#: 09d6efabc67045eebc3e9662c39d2289
+#: oceanai.modules.core.language.Language.__get_locales:1 of
+msgid "Получение языковых пакетов"
+msgstr ""
+
+#: e53e03691e5a478aba4e108a3a7ce3e2
+#: oceanai.modules.core.language.Language.__get_locales:6 of
+msgid "Словарь с языковыми пакетами"
+msgstr ""
+
+#: e31090f4b6b84349aea889db6bc2b101
+#: oceanai.modules.core.language.Language.__get_locales:14 of
+msgid ""
+"from oceanai.modules.core.language import Language\n"
+"\n"
+"language = Language(lang = 'ru')\n"
+"language._Language__get_locales()"
+msgstr ""
+
+#: fe109b3a2ec9413c99f2f00767538637
+#: oceanai.modules.core.language.Language.__get_locales:23 of
+msgid ""
+"{\n"
+"    'ru': <bound method GNUTranslations.gettext of "
+"<gettext.GNUTranslations object at 0x14680ce50>>,\n"
+"    'en': <bound method GNUTranslations.gettext of "
+"<gettext.GNUTranslations object at 0x1460ddbb0>>\n"
+"}"
+msgstr ""
+
+#: 1cb88137675b46fabc593445107eb44d
+#: oceanai.modules.core.language.Language.__set_locale:1 of
+msgid "Установка языка"
+msgstr ""
+
+#: b26c15c857564376adb0c17ca06b0829
+#: oceanai.modules.core.language.Language.__set_locale:9 of
+msgid ""
+"MethodType перевода строк на один из поддерживаемых языков если метод "
+"запущен через конструктор"
+msgstr ""
+
+#: ../../../docstring 0bc8eba1d3b341f691c33d1b98b14eaf
+#: 3a227ea2cbda46b6ad9cc9028c00041e c1ea4c85b2ae49b2a7434245200eb997
+#: oceanai.modules.core.language.Language.__set_locale
+#: oceanai.modules.core.language.Language.lang
+#: oceanai.modules.core.language.Language.lang_ of
+msgid "Примеры"
+msgstr ""
+
+#: 1ea55ba185ed43219ed9292478d9ebfb 9fdc14d369474aff8eb81ff0bb432b5a
+#: oceanai.modules.core.language.Language.__set_locale:16
+#: oceanai.modules.core.language.Language.lang_:27 of
+msgid ""
+"from oceanai.modules.core.language import Language\n"
+"\n"
+"language = Language(lang = 'ru')\n"
+"print(language.lang_)"
+msgstr ""
+
+#: 80add5f6a2a645b8995ebea86d6a29a7 91a0db4334084581aa6aa325cb4132a8
+#: a36f1d30970d4d20ba5a917c84532e0d c4f268d073ef406d83ebd1a64d629a1f
+#: d7f99e854b494e76b7941f90aebef68d
+#: oceanai.modules.core.language.Language.__set_locale:25
+#: oceanai.modules.core.language.Language.lang_:19
+#: oceanai.modules.core.language.Language.lang_:36
+#: oceanai.modules.core.language.Language.lang_:70
+#: oceanai.modules.core.language.Language.lang_:87 of
+msgid "ru"
+msgstr ""
+
+#: ../../../docstring 3e32d7a7a3ce4cc394f64389f3d66c7b
+#: a0b3e9d36d084beb8c2e2807b38c4377 ede00fcc96944b3f89f054710a017e46
+#: f50c3eac3c844cd2bfdcb2332892988f fa0ab2345dda4a369f1aa71fa9dd8c0f
+#: oceanai.modules.core.language.Language.__set_locale:31
+#: oceanai.modules.core.language.Language.lang:29
+#: oceanai.modules.core.language.Language.lang:80
+#: oceanai.modules.core.language.Language.lang_:25
+#: oceanai.modules.core.language.Language.lang_:76 of
+msgid ":bdg-light:`-- 2 --`"
+msgstr ""
+
+#: 61c5190d144a4b5188a5e3bdbbf15050
+#: oceanai.modules.core.language.Language.__set_locale:33 of
+msgid ""
+"from oceanai.modules.core.language import Language\n"
+"\n"
+"language = Language(lang = 'ru')\n"
+"language._Language__set_locale('en')\n"
+"print(language.lang_)"
+msgstr ""
+
+#: 551110d8815040a084a6875a1ed9021c fcfd54a4183b4dfc8771a4e39cf5192a
+#: oceanai.modules.core.language.Language.__set_locale:43
+#: oceanai.modules.core.language.Language.lang_:53 of
+msgid "en"
+msgstr ""
+
+#: ../../../docstring 377596275a264f8983c128b72d8671e5
+#: oceanai.modules.core.language.Language.lang:5 of
+msgid "Язык, доступные варианты:"
+msgstr ""
+
+#: ../../../docstring 0377e99a02e3414c91c574a5de370226
+#: oceanai.modules.core.language.Language.lang:7 of
+msgid "``\"ru\"`` - Русский язык (``по умолчанию``)"
+msgstr ""
+
+#: ../../../docstring cb37fed6dd5d4095aebe509fed35408d
+#: oceanai.modules.core.language.Language.lang:8 of
+msgid "``\"en\"`` - Английский язык"
+msgstr ""
+
+#: ../../../docstring fa0cde4c4fc648c59902338b0154ed91
+#: oceanai.modules.core.language.Language.lang:14 of
+msgid ""
+"from oceanai.modules.core.language import Language\n"
+"\n"
+"language = Language()\n"
+"print(language.lang, language.lang_)"
+msgstr ""
+
+#: ../../../docstring 4611cd2d860c4964af68b0dc65cf0830
+#: d419919f8a5b4cc2a2de2c0a908b2ef2
+#: oceanai.modules.core.language.Language.lang:23
+#: oceanai.modules.core.language.Language.lang:40 of
+msgid "ru ru"
+msgstr ""
+
+#: ../../../docstring f430c3252e0e4bbe9cd67317cec7c4c5
+#: oceanai.modules.core.language.Language.lang:31 of
+msgid ""
+"from oceanai.modules.core.language import Language\n"
+"\n"
+"language = Language(lang = 'ru')\n"
+"print(language.lang, language.lang_)"
+msgstr ""
+
+#: ../../../docstring 9b54162df4564a7b975dd36bbe3bd93c
+#: ad31ab6fa7564c56b4fae6e39e43bfe2
+#: oceanai.modules.core.language.Language.lang:46
+#: oceanai.modules.core.language.Language.lang_:42 of
+msgid ":bdg-light:`-- 3 --`"
+msgstr ""
+
+#: ../../../docstring 22d677480d994282930983375be41768
+#: oceanai.modules.core.language.Language.lang:48 of
+msgid ""
+"from oceanai.modules.core.language import Language\n"
+"\n"
+"language = Language(lang = 'en')\n"
+"print(language.lang, language.lang_)"
+msgstr ""
+
+#: ../../../docstring 0c6a0de4dfaf4b1c80329cb625cc2b17
+#: oceanai.modules.core.language.Language.lang:57 of
+msgid "en en"
+msgstr ""
+
+#: ../../../docstring b6821ef74bdd4270a9d9123f48c9a1a0
+#: da265e28f4a74234aa1e8b77f33ef11f
+#: oceanai.modules.core.language.Language.lang:63
+#: oceanai.modules.core.language.Language.lang_:59 of
+msgid ":bdg-warning:`Лучше так не делать` :bdg-light:`-- 1 --`"
+msgstr ""
+
+#: ../../../docstring 1feec7f3a7ee4bdda6a2cd8a639f0311
+#: oceanai.modules.core.language.Language.lang:65 of
+msgid ""
+"from oceanai.modules.core.language import Language\n"
+"\n"
+"language = Language(lang = 'es')\n"
+"print(language.lang, language.lang_)"
+msgstr ""
+
+#: ../../../docstring d6fccbfb93084d9dad6f68c2decaa9e2
+#: oceanai.modules.core.language.Language.lang:74 of
+msgid "es ru"
+msgstr ""
+
+#: ../../../docstring 32b9146135b94ca58c19a130cda60239
+#: oceanai.modules.core.language.Language.lang:82 of
+msgid ""
+"from oceanai.modules.core.language import Language\n"
+"\n"
+"language = Language(lang = 1)\n"
+"print(language.lang, language.lang_)"
+msgstr ""
+
+#: ../../../docstring f7d45711ed95470aa66338d4dd257428
+#: oceanai.modules.core.language.Language.lang:91 of
+msgid "1 ru"
+msgstr ""
+
+#: ../../../docstring bbce331f99344e51a3fe1e66fe6b1bc8
+#: oceanai.modules.core.language.Language.lang of
+msgid "type"
+msgstr ""
+
+#: ../../../docstring 68381c7c6d5944009a70c6befa0ac9a6
+#: oceanai.modules.core.language.Language.lang:97 of
+msgid "str"
+msgstr ""
+
+#: bfcfefbd90a54e9995888e1e97c55492
+#: oceanai.modules.core.language.Language.lang_:1 of
+msgid "Получение текущего языка"
+msgstr ""
+
+#: b1cd6c28b99c4faea04aa902acf5af5c
+#: oceanai.modules.core.language.Language.lang_:10 of
+msgid ""
+"from oceanai.modules.core.language import Language\n"
+"\n"
+"language = Language()\n"
+"print(language.lang_)"
+msgstr ""
+
+#: 22858cdecee34b47bb64d5112182ca52
+#: oceanai.modules.core.language.Language.lang_:44 of
+msgid ""
+"from oceanai.modules.core.language import Language\n"
+"\n"
+"language = Language(lang = 'en')\n"
+"print(language.lang_)"
+msgstr ""
+
+#: 8e8072bc8e144cbaad0a8097cbbb6dcd
+#: oceanai.modules.core.language.Language.lang_:61 of
+msgid ""
+"from oceanai.modules.core.language import Language\n"
+"\n"
+"language = Language(lang = 'es')\n"
+"print(language.lang_)"
+msgstr ""
+
+#: f182381478e44893bf2b8b12f8ec5596
+#: oceanai.modules.core.language.Language.lang_:78 of
+msgid ""
+"from oceanai.modules.core.language import Language\n"
+"\n"
+"language = Language(lang = 1)\n"
+"print(language.lang_)"
+msgstr ""
+
+#: 262477058dac4128b0afc3be44854f61
+#: oceanai.modules.core.language.Language.locales_:10 of
+msgid ""
+"from oceanai.modules.core.language import Language\n"
+"\n"
+"language = Language(lang = 'en')\n"
+"print(language.locales_)"
+msgstr ""
+
+#: e59ebe43f69a45c6a49ca4b01cc292fa
+#: oceanai.modules.core.language.Language.path_to_locales_:1 of
+msgid "Получение директории с языковыми пакетами"
+msgstr ""
+
+#: bd22fe919e524b1cae7e5ad4b9d0d53f
+#: oceanai.modules.core.language.Language.path_to_locales_:3 of
+msgid "Директория с языковыми пакетами"
+msgstr ""
+
+#: b5ca2f28e0ec4ec39bdbaa5ba24f59c6
+#: oceanai.modules.core.language.Language.path_to_locales_:10 of
+msgid ""
+"from oceanai.modules.core.language import Language\n"
+"\n"
+"language = Language(lang = 'en')\n"
+"# У каждого пользователя свой путь\n"
+"print(language.path_to_locales_)"
+msgstr ""
+
+#: 0f8913f591a04b10a824d5f0f2f31bb2
+#: oceanai.modules.core.language.Language.path_to_locales_:20 of
+msgid "/Users/dl/GitHub/OCEANAI/oceanai/modules/locales"
+msgstr ""
+
+#~ msgid "Базовые классы: :py:class:`object`"
+#~ msgstr ""
+
+#~ msgid "Класс для интернационализации (I18N) и локализации (L10N)"
+#~ msgstr ""
+
+#~ msgid "Параметры"
+#~ msgstr ""
+
+#~ msgid "Язык"
+#~ msgstr ""
+
+#~ msgid "Получение поддерживаемых языков"
+#~ msgstr ""
+
+#~ msgid "private (приватный метод)"
+#~ msgstr ""
+
+#~ msgid "Результат"
+#~ msgstr ""
+
+#~ msgid "Список поддерживаемых языков"
+#~ msgstr ""
+
+#~ msgid "Тип результата"
+#~ msgstr ""
+
+#~ msgid "Пример"
+#~ msgstr ""
+
+#~ msgid ":bdg-success:`Верно` :bdg-light:`-- 1 --`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "from oceanai.modules.core.language import Language\n"
+#~ "\n"
+#~ "language = Language(lang = 'ru')\n"
+#~ "language._Language__get_languages()"
+#~ msgstr ""
+
+#~ msgid "['ru', 'en']"
+#~ msgstr ""
+
+#~ msgid "Получение языковых пакетов"
+#~ msgstr ""
+
+#~ msgid "Словарь с языковыми пакетами"
+#~ msgstr ""
+
+#~ msgid "Пример # :body: mr-4"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "from oceanai.modules.core.language import Language\n"
+#~ "\n"
+#~ "language = Language(lang = 'ru')\n"
+#~ "language._Language__get_locales()"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "{\n"
+#~ "    'ru': <bound method "
+#~ "GNUTranslations.gettext of <gettext.GNUTranslations "
+#~ "object at 0x14680ce50>>,\n"
+#~ "    'en': <bound method "
+#~ "GNUTranslations.gettext of <gettext.GNUTranslations "
+#~ "object at 0x1460ddbb0>>\n"
+#~ "}"
+#~ msgstr ""
+
+#~ msgid "Установка языка"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "MethodType перевода строк на один из "
+#~ "поддерживаемых языков если метод запущен "
+#~ "через конструктор"
+#~ msgstr ""
+
+#~ msgid "Примеры"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "from oceanai.modules.core.language import Language\n"
+#~ "\n"
+#~ "language = Language(lang = 'ru')\n"
+#~ "print(language.lang_)"
+#~ msgstr ""
+
+#~ msgid "ru"
+#~ msgstr ""
+
+#~ msgid ":bdg-light:`-- 2 --`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "from oceanai.modules.core.language import Language\n"
+#~ "\n"
+#~ "language = Language(lang = 'ru')\n"
+#~ "language._Language__set_locale('en')\n"
+#~ "print(language.lang_)"
+#~ msgstr ""
+
+#~ msgid "en"
+#~ msgstr ""
+
+#~ msgid "Язык, доступные варианты:"
+#~ msgstr ""
+
+#~ msgid "``\"ru\"`` - Русский язык (``по умолчанию``)"
+#~ msgstr ""
+
+#~ msgid "``\"en\"`` - Английский язык"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "from oceanai.modules.core.language import Language\n"
+#~ "\n"
+#~ "language = Language()\n"
+#~ "print(language.lang, language.lang_)"
+#~ msgstr ""
+
+#~ msgid "ru ru"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "from oceanai.modules.core.language import Language\n"
+#~ "\n"
+#~ "language = Language(lang = 'ru')\n"
+#~ "print(language.lang, language.lang_)"
+#~ msgstr ""
+
+#~ msgid ":bdg-light:`-- 3 --`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "from oceanai.modules.core.language import Language\n"
+#~ "\n"
+#~ "language = Language(lang = 'en')\n"
+#~ "print(language.lang, language.lang_)"
+#~ msgstr ""
+
+#~ msgid "en en"
+#~ msgstr ""
+
+#~ msgid ":bdg-warning:`Лучше так не делать` :bdg-light:`-- 1 --`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "from oceanai.modules.core.language import Language\n"
+#~ "\n"
+#~ "language = Language(lang = 'es')\n"
+#~ "print(language.lang, language.lang_)"
+#~ msgstr ""
+
+#~ msgid "es ru"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "from oceanai.modules.core.language import Language\n"
+#~ "\n"
+#~ "language = Language(lang = 1)\n"
+#~ "print(language.lang, language.lang_)"
+#~ msgstr ""
+
+#~ msgid "1 ru"
+#~ msgstr ""
+
+#~ msgid "type"
+#~ msgstr ""
+
+#~ msgid "str"
+#~ msgstr ""
+
+#~ msgid "Получение текущего языка"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "from oceanai.modules.core.language import Language\n"
+#~ "\n"
+#~ "language = Language()\n"
+#~ "print(language.lang_)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "from oceanai.modules.core.language import Language\n"
+#~ "\n"
+#~ "language = Language(lang = 'en')\n"
+#~ "print(language.lang_)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "from oceanai.modules.core.language import Language\n"
+#~ "\n"
+#~ "language = Language(lang = 'es')\n"
+#~ "print(language.lang_)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "from oceanai.modules.core.language import Language\n"
+#~ "\n"
+#~ "language = Language(lang = 1)\n"
+#~ "print(language.lang_)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "from oceanai.modules.core.language import Language\n"
+#~ "\n"
+#~ "language = Language(lang = 'en')\n"
+#~ "print(language.locales_)"
+#~ msgstr ""
+
+#~ msgid "Получение директории с языковыми пакетами"
+#~ msgstr ""
+
+#~ msgid "Директория с языковыми пакетами"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "from oceanai.modules.core.language import Language\n"
+#~ "\n"
+#~ "language = Language(lang = 'en')\n"
+#~ "# У каждого пользователя свой путь\n"
+#~ "print(language.path_to_locales_)"
+#~ msgstr ""
+
+#~ msgid "/Users/dl/GitHub/oceanai/oceanai/modules/locales"
+#~ msgstr ""
+

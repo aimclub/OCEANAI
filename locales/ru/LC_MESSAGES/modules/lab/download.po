@@ -1,0 +1,540 @@
+# Russian translation.
+# Copyright (C) 2022. Speech and Multimodal Interfaces Laboratory Team
+# This file is distributed under the same license as the big5 package.
+# Elena Ryumina <ryumina_ev@mail.ru>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  1.0\n"
+"Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
+"POT-Creation-Date: 2022-12-11 15:53+0300\n"
+"PO-Revision-Date: 2022-12-01 09:13+0300\n"
+"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
+"<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
+"Language-Team: Russian <ryumina_ev@mail.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../source/modules/lab/download.rst:2 57e5380f72b841a7ad87634e85d69428
+msgid "Загрузка файлов"
+msgstr ""
+
+#: 52728bdacc0349b8b348592938141a52
+#: oceanai.modules.lab.download.DownloadMessages:1 of
+msgid "Базовые классы: :py:class:`~oceanai.modules.core.core.Core`"
+msgstr ""
+
+#: 3c236d404ba44276bf3dad44905feee9
+#: oceanai.modules.lab.download.DownloadMessages:1 of
+msgid "Класс для сообщений"
+msgstr ""
+
+#: 0ac96703f50e417a807f1ca6a07c72df 793d65e3271145b08e10abfc1f3610e2
+#: 883a3ee2b1cb46f2af31a468f556f8e6 9460f46fc71643ff9b6e26ab86f73f99
+#: 9aa8dc3191534493b60f39edc1e949f2 oceanai.modules.lab.download.Download
+#: oceanai.modules.lab.download.Download.__progressbar_download_file_from_url
+#: oceanai.modules.lab.download.Download._download_file_from_url
+#: oceanai.modules.lab.download.Download.download_file_from_url
+#: oceanai.modules.lab.download.DownloadMessages of
+msgid "Параметры"
+msgstr ""
+
+#: 3f1b4e1d74b34433a7e70675c7463199 da7c92164d594b3181d41a87c70c9a80
+#: oceanai.modules.lab.download.Download:3
+#: oceanai.modules.lab.download.DownloadMessages:3 of
+msgid "Смотреть :attr:`~oceanai.modules.core.language.Language.lang`"
+msgstr ""
+
+#: 1f1341f2eba44370bed3ae4f9c27ce0d 4c4ad20069fe4b4dbbf226a33c3be7ba
+#: oceanai.modules.lab.download.Download:5
+#: oceanai.modules.lab.download.DownloadMessages:5 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_simple`"
+msgstr ""
+
+#: 5cfe770cb9ff41cb90b59c40dcde2a32 5f3c5e94f8ad4eaf94f53f859b6ba117
+#: oceanai.modules.lab.download.Download:7
+#: oceanai.modules.lab.download.DownloadMessages:7 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_info`"
+msgstr ""
+
+#: 8a726911c1c0456f9e6aabe2b4df5829 996df9fecf4a49e299dda2513cb97a9b
+#: oceanai.modules.lab.download.Download:9
+#: oceanai.modules.lab.download.DownloadMessages:9 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_err`"
+msgstr ""
+
+#: 51ec5e51ba1e4f79b6eb9cc950d362e4 e050a4cbf06f4e53b3ee1e122468fb59
+#: oceanai.modules.lab.download.Download:11
+#: oceanai.modules.lab.download.DownloadMessages:11 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_true`"
+msgstr ""
+
+#: c336ec44aa2b418a94d0e1b28b587a03 ded1b74da94b40979b7f9cc56e7bedeb
+#: oceanai.modules.lab.download.Download:13
+#: oceanai.modules.lab.download.DownloadMessages:13 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.bold_text`"
+msgstr ""
+
+#: 65172a3cd5cb46e2a52b7b064c9e804b 67a9b3f81ff441e997dfc16f61a22ca9
+#: oceanai.modules.lab.download.Download:15
+#: oceanai.modules.lab.download.DownloadMessages:15 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.num_to_df_display`"
+msgstr ""
+
+#: 43cf1b3b0a0948abace4f218c30a3d7d 45bb8c8d5e844709a99b37aee12554bd
+#: oceanai.modules.lab.download.Download:17
+#: oceanai.modules.lab.download.DownloadMessages:17 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.text_runtime`"
+msgstr ""
+
+#: e7856d0e3c7a421195492ddc95a99fe1 oceanai.modules.lab.download.Download:1 of
+msgid "Базовые классы: :py:class:`~oceanai.modules.lab.download.DownloadMessages`"
+msgstr ""
+
+#: f3e503601736407db49f6707f8463a5e oceanai.modules.lab.download.Download:1 of
+msgid "Класс для загрузки файлов"
+msgstr ""
+
+#: 1dc32a3488454269837998b1218aab72
+#: oceanai.modules.lab.download.Download.__progressbar_download_file_from_url:1
+#: of
+msgid "Индикатор выполнения загрузки файла из URL"
+msgstr ""
+
+#: 6c3f736d9a0b4794852b61c2990676d6
+#: oceanai.modules.lab.download.Download.__progressbar_download_file_from_url:4
+#: of
+msgid "private (приватный метод)"
+msgstr ""
+
+#: e1f3213d950548b0970d12130cbaf362
+#: oceanai.modules.lab.download.Download.__progressbar_download_file_from_url:6
+#: of
+msgid "Путь до файла"
+msgstr ""
+
+#: 69086a4d314348c2a6a15de47ae95c5c
+#: oceanai.modules.lab.download.Download.__progressbar_download_file_from_url:8
+#: of
+msgid "Процент выполнения (от **0.0** до **100.0**)"
+msgstr ""
+
+#: 945e1978e8ca448bad5b31ac77d11574
+#: oceanai.modules.lab.download.Download.__progressbar_download_file_from_url:10
+#: of
+msgid "Очистка области вывода"
+msgstr ""
+
+#: 3e3aec25c65a4c2c8baf7bd58b3c25f7
+#: oceanai.modules.lab.download.Download.__progressbar_download_file_from_url:12
+#: of
+msgid "Замена последнего сообщения"
+msgstr ""
+
+#: 42a4e643727c498e8a182c97f02fda00 645a4fd1212b4741b126e3ac1d52e896
+#: 90a4535fb536468497aaf6561b5d762c
+#: oceanai.modules.lab.download.Download.__progressbar_download_file_from_url:14
+#: oceanai.modules.lab.download.Download._download_file_from_url:10
+#: oceanai.modules.lab.download.Download.download_file_from_url:7 of
+msgid "Отображение"
+msgstr ""
+
+#: c74d364d76df4c4daa4371c059970f15 d955eabafc024d50bae3e90585fde0a8
+#: fd81d3416bb046ef8759156fb83691bb
+#: oceanai.modules.lab.download.Download.__progressbar_download_file_from_url
+#: oceanai.modules.lab.download.Download._download_file_from_url
+#: oceanai.modules.lab.download.Download.download_file_from_url of
+msgid "Результат"
+msgstr ""
+
+#: 89fad4c841da42e7bb326861e064a2c4
+#: oceanai.modules.lab.download.Download.__progressbar_download_file_from_url:17
+#: of
+msgid "None"
+msgstr ""
+
+#: 5e015ef2fee24d3f9dd15afc66f80455 ca55685c1bde4388a649220f8c0ec3f5
+#: cdab618f9eec4918b17a0f09db199afa
+#: oceanai.modules.lab.download.Download.__progressbar_download_file_from_url
+#: oceanai.modules.lab.download.Download._download_file_from_url
+#: oceanai.modules.lab.download.Download.download_file_from_url of
+msgid "Тип результата"
+msgstr ""
+
+#: 8d7a54ac8d74403186651384911c3de8 aa675cd276c846b3928d5cd5bcc8d255
+#: oceanai.modules.lab.download.Download.__progressbar_download_file_from_url
+#: oceanai.modules.lab.download.Download._download_file_from_url of
+msgid "Примеры"
+msgstr ""
+
+#: 392a6a59f0cf42c396d0fbafa48b0963 d941e00d4dc3427c91d97196e77f856c
+#: oceanai.modules.lab.download.Download.__progressbar_download_file_from_url:22
+#: oceanai.modules.lab.download.Download._download_file_from_url:30 of
+msgid ":bdg-success:`Верно` :bdg-light:`-- 1 --`"
+msgstr ""
+
+#: fdc79f0ffc8a49b586c5ca4895955f5f
+#: oceanai.modules.lab.download.Download.__progressbar_download_file_from_url:24
+#: of
+msgid ""
+"import numpy as np\n"
+"from oceanai.modules.lab.download import Download\n"
+"\n"
+"download = Download()\n"
+"\n"
+"for progress in np.arange(0., 101, 25):\n"
+"    download._Download__progressbar_download_file_from_url(\n"
+"        url_filename = 'https://clck.ru/32Nwdk',\n"
+"        progress = float(progress),\n"
+"        clear_out = False,\n"
+"        last = False, out = True\n"
+"    )"
+msgstr ""
+
+#: cec6d82602474de5bae805ef3d8ccfa8
+#: oceanai.modules.lab.download.Download.__progressbar_download_file_from_url:42
+#: of
+msgid ""
+"[2022-10-16 16:58:51] Загрузка файла \"https://clck.ru/32Nwdk\" (0.0%) "
+"...\n"
+"\n"
+"[2022-10-16 16:58:51] Загрузка файла \"https://clck.ru/32Nwdk\" (25.0%) "
+"...\n"
+"\n"
+"[2022-10-16 16:58:51] Загрузка файла \"https://clck.ru/32Nwdk\" (50.0%) "
+"...\n"
+"\n"
+"[2022-10-16 16:58:51] Загрузка файла \"https://clck.ru/32Nwdk\" (75.0%) "
+"...\n"
+"\n"
+"[2022-10-16 16:58:51] Загрузка файла \"https://clck.ru/32Nwdk\" (100.0%) "
+"..."
+msgstr ""
+
+#: 0f30f62adba54db294e6c1f4edb92e4b 585f06196159495cb671bee85124b999
+#: 66f972f7c24c456f83aacfbe037b4782
+#: oceanai.modules.lab.download.Download.__progressbar_download_file_from_url:56
+#: oceanai.modules.lab.download.Download._download_file_from_url:62
+#: oceanai.modules.lab.download.Download._download_file_from_url:124 of
+msgid ":bdg-light:`-- 2 --`"
+msgstr ""
+
+#: a1a7c8ffd0e343dbadb02759fb6c8bfb
+#: oceanai.modules.lab.download.Download.__progressbar_download_file_from_url:58
+#: of
+msgid ""
+"import numpy as np\n"
+"from oceanai.modules.lab.download import Download\n"
+"\n"
+"download = Download()\n"
+"\n"
+"for progress in np.arange(0., 101, 25):\n"
+"    download._Download__progressbar_download_file_from_url(\n"
+"        url_filename = 'https://clck.ru/32Nwdk',\n"
+"        progress = float(progress),\n"
+"        clear_out = True,\n"
+"        last = True, out = True\n"
+"    )"
+msgstr ""
+
+#: d3aa53e9cd2e44d491d8ede919f1a112
+#: oceanai.modules.lab.download.Download.__progressbar_download_file_from_url:76
+#: of
+msgid ""
+"[2022-10-16 16:59:41] Загрузка файла \"https://clck.ru/32Nwdk\" (100.0%) "
+"..."
+msgstr ""
+
+#: 21b621b43f8a407c9df0a93d4dc64249
+#: oceanai.modules.lab.download.Download.__progressbar_download_file_from_url:82
+#: of
+msgid ":bdg-danger:`Ошибка` :bdg-light:`-- 1 --`"
+msgstr ""
+
+#: 9cb3f44f4a5a4fc693358c2a62491fc6
+#: oceanai.modules.lab.download.Download.__progressbar_download_file_from_url:84
+#: of
+msgid ""
+"import numpy as np\n"
+"from oceanai.modules.lab.download import Download\n"
+"\n"
+"download = Download()\n"
+"\n"
+"for progress in np.arange(0., 101, 25):\n"
+"    download._Download__progressbar_download_file_from_url(\n"
+"        url_filename = 'https://clck.ru/32Nwdk',\n"
+"        progress = 101,\n"
+"        clear_out = True,\n"
+"        last = False, out = True\n"
+"    )"
+msgstr ""
+
+#: 9f816d0195d8479ba33ccc3edd1b738e
+#: oceanai.modules.lab.download.Download.__progressbar_download_file_from_url:102
+#: of
+msgid ""
+"[2022-10-16 17:00:11] Неверные типы или значения аргументов в "
+"\"Download.__progressbar_download_file_from_url\" ..."
+msgstr ""
+
+#: a005b13c90504e85883a59a9c5f272f3
+#: oceanai.modules.lab.download.Download._download_file_from_url:1 of
+msgid ""
+"Загрузка файла из URL (без очистки истории вывода сообщений в ячейке "
+"Jupyter)"
+msgstr ""
+
+#: 4bb7e2514ae14e3495199f48e31716dd
+#: oceanai.modules.lab.download.Download._download_file_from_url:4 of
+msgid "protected (защищенный метод)"
+msgstr ""
+
+#: d286373917b44961bb9e20c44b641b78 dc29ca0c1b124327a1e5042c8c8ca52b
+#: oceanai.modules.lab.download.Download._download_file_from_url:6
+#: oceanai.modules.lab.download.Download.download_file_from_url:3 of
+msgid "Полный путь к файлу"
+msgstr ""
+
+#: d5a88e5317434736bb57619bacf9c9d9 ff9d8d0a3a634c4e8203542b70ff838d
+#: oceanai.modules.lab.download.Download._download_file_from_url:8
+#: oceanai.modules.lab.download.Download.download_file_from_url:5 of
+msgid "Принудительная загрузка файла из сети"
+msgstr ""
+
+#: 8689c81197544f11a389833d7e2e5077 b8dab3a138dc4c49bf9c338d156fce9e
+#: oceanai.modules.lab.download.Download._download_file_from_url:12
+#: oceanai.modules.lab.download.Download.download_file_from_url:9 of
+msgid "Подсчет времени выполнения"
+msgstr ""
+
+#: 295f371e7b6f422eb3b63cc46c6cc7e0 6c5a321e6ae74b5eb7abbd1d27c4d52e
+#: oceanai.modules.lab.download.Download._download_file_from_url:14
+#: oceanai.modules.lab.download.Download.download_file_from_url:11 of
+msgid "Блокировка выполнения"
+msgstr ""
+
+#: 238b5c431c6541b7b455053356a6f158 28f9e23df8584d84ace47dca131b79bd
+#: oceanai.modules.lab.download.Download._download_file_from_url:17
+#: oceanai.modules.lab.download.Download.download_file_from_url:14 of
+msgid ""
+"Код статуса ответа:      * ``200`` - Файл загружен     * ``400`` - Ошибка"
+" при проверке аргументов     * ``403`` - Выполнение заблокировано "
+"пользователем     * ``404`` - Не удалось скачать файл"
+msgstr ""
+
+#: 0727744442dd41cfa7905bcf276d7b0f dd1b9103ea314e91852d6e075655e27c
+#: oceanai.modules.lab.download.Download._download_file_from_url:19
+#: oceanai.modules.lab.download.Download.download_file_from_url:16 of
+msgid "Код статуса ответа:"
+msgstr ""
+
+#: a20c4baf717a457a9ce795bc522c5135 b566bd4510874dd59a79da2db65c2425
+#: oceanai.modules.lab.download.Download._download_file_from_url:21
+#: oceanai.modules.lab.download.Download.download_file_from_url:18 of
+msgid "``200`` - Файл загружен"
+msgstr ""
+
+#: 1f0a3e276c5c442ea9670cf935f39ff1 efab7c3701194b01b4d44d1ce93f79d2
+#: oceanai.modules.lab.download.Download._download_file_from_url:22
+#: oceanai.modules.lab.download.Download.download_file_from_url:19 of
+msgid "``400`` - Ошибка при проверке аргументов"
+msgstr ""
+
+#: ca629c93b7064d12ad41c6867f1a5278 ec5b0cc230464e278044f65787f5e87c
+#: oceanai.modules.lab.download.Download._download_file_from_url:23
+#: oceanai.modules.lab.download.Download.download_file_from_url:20 of
+msgid "``403`` - Выполнение заблокировано пользователем"
+msgstr ""
+
+#: 39fe40a5eadd4d3aab9293a24fa774ce d24a1e5093774fdcbcdfb9e8aa0f7816
+#: oceanai.modules.lab.download.Download._download_file_from_url:24
+#: oceanai.modules.lab.download.Download.download_file_from_url:21 of
+msgid "``404`` - Не удалось скачать файл"
+msgstr ""
+
+#: c691102db5334577bc5038e4f0adb844
+#: oceanai.modules.lab.download.Download._download_file_from_url:32 of
+msgid ""
+"from oceanai.modules.lab.download import Download\n"
+"\n"
+"download = Download()\n"
+"\n"
+"download.path_to_save_ = './models'\n"
+"download.chunk_size_ = 2000000\n"
+"\n"
+"res_download_file_from_url = download._download_file_from_url(\n"
+"    url = "
+"'https://download.sberdisk.ru/download/file/400635799?token=MMRrak8fMsyzxLE&filename=weights_2022-05-05_11-27-55.h5',"
+"\n"
+"    force_reload = True,\n"
+"    out = True,\n"
+"    runtime = True,\n"
+"    run = True\n"
+")"
+msgstr ""
+
+#: f25a8f209afc4cce907e37f7f091cc2d
+#: oceanai.modules.lab.download.Download._download_file_from_url:52 of
+msgid ""
+"[2022-10-16 20:23:25] Загрузка файла \"weights_2022-05-05_11-27-55.h5\" "
+"(100.0%) ...\n"
+"\n"
+"--- Время выполнения: 0.373 сек. ---\n"
+"\n"
+"200"
+msgstr ""
+
+#: 3899892b0fdc46809e56235c7ed673a2
+#: oceanai.modules.lab.download.Download._download_file_from_url:64 of
+msgid ""
+"from oceanai.modules.lab.download import Download\n"
+"\n"
+"download = Download()\n"
+"\n"
+"download.path_to_save_ = './models'\n"
+"download.chunk_size_ = 2000000\n"
+"\n"
+"res_download_file_from_url = download._download_file_from_url(\n"
+"    url = 'https://clck.ru/32Nwdk',\n"
+"    force_reload = True,\n"
+"    out = True,\n"
+"    runtime = True,\n"
+"    run = False\n"
+")\n"
+"res_download_file_from_url"
+msgstr ""
+
+#: a8b95da9e7d945559721d211cc5dc8ae
+#: oceanai.modules.lab.download.Download._download_file_from_url:85 of
+msgid ""
+"[2022-10-16 19:33:05] Выполнение заблокировано пользователем ...\n"
+"\n"
+"403"
+msgstr ""
+
+#: f1ebb78f21844471bc1e848c8ddb4aa3
+#: oceanai.modules.lab.download.Download._download_file_from_url:93 of
+msgid ":bdg-danger:`Ошибки` :bdg-light:`-- 1 --`"
+msgstr ""
+
+#: 454c58f3a894467c9856cee03f70dfd5
+#: oceanai.modules.lab.download.Download._download_file_from_url:95 of
+msgid ""
+"from oceanai.modules.lab.download import Download\n"
+"\n"
+"download = Download()\n"
+"\n"
+"download.path_to_save_ = './models'\n"
+"download.chunk_size_ = 2000000\n"
+"\n"
+"res_download_file_from_url = download._download_file_from_url(\n"
+"    url = 1,\n"
+"    force_reload = True,\n"
+"    out = True,\n"
+"    runtime = True,\n"
+"    run = True\n"
+")\n"
+"res_download_file_from_url"
+msgstr ""
+
+#: c1eabb1228bd4251a1ccbd5690ad77e9
+#: oceanai.modules.lab.download.Download._download_file_from_url:116 of
+msgid ""
+"[2022-10-16 19:33:01] Неверные типы или значения аргументов в "
+"\"Download._download_file_from_url\" ...\n"
+"\n"
+"400"
+msgstr ""
+
+#: d0e79b676e7b462ca4e5cdf6aaddfd34
+#: oceanai.modules.lab.download.Download._download_file_from_url:126 of
+msgid ""
+"from oceanai.modules.lab.download import Download\n"
+"\n"
+"download = Download()\n"
+"\n"
+"download.path_to_save_ = './models'\n"
+"download.chunk_size_ = 2000000\n"
+"\n"
+"res_download_file_from_url = download._download_file_from_url(\n"
+"    url = 'https://',\n"
+"    force_reload = True,\n"
+"    out = True,\n"
+"    runtime = True,\n"
+"    run = True\n"
+")\n"
+"res_download_file_from_url"
+msgstr ""
+
+#: 76b49f31c21a4efd8d6f24d46a550d09
+#: oceanai.modules.lab.download.Download._download_file_from_url:147 of
+msgid ""
+"[2022-10-16 19:33:10] Что-то пошло не так ... не удалось обработать "
+"указанный URL ...\n"
+"\n"
+"    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/download.py\n"
+"    Линия: 257\n"
+"    Метод: _download_file_from_url\n"
+"    Тип ошибки: InvalidURL\n"
+"\n"
+"--- Время выполнения: 0.061 сек. ---\n"
+"\n"
+"404"
+msgstr ""
+
+#: b427b630c536466abfa2f72f85e22577
+#: oceanai.modules.lab.download.Download._download_file_from_url:162 of
+msgid ":bdg-light:`-- 3 --`"
+msgstr ""
+
+#: 0304f5f78e09477f825494e6b48b0c80
+#: oceanai.modules.lab.download.Download._download_file_from_url:164 of
+msgid ""
+"from oceanai.modules.lab.download import Download\n"
+"\n"
+"download = Download()\n"
+"\n"
+"download.path_to_save_ = './models'\n"
+"download.chunk_size_ = 2000000\n"
+"\n"
+"res_download_file_from_url = download._download_file_from_url(\n"
+"    url = 'https://www.iconfinder.com/icons/4375050/download/svg/4096',\n"
+"    force_reload = True,\n"
+"    out = True,\n"
+"    runtime = True,\n"
+"    run = True\n"
+")\n"
+"res_download_file_from_url"
+msgstr ""
+
+#: 8f0e234759ec4d998aeec40fcfaf6173
+#: oceanai.modules.lab.download.Download._download_file_from_url:185 of
+msgid ""
+"[2022-10-16 19:33:15] Загрузка файла \"4375050_logo_python_icon.svg\"\n"
+"\n"
+"[2022-10-16 19:33:15] Что-то пошло не так ... Не определен размер файла "
+"для загрузки ...\n"
+"\n"
+"    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/download.py\n"
+"    Линия: 324\n"
+"    Метод: _download_file_from_url\n"
+"    Тип ошибки: InvalidContentLength\n"
+"\n"
+"--- Время выполнения: 0.386 сек. ---\n"
+"\n"
+"404"
+msgstr ""
+
+#: de8ec50a8be84c6da79ea290b6aff27a
+#: oceanai.modules.lab.download.Download.download_file_from_url:1 of
+msgid "Загрузка файла из URL"
+msgstr ""
+
+#: 04c369298bc1463981f7f9a1920afb00
+#: oceanai.modules.lab.download.Download.download_file_from_url:24 of
+msgid ""
+":bdg-link-light:`Пример <../../user_guide/notebooks/Download-"
+"download_file_from_url.ipynb>`"
+msgstr ""

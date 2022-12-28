@@ -1,0 +1,38 @@
+# Russian translation.
+# Copyright (C) 2022. Speech and Multimodal Interfaces Laboratory Team
+# This file is distributed under the same license as the big5 package.
+# Elena Ryumina <ryumina_ev@mail.ru>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  1.0\n"
+"Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
+"POT-Creation-Date: 2022-12-03 15:07+0300\n"
+"PO-Revision-Date: 2022-12-01 09:13+0300\n"
+"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
+"<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
+"Language-Team: Russian <ryumina_ev@mail.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../source/modules/core/messages.rst:2 00cbb162c59b4feab3f8db62e76ed5f3
+msgid "Сообщения"
+msgstr ""
+
+#: 0095f690f3a642f3a7163fed45cdc58f oceanai.modules.core.messages.Messages:1 of
+msgid "Базовые классы: :py:class:`~oceanai.modules.core.language.Language`"
+msgstr ""
+
+#: 9014b003f887474883a8c160d78c9a36 oceanai.modules.core.messages.Messages:1 of
+msgid "Класс для сообщений"
+msgstr ""
+
+#: e9af30e7dd7a419e9c10dc58df0ae931 oceanai.modules.core.messages.Messages of
+msgid "Параметры"
+msgstr ""
+
+#: 960008dcf41945f88ceeed99903fd7d7 oceanai.modules.core.messages.Messages:3 of
+msgid "Смотреть :attr:`~oceanai.modules.core.language.Language.lang`"
+msgstr ""

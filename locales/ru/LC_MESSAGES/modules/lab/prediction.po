@@ -1,0 +1,878 @@
+# Russian translation.
+# Copyright (C) 2022. Speech and Multimodal Interfaces Laboratory Team
+# This file is distributed under the same license as the big5 package.
+# Elena Ryumina <ryumina_ev@mail.ru>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  1.0\n"
+"Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
+"POT-Creation-Date: 2022-12-11 21:21+0300\n"
+"PO-Revision-Date: 2022-12-01 09:13+0300\n"
+"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
+"<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
+"Language-Team: Russian <ryumina_ev@mail.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../source/modules/lab/prediction.rst:2 c8e426eeca73400fb02b9901742926f4
+msgid "Объединение аудио и видео"
+msgstr ""
+
+#: 7a6eb3de55824be0b8fc64db984c71ff
+#: oceanai.modules.lab.prediction.PredictionMessages:1 of
+msgid ""
+"Базовые классы: :py:class:`~oceanai.modules.lab.audio.Audio`, "
+":py:class:`~oceanai.modules.lab.video.Video`"
+msgstr ""
+
+#: dae447b3266b46da89666673f1e3aec7
+#: oceanai.modules.lab.prediction.PredictionMessages:1 of
+msgid "Класс для сообщений"
+msgstr ""
+
+#: 3eb907494c1142f2b739540db84dab60 433cf4da71e744109493f97108131ace
+#: 7e0fc43f2cf04f2ebda5526c72ad4e30 7f963f918a3d4f9eb84dd41ffe7ddfce
+#: 7fd28a53cb354993add32b78bea7b6c3 88a403ab0b1a4093b08eb2bc9049a629
+#: ea60e88c6ae14f0e9ae52c769022a4fc f5c7162129cf4eec89adca63094006fd
+#: oceanai.modules.lab.prediction.Prediction
+#: oceanai.modules.lab.prediction.Prediction.__concat_pred_av
+#: oceanai.modules.lab.prediction.Prediction.__load_av_model_b5
+#: oceanai.modules.lab.prediction.Prediction.__norm_pred
+#: oceanai.modules.lab.prediction.Prediction.get_av_union_predictions
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_b5
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_weights_b5
+#: oceanai.modules.lab.prediction.PredictionMessages of
+msgid "Параметры"
+msgstr ""
+
+#: 4262617e11c4407fb39a7f61840f4bdc fbec784f50bc4d2c8630199922eb8519
+#: oceanai.modules.lab.prediction.Prediction:3
+#: oceanai.modules.lab.prediction.PredictionMessages:3 of
+msgid "Смотреть :attr:`~oceanai.modules.core.language.Language.lang`"
+msgstr ""
+
+#: 5dfceed7a43d4a7eb916b7c997625ec2 c8d51fb44d22431ea4d51769b369d0a6
+#: oceanai.modules.lab.prediction.Prediction:5
+#: oceanai.modules.lab.prediction.PredictionMessages:5 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_simple`"
+msgstr ""
+
+#: 67c686d981604aa1808dee4088478ff3 ae82d176c8124f85b5fed319ca26d113
+#: oceanai.modules.lab.prediction.Prediction:7
+#: oceanai.modules.lab.prediction.PredictionMessages:7 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_info`"
+msgstr ""
+
+#: 57c43e21aeb04fb383277bca39cca8e3 e30d296d2f4842a4849c8b487966fe39
+#: oceanai.modules.lab.prediction.Prediction:9
+#: oceanai.modules.lab.prediction.PredictionMessages:9 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_err`"
+msgstr ""
+
+#: 5fdfcb4873af4473b8214053f6a56e43 d04755bd5bd041ed8795fb255474151b
+#: oceanai.modules.lab.prediction.Prediction:11
+#: oceanai.modules.lab.prediction.PredictionMessages:11 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_true`"
+msgstr ""
+
+#: 048074ea991642bbaaa258d952620677 607a14839aa94368b6c292ae45df3789
+#: oceanai.modules.lab.prediction.Prediction:13
+#: oceanai.modules.lab.prediction.PredictionMessages:13 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.bold_text`"
+msgstr ""
+
+#: 1492c3c4982243dd80f03ab6ba33385d c79cc6ec6aa64db28103031829c21f3a
+#: oceanai.modules.lab.prediction.Prediction:15
+#: oceanai.modules.lab.prediction.PredictionMessages:15 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.num_to_df_display`"
+msgstr ""
+
+#: 02a691886eab4a58865f81a61f001389 647674d3949f42d68fb888c2de3ea52f
+#: oceanai.modules.lab.prediction.Prediction:17
+#: oceanai.modules.lab.prediction.PredictionMessages:17 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.text_runtime`"
+msgstr ""
+
+#: a655b68bb76e455ba05ca02a7d1e9df3 oceanai.modules.lab.prediction.Prediction:1
+#: of
+msgid ""
+"Базовые классы: "
+":py:class:`~oceanai.modules.lab.prediction.PredictionMessages`"
+msgstr ""
+
+#: d7931750c5e14c6f8699024bc77b2595 oceanai.modules.lab.prediction.Prediction:1
+#: of
+msgid "Класс для объединения аудио и видео"
+msgstr ""
+
+#: 8193cc460e334ccaba058f04359b27dc
+#: oceanai.modules.lab.prediction.Prediction.__concat_pred_av:1 of
+msgid ""
+"Конкатенация оценок по экспертным и нейросетевым признакам "
+"(мультимодальная)"
+msgstr ""
+
+#: 0c29047faf0840dca9eabbb841d9466c 4095877ae8424bd388e646673f86eccd
+#: b0ae8657fb28408a8cd71f64381196c7
+#: oceanai.modules.lab.prediction.Prediction.__concat_pred_av:4
+#: oceanai.modules.lab.prediction.Prediction.__load_av_model_b5:4
+#: oceanai.modules.lab.prediction.Prediction.__norm_pred:4 of
+msgid "private (приватный метод)"
+msgstr ""
+
+#: c73ce484836a44c6a45fa681f009f0f9
+#: oceanai.modules.lab.prediction.Prediction.__concat_pred_av:6 of
+msgid "Оценки по экспертным признакам (аудио модальность)"
+msgstr ""
+
+#: c582586ae1cd4cde8e9bc1c5e3667021
+#: oceanai.modules.lab.prediction.Prediction.__concat_pred_av:8 of
+msgid "Оценки по нейросетевым признакам (аудио модальность)"
+msgstr ""
+
+#: c6cf50fa18404c74b48bad06567f57ee
+#: oceanai.modules.lab.prediction.Prediction.__concat_pred_av:10 of
+msgid "Оценки по экспертным признакам (видео модальность)"
+msgstr ""
+
+#: 091a4c3b6dd74d0588826609d5d17848
+#: oceanai.modules.lab.prediction.Prediction.__concat_pred_av:12 of
+msgid "Оценки по нейросетевым признакам (видео модальность)"
+msgstr ""
+
+#: 0da80ddf17fd485284d26e1febb6beeb 65f0c916807d45bead92379a3354c885
+#: c4f5f926bcda462aa5ad5154b95ae1ef d22677f3582544f5ada8fa02018e1f04
+#: ee926eeee5e34799ab46b3f33c2893b1 f124a011de7b40d8a374643d7d1387df
+#: oceanai.modules.lab.prediction.Prediction.__concat_pred_av:14
+#: oceanai.modules.lab.prediction.Prediction.__load_av_model_b5:8
+#: oceanai.modules.lab.prediction.Prediction.__norm_pred:10
+#: oceanai.modules.lab.prediction.Prediction.get_av_union_predictions:25
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_b5:5
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_weights_b5:15 of
+msgid "Отображение"
+msgstr ""
+
+#: 1909ad7a143748e8907ee04b5937b898 44069f2ce0644543b833124d02a093bb
+#: 4eff28fa1258473db0d143c649af006b 78dd9e25849841da90ea86f20d0a62b8
+#: 9ac495d4d9e848b89c254fc81fd9d5cf a6f01449526b4ed7be0822e97a60595d
+#: b51f7df1c791481892eabd134dea9265
+#: oceanai.modules.lab.prediction.Prediction.__concat_pred_av
+#: oceanai.modules.lab.prediction.Prediction.__load_av_model_b5
+#: oceanai.modules.lab.prediction.Prediction.__norm_pred
+#: oceanai.modules.lab.prediction.Prediction.av_models_b5_
+#: oceanai.modules.lab.prediction.Prediction.get_av_union_predictions
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_b5
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_weights_b5 of
+msgid "Результат"
+msgstr ""
+
+#: 48df09db360a44f38ca8da4c791a6617
+#: oceanai.modules.lab.prediction.Prediction.__concat_pred_av:17 of
+msgid "Конкатенированные оценки по экспертным и нейросетевым признакам"
+msgstr ""
+
+#: 144a0132004847f093e73fd094859b21 19ff78fc47c74ca3a4516b633aebfdc0
+#: 26129ebb9aff44bd91e92fa7268a069c b201f22e894e4343852c917f4fa780ef
+#: dd7379f9eaf74fa08f69060ae540cbb6 f275dbe8f0c540efb64eff4afb39748c
+#: ffbee3c2ebb64e7ebf56ab691dec0a54
+#: oceanai.modules.lab.prediction.Prediction.__concat_pred_av
+#: oceanai.modules.lab.prediction.Prediction.__load_av_model_b5
+#: oceanai.modules.lab.prediction.Prediction.__norm_pred
+#: oceanai.modules.lab.prediction.Prediction.av_models_b5_
+#: oceanai.modules.lab.prediction.Prediction.get_av_union_predictions
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_b5
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_weights_b5 of
+msgid "Тип результата"
+msgstr ""
+
+#: d28b4365cc4348a68458c4c6135558f5 dbd7ab61911d4a5081690d72db75d133
+#: e021b2423c7e47f6b63f20fa9751a783 e3bd789f908249488a61e5474f523d62
+#: f8f0210557ec44f9be6df338833a162a fb48a2e2851c4a78a93f3ff8b8615c83
+#: oceanai.modules.lab.prediction.Prediction.__concat_pred_av
+#: oceanai.modules.lab.prediction.Prediction.__load_av_model_b5
+#: oceanai.modules.lab.prediction.Prediction.__norm_pred
+#: oceanai.modules.lab.prediction.Prediction.av_models_b5_
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_b5
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_weights_b5 of
+msgid "Примеры"
+msgstr ""
+
+#: 3337be790cbd421492825321beca4756 33fe28ba7797401896fff72ca826be3a
+#: 4a5a3fc8acae42e9aa64b12e4a8296c5 55ccd90ce4954bccbb5228cd508955dd
+#: 5fdb9c8911694837bfb811e88c7abd87 6fbd47381f75421bb8fa62cb898b292b
+#: oceanai.modules.lab.prediction.Prediction.__concat_pred_av:23
+#: oceanai.modules.lab.prediction.Prediction.__load_av_model_b5:18
+#: oceanai.modules.lab.prediction.Prediction.__norm_pred:19
+#: oceanai.modules.lab.prediction.Prediction.av_models_b5_:9
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_b5:18
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_weights_b5:28 of
+msgid ":bdg-success:`Верно` :bdg-light:`-- 1 --`"
+msgstr ""
+
+#: 0bc3109274ca428b8cf49946c08e4438
+#: oceanai.modules.lab.prediction.Prediction.__concat_pred_av:25 of
+msgid ""
+"import numpy as np\n"
+"from oceanai.modules.lab.prediction import Prediction\n"
+"\n"
+"pred = Prediction()\n"
+"\n"
+"arr_hc_audio = np.array([\n"
+"    [0.64113516, 0.6217892, 0.54451424, 0.6144415, 0.59334993],\n"
+"    [0.6652424, 0.63606125, 0.572305, 0.63169795, 0.612515]\n"
+"])\n"
+"\n"
+"arr_nn_audio = np.array([\n"
+"    [0.56030345, 0.7488746, 0.44648764, 0.59893465, 0.5701077],\n"
+"    [0.5900006, 0.7652722, 0.4795154, 0.6409055, 0.6088242]\n"
+"])\n"
+"arr_hc_video = np.array([\n"
+"    [0.67113516, 0.6517892, 0.59451424, 0.6344415, 0.53334993],\n"
+"    [0.6852424, 0.62606125, 0.562305, 0.67169795, 0.672515]\n"
+"])\n"
+"\n"
+"arr_nn_video = np.array([\n"
+"    [0.58030345, 0.7788746, 0.47648764, 0.53893465, 0.5901077],\n"
+"    [0.5100006, 0.7452722, 0.4495154, 0.6909055, 0.6488242]\n"
+"])\n"
+"\n"
+"pred._Prediction__concat_pred_av(\n"
+"    pred_hc_audio = arr_hc_audio,\n"
+"    pred_nn_audio = arr_nn_audio,\n"
+"    pred_hc_video = arr_hc_video,\n"
+"    pred_nn_video = arr_nn_video,\n"
+"    out = True\n"
+")"
+msgstr ""
+
+#: d21f9d65a7af40db8c0df8d61eed1133
+#: oceanai.modules.lab.prediction.Prediction.__load_av_model_b5:1 of
+msgid ""
+"Формирование нейросетевой архитектуры модели для получения результата "
+"оценки персонального качества"
+msgstr ""
+
+#: abff2e3dcdab43e7b4c1e7e1ee291b23
+#: oceanai.modules.lab.prediction.Prediction.__load_av_model_b5:6 of
+msgid "Отображение сформированной нейросетевой архитектуры модели"
+msgstr ""
+
+#: 45b6fbb8d3eb4fadab7e7efe56527e52
+#: oceanai.modules.lab.prediction.Prediction.__load_av_model_b5:11 of
+msgid ""
+"**None** если неверные типы или значения аргументов, в обратном случае "
+"нейросетевая модель **tf.keras.Model** для получения результата оценки "
+"персонального качества"
+msgstr ""
+
+#: a207d8b4e1fc459fb68aab0aef47ed26
+#: oceanai.modules.lab.prediction.Prediction.__load_av_model_b5:20 of
+msgid ""
+"from oceanai.modules.lab.prediction import Prediction\n"
+"\n"
+"pred = Prediction()\n"
+"\n"
+"pred._Prediction__load_av_model_b5(\n"
+"    show_summary = True, out = True\n"
+")"
+msgstr ""
+
+#: 3420e0e08016404db78b40185f472eb9
+#: oceanai.modules.lab.prediction.Prediction.__load_av_model_b5:33 of
+msgid ""
+"Model: \"model\"\n"
+"_________________________________________________________________\n"
+" Layer (type)                Output Shape              Param #\n"
+"=================================================================\n"
+" input_1 (InputLayer)        [(None, 64)]              0\n"
+"\n"
+" dense_1 (Dense)             (None, 1)                 65\n"
+"\n"
+" activ_1 (Activation)        (None, 1)                 0\n"
+"\n"
+"=================================================================\n"
+"Total params: 65\n"
+"Trainable params: 65\n"
+"Non-trainable params: 0\n"
+"_________________________________________________________________\n"
+"<keras.engine.functional.Functional at 0x147892ee0>"
+msgstr ""
+
+#: 3e529e23ccbe4f8d802bd95cf2387855 57799149cb0a42edbed6a9ecda6b23ad
+#: 9aedda3de1b041a4abb8e2fe06863c0c da81d557308c4cc19bb3ac607ffbca85
+#: ddfba75e22dc460d9ac4f577ab25da3c
+#: oceanai.modules.lab.prediction.Prediction.__load_av_model_b5:54
+#: oceanai.modules.lab.prediction.Prediction.__norm_pred:54
+#: oceanai.modules.lab.prediction.Prediction.av_models_b5_:43
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_b5:59
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_weights_b5:100 of
+msgid ":bdg-danger:`Ошибка` :bdg-light:`-- 1 --`"
+msgstr ""
+
+#: c39a3332197c4a29b6799330feb025df
+#: oceanai.modules.lab.prediction.Prediction.__load_av_model_b5:56 of
+msgid ""
+"from oceanai.modules.lab.prediction import Prediction\n"
+"\n"
+"pred = Prediction()\n"
+"\n"
+"pred._Prediction__load_av_model_b5(\n"
+"    show_summary = True, out = []\n"
+")"
+msgstr ""
+
+#: 3a80bbaa31044dcc993c48fa1fcf95a8
+#: oceanai.modules.lab.prediction.Prediction.__load_av_model_b5:69 of
+msgid ""
+"[2022-10-17 10:53:03] Неверные типы или значения аргументов в "
+"\"Prediction.__load_av_model_b5\" ..."
+msgstr ""
+
+#: d511d05d7d1d4476a44fabd85fd9328a
+#: oceanai.modules.lab.prediction.Prediction.__norm_pred:1 of
+msgid ""
+"Нормализация оценок по экспертным и нейросетевым признакам "
+"(мультимодальная)"
+msgstr ""
+
+#: 8bda34fac58243d88afb997f6c89f4a4
+#: oceanai.modules.lab.prediction.Prediction.__norm_pred:6 of
+msgid "Оценки"
+msgstr ""
+
+#: 3a238c0b70744006862cf9c842bed43a
+#: oceanai.modules.lab.prediction.Prediction.__norm_pred:8 of
+msgid "Максимальный размер вектора оценок"
+msgstr ""
+
+#: bbbb487aff2843e39f12b3fe6df60c1f
+#: oceanai.modules.lab.prediction.Prediction.__norm_pred:13 of
+msgid ""
+"Нормализованные оценки по экспертным и нейросетевым признакам "
+"(мультимодальная)"
+msgstr ""
+
+#: 2fc4b194029141a6b77d6e35c20038c3
+#: oceanai.modules.lab.prediction.Prediction.__norm_pred:21 of
+msgid ""
+"import numpy as np\n"
+"from oceanai.modules.lab.prediction import Prediction\n"
+"\n"
+"pred = Prediction()\n"
+"\n"
+"arr = np.array([\n"
+"    [0.64113516, 0.6217892, 0.54451424, 0.6144415, 0.59334993],\n"
+"    [0.6652424, 0.63606125, 0.572305, 0.63169795, 0.612515]\n"
+"])\n"
+"\n"
+"pred._Prediction__norm_pred(\n"
+"    pred_data = arr,\n"
+"    len_nn = 4,\n"
+"    out = True\n"
+")"
+msgstr ""
+
+#: cd3f7302e4994f4283a43042567b2422
+#: oceanai.modules.lab.prediction.Prediction.__norm_pred:42 of
+msgid ""
+"array([\n"
+"    [0.64113516, 0.6217892 , 0.54451424, 0.6144415 , 0.59334993],\n"
+"    [0.6652424 , 0.63606125, 0.572305  , 0.63169795, 0.612515],\n"
+"    [0.65318878, 0.62892523, 0.55840962, 0.62306972, 0.60293247],\n"
+"    [0.65318878, 0.62892523, 0.55840962, 0.62306972, 0.60293247]\n"
+"])"
+msgstr ""
+
+#: 677890a41de84446bcb6a620cabcdb06
+#: oceanai.modules.lab.prediction.Prediction.__norm_pred:56 of
+msgid ""
+"import numpy as np\n"
+"from oceanai.modules.lab.prediction import Prediction\n"
+"\n"
+"pred = Prediction()\n"
+"\n"
+"arr = np.array([])\n"
+"\n"
+"pred._Prediction__norm_pred(\n"
+"    pred_data = arr,\n"
+"    len_nn = 4,\n"
+"    out = True\n"
+")"
+msgstr ""
+
+#: 1bd9f038f358461098307bf52fa92a4d
+#: oceanai.modules.lab.prediction.Prediction.__norm_pred:74 of
+msgid ""
+"[2022-10-20 22:03:17] Неверные типы или значения аргументов в "
+"\"Prediction.__norm_pred\" ...\n"
+"\n"
+"array([], dtype=float64)"
+msgstr ""
+
+#: 2d0a64051bc34a28b947feda166041d9
+#: oceanai.modules.lab.prediction.Prediction.av_models_b5_:1 of
+msgid ""
+"Получение нейросетевых моделей **tf.keras.Model** для получения "
+"результатов оценки персональных качеств"
+msgstr ""
+
+#: 619b3e4f70aa4e64849bd37bfe7d7ba7
+#: oceanai.modules.lab.prediction.Prediction.av_models_b5_:3 of
+msgid "Словарь с нейросетевыми моделями **tf.keras.Model**"
+msgstr ""
+
+#: a36c6ea4ac6b413e9875cf32b8ea38f4
+#: oceanai.modules.lab.prediction.Prediction.av_models_b5_:11 of
+msgid ""
+"from oceanai.modules.lab.prediction import Prediction\n"
+"\n"
+"pred = Prediction()\n"
+"\n"
+"pred.load_av_models_b5(\n"
+"    show_summary = False, out = True,\n"
+"    runtime = True, run = True\n"
+")\n"
+"\n"
+"pred.av_models_b5_"
+msgstr ""
+
+#: 79ad5aae13d4485aa4056c98abf150c1
+#: oceanai.modules.lab.prediction.Prediction.av_models_b5_:27 of
+msgid ""
+"[2022-12-08 15:21:22] Формирование нейросетевых архитектур моделей для "
+"получения результатов оценки персональных качеств (мультимодальное "
+"объединение) ...\n"
+"\n"
+"--- Время выполнения: 0.305 сек. ---\n"
+"\n"
+"{\n"
+"    'openness': <keras.engine.functional.Functional at 0x14eee5790>,\n"
+"    'conscientiousness': <keras.engine.functional.Functional at "
+"0x14f2d9d00>,\n"
+"    'extraversion': <keras.engine.functional.Functional at 0x14f2fb190>,\n"
+"    'agreeableness': <keras.engine.functional.Functional at 0x14f2c7fd0>,"
+"\n"
+"    'neuroticism': <keras.engine.functional.Functional at 0x14f2ef940>\n"
+"}"
+msgstr ""
+
+#: fc873a91f4684d6c803f7c1c4526d0ca
+#: oceanai.modules.lab.prediction.Prediction.av_models_b5_:45 of
+msgid ""
+"from oceanai.modules.lab.prediction import Prediction\n"
+"\n"
+"pred = Prediction()\n"
+"\n"
+"pred.av_models_b5_"
+msgstr ""
+
+#: c935a4571abe42c68985f3edd9303691
+#: oceanai.modules.lab.prediction.Prediction.av_models_b5_:56 of
+msgid ""
+"{\n"
+"    'openness': None,\n"
+"    'conscientiousness': None,\n"
+"    'extraversion': None,\n"
+"    'agreeableness': None,\n"
+"    'neuroticism': None\n"
+"}"
+msgstr ""
+
+#: a11fb68b2cde4efbbf26d1c101ea84c2
+#: oceanai.modules.lab.prediction.Prediction.get_av_union_predictions:1 of
+msgid "Получения прогнозов по аудио и видео (мультимодальное объединение)"
+msgstr ""
+
+#: 8e76cbd9d1d54a20944fe8f5e479eb10
+#: oceanai.modules.lab.prediction.Prediction.get_av_union_predictions:3 of
+msgid "Глубина иерархии для получения данных"
+msgstr ""
+
+#: 8dcaad85c1f8440fb945766f40d05d1d
+#: oceanai.modules.lab.prediction.Prediction.get_av_union_predictions:5 of
+msgid "Рекурсивный поиск данных"
+msgstr ""
+
+#: f472dd8417eb4d7887280dfc209b6040
+#: oceanai.modules.lab.prediction.Prediction.get_av_union_predictions:7 of
+msgid "Частота дискретизации"
+msgstr ""
+
+#: 732a7116dc4549e792d86d323328cdcd
+#: oceanai.modules.lab.prediction.Prediction.get_av_union_predictions:9 of
+msgid "Размер окна сегмента аудио сигнала (в секундах)"
+msgstr ""
+
+#: 6b6bf18b838249ba9a566772cba13734
+#: oceanai.modules.lab.prediction.Prediction.get_av_union_predictions:11 of
+msgid "Шаг сдвига окна сегмента аудио сигнала (в секундах)"
+msgstr ""
+
+#: 860ecbcfa1124e89a30e9595bb3cbbe4
+#: oceanai.modules.lab.prediction.Prediction.get_av_union_predictions:13 of
+msgid "Понижение кадровой частоты"
+msgstr ""
+
+#: 820303e0dedd49a090f1838252446e19
+#: oceanai.modules.lab.prediction.Prediction.get_av_union_predictions:15 of
+msgid "Размер окна сегмента видео сигнала (в кадрах)"
+msgstr ""
+
+#: bd5f3e4bcb2a4cef808a1da8ec380970
+#: oceanai.modules.lab.prediction.Prediction.get_av_union_predictions:17 of
+msgid "Шаг сдвига окна сегмента видео сигнала (в кадрах)"
+msgstr ""
+
+#: 4e3a5528f13d4d3a9184a323df56bfaa
+#: oceanai.modules.lab.prediction.Prediction.get_av_union_predictions:19 of
+msgid "Вычисление точности"
+msgstr ""
+
+#: 63693a4f5b5040e59c8bdfee415a9593
+#: oceanai.modules.lab.prediction.Prediction.get_av_union_predictions:21 of
+msgid "Полный путь к файлу с верными предсказаниями для подсчета точности"
+msgstr ""
+
+#: 2c4e7b2f39f0413db684414d7dd93337
+#: oceanai.modules.lab.prediction.Prediction.get_av_union_predictions:23 of
+msgid "При необходимости формировать LOG файл"
+msgstr ""
+
+#: 060c269092954170950cb15742bdbd7f bb8ebbd8f83d4291a5ce67d5eea94acc
+#: df7396623c5e48a3b6b0a1fbfc56148a
+#: oceanai.modules.lab.prediction.Prediction.get_av_union_predictions:27
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_b5:7
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_weights_b5:17 of
+msgid "Подсчет времени выполнения"
+msgstr ""
+
+#: 37c9c803703e4f6c90567c56d79048fa e35ff06a4874459bada49882213b9b38
+#: eba4db475b8d4a46bad295feff8f691f
+#: oceanai.modules.lab.prediction.Prediction.get_av_union_predictions:29
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_b5:9
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_weights_b5:19 of
+msgid "Блокировка выполнения"
+msgstr ""
+
+#: efb46ad93a724f45a475de4ad9318040
+#: oceanai.modules.lab.prediction.Prediction.get_av_union_predictions:32 of
+msgid "**True** если веса прогнозы успешно получены, в обратном случае **False**"
+msgstr ""
+
+#: 76ab14ff701e4a6fad01bcb7221d89cc
+#: oceanai.modules.lab.prediction.Prediction.get_av_union_predictions:35 of
+msgid ""
+":bdg-link-light:`Пример <../../user_guide/notebooks/Prediction-"
+"get_av_union_predictions.ipynb>`"
+msgstr ""
+
+#: 5ebb8ac8f7954424991a7ffe1d5bc52d
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_b5:1 of
+msgid ""
+"Формирование нейросетевых архитектур моделей для получения результатов "
+"оценки персональных качеств"
+msgstr ""
+
+#: a196803aed0d4802aac33cb90cf7b49f
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_b5:3 of
+msgid "Отображение последней сформированной нейросетевой архитектуры моделей"
+msgstr ""
+
+#: fb34664386544d2199acb293955154e9
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_b5:12 of
+msgid ""
+"**True** если нейросетевые архитектуры модели сформированы, в обратном "
+"случае **False**"
+msgstr ""
+
+#: 6878a23fba664d4da14b9ae1589c9c68
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_b5:20 of
+msgid ""
+"from oceanai.modules.lab.prediction import Prediction\n"
+"\n"
+"pred = Prediction()\n"
+"\n"
+"pred.load_av_models_b5(\n"
+"    show_summary = True, out = True,\n"
+"    runtime = True, run = True\n"
+")"
+msgstr ""
+
+#: cb7eb124762b4f27802f297d2f716827
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_b5:34 of
+msgid ""
+"[2022-12-08 15:19:30] Формирование нейросетевых архитектур моделей для "
+"получения результатов оценки персональных качеств (мультимодальное "
+"объединение) ...\n"
+"\n"
+"Model: \"model_4\"\n"
+"_________________________________________________________________\n"
+" Layer (type)                Output Shape              Param #\n"
+"=================================================================\n"
+" input_1 (InputLayer)        [(None, 64)]              0\n"
+"\n"
+" dense_1 (Dense)             (None, 1)                 65\n"
+"\n"
+" activ_1 (Activation)        (None, 1)                 0\n"
+"\n"
+"=================================================================\n"
+"Total params: 65\n"
+"Trainable params: 65\n"
+"Non-trainable params: 0\n"
+"_________________________________________________________________\n"
+"--- Время выполнения: 0.141 сек. ---\n"
+"\n"
+"True"
+msgstr ""
+
+#: 7d6856e2966e47ccac9346f2e3868777
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_b5:61 of
+msgid ""
+"from oceanai.modules.lab.prediction import Prediction\n"
+"\n"
+"pred = Prediction()\n"
+"\n"
+"pred.load_av_models_b5(\n"
+"    show_summary = 1, out = True,\n"
+"    runtime = True, run = True\n"
+")"
+msgstr ""
+
+#: 74855dbf54ec4489ab7fa92f8e30697a
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_b5:75 of
+msgid ""
+"[2022-12-08 15:20:36] Неверные типы или значения аргументов в "
+"\"Prediction.load_av_models_b5\" ...\n"
+"\n"
+"False"
+msgstr ""
+
+#: dbc77dc2edb3460ab18f076c2eaacddd
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_weights_b5:1 of
+msgid ""
+"Загрузка весов нейросетевых моделей для получения результатов оценки "
+"персональных качеств"
+msgstr ""
+
+#: 3953018dd8a04fe18dcefba59c18482f
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_weights_b5:3 of
+msgid "Полный путь к файлу с весами нейросетевой модели (открытость опыту)"
+msgstr ""
+
+#: d951dba09af845d8989854042b78bfce
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_weights_b5:5 of
+msgid "Полный путь к файлу с весами нейросетевой модели (добросовестность)"
+msgstr ""
+
+#: 22b61e14da9a48da8db3aac9d591ac19
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_weights_b5:7 of
+msgid "Полный путь к файлу с весами нейросетевой модели (экстраверсия)"
+msgstr ""
+
+#: ee026785cbe7428bb85e913703f13c48
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_weights_b5:9 of
+msgid "Полный путь к файлу с весами нейросетевой модели (доброжелательность)"
+msgstr ""
+
+#: 88c2003b810f420b8f1e1108ce2b9193
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_weights_b5:11 of
+msgid "Полный путь к файлу с весами нейросетевой модели (нейротизм)"
+msgstr ""
+
+#: fe0012c9080d4abdae93cfdb8037eaf4
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_weights_b5:13 of
+msgid "Принудительная загрузка файлов с весами нейросетевых моделей из сети"
+msgstr ""
+
+#: 2fc1c31cecc84760b05ec41da7a599f3
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_weights_b5:22 of
+msgid ""
+"**True** если веса нейросетевых моделей загружены, в обратном случае "
+"**False**"
+msgstr ""
+
+#: 0226c9303b3f4c69b2197088bfb73cc5
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_weights_b5:30 of
+msgid ""
+"from oceanai.modules.lab.prediction import Prediction\n"
+"\n"
+"pred = Prediction()\n"
+"\n"
+"pred.load_av_models_b5(\n"
+"    show_summary = False, out = True,\n"
+"    runtime = True, run = True\n"
+")"
+msgstr ""
+
+#: eb22ffc8d3fe431f95a1535828f2e9a1
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_weights_b5:44 of
+msgid ""
+"[2022-12-08 16:56:37] Формирование нейросетевых архитектур моделей для "
+"получения результатов оценки персональных качеств (мультимодальное "
+"объединение) ...\n"
+"\n"
+"--- Время выполнения: 0.075 сек. ---\n"
+"\n"
+"True"
+msgstr ""
+
+#: 1f171b08448c41fda6829fa3e23dad3a
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_weights_b5:54 of
+msgid ""
+"pred.path_to_save_ = './models'\n"
+"pred.chunk_size_ = 2000000\n"
+"\n"
+"url_openness = pred.weights_for_big5_['av']['b5']['openness']['sberdisk']"
+"\n"
+"url_conscientiousness = "
+"pred.weights_for_big5_['av']['b5']['conscientiousness']['sberdisk']\n"
+"url_extraversion = "
+"pred.weights_for_big5_['av']['b5']['extraversion']['sberdisk']\n"
+"url_agreeableness = "
+"pred.weights_for_big5_['av']['b5']['agreeableness']['sberdisk']\n"
+"url_neuroticism = "
+"pred.weights_for_big5_['av']['b5']['neuroticism']['sberdisk']\n"
+"\n"
+"pred.load_av_models_weights_b5(\n"
+"    url_openness = url_openness,\n"
+"    url_conscientiousness = url_conscientiousness,\n"
+"    url_extraversion = url_extraversion,\n"
+"    url_agreeableness = url_agreeableness,\n"
+"    url_neuroticism = url_neuroticism,\n"
+"    force_reload = True,\n"
+"    out = True,\n"
+"    runtime = True,\n"
+"    run = True\n"
+")"
+msgstr ""
+
+#: 93b739e64a394dd0802539fcbdec195a
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_weights_b5:80 of
+msgid ""
+"[2022-12-08 17:03:18] Загрузка весов нейросетевых моделей для получения "
+"результатов оценки персональных качеств (мультимодальное объединение) ..."
+"\n"
+"\n"
+"[2022-12-08 17:03:21] Загрузка файла \"weights_2022-08-28_11-14-35.h5\" "
+"(100.0%) ... Открытость опыту\n"
+"\n"
+"[2022-12-08 17:03:21] Загрузка файла \"weights_2022-08-28_11-08-10.h5\" "
+"(100.0%) ... Добросовестность\n"
+"\n"
+"[2022-12-08 17:03:21] Загрузка файла \"weights_2022-08-28_11-17-57.h5\" "
+"(100.0%) ... Экстраверсия\n"
+"\n"
+"[2022-12-08 17:03:21] Загрузка файла \"weights_2022-08-28_11-25-11.h5\" "
+"(100.0%) ... Доброжелательность\n"
+"\n"
+"[2022-12-08 17:03:21] Загрузка файла \"weights_2022-06-14_21-44-09.h5\" "
+"(100.0%) ... Нейротизм\n"
+"\n"
+"--- Время выполнения: 3.399 сек. ---\n"
+"\n"
+"True"
+msgstr ""
+
+#: acda520204e34346aa0e72ee61b8f651
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_weights_b5:102 of
+msgid ""
+"from oceanai.modules.lab.prediction import Prediction\n"
+"\n"
+"pred = Prediction()\n"
+"\n"
+"pred.path_to_save_ = './models'\n"
+"pred.chunk_size_ = 2000000\n"
+"\n"
+"url_openness = pred.weights_for_big5_['av']['b5']['openness']['sberdisk']"
+"\n"
+"url_conscientiousness = "
+"pred.weights_for_big5_['av']['b5']['conscientiousness']['sberdisk']\n"
+"url_extraversion = "
+"pred.weights_for_big5_['av']['b5']['extraversion']['sberdisk']\n"
+"url_agreeableness = "
+"pred.weights_for_big5_['av']['b5']['agreeableness']['sberdisk']\n"
+"url_neuroticism = "
+"pred.weights_for_big5_['av']['b5']['neuroticism']['sberdisk']\n"
+"\n"
+"pred.load_av_models_weights_b5(\n"
+"    url_openness = url_openness,\n"
+"    url_conscientiousness = url_conscientiousness,\n"
+"    url_extraversion = url_extraversion,\n"
+"    url_agreeableness = url_agreeableness,\n"
+"    url_neuroticism = url_neuroticism,\n"
+"    force_reload = True,\n"
+"    out = True,\n"
+"    runtime = True,\n"
+"    run = True\n"
+")"
+msgstr ""
+
+#: 3d9ff501b7914427a4825ac116ea19dc
+#: oceanai.modules.lab.prediction.Prediction.load_av_models_weights_b5:132 of
+msgid ""
+"[2022-12-08 17:05:32] Загрузка весов нейросетевых моделей для получения "
+"результатов оценки персональных качеств (мультимодальное объединение) ..."
+"\n"
+"\n"
+"[2022-12-08 17:05:32] Загрузка файла \"weights_2022-08-28_11-14-35.h5\" "
+"(100.0%) ...\n"
+"\n"
+"[2022-12-08 17:05:33] Что-то пошло не так ... не удалось загрузить веса "
+"нейросетевой модели ... Открытость опыту\n"
+"\n"
+"    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/prediction.py\n"
+"    Линия: 639\n"
+"    Метод: load_av_models_weights_b5\n"
+"    Тип ошибки: AttributeError\n"
+"\n"
+"[2022-12-08 17:05:33] Загрузка файла \"weights_2022-08-28_11-08-10.h5\" "
+"(100.0%) ...\n"
+"\n"
+"[2022-12-08 17:05:33] Что-то пошло не так ... не удалось загрузить веса "
+"нейросетевой модели ... Добросовестность\n"
+"\n"
+"    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/prediction.py\n"
+"    Линия: 639\n"
+"    Метод: load_av_models_weights_b5\n"
+"    Тип ошибки: AttributeError\n"
+"\n"
+"[2022-12-08 17:05:33] Загрузка файла \"weights_2022-08-28_11-17-57.h5\" "
+"(100.0%) ...\n"
+"\n"
+"[2022-12-08 17:05:33] Что-то пошло не так ... не удалось загрузить веса "
+"нейросетевой модели ... Экстраверсия\n"
+"\n"
+"    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/prediction.py\n"
+"    Линия: 639\n"
+"    Метод: load_av_models_weights_b5\n"
+"    Тип ошибки: AttributeError\n"
+"\n"
+"[2022-12-08 17:05:33] Загрузка файла \"weights_2022-08-28_11-25-11.h5\" "
+"(100.0%) ...\n"
+"\n"
+"[2022-12-08 17:05:33] Что-то пошло не так ... не удалось загрузить веса "
+"нейросетевой модели ... Доброжелательность\n"
+"\n"
+"    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/prediction.py\n"
+"    Линия: 639\n"
+"    Метод: load_av_models_weights_b5\n"
+"    Тип ошибки: AttributeError\n"
+"\n"
+"[2022-12-08 17:05:33] Загрузка файла \"weights_2022-06-14_21-44-09.h5\" "
+"(100.0%) ...\n"
+"\n"
+"[2022-12-08 17:05:33] Что-то пошло не так ... не удалось загрузить веса "
+"нейросетевой модели ... Нейротизм\n"
+"\n"
+"    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/prediction.py\n"
+"    Линия: 639\n"
+"    Метод: load_av_models_weights_b5\n"
+"    Тип ошибки: AttributeError\n"
+"\n"
+"--- Время выполнения: 1.024 сек. ---\n"
+"\n"
+"False"
+msgstr ""

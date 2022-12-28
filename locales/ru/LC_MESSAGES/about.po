@@ -1,0 +1,59 @@
+# Russian translation.
+# Copyright (C) 2022. Speech and Multimodal Interfaces Laboratory Team
+# This file is distributed under the same license as the big5 package.
+# Elena Ryumina <ryumina_ev@mail.ru>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  1.0\n"
+"Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
+"POT-Creation-Date: 2022-12-01 11:06+0300\n"
+"PO-Revision-Date: 2022-12-01 09:13+0300\n"
+"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin <dl_03.03.1991@mail.ru>"
+"<dl_03.03.1991@mail.ru>\n"
+"Language-Team: Russian <ryumina_ev@mail.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../source/about.rst:2 9df3f069349340adbe48cb5e0bcad794
+msgid "Команда разработчиков"
+msgstr ""
+
+#: ../../source/about.rst:4 144b506f78f3405d8adfcb2a7b685ef1
+msgid ""
+"Библиотека ``OCEANAI`` разработана и поддерживается исследовательской "
+"группой из `лаборатории речевых и многомодальных интерфейсов (ЛРМИ) "
+"<https://hci.nw.ru/ru/about>`_ `Санкт-Петербургского Федерального "
+"исследовательского центра Российской академии наук (СПб ФИЦ РАН) "
+"<https://spcras.ru/>`_, входящей в состав НИЦ `Сильный искусственный "
+"интеллект в промышленности (Университет ИТМО) <https://sai.itmo.ru/>`_ а "
+"именно:"
+msgstr ""
+
+#: ../../source/about.rst:6 2fdfc09fe33b47eaa04a67095ff7b3ba
+msgid ""
+"`Рюмина Елена <https://hci.nw.ru/ru/employees/14>`_ - аспирант "
+"`Университета ИТМО <https://itmo.ru/>`_, младший научный сотрудник ЛРМИ "
+"СПб ФИЦ РАН."
+msgstr ""
+
+#: ../../source/about.rst:8 bbe3d9c8b3a44cf0b69199970c8b280d
+msgid ""
+"`Рюмин Дмитрий <https://hci.nw.ru/ru/employees/3>`_ - кандидат "
+"технических наук (PhD in Engineering, 2020), старший научный сотрудник "
+"ЛРМИ СПб ФИЦ РАН."
+msgstr ""
+
+#: ../../source/about.rst:10 6f8550ded42d4fc785b199fb9258baac
+msgid ""
+"`Карпов Алексей <https://hci.nw.ru/ru/employees/1>`_ - доктор технических"
+" наук (2013), профессор по специальности 05.13.11 (2022), главный научный"
+" сотрудник (руководитель) ЛРМИ СПб ФИЦ РАН."
+msgstr ""
+
+#: ../../source/about.rst:-1 b32174d825374e4a99dce8b508d15a4c
+msgid "Сильный искусственный интеллект в промышленности (Университет ИТМО)"
+msgstr ""
+

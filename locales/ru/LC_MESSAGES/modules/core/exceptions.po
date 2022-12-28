@@ -1,0 +1,113 @@
+# Russian translation.
+# Copyright (C) 2022. Speech and Multimodal Interfaces Laboratory Team
+# This file is distributed under the same license as the big5 package.
+# Elena Ryumina <ryumina_ev@mail.ru>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  1.0\n"
+"Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
+"POT-Creation-Date: 2022-12-03 15:16+0300\n"
+"PO-Revision-Date: 2022-12-01 09:13+0300\n"
+"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
+"<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
+"Language-Team: Russian <ryumina_ev@mail.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../source/modules/core/exceptions.rst:2 3bb6bc8d23be41f48bc07ffa6fefa6b4
+msgid "Пользовательские исключения"
+msgstr ""
+
+#: 4de872a1233c4df1830f35ef3a359b15
+#: oceanai.modules.core.exceptions.CustomException:1 of
+msgid "Базовые классы: :py:class:`Exception`"
+msgstr ""
+
+#: b1b10b6135694411a3e0b00bfd013a8b
+#: oceanai.modules.core.exceptions.CustomException:1 of
+msgid "Класс для всех пользовательских исключений"
+msgstr ""
+
+#: 2ad0e715fcf7417fb544cc2380ad2dfd 4887ab7f11364fc0b8281437ce063c6f
+#: f5a6c22a6bba4cbb9983d2b16fd61b21
+#: oceanai.modules.core.exceptions.CustomException
+#: oceanai.modules.core.exceptions.InvalidContentLength
+#: oceanai.modules.core.exceptions.IsSmallWindowSizeError of
+msgid "Пример"
+msgstr ""
+
+#: 0cbd5f6b242e440b8e3c81551483e185 8aa11191a8194916ad907aa357355a4a
+#: oceanai.modules.core.exceptions.CustomException:5
+#: oceanai.modules.core.exceptions.IsSmallWindowSizeError:5 of
+msgid ":bdg-success:`Верно` :bdg-light:`-- 1 --`"
+msgstr ""
+
+#: d1255431789c4f8baf871fde6e815330
+#: oceanai.modules.core.exceptions.CustomException:7 of
+msgid ""
+"from oceanai.modules.core.exceptions import CustomException\n"
+"\n"
+"message = 'Пользовательское исключение'\n"
+"\n"
+"try: raise CustomException(message)\n"
+"except CustomException as ex: print(ex)"
+msgstr ""
+
+#: aaaa3fe3b5944fb39fc037884a908754
+#: oceanai.modules.core.exceptions.CustomException:18 of
+msgid "Пользовательское исключение"
+msgstr ""
+
+#: 18beed2a7ef94b71bf4a1f587f33f5f5 e173020757214b76b41fa56ebc21c0dd
+#: oceanai.modules.core.exceptions.InvalidContentLength:1
+#: oceanai.modules.core.exceptions.IsSmallWindowSizeError:1 of
+msgid ""
+"Базовые классы: "
+":py:class:`~oceanai.modules.core.exceptions.CustomException`"
+msgstr ""
+
+#: bf4f38f001974c7baabe95b08ae831d7 f01aa50c145b4902828a0c7c8ea65d78
+#: oceanai.modules.core.exceptions.InvalidContentLength:1
+#: oceanai.modules.core.exceptions.InvalidContentLength:18 of
+msgid "Не определен размер файла для загрузки"
+msgstr ""
+
+#: b82d8a232b9448c086333490af553ce9
+#: oceanai.modules.core.exceptions.InvalidContentLength:5 of
+msgid ":bdg-success:`верно` :bdg-light:`-- 1 --`"
+msgstr ""
+
+#: 097c2c4d10f34643a9a88de17d0be476
+#: oceanai.modules.core.exceptions.InvalidContentLength:7 of
+msgid ""
+"from oceanai.modules.core.exceptions import InvalidContentLength\n"
+"\n"
+"message = 'Не определен размер файла для загрузки'\n"
+"\n"
+"try: raise InvalidContentLength(message)\n"
+"except InvalidContentLength as ex: print(ex)"
+msgstr ""
+
+#: 3b1b97a2abd84020ab7496bf43509912 6a534e7b97fa4d3183ab27ed9285c390
+#: oceanai.modules.core.exceptions.IsSmallWindowSizeError:1
+#: oceanai.modules.core.exceptions.IsSmallWindowSizeError:18 of
+msgid "Указан слишком маленький размер окна сегмента сигнала"
+msgstr ""
+
+#: 1818015cc5c940a69bfaaad0bba8acf6
+#: oceanai.modules.core.exceptions.IsSmallWindowSizeError:7 of
+msgid ""
+"from oceanai.modules.core.exceptions import IsSmallWindowSizeError\n"
+"\n"
+"message = 'Указан слишком маленький размер окна сегмента сигнала'\n"
+"\n"
+"try: raise IsSmallWindowSizeError(message)\n"
+"except IsSmallWindowSizeError as ex: print(ex)"
+msgstr ""
+
+#~ msgid "не определен размер файла для загрузки"
+#~ msgstr ""
+
