@@ -2,11 +2,6 @@ name: Mirror repo to GitLab
 
 on:
   workflow_call:
-    secrets:
-      GITLAB_USER:
-        required: true
-      GITLAB_PASSWORD:
-        required: true
   push:
     branches: ['main']
   pull_request:
@@ -16,7 +11,7 @@ on:
 
 jobs:
   call-oceanai-mirror-workflow:
-    uses: ./.github/workflows/mirror-repo.yml
+    uses: DmitryRyumin/OCEANAI/.github/workflows/mirror-repo.yml@main
     with:
       GITLAB_URL: 'https://gitlab.actcognitive.org/itmo-sai-code/oceanai.git'
     secrets:
