@@ -82,7 +82,7 @@ extensions = [
     # 'sphinx_toolbox.code',            # https://sphinx-toolbox.readthedocs.io/en/latest/index.html
     # 'sphinx_toolbox.sidebar_links',
     # 'sphinx_toolbox.github',
-    # 'sphinx_design',
+    'sphinx_design',
     # 'nbsphinx',
     # 'sphinx_copybutton',
     # 'IPython.sphinxext.ipython_console_highlighting'
