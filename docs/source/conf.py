@@ -118,7 +118,6 @@ autodoc_default_options = {
     'private-members': True,
     'inherited-members': False,
     'show-inheritance': True,
-    # 'autosummary': True,
 }
 
 autodoc_mock_imports = []
