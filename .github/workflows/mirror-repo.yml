@@ -3,8 +3,8 @@ name: Mirror repo to GitLab
 on: [push, pull_request, delete]
 
 jobs:
-  call-nss-ops-mirror-workflow:
-    uses: DmitryRyumin/OCEANAI/blob/main/.github/workflows/mirror-repo.yml@master
+  call-oceanai-mirror-workflow:
+    uses: DmitryRyumin/OCEANAI/.github/workflows/mirror-repo.yml@master
     with:
       GITLAB_URL: 'https://gitlab.actcognitive.org/itmo-sai-code/oceanai'
     secrets:
