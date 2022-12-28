@@ -20,7 +20,7 @@ jobs:
         with:
           fetch-depth: 0
       - id: mirror-1
-        uses: yesolutions/mirror-action@master
+        uses: DmitryRyumin/OCEANAI/.github/workflows/mirror-repo.yml@main
         continue-on-error: true
         with:
           REMOTE: ${{ inputs.GITLAB_URL }}
@@ -36,7 +36,7 @@ jobs:
           fetch-depth: 0
         if: ${{ steps.mirror-1.outcome == 'failure' }}
       - id: mirror-2
-        uses: yesolutions/mirror-action@master
+        uses: DmitryRyumin/OCEANAI/.github/workflows/mirror-repo.yml@main
         continue-on-error: true
         with:
           REMOTE: ${{ inputs.GITLAB_URL }}
@@ -53,7 +53,7 @@ jobs:
           fetch-depth: 0
         if: ${{ steps.mirror-2.outcome == 'failure' }}
       - id: mirror-3
-        uses: yesolutions/mirror-action@master
+        uses: DmitryRyumin/OCEANAI/.github/workflows/mirror-repo.yml@main
         continue-on-error: true
         with:
           REMOTE: ${{ inputs.GITLAB_URL }}
@@ -70,7 +70,7 @@ jobs:
           fetch-depth: 0
         if: ${{ steps.mirror-3.outcome == 'failure' }}
       - id: mirror-4
-        uses: yesolutions/mirror-action@master
+        uses: DmitryRyumin/OCEANAI/.github/workflows/mirror-repo.yml@main
         with:
           REMOTE: ${{ inputs.GITLAB_URL }}
           GIT_USERNAME: ${{ secrets.GITLAB_USER }}
