@@ -25,8 +25,6 @@ from unittest.mock import MagicMock
 PATH_TO_SOURCE = os.path.abspath(os.path.dirname(__file__))
 PATH_TO_ROOT = os.path.join(PATH_TO_SOURCE, '..', '..')
 
-from pathlib import Path
-
 sys.path.insert(0, os.path.abspath(PATH_TO_ROOT))
 
 # ######################################################################################################################
@@ -41,7 +39,7 @@ MOCK_MODULES = [
     'tensorflow', 'keras', 'Keras-Applications', 'scipy', 'scipy.spatial', 'scipy.sparse', 'scipy.stats', 'pandas',
     'requests', 'requests.exceptions', 'requests.adapters', 'requests.structures', 'opensmile', 'librosa',
     'librosa.display', 'audioread', 'soundfile', 'opencv-contrib-python', 'pymediainfo', 'mediapipe',
-    'pytest'
+    'pytest', 'scikit-learn'
 ]
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
@@ -97,13 +95,6 @@ extensions = [
 # sphinx-build -b gettext docs/source/ docs/build/gettext
 # sphinx-intl update -p docs/build/gettext -l en -l ru
 # sphinx-build -a -b html -D language=en ./docs/source ./docs/build/en
-#
-# Нужно в файле: /Users/dl/@DmitryRyumin/Python/envs/OCEANAI/lib/python3.9/site-packages/sphinx/util/osutil.py
-# Поменять:
-# def canon_path(nativepath: str) -> str:
-#     if nativepath is None: return ''
-#     """Return path in OS-independent form"""
-#     return nativepath.replace(path.sep, SEP)
 language = 'ru'
 locale_dirs = ['../../locales']
 gettext_uuid = True
