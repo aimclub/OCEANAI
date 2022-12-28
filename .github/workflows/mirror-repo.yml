@@ -16,7 +16,7 @@ on:
 
 jobs:
   call-oceanai-mirror-workflow:
-    uses: ./.github/workflows/mirror-repo.yml@main
+    uses: ./.github/workflows/mirror-repo.yml
     with:
       GITLAB_URL: 'https://gitlab.actcognitive.org/itmo-sai-code/oceanai.git'
     secrets:
