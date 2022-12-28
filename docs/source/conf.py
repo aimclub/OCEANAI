@@ -84,8 +84,8 @@ extensions = [
     # 'sphinx_toolbox.github',
     'sphinx_design',
     'nbsphinx',
-    # 'sphinx_copybutton',
-    # 'IPython.sphinxext.ipython_console_highlighting'
+    'sphinx_copybutton',
+    'IPython.sphinxext.ipython_console_highlighting'
 ]
 
 # Локализация (язык): https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-language
