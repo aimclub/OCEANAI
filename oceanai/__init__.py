@@ -8,7 +8,7 @@ __summary__ = 'OCEANAI'
 __uri__ = 'https://github.com/DmitryRyumin/oceanai'
 
 __version__ = '1.0'
-__release__ = __version__ + '.0a2'
+__release__ = __version__ + '.0a3'
 
 __author__ru__ = 'Рюмина Елена, Рюмин Дмитрий, Карпов Алексей'
 __author__en__ = 'Elena Ryumina, Dmitry Ryumin, Alexey Karpov'
