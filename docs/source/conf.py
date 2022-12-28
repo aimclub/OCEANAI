@@ -81,7 +81,7 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx_toolbox.code',            # https://sphinx-toolbox.readthedocs.io/en/latest/index.html
     # 'sphinx_toolbox.sidebar_links',
-    'sphinx_toolbox.github',
+    # 'sphinx_toolbox.github',
     'sphinx_design',
     'nbsphinx',
     'sphinx_copybutton',
