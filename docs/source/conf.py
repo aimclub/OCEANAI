@@ -79,12 +79,12 @@ extensions = [
     'sphinx.ext.autodoc.typehints',   # Поддержка подсказок типа (PEP 484)
     'sphinx.ext.autodoc',             # Документация из строк кода в полуавтоматическом режиме
     'sphinx.ext.autosummary',
-    'sphinx_toolbox.code',            # https://sphinx-toolbox.readthedocs.io/en/latest/index.html
-    'sphinx_toolbox.sidebar_links',
-    'sphinx_toolbox.github',
-    'sphinx_design',
-    'nbsphinx',
-    'sphinx_copybutton',
+    # 'sphinx_toolbox.code',            # https://sphinx-toolbox.readthedocs.io/en/latest/index.html
+    # 'sphinx_toolbox.sidebar_links',
+    # 'sphinx_toolbox.github',
+    # 'sphinx_design',
+    # 'nbsphinx',
+    # 'sphinx_copybutton',
     # 'IPython.sphinxext.ipython_console_highlighting'
 ]
 
