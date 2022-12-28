@@ -74,7 +74,6 @@ extensions = [
     'sphinx.ext.duration',
     'sphinx.ext.mathjax',             # Отображение формул (JavaScript)
     'sphinx.ext.napoleon',            # Документация в стиле NumPy или Google
-    'sphinx.ext.todo',
     'sphinx.ext.viewcode',            # Добавление ссылки на исходный код
     'sphinx.ext.inheritance_diagram', # Добавление диаграммы классов
     'sphinx.ext.autodoc.typehints',   # Поддержка подсказок типа (PEP 484)
