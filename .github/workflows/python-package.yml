@@ -26,7 +26,8 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
-        sudo apt-get install -y autoconf automake pkg-config m4 libsndfile-dev libjack-dev libfftw3-dev libcairo2-dev libsamplerate0-dev ffpmeg
+        sudo apt-get install -y autoconf automake pkg-config m4 libsndfile-dev libjack-dev libfftw3-dev libcairo2-dev libsamplerate0-dev
+        sudo apt-get install ffpmeg
         python -m pip install --upgrade pip
         python -m pip install flake8 pytest
         if [ -f docs/requirements.txt ]; then pip install -r docs/requirements.txt; fi
