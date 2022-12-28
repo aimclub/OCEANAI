@@ -1,18 +1,6 @@
 name: Mirror repo to GitLab
 
-on:
-  workflow_call:
-    secrets:
-      GITLAB_USER:
-        required: true
-      GITLAB_PASSWORD:
-        required: true
-  push:
-    branches: ['main']
-  pull_request:
-    branches: ['main']
-  delete:
-    branches: ['main']
+on: [push, pull_request, delete]
 
 jobs:
   call-oceanai-mirror-workflow:
