@@ -24,6 +24,8 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
+    - name: Setup FFmpeg
+      uses: FedericoCarboni/setup-ffmpeg@v2
     - name: Install dependencies
       run: |
         sudo apt-get install -y autoconf automake pkg-config m4 libsndfile-dev libjack-dev libfftw3-dev libcairo2-dev libsamplerate0-dev
