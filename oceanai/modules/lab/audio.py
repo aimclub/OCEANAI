@@ -58,7 +58,7 @@ pd.set_option('display.max_rows', None)    # Максимальное колич
 # Сообщения
 # ######################################################################################################################
 @dataclass
-class  AudioMessages(Download):
+class AudioMessages(Download):
     """Класс для сообщений
 
     Args:
