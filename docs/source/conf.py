@@ -40,6 +40,7 @@ MOCK_MODULES = [
     # 'scipy.ndimage', 'pandas', 'requests', 'requests.exceptions', 'requests.adapters', 'requests.structures',
     # 'opensmile', 'librosa', 'librosa.display', 'audioread', 'soundfile', 'opencv-contrib-python', 'pymediainfo',
     # 'mediapipe', 'sklearn'
+    'soundfile'
 ]
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
