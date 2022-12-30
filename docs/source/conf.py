@@ -36,9 +36,10 @@ class Mock(MagicMock):
     def __getattr__(cls, name): return MagicMock()
 
 MOCK_MODULES = [
-    'tensorflow', 'keras', 'Keras-Applications', 'scipy', 'scipy.spatial', 'scipy.sparse', 'scipy.stats', 'pandas',
-    'requests', 'requests.exceptions', 'requests.adapters', 'requests.structures', 'opensmile', 'librosa',
-    'librosa.display', 'audioread', 'soundfile', 'opencv-contrib-python', 'pymediainfo', 'mediapipe', 'sklearn'
+    # 'tensorflow', 'keras', 'Keras-Applications', 'scipy', 'scipy.spatial', 'scipy.sparse', 'scipy.stats',
+    # 'scipy.ndimage', 'pandas', 'requests', 'requests.exceptions', 'requests.adapters', 'requests.structures',
+    # 'opensmile', 'librosa', 'librosa.display', 'audioread', 'soundfile', 'opencv-contrib-python', 'pymediainfo',
+    # 'mediapipe', 'sklearn'
 ]
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
