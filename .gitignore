@@ -175,3 +175,4 @@ oceanai/__garbage__.py
 oceanai/samples/__test__.py
 docs/source/user_guide/notebooks/logs
 docs/source/user_guide/notebooks/models
+docs/source/user_guide/notebooks/video_FI

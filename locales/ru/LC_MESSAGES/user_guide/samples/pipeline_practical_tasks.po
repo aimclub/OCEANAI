@@ -1,0 +1,29 @@
+# Russian translation.
+# Copyright (C) 2022. Speech and Multimodal Interfaces Laboratory Team
+# This file is distributed under the same license as the big5 package.
+# Elena Ryumina <ryumina_ev@mail.ru>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  1.0\n"
+"Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
+"POT-Creation-Date: 2023-01-03 18:30+0300\n"
+"PO-Revision-Date: 2023-01-03 18:30+0300\n"
+"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
+"<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
+"Language-Team: Russian <ryumina_ev@mail.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../source/user_guide/samples/pipeline_practical_tasks.rst:4
+#: fa8e738337de4edb86cfbaef7ce3ab1a
+msgid "Содержание:"
+msgstr ""
+
+#: ../../source/user_guide/samples/pipeline_practical_tasks.rst:2
+#: 6d9821e98f404a45a992d6980b62eb1b
+msgid "Решение практических задач"
+msgstr ""
+
