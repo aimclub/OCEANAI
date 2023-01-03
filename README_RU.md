@@ -33,12 +33,22 @@
 Алгоритм МОИ является связующим звеном двух алгоритмов анализа информации (ААИ и АВИ). Данный алгоритм выполняет
 взвешенное нейросетевое объединение гипотез предсказаний полученных с помощью алгоритмов ААИ и АВИ.
 
-Помимо основной задачи - мультимодального оценивания персональных качеств личности человека, реализованные в
-**[OCEANAI](https://github.com/DmitryRyumin/oceanai)** признаки позволят исследователям решать другие задачи анализа поведения
-человека, например распознавание его аффективных состояний.
+Помимо основной задачи - мультимодального оценивания персональных качеств личности человека, реализованные в **[OCEANAI](https://github.com/DmitryRyumin/oceanai)** признаки позволят исследователям решать другие задачи анализа поведения человека, например распознавание его аффективных состояний.
 
-**[OCEANAI](https://github.com/DmitryRyumin/oceanai)** использует самые актуальные библиотеки с открытым исходным кодом
-для обработки аудио и видеоинформации: **[librosa](https://librosa.org/)**,
+Для установки библиотеки необходимо обратиться к **[Установка и обновление](https://oceanai.readthedocs.io/ru/latest/user_guide/installation.html)**.
+
+Для работы со аудиоинформацией следует обратиться к **[Аудиообработка информации](https://oceanai.readthedocs.io/ru/latest/user_guide/samples/audio.html)**.
+
+Для работы со видеооинформацией следует обратиться к **[Видеообработка информации](https://oceanai.readthedocs.io/ru/latest/user_guide/samples/video.html)**.
+
+Для работы с аудиовизуальной информацией следует обращаться к **[Мультимодальная обработка информации](https://oceanai.readthedocs.io/ru/latest/user_guide/samples/multimodal.html)**.
+
+Библиотека решает практические задачи:
+
+1. **[Ранжирование потенциальных кандидатов по профессиональным обязанностям](https://oceanai.readthedocs.io/ru/latest/user_guide/notebooks/Pipeline_practical_task_1.html)**.
+2. **[Прогнозирование потребительских предпочтений на промышленные товары](https://oceanai.readthedocs.io/ru/latest/user_guide/notebooks/Pipeline_practical_task_2.html)**.
+
+**[OCEANAI](https://github.com/DmitryRyumin/oceanai)** использует самые актуальные библиотеки с открытым исходным кодом для обработки аудио и видеоинформации: **[librosa](https://librosa.org/)**,
 **[openSMILE](https://audeering.github.io/opensmile-python/)**,
 **[openCV](https://pypi.org/project/opencv-python/)**,
 **[mediapipe](https://google.github.io/mediapipe/getting_started/python)**.
