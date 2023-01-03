@@ -245,6 +245,8 @@ class Core(CoreMessages):
 
         self._df_files: pd.DataFrame = pd.DataFrame() # DataFrame с данными
         self._df_files_ranking: pd.DataFrame = pd.DataFrame() # DataFrame с ранжированными данными
+        # DataFrame с ранжированными предпочтениями на основе данных
+        self._df_files_priority: pd.DataFrame = pd.DataFrame()
         self._dict_of_files: Dict[str, List[Union[int, str, float]]] = {} # Словарь для DataFrame с данными
 
         self._df_accuracy: pd.DataFrame = pd.DataFrame() # DataFrame с результатами вычисления точности
@@ -253,6 +255,9 @@ class Core(CoreMessages):
 
         self._keys_id: str = 'ID' # Идентификатор
         self._keys_score: str = 'Candidate score' # Комплексная оценка кандидатов
+        self._keys_priority: str = 'Priority' # Приоритетные предпочтения
+        # Наиболее важные качества влияющие на приоритетные предпочтения
+        self._keys_trait_importance: str = 'Trait importance'
 
         self._ext_for_logs: str = '.csv' # Расширение для сохранения lOG файлов
 
@@ -540,6 +545,35 @@ class Core(CoreMessages):
         """
 
         return self._df_files_ranking
+
+    @property
+    def df_files_priority_(self) -> pd.DataFrame:
+        """Получение DataFrame c ранжированными предпочтениями на основе данных
+
+        Returns:
+            pd.DataFrame: **DataFrame** c данными
+
+        .. dropdown:: Пример
+
+            :bdg-success:`Верно` :bdg-light:`-- 1 --`
+
+            .. code-cell:: python
+                :execution-count: 1
+                :linenos:
+
+                from oceanai.modules.core.core import Core
+
+                core = Core()
+                len(core.df_files_priority_)
+
+            .. output-cell::
+                :execution-count: 1
+                :linenos:
+
+                0
+        """
+
+        return self._df_files_priority
 
     @property
     def df_accuracy_(self) -> pd.DataFrame:
@@ -2975,23 +3009,117 @@ class Core(CoreMessages):
             else:
                 try:
                     if len(self._df_files) == 0: raise TypeError
-
                 except TypeError: self._other_error(self._dataframe_empty, out = out); return self._df_files_ranking
                 except Exception: self._other_error(self._unknown_err, out = out); return self._df_files_ranking
                 else:
                     try:
-                        df_files = self._df_files[self.keys_dataset_[1:]]
-                        traits_sum = np.sum(df_files.values * [
+                        self._df_files_ranking = self._df_files.copy()
+
+                        df_files_ranking_neuroticism = 1 - self._df_files_ranking[self.keys_dataset_[5]]
+                        df_files_ranking = pd.concat([
+                            self._df_files_ranking[self.keys_dataset_[1:5]],
+                            df_files_ranking_neuroticism
+                        ], axis = 1, ignore_index = False)
+
+                        traits_sum = np.sum(df_files_ranking.values * [
                             weigths_openness, weigths_conscientiousness, weigths_extraversion,
                             weigths_agreeableness, weigths_neuroticism
                         ], axis = 1)
-                        self._df_files_ranking = self._df_files
+
                         self._df_files_ranking[self._keys_score] = traits_sum
                         self._df_files_ranking = self._df_files_ranking.sort_values(
                             by = self._keys_score, ascending = False
                         )
                     except Exception: self._other_error(self._unknown_err, out = out); return self._df_files_ranking
                     else: return self._df_files_ranking
+
+    def _priority_calculation(
+        self, correlation_coefficients: Optional[pd.DataFrame] = None, col_name_ocean: str = 'Trait',
+        threshold: float = 0.55, number_priority: int = 1, number_importance_traits: int = 1, out: bool = True
+    ) -> pd.DataFrame:
+        """Ранжирование предпочтений
+
+        .. note::
+            protected (защищенный метод)
+
+        Args:
+            correlation_coefficients (pd.DataFrame): **DataFrame** c коэффициентами корреляции
+            col_name_ocean (str): Столбец с названиями персональных качеств личности человека
+            threshold (float): Порог для оценок полярности качеств (например, интроверт < 0.55, экстраверт > 0.55)
+            number_priority (int): Количество приоритетных предпочтений
+            number_importance_traits (int): Количество наиболее важных персональных качеств личности человека
+            out (bool): Отображение
+
+        Returns:
+             pd.DataFrame: **DataFrame** c ранжированными предпочтениями
+        """
+
+        # Сброс
+        self._df_files_priority = pd.DataFrame() # Пустой DataFrame с ранжированными предпочтениями
+
+        try:
+            # Проверка аргументов
+            if (type(correlation_coefficients) is not pd.DataFrame
+                or type(col_name_ocean) is not str or not col_name_ocean or type(threshold) is not float
+                or not (0.0 <= threshold <= 1.0) or type(number_priority) is not int or number_priority < 1
+                or type(number_importance_traits) is not int or number_importance_traits < 1
+                or type(out) is not bool): raise TypeError
+        except TypeError:
+            self._inv_args(__class__.__name__, self._priority_calculation.__name__, out = out)
+            return self._df_files_priority
+        else:
+            try: matrix = pd.DataFrame(correlation_coefficients.drop([col_name_ocean], axis = 1)).values
+            except KeyError: self._other_error(self._som_ww, out = out); return self._df_files_priority
+            except Exception: self._other_error(self._unknown_err, out = out); return self._df_files_priority
+            else:
+                try:
+                    if len(self._df_files) == 0: raise TypeError
+                except TypeError: self._other_error(self._dataframe_empty, out = out); return self._df_files_priority
+                except Exception: self._other_error(self._unknown_err, out = out); return self._df_files_priority
+                else:
+                    try:
+                        name_priority = correlation_coefficients.columns[1:]
+
+                        self._df_files_priority = self._df_files.copy()
+
+                        df_files_priority_neuroticism = 1 - self._df_files_priority[self.keys_dataset_[5]]
+                        df_files_priority = pd.concat([
+                            self._df_files_priority[self.keys_dataset_[:5]],
+                            df_files_priority_neuroticism
+                        ], axis = 1, ignore_index = False)
+
+                        name_traits = correlation_coefficients[col_name_ocean].values
+                        df_files_priority = df_files_priority[[self.keys_dataset_[0]] + name_traits.tolist()]
+
+                        for path in range(len(df_files_priority)):
+                            curr_traits = df_files_priority.iloc[path].values[1:]
+                            curr_traits = np.where(curr_traits < threshold, -1 * curr_traits, curr_traits).reshape(5, 1)
+
+                            curr_traits_matrix = curr_traits * matrix
+
+                            curr_weights = np.sum(curr_traits_matrix, axis = 0)
+
+                            idx_max_values = np.argsort(-np.asarray(curr_weights))[:number_priority]
+                            priority = name_priority[idx_max_values]
+
+                            slice_traits_matrix = curr_traits_matrix[:, idx_max_values]
+                            sum_slice_traits_matrix = np.sum(slice_traits_matrix, axis = 1)
+
+                            id_traits = np.argsort(-sum_slice_traits_matrix, axis = 0)[:number_importance_traits]
+                            importance_traits = name_traits[id_traits]
+
+                            self._df_files_priority.loc[
+                                str(path + 1),
+                                [(self._keys_priority + ' {}').format(i + 1) for i in range(number_priority)]
+                            ] = priority
+
+                            self._df_files_priority.loc[
+                                str(path + 1),
+                                [(self._keys_trait_importance + ' {}').format(i + 1)
+                                    for i in range(number_importance_traits)]
+                            ] = importance_traits
+                    except Exception: self._other_error(self._unknown_err, out = out); return self._df_files_priority
+                    else: return self._df_files_priority
 
     # ------------------------------------------------------------------------------------------------------------------
     # Внешние методы
