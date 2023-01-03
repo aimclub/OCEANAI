@@ -24,4 +24,4 @@ msgstr "Contents:"
 #: ../../source/user_guide/samples/multimodal.rst:2
 #: 14883f1e00714719bc3fd1da804f378c
 msgid "Мультимодальная обработка информации"
-msgstr "Multimodal processing of information"
+msgstr "Multimodal information processing"

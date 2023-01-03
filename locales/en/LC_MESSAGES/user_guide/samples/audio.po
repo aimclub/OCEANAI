@@ -23,4 +23,4 @@ msgstr "Contents:"
 
 #: ../../source/user_guide/samples/audio.rst:2 76bd3cb52c454305bf879650d78c31de
 msgid "Аудиообработка информации"
-msgstr "Audio processing of information"
+msgstr "Audio information processing"

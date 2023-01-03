@@ -20,7 +20,7 @@ msgstr ""
 #: ../../source/user_guide/samples/pipeline_practical_tasks.rst:4
 #: fa8e738337de4edb86cfbaef7ce3ab1a
 msgid "Содержание:"
-msgstr "Content:"
+msgstr "Contents:"
 
 #: ../../source/user_guide/samples/pipeline_practical_tasks.rst:2
 #: 6d9821e98f404a45a992d6980b62eb1b
