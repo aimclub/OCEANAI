@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2022-12-26 16:31+0300\n"
+"POT-Creation-Date: 2023-01-03 16:35+0300\n"
 "PO-Revision-Date: 2022-12-01 09:13+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -51,6 +51,7 @@ msgstr "Class for messages"
 #: oceanai.modules.core.core.Core._metadata_info
 #: oceanai.modules.core.core.Core._notebook_display_markdown
 #: oceanai.modules.core.core.Core._other_error
+#: oceanai.modules.core.core.Core._priority_calculation
 #: oceanai.modules.core.core.Core._progressbar
 #: oceanai.modules.core.core.Core._progressbar_union_predictions
 #: oceanai.modules.core.core.Core._r_end
@@ -126,10 +127,9 @@ msgstr "Determining how to run a library in Jupyter or similar"
 msgid "private (приватный метод)"
 msgstr "private method"
 
-#: 07d1fa3456d24cfb88987521cdab9503 0a14eca2ffc345a093fe1b0a9ae75ce4
-#: 206a529c546c42699b132a3121b27700 40a8e13d7f6c4ad5b4cb36dce62b54f8
-#: 419bbb629b464a16bcad903feaae14ea 68ffbf1e61124b9593480dc85177eb17
-#: 6acac29d22734e43840c842c96ca2424 a1ee57fba0944ec397058348a9975243
+#: 07d1fa3456d24cfb88987521cdab9503 206a529c546c42699b132a3121b27700
+#: 40a8e13d7f6c4ad5b4cb36dce62b54f8 419bbb629b464a16bcad903feaae14ea
+#: 68ffbf1e61124b9593480dc85177eb17 a1ee57fba0944ec397058348a9975243
 #: bd501cb9602046dd910d664274e8c586
 #: oceanai.modules.core.core.Core.__is_notebook
 #: oceanai.modules.core.core.Core._add_last_el_notebook_history_output
@@ -151,6 +151,7 @@ msgstr "private method"
 #: oceanai.modules.core.core.Core._metadata_info
 #: oceanai.modules.core.core.Core._notebook_display_markdown
 #: oceanai.modules.core.core.Core._other_error
+#: oceanai.modules.core.core.Core._priority_calculation
 #: oceanai.modules.core.core.Core._progressbar
 #: oceanai.modules.core.core.Core._progressbar_union_predictions
 #: oceanai.modules.core.core.Core._r_end
@@ -162,6 +163,7 @@ msgstr "private method"
 #: oceanai.modules.core.core.Core._traceback
 #: oceanai.modules.core.core.Core.df_accuracy_
 #: oceanai.modules.core.core.Core.df_files_
+#: oceanai.modules.core.core.Core.df_files_priority_
 #: oceanai.modules.core.core.Core.df_files_ranking_
 #: oceanai.modules.core.core.Core.df_pkgs_
 #: oceanai.modules.core.core.Core.dict_of_accuracy_
@@ -184,8 +186,7 @@ msgid ""
 msgstr "**True** if the library is run in Jupyter or similar, otherwise **False**"
 
 #: 024c238b998545639c5f559d567b4083 237df8439cff401490b50cdbcbc58443
-#: 259959372a0c4bf58fb3fc19c9b72cb8 357ea5dad34041ac9931f601eb0c6034
-#: 9e3ac45741ba4e499c00fc4250ae21de ac287aa1a6d249f68e2255e21f0e417c
+#: 357ea5dad34041ac9931f601eb0c6034 9e3ac45741ba4e499c00fc4250ae21de
 #: cf7303dad2534371b519a777191340b6 d203caa720084bcfa1ee3e152630fe3d
 #: fbf8120849034f21a2a469ede77a840e
 #: oceanai.modules.core.core.Core.__is_notebook
@@ -208,6 +209,7 @@ msgstr "**True** if the library is run in Jupyter or similar, otherwise **False*
 #: oceanai.modules.core.core.Core._metadata_info
 #: oceanai.modules.core.core.Core._notebook_display_markdown
 #: oceanai.modules.core.core.Core._other_error
+#: oceanai.modules.core.core.Core._priority_calculation
 #: oceanai.modules.core.core.Core._progressbar
 #: oceanai.modules.core.core.Core._progressbar_union_predictions
 #: oceanai.modules.core.core.Core._r_end
@@ -219,6 +221,7 @@ msgstr "**True** if the library is run in Jupyter or similar, otherwise **False*
 #: oceanai.modules.core.core.Core._traceback
 #: oceanai.modules.core.core.Core.df_accuracy_
 #: oceanai.modules.core.core.Core.df_files_
+#: oceanai.modules.core.core.Core.df_files_priority_
 #: oceanai.modules.core.core.Core.df_files_ranking_
 #: oceanai.modules.core.core.Core.df_pkgs_
 #: oceanai.modules.core.core.Core.dict_of_accuracy_
@@ -258,8 +261,7 @@ msgstr "Result type"
 msgid "Примеры"
 msgstr "Examples"
 
-#: 10afd5a762d9405aadb78fbf81e229f1 64d5ab4cd66d424f8be619ab1ad920d9
-#: 77b632ac9ab142fab3fca23271f1c8aa 7dca980eef894ef8bce3bd9b0db7fab6
+#: 10afd5a762d9405aadb78fbf81e229f1 7dca980eef894ef8bce3bd9b0db7fab6
 #: 8071df0951c54237af801ac813b90d5a b1e6e146abee4521bd6e67192b508ea0
 #: b43ebb10a82f422c958f35fd2930c2bd ce62d84401894a239b31154b07dd9c92
 #: fae9d9bd7205465d92114c5fe0531626
@@ -293,6 +295,7 @@ msgstr "Examples"
 #: oceanai.modules.core.core.Core._traceback:12
 #: oceanai.modules.core.core.Core.df_accuracy_:8
 #: oceanai.modules.core.core.Core.df_files_:8
+#: oceanai.modules.core.core.Core.df_files_priority_:8
 #: oceanai.modules.core.core.Core.df_files_ranking_:8
 #: oceanai.modules.core.core.Core.df_pkgs_:8
 #: oceanai.modules.core.core.Core.dict_of_accuracy_:10
@@ -380,6 +383,7 @@ msgstr ""
 #: oceanai.modules.core.core.Core._metadata_info:4
 #: oceanai.modules.core.core.Core._notebook_display_markdown:4
 #: oceanai.modules.core.core.Core._other_error:4
+#: oceanai.modules.core.core.Core._priority_calculation:4
 #: oceanai.modules.core.core.Core._progressbar:4
 #: oceanai.modules.core.core.Core._r_end:4
 #: oceanai.modules.core.core.Core._r_start:4
@@ -447,6 +451,7 @@ msgstr ""
 #: oceanai.modules.core.core.Core._traceback
 #: oceanai.modules.core.core.Core.df_accuracy_
 #: oceanai.modules.core.core.Core.df_files_
+#: oceanai.modules.core.core.Core.df_files_priority_
 #: oceanai.modules.core.core.Core.df_files_ranking_
 #: oceanai.modules.core.core.Core.df_pkgs_
 #: oceanai.modules.core.core.Core.dict_of_accuracy_
@@ -616,7 +621,7 @@ msgid "Предсказания персональных качеств"
 msgstr "Predictions of personal traits"
 
 #: 02567ef83efe449c8925ba42ae5b2f19 5a18c272758b454b8a2383cd29338be5
-#: 9e67ecf288154ce58962c9e3229f3834 ba49c6e40fe94b85a258b7deef369c94
+#: 9e67ecf288154ce58962c9e3229f3834
 #: oceanai.modules.core.core.Core._append_to_list_of_accuracy:8
 #: oceanai.modules.core.core.Core._append_to_list_of_files:10
 #: oceanai.modules.core.core.Core._candidate_ranking:16
@@ -629,6 +634,7 @@ msgstr "Predictions of personal traits"
 #: oceanai.modules.core.core.Core._metadata_info:8
 #: oceanai.modules.core.core.Core._notebook_display_markdown:10
 #: oceanai.modules.core.core.Core._other_error:10
+#: oceanai.modules.core.core.Core._priority_calculation:16
 #: oceanai.modules.core.core.Core._progressbar:14
 #: oceanai.modules.core.core.Core._progressbar_union_predictions:18
 #: oceanai.modules.core.core.Core._r_end:10
@@ -1812,6 +1818,43 @@ msgstr ""
 "[2022-10-14 16:25:11] Invalid argument types or values in "
 "\"Core._other_error\" ..."
 
+#: 5e1d8389eefc40f4a372be0f33498895
+#: oceanai.modules.core.core.Core._priority_calculation:1 of
+msgid "Ранжирование предпочтений"
+msgstr ""
+
+#: 0180497dae2648c7a924b3c3f3937918
+#: oceanai.modules.core.core.Core._priority_calculation:6 of
+msgid "**DataFrame** c коэффициентами корреляции"
+msgstr ""
+
+#: df109c5c6a254fad9a0f68ca9f98ab15
+#: oceanai.modules.core.core.Core._priority_calculation:8 of
+msgid "Столбец с названиями персональных качеств личности человека"
+msgstr "Column with the names of personal qualities of a person's personality"
+
+#: 5fd7f15212214019b66dd83851ed5b14
+#: oceanai.modules.core.core.Core._priority_calculation:10 of
+msgid ""
+"Порог для оценок полярности качеств (например, интроверт < 0.55, "
+"экстраверт > 0.55)"
+msgstr ""
+
+#: d0a1b73c5d224386a8e3d93042fcc705
+#: oceanai.modules.core.core.Core._priority_calculation:12 of
+msgid "Количество приоритетных предпочтений"
+msgstr ""
+
+#: d9a2fab82fb74347b0f8c479205f5f76
+#: oceanai.modules.core.core.Core._priority_calculation:14 of
+msgid "Количество наиболее важных персональных качеств личности человека"
+msgstr ""
+
+#: 584672828986481c8469c139460bd24a
+#: oceanai.modules.core.core.Core._priority_calculation:19 of
+msgid "**DataFrame** c ранжированными предпочтениями"
+msgstr "**DataFrame** with ranked priority"
+
 #: fbabd62200d1436795f9e6ead02c6727
 #: oceanai.modules.core.core.Core._progressbar:1
 #: oceanai.modules.core.core.Core._progressbar:8 of
@@ -2583,6 +2626,7 @@ msgstr ""
 #: 671334671fcc4ec8a3430f9d7c9e0f48
 #: oceanai.modules.core.core.Core.df_accuracy_:19
 #: oceanai.modules.core.core.Core.df_files_:19
+#: oceanai.modules.core.core.Core.df_files_priority_:19
 #: oceanai.modules.core.core.Core.df_files_ranking_:19
 #: oceanai.modules.core.core.Core.dict_of_accuracy_:21
 #: oceanai.modules.core.core.Core.dict_of_files_:21 of
@@ -2595,6 +2639,7 @@ msgid "Получение DataFrame c данными"
 msgstr "Getting a DataFrame with data"
 
 #: 82e59dc6d2324ad0818ff8edccf62be3 oceanai.modules.core.core.Core.df_files_:3
+#: oceanai.modules.core.core.Core.df_files_priority_:3
 #: oceanai.modules.core.core.Core.df_files_ranking_:3 of
 msgid "**DataFrame** c данными"
 msgstr "**DataFrame** with data"
@@ -2607,6 +2652,24 @@ msgid ""
 "core = Core()\n"
 "len(core.df_files_)"
 msgstr ""
+
+#: 584672828986481c8469c139460bd24a
+#: oceanai.modules.core.core.Core.df_files_priority_:1 of
+msgid "Получение DataFrame c ранжированными предпочтениями на основе данных"
+msgstr "Getting a DataFrame with ranked priority based on the data"
+
+#: 4893c5f4bf394c00aabc2b32612b83b0
+#: oceanai.modules.core.core.Core.df_files_priority_:10 of
+msgid ""
+"from oceanai.modules.core.core import Core\n"
+"\n"
+"core = Core()\n"
+"len(core.df_files_priority_)"
+msgstr ""
+"from oceanai.modules.core.core import Core\n"
+"\n"
+"core = Core(lang = 'en')\n"
+"len(core.df_files_priority_)"
 
 #: 584672828986481c8469c139460bd24a
 #: oceanai.modules.core.core.Core.df_files_ranking_:1 of
