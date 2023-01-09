@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2023-01-03 18:30+0300\n"
+"POT-Creation-Date: 2023-01-09 13:43+0300\n"
 "PO-Revision-Date: 2023-01-03 18:30+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -143,7 +143,7 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:126
 #: 5d6fb901147c4b9696bb2ebfec6da413
 msgid ""
-"\\ **[2023-01-03 18:03:28] Получение прогнозов и вычисление точности "
+"\\ **[2023-01-09 13:41:00] Получение прогнозов и вычисление точности "
 "(мультимодальное объединение) …**"
 msgstr ""
 
@@ -397,7 +397,7 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:385
 #: e009ef950df84423b5584706eb4ee8ec
 msgid ""
-"\\ **[2023-01-03 18:03:28] Точность по отдельным персональным качествам "
+"\\ **[2023-01-09 13:41:00] Точность по отдельным персональным качествам "
 "личности человека …**"
 msgstr ""
 
@@ -513,7 +513,7 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:514
 #: c8a5f071415e4d2fb6e38ded0965fad9
 msgid ""
-"\\ **[2023-01-03 18:03:28] Средняя средних абсолютных ошибок: 0.0681, "
+"\\ **[2023-01-09 13:41:00] Средняя средних абсолютных ошибок: 0.0681, "
 "средняя точность: 0.9319 …**"
 msgstr ""
 
@@ -524,7 +524,7 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:536
 #: 85a21b2db84846c5ae60c96403f4b834
-msgid "— Время выполнения: 163.148 сек. —"
+msgid "— Время выполнения: 108.219 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:548
@@ -601,17 +601,23 @@ msgid "[3]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 8e60b87d492b416b9a4aa7cd5c90de97
+#: 604d0a35209642aea77d483f37b6ee6e
 msgid ""
 "# Загрузка датафрейма с весовыми коэффициентами\n"
 "url = "
 "'https://download.sberdisk.ru/download/file/429714820?token=M7fLsRLWvQH39ka&filename=traits_priority_for_professions.csv'"
 "\n"
 "traits_priority_for_professions = pd.read_csv(url)\n"
+"\n"
+"traits_priority_for_professions.index.name = 'ID'\n"
+"traits_priority_for_professions.index += 1\n"
+"traits_priority_for_professions.index = "
+"traits_priority_for_professions.index.map(str)\n"
+"\n"
 "traits_priority_for_professions"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:611
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:616
 #: 18c5921796c444349f0d34510e5f9cf4
 msgid ""
 "<div>\n"
@@ -639,10 +645,19 @@ msgid ""
 "      <th>Agreeableness</th>\n"
 "      <th>Neuroticism</th>\n"
 "    </tr>\n"
+"    <tr>\n"
+"      <th>ID</th>\n"
+"      <th></th>\n"
+"      <th></th>\n"
+"      <th></th>\n"
+"      <th></th>\n"
+"      <th></th>\n"
+"      <th></th>\n"
+"    </tr>\n"
 "  </thead>\n"
 "  <tbody>\n"
 "    <tr>\n"
-"      <th>0</th>\n"
+"      <th>1</th>\n"
 "      <td>Managers/executives</td>\n"
 "      <td>15</td>\n"
 "      <td>35</td>\n"
@@ -651,7 +666,7 @@ msgid ""
 "      <td>5</td>\n"
 "    </tr>\n"
 "    <tr>\n"
-"      <th>1</th>\n"
+"      <th>2</th>\n"
 "      <td>Entrepreneurship</td>\n"
 "      <td>30</td>\n"
 "      <td>30</td>\n"
@@ -660,7 +675,7 @@ msgid ""
 "      <td>30</td>\n"
 "    </tr>\n"
 "    <tr>\n"
-"      <th>2</th>\n"
+"      <th>3</th>\n"
 "      <td>Social/Non profit making professions</td>\n"
 "      <td>5</td>\n"
 "      <td>5</td>\n"
@@ -669,7 +684,7 @@ msgid ""
 "      <td>20</td>\n"
 "    </tr>\n"
 "    <tr>\n"
-"      <th>3</th>\n"
+"      <th>4</th>\n"
 "      <td>Public sector professions</td>\n"
 "      <td>15</td>\n"
 "      <td>50</td>\n"
@@ -678,7 +693,7 @@ msgid ""
 "      <td>5</td>\n"
 "    </tr>\n"
 "    <tr>\n"
-"      <th>4</th>\n"
+"      <th>5</th>\n"
 "      <td>Scientists/researchers, and engineers</td>\n"
 "      <td>50</td>\n"
 "      <td>15</td>\n"
@@ -691,68 +706,74 @@ msgid ""
 "</div>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:696
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:710
 #: 02cba4f29817457eb516d5920eca7c73
 msgid ""
 "<pre>\n"
-"                              Profession  Openness  Conscientiousness  \\"
+"                               Profession  Openness  Conscientiousness  "
+"\\\n"
+"ID\n"
+"1                     Managers/executives        15                 35\n"
+"2                        Entrepreneurship        30                 30\n"
+"3    Social/Non profit making professions         5                  5\n"
+"4               Public sector professions        15                 50\n"
+"5   Scientists/researchers, and engineers        50                 15\n"
 "\n"
-"0                    Managers/executives        15                 35\n"
-"1                       Entrepreneurship        30                 30\n"
-"2   Social/Non profit making professions         5                  5\n"
-"3              Public sector professions        15                 50\n"
-"4  Scientists/researchers, and engineers        50                 15\n"
-"\n"
-"   Extraversion  Agreeableness  Neuroticism\n"
-"0            15             30            5\n"
-"1             5              5           30\n"
-"2            35             35           20\n"
-"3            15             15            5\n"
-"4             5             15           15\n"
+"    Extraversion  Agreeableness  Neuroticism\n"
+"ID\n"
+"1             15             30            5\n"
+"2              5              5           30\n"
+"3             35             35           20\n"
+"4             15             15            5\n"
+"5              5             15           15\n"
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:714
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:730
 #: 675550425d2645f4be4fdb8295353b9b
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"                              Profession  Openness  Conscientiousness  "
+"                               Profession  Openness  Conscientiousness  "
 "\\textbackslash{}\n"
-"0                    Managers/executives        15                 35\n"
-"1                       Entrepreneurship        30                 30\n"
-"2   Social/Non profit making professions         5                  5\n"
-"3              Public sector professions        15                 50\n"
-"4  Scientists/researchers, and engineers        50                 15\n"
+"ID\n"
+"1                     Managers/executives        15                 35\n"
+"2                        Entrepreneurship        30                 30\n"
+"3    Social/Non profit making professions         5                  5\n"
+"4               Public sector professions        15                 50\n"
+"5   Scientists/researchers, and engineers        50                 15\n"
 "\n"
-"   Extraversion  Agreeableness  Neuroticism\n"
-"0            15             30            5\n"
-"1             5              5           30\n"
-"2            35             35           20\n"
-"3            15             15            5\n"
-"4             5             15           15\n"
+"    Extraversion  Agreeableness  Neuroticism\n"
+"ID\n"
+"1             15             30            5\n"
+"2              5              5           30\n"
+"3             35             35           20\n"
+"4             15             15            5\n"
+"5              5             15           15\n"
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:733
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:751
 #: d6ee532c7de6433e90c1072a6741e075
 msgid ""
-"                              Profession  Openness  Conscientiousness  \\"
+"                               Profession  Openness  Conscientiousness  "
+"\\\n"
+"ID\n"
+"1                     Managers/executives        15                 35\n"
+"2                        Entrepreneurship        30                 30\n"
+"3    Social/Non profit making professions         5                  5\n"
+"4               Public sector professions        15                 50\n"
+"5   Scientists/researchers, and engineers        50                 15\n"
 "\n"
-"0                    Managers/executives        15                 35\n"
-"1                       Entrepreneurship        30                 30\n"
-"2   Social/Non profit making professions         5                  5\n"
-"3              Public sector professions        15                 50\n"
-"4  Scientists/researchers, and engineers        50                 15\n"
-"\n"
-"   Extraversion  Agreeableness  Neuroticism\n"
-"0            15             30            5\n"
-"1             5              5           30\n"
-"2            35             35           20\n"
-"3            15             15            5\n"
-"4             5             15           15"
+"    Extraversion  Agreeableness  Neuroticism\n"
+"ID\n"
+"1             15             30            5\n"
+"2              5              5           30\n"
+"3             35             35           20\n"
+"4             15             15            5\n"
+"5              5             15           15"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:757
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:777
 #: 1d78e228ff004c9d95573ee57a0ed631
 msgid "Ранжирование кандидатов на должность инженера-проектировщика"
 msgstr ""
@@ -766,7 +787,7 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
 #: 96aaff59184e4299a14264eed496f25f
 msgid ""
-"weights = traits_priority_for_professions.loc[4].values[1:]\n"
+"weights = traits_priority_for_professions.iloc[4].values[1:]\n"
 "weights = list(map(int, weights))\n"
 "\n"
 "_b5._candidate_ranking(\n"
@@ -784,7 +805,7 @@ msgid ""
 "_b5.df_files_ranking_"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:795
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:815
 #: 6c1e72dbe3004997803a7f04916ec5f8
 msgid ""
 "<div>\n"
@@ -930,7 +951,7 @@ msgid ""
 "</div>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:946
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:966
 #: f27946d51dec42528b5b8ac7fafd2345
 msgid ""
 "<pre>\n"
@@ -973,7 +994,7 @@ msgid ""
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:976
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:996
 #: 8b974a5a6007406cbd82349b92851bb7
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
@@ -1017,7 +1038,7 @@ msgid ""
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1007
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1027
 #: baf8969a18ac4233a3a2504739014a3c
 msgid ""
 "                                                 Path  Openness  \\\n"
@@ -1058,7 +1079,7 @@ msgid ""
 "47.568521"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1043
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1063
 #: 264f1bbf2c6147c2a765203d26e56310
 msgid "Ранжирование кандидатов на должность руководителя"
 msgstr ""
@@ -1072,7 +1093,7 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
 #: 272e79d9f5bc487ca42ea20250755e10
 msgid ""
-"weights = traits_priority_for_professions.loc[0].values[1:]\n"
+"weights = traits_priority_for_professions.iloc[0].values[1:]\n"
 "weights = list(map(int, weights))\n"
 "\n"
 "_b5._candidate_ranking(\n"
@@ -1090,7 +1111,7 @@ msgid ""
 "_b5.df_files_ranking_"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1081
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1101
 #: 90801c7935c24cc6884fee76649fea82
 msgid ""
 "<div>\n"
@@ -1236,7 +1257,7 @@ msgid ""
 "</div>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1232
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1252
 #: 6c0b20b71e1148fe9fc5318976bfda6e
 msgid ""
 "<pre>\n"
@@ -1279,7 +1300,7 @@ msgid ""
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1262
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1282
 #: 9f14250abc9e4743846d9a1debd02549
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
@@ -1323,7 +1344,7 @@ msgid ""
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1293
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1313
 #: 280f3f18f897458faec8f20c5c031ecd
 msgid ""
 "                                                 Path  Openness  \\\n"
@@ -1363,4 +1384,3 @@ msgid ""
 "6           0.355927     0.413969      0.510211    0.439227       "
 "44.994134"
 msgstr ""
-
