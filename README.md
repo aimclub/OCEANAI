@@ -1,4 +1,4 @@
-# [OCEANAI](https://github.com/DmitryRyumin/ocean)
+# [OCEANAI](https://oceanai.readthedocs.io/en/latest/)
 
 ![PyPI](https://img.shields.io/pypi/v/oceanai)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/oceanai)
@@ -20,11 +20,11 @@
 
 ---
 
->  **[OCEANAI](https://github.com/DmitryRyumin/oceanai)** is an open-source library consisting of a set of algorithms for intellectual analysis of human behavior based on multimodal data for automatic personal traits assessment to performance of professional duties. The library evaluates 5 traits: **O**penness to experience, **C**onscientiousness, **E**xtraversion, **A**greeableness, **N**euroticism.
+>  **[OCEANAI](https://oceanai.readthedocs.io/en/latest/)** is an open-source library consisting of a set of algorithms for intellectual analysis of human behavior based on multimodal data for automatic personal traits assessment to performance of professional duties. The library evaluates 5 traits: **O**penness to experience, **C**onscientiousness, **E**xtraversion, **A**greeableness, **N**euroticism.
 
 ---
 
-**[OCEANAI](https://github.com/DmitryRyumin/oceanai)** includes three main algorithms:
+**[OCEANAI](https://oceanai.readthedocs.io/en/latest/)** includes three main algorithms:
 
 1. Audio Information Analysis Algorithm (AIA).
 2. Video Information Analysis Algorithm (VIA).
@@ -34,7 +34,7 @@ The AIA and VIA algorithms implement the functions of strong artificial intellig
 
 The MF algorithm is a link between two information analysis algorithms (AIA and VIA). This algorithm performs a weighted neural network combination of prediction personality traits obtained using the AIA and VIA algorithms.
 
-In addition to the main task - unimodal and multimodal personality traits assessment, the features implemented in **[OCEANAI](https://github.com/DmitryRyumin/oceanai)** will allow researchers to solve other problems of analyzing human behavior, for example, recognizing his affective states.
+In addition to the main task - unimodal and multimodal personality traits assessment, the features implemented in **[OCEANAI](https://oceanai.readthedocs.io/en/latest/)** will allow researchers to solve other problems of analyzing human behavior, for example, recognizing his affective states.
 
 To install the library, you should refer to the **[Installation and Update](https://oceanai.readthedocs.io/en/latest/user_guide/installation.html#id2)**.
 
@@ -49,9 +49,9 @@ The library solves practical tasks:
 1. **[Ranking of potential candidates by professional responsibilities](https://oceanai.readthedocs.io/en/latest/user_guide/notebooks/Pipeline_practical_task_1.html)**.
 2. **[Predicting consumer preferences for industrial goods](https://oceanai.readthedocs.io/en/latest/user_guide/notebooks/Pipeline_practical_task_2.html)**.
 
-**[OCEANAI](https://github.com/DmitryRyumin/oceanai)** uses the latest open-source libraries for audio and video processing: **[librosa](https://librosa.org/)**, **[openSMILE](https://audeering.github.io/opensmile-python/)**, **[openCV](https://pypi.org/project/opencv-python/)**, **[mediapipe](https://google.github.io/mediapipe/getting_started/python)**.
+**[OCEANAI](https://oceanai.readthedocs.io/en/latest/)** uses the latest open-source libraries for audio and video processing: **[librosa](https://librosa.org/)**, **[openSMILE](https://audeering.github.io/opensmile-python/)**, **[openCV](https://pypi.org/project/opencv-python/)**, **[mediapipe](https://google.github.io/mediapipe/getting_started/python)**.
 
-**[OCEANAI](https://github.com/DmitryRyumin/oceanai)** is written in the **[python programming language](https://www.python.org/)**. Neural network models are implemented and trained using an open-source library code **[TensorFlow](https://www.tensorflow.org/)**.
+**[OCEANAI](https://oceanai.readthedocs.io/en/latest/)** is written in the **[python programming language](https://www.python.org/)**. Neural network models are implemented and trained using an open-source library code **[TensorFlow](https://www.tensorflow.org/)**.
 
 ---
 

@@ -1,4 +1,4 @@
-# [OCEANAI](https://github.com/DmitryRyumin/oceanai/blob/main/README_RU.md)
+# [OCEANAI](https://oceanai.readthedocs.io/ru/latest/)
 
 ![PyPI](https://img.shields.io/pypi/v/oceanai)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/oceanai)
@@ -18,11 +18,11 @@
 
 <h4 align="center"><span style="color:#EC256F;">Описание</span></h4>
 
-> **[OCEANAI](https://github.com/DmitryRyumin/oceanai)** - библиотека с открытым исходным кодом, состоящая из набора алгоритмов интеллектуального анализа поведения человека на основе его мультимодальных данных для автоматического оценивания уровня отдельных персональных качеств личности человека для выполнения профессиональных обязанностей. Библиотека оценивает 5 качеств: Открытость опыту (**O**penness), Добросовестность (**C**onscientiousness), Экстраверсия (**E**xtraversion), Доброжелательность (**A**greeableness), Нейротизм/невротизм (**N**euroticism).
+> **[OCEANAI](https://oceanai.readthedocs.io/ru/latest/)** - библиотека с открытым исходным кодом, состоящая из набора алгоритмов интеллектуального анализа поведения человека на основе его мультимодальных данных для автоматического оценивания уровня отдельных персональных качеств личности человека для выполнения профессиональных обязанностей. Библиотека оценивает 5 качеств: Открытость опыту (**O**penness), Добросовестность (**C**onscientiousness), Экстраверсия (**E**xtraversion), Доброжелательность (**A**greeableness), Нейротизм/невротизм (**N**euroticism).
 
 ---
 
-**[OCEANAI](https://github.com/DmitryRyumin/oceanai)** включает три основных алгоритма:
+**[OCEANAI](https://oceanai.readthedocs.io/ru/latest/)** включает три основных алгоритма:
 
 1. Алгоритм анализа аудиоинформации (ААИ).
 2. Алгоритм анализа видеоинформации (АВИ).
@@ -33,7 +33,7 @@
 Алгоритм МОИ является связующим звеном двух алгоритмов анализа информации (ААИ и АВИ). Данный алгоритм выполняет
 взвешенное нейросетевое объединение гипотез предсказаний полученных с помощью алгоритмов ААИ и АВИ.
 
-Помимо основной задачи - мультимодального оценивания персональных качеств личности человека, реализованные в **[OCEANAI](https://github.com/DmitryRyumin/oceanai)** признаки позволят исследователям решать другие задачи анализа поведения человека, например распознавание его аффективных состояний.
+Помимо основной задачи - мультимодального оценивания персональных качеств личности человека, реализованные в **[OCEANAI](https://oceanai.readthedocs.io/ru/latest/)** признаки позволят исследователям решать другие задачи анализа поведения человека, например распознавание его аффективных состояний.
 
 Для установки библиотеки необходимо обратиться к **[Установка и обновление](https://oceanai.readthedocs.io/ru/latest/user_guide/installation.html)**.
 
@@ -48,7 +48,7 @@
 1. **[Ранжирование потенциальных кандидатов по профессиональным обязанностям](https://oceanai.readthedocs.io/ru/latest/user_guide/notebooks/Pipeline_practical_task_1.html)**.
 2. **[Прогнозирование потребительских предпочтений на промышленные товары](https://oceanai.readthedocs.io/ru/latest/user_guide/notebooks/Pipeline_practical_task_2.html)**.
 
-**[OCEANAI](https://github.com/DmitryRyumin/oceanai)** использует самые актуальные библиотеки с открытым исходным кодом для обработки аудио и видеоинформации: **[librosa](https://librosa.org/)**,
+**[OCEANAI](https://oceanai.readthedocs.io/ru/latest/)** использует самые актуальные библиотеки с открытым исходным кодом для обработки аудио и видеоинформации: **[librosa](https://librosa.org/)**,
 **[openSMILE](https://audeering.github.io/opensmile-python/)**,
 **[openCV](https://pypi.org/project/opencv-python/)**,
 **[mediapipe](https://google.github.io/mediapipe/getting_started/python)**.
