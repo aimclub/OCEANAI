@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2022-12-11 11:33+0300\n"
+"POT-Creation-Date: 2023-01-25 11:42+0300\n"
 "PO-Revision-Date: 2022-12-11 11:33+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.11.0\n"
 
-#: ../../source/index.rst:58 fc10cfb3c8c74cf3a333faf2283dffd3
+#: ../../source/index.rst:69 847e319e4d144bffadaa7b69a0b0f291
 msgid "Содержание:"
 msgstr "Contents:"
 
-#: ../../source/index.rst:-1 467fd7011d9c4a2daf404ce671eb9868
+#: ../../source/index.rst:-1 890ddf946ab74e8c9dee9bf7ccfec5d3
 msgid "Персональные качества личности человека"
 msgstr "Personality Traits"
 
-#: ../../source/index.rst:-1 2b60bdbee7784acdab689c4fa10055de
+#: ../../source/index.rst:-1 83aaf8f6128e4a309dbfa6a1560fe9fb
 msgid ""
 "oceanai, machine learning, statistics, computer vision, artificial "
 "intelligence, preprocessing"
@@ -33,13 +33,13 @@ msgstr ""
 "oceanai, machine learning, statistics, computer vision, artificial "
 "intelligence, preprocessing"
 
-#: ../../source/index.rst:6 83d0e22a45204f3c8ef1a1e2887ad561
+#: ../../source/index.rst:6 e84ecad50d56459eb7dfa94c55ab2891
 msgid ""
 "Документация библиотеки алгоритмов сильного искусственного интеллекта - "
 "``OCEANAI``"
 msgstr "Documentation of the Strong AI Algorithm Library - ``OCEANAI``"
 
-#: ../../source/index.rst:8 38c41cddb0254a81b966d3d62ac27556
+#: ../../source/index.rst:8 3fd91f41f1e44bfbb1a29997a9a3ef0c
 msgid ""
 "`OCEANAI <https://github.com/DmitryRyumin/oceanai>`_ - библиотека с "
 "открытым исходным кодом, состоящая из набора алгоритмов интеллектуального"
@@ -51,45 +51,46 @@ msgid ""
 " traversion), Доброжелательность (**A**\\ g\\ reeableness), "
 "Нейротизм/невротизм (**N**\\ e\\ uroticism)."
 msgstr ""
-"`OCEANAI <https://github.com/DmitryRyumin/oceanai>`_ is an open-source library consisting of a set of algorithms for "
-"intellectual analysis of human behavior based on multimodal data for automatic personal traits assessment to "
-"performance of professional duties. The library evaluates 5 traits: "
-"**O**\\ p\\ enness to experience, **C**\\ o\\ nscientiousness, **E**\\ x\\ traversion, **A**\\ g\\ reeableness, "
-"**N**\\ e\\ uroticism."
+"`OCEANAI <https://github.com/DmitryRyumin/oceanai>`_ is an open-source "
+"library consisting of a set of algorithms for intellectual analysis of "
+"human behavior based on multimodal data for automatic personal traits "
+"assessment to performance of professional duties. The library evaluates 5"
+" traits: **O**\\ p\\ enness to experience, **C**\\ o\\ nscientiousness, "
+"**E**\\ x\\ traversion, **A**\\ g\\ reeableness, **N**\\ e\\ uroticism."
 
-#: ../../source/index.rst:-1 e49d9afb9e5541f8bcca01d712b0f586
+#: ../../source/index.rst:-1 d19c3d84536e4267aa7f129266c79c7d
 msgid "PyPI (image)"
 msgstr "PyPI (image)"
 
-#: ../../source/index.rst:-1 b4041c55aa534bf78392b1c250f6b21b
+#: ../../source/index.rst:-1 ccca4237c2aa42e493b28c577dba619e
 msgid "PyPI - Python Version (image)"
 msgstr "PyPI - Python Version (image)"
 
-#: ../../source/index.rst:-1 3b9cb58295f249b895ced06d8c8ce9f4
+#: ../../source/index.rst:-1 84b65657430a451895259fe56a995368
 msgid "PyPI - Implementation (image)"
 msgstr "PyPI - Implementation (image)"
 
-#: ../../source/index.rst:-1 726225dddbd14edba090ed5b5cb43a6d
+#: ../../source/index.rst:-1 0f387309670c47a2af5bdee3b26f6020
 msgid "GitHub repo size (image)"
 msgstr "GitHub repo size (image)"
 
-#: ../../source/index.rst:-1 3adc59b4a1bf4e299ea87234eb28164d
+#: ../../source/index.rst:-1 91710d70cfd94f9a9319dc40515858f8
 msgid "PyPI - Status (image)"
 msgstr "PyPI - Status (image)"
 
-#: ../../source/index.rst:-1 a0954360ff834dc5ade539c18d8656e7
+#: ../../source/index.rst:-1 8593bd84cc7645c99761cbf4ac29db38
 msgid "PyPI - License (image)"
 msgstr "PyPI - License (image)"
 
-#: ../../source/index.rst:-1 6ba4f5f9600e467a8b5820749ed2cc2a
+#: ../../source/index.rst:-1 01f8fda6024248f0962849fbb4586695
 msgid "GitHub top language (image)"
 msgstr "GitHub top language (image)"
 
-#: ../../source/index.rst:-1 df7921319a534c28a949ecb41737e12d
+#: ../../source/index.rst:-1 ed59cda906194dd9865d784f2cb05683
 msgid "Documentation Status (image)"
 msgstr "Documentation Status (image)"
 
-#: ../../source/index.rst:30 eb042852c70d46b09f1b22ff4757ebf9
+#: ../../source/index.rst:30 5c0e3b5d24bc4624b6f706c70c0a62e8
 msgid ""
 "`OCEANAI <https://github.com/DmitryRyumin/oceanai>`_ включает три "
 "основных алгоритма:"
@@ -97,19 +98,19 @@ msgstr ""
 "`OCEANAI <https://github.com/DmitryRyumin/oceanai>`_ includes three main "
 "algorithms:"
 
-#: ../../source/index.rst:32 64e3db280428427a92b7db9c5a2f139a
+#: ../../source/index.rst:32 ef0faa4721e04fb5803a318e2aeb68a1
 msgid "Алгоритм анализа аудиоинформации (ААИ)."
 msgstr "Audio Information Analysis Algorithm (AIA)."
 
-#: ../../source/index.rst:33 c4ef5ae0285142dbbe9a37318d2ff385
+#: ../../source/index.rst:33 7c55856d97954b8299e943dfa1612bb9
 msgid "Алгоритм анализа видеоинформации (АВИ)."
 msgstr "Video Information Analysis Algorithm (VIA)."
 
-#: ../../source/index.rst:34 7c1fbc0c7c3a4934bf59ff8c7d6ca52a
+#: ../../source/index.rst:34 0d096a4dd0f34f5eaa578d668199c760
 msgid "Алгоритм мультимодального объединения информации (МОИ)."
 msgstr "Multimodal Fusion Algorithm (MF)."
 
-#: ../../source/index.rst:36 866cc9f060a44b34842c984b34d83587
+#: ../../source/index.rst:36 fd5899c2643644448c7babc1f393d3ae
 msgid ""
 "Алгоритмы ААИ и АВИ реализуют функции сильного искусственного интеллекта "
 "(ИИ) в части комплексирования акустических и визуальных признаков, "
@@ -119,12 +120,15 @@ msgid ""
 "видеоинформации, вычисление визуальных и акустических признаков и выдача "
 "гипотез предсказаний по ним."
 msgstr ""
-"The AIA and VIA algorithms implement the functions of strong artificial intelligence (AI) in terms of complexing acoustic "
-"and visual features built on different principles (expert and neural network), i.e. these algorithms implement the "
-"approaches of composite (hybrid) AI. The necessary preprocessing is carried out in the algorithms audio and video "
-"information, the calculation of visual and acoustic features and the issuance of prediction personality traits based on them."
+"The AIA and VIA algorithms implement the functions of strong artificial "
+"intelligence (AI) in terms of complexing acoustic and visual features "
+"built on different principles (expert and neural network), i.e. these "
+"algorithms implement the approaches of composite (hybrid) AI. The "
+"necessary preprocessing is carried out in the algorithms audio and video "
+"information, the calculation of visual and acoustic features and the "
+"issuance of prediction personality traits based on them."
 
-#: ../../source/index.rst:38 8bf767d5ef8749f0b679ea120fe35497
+#: ../../source/index.rst:38 055dac7612fc467898e94ce5f36012b0
 msgid ""
 "Алгоритм МОИ является связующим звеном двух алгоритмов анализа информации"
 " (ААИ и АВИ). Данный алгоритм выполняет взвешенное нейросетевое "
@@ -133,10 +137,10 @@ msgid ""
 msgstr ""
 "The MF algorithm is a link between two information analysis algorithms "
 "(AAA and AAV). This algorithm performs a weighted neural network "
-"combination of prediction personality traits obtained using the AIA and VIA "
-"algorithms."
+"combination of prediction personality traits obtained using the AIA and "
+"VIA algorithms."
 
-#: ../../source/index.rst:41 52e456fded4342b28181afafa1f71999
+#: ../../source/index.rst:41 85b95ea393644a2ea31fd581910fce7a
 msgid ""
 "Помимо основной задачи - мультимодального оценивания персональных качеств"
 " личности человека, реализованные в `OCEANAI "
@@ -144,13 +148,13 @@ msgid ""
 "исследователям решать другие задачи анализа поведения человека, например "
 "распознавание его аффективных состояний."
 msgstr ""
-"In addition to the main task - multimodal personality traits assessment, "
-" the features implemented in `OCEANAI"
-" <https://github.com/DmitryRyumin/oceanai>`_ features will allow "
+"In addition to the main task - multimodal personality traits assessment,"
+"  the features implemented in `OCEANAI "
+"<https://github.com/DmitryRyumin/oceanai>`_ features will allow "
 "researchers to solve other problems of analyzing human behavior, for "
 "example, recognizing his affective states."
 
-#: ../../source/index.rst:45 818de67a12654ceebd9573b815046e09
+#: ../../source/index.rst:45 05d6d393fb1a460dbeea3d8efbc53754
 msgid ""
 "`OCEANAI <https://github.com/DmitryRyumin/oceanai>`_ использует самые "
 "актуальные библиотеки с открытым исходным кодом для обработки аудио и "
@@ -159,14 +163,14 @@ msgid ""
 "<https://pypi.org/project/opencv-python/>`_, `mediapipe "
 "<https://google.github.io/mediapipe/getting_started/python>`_."
 msgstr ""
-"`OCEANAI <https://github.com/DmitryRyumin/oceanai>`_ uses the latest open"
-"-source libraries for audio and video processing: `librosa "
+"`OCEANAI <https://github.com/DmitryRyumin/oceanai>`_ uses the latest "
+"open-source libraries for audio and video processing: `librosa "
 "<https://librosa.org/>`_, `openSMILE <https://audeering.github.io"
 "/opensmile-python/>`_, `openCV <https://pypi.org/project/opencv-"
 "python/>`_, `mediapipe "
 "<https://google.github.io/mediapipe/getting_started/python>`_."
 
-#: ../../source/index.rst:51 b93ed8aca4d448eeab734074486eb29c
+#: ../../source/index.rst:51 f9fd565bd5d144079a15cb20ef16917a
 msgid ""
 "`OCEANAI <https://github.com/DmitryRyumin/oceanai>`_ написана на языке "
 "программирования `python <https://www.python.org/>`_. Нейросетевые модели"
@@ -178,18 +182,32 @@ msgstr ""
 "models are implemented and trained using an open-source library code "
 "`TensorFlow <https://www.tensorflow.org/>`_."
 
-#: ../../source/index.rst:74 0824dd58078b45b6a33d80ab7bd4ee60
+#: ../../source/index.rst:58 aa6941fe9e2443ef9693979de0b8390c
+msgid ""
+"Разработка поддерживается исследовательским центром `«Сильный "
+"искусственный интеллект в промышленности» <https://sai.itmo.ru/>`_ "
+"`Университета ИТМО <https://itmo.ru>`_."
+msgstr ""
+"Supported by The study is supported by the `Research Center Strong Artificial Intelligence in Industry "
+"<https://sai.itmo.ru/>`_ of `ITMO University <https://itmo.ru>`_."
+
+#: ../../source/index.rst 0168bf4929054423bc1b78245a01049e
+msgid "Сильный искусственный интеллект в промышленности (Университет ИТМО)"
+msgstr "Strong Artificial Intelligence in industry (ITMO University)"
+
+#: ../../source/index.rst:86 0262666a092f47f2aa51d607300cc1eb
 msgid "Индексация"
 msgstr "Indexing"
 
-#: ../../source/index.rst:76 4d003d2d8f27498e9a9283304a13697f
+#: ../../source/index.rst:88 04ed03c096ce47508de65f043566b001
 msgid ":ref:`genindex`"
 msgstr ":ref:`genindex`"
 
-#: ../../source/index.rst:77 91dfa586e7c14d75ba149b054148655b
+#: ../../source/index.rst:89 79468c02e90f4d75a2d4455455e25ef2
 msgid ":ref:`modindex`"
 msgstr ":ref:`modindex`"
 
-#: ../../source/index.rst:78 24b43997a00e44d19048d6dcf090a336
+#: ../../source/index.rst:90 4cb7aab9a3874e9d98586cf9a51a95a5
 msgid ":ref:`search`"
 msgstr ":ref:`search`"
+

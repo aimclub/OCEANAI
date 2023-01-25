@@ -55,6 +55,17 @@
 
 -----
 
+Разработка поддерживается исследовательским центром
+`«Сильный искусственный интеллект в промышленности» <https://sai.itmo.ru/>`_ `Университета ИТМО <https://itmo.ru>`_.
+
+.. figure:: _static/AIM-Strong_Sign_Norm-01_Colors.svg
+   :scale: 100 %
+   :align: center
+   :alt: Сильный искусственный интеллект в промышленности (Университет ИТМО)
+   :target: https://sai.itmo.ru
+
+-----
+
 .. toctree::
    :maxdepth: 1
    :caption: Содержание:

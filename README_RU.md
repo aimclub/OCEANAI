@@ -11,8 +11,8 @@
 
 ---
 
-| [Документация на английском](https://github.com/DmitryRyumin/oceanai) |
-|-----------------------------------------------------------------------|
+| [Документация на английском](https://oceanai.readthedocs.io/en/latest/index.html) |
+|-----------------------------------------------------------------------------------|
 
 ---
 
@@ -57,3 +57,21 @@
 **[python](https://www.python.org/)**. Нейросетевые модели
 реализованы и обучены с использованием библиотеки с открытым исходным кодом
 **[TensorFlow](https://www.tensorflow.org/)**.
+
+---
+
+| [Команда разработчиков](https://oceanai.readthedocs.io/ru/latest/about.html) |
+|------------------------------------------------------------------------------|
+
+---
+
+## Поддержка
+Разработка поддерживается исследовательским центром [**«Сильный искусственный интеллект в промышленности»**](<https://sai.itmo.ru/>) [**Университета ИТМО**](https://itmo.ru).
+
+<h4 align="center">
+    <a href="https://sai.itmo.ru/" target="_blank">
+        <img src="https://raw.githubusercontent.com/DmitryRyumin/OCEANAI/main/docs/source/_static/AIM-Strong_Sign_Norm-01_Colors.svg" alt="AI Center" width="60%"/>
+    </a>
+</h4>
+
+

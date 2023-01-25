@@ -11,8 +11,8 @@
 
 ---
 
-| [Documentation in Russian](https://github.com/DmitryRyumin/oceanai/blob/main/README_RU.md) |
-|--------------------------------------------------------------------------------------------|
+| [Documentation in Russian](https://oceanai.readthedocs.io/ru/latest/index.html) |
+|---------------------------------------------------------------------------------|
 
 ---
 
@@ -52,3 +52,19 @@ The library solves practical tasks:
 **[OCEANAI](https://github.com/DmitryRyumin/oceanai)** uses the latest open-source libraries for audio and video processing: **[librosa](https://librosa.org/)**, **[openSMILE](https://audeering.github.io/opensmile-python/)**, **[openCV](https://pypi.org/project/opencv-python/)**, **[mediapipe](https://google.github.io/mediapipe/getting_started/python)**.
 
 **[OCEANAI](https://github.com/DmitryRyumin/oceanai)** is written in the **[python programming language](https://www.python.org/)**. Neural network models are implemented and trained using an open-source library code **[TensorFlow](https://www.tensorflow.org/)**.
+
+---
+
+| [Development team](https://oceanai.readthedocs.io/en/latest/about.html) |
+|-------------------------------------------------------------------------|
+
+---
+
+## Supported by
+The study is supported by the [**Research Center Strong Artificial Intelligence in Industry**](https://itmo.ru) of [**ITMO University**](https://itmo.ru).
+
+<h4 align="center">
+    <a href="https://sai.itmo.ru/" target="_blank">
+        <img src="https://raw.githubusercontent.com/DmitryRyumin/OCEANAI/main/docs/source/_static/AIM-Strong_Sign_Norm-01_Colors.svg" alt="AI Center" width="60%"/>
+    </a>
+</h4>
