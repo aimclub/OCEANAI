@@ -1,5 +1,8 @@
 # [OCEANAI](https://oceanai.readthedocs.io/en/latest/)
 
+[![SAI](https://github.com/ITMO-NSS-team/open-source-ops/blob/master/badges/SAI_badge_flat.svg)](https://sai.itmo.ru/)
+[![ITMO](https://github.com/ITMO-NSS-team/open-source-ops/blob/master/badges/ITMO_badge_flat.svg)](https://en.itmo.ru/en/)
+
 ![PyPI](https://img.shields.io/pypi/v/oceanai)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/oceanai)
 ![PyPI - Implementation](https://img.shields.io/pypi/implementation/oceanai)
@@ -61,10 +64,5 @@ The library solves practical tasks:
 ---
 
 ## Supported by
-The study is supported by the [**Research Center Strong Artificial Intelligence in Industry**](https://itmo.ru) of [**ITMO University**](https://itmo.ru).
-
-<h4 align="center">
-    <a href="https://sai.itmo.ru/" target="_blank">
-        <img src="https://raw.githubusercontent.com/DmitryRyumin/OCEANAI/main/docs/source/_static/AIM-Strong_Sign_Norm-01_Colors.svg" alt="AI Center" width="60%"/>
-    </a>
-</h4>
+The study is supported by the [Research Center Strong Artificial Intelligence in Industry](https://sai.itmo.ru/) 
+of [ITMO University](https://en.itmo.ru/) as part of the plan of the center's program: Development and testing of an experimental prototype of a library of strong AI algorithms in terms of hybrid decision making based on the interaction of AI and decision maker based on models of professional behavior and cognitive processes of decision maker in poorly formalized tasks with high uncertainty.
