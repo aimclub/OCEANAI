@@ -1,5 +1,8 @@
 # [OCEANAI](https://oceanai.readthedocs.io/ru/latest/)
 
+[![SAI](https://github.com/ITMO-NSS-team/open-source-ops/blob/master/badges/SAI_badge_flat.svg)](https://sai.itmo.ru/)
+[![ITMO](https://github.com/ITMO-NSS-team/open-source-ops/blob/master/badges/ITMO_badge_flat_rus.svg)](https://en.itmo.ru/en/)
+
 ![PyPI](https://img.shields.io/pypi/v/oceanai)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/oceanai)
 ![PyPI - Implementation](https://img.shields.io/pypi/implementation/oceanai)
@@ -66,12 +69,4 @@
 ---
 
 ## Поддержка
-Разработка поддерживается исследовательским центром [**«Сильный искусственный интеллект в промышленности»**](<https://sai.itmo.ru/>) [**Университета ИТМО**](https://itmo.ru).
-
-<h4 align="center">
-    <a href="https://sai.itmo.ru/" target="_blank">
-        <img src="https://raw.githubusercontent.com/DmitryRyumin/OCEANAI/main/docs/source/_static/AIM-Strong_Sign_Norm-01_Colors.svg" alt="AI Center" width="60%"/>
-    </a>
-</h4>
-
-
+Исследование проводится при поддержке [Исследовательского центра сильного искусственного интеллекта в промышленности](https://sai.itmo.ru/) [Университета ИТМО](https://itmo.ru) в рамках мероприятия программы центра: Разработка и испытания экспериментального образца библиотеки алгоритмов сильного ИИ в части гибридного принятия решений на базе взаимодействия ИИ и ЛПР на основе моделей профессионального поведения и когнитивных процессов ЛПР в трудно формализуемых задачах с высокой неопределенностью.
