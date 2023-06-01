@@ -1,7 +1,7 @@
 # [OCEANAI](https://oceanai.readthedocs.io/ru/latest/)
 
-[![SAI](https://github.com/ITMO-NSS-team/open-source-ops/blob/master/badges/SAI_badge_flat.svg)](https://sai.itmo.ru/)
-[![ITMO](https://github.com/ITMO-NSS-team/open-source-ops/blob/master/badges/ITMO_badge_flat_rus.svg)](https://en.itmo.ru/en/)
+[![SAI](./docs/source/_static/badges/SAI_badge_flat.svg)](https://sai.itmo.ru/)
+[![ITMO](./docs/source/_static/badges/ITMO_badge_flat_rus.svg)](https://itmo.ru/ru/)
 
 ![PyPI](https://img.shields.io/pypi/v/oceanai)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/oceanai)
