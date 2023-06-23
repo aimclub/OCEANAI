@@ -184,7 +184,7 @@ msgstr ""
 
 #: ../../source/index.rst:59 14a5db7fabac49418035094f0ec0f26d
 msgid "Исследовательские данные"
-msgstr "Research Data"
+msgstr "Research data"
 
 #: ../../source/index.rst:61 d74260c4b1534a66b719ba26bcf82844
 msgid ""
@@ -197,7 +197,7 @@ msgstr ""
 msgid ""
 "Общедоступном и крупномаштабном корпусе `First Empressions V2 "
 "<https://chalearnlap.cvc.uab.cat/dataset/24/description/>`_."
-msgstr "The publicly available and large-scale ``First Empressions V2 corpus <https://chalearnlap.cvc.uab.cat/dataset/24/description/>`_."
+msgstr "The publicly available and large-scale `First Empressions V2 corpus <https://chalearnlap.cvc.uab.cat/dataset/24/description/>`_."
 
 #: ../../source/index.rst:64 4eda61fe02014b43a4064c2729974c4e
 msgid ""

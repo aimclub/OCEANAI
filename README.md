@@ -58,7 +58,7 @@ The library solves practical tasks:
 
 ---
 
-## Research Data
+## Research data
 
 The **[OCEANAI](https://oceanai.readthedocs.io/en/latest/)** library was tested on two corpora:
 
