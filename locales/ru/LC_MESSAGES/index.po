@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2023-06-01 13:00+0300\n"
+"POT-Creation-Date: 2023-06-23 16:38+0300\n"
 "PO-Revision-Date: 2022-12-11 11:33+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.11.0\n"
 
-#: ../../source/index.rst:77 b3480e3f58ba4364823f78a51c2ee58b
+#: ../../source/index.rst:86 2eacb438379e4918979d0de347b45a90
 msgid "Содержание:"
 msgstr ""
 
-#: ../../source/index.rst:-1 458f752e8a2143bf8451dfc1ff44b8c4
+#: ../../source/index.rst:-1 f4ed07db75444bc681eb9676b08042a7
 msgid "Персональные качества личности человека"
 msgstr ""
 
-#: ../../source/index.rst:-1 12593c70d8d9488badbec887938ae013
+#: ../../source/index.rst:-1 b4c5a2b0449b446ba1b3de7c2a7ed8fd
 msgid ""
 "oceanai, machine learning, statistics, computer vision, artificial "
 "intelligence, preprocessing"
@@ -146,11 +146,34 @@ msgid ""
 "кодом `TensorFlow <https://www.tensorflow.org/>`_."
 msgstr ""
 
-#: ../../source/index.rst:59 ab8ce25c4b404558b74294d63a78db15
+#: ../../source/index.rst:59 14a5db7fabac49418035094f0ec0f26d
+msgid "Исследовательские данные"
+msgstr ""
+
+#: ../../source/index.rst:61 d74260c4b1534a66b719ba26bcf82844
+msgid ""
+"Библиотека `OCEANAI <https://oceanai.readthedocs.io/ru/latest/>`_ была "
+"апробирована на двух корпусах:"
+msgstr ""
+
+#: ../../source/index.rst:63 abe9ab73ee634a748764e23d534e382a
+msgid ""
+"Общедоступном и крупномаштабном корпусе `First Empressions V2 "
+"<https://chalearnlap.cvc.uab.cat/dataset/24/description/>`_."
+msgstr ""
+
+#: ../../source/index.rst:64 4eda61fe02014b43a4064c2729974c4e
+msgid ""
+"На первом общедоступном рускоязычном мультимодальном корпусе для оценки "
+"персональных качеств - `Multimodal Personality Traits Assessment (MuPTA) "
+"Corpus <https://hci.nw.ru/ru/pages/mupta-corpus>`_."
+msgstr ""
+
+#: ../../source/index.rst:69 ab8ce25c4b404558b74294d63a78db15
 msgid "Свидетельство о государственной регистрации программы для ЭВМ"
 msgstr ""
 
-#: ../../source/index.rst:61 1bbc30a2b9294b3eb70d13e657587b3f
+#: ../../source/index.rst:71 1bbc30a2b9294b3eb70d13e657587b3f
 msgid ""
 "`Библиотека алгоритмов интеллектуального анализа поведения человека на "
 "основе его мультимодальных данных, обеспечивающих оценивание уровня "
@@ -159,7 +182,7 @@ msgid ""
 "doc-view/fips_servlet?DB=EVM&DocNumber=2023613724&TypeFile=html>`_"
 msgstr ""
 
-#: ../../source/index.rst:66 aa6941fe9e2443ef9693979de0b8390c
+#: ../../source/index.rst:75 aa6941fe9e2443ef9693979de0b8390c
 msgid ""
 "Разработка поддерживается исследовательским центром `«Сильный "
 "искусственный интеллект в промышленности» <https://sai.itmo.ru/>`_ "
@@ -170,19 +193,19 @@ msgstr ""
 msgid "Сильный искусственный интеллект в промышленности (Университет ИТМО)"
 msgstr ""
 
-#: ../../source/index.rst:94 0262666a092f47f2aa51d607300cc1eb
+#: ../../source/index.rst:103 0262666a092f47f2aa51d607300cc1eb
 msgid "Индексация"
 msgstr ""
 
-#: ../../source/index.rst:96 04ed03c096ce47508de65f043566b001
+#: ../../source/index.rst:105 04ed03c096ce47508de65f043566b001
 msgid ":ref:`genindex`"
 msgstr ""
 
-#: ../../source/index.rst:97 79468c02e90f4d75a2d4455455e25ef2
+#: ../../source/index.rst:106 79468c02e90f4d75a2d4455455e25ef2
 msgid ":ref:`modindex`"
 msgstr ""
 
-#: ../../source/index.rst:98 4cb7aab9a3874e9d98586cf9a51a95a5
+#: ../../source/index.rst:107 4cb7aab9a3874e9d98586cf9a51a95a5
 msgid ":ref:`search`"
 msgstr ""
 

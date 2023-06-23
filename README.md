@@ -58,6 +58,15 @@ The library solves practical tasks:
 
 ---
 
+## Research Data
+
+The **[OCEANAI](https://oceanai.readthedocs.io/en/latest/)** library was tested on two corpora:
+
+1) The publicly available and large-scale **[First Empressions V2 corpus](https://chalearnlap.cvc.uab.cat/dataset/24/description/)**.
+2) On the first publicly available Russian-language **[Multimodal Personality Traits Assessment (MuPTA) corpus](https://hci.nw.ru/en/pages/mupta-corpus)**.
+
+---
+
 | [Development team](https://oceanai.readthedocs.io/en/latest/about.html) |
 |-------------------------------------------------------------------------|
 
