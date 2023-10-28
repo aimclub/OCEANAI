@@ -8,39 +8,43 @@
 # ######################################################################################################################
 # Импорт необходимых инструментов
 # ######################################################################################################################
-# Подавление Warning
+
 import warnings
-for warn in [UserWarning, FutureWarning]: warnings.filterwarnings('ignore', category = warn)
 
-from dataclasses import dataclass # Класс данных
+# Подавление Warning
+for warn in [UserWarning, FutureWarning]:
+    warnings.filterwarnings("ignore", category=warn)
 
-import os # Взаимодействие с файловой системой
-import re # Регулярные выражения
+from dataclasses import dataclass  # Класс данных
+
+import os  # Взаимодействие с файловой системой
+import re  # Регулярные выражения
 
 from typing import List
 
 # Персональные
-from oceanai.modules.core.messages import Messages # Сообщения
+from oceanai.modules.core.messages import Messages  # Сообщения
 
 # ######################################################################################################################
 # Константы
 # ######################################################################################################################
 
-COLOR_INFO: str = '#1776D2' # Цвет текста содержащего информацию (шестнадцатеричный код)
-COLOR_SIMPLE: str = '#666'  # Цвет обычного текста (шестнадцатеричный код)
-COLOR_ERR: str = '#FF0000'  # Цвет текста содержащего ошибку (шестнадцатеричный код)
-COLOR_TRUE: str = '#008001' # Цвет текста содержащего положительную информацию (шестнадцатеричный код)
-BOLD_TEXT: bool = True      # Жирное начертание текста
-CHUNK_SIZE: int = 1000000   # Размер загрузки файла из сети за 1 шаг
-EXT: List[str] = []         # Расширения искомых файлов
-IGNORE_DIRS: List[str] = [] # Директории не входящие в выборку
+COLOR_INFO: str = "#1776D2"  # Цвет текста содержащего информацию (шестнадцатеричный код)
+COLOR_SIMPLE: str = "#666"  # Цвет обычного текста (шестнадцатеричный код)
+COLOR_ERR: str = "#FF0000"  # Цвет текста содержащего ошибку (шестнадцатеричный код)
+COLOR_TRUE: str = "#008001"  # Цвет текста содержащего положительную информацию (шестнадцатеричный код)
+BOLD_TEXT: bool = True  # Жирное начертание текста
+CHUNK_SIZE: int = 1000000  # Размер загрузки файла из сети за 1 шаг
+EXT: List[str] = []  # Расширения искомых файлов
+IGNORE_DIRS: List[str] = []  # Директории не входящие в выборку
 # Названия ключей для DataFrame набора данных
-KEYS_DATASET: List[str] = ['Path', 'Openness', 'Conscientiousness', 'Extraversion', 'Agreeableness', 'Neuroticism']
-NUM_TO_DF_DISPLAY: int = 30 # Количество строк для отображения в таблицах
-PATH_TO_DATASET: str = '' # Директория набора данных
-PATH_TO_SAVE: str = './models' # Директория для сохранения данных
-PATH_TO_LOGS: str = './logs' # Директория для сохранения LOG файлов
-TEXT_RUNTIME: str = '' # Текст времени выполнения
+KEYS_DATASET: List[str] = ["Path", "Openness", "Conscientiousness", "Extraversion", "Agreeableness", "Neuroticism"]
+NUM_TO_DF_DISPLAY: int = 30  # Количество строк для отображения в таблицах
+PATH_TO_DATASET: str = ""  # Директория набора данных
+PATH_TO_SAVE: str = "./models"  # Директория для сохранения данных
+PATH_TO_LOGS: str = "./logs"  # Директория для сохранения LOG файлов
+TEXT_RUNTIME: str = ""  # Текст времени выполнения
+
 
 # ######################################################################################################################
 # Настройки
@@ -160,7 +164,7 @@ class Settings(Messages):
     color_info: str = COLOR_INFO
     """
     str: Цвет текста содержащего информацию (шестнадцатеричный код)
-    
+
     .. dropdown:: Примеры
 
         :bdg-success:`Верно` :bdg-light:`-- 1 --`
@@ -252,7 +256,7 @@ class Settings(Messages):
     color_err: str = COLOR_ERR
     """
     str: Цвет текста содержащего ошибку (шестнадцатеричный код)
-    
+
     .. dropdown:: Примеры
 
         :bdg-success:`Верно` :bdg-light:`-- 1 --`
@@ -436,7 +440,7 @@ class Settings(Messages):
     bold_text: bool = BOLD_TEXT
     """
     bool: Жирное начертание текста
-    
+
     .. dropdown:: Примеры
 
         :bdg-success:`Верно` :bdg-light:`-- 1 --`
@@ -528,7 +532,7 @@ class Settings(Messages):
     text_runtime: str = TEXT_RUNTIME
     """
     str: Текст времени выполнения
-    
+
     .. dropdown:: Примеры
 
         :bdg-success:`Верно` :bdg-light:`-- 1 --`
@@ -620,7 +624,7 @@ class Settings(Messages):
     num_to_df_display: int = NUM_TO_DF_DISPLAY
     """
     int: Количество строк для отображения в таблицах
-    
+
     .. dropdown:: Примеры
 
         :bdg-success:`Верно` :bdg-light:`-- 1 --`
@@ -710,43 +714,43 @@ class Settings(Messages):
     """
 
     def __post_init__(self):
-        super().__post_init__() # Выполнение конструктора из суперкласса
+        super().__post_init__()  # Выполнение конструктора из суперкласса
 
-        self.__re_search_color: str = r'^#(?:[0-9a-fA-F]{3}){1,2}$' # Регулярное выражение для корректности ввода цвета
+        self.__re_search_color: str = r"^#(?:[0-9a-fA-F]{3}){1,2}$"  # Регулярное выражение для корректности ввода цвета
 
         # Цвет текстов
-        self.__color_simple_true: int = 0 # Счетчик изменения текста
-        self.color_simple_: str = self.color_simple # Обычный текст
+        self.__color_simple_true: int = 0  # Счетчик изменения текста
+        self.color_simple_: str = self.color_simple  # Обычный текст
 
         self.__color_info_true: int = 0  # Счетчик изменения текста
-        self.color_info_: str = self.color_info # Цвет текста содержащего информацию
+        self.color_info_: str = self.color_info  # Цвет текста содержащего информацию
 
         self.__color_true_true: int = 0  # Счетчик изменения текста
         self.color_true_: str = self.color_true  # Цвет текста содержащего положительную информацию
 
-        self.__color_err_true: int = 0 # Счетчик изменения текста
-        self.color_err_: str = self.color_err # Цвет текста содержащего ошибку
+        self.__color_err_true: int = 0  # Счетчик изменения текста
+        self.color_err_: str = self.color_err  # Цвет текста содержащего ошибку
 
-        self.__bold_text_true: int = 0 # Счетчик изменения начертания текста
-        self.bold_text_: bool = self.bold_text # Жирное начертание текста
+        self.__bold_text_true: int = 0  # Счетчик изменения начертания текста
+        self.bold_text_: bool = self.bold_text  # Жирное начертание текста
 
-        self.__text_runtime_true: int = 0 # Счетчик изменения текста
-        self.text_runtime_: str = self.text_runtime # Текст времени выполнения
+        self.__text_runtime_true: int = 0  # Счетчик изменения текста
+        self.text_runtime_: str = self.text_runtime  # Текст времени выполнения
 
-        self.__num_to_df_display_true: int = 0 # Счетчик изменения количества строк для отображения в таблицах
-        self.num_to_df_display_: int = self.num_to_df_display # Количество строк для отображения в таблицах
+        self.__num_to_df_display_true: int = 0  # Счетчик изменения количества строк для отображения в таблицах
+        self.num_to_df_display_: int = self.num_to_df_display  # Количество строк для отображения в таблицах
 
-        self.chunk_size_: int = CHUNK_SIZE # Размер загрузки файла из сети за 1 шаг
+        self.chunk_size_: int = CHUNK_SIZE  # Размер загрузки файла из сети за 1 шаг
 
-        self.path_to_save_: str = PATH_TO_SAVE # Директория для сохранения данных
-        self.path_to_dataset_: str = PATH_TO_DATASET # Директория набора данных
-        self.path_to_logs_: str = PATH_TO_LOGS # Директория для сохранения LOG файлов
+        self.path_to_save_: str = PATH_TO_SAVE  # Директория для сохранения данных
+        self.path_to_dataset_: str = PATH_TO_DATASET  # Директория набора данных
+        self.path_to_logs_: str = PATH_TO_LOGS  # Директория для сохранения LOG файлов
 
-        self.ext_: List[str] = EXT # Расширения искомых файлов
+        self.ext_: List[str] = EXT  # Расширения искомых файлов
 
-        self.ignore_dirs_: List[str] = IGNORE_DIRS # Директории не входящие в выборку
+        self.ignore_dirs_: List[str] = IGNORE_DIRS  # Директории не входящие в выборку
 
-        self.keys_dataset_: List[str] = KEYS_DATASET # Названия ключей для DataFrame набора данных
+        self.keys_dataset_: List[str] = KEYS_DATASET  # Названия ключей для DataFrame набора данных
 
     # ------------------------------------------------------------------------------------------------------------------
     # Свойства
@@ -845,12 +849,14 @@ class Settings(Messages):
         try:
             # Проверка аргументов
             match = re.search(self.__re_search_color, color)
-            if not match: raise TypeError
+            if not match:
+                raise TypeError
         except TypeError:
-            if self.__color_simple_true == 0: self.color_simple = COLOR_SIMPLE
+            if self.__color_simple_true == 0:
+                self.color_simple = COLOR_SIMPLE
         else:
             self.color_simple = color
-            self.__color_simple_true += 1 # Увеличение счетчика изменения цвета текста
+            self.__color_simple_true += 1  # Увеличение счетчика изменения цвета текста
 
     @property
     def color_info_(self) -> str:
@@ -945,12 +951,14 @@ class Settings(Messages):
         try:
             # Проверка аргументов
             match = re.search(self.__re_search_color, color)
-            if not match: raise TypeError
+            if not match:
+                raise TypeError
         except TypeError:
-            if self.__color_info_true == 0: self.color_info = COLOR_INFO
+            if self.__color_info_true == 0:
+                self.color_info = COLOR_INFO
         else:
             self.color_info = color
-            self.__color_info_true += 1 # Увеличение счетчика изменения цвета текста
+            self.__color_info_true += 1  # Увеличение счетчика изменения цвета текста
 
     @property
     def color_true_(self) -> str:
@@ -1045,12 +1053,14 @@ class Settings(Messages):
         try:
             # Проверка аргументов
             match = re.search(self.__re_search_color, color)
-            if not match: raise TypeError
+            if not match:
+                raise TypeError
         except TypeError:
-            if self.__color_true_true == 0: self.color_true = COLOR_TRUE
+            if self.__color_true_true == 0:
+                self.color_true = COLOR_TRUE
         else:
             self.color_true = color
-            self.__color_true_true += 1 # Увеличение счетчика изменения цвета текста
+            self.__color_true_true += 1  # Увеличение счетчика изменения цвета текста
 
     @property
     def color_err_(self) -> str:
@@ -1145,12 +1155,14 @@ class Settings(Messages):
         try:
             # Проверка аргументов
             match = re.search(self.__re_search_color, color)
-            if not match: raise TypeError
+            if not match:
+                raise TypeError
         except TypeError:
-            if self.__color_err_true == 0: self.color_err = COLOR_ERR
+            if self.__color_err_true == 0:
+                self.color_err = COLOR_ERR
         else:
             self.color_err = color
-            self.__color_err_true += 1 # Увеличение счетчика изменения цвета текста
+            self.__color_err_true += 1  # Увеличение счетчика изменения цвета текста
 
     @property
     def bold_text_(self) -> bool:
@@ -1244,12 +1256,14 @@ class Settings(Messages):
 
         try:
             # Проверка аргументов
-            if type(bold) is not bool: raise TypeError
+            if type(bold) is not bool:
+                raise TypeError
         except TypeError:
-            if self.__bold_text_true == 0: self.bold_text = BOLD_TEXT
+            if self.__bold_text_true == 0:
+                self.bold_text = BOLD_TEXT
         else:
             self.bold_text = bold
-            self.__bold_text_true += 1 # Увеличение счетчика изменения начертания текста
+            self.__bold_text_true += 1  # Увеличение счетчика изменения начертания текста
 
     @property
     def text_runtime_(self) -> str:
@@ -1343,12 +1357,14 @@ class Settings(Messages):
 
         try:
             # Проверка аргументов
-            if type(text) is not str or len(text) < 1: raise TypeError
+            if type(text) is not str or len(text) < 1:
+                raise TypeError
         except TypeError:
-            if self.__text_runtime_true == 0: self.text_runtime = self._text_runtime
+            if self.__text_runtime_true == 0:
+                self.text_runtime = self._text_runtime
         else:
             self.text_runtime = text
-            self.__text_runtime_true += 1 # Увеличение счетчика изменения текста времени выполнения
+            self.__text_runtime_true += 1  # Увеличение счетчика изменения текста времени выполнения
 
     @property
     def num_to_df_display_(self) -> int:
@@ -1443,9 +1459,11 @@ class Settings(Messages):
 
         try:
             # Проверка аргументов
-            if type(num) is not int or num < 1 or num > 50: raise TypeError
+            if type(num) is not int or num < 1 or num > 50:
+                raise TypeError
         except TypeError:
-            if self.__num_to_df_display_true == 0: self.num_to_df_display = NUM_TO_DF_DISPLAY
+            if self.__num_to_df_display_true == 0:
+                self.num_to_df_display = NUM_TO_DF_DISPLAY
         else:
             self.num_to_df_display = num
             # Увеличение счетчика изменения количества строк для отображения в таблицах
@@ -1559,7 +1577,8 @@ class Settings(Messages):
     def path_to_save_(self, path: str) -> None:
         """Установка директории для сохранения данных"""
 
-        if type(path) is str: self._path_to_save = os.path.normpath(path)
+        if type(path) is str:
+            self._path_to_save = os.path.normpath(path)
 
     @property
     def path_to_logs_(self) -> str:
@@ -1669,7 +1688,8 @@ class Settings(Messages):
     def path_to_logs_(self, path: str) -> None:
         """Установка директории для сохранения LOG файлов"""
 
-        if type(path) is str: self._path_to_logs = os.path.normpath(path)
+        if type(path) is str:
+            self._path_to_logs = os.path.normpath(path)
 
     @property
     def chunk_size_(self) -> int:
@@ -1779,7 +1799,8 @@ class Settings(Messages):
     def chunk_size_(self, size: int) -> None:
         """Установка директории для сохранения данных"""
 
-        if type(size) is int and size > 0: self._chunk_size = size
+        if type(size) is int and size > 0:
+            self._chunk_size = size
 
     @property
     def path_to_dataset_(self) -> str:
@@ -1889,7 +1910,8 @@ class Settings(Messages):
     def path_to_dataset_(self, path: str) -> None:
         """Установка директории набора данных"""
 
-        if type(path) is str: self._path_to_dataset = os.path.normpath(path)
+        if type(path) is str:
+            self._path_to_dataset = os.path.normpath(path)
 
     @property
     def keys_dataset_(self):
@@ -2029,15 +2051,19 @@ class Settings(Messages):
         """Установка названий ключей набора данных"""
 
         if type(keys) is list and len(keys) == len(KEYS_DATASET):
-            try: self._keys_dataset = [x.capitalize() for x in keys]
-            except Exception: pass
+            try:
+                self._keys_dataset = [x.capitalize() for x in keys]
+            except Exception:
+                pass
 
         if type(keys) is list and len(keys) == len(KEYS_DATASET) - 1:
             try:
                 for x in keys:
-                    if type(x) is not str or not x: raise TypeError
+                    if type(x) is not str or not x:
+                        raise TypeError
                 self._keys_dataset[1:] = [x.capitalize() for x in keys]
-            except Exception: pass
+            except Exception:
+                pass
 
     @property
     def ignore_dirs_(self) -> List[str]:
@@ -2148,8 +2174,10 @@ class Settings(Messages):
         """Установка списка с директориями не входящими в выборку"""
 
         if type(l) is list:
-            try: self._ignore_dirs = [x.lower() for x in l]
-            except Exception: pass
+            try:
+                self._ignore_dirs = [x.lower() for x in l]
+            except Exception:
+                pass
 
     @property
     def ext_(self) -> List[str]:
@@ -2260,5 +2288,7 @@ class Settings(Messages):
         """Установка расширений искомых файлов"""
 
         if type(ext) is list:
-            try: self._ext = [x.lower() for x in ext]
-            except Exception: pass
+            try:
+                self._ext = [x.lower() for x in ext]
+            except Exception:
+                pass

@@ -19,15 +19,18 @@
 #     5. locate msgfmt.py
 #     6. /usr/local/Cellar/python@3.9/3.9.7/Frameworks/Python.framework/Versions/3.9/share/doc/python3.9/examples/Tools/
 #        i18n/msgfmt.py oceanai/modules/locales/en/LC_MESSAGES/base.po oceanai/modules/locales/en/LC_MESSAGES/base
-# Подавление Warning
+
 import warnings
-for warn in [UserWarning, FutureWarning]: warnings.filterwarnings('ignore', category = warn)
 
-from dataclasses import dataclass # Класс данных
+# Подавление Warning
+for warn in [UserWarning, FutureWarning]:
+    warnings.filterwarnings("ignore", category=warn)
 
-import os      # Взаимодействие с файловой системой
-import gettext # Формирование языковых пакетов
-import inspect # Инспектор
+from dataclasses import dataclass  # Класс данных
+
+import os  # Взаимодействие с файловой системой
+import gettext  # Формирование языковых пакетов
+import inspect  # Инспектор
 
 # Типы данных
 from typing import List, Dict, Optional
@@ -37,7 +40,8 @@ from types import MethodType
 # Константы
 # ######################################################################################################################
 
-LANG: str = 'ru' # Язык
+LANG: str = "ru"  # Язык
+
 
 # ######################################################################################################################
 # Интернационализация (I18N) и локализация (L10N)
@@ -60,7 +64,7 @@ class Language:
 
         * ``"ru"`` - Русский язык (``по умолчанию``)
         * ``"en"`` - Английский язык
-        
+
     .. dropdown:: Примеры
 
         :bdg-success:`Верно` :bdg-light:`-- 1 --`
@@ -151,15 +155,14 @@ class Language:
 
     def __post_init__(self):
         # Директория с поддерживаемыми языками
-        self.__path_to_locales: str = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'locales'))
-        self.__locales: List[str] = self.__get_languages() # Поддерживаемые языки
+        self.__path_to_locales: str = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "locales"))
+        self.__locales: List[str] = self.__get_languages()  # Поддерживаемые языки
 
-        self.__lang: str = self.lang # Язык
+        self.__lang: str = self.lang  # Язык
 
-        self.__i18n: Dict[str, MethodType] = self.__get_locales() # Получение языковых пакетов
+        self.__i18n: Dict[str, MethodType] = self.__get_locales()  # Получение языковых пакетов
 
-        self._: MethodType = self.__set_locale(self.lang_) # Установка языка
-
+        self._: MethodType = self.__set_locale(self.lang_)  # Установка языка
 
     # ------------------------------------------------------------------------------------------------------------------
     # Свойства
@@ -264,8 +267,10 @@ class Language:
             # Проверка аргументов
             if type(self.__lang) is not str or not self.__lang or (self.__lang in self.locales_) is False:
                 raise TypeError
-        except TypeError: return LANG
-        else: return self.__lang
+        except TypeError:
+            return LANG
+        else:
+            return self.__lang
 
     @property
     def path_to_locales_(self) -> str:
@@ -295,7 +300,7 @@ class Language:
                 /Users/dl/GitHub/OCEANAI/oceanai/modules/locales
         """
 
-        return os.path.normpath(self.__path_to_locales) # Нормализация пути
+        return os.path.normpath(self.__path_to_locales)  # Нормализация пути
 
     @property
     def locales_(self) -> List[str]:
@@ -373,7 +378,7 @@ class Language:
             private (приватный метод)
 
         Returns:
-             Dict[str, MethodType]: Словарь с языковыми пакетами
+            Dict[str, MethodType]: Словарь с языковыми пакетами
 
         .. dropdown:: Пример
             :class-body: sd-pr-5
@@ -399,20 +404,20 @@ class Language:
                 }
         """
 
-        trs_base = {} # Языки
+        trs_base = {}  # Языки
 
         # Проход по всем языкам
         for curr_lang in self.locales_:
             trs_base[curr_lang] = gettext.translation(
-                'base', # Домен
-                localedir = self.path_to_locales_, # Директория с поддерживаемыми языками
-                languages = [curr_lang], # Язык
-                fallback = True # Отключение ошибки
+                "base",  # Домен
+                localedir=self.path_to_locales_,  # Директория с поддерживаемыми языками
+                languages=[curr_lang],  # Язык
+                fallback=True,  # Отключение ошибки
             ).gettext
 
         return trs_base
 
-    def __set_locale(self, lang: str = '') -> MethodType:
+    def __set_locale(self, lang: str = "") -> MethodType:
         """Установка языка
 
         .. note::
@@ -422,7 +427,7 @@ class Language:
             lang (str): Язык
 
         Returns:
-             MethodType: MethodType перевода строк на один из поддерживаемых языков если метод запущен через конструктор
+            MethodType: MethodType перевода строк на один из поддерживаемых языков если метод запущен через конструктор
 
         .. dropdown:: Примеры
 
@@ -464,17 +469,21 @@ class Language:
 
         try:
             # Проверка аргументов
-            if type(lang) is not str: raise TypeError
-        except TypeError: pass
+            if type(lang) is not str:
+                raise TypeError
+        except TypeError:
+            pass
         else:
             # Проход по всем поддерживаемым языкам
             for curr_lang in self.locales_:
                 # В аргументах метода не найден язык
-                if lang != curr_lang: continue
+                if lang != curr_lang:
+                    continue
 
-                self.__lang = curr_lang # Изменение языка
+                self.__lang = curr_lang  # Изменение языка
 
             # Метод запущен в конструкторе
             if inspect.stack()[1].function == "__init__" or inspect.stack()[1].function == "__post_init__":
                 return self.__i18n[self.lang_]
-            else: self._ = self.__i18n[self.lang_] # Установка языка
+            else:
+                self._ = self.__i18n[self.lang_]  # Установка языка

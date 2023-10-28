@@ -8,5 +8,6 @@
    samples/pipeline_practical_tasks
    samples/audio
    samples/video
+   samples/text
    samples/multimodal
    samples/other

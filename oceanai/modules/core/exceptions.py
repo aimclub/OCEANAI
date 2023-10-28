@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+
 class CustomException(Exception):
     """Класс для всех пользовательских исключений
 
@@ -25,7 +26,9 @@ class CustomException(Exception):
 
             Пользовательское исключение
     """
+
     pass
+
 
 class IsSmallWindowSizeError(CustomException):
     """Указан слишком маленький размер окна сегмента сигнала
@@ -52,7 +55,9 @@ class IsSmallWindowSizeError(CustomException):
             Указан слишком маленький размер окна сегмента сигнала
 
     """
+
     pass
+
 
 class InvalidContentLength(CustomException):
     """Не определен размер файла для загрузки
@@ -79,4 +84,5 @@ class InvalidContentLength(CustomException):
             Не определен размер файла для загрузки
 
     """
+
     pass

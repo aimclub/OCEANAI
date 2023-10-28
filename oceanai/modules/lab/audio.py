@@ -8,42 +8,45 @@
 # ######################################################################################################################
 # Импорт необходимых инструментов
 # ######################################################################################################################
-# Подавление Warning
+
 import warnings
-for warn in [UserWarning, FutureWarning]: warnings.filterwarnings('ignore', category = warn)
 
-from dataclasses import dataclass # Класс данных
+# Подавление Warning
+for warn in [UserWarning, FutureWarning]:
+    warnings.filterwarnings("ignore", category=warn)
 
-import os           # Взаимодействие с файловой системой
+from dataclasses import dataclass  # Класс данных
+
+import os  # Взаимодействие с файловой системой
 import logging
-import requests     # Отправка HTTP запросов
+import requests  # Отправка HTTP запросов
 import numpy as np  # Научные вычисления
-import pandas as pd # Обработка и анализ данных
-import opensmile    # Анализ, обработка и классификация звука
-import librosa      # Обработка аудио
-import audioread    # Декодирование звука
+import pandas as pd  # Обработка и анализ данных
+import opensmile  # Анализ, обработка и классификация звука
+import librosa  # Обработка аудио
+import audioread  # Декодирование звука
 import math
 
 from urllib.parse import urlparse
 from urllib.error import URLError
-from pathlib import Path # Работа с путями в файловой системе
+from pathlib import Path  # Работа с путями в файловой системе
 from sklearn import preprocessing
 from sklearn.metrics import mean_absolute_error
-from datetime import datetime # Работа со временем
+from datetime import datetime  # Работа со временем
 
-from typing import Dict, List, Tuple, Union, Optional, Callable # Типы данных
+from typing import Dict, List, Tuple, Union, Optional, Callable  # Типы данных
 
 from IPython.display import clear_output
 
 # Персональные
-from oceanai.modules.lab.download import Download # Загрузка файлов
+from oceanai.modules.lab.download import Download  # Загрузка файлов
 from oceanai.modules.core.exceptions import IsSmallWindowSizeError
 
 # Порог регистрации сообщений TensorFlow
 logging.disable(logging.WARNING)
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
-import tensorflow as tf # Машинное обучение от Google
+import tensorflow as tf  # Машинное обучение от Google
 import keras
 
 from tensorflow.keras.applications import VGG16
@@ -51,8 +54,9 @@ from tensorflow.keras.applications import VGG16
 # ######################################################################################################################
 # Настройки необходимых инструментов
 # ######################################################################################################################
-pd.set_option('display.max_columns', None) # Максимальное количество отображаемых столбцов
-pd.set_option('display.max_rows', None)    # Максимальное количество отображаемых строк
+pd.set_option("display.max_columns", None)  # Максимальное количество отображаемых столбцов
+pd.set_option("display.max_rows", None)  # Максимальное количество отображаемых строк
+
 
 # ######################################################################################################################
 # Сообщения
@@ -77,9 +81,9 @@ class AudioMessages(Download):
     # ------------------------------------------------------------------------------------------------------------------
 
     def __post_init__(self):
-        super().__post_init__() # Выполнение конструктора из суперкласса
+        super().__post_init__()  # Выполнение конструктора из суперкласса
 
-        self._audio_modality: str = self._(' (аудио модальность) ...')
+        self._audio_modality: str = self._(" (аудио модальность) ...")
         self._formation_audio_model_hc: str = self._formation_model_hc + self._audio_modality
         self._formation_audio_model_nn: str = self._formation_model_nn + self._audio_modality
         self._formation_audio_models_b5: str = self._formation_models_b5 + self._audio_modality
@@ -88,15 +92,19 @@ class AudioMessages(Download):
         self._load_audio_model_weights_nn: str = self._load_model_weights_nn + self._audio_modality
         self._load_audio_models_weights_b5: str = self._load_models_weights_b5 + self._audio_modality
 
-        self._get_acoustic_feature_info: str = self._('Извлечение признаков (экспертных и лог мел-спектрограмм) из '
-                                                      'акустического сигнала ...')
-        self._get_acoustic_feature_hc_error: str = self._oh + self._('экспертные признаки из акустического сигнала не '
-                                                                     'извлечены ...')
-        self._get_acoustic_feature_spec_error: str = self._oh + self._('лог мел-спектрограммы из акустического сигнала '
-                                                                       'не извлечены ...')
+        self._get_acoustic_feature_info: str = self._(
+            "Извлечение признаков (экспертных и лог мел-спектрограмм) из " "акустического сигнала ..."
+        )
+        self._get_acoustic_feature_hc_error: str = self._oh + self._(
+            "экспертные признаки из акустического сигнала не " "извлечены ..."
+        )
+        self._get_acoustic_feature_spec_error: str = self._oh + self._(
+            "лог мел-спектрограммы из акустического сигнала " "не извлечены ..."
+        )
 
-        self._window_small_size_error: str = self._oh + self._('указан слишком маленький размер ({}) окна сегмента '
-                                                               'сигнала ...')
+        self._window_small_size_error: str = self._oh + self._(
+            "указан слишком маленький размер ({}) окна сегмента " "сигнала ..."
+        )
 
         self._model_audio_hc_not_formation: str = self._model_hc_not_formation + self._audio_modality
         self._model_audio_nn_not_formation: str = self._model_nn_not_formation + self._audio_modality
@@ -104,6 +112,7 @@ class AudioMessages(Download):
 
         self._concat_audio_pred_error: str = self._concat_pred_error + self._audio_modality
         self._norm_audio_pred_error: str = self._norm_pred_error + self._audio_modality
+
 
 # ######################################################################################################################
 # Аудио
@@ -128,32 +137,41 @@ class Audio(AudioMessages):
     # ------------------------------------------------------------------------------------------------------------------
 
     def __post_init__(self):
-        super().__post_init__() # Выполнение конструктора из суперкласса
+        super().__post_init__()  # Выполнение конструктора из суперкласса
 
         # Нейросетевая модель **tf.keras.Model** для получения оценок по экспертным признакам
         self._audio_model_hc: Optional[keras.engine.functional.Functional] = None
         # Нейросетевая модель **tf.keras.Model** для получения оценок по нейросетевым признакам
         self._audio_model_nn: Optional[keras.engine.functional.Functional] = None
         # Нейросетевые модели **tf.keras.Model** для получения результатов оценки персональных качеств
-        self._audio_models_b5: Dict[str, Optional[keras.engine.functional.Functional]] = dict(zip(
-            self._b5['en'], [None] * len(self._b5['en'])
-        ))
+        self._audio_models_b5: Dict[str, Optional[keras.engine.functional.Functional]] = dict(
+            zip(self._b5["en"], [None] * len(self._b5["en"]))
+        )
 
-        self._smile: opensmile.core.smile.Smile = self.__smile() # Извлечение функций OpenSmile
+        self._smile: opensmile.core.smile.Smile = self.__smile()  # Извлечение функций OpenSmile
 
         # ----------------------- Только для внутреннего использования внутри класса
 
         # Настройки для спектрограммы
         self.__pl: List[Union[int, str, bool, float, None]] = [
-            2048, 512, None, True, 'reflect', 2.0, 128, 'slaney', True, None
+            2048,
+            512,
+            None,
+            True,
+            "reflect",
+            2.0,
+            128,
+            "slaney",
+            True,
+            None,
         ]
-        self.__len_paths: int = 0 # Количество искомых файлов
-        self.__local_path: Union[Callable[[str], str], None] = None # Локальный путь
+        self.__len_paths: int = 0  # Количество искомых файлов
+        self.__local_path: Union[Callable[[str], str], None] = None  # Локальный путь
 
         # Ключи для точности
-        self.__df_accuracy_index: List[str] = ['MAE', 'Accuracy']
-        self.__df_accuracy_index_name: str = 'Metrics'
-        self.__df_accuracy_mean: str = 'Mean'
+        self.__df_accuracy_index: List[str] = ["MAE", "Accuracy"]
+        self.__df_accuracy_index_name: str = "Metrics"
+        self.__df_accuracy_mean: str = "Mean"
 
     # ------------------------------------------------------------------------------------------------------------------
     # Свойства
@@ -400,8 +418,13 @@ class Audio(AudioMessages):
     # ------------------------------------------------------------------------------------------------------------------
 
     def __load_model_weights(
-        self, url: str, force_reload: bool = True, info_text: str = '',
-        out: bool = True, runtime: bool = True, run: bool = True
+        self,
+        url: str,
+        force_reload: bool = True,
+        info_text: str = "",
+        out: bool = True,
+        runtime: bool = True,
+        run: bool = True,
     ) -> bool:
         """Загрузка весов нейросетевой модели
 
@@ -515,52 +538,77 @@ class Audio(AudioMessages):
                 False
         """
 
-        self._clear_notebook_history_output() # Очистка истории вывода сообщений в ячейке Jupyter
+        self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter
 
         try:
             # Проверка аргументов
-            if (type(url) is not str or not url or type(force_reload) is not bool
-                or type(info_text) is not str or not info_text or type(out) is not bool
-                or type(runtime) is not bool or type(run) is not bool): raise TypeError
+            if (
+                type(url) is not str
+                or not url
+                or type(force_reload) is not bool
+                or type(info_text) is not str
+                or not info_text
+                or type(out) is not bool
+                or type(runtime) is not bool
+                or type(run) is not bool
+            ):
+                raise TypeError
         except TypeError:
-            self._inv_args(__class__.__name__, self.__load_model_weights.__name__, out = out); return False
+            self._inv_args(__class__.__name__, self.__load_model_weights.__name__, out=out)
+            return False
         else:
             # Блокировка выполнения
-            if run is False: self._error(self._lock_user, out = out); return False
+            if run is False:
+                self._error(self._lock_user, out=out)
+                return False
 
-            if runtime: self._r_start()
+            if runtime:
+                self._r_start()
 
             # Информационное сообщение
-            self._info(info_text, last = False, out = out)
+            self._info(info_text, last=False, out=out)
 
-            sections = urlparse(url) # Парсинг URL адреса
+            sections = urlparse(url)  # Парсинг URL адреса
 
             try:
                 # URL файл невалидный
-                if sections.scheme == '': raise requests.exceptions.InvalidURL
+                if sections.scheme == "":
+                    raise requests.exceptions.InvalidURL
             except requests.exceptions.InvalidURL:
                 url = os.path.normpath(url)
 
                 try:
-                    if os.path.isfile(url) is False: raise FileNotFoundError # Не файл
-                except FileNotFoundError: self._other_error(self._load_model_weights_error, out = out); return False
-                except Exception: self._other_error(self._unknown_err, out = out); return False
-                else: self._url_last_filename = url; return True
+                    if os.path.isfile(url) is False:
+                        raise FileNotFoundError  # Не файл
+                except FileNotFoundError:
+                    self._other_error(self._load_model_weights_error, out=out)
+                    return False
+                except Exception:
+                    self._other_error(self._unknown_err, out=out)
+                    return False
+                else:
+                    self._url_last_filename = url
+                    return True
             else:
                 try:
-                    if force_reload is False: clear_output(True)
+                    if force_reload is False:
+                        clear_output(True)
                     # Загрузка файла из URL
                     res_download_file_from_url = self._download_file_from_url(
-                        url = url, force_reload = force_reload, runtime = False, out = out, run = True
+                        url=url, force_reload=force_reload, runtime=False, out=out, run=True
                     )
-                except Exception: self._other_error(self._unknown_err, out = out); return False
+                except Exception:
+                    self._other_error(self._unknown_err, out=out)
+                    return False
                 else:
                     # Файл загружен
-                    if res_download_file_from_url != 200: return False
+                    if res_download_file_from_url != 200:
+                        return False
 
                     return True
             finally:
-                if runtime: self._r_end(out = out)
+                if runtime:
+                    self._r_end(out=out)
 
     @staticmethod
     def __smile() -> opensmile.core.smile.Smile:
@@ -606,8 +654,8 @@ class Audio(AudioMessages):
         """
 
         return opensmile.Smile(
-            feature_set = opensmile.FeatureSet.eGeMAPSv02,
-            feature_level = opensmile.FeatureLevel.LowLevelDescriptors,
+            feature_set=opensmile.FeatureSet.eGeMAPSv02,
+            feature_level=opensmile.FeatureLevel.LowLevelDescriptors,
         )
 
     def __norm_pred(self, pred_data: np.ndarray, len_spec: int = 16, out: bool = True) -> np.ndarray:
@@ -693,18 +741,28 @@ class Audio(AudioMessages):
 
         try:
             # Проверка аргументов
-            if (type(pred_data) is not np.ndarray or len(pred_data) < 1 or type(len_spec) is not int or len_spec < 1
-                or type(out) is not bool): raise TypeError
+            if (
+                type(pred_data) is not np.ndarray
+                or len(pred_data) < 1
+                or type(len_spec) is not int
+                or len_spec < 1
+                or type(out) is not bool
+            ):
+                raise TypeError
         except TypeError:
-            self._inv_args(__class__.__name__, self.__norm_pred.__name__, out = out); return np.array([])
+            self._inv_args(__class__.__name__, self.__norm_pred.__name__, out=out)
+            return np.array([])
         else:
             try:
                 if pred_data.shape[0] < len_spec:
-                    return np.pad(pred_data, ((0, len_spec - pred_data.shape[0]), (0, 0)), 'mean')
+                    return np.pad(pred_data, ((0, len_spec - pred_data.shape[0]), (0, 0)), "mean")
                 return pred_data[:len_spec]
             except ValueError:
-                self._other_error(self._norm_audio_pred_error, last = False, out = out); return np.array([])
-            except Exception: self._other_error(self._unknown_err, out = out); return np.array([])
+                self._other_error(self._norm_audio_pred_error, last=False, out=out)
+                return np.array([])
+            except Exception:
+                self._other_error(self._unknown_err, out=out)
+                return np.array([])
 
     def __concat_pred(
         self, pred_hc: np.ndarray, pred_melspectrogram: np.ndarray, out: bool = True
@@ -846,29 +904,40 @@ class Audio(AudioMessages):
 
         try:
             # Проверка аргументов
-            if (type(pred_hc) is not np.ndarray or len(pred_hc) < 1
-                or type(pred_melspectrogram) is not np.ndarray or len(pred_melspectrogram) < 1
-                or type(out) is not bool): raise TypeError
+            if (
+                type(pred_hc) is not np.ndarray
+                or len(pred_hc) < 1
+                or type(pred_melspectrogram) is not np.ndarray
+                or len(pred_melspectrogram) < 1
+                or type(out) is not bool
+            ):
+                raise TypeError
         except TypeError:
-            self._inv_args(__class__.__name__, self.__concat_pred.__name__, out = out); return []
+            self._inv_args(__class__.__name__, self.__concat_pred.__name__, out=out)
+            return []
         else:
             # Нормализация оценок по экспертным и нейросетевым признакам
-            pred_hc_norm = self.__norm_pred(pred_hc, out = False)
-            pred_melspectrogram_norm = self.__norm_pred(pred_melspectrogram, out = False)
+            pred_hc_norm = self.__norm_pred(pred_hc, out=False)
+            pred_melspectrogram_norm = self.__norm_pred(pred_melspectrogram, out=False)
 
             if len(pred_hc_norm) == 0 or len(pred_melspectrogram_norm) == 0:
-                self._error(self._concat_audio_pred_error, out = out); return []
+                self._error(self._concat_audio_pred_error, out=out)
+                return []
 
             concat = []
 
             try:
                 # Проход по всем персональным качествам личности человека
-                for i in range(len(self._b5['en'])):
+                for i in range(len(self._b5["en"])):
                     concat.append(
                         np.hstack((np.asarray(pred_hc_norm)[:, i], np.asarray(pred_melspectrogram_norm)[:, i]))
                     )
-            except IndexError: self._other_error(self._concat_audio_pred_error, last = False, out = out); return []
-            except Exception: self._other_error(self._unknown_err, out = out); return []
+            except IndexError:
+                self._other_error(self._concat_audio_pred_error, last=False, out=out)
+                return []
+            except Exception:
+                self._other_error(self._unknown_err, out=out)
+                return []
 
             return concat
 
@@ -952,17 +1021,20 @@ class Audio(AudioMessages):
 
         try:
             # Проверка аргументов
-            if type(show_summary) is not bool or type(out) is not bool: raise TypeError
+            if type(show_summary) is not bool or type(out) is not bool:
+                raise TypeError
         except TypeError:
-            self._inv_args(__class__.__name__, self.__load_audio_model_b5.__name__, out = out); return None
+            self._inv_args(__class__.__name__, self.__load_audio_model_b5.__name__, out=out)
+            return None
         else:
-            input_1 = tf.keras.Input(shape = (32,), name = 'input_1')
-            x = tf.keras.layers.Dense(units = 1, name = 'dense_1')(input_1)
-            x = tf.keras.layers.Activation('sigmoid', name = 'activ_1')(x)
+            input_1 = tf.keras.Input(shape=(32,), name="input_1")
+            x = tf.keras.layers.Dense(units=1, name="dense_1")(input_1)
+            x = tf.keras.layers.Activation("sigmoid", name="activ_1")(x)
 
-            model = tf.keras.Model(inputs = input_1, outputs = x)
+            model = tf.keras.Model(inputs=input_1, outputs=x)
 
-            if show_summary and out: model.summary()
+            if show_summary and out:
+                model.summary()
 
             return model
 
@@ -971,9 +1043,15 @@ class Audio(AudioMessages):
     # ------------------------------------------------------------------------------------------------------------------
 
     def _get_acoustic_features(
-        self, path: str, sr: int = 44100, window: Union[int, float] = 2.0,
-        step: Union[int, float] = 1.0, last: bool = False, out: bool = True, runtime: bool = True,
-        run: bool = True
+        self,
+        path: str,
+        sr: int = 44100,
+        window: Union[int, float] = 2.0,
+        step: Union[int, float] = 1.0,
+        last: bool = False,
+        out: bool = True,
+        runtime: bool = True,
+        run: bool = True,
     ) -> Tuple[List[Optional[np.ndarray]], List[Optional[np.ndarray]]]:
         """Извлечение признаков из акустического сигнала (без очистки истории вывода сообщений в ячейке Jupyter)
 
@@ -1101,121 +1179,143 @@ class Audio(AudioMessages):
 
         try:
             # Проверка аргументов
-            if (type(path) is not str or not path or type(sr) is not int or sr < 1
+            if (
+                type(path) is not str
+                or not path
+                or type(sr) is not int
+                or sr < 1
                 or ((type(window) is not int or window < 1) and (type(window) is not float or window <= 0))
                 or ((type(step) is not int or step < 1) and (type(step) is not float or step <= 0))
-                or type(last) is not bool or type(out) is not bool or type(runtime) is not bool
-                or type(run) is not bool): raise TypeError
+                or type(last) is not bool
+                or type(out) is not bool
+                or type(runtime) is not bool
+                or type(run) is not bool
+            ):
+                raise TypeError
         except TypeError:
-            self._inv_args(__class__.__name__, self._get_acoustic_features.__name__, last = last, out = out)
+            self._inv_args(__class__.__name__, self._get_acoustic_features.__name__, last=last, out=out)
             return [], []
         else:
             # Блокировка выполнения
-            if run is False: self._error(self._lock_user, last = last, out = out); return [], []
+            if run is False:
+                self._error(self._lock_user, last=last, out=out)
+                return [], []
 
-            if runtime: self._r_start()
+            if runtime:
+                self._r_start()
 
             if last is False:
                 # Информационное сообщение
-                self._info(self._get_acoustic_feature_info, out = False)
-                if out: self.show_notebook_history_output() # Отображение истории вывода сообщений в ячейке Jupyter
+                self._info(self._get_acoustic_feature_info, out=False)
+                if out:
+                    self.show_notebook_history_output()  # Отображение истории вывода сообщений в ячейке Jupyter
 
             try:
                 # Считывание аудио или видеофайла
-                audio, sr = librosa.load(path = path, sr = sr)
+                audio, sr = librosa.load(path=path, sr=sr)
             except FileNotFoundError:
-                self._other_error(self._file_not_found.format(self._info_wrapper(path)), last = last, out = out)
+                self._other_error(self._file_not_found.format(self._info_wrapper(path)), last=last, out=out)
                 return [], []
             except IsADirectoryError:
-                self._other_error(self._directory_inst_file.format(self._info_wrapper(path)), last = last, out = out)
+                self._other_error(self._directory_inst_file.format(self._info_wrapper(path)), last=last, out=out)
                 return [], []
             except audioread.NoBackendError:
-                self._other_error(self._no_acoustic_signal.format(self._info_wrapper(path)), last = last, out = out)
+                self._other_error(self._no_acoustic_signal.format(self._info_wrapper(path)), last=last, out=out)
                 return [], []
-            except Exception: self._other_error(self._unknown_err, last = last, out = out); return [], []
+            except Exception:
+                self._other_error(self._unknown_err, last=last, out=out)
+                return [], []
             else:
-                hc_features = [] # Список с экспертными признаками
-                melspectrogram_features = [] # Список с лог мел-спектрограммами
+                hc_features = []  # Список с экспертными признаками
+                melspectrogram_features = []  # Список с лог мел-спектрограммами
 
                 try:
                     lhcf = int((window * 1000 - 40) / 10)
 
-                    if lhcf < 2: raise IsSmallWindowSizeError
+                    if lhcf < 2:
+                        raise IsSmallWindowSizeError
                 except IsSmallWindowSizeError:
-                    self._other_error(self._window_small_size_error.format(self._info_wrapper(str(window))),
-                                      last = last, out = out)
+                    self._other_error(
+                        self._window_small_size_error.format(self._info_wrapper(str(window))), last=last, out=out
+                    )
                     return [], []
-                except Exception: self._other_error(self._unknown_err, last = last, out = out); return [], []
+                except Exception:
+                    self._other_error(self._unknown_err, last=last, out=out)
+                    return [], []
                 else:
                     window_local = int(sr * window)
 
                     len_spec = window_local / self.__pl[1]
-                    if math.modf(len_spec)[0] == 0: len_spec += 1
+                    if math.modf(len_spec)[0] == 0:
+                        len_spec += 1
                     len_spec = math.ceil(len_spec)
 
                     for cnt, val in enumerate(range(0, audio.shape[0] + 1, int(sr * step))):
                         val_end = val + window_local
 
-                        curr_audio = audio[val:val_end] # Часть аудио
+                        curr_audio = audio[val:val_end]  # Часть аудио
 
                         # Формирование экспертных признаков
                         hc_feature = self.smile_.process_signal(curr_audio, sr).to_numpy()
 
                         try:
                             # Нормализация экспертных признаков
-                            hc_feature = preprocessing.normalize(hc_feature, norm = 'l2', axis = 0)
-                        except Exception: pass
+                            hc_feature = preprocessing.normalize(hc_feature, norm="l2", axis=0)
+                        except Exception:
+                            pass
                         else:
                             # Дополнение экспертных признаков нулями
                             hc_feature = np.pad(hc_feature, ((0, lhcf - hc_feature.shape[0]), (0, 0)))
-                            hc_features.append(hc_feature) # Добавление экспертных признаков в список
+                            hc_features.append(hc_feature)  # Добавление экспертных признаков в список
 
                         # Получение лог мел-спектрограмм
                         if len(curr_audio) > self.__pl[0]:
                             melspectrogram = librosa.feature.melspectrogram(
-                                y          = curr_audio,
-                                sr         = sr,
-                                n_fft      = self.__pl[0],
-                                hop_length = self.__pl[1],
-                                win_length = self.__pl[2],
-                                center     = self.__pl[3],
-                                pad_mode   = self.__pl[4],
-                                power      = self.__pl[5],
-                                n_mels     = self.__pl[6],
-                                norm       = self.__pl[7],
-                                htk        = self.__pl[8],
-                                fmax       = self.__pl[9]
+                                y=curr_audio,
+                                sr=sr,
+                                n_fft=self.__pl[0],
+                                hop_length=self.__pl[1],
+                                win_length=self.__pl[2],
+                                center=self.__pl[3],
+                                pad_mode=self.__pl[4],
+                                power=self.__pl[5],
+                                n_mels=self.__pl[6],
+                                norm=self.__pl[7],
+                                htk=self.__pl[8],
+                                fmax=self.__pl[9],
                             )
 
                             # Преобразование спектрограммы из мощности (квадрат амплитуды) в децибелы (дБ)
-                            melspectrogram_to_db = librosa.power_to_db(melspectrogram, top_db = 80)
+                            melspectrogram_to_db = librosa.power_to_db(melspectrogram, top_db=80)
 
                             if melspectrogram_to_db.shape[1] < len_spec:
                                 melspectrogram_to_db = np.pad(
                                     melspectrogram_to_db,
                                     ((0, 0), (0, len_spec - melspectrogram_to_db.shape[1])),
-                                    'mean'
+                                    "mean",
                                 )
-                            melspectrogram_to_db /= 255 # Линейная нормализация
-                            melspectrogram_to_db = np.expand_dims(melspectrogram_to_db, axis = -1)
-                            melspectrogram_to_db = tf.image.resize(melspectrogram_to_db, (224, 224)) # Масштабирование
-                            melspectrogram_to_db = tf.repeat(melspectrogram_to_db, 3, axis = -1) # GRAY -> RGB
+                            melspectrogram_to_db /= 255  # Линейная нормализация
+                            melspectrogram_to_db = np.expand_dims(melspectrogram_to_db, axis=-1)
+                            melspectrogram_to_db = tf.image.resize(melspectrogram_to_db, (224, 224))  # Масштабирование
+                            melspectrogram_to_db = tf.repeat(melspectrogram_to_db, 3, axis=-1)  # GRAY -> RGB
                             # Добавление лог мел-спектрограммы в список
                             melspectrogram_features.append(melspectrogram_to_db)
 
                     if last is False:
                         # Статистика извлеченных признаков из акустического сигнала
                         self._stat_acoustic_features(
-                            last = last, out = out,
-                            len_hc_features = len(hc_features),
-                            len_melspectrogram_features = len(melspectrogram_features),
-                            shape_hc_features = hc_features[0].shape,
-                            shape_melspectrogram_features = melspectrogram_features[0].shape
+                            last=last,
+                            out=out,
+                            len_hc_features=len(hc_features),
+                            len_melspectrogram_features=len(melspectrogram_features),
+                            shape_hc_features=hc_features[0].shape,
+                            shape_melspectrogram_features=melspectrogram_features[0].shape,
                         )
 
                     return hc_features, melspectrogram_features
             finally:
-                if runtime: self._r_end(out = out)
+                if runtime:
+                    self._r_end(out=out)
 
     # ------------------------------------------------------------------------------------------------------------------
     # Внешние методы
@@ -1287,36 +1387,49 @@ class Audio(AudioMessages):
                 False
         """
 
-        self._clear_notebook_history_output() # Очистка истории вывода сообщений в ячейке Jupyter
+        self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter
 
         try:
             # Проверка аргументов
-            if (type(show_summary) is not bool or type(out) is not bool or type(runtime) is not bool or type(run) is
-                not bool): raise TypeError
-        except TypeError: self._inv_args(__class__.__name__, self.load_audio_model_hc.__name__, out = out); return False
+            if (
+                type(show_summary) is not bool
+                or type(out) is not bool
+                or type(runtime) is not bool
+                or type(run) is not bool
+            ):
+                raise TypeError
+        except TypeError:
+            self._inv_args(__class__.__name__, self.load_audio_model_hc.__name__, out=out)
+            return False
         else:
             # Блокировка выполнения
-            if run is False: self._error(self._lock_user, out = out); return False
+            if run is False:
+                self._error(self._lock_user, out=out)
+                return False
 
-            if runtime: self._r_start()
+            if runtime:
+                self._r_start()
 
             # Информационное сообщение
-            self._info(self._formation_audio_model_hc, last = False, out = False)
-            if out: self.show_notebook_history_output() # Отображение истории вывода сообщений в ячейке Jupyter
+            self._info(self._formation_audio_model_hc, last=False, out=False)
+            if out:
+                self.show_notebook_history_output()  # Отображение истории вывода сообщений в ячейке Jupyter
 
-            input_lstm = tf.keras.Input(shape = (196, 25))
+            input_lstm = tf.keras.Input(shape=(196, 25))
 
-            x = tf.keras.layers.LSTM(64, return_sequences = True)(input_lstm)
-            x = tf.keras.layers.Dropout(rate = 0.2)(x)
-            x = tf.keras.layers.LSTM(128, return_sequences = False)(x)
-            x = tf.keras.layers.Dropout(rate = 0.2)(x)
-            x = tf.keras.layers.Dense(5, activation = 'linear')(x)
+            x = tf.keras.layers.LSTM(64, return_sequences=True)(input_lstm)
+            x = tf.keras.layers.Dropout(rate=0.2)(x)
+            x = tf.keras.layers.LSTM(128, return_sequences=False)(x)
+            x = tf.keras.layers.Dropout(rate=0.2)(x)
+            x = tf.keras.layers.Dense(5, activation="linear")(x)
 
-            self._audio_model_hc = tf.keras.Model(inputs = input_lstm, outputs = x)
+            self._audio_model_hc = tf.keras.Model(inputs=input_lstm, outputs=x)
 
-            if show_summary and out: self._audio_model_hc.summary()
+            if show_summary and out:
+                self._audio_model_hc.summary()
 
-            if runtime: self._r_end(out = out)
+            if runtime:
+                self._r_end(out=out)
 
             return True
 
@@ -1443,38 +1556,50 @@ class Audio(AudioMessages):
                 False
         """
 
-        self._clear_notebook_history_output() # Очистка истории вывода сообщений в ячейке Jupyter
+        self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter
 
         try:
             # Проверка аргументов
-            if (type(show_summary) is not bool or type(out) is not bool or type(runtime) is not bool or type(run) is
-                not bool): raise TypeError
+            if (
+                type(show_summary) is not bool
+                or type(out) is not bool
+                or type(runtime) is not bool
+                or type(run) is not bool
+            ):
+                raise TypeError
         except TypeError:
-            self._inv_args(__class__.__name__, self.load_audio_model_nn.__name__, out = out); return False
+            self._inv_args(__class__.__name__, self.load_audio_model_nn.__name__, out=out)
+            return False
         else:
             # Блокировка выполнения
-            if run is False: self._error(self._lock_user, out = out); return False
+            if run is False:
+                self._error(self._lock_user, out=out)
+                return False
 
-            if runtime: self._r_start()
+            if runtime:
+                self._r_start()
 
             # Информационное сообщение
-            self._info(self._formation_audio_model_nn, last = False, out = False)
-            if out: self.show_notebook_history_output() # Отображение истории вывода сообщений в ячейке Jupyter
+            self._info(self._formation_audio_model_nn, last=False, out=False)
+            if out:
+                self.show_notebook_history_output()  # Отображение истории вывода сообщений в ячейке Jupyter
 
-            vgg_model = VGG16(weights = None, include_top = False, input_shape = (224, 224, 3))
+            vgg_model = VGG16(weights=None, include_top=False, input_shape=(224, 224, 3))
 
             x = vgg_model.output
             x = tf.keras.layers.Flatten()(x)
-            x = tf.keras.layers.Dense(512, activation = 'relu')(x)
+            x = tf.keras.layers.Dense(512, activation="relu")(x)
             x = tf.keras.layers.Dropout(0.5)(x)
-            x = tf.keras.layers.Dense(256, activation = 'relu')(x)
-            x = tf.keras.layers.Dense(5, activation = 'linear')(x)
+            x = tf.keras.layers.Dense(256, activation="relu")(x)
+            x = tf.keras.layers.Dense(5, activation="linear")(x)
 
-            self._audio_model_nn = tf.keras.models.Model(inputs = vgg_model.input, outputs = x)
+            self._audio_model_nn = tf.keras.models.Model(inputs=vgg_model.input, outputs=x)
 
-            if show_summary and out: self._audio_model_nn.summary()
+            if show_summary and out:
+                self._audio_model_nn.summary()
 
-            if runtime: self._r_end(out = out)
+            if runtime:
+                self._r_end(out=out)
 
             return True
 
@@ -1560,30 +1685,42 @@ class Audio(AudioMessages):
                 False
         """
 
-        self._clear_notebook_history_output() # Очистка истории вывода сообщений в ячейке Jupyter
+        self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter
 
         try:
             # Проверка аргументов
-            if (type(show_summary) is not bool or type(out) is not bool or type(runtime) is not bool or type(run) is
-                not bool): raise TypeError
+            if (
+                type(show_summary) is not bool
+                or type(out) is not bool
+                or type(runtime) is not bool
+                or type(run) is not bool
+            ):
+                raise TypeError
         except TypeError:
-            self._inv_args(__class__.__name__, self.load_audio_models_b5.__name__, out = out); return False
+            self._inv_args(__class__.__name__, self.load_audio_models_b5.__name__, out=out)
+            return False
         else:
             # Блокировка выполнения
-            if run is False: self._error(self._lock_user, out = out); return False
+            if run is False:
+                self._error(self._lock_user, out=out)
+                return False
 
-            if runtime: self._r_start()
+            if runtime:
+                self._r_start()
 
             # Информационное сообщение
-            self._info(self._formation_audio_models_b5, last = False, out = False)
-            if out: self.show_notebook_history_output() # Отображение истории вывода сообщений в ячейке Jupyter
+            self._info(self._formation_audio_models_b5, last=False, out=False)
+            if out:
+                self.show_notebook_history_output()  # Отображение истории вывода сообщений в ячейке Jupyter
 
             for key, _ in self._audio_models_b5.items():
                 self._audio_models_b5[key] = self.__load_audio_model_b5()
 
-            if show_summary and out: self._audio_models_b5[key].summary()
+            if show_summary and out:
+                self._audio_models_b5[key].summary()
 
-            if runtime: self._r_end(out = out)
+            if runtime:
+                self._r_end(out=out)
 
             return True
 
@@ -1700,14 +1837,20 @@ class Audio(AudioMessages):
                 False
         """
 
-        if runtime: self._r_start()
+        if runtime:
+            self._r_start()
 
         if self.__load_model_weights(url, force_reload, self._load_audio_model_weights_hc, out, False, run) is True:
-            try: self._audio_model_hc.load_weights(self._url_last_filename)
-            except Exception: self._error(self._model_audio_hc_not_formation, out = out); return False
-            else: return True
+            try:
+                self._audio_model_hc.load_weights(self._url_last_filename)
+            except Exception:
+                self._error(self._model_audio_hc_not_formation, out=out)
+                return False
+            else:
+                return True
             finally:
-                if runtime: self._r_end(out = out)
+                if runtime:
+                    self._r_end(out=out)
 
         return False
 
@@ -1826,20 +1969,34 @@ class Audio(AudioMessages):
                 False
         """
 
-        if runtime: self._r_start()
+        if runtime:
+            self._r_start()
 
         if self.__load_model_weights(url, force_reload, self._load_audio_model_weights_nn, out, False, run) is True:
-            try: self._audio_model_nn.load_weights(self._url_last_filename)
-            except Exception: self._error(self._model_audio_nn_not_formation, out = out); return False
-            else: return True
+            try:
+                self._audio_model_nn.load_weights(self._url_last_filename)
+            except Exception:
+                self._error(self._model_audio_nn_not_formation, out=out)
+                return False
+            else:
+                return True
             finally:
-                if runtime: self._r_end(out = out)
+                if runtime:
+                    self._r_end(out=out)
 
         return False
 
     def load_audio_models_weights_b5(
-        self, url_openness: str, url_conscientiousness: str, url_extraversion: str, url_agreeableness: str,
-        url_neuroticism: str, force_reload: bool = True, out: bool = True, runtime: bool = True, run: bool = True
+        self,
+        url_openness: str,
+        url_conscientiousness: str,
+        url_extraversion: str,
+        url_agreeableness: str,
+        url_neuroticism: str,
+        force_reload: bool = True,
+        out: bool = True,
+        runtime: bool = True,
+        run: bool = True,
     ) -> bool:
         """Загрузка весов нейросетевых моделей для получения результатов оценки персональных качеств
 
@@ -2028,76 +2185,103 @@ class Audio(AudioMessages):
                 False
         """
 
-        self._clear_notebook_history_output() # Очистка истории вывода сообщений в ячейке Jupyter
+        self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter
 
         try:
             # Проверка аргументов
-            if (type(url_openness) is not str or not url_openness
-                or type(url_conscientiousness) is not str or not url_conscientiousness
-                or type(url_extraversion) is not str or not url_extraversion
-                or type(url_agreeableness) is not str or not url_agreeableness
-                or type(url_neuroticism) is not str or not url_neuroticism
+            if (
+                type(url_openness) is not str
+                or not url_openness
+                or type(url_conscientiousness) is not str
+                or not url_conscientiousness
+                or type(url_extraversion) is not str
+                or not url_extraversion
+                or type(url_agreeableness) is not str
+                or not url_agreeableness
+                or type(url_neuroticism) is not str
+                or not url_neuroticism
                 or type(force_reload) is not bool
                 or type(out) is not bool
-                or type(runtime) is not bool or type(run) is not bool): raise TypeError
+                or type(runtime) is not bool
+                or type(run) is not bool
+            ):
+                raise TypeError
         except TypeError:
-            self._inv_args(__class__.__name__, self.load_audio_models_weights_b5.__name__, out = out); return False
+            self._inv_args(__class__.__name__, self.load_audio_models_weights_b5.__name__, out=out)
+            return False
         else:
             # Блокировка выполнения
-            if run is False: self._error(self._lock_user, out = out); return False
+            if run is False:
+                self._error(self._lock_user, out=out)
+                return False
 
-            if runtime: self._r_start()
+            if runtime:
+                self._r_start()
 
-            result_download_models = 0 # Все веса нейросетевых моделей по умолчанию загружены
+            result_download_models = 0  # Все веса нейросетевых моделей по умолчанию загружены
 
             # Информационное сообщение
-            self._info(self._load_audio_models_weights_b5, last = False, out = out)
+            self._info(self._load_audio_models_weights_b5, last=False, out=out)
 
             # Проход по всем URL с весами нейросетевых моделей
-            for cnt, url in enumerate([
-                (url_openness, self._b5['ru'][0]),
-                (url_conscientiousness, self._b5['ru'][1]),
-                (url_extraversion, self._b5['ru'][2]),
-                (url_agreeableness, self._b5['ru'][3]),
-                (url_neuroticism, self._b5['ru'][4]),
-            ]):
-                sections = urlparse(url[0]) # Парсинг URL адреса
+            for cnt, url in enumerate(
+                [
+                    (url_openness, self._b5["ru"][0]),
+                    (url_conscientiousness, self._b5["ru"][1]),
+                    (url_extraversion, self._b5["ru"][2]),
+                    (url_agreeableness, self._b5["ru"][3]),
+                    (url_neuroticism, self._b5["ru"][4]),
+                ]
+            ):
+                sections = urlparse(url[0])  # Парсинг URL адреса
 
                 try:
                     # URL файл невалидный
-                    if sections.scheme == '': raise requests.exceptions.InvalidURL
+                    if sections.scheme == "":
+                        raise requests.exceptions.InvalidURL
                 except requests.exceptions.InvalidURL:
                     url_norm = os.path.normpath(url[0])
 
                     try:
-                        if os.path.isfile(url_norm) is False: raise FileNotFoundError # Не файл
-                    except FileNotFoundError: self._other_error(
-                            self._load_model_weights_error + ' ' + self._bold_wrapper(url[1].capitalize()), out = out
-                        ); continue
-                    except Exception: self._other_error(self._unknown_err, out = out); continue
+                        if os.path.isfile(url_norm) is False:
+                            raise FileNotFoundError  # Не файл
+                    except FileNotFoundError:
+                        self._other_error(
+                            self._load_model_weights_error + " " + self._bold_wrapper(url[1].capitalize()), out=out
+                        )
+                        continue
+                    except Exception:
+                        self._other_error(self._unknown_err, out=out)
+                        continue
                     else:
                         self._url_last_filename = url_norm
 
                         # Отображение истории вывода сообщений в ячейке Jupyter
-                        if out: self.show_notebook_history_output()
+                        if out:
+                            self.show_notebook_history_output()
                 else:
                     try:
-                        if force_reload is False: clear_output(True)
+                        if force_reload is False:
+                            clear_output(True)
                         # Загрузка файла из URL
                         res_download_file_from_url = self._download_file_from_url(
-                            url = url[0], force_reload = force_reload, runtime = False, out = out, run = True
+                            url=url[0], force_reload=force_reload, runtime=False, out=out, run=True
                         )
-                    except Exception: self._other_error(self._unknown_err, out = out); continue
+                    except Exception:
+                        self._other_error(self._unknown_err, out=out)
+                        continue
                     else:
                         # Файл загружен
-                        if res_download_file_from_url != 200: continue
+                        if res_download_file_from_url != 200:
+                            continue
 
                         try:
-                            self._audio_models_b5[self._b5['en'][cnt]].load_weights(self._url_last_filename)
-                        except Exception: self._other_error(
-                                self._load_model_weights_error + ' ' + self._bold_wrapper(url[1].capitalize()),
-                                out = out
-                            ); continue
+                            self._audio_models_b5[self._b5["en"][cnt]].load_weights(self._url_last_filename)
+                        except Exception:
+                            self._other_error(
+                                self._load_model_weights_error + " " + self._bold_wrapper(url[1].capitalize()), out=out
+                            )
+                            continue
                         else:
                             self._add_last_el_notebook_history_output(self._bold_wrapper(url[1].capitalize()))
 
@@ -2105,16 +2289,25 @@ class Audio(AudioMessages):
 
             clear_output(True)
             # Отображение истории вывода сообщений в ячейке Jupyter
-            if out: self.show_notebook_history_output()
+            if out:
+                self.show_notebook_history_output()
 
-            if runtime: self._r_end(out = out)
+            if runtime:
+                self._r_end(out=out)
 
-            if result_download_models != len(self._b5['ru']): return False
+            if result_download_models != len(self._b5["ru"]):
+                return False
             return True
 
     def get_acoustic_features(
-        self, path: str, sr: int = 44100, window: Union[int, float] = 2.0,
-        step: Union[int, float] = 1.0, out: bool = True, runtime: bool = True, run: bool = True
+        self,
+        path: str,
+        sr: int = 44100,
+        window: Union[int, float] = 2.0,
+        step: Union[int, float] = 1.0,
+        out: bool = True,
+        runtime: bool = True,
+        run: bool = True,
     ) -> Tuple[List[Optional[np.ndarray]], List[Optional[np.ndarray]]]:
         """Извлечение признаков из акустического сигнала
 
@@ -2136,16 +2329,25 @@ class Audio(AudioMessages):
         :bdg-link-light:`Пример <../../user_guide/notebooks/Audio-get_acoustic_features.ipynb>`
         """
 
-        self._clear_notebook_history_output() # Очистка истории вывода сообщений в ячейке Jupyter
+        self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter
 
-        return self._get_acoustic_features(path = path, sr = sr, window = window, step = step, last = False, out = out,
-                                           runtime = runtime, run = run)
+        return self._get_acoustic_features(
+            path=path, sr=sr, window=window, step=step, last=False, out=out, runtime=runtime, run=run
+        )
 
     def get_audio_union_predictions(
-        self, depth: int = 1, recursive: bool = False, sr: int = 44100,
-        window: Union[int, float] = 2.0, step: Union[int, float] = 1.0,
-        accuracy = True, url_accuracy: str = '', logs: bool = True, out: bool = True, runtime: bool = True,
-        run: bool = True
+        self,
+        depth: int = 1,
+        recursive: bool = False,
+        sr: int = 44100,
+        window: Union[int, float] = 2.0,
+        step: Union[int, float] = 1.0,
+        accuracy=True,
+        url_accuracy: str = "",
+        logs: bool = True,
+        out: bool = True,
+        runtime: bool = True,
+        run: bool = True,
     ) -> bool:
         """Получения прогнозов по аудио
 
@@ -2168,35 +2370,50 @@ class Audio(AudioMessages):
         :bdg-link-light:`Пример <../../user_guide/notebooks/Audio-get_audio_union_predictions.ipynb>`
         """
 
-        self._clear_notebook_history_output() # Очистка истории вывода сообщений в ячейке Jupyter
+        self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter
 
         # Сброс
-        self._df_files = pd.DataFrame() # Пустой DataFrame с данными
-        self._df_accuracy = pd.DataFrame() # Пустой DataFrame с результатами вычисления точности
+        self._df_files = pd.DataFrame()  # Пустой DataFrame с данными
+        self._df_accuracy = pd.DataFrame()  # Пустой DataFrame с результатами вычисления точности
 
         try:
             # Проверка аргументов
-            if (type(depth) is not int or depth < 1 or type(out) is not bool or type(recursive) is not bool
-                    or type(sr) is not int or sr < 1
-                    or ((type(window) is not int or window < 1) and (type(window) is not float or window <= 0))
-                    or ((type(step) is not int or step < 1) and (type(step) is not float or step <= 0))
-                    or type(accuracy) is not bool or type(url_accuracy) is not str
-                    or type(logs) is not bool or type(runtime) is not bool or type(run) is not bool):
+            if (
+                type(depth) is not int
+                or depth < 1
+                or type(out) is not bool
+                or type(recursive) is not bool
+                or type(sr) is not int
+                or sr < 1
+                or ((type(window) is not int or window < 1) and (type(window) is not float or window <= 0))
+                or ((type(step) is not int or step < 1) and (type(step) is not float or step <= 0))
+                or type(accuracy) is not bool
+                or type(url_accuracy) is not str
+                or type(logs) is not bool
+                or type(runtime) is not bool
+                or type(run) is not bool
+            ):
                 raise TypeError
         except TypeError:
-            self._inv_args(__class__.__name__, self.get_audio_union_predictions.__name__, out = out); return False
+            self._inv_args(__class__.__name__, self.get_audio_union_predictions.__name__, out=out)
+            return False
         else:
             # Блокировка выполнения
-            if run is False: self._error(self._lock_user, out = out); return False
+            if run is False:
+                self._error(self._lock_user, out=out)
+                return False
 
-            if runtime: self._r_start()
+            if runtime:
+                self._r_start()
 
             try:
                 # Получение директорий, где хранятся данные
-                path_to_data = self._get_paths(self.path_to_dataset_, depth, out = out)
-                if type(path_to_data) is bool: return False
+                path_to_data = self._get_paths(self.path_to_dataset_, depth, out=out)
+                if type(path_to_data) is bool:
+                    return False
 
-                if type(self.keys_dataset_) is not list: raise TypeError
+                if type(self.keys_dataset_) is not list:
+                    raise TypeError
 
                 # Словарь для DataFrame набора данных с данными
                 self._dict_of_files = dict(zip(self.keys_dataset_, [[] for _ in range(0, len(self.keys_dataset_))]))
@@ -2205,90 +2422,119 @@ class Audio(AudioMessages):
                     zip(self.keys_dataset_[1:], [[] for _ in range(0, len(self.keys_dataset_[1:]))])
                 )
             except (TypeError, FileNotFoundError):
-                self._other_error(self._folder_not_found.format(self._info_wrapper(self.path_to_dataset_)), out = out)
+                self._other_error(self._folder_not_found.format(self._info_wrapper(self.path_to_dataset_)), out=out)
                 return False
-            except Exception: self._other_error(self._unknown_err, out = out); return False
+            except Exception:
+                self._other_error(self._unknown_err, out=out)
+                return False
             else:
                 # Вычисление точности
                 if accuracy is True:
                     get_audio_union_predictions_info = self._get_union_predictions_info + self._get_accuracy_info
-                else: get_audio_union_predictions_info = self._get_union_predictions_info
+                else:
+                    get_audio_union_predictions_info = self._get_union_predictions_info
 
                 get_audio_union_predictions_info += self._audio_modality
 
                 # Вычисление точности
                 if accuracy is True:
                     # Информационное сообщение
-                    self._info(get_audio_union_predictions_info, out = out)
+                    self._info(get_audio_union_predictions_info, out=out)
 
-                    if not url_accuracy: url_accuracy = self._true_traits['sberdisk']
+                    if not url_accuracy:
+                        url_accuracy = self._true_traits["sberdisk"]
 
                     try:
                         # Загрузка верных предсказаний
                         data_true_traits = pd.read_csv(url_accuracy)
                     except (FileNotFoundError, URLError, UnicodeDecodeError):
-                        self._other_error(self._load_data_true_traits_error, out = out); return False
-                    except Exception: self._other_error(self._unknown_err, out = out); return False
+                        self._other_error(self._load_data_true_traits_error, out=out)
+                        return False
+                    except Exception:
+                        self._other_error(self._unknown_err, out=out)
+                        return False
                     else:
                         true_traits = []
                         self._del_last_el_notebook_history_output()
 
-                paths = [] # Пути до искомых файлов
+                paths = []  # Пути до искомых файлов
 
                 # Проход по всем директориям
                 for curr_path in path_to_data:
-                    empty = True # По умолчанию директория пустая
+                    empty = True  # По умолчанию директория пустая
 
                     # Рекурсивный поиск данных
-                    if recursive is True: g = Path(curr_path).rglob('*')
-                    else: g = Path(curr_path).glob('*')
+                    if recursive is True:
+                        g = Path(curr_path).rglob("*")
+                    else:
+                        g = Path(curr_path).glob("*")
 
                     # Формирование словаря для DataFrame
                     for p in g:
                         try:
-                            if type(self.ext_) is not list or len(self.ext_) < 1: raise TypeError
+                            if type(self.ext_) is not list or len(self.ext_) < 1:
+                                raise TypeError
 
                             self.ext_ = [x.lower() for x in self.ext_]
-                        except TypeError: self._other_error(self._wrong_ext, out = out); return False
-                        except Exception: self._other_error(self._unknown_err, out = out); return False
+                        except TypeError:
+                            self._other_error(self._wrong_ext, out=out)
+                            return False
+                        except Exception:
+                            self._other_error(self._unknown_err, out=out)
+                            return False
                         else:
                             # Расширение файла соответствует расширению искомых файлов
                             if p.suffix.lower() in self.ext_:
-                                if empty is True: empty = False # Каталог не пустой
+                                if empty is True:
+                                    empty = False  # Каталог не пустой
 
                                 paths.append(p.resolve())
 
                 try:
-                    self.__len_paths = len(paths) # Количество искомых файлов
+                    self.__len_paths = len(paths)  # Количество искомых файлов
 
-                    if self.__len_paths == 0: raise TypeError
-                except TypeError: self._other_error(self._files_not_found, out = out); return False
-                except Exception: self._other_error(self._unknown_err, out = out); return False
+                    if self.__len_paths == 0:
+                        raise TypeError
+                except TypeError:
+                    self._other_error(self._files_not_found, out=out)
+                    return False
+                except Exception:
+                    self._other_error(self._unknown_err, out=out)
+                    return False
                 else:
                     # Локальный путь
                     self.__local_path = lambda path: os.path.join(
-                        *Path(path).parts[-abs((len(Path(path).parts) - len(Path(self.path_to_dataset_).parts))):]
+                        *Path(path).parts[-abs((len(Path(path).parts) - len(Path(self.path_to_dataset_).parts))) :]
                     )
 
-                    last = False # Замена последнего сообщения
+                    last = False  # Замена последнего сообщения
 
                     # Проход по всем искомым файлов
                     for i, curr_path in enumerate(paths):
-                        if i != 0: last = True
+                        if i != 0:
+                            last = True
 
                         # Индикатор выполнения
                         self._progressbar_union_predictions(
-                            get_audio_union_predictions_info, i, self.__local_path(curr_path), self.__len_paths,
-                            True, last, out
+                            get_audio_union_predictions_info,
+                            i,
+                            self.__local_path(curr_path),
+                            self.__len_paths,
+                            True,
+                            last,
+                            out,
                         )
 
                         # Извлечение признаков из акустического сигнала
                         hc_features, melspectrogram_features = self._get_acoustic_features(
-                            path = str(curr_path.resolve()),
-                            sr = sr,
-                            window = window,
-                            step = step,
-                            last = True, out = False, runtime = False, run = run
+                            path=str(curr_path.resolve()),
+                            sr=sr,
+                            window=window,
+                            step=step,
+                            last=True,
+                            out=False,
+                            runtime=False,
+                            run=run,
                         )
 
                         # Признаки из акустического сигнала извлечены
@@ -2299,36 +2545,44 @@ class Audio(AudioMessages):
 
                             try:
                                 # Оправка экспертных признаков в нейросетевую модель
-                                pred_hc = self.audio_model_hc_(np.array(hc_features, dtype = np.float16)).numpy()
-                            except TypeError: code_error_pred_hc = 1
-                            except Exception: code_error_pred_hc = 2
+                                pred_hc = self.audio_model_hc_(np.array(hc_features, dtype=np.float16)).numpy()
+                            except TypeError:
+                                code_error_pred_hc = 1
+                            except Exception:
+                                code_error_pred_hc = 2
 
                             try:
                                 # Отправка нейросетевых признаков в нейросетевую модель
                                 pred_melspectrogram = self.audio_model_nn_(
-                                    np.array(melspectrogram_features, dtype = np.float16)
+                                    np.array(melspectrogram_features, dtype=np.float16)
                                 ).numpy()
-                            except TypeError: code_error_pred_melspectrogram = 1
-                            except Exception: code_error_pred_melspectrogram = 2
+                            except TypeError:
+                                code_error_pred_melspectrogram = 1
+                            except Exception:
+                                code_error_pred_melspectrogram = 2
 
                             if code_error_pred_hc != -1 and code_error_pred_melspectrogram != -1:
-                                self._error(self._models_audio_not_formation, out = out); return False
+                                self._error(self._models_audio_not_formation, out=out)
+                                return False
 
                             if code_error_pred_hc != -1:
-                                self._error(self._model_audio_hc_not_formation, out = out); return False
+                                self._error(self._model_audio_hc_not_formation, out=out)
+                                return False
 
                             if code_error_pred_melspectrogram != -1:
-                                self._error(self._model_audio_nn_not_formation, out = out); return False
+                                self._error(self._model_audio_nn_not_formation, out=out)
+                                return False
 
                             # Конкатенация оценок по экспертным и нейросетевым признакам
-                            union_pred = self.__concat_pred(pred_hc, pred_melspectrogram, out = out)
+                            union_pred = self.__concat_pred(pred_hc, pred_melspectrogram, out=out)
 
-                            if len(union_pred) == 0: return False
+                            if len(union_pred) == 0:
+                                return False
 
                             final_pred = []
 
                             for cnt, (name_b5, model) in enumerate(self.audio_models_b5_.items()):
-                                result = model(np.expand_dims(union_pred[cnt], axis = 0)).numpy()[0][0]
+                                result = model(np.expand_dims(union_pred[cnt], axis=0)).numpy()[0][0]
 
                                 final_pred.append(result)
 
@@ -2339,27 +2593,44 @@ class Audio(AudioMessages):
                             # Вычисление точности
                             if accuracy is True:
                                 try:
-                                    true_trait = data_true_traits[
-                                        data_true_traits.NAME_VIDEO == curr_path.name
-                                    ][list(self._b5['en'])].values[0].tolist()
+                                    true_trait = (
+                                        data_true_traits[data_true_traits.NAME_VIDEO == curr_path.name][
+                                            list(self._b5["en"])
+                                        ]
+                                        .values[0]
+                                        .tolist()
+                                    )
                                 except IndexError:
-                                    self._other_error(self._expert_values_not_found, out = out); return False
-                                except Exception: self._other_error(self._unknown_err, out = out); return False
-                                else: true_traits.append(true_trait)
+                                    self._other_error(self._expert_values_not_found, out=out)
+                                    return False
+                                except Exception:
+                                    self._other_error(self._unknown_err, out=out)
+                                    return False
+                                else:
+                                    true_traits.append(true_trait)
                         else:
                             # Добавление данных в словарь для DataFrame
-                            if self._append_to_list_of_files(
-                                str(curr_path.resolve()), [None] * len(self._b5['en']), out
-                            ) is False: return False
+                            if (
+                                self._append_to_list_of_files(
+                                    str(curr_path.resolve()), [None] * len(self._b5["en"]), out
+                                )
+                                is False
+                            ):
+                                return False
 
                     # Индикатор выполнения
                     self._progressbar_union_predictions(
-                        get_audio_union_predictions_info, self.__len_paths, self.__local_path(paths[-1]),
-                        self.__len_paths, True, last, out
+                        get_audio_union_predictions_info,
+                        self.__len_paths,
+                        self.__local_path(paths[-1]),
+                        self.__len_paths,
+                        True,
+                        last,
+                        out,
                     )
 
                     # Отображение в DataFrame с данными
-                    self._df_files = pd.DataFrame.from_dict(data = self._dict_of_files, orient = 'index').transpose()
+                    self._df_files = pd.DataFrame.from_dict(data=self._dict_of_files, orient="index").transpose()
                     self._df_files.index.name = self._keys_id
                     self._df_files.index += 1
 
@@ -2367,7 +2638,7 @@ class Audio(AudioMessages):
 
                     # Отображение
                     if out is True:
-                        self._add_notebook_history_output(self._df_files.iloc[0:self.num_to_df_display_, :])
+                        self._add_notebook_history_output(self._df_files.iloc[0 : self.num_to_df_display_, :])
 
                     # Подсчет точности
                     if accuracy is True:
@@ -2375,9 +2646,7 @@ class Audio(AudioMessages):
 
                         for cnt, name_b5 in enumerate(self._df_files.keys().tolist()[1:]):
                             mae_curr.append(
-                                mean_absolute_error(
-                                    np.asarray(true_traits)[:, cnt], self._df_files[name_b5].to_list()
-                                )
+                                mean_absolute_error(np.asarray(true_traits)[:, cnt], self._df_files[name_b5].to_list())
                             )
 
                         mae_curr = [round(float(i), 4) for i in mae_curr]
@@ -2387,62 +2656,65 @@ class Audio(AudioMessages):
 
                         for curr_acc in [mae_curr, accuracy_curr]:
                             # Добавление данных в словарь для DataFrame с результатами вычисления точности
-                            if self._append_to_list_of_accuracy(curr_acc, out) is False: return False
+                            if self._append_to_list_of_accuracy(curr_acc, out) is False:
+                                return False
 
-                        self._dict_of_accuracy.update({
-                            self.__df_accuracy_mean: [mae_mean, accuracy_mean]
-                        })
+                        self._dict_of_accuracy.update({self.__df_accuracy_mean: [mae_mean, accuracy_mean]})
                         # Отображение в DataFrame с данными
-                        self._df_accuracy = pd.DataFrame.from_dict(data = self._dict_of_accuracy,
-                                                                   orient = 'index').transpose()
+                        self._df_accuracy = pd.DataFrame.from_dict(
+                            data=self._dict_of_accuracy, orient="index"
+                        ).transpose()
                         self._df_accuracy.index = self.__df_accuracy_index
                         self._df_accuracy.index.name = self.__df_accuracy_index_name
 
                         # Информационное сообщение
-                        self._info(self._get_union_predictions_result, out = False)
+                        self._info(self._get_union_predictions_result, out=False)
 
                         # Отображение
                         if out is True:
-                            self._add_notebook_history_output(self._df_accuracy.iloc[0:self.num_to_df_display_, :])
+                            self._add_notebook_history_output(self._df_accuracy.iloc[0 : self.num_to_df_display_, :])
 
                         self._info(
                             self._get_union_predictions_results_mean.format(
-                                self._info_wrapper(str(mae_mean)),
-                                self._info_wrapper(str(accuracy_mean))
+                                self._info_wrapper(str(mae_mean)), self._info_wrapper(str(accuracy_mean))
                             ),
-                            out = False
+                            out=False,
                         )
 
                     clear_output(True)
                     # Отображение истории вывода сообщений в ячейке Jupyter
-                    if out is True: self.show_notebook_history_output()
+                    if out is True:
+                        self.show_notebook_history_output()
 
                     if logs is True:
                         # Текущее время для лог-файла
                         # см. datetime.fromtimestamp()
-                        curr_ts = str(datetime.now().timestamp()).replace('.', '_')
+                        curr_ts = str(datetime.now().timestamp()).replace(".", "_")
 
                         name_logs_file = self.get_audio_union_predictions.__name__
 
                         # Сохранение LOG
                         res_save_logs_df_files = self._save_logs(
-                            self._df_files, name_logs_file + '_df_files_' + curr_ts
+                            self._df_files, name_logs_file + "_df_files_" + curr_ts
                         )
 
                         # Подсчет точности
                         if accuracy is True:
                             # Сохранение LOG
                             res_save_logs_df_accuracy = self._save_logs(
-                                self._df_accuracy, name_logs_file + '_df_accuracy_' + curr_ts
+                                self._df_accuracy, name_logs_file + "_df_accuracy_" + curr_ts
                             )
 
                         if res_save_logs_df_files is True:
                             # Сохранение LOG файла/файлов
-                            if accuracy is True and res_save_logs_df_accuracy is True: logs_s = self._logs_saves_true
-                            else: logs_s = self._logs_save_true
+                            if accuracy is True and res_save_logs_df_accuracy is True:
+                                logs_s = self._logs_saves_true
+                            else:
+                                logs_s = self._logs_save_true
 
-                            self._info_true(logs_s, out = out)
+                            self._info_true(logs_s, out=out)
 
                     return True
             finally:
-                if runtime: self._r_end(out = out)
+                if runtime:
+                    self._r_end(out=out)

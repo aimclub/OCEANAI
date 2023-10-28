@@ -8,49 +8,53 @@
 # ######################################################################################################################
 # Импорт необходимых инструментов
 # ######################################################################################################################
-# Подавление Warning
+
 import warnings
-for warn in [UserWarning, FutureWarning]: warnings.filterwarnings('ignore', category = warn)
 
-from dataclasses import dataclass # Класс данных
+# Подавление Warning
+for warn in [UserWarning, FutureWarning]:
+    warnings.filterwarnings("ignore", category=warn)
 
-import os                 # Взаимодействие с файловой системой
-import sys                # Доступ к некоторым переменным и функциям Python
-import re                 # Регулярные выражения
-import time               # Работа со временем
-import numpy as np        # Научные вычисления
+from dataclasses import dataclass  # Класс данных
+
+import os  # Взаимодействие с файловой системой
+import sys  # Доступ к некоторым переменным и функциям Python
+import re  # Регулярные выражения
+import time  # Работа со временем
+import numpy as np  # Научные вычисления
 import scipy
-import pandas as pd       # Обработка и анализ данных
-import opensmile          # Анализ, обработка и классификация звука
-import jupyterlab as jlab # Интерактивная среда разработки для работы с блокнотами, кодом и данными
-import requests           # Отправка HTTP запросов
-import librosa            # Обработка аудио
-import audioread          # Декодирование звука
-import sklearn            # Машинное обучение и интеллектуальный анализ данных
-import cv2                # Алгоритмы компьютерного зрения
-import mediapipe as mp    # Набор нейросетевых моделей и решений для компьютерного зрения
+import pandas as pd  # Обработка и анализ данных
+import opensmile  # Анализ, обработка и классификация звука
+import jupyterlab as jlab  # Интерактивная среда разработки для работы с блокнотами, кодом и данными
+import requests  # Отправка HTTP запросов
+import librosa  # Обработка аудио
+import audioread  # Декодирование звука
+import sklearn  # Машинное обучение и интеллектуальный анализ данных
+import cv2  # Алгоритмы компьютерного зрения
+import mediapipe as mp  # Набор нейросетевых моделей и решений для компьютерного зрения
 import IPython
 import logging
-import pymediainfo        # Получение meta данных из медиафайлов
-import urllib.error       # Обработка ошибок URL
+import pymediainfo  # Получение meta данных из медиафайлов
+import urllib.error  # Обработка ошибок URL
 import math
 
-from datetime import datetime # Работа со временем
-from typing import List, Dict, Tuple, Union, Optional, Iterable # Типы данных
+from datetime import datetime  # Работа со временем
+from typing import List, Dict, Tuple, Union, Optional, Iterable  # Типы данных
 
 from IPython import get_ipython
 from IPython.display import Markdown, display, clear_output
 
 # Персональные
-import oceanai                                     # oceanai - персональные качества личности человека
-from oceanai.modules.core.settings import Settings # Глобальный файл настроек
+import oceanai  # oceanai - персональные качества личности человека
+from oceanai.modules.core.settings import Settings  # Глобальный файл настроек
 
 # Порог регистрации сообщений TensorFlow
 logging.disable(logging.WARNING)
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
-import tensorflow as tf # Машинное обучение от Google
+import tensorflow as tf  # Машинное обучение от Google
 import keras
+
 
 # ######################################################################################################################
 # Сообщения
@@ -75,53 +79,75 @@ class CoreMessages(Settings):
     # ------------------------------------------------------------------------------------------------------------------
 
     def __post_init__(self):
-        super().__post_init__() # Выполнение конструктора из суперкласса
+        super().__post_init__()  # Выполнение конструктора из суперкласса
 
-        self._trac_file: str = self._('Файл')
-        self._trac_line: str = self._('Линия')
-        self._trac_method: str = self._('Метод')
-        self._trac_type_err: str = self._('Тип ошибки')
+        self._trac_file: str = self._("Файл")
+        self._trac_line: str = self._("Линия")
+        self._trac_method: str = self._("Метод")
+        self._trac_type_err: str = self._("Тип ошибки")
 
-        self._sec: str = self._('сек.')
+        self._sec: str = self._("сек.")
 
         self._folder_not_found: str = self._oh + self._('директория "{}" не найдена ...')
-        self._files_not_found: str = self._oh + self._('в указанной директории необходимые файлы не найдены ...')
+        self._files_not_found: str = self._oh + self._("в указанной директории необходимые файлы не найдены ...")
         self._file_not_found: str = self._oh + self._('файл "{}" не найден ...')
         self._directory_inst_file: str = self._oh + self._('вместо файла передана директория "{}" ...')
         self._no_acoustic_signal: str = self._oh + self._('файл "{}" не содержит акустического сигнала ...')
-        self._url_error_log: str = self._oh + self._('не удалось сохранить LOG файл{} ...')
-        self._url_error_code_log: str = self._(' (ошибка {})')
+        self._url_error_log: str = self._oh + self._("не удалось сохранить LOG файл{} ...")
+        self._url_error_code_log: str = self._(" (ошибка {})")
 
-        self._mul: str = '&#10005;' # Знак умножения
+        self._mul: str = "&#10005;"  # Знак умножения
 
-        self._get_acoustic_feature_stat: str = '{}' * 4 + self._(
-            'Статистика извлеченных признаков из акустического сигнала:'
-            '{}Общее количество сегментов с:'
-            '{}1. экспертными признаками: {}'
-            '{}2. лог мел-спектрограммами: {}'
-            '{}Размерность матрицы экспертных признаков одного сегмента: '
-            '{} ') + self._mul + ' {}' + \
-            self._('{}Размерность тензора с лог мел-спектрограммами одного сегмента:') + \
-            '{} ' + self._mul + ' {} ' + self._mul + ' {}'
-
-        self._get_visual_feature_stat: str = '{}' * 4 + self._(
-            'Статистика извлеченных признаков из визуального сигнала:'
-            '{}Общее количество сегментов с:'
-            '{}1. экспертными признаками: {}'
-            '{}2. нейросетевыми признаками: {}'
-            '{}Размерность матрицы экспертных признаков одного сегмента: '
-            '{} ') + self._mul + ' {}' + \
-            self._('{}Размерность тензора с нейросетевыми признаками одного сегмента:') + \
-            '{} ' + self._mul + ' {} ' + \
-            self._('{}Понижение кадровой частоты: с') + '{} ' + self._('до') + ' {} '
-
-        self._curr_progress_union_predictions: str = '{} ' + self._from_precent + ' {} ({}%) ... {} ...'
-
-        self._sum_ranking_exceeded: str = self._oh + self._(
-            'сумма весов для ранжирования персональных качеств должна быть равна 100 ...'
+        self._get_acoustic_feature_stat: str = (
+            "{}" * 4
+            + self._(
+                "Статистика извлеченных признаков из акустического сигнала:"
+                "{}Общее количество сегментов с:"
+                "{}1. экспертными признаками: {}"
+                "{}2. лог мел-спектрограммами: {}"
+                "{}Размерность матрицы экспертных признаков одного сегмента: "
+                "{} "
+            )
+            + self._mul
+            + " {}"
+            + self._("{}Размерность тензора с лог мел-спектрограммами одного сегмента:")
+            + "{} "
+            + self._mul
+            + " {} "
+            + self._mul
+            + " {}"
         )
 
-        self._dataframe_empty: str = self._oh + self._('DataFrame с данными пуст ...')
+        self._get_visual_feature_stat: str = (
+            "{}" * 4
+            + self._(
+                "Статистика извлеченных признаков из визуального сигнала:"
+                "{}Общее количество сегментов с:"
+                "{}1. экспертными признаками: {}"
+                "{}2. нейросетевыми признаками: {}"
+                "{}Размерность матрицы экспертных признаков одного сегмента: "
+                "{} "
+            )
+            + self._mul
+            + " {}"
+            + self._("{}Размерность тензора с нейросетевыми признаками одного сегмента:")
+            + "{} "
+            + self._mul
+            + " {} "
+            + self._("{}Понижение кадровой частоты: с")
+            + "{} "
+            + self._("до")
+            + " {} "
+        )
+
+        self._curr_progress_union_predictions: str = "{} " + self._from_precent + " {} ({}%) ... {} ..."
+
+        self._sum_ranking_exceeded: str = self._oh + self._(
+            "сумма весов для ранжирования персональных качеств должна быть равна 100 ..."
+        )
+
+        self._dataframe_empty: str = self._oh + self._("DataFrame с данными пуст ...")
+
 
 # ######################################################################################################################
 # Ядро модулей
@@ -146,93 +172,110 @@ class Core(CoreMessages):
     # ------------------------------------------------------------------------------------------------------------------
 
     def __post_init__(self):
-        super().__post_init__() # Выполнение конструктора из суперкласса
+        super().__post_init__()  # Выполнение конструктора из суперкласса
 
-        self._start_time: Union[int, float] = -1 # Старт времени выполнения
-        self._runtime: Union[int, float] = -1 # Время выполнения
+        self._start_time: Union[int, float] = -1  # Старт времени выполнения
+        self._runtime: Union[int, float] = -1  # Время выполнения
 
-        self._notebook_history_output: List[str] = [] # История вывода сообщений в ячейке Jupyter
+        self._notebook_history_output: List[str] = []  # История вывода сообщений в ячейке Jupyter
 
-        self._df_pkgs: pd.DataFrame = pd.DataFrame() # DataFrame c версиями установленных библиотек
+        self._df_pkgs: pd.DataFrame = pd.DataFrame()  # DataFrame c версиями установленных библиотек
 
         # Персональные качества личности человека (Порядок только такой)
         self._b5: Dict[str, Tuple[str, ...]] = {
-            'en': ('openness', 'conscientiousness', 'extraversion', 'agreeableness', 'neuroticism'),
-            'ru': (self._('открытость опыту'), self._('добросовестность'), self._('экстраверсия'),
-                   self._('доброжелательность'), self._('нейротизм'))
+            "en": ("openness", "conscientiousness", "extraversion", "agreeableness", "neuroticism"),
+            "ru": (
+                self._("открытость опыту"),
+                self._("добросовестность"),
+                self._("экстраверсия"),
+                self._("доброжелательность"),
+                self._("нейротизм"),
+            ),
         }
 
         # Веса для нейросетевых архитектур
         self._weights_for_big5: Dict[str, Dict] = {
-            'audio': {
-                'hc': {
-                    'sberdisk': 'https://download.sberdisk.ru/download/file/400635799?token=MMRrak8fMsyzxLE&filename=weights_2022-05-05_11-27-55.h5',
+            "audio": {
+                "hc": {
+                    "sberdisk": "https://download.sberdisk.ru/download/file/400635799?token=MMRrak8fMsyzxLE&filename=weights_2022-05-05_11-27-55.h5",
                 },
-                'nn': {
-                    'sberdisk': 'https://download.sberdisk.ru/download/file/400635678?token=W6LCtD33FQHnYEz&filename=weights_2022-05-03_07-46-14.h5',
+                "nn": {
+                    "sberdisk": "https://download.sberdisk.ru/download/file/400635678?token=W6LCtD33FQHnYEz&filename=weights_2022-05-03_07-46-14.h5",
                 },
-                'b5': {
-                    'openness': {
-                        'sberdisk': 'https://download.sberdisk.ru/download/file/405035301?token=443WRA9MFWqWBAE&filename=weights_2022-06-15_16-16-20.h5',
+                "b5": {
+                    "openness": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/405035301?token=443WRA9MFWqWBAE&filename=weights_2022-06-15_16-16-20.h5",
                     },
-                    'conscientiousness': {
-                        'sberdisk': 'https://download.sberdisk.ru/download/file/405034601?token=eDG28m3H6c8bWoE&filename=weights_2022-06-15_16-21-57.h5',
+                    "conscientiousness": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/405034601?token=eDG28m3H6c8bWoE&filename=weights_2022-06-15_16-21-57.h5",
                     },
-                    'extraversion': {
-                        'sberdisk': 'https://download.sberdisk.ru/download/file/405034830?token=3daBSTYnmZaesee&filename=weights_2022-06-15_16-26-41.h5',
+                    "extraversion": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/405034830?token=3daBSTYnmZaesee&filename=weights_2022-06-15_16-26-41.h5",
                     },
-                    'agreeableness': {
-                        'sberdisk': 'https://download.sberdisk.ru/download/file/405034397?token=52ZPHMjb4CFmdYa&filename=weights_2022-06-15_16-32-51.h5',
+                    "agreeableness": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/405034397?token=52ZPHMjb4CFmdYa&filename=weights_2022-06-15_16-32-51.h5",
                     },
-                    'neuroticism': {
-                        'sberdisk': 'https://download.sberdisk.ru/download/file/405035156?token=q8CZJ99rZqcNxkM&filename=weights_2022-06-15_16-37-46.h5',
-                    },
-                },
-            },
-            'video': {
-                'hc': {
-                    'sberdisk': 'https://download.sberdisk.ru/download/file/412059444?token=JXerCfAjJZg6crD&filename=weights_2022-08-27_18-53-35.h5',
-                },
-                'nn': {
-                    'sberdisk': 'https://download.sberdisk.ru/download/file/412059478?token=85KeW6q4QKy6kP8&filename=weights_2022-03-22_16-31-48.h5',
-                },
-                'fe': {
-                    'sberdisk': 'https://download.sberdisk.ru/download/file/414207833?token=ygzxWEkndjSMnEL&filename=weights_2022-11-01_12-27-07.h5'
-                },
-                'b5': {
-                    'openness': {
-                        'sberdisk': 'https://download.sberdisk.ru/download/file/415127050?token=rfpy9TLdbeXtiN7&filename=weights_2022-06-15_16-46-30.h5',
-                    },
-                    'conscientiousness': {
-                        'sberdisk': 'https://download.sberdisk.ru/download/file/415126986?token=PnjzaHaR3wPg2RT&filename=weights_2022-06-15_16-48-50.h5',
-                    },
-                    'extraversion': {
-                        'sberdisk': 'https://download.sberdisk.ru/download/file/415127012?token=s5aTwbt8DBkt7G4&filename=weights_2022-06-15_16-54-06.h5',
-                    },
-                    'agreeableness': {
-                        'sberdisk': 'https://download.sberdisk.ru/download/file/415126845?token=joN7TMHk59Gffsf&filename=weights_2022-06-15_17-02-03.h5',
-                    },
-                    'neuroticism': {
-                        'sberdisk': 'https://download.sberdisk.ru/download/file/415127032?token=NEBSsE7mjyjen3o&filename=weights_2022-06-15_17-06-15.h5',
+                    "neuroticism": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/405035156?token=q8CZJ99rZqcNxkM&filename=weights_2022-06-15_16-37-46.h5",
                     },
                 },
             },
-            'av': {
-                'b5': {
-                    'openness': {
-                        'sberdisk': 'https://download.sberdisk.ru/download/file/425515223?token=Btoo2flpzGewhry&filename=weights_2022-08-28_11-14-35.h5',
+            "video": {
+                "hc": {
+                    "sberdisk": "https://download.sberdisk.ru/download/file/412059444?token=JXerCfAjJZg6crD&filename=weights_2022-08-27_18-53-35.h5",
+                },
+                "nn": {
+                    "sberdisk": "https://download.sberdisk.ru/download/file/412059478?token=85KeW6q4QKy6kP8&filename=weights_2022-03-22_16-31-48.h5",
+                },
+                "fe": {
+                    "sberdisk": "https://download.sberdisk.ru/download/file/414207833?token=ygzxWEkndjSMnEL&filename=weights_2022-11-01_12-27-07.h5"
+                },
+                "b5": {
+                    "openness": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/415127050?token=rfpy9TLdbeXtiN7&filename=weights_2022-06-15_16-46-30.h5",
                     },
-                    'conscientiousness': {
-                        'sberdisk': 'https://download.sberdisk.ru/download/file/425515311?token=bUjloqk32e4wasj&filename=weights_2022-08-28_11-08-10.h5',
+                    "conscientiousness": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/415126986?token=PnjzaHaR3wPg2RT&filename=weights_2022-06-15_16-48-50.h5",
                     },
-                    'extraversion': {
-                        'sberdisk': 'https://download.sberdisk.ru/download/file/425515337?token=IC44ovFFcnj4DZl&filename=weights_2022-08-28_11-17-57.h5',
+                    "extraversion": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/415127012?token=s5aTwbt8DBkt7G4&filename=weights_2022-06-15_16-54-06.h5",
                     },
-                    'agreeableness': {
-                        'sberdisk': 'https://download.sberdisk.ru/download/file/425515346?token=gFjvtM2HIabtsvc&filename=weights_2022-08-28_11-25-11.h5',
+                    "agreeableness": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/415126845?token=joN7TMHk59Gffsf&filename=weights_2022-06-15_17-02-03.h5",
                     },
-                    'neuroticism': {
-                        'sberdisk': 'https://download.sberdisk.ru/download/file/425515375?token=pPpzOQC9z6WMzNt&filename=weights_2022-06-14_21-44-09.h5',
+                    "neuroticism": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/415127032?token=NEBSsE7mjyjen3o&filename=weights_2022-06-15_17-06-15.h5",
+                    },
+                },
+            },
+            "text": {
+                "fi": {
+                    "hc": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/472034034?token=59eA6DXo6GXWV77&filename=weights_2023-07-15_10-52-15.h5",
+                    },
+                },
+                "mupta": {
+                    "hc": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/472042355?token=MUJ82JsJiRe6RIz&filename=weights_2023-07-15_10-53-38.h5",
+                    },
+                },
+            },
+            "av": {
+                "b5": {
+                    "openness": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/425515223?token=Btoo2flpzGewhry&filename=weights_2022-08-28_11-14-35.h5",
+                    },
+                    "conscientiousness": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/425515311?token=bUjloqk32e4wasj&filename=weights_2022-08-28_11-08-10.h5",
+                    },
+                    "extraversion": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/425515337?token=IC44ovFFcnj4DZl&filename=weights_2022-08-28_11-17-57.h5",
+                    },
+                    "agreeableness": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/425515346?token=gFjvtM2HIabtsvc&filename=weights_2022-08-28_11-25-11.h5",
+                    },
+                    "neuroticism": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/425515375?token=pPpzOQC9z6WMzNt&filename=weights_2022-06-14_21-44-09.h5",
                     },
                 },
             },
@@ -240,36 +283,46 @@ class Core(CoreMessages):
 
         # Верные предсказания для подсчета точности
         self._true_traits: Dict[str, str] = {
-            'sberdisk': 'https://download.sberdisk.ru/download/file/410305241?token=TFePK6w5CW6ADnq&filename=data_true_traits.csv',
+            "sberdisk": "https://download.sberdisk.ru/download/file/410305241?token=TFePK6w5CW6ADnq&filename=data_true_traits.csv",
         }
 
-        self._df_files: pd.DataFrame = pd.DataFrame() # DataFrame с данными
-        self._df_files_ranking: pd.DataFrame = pd.DataFrame() # DataFrame с ранжированными данными
+        self._df_files: pd.DataFrame = pd.DataFrame()  # DataFrame с данными
+        self._df_files_ranking: pd.DataFrame = pd.DataFrame()  # DataFrame с ранжированными данными
         # DataFrame с ранжированными предпочтениями на основе данных
         self._df_files_priority: pd.DataFrame = pd.DataFrame()
-        self._dict_of_files: Dict[str, List[Union[int, str, float]]] = {} # Словарь для DataFrame с данными
+        self._dict_of_files: Dict[str, List[Union[int, str, float]]] = {}  # Словарь для DataFrame с данными
 
-        self._df_accuracy: pd.DataFrame = pd.DataFrame() # DataFrame с результатами вычисления точности
+        self._df_accuracy: pd.DataFrame = pd.DataFrame()  # DataFrame с результатами вычисления точности
         # Словарь для DataFrame с результатами вычисления точности
         self._dict_of_accuracy: Dict[str, List[Union[int, float]]] = {}
 
-        self._keys_id: str = 'ID' # Идентификатор
-        self._keys_score: str = 'Candidate score' # Комплексная оценка кандидатов
-        self._keys_priority: str = 'Priority' # Приоритетные предпочтения
+        self._keys_id: str = "ID"  # Идентификатор
+        self._keys_score: str = "Candidate score"  # Комплексная оценка кандидатов
+        self._keys_priority: str = "Priority"  # Приоритетные предпочтения
         # Наиболее важные качества влияющие на приоритетные предпочтения
-        self._keys_trait_importance: str = 'Trait importance'
+        self._keys_trait_importance: str = "Trait importance"
 
-        self._ext_for_logs: str = '.csv' # Расширение для сохранения lOG файлов
+        self._ext_for_logs: str = ".csv"  # Расширение для сохранения lOG файлов
 
         # Тип файла с META информацией
         self._type_meta_info: Dict[str, List[str]] = {
-            'Video': ['format', 'duration', 'other_width', 'other_height', 'other_display_aspect_ratio',
-                      'minimum_frame_rate', 'frame_rate', 'maximum_frame_rate', 'other_bit_rate', 'encoded_date']
+            "Video": [
+                "format",
+                "duration",
+                "other_width",
+                "other_height",
+                "other_display_aspect_ratio",
+                "minimum_frame_rate",
+                "frame_rate",
+                "maximum_frame_rate",
+                "other_bit_rate",
+                "encoded_date",
+            ]
         }
 
         # ----------------------- Только для внутреннего использования внутри класса
 
-        self.__tab: str = '&nbsp;' * 4 # Табуляция (в виде пробелов)
+        self.__tab: str = "&nbsp;" * 4  # Табуляция (в виде пробелов)
 
     # ------------------------------------------------------------------------------------------------------------------
     # Свойства
@@ -770,13 +823,13 @@ class Core(CoreMessages):
                 }
         """
 
-        exc_type, exc_value, exc_traceback = sys.exc_info() # Получение информации об ошибке
+        exc_type, exc_value, exc_traceback = sys.exc_info()  # Получение информации об ошибке
 
         _trac = {
-            'filename': exc_traceback.tb_frame.f_code.co_filename,
-            'lineno': exc_traceback.tb_lineno,
-            'name': exc_traceback.tb_frame.f_code.co_name,
-            'type': exc_type.__name__
+            "filename": exc_traceback.tb_frame.f_code.co_filename,
+            "lineno": exc_traceback.tb_lineno,
+            "name": exc_traceback.tb_frame.f_code.co_name,
+            "type": exc_type.__name__,
         }
 
         return _trac
@@ -836,17 +889,22 @@ class Core(CoreMessages):
         if self.is_notebook_ is True:
             try:
                 # Проверка аргументов
-                if type(message) is not str or not message: raise TypeError
+                if type(message) is not str or not message:
+                    raise TypeError
             except TypeError:
-                self._inv_args(__class__.__name__, self._notebook_display_markdown.__name__, out = out); return None
+                self._inv_args(__class__.__name__, self._notebook_display_markdown.__name__, out=out)
+                return None
 
-            if type(last) is not bool: last = False
+            if type(last) is not bool:
+                last = False
 
-            self._add_notebook_history_output(message, last) # Добавление истории вывода сообщений в ячейке Jupyter
+            self._add_notebook_history_output(message, last)  # Добавление истории вывода сообщений в ячейке Jupyter
 
-            if type(out) is not bool: out = True
+            if type(out) is not bool:
+                out = True
 
-            if out is True: display(Markdown(message)) # Отображение
+            if out is True:
+                display(Markdown(message))  # Отображение
 
     def _metadata_info(self, last: bool = False, out: bool = True) -> None:
         """Информация об библиотеке
@@ -921,35 +979,43 @@ class Core(CoreMessages):
         if self.is_notebook_ is True:
             tab = self.__tab
 
-            b = '**' if self.bold_text_ is True else ''
+            b = "**" if self.bold_text_ is True else ""
             cr = self.color_simple_
 
-            generate_name_with_email = lambda list1, list2: ''.join(
-                map(str, map(
-                    lambda l1, l2: f'<br /><span style=\"color:{cr}\">{tab * 2}{l1} [<u>{l2}</u>]</span>',
-                    list1.split(', '), list2.split(', ')
-                ))
+            generate_name_with_email = lambda list1, list2: "".join(
+                map(
+                    str,
+                    map(
+                        lambda l1, l2: f'<br /><span style="color:{cr}">{tab * 2}{l1} [<u>{l2}</u>]</span>',
+                        list1.split(", "),
+                        list2.split(", "),
+                    ),
+                )
             )
 
             author = generate_name_with_email(
-                oceanai.__author__ru__ if self.lang_ == 'ru' else oceanai.__author__en__, oceanai.__email__
+                oceanai.__author__ru__ if self.lang_ == "ru" else oceanai.__author__en__, oceanai.__email__
             )
             maintainer = generate_name_with_email(
-                oceanai.__maintainer__ru__ \
-                    if self.lang_ == 'ru' else oceanai.__maintainer__en__, oceanai.__maintainer_email__
+                oceanai.__maintainer__ru__ if self.lang_ == "ru" else oceanai.__maintainer__en__,
+                oceanai.__maintainer_email__,
             )
 
             # Отображение сообщения
-            self._notebook_display_markdown(('{}' * 8).format(
-                f'<span style=\"color:{self.color_simple_}\">{b}[</span><span style=\"color:{self.color_info_}\">',
-                datetime.now().strftime(self._format_time),
-                f'</span><span style=\"color:{self.color_simple_}\">]</span> ',
-                f'<span style=\"color:{self.color_simple_}\">{self._metadata[0]}:</span>{b}',
-                f'<br /><span style=\"color:{cr}\">{tab}{self._metadata[1]}:</span>{author}',
-                f'<br /><span style=\"color:{cr}\">{tab}{self._metadata[2]}:</span>{maintainer}',
-                f'<br /><span style=\"color:{cr}\">{tab}{self._metadata[3]}: <u>{oceanai.__release__}</u></span>',
-                f'<br /><span style=\"color:{cr}\">{tab}{self._metadata[4]}: <u>{oceanai.__license__}</u></span></p>'
-            ), last, out)
+            self._notebook_display_markdown(
+                ("{}" * 8).format(
+                    f'<span style="color:{self.color_simple_}">{b}[</span><span style="color:{self.color_info_}">',
+                    datetime.now().strftime(self._format_time),
+                    f'</span><span style="color:{self.color_simple_}">]</span> ',
+                    f'<span style="color:{self.color_simple_}">{self._metadata[0]}:</span>{b}',
+                    f'<br /><span style="color:{cr}">{tab}{self._metadata[1]}:</span>{author}',
+                    f'<br /><span style="color:{cr}">{tab}{self._metadata[2]}:</span>{maintainer}',
+                    f'<br /><span style="color:{cr}">{tab}{self._metadata[3]}: <u>{oceanai.__release__}</u></span>',
+                    f'<br /><span style="color:{cr}">{tab}{self._metadata[4]}: <u>{oceanai.__license__}</u></span></p>',
+                ),
+                last,
+                out,
+            )
 
     def _inv_args(self, class_name: str, build_name: str, last: bool = False, out: bool = True) -> None:
         """Сообщение об указании неверных типов аргументов
@@ -1012,21 +1078,29 @@ class Core(CoreMessages):
                 # Проверка аргументов
                 if type(class_name) is not str or not class_name or type(build_name) is not str or not build_name:
                     raise TypeError
-            except TypeError: class_name, build_name = __class__.__name__, self._inv_args.__name__
+            except TypeError:
+                class_name, build_name = __class__.__name__, self._inv_args.__name__
 
-            inv_args = self._invalid_arguments.format(class_name + '.' + build_name)
+            inv_args = self._invalid_arguments.format(class_name + "." + build_name)
 
-            if len(inv_args) == 0: inv_args = self._invalid_arguments_empty
+            if len(inv_args) == 0:
+                inv_args = self._invalid_arguments_empty
 
-            b = '**' if self.bold_text_ is True else ''
+            b = "**" if self.bold_text_ is True else ""
 
             # Отображение сообщения
-            self._notebook_display_markdown('{}[{}{}{}] {}{}'.format(
-                f'<span style=\"color:{self.color_simple_}\">{b}',
-                f'</span><span style=\"color:{self.color_err_}\">',
-                datetime.now().strftime(self._format_time),
-                f'</span><span style=\"color:{self.color_simple_}\">', inv_args, f'{b}</span>'
-            ), last, out)
+            self._notebook_display_markdown(
+                "{}[{}{}{}] {}{}".format(
+                    f'<span style="color:{self.color_simple_}">{b}',
+                    f'</span><span style="color:{self.color_err_}">',
+                    datetime.now().strftime(self._format_time),
+                    f'</span><span style="color:{self.color_simple_}">',
+                    inv_args,
+                    f"{b}</span>",
+                ),
+                last,
+                out,
+            )
 
     def _info(self, message: str, last: bool = False, out: bool = True) -> None:
         """Информационное сообщение
@@ -1101,18 +1175,25 @@ class Core(CoreMessages):
         if self.is_notebook_ is True:
             try:
                 # Проверка аргументов
-                if type(message) is not str or not message: raise TypeError
-            except TypeError: self._inv_args(__class__.__name__, self._info.__name__, out = out); return None
+                if type(message) is not str or not message:
+                    raise TypeError
+            except TypeError:
+                self._inv_args(__class__.__name__, self._info.__name__, out=out)
+                return None
 
-            b = '**' if self.bold_text_ is True else ''
+            b = "**" if self.bold_text_ is True else ""
 
             # Отображение сообщения
-            self._notebook_display_markdown(('{}' * 4).format(
-                f'<span style=\"color:{self.color_simple_}\">{b}[</span><span style=\"color:{self.color_info_}\">',
-                datetime.now().strftime(self._format_time),
-                f'</span><span style=\"color:{self.color_simple_}\">]</span> ',
-                f'<span style=\"color:{self.color_simple_}\">{message}</span>{b} '
-            ), last, out)
+            self._notebook_display_markdown(
+                ("{}" * 4).format(
+                    f'<span style="color:{self.color_simple_}">{b}[</span><span style="color:{self.color_info_}">',
+                    datetime.now().strftime(self._format_time),
+                    f'</span><span style="color:{self.color_simple_}">]</span> ',
+                    f'<span style="color:{self.color_simple_}">{message}</span>{b} ',
+                ),
+                last,
+                out,
+            )
 
     def _info_wrapper(self, message: str) -> str:
         """Обернутое информационное сообщение
@@ -1152,7 +1233,7 @@ class Core(CoreMessages):
         """
 
         if self.is_notebook_ is True:
-            return ('{}' * 3).format(f'<span style=\"color:{self.color_info_}\">', message, f'</span>')
+            return ("{}" * 3).format(f'<span style="color:{self.color_info_}">', message, f"</span>")
 
     # Положительная информация
     def _info_true(self, message: str, last: bool = False, out: bool = True) -> None:
@@ -1228,14 +1309,18 @@ class Core(CoreMessages):
         if self.is_notebook_ is True:
             try:
                 # Проверка аргументов
-                if type(message) is not str or not message: raise TypeError
-            except TypeError: self._inv_args(__class__.__name__, self._info_true.__name__, out = out); return None
+                if type(message) is not str or not message:
+                    raise TypeError
+            except TypeError:
+                self._inv_args(__class__.__name__, self._info_true.__name__, out=out)
+                return None
 
-            b = '**' if self.bold_text_ is True else ''
+            b = "**" if self.bold_text_ is True else ""
 
             # Отображение сообщения
             self._notebook_display_markdown(
-                '{}'.format(f'<span style=\"color:{self.color_true_}\">{b}{message}{b}</span>'), last, out)
+                "{}".format(f'<span style="color:{self.color_true_}">{b}{message}{b}</span>'), last, out
+            )
 
     def _bold_wrapper(self, message: str) -> str:
         """Обернутое сообщение с жирным начертанием
@@ -1279,9 +1364,9 @@ class Core(CoreMessages):
         """
 
         if self.is_notebook_ is True:
-            b = '**' if self.bold_text_ is True else ''
+            b = "**" if self.bold_text_ is True else ""
 
-            return ('{}' * 3).format(f'<span style=\"color:{self.color_simple_}\">{b}', message, f'{b}</span>')
+            return ("{}" * 3).format(f'<span style="color:{self.color_simple_}">{b}', message, f"{b}</span>")
 
     def _error(self, message: str, last: bool = False, out: bool = True) -> None:
         """Сообщение об ошибке
@@ -1356,18 +1441,27 @@ class Core(CoreMessages):
         if self.is_notebook_ is True:
             try:
                 # Проверка аргументов
-                if type(message) is not str or not message: raise TypeError
-            except TypeError: self._inv_args(__class__.__name__, self._error.__name__, out = out); return None
+                if type(message) is not str or not message:
+                    raise TypeError
+            except TypeError:
+                self._inv_args(__class__.__name__, self._error.__name__, out=out)
+                return None
 
-
-            b = '**' if self.bold_text_ is True else ''
+            b = "**" if self.bold_text_ is True else ""
 
             # Отображение сообщения
-            self._notebook_display_markdown('{}[{}{}{}] {}{}'.format(
-                f'<span style=\"color:{self.color_simple_}\">{b}', f'</span><span style=\"color:{self.color_err_}\">',
-                datetime.now().strftime(self._format_time),
-                f'</span><span style=\"color:{self.color_simple_}\">', message, f'{b}</span>'
-            ), last, out)
+            self._notebook_display_markdown(
+                "{}[{}{}{}] {}{}".format(
+                    f'<span style="color:{self.color_simple_}">{b}',
+                    f'</span><span style="color:{self.color_err_}">',
+                    datetime.now().strftime(self._format_time),
+                    f'</span><span style="color:{self.color_simple_}">',
+                    message,
+                    f"{b}</span>",
+                ),
+                last,
+                out,
+            )
 
     def _other_error(self, message: str, last: bool = False, out: bool = True) -> None:
         """Сообщение об прочей ошибке
@@ -1461,25 +1555,34 @@ class Core(CoreMessages):
         if self.is_notebook_ is True:
             try:
                 # Проверка аргументов
-                if type(message) is not str or not message: raise TypeError
-            except TypeError: self._inv_args(__class__.__name__, self._other_error.__name__, out = out); return None
+                if type(message) is not str or not message:
+                    raise TypeError
+            except TypeError:
+                self._inv_args(__class__.__name__, self._other_error.__name__, out=out)
+                return None
 
-            trac = self._traceback() # Трассировка исключений
+            trac = self._traceback()  # Трассировка исключений
 
-            b = '**' if self.bold_text_ is True else ''
+            b = "**" if self.bold_text_ is True else ""
             cr = self.color_simple_
 
             # Отображение сообщения
-            self._notebook_display_markdown(('{}' * 8).format(
-                f'<span style=\"color:{cr}\">{b}[</span><span style=\"color:{self.color_err_}\">',
-                datetime.now().strftime(self._format_time),
-                f'</span><span style=\"color:{cr}\">]</span> ',
-                f'<span style=\"color:{cr}\">{message}</span>{b}',
-                f'<p><span style=\"color:{cr}\">{self.__tab}{self._trac_file}: <u>{trac["filename"]}</u></span>',
-                f'<br /><span style=\"color:{cr}\">{self.__tab}{self._trac_line}: <u>{trac["lineno"]}</u></span>',
-                f'<br /><span style=\"color:{cr}\">{self.__tab}{self._trac_method}: <u>{trac["name"]}</u></span>',
-                f'<br /><span style=\"color:{cr}\">{self.__tab}{self._trac_type_err}: <u>{trac["type"]}</u></span></p>'
-            ), last, out)
+            self._notebook_display_markdown(
+                ("{}" * 8).format(
+                    f'<span style="color:{cr}">{b}[</span><span style="color:{self.color_err_}">',
+                    datetime.now().strftime(self._format_time),
+                    f'</span><span style="color:{cr}">]</span> ',
+                    f'<span style="color:{cr}">{message}</span>{b}',
+                    f"<p>",
+                    f'<span style="color:{cr}">{self.__tab}{self._trac_file}: <u>{trac["filename"]}</u></span>',
+                    f'<br /><span style="color:{cr}">{self.__tab}{self._trac_line}: <u>{trac["lineno"]}</u></span>',
+                    f'<br /><span style="color:{cr}">{self.__tab}{self._trac_method}: <u>{trac["name"]}</u></span>',
+                    f'<br /><span style="color:{cr}">{self.__tab}{self._trac_type_err}: <u>{trac["type"]}</u></span>',
+                    f"</p>",
+                ),
+                last,
+                out,
+            )
 
     def _error_wrapper(self, message: str) -> str:
         """Обернутое сообщение об ошибке
@@ -1522,10 +1625,11 @@ class Core(CoreMessages):
         """
 
         if self.is_notebook_ is True:
-            return ('{}' * 3).format(f'<span style=\"color:{self.color_err_}\">', message, f'</span>')
+            return ("{}" * 3).format(f'<span style="color:{self.color_err_}">', message, f"</span>")
 
-    def _stat_acoustic_features(self, last: bool = False, out: bool = True,
-                                **kwargs: Union[int, Tuple[int], tf.TensorShape]) -> None:
+    def _stat_acoustic_features(
+        self, last: bool = False, out: bool = True, **kwargs: Union[int, Tuple[int], tf.TensorShape]
+    ) -> None:
         """Сообщение со статистикой извлеченных признаков из акустического сигнала
 
         .. note::
@@ -1606,31 +1710,40 @@ class Core(CoreMessages):
         if self.is_notebook_ is True:
             tab = self.__tab
 
-            b = '**' if self.bold_text_ is True else ''
+            b = "**" if self.bold_text_ is True else ""
             cr = self.color_simple_
 
             try:
                 # Отображение сообщения
-                self._notebook_display_markdown(self._get_acoustic_feature_stat.format(
-                    f'<span style=\"color:{cr}\">{b}[</span><span style=\"color:{self.color_info_}\">',
-                    datetime.now().strftime(self._format_time),
-                    f'</span><span style=\"color:{cr}\">]</span> ', f'<span style=\"color:{cr}\">',
-                    f'</span>{b}<br /><span style=\"color:{cr}\">{tab}',
-                    f'</span><br /><span style=\"color:{cr}\">{tab * 2}', f'<u>{kwargs["len_hc_features"]}</u></span>',
-                    f'<br /><span style=\"color:{cr}\">{tab * 2}',
-                    f'<u>{kwargs["len_melspectrogram_features"]}</u></span>',
-                    f'<br /><span style=\"color:{cr}\">{tab}',
-                    f'<u>{kwargs["shape_hc_features"][0]}</u>', f'<u>{kwargs["shape_hc_features"][1]}</u></span>',
-                    f'<br /><span style=\"color:{cr}\">{tab}',
-                    f' <u>{kwargs["shape_melspectrogram_features"][0]}</u>',
-                    f'<u>{kwargs["shape_melspectrogram_features"][1]}</u>',
-                    f'<u>{kwargs["shape_melspectrogram_features"][2]}</u></span>',
-                ), last, out)
+                self._notebook_display_markdown(
+                    self._get_acoustic_feature_stat.format(
+                        f'<span style="color:{cr}">{b}[</span><span style="color:{self.color_info_}">',
+                        datetime.now().strftime(self._format_time),
+                        f'</span><span style="color:{cr}">]</span> ',
+                        f'<span style="color:{cr}">',
+                        f'</span>{b}<br /><span style="color:{cr}">{tab}',
+                        f'</span><br /><span style="color:{cr}">{tab * 2}',
+                        f'<u>{kwargs["len_hc_features"]}</u></span>',
+                        f'<br /><span style="color:{cr}">{tab * 2}',
+                        f'<u>{kwargs["len_melspectrogram_features"]}</u></span>',
+                        f'<br /><span style="color:{cr}">{tab}',
+                        f'<u>{kwargs["shape_hc_features"][0]}</u>',
+                        f'<u>{kwargs["shape_hc_features"][1]}</u></span>',
+                        f'<br /><span style="color:{cr}">{tab}',
+                        f' <u>{kwargs["shape_melspectrogram_features"][0]}</u>',
+                        f'<u>{kwargs["shape_melspectrogram_features"][1]}</u>',
+                        f'<u>{kwargs["shape_melspectrogram_features"][2]}</u></span>',
+                    ),
+                    last,
+                    out,
+                )
             except KeyError:
-                self._inv_args(__class__.__name__, self._stat_acoustic_features.__name__, out = out); return None
+                self._inv_args(__class__.__name__, self._stat_acoustic_features.__name__, out=out)
+                return None
 
-    def _stat_visual_features(self, last: bool = False, out: bool = True,
-                              **kwargs: Union[int, Tuple[int], tf.TensorShape]) -> None:
+    def _stat_visual_features(
+        self, last: bool = False, out: bool = True, **kwargs: Union[int, Tuple[int], tf.TensorShape]
+    ) -> None:
         """Сообщение c статистикой извлеченных признаков из визуального сигнала
 
         .. note::
@@ -1714,28 +1827,38 @@ class Core(CoreMessages):
         if self.is_notebook_ is True:
             tab = self.__tab
 
-            b = '**' if self.bold_text_ is True else ''
+            b = "**" if self.bold_text_ is True else ""
             cr = self.color_simple_
 
             try:
                 # Отображение сообщения
-                self._notebook_display_markdown(self._get_visual_feature_stat.format(
-                    f'<span style=\"color:{cr}\">{b}[</span><span style=\"color:{self.color_info_}\">',
-                    datetime.now().strftime(self._format_time),
-                    f'</span><span style=\"color:{cr}\">]</span> ', f'<span style=\"color:{cr}\">',
-                    f'</span>{b}<br /><span style=\"color:{cr}\">{tab}',
-                    f'</span><br /><span style=\"color:{cr}\">{tab * 2}', f'<u>{kwargs["len_hc_features"]}</u></span>',
-                    f'<br /><span style=\"color:{cr}\">{tab * 2}',
-                    f'<u>{kwargs["len_nn_features"]}</u></span>',
-                    f'<br /><span style=\"color:{cr}\">{tab}',
-                    f'<u>{kwargs["shape_hc_features"][0]}</u>', f'<u>{kwargs["shape_hc_features"][1]}</u></span>',
-                    f'<br /><span style=\"color:{cr}\">{tab}',
-                    f' <u>{kwargs["shape_nn_features"][0]}</u>', f'<u>{kwargs["shape_nn_features"][1]}</u></span>',
-                    f'<br /><span style=\"color:{cr}\">{tab}',
-                    f' <u>{kwargs["fps_before"]}</u>', f'<u>{kwargs["fps_after"]}</u></span>',
-                ), last, out)
+                self._notebook_display_markdown(
+                    self._get_visual_feature_stat.format(
+                        f'<span style="color:{cr}">{b}[</span><span style="color:{self.color_info_}">',
+                        datetime.now().strftime(self._format_time),
+                        f'</span><span style="color:{cr}">]</span> ',
+                        f'<span style="color:{cr}">',
+                        f'</span>{b}<br /><span style="color:{cr}">{tab}',
+                        f'</span><br /><span style="color:{cr}">{tab * 2}',
+                        f'<u>{kwargs["len_hc_features"]}</u></span>',
+                        f'<br /><span style="color:{cr}">{tab * 2}',
+                        f'<u>{kwargs["len_nn_features"]}</u></span>',
+                        f'<br /><span style="color:{cr}">{tab}',
+                        f'<u>{kwargs["shape_hc_features"][0]}</u>',
+                        f'<u>{kwargs["shape_hc_features"][1]}</u></span>',
+                        f'<br /><span style="color:{cr}">{tab}',
+                        f' <u>{kwargs["shape_nn_features"][0]}</u>',
+                        f'<u>{kwargs["shape_nn_features"][1]}</u></span>',
+                        f'<br /><span style="color:{cr}">{tab}',
+                        f' <u>{kwargs["fps_before"]}</u>',
+                        f'<u>{kwargs["fps_after"]}</u></span>',
+                    ),
+                    last,
+                    out,
+                )
             except KeyError:
-                self._inv_args(__class__.__name__, self._stat_visual_features.__name__, out = out); return None
+                self._inv_args(__class__.__name__, self._stat_visual_features.__name__, out=out)
+                return None
 
     def _r_start(self) -> None:
         """Начало отсчета времени выполнения
@@ -1790,9 +1913,9 @@ class Core(CoreMessages):
                 --- Время выполнения: 1665756222.704 сек. ---
         """
 
-        self._runtime = self._start_time = -1 # Сброс значений
+        self._runtime = self._start_time = -1  # Сброс значений
 
-        self._start_time = time.time() # Отсчет времени выполнения
+        self._start_time = time.time()  # Отсчет времени выполнения
 
     def _r_end(self, last: bool = False, out: bool = True) -> None:
         """Конец отсчета времени выполнения
@@ -1851,19 +1974,20 @@ class Core(CoreMessages):
                 --- Время выполнения: 1665756222.704 сек. ---
         """
 
-        self._runtime = round(time.time() - self._start_time, 3) # Время выполнения
+        self._runtime = round(time.time() - self._start_time, 3)  # Время выполнения
 
-        t = '--- {}: {} {} ---'.format(self.text_runtime_, self._runtime, self._sec)
+        t = "--- {}: {} {} ---".format(self.text_runtime_, self._runtime, self._sec)
 
         if self.is_notebook_ is True:
-            b = '**' if self.bold_text_ is True else ''
+            b = "**" if self.bold_text_ is True else ""
 
             # Отображение сообщения
             self._notebook_display_markdown(
-                '{}'.format(f'<span style=\"color:{self.color_simple_}\">{b}{t}{b}</span>'), last, out)
+                "{}".format(f'<span style="color:{self.color_simple_}">{b}{t}{b}</span>'), last, out
+            )
 
     def _progressbar(
-            self, message: str, progress: str, clear_out: bool = True, last: bool = False, out: bool = True
+        self, message: str, progress: str, clear_out: bool = True, last: bool = False, out: bool = True
     ) -> None:
         """Индикатор выполнения
 
@@ -1972,28 +2096,42 @@ class Core(CoreMessages):
         """
 
         if self.is_notebook_ is True:
-            if clear_out is True: clear_output(True)
+            if clear_out is True:
+                clear_output(True)
 
             try:
                 # Проверка аргументов
-                if type(message) is not str or not message or type(progress) is not str or not progress: raise TypeError
-            except TypeError: self._inv_args(__class__.__name__, self._progressbar.__name__, out = out); return None
+                if type(message) is not str or not message or type(progress) is not str or not progress:
+                    raise TypeError
+            except TypeError:
+                self._inv_args(__class__.__name__, self._progressbar.__name__, out=out)
+                return None
 
-            b = '**' if self.bold_text is True else ''
+            b = "**" if self.bold_text is True else ""
             tab = self.__tab
 
             # Отображение сообщения
-            self._notebook_display_markdown(('{}' * 5).format(
-                f'<span style=\"color:{self.color_simple_}\">{b}[</span><span style=\"color:{self.color_info_}\">',
-                datetime.now().strftime(self._format_time),
-                f'</span><span style=\"color:{self.color_simple_}\">]</span> ',
-                f'<span style=\"color:{self.color_simple_}\">{message}</span>{b}',
-                f'<p><span style=\"color:{self.color_simple_}\">{tab}{progress}</span></p>'
-            ), last, out)
+            self._notebook_display_markdown(
+                ("{}" * 5).format(
+                    f'<span style="color:{self.color_simple_}">{b}[</span><span style="color:{self.color_info_}">',
+                    datetime.now().strftime(self._format_time),
+                    f'</span><span style="color:{self.color_simple_}">]</span> ',
+                    f'<span style="color:{self.color_simple_}">{message}</span>{b}',
+                    f'<p><span style="color:{self.color_simple_}">{tab}{progress}</span></p>',
+                ),
+                last,
+                out,
+            )
 
     def _progressbar_union_predictions(
-        self, message: str, item: int, info: str, len_paths: int, clear_out: bool = True, last: bool = False,
-            out: bool = True
+        self,
+        message: str,
+        item: int,
+        info: str,
+        len_paths: int,
+        clear_out: bool = True,
+        last: bool = False,
+        out: bool = True,
     ) -> None:
         """Индикатор выполнения получения прогнозов по аудио
 
@@ -2116,27 +2254,37 @@ class Core(CoreMessages):
         """
 
         if self.is_notebook_ is True:
-            if clear_out is False and last is True: clear_out, last = last, clear_out
-            elif clear_out is False and last is False: clear_out = True
-            if clear_out is True: clear_output(True)
+            if clear_out is False and last is True:
+                clear_out, last = last, clear_out
+            elif clear_out is False and last is False:
+                clear_out = True
+            if clear_out is True:
+                clear_output(True)
 
             try:
                 # Проверка аргументов
-                if (type(message) is not str or not message or type(item) is not int or type(len_paths) is not int
-                    or type(info) is not str or not info): raise TypeError
+                if (
+                    type(message) is not str
+                    or not message
+                    or type(item) is not int
+                    or type(len_paths) is not int
+                    or type(info) is not str
+                    or not info
+                ):
+                    raise TypeError
             except TypeError:
-                self._inv_args(__class__.__name__, self._progressbar_union_predictions.__name__, out = out)
+                self._inv_args(__class__.__name__, self._progressbar_union_predictions.__name__, out=out)
                 return None
 
             self._progressbar(
                 message,
-                self._curr_progress_union_predictions.format(
-                    item, len_paths, round(item * 100 / len_paths, 2), info
-                ),
-                clear_out = clear_out,
-                last = last, out = False
+                self._curr_progress_union_predictions.format(item, len_paths, round(item * 100 / len_paths, 2), info),
+                clear_out=clear_out,
+                last=last,
+                out=False,
             )
-            if out: self.show_notebook_history_output()
+            if out:
+                self.show_notebook_history_output()
 
     def _clear_notebook_history_output(self) -> None:
         """Очистка истории вывода сообщений в ячейке Jupyter
@@ -2177,7 +2325,7 @@ class Core(CoreMessages):
 
         """
 
-        self._notebook_history_output.clear() # Очистка истории вывода сообщений в ячейке Jupyter
+        self._notebook_history_output.clear()  # Очистка истории вывода сообщений в ячейке Jupyter
 
     def _add_notebook_history_output(self, message: str, last: bool = False) -> None:
         """Добавление истории вывода сообщений в ячейке Jupyter
@@ -2257,9 +2405,12 @@ class Core(CoreMessages):
         """
 
         if last is True:
-            try: self._notebook_history_output[-1] = message
-            except Exception: pass
-            else: return None
+            try:
+                self._notebook_history_output[-1] = message
+            except Exception:
+                pass
+            else:
+                return None
 
         self._notebook_history_output.append(message)
 
@@ -2302,8 +2453,10 @@ class Core(CoreMessages):
                 Сообщение 1
         """
 
-        try: last_el = self._notebook_history_output.pop()
-        except Exception: pass
+        try:
+            last_el = self._notebook_history_output.pop()
+        except Exception:
+            pass
 
     def _add_last_el_notebook_history_output(self, message: str) -> None:
         """Добавление текста к последнему сообщению из истории вывода сообщений в ячейке Jupyter
@@ -2346,8 +2499,10 @@ class Core(CoreMessages):
                 Сообщение 1 ...
         """
 
-        try: self._notebook_history_output[-1] += ' ' + message
-        except Exception: self._add_notebook_history_output(message = message, last = False)
+        try:
+            self._notebook_history_output[-1] += " " + message
+        except Exception:
+            self._add_notebook_history_output(message=message, last=False)
 
     # ------------------------------------------------------------------------------------------------------------------
     # Внутренние методы (приватные)
@@ -2402,11 +2557,15 @@ class Core(CoreMessages):
         try:
             # Определение режима запуска библиотеки
             shell = get_ipython().__class__.__name__
-        except (NameError, Exception): return False # Запуск в Python
+        except (NameError, Exception):
+            return False  # Запуск в Python
         else:
-            if shell == 'ZMQInteractiveShell' or shell == 'Shell': return True
-            elif shell == 'TerminalInteractiveShell': return False
-            else: return False
+            if shell == "ZMQInteractiveShell" or shell == "Shell":
+                return True
+            elif shell == "TerminalInteractiveShell":
+                return False
+            else:
+                return False
 
     # ------------------------------------------------------------------------------------------------------------------
     # Внутренние методы (защищенные)
@@ -2501,38 +2660,53 @@ class Core(CoreMessages):
 
         try:
             # Проверка аргументов
-            if (not isinstance(path, Iterable) or not path or type(depth) is not int or depth < 1
-                    or type(out) is not bool):
+            if (
+                not isinstance(path, Iterable)
+                or not path
+                or type(depth) is not int
+                or depth < 1
+                or type(out) is not bool
+            ):
                 raise TypeError
-        except TypeError: self._inv_args(__class__.__name__, self._get_paths.__name__, out = out); return False
+        except TypeError:
+            self._inv_args(__class__.__name__, self._get_paths.__name__, out=out)
+            return False
         else:
-            if type(path) is not list: path = [path]
+            if type(path) is not list:
+                path = [path]
 
-            new_path = [] # Список с директориями
+            new_path = []  # Список с директориями
 
             # Проход по всем директориям набора данных
             for curr_path in path:
-                try: scandir = os.scandir(os.path.normpath(str(curr_path)))
+                try:
+                    scandir = os.scandir(os.path.normpath(str(curr_path)))
                 except FileNotFoundError:
-                    self._other_error(self._folder_not_found.format(self._info_wrapper(str(curr_path))), out = out)
+                    self._other_error(self._folder_not_found.format(self._info_wrapper(str(curr_path))), out=out)
                     return False
-                except Exception: self._other_error(self._unknown_err, out = out); return False
+                except Exception:
+                    self._other_error(self._unknown_err, out=out)
+                    return False
                 else:
                     for f in scandir:
-                        if f.is_dir() and not f.name.startswith('.'):
-                            ignore = False # По умолчанию не игнорировать директорию
+                        if f.is_dir() and not f.name.startswith("."):
+                            ignore = False  # По умолчанию не игнорировать директорию
                             if depth == 1:
                                 for curr_dir in self.ignore_dirs_:
-                                    if type(curr_dir) is not str: continue
+                                    if type(curr_dir) is not str:
+                                        continue
                                     # Игнорировать директорию
-                                    if re.search('^' + curr_dir, f.name) is not None: ignore = True
+                                    if re.search("^" + curr_dir, f.name) is not None:
+                                        ignore = True
 
-                            if ignore is False: new_path.append(f.path)
+                            if ignore is False:
+                                new_path.append(f.path)
 
             # Рекурсивный переход на следующий уровень иерархии
-            if depth != 1 and len(new_path) > 0: return self._get_paths(new_path, depth - 1)
+            if depth != 1 and len(new_path) > 0:
+                return self._get_paths(new_path, depth - 1)
 
-            return new_path # Список с директориями
+            return new_path  # Список с директориями
 
     def _append_to_list_of_files(self, path: str, preds: List[Optional[float]], out: bool = True) -> bool:
         """Добавление значений в словарь для DataFrame c данными
@@ -2648,10 +2822,16 @@ class Core(CoreMessages):
 
             self._dict_of_files[self.keys_dataset_[0]].append(path)
 
-            for i in range(len(preds)): self._dict_of_files[self.keys_dataset_[i + 1]].append(preds[i])
-        except (IndexError, KeyError): self._other_error(self._som_ww, out = out); return False
-        except Exception: self._other_error(self._unknown_err, out = out); return False
-        else: return True
+            for i in range(len(preds)):
+                self._dict_of_files[self.keys_dataset_[i + 1]].append(preds[i])
+        except (IndexError, KeyError):
+            self._other_error(self._som_ww, out=out)
+            return False
+        except Exception:
+            self._other_error(self._unknown_err, out=out)
+            return False
+        else:
+            return True
 
     def _append_to_list_of_accuracy(self, preds: List[Optional[float]], out: bool = True) -> bool:
         """Добавление значений в словарь для DataFrame с результатами вычисления точности
@@ -2760,10 +2940,16 @@ class Core(CoreMessages):
                     zip(self.keys_dataset_[1:], [[] for _ in range(0, len(self.keys_dataset_[1:]))])
                 )
 
-            for i in range(len(preds)): self._dict_of_accuracy[self.keys_dataset_[i + 1]].append(preds[i])
-        except (IndexError, KeyError): self._other_error(self._som_ww, out = out); return False
-        except Exception: self._other_error(self._unknown_err, out = out); return False
-        else: return True
+            for i in range(len(preds)):
+                self._dict_of_accuracy[self.keys_dataset_[i + 1]].append(preds[i])
+        except (IndexError, KeyError):
+            self._other_error(self._som_ww, out=out)
+            return False
+        except Exception:
+            self._other_error(self._unknown_err, out=out)
+            return False
+        else:
+            return True
 
     def _create_folder_for_logs(self, out: bool = True):
         """Создание директории для сохранения LOG файлов
@@ -2801,13 +2987,20 @@ class Core(CoreMessages):
                 true
         """
 
-        if type(out) is not bool: out = True
+        if type(out) is not bool:
+            out = True
 
         try:
-            if not os.path.exists(self.path_to_logs_): os.makedirs(self.path_to_logs_)
-        except (FileNotFoundError, TypeError): self._other_error(self._som_ww, out = out); return False
-        except Exception: self._other_error(self._unknown_err, out = out); return False
-        else: return True
+            if not os.path.exists(self.path_to_logs_):
+                os.makedirs(self.path_to_logs_)
+        except (FileNotFoundError, TypeError):
+            self._other_error(self._som_ww, out=out)
+            return False
+        except Exception:
+            self._other_error(self._unknown_err, out=out)
+            return False
+        else:
+            return True
 
     def _save_logs(self, df: pd.DataFrame, name: str, out: bool = True) -> bool:
         """Сохранение LOG файла
@@ -2858,7 +3051,9 @@ class Core(CoreMessages):
             # Проверка аргументов
             if type(df) is not pd.DataFrame or type(name) is not str or not name or type(out) is not bool:
                 raise TypeError
-        except TypeError: self._inv_args(__class__.__name__, self._save_logs.__name__, out = out); return False
+        except TypeError:
+            self._inv_args(__class__.__name__, self._save_logs.__name__, out=out)
+            return False
         else:
             # Создание директории для сохранения LOG файлов
             if self._create_folder_for_logs() is True:
@@ -2866,11 +3061,17 @@ class Core(CoreMessages):
                 try:
                     df.to_csv(os.path.join(self.path_to_logs_, name + self._ext_for_logs))
                 except urllib.error.HTTPError as e:
-                    self._other_error(self._url_error_log.format(self._url_error_code_log.format(
-                        self._error_wrapper(str(e.code)))), out = out)
-                except urllib.error.URLError: self._other_error(self._url_error_log.format(''), out = out)
-                except Exception: self._other_error(self._unknown_err, out = out); return False
-                else: return True
+                    self._other_error(
+                        self._url_error_log.format(self._url_error_code_log.format(self._error_wrapper(str(e.code)))),
+                        out=out,
+                    )
+                except urllib.error.URLError:
+                    self._other_error(self._url_error_log.format(""), out=out)
+                except Exception:
+                    self._other_error(self._unknown_err, out=out)
+                    return False
+                else:
+                    return True
 
             return False
 
@@ -2950,22 +3151,34 @@ class Core(CoreMessages):
 
         try:
             # Проверка аргументов
-            if ((type(val) is not int and type(val) is not float and type(val) is not np.float64)
-                or type(out) is not bool): raise TypeError
-        except TypeError: self._inv_args(__class__.__name__, self._round_math.__name__, out = out); return False
+            if (type(val) is not int and type(val) is not float and type(val) is not np.float64) or type(
+                out
+            ) is not bool:
+                raise TypeError
+        except TypeError:
+            self._inv_args(__class__.__name__, self._round_math.__name__, out=out)
+            return False
         else:
             modf = math.modf(val)
 
-            if modf[0] >= 0.5: res = modf[1] + 1
+            if modf[0] >= 0.5:
+                res = modf[1] + 1
             else:
-                if modf[0] <= -0.5: res = modf[1] - 1
-                else: res = math.ceil(modf[1])
+                if modf[0] <= -0.5:
+                    res = modf[1] - 1
+                else:
+                    res = math.ceil(modf[1])
 
             return int(res)
 
     def _candidate_ranking(
-        self, weigths_openness: int = 0, weigths_conscientiousness: int = 0, weigths_extraversion: int = 0,
-        weigths_agreeableness: int = 0, weigths_neuroticism: int = 0, out: bool = True
+        self,
+        weigths_openness: int = 0,
+        weigths_conscientiousness: int = 0,
+        weigths_extraversion: int = 0,
+        weigths_agreeableness: int = 0,
+        weigths_neuroticism: int = 0,
+        out: bool = True,
     ) -> pd.DataFrame:
         """Ранжирование кандидатов
 
@@ -2985,57 +3198,99 @@ class Core(CoreMessages):
         """
 
         # Сброс
-        self._df_files_ranking = pd.DataFrame() # Пустой DataFrame с ранжированными данными
+        self._df_files_ranking = pd.DataFrame()  # Пустой DataFrame с ранжированными данными
 
         try:
             # Проверка аргументов
-            if (type(weigths_openness) is not int or not (0 <= weigths_openness <= 100)
-                or type(weigths_conscientiousness) is not int or not (0 <= weigths_conscientiousness <= 100)
-                or type(weigths_extraversion) is not int or not (0 <= weigths_extraversion <= 100)
-                or type(weigths_agreeableness) is not int or not (0 <= weigths_agreeableness <= 100)
-                or type(weigths_neuroticism) is not int or not (0 <= weigths_neuroticism <= 100)
-                or type(out) is not bool): raise TypeError
+            if (
+                type(weigths_openness) is not int
+                or not (0 <= weigths_openness <= 100)
+                or type(weigths_conscientiousness) is not int
+                or not (0 <= weigths_conscientiousness <= 100)
+                or type(weigths_extraversion) is not int
+                or not (0 <= weigths_extraversion <= 100)
+                or type(weigths_agreeableness) is not int
+                or not (0 <= weigths_agreeableness <= 100)
+                or type(weigths_neuroticism) is not int
+                or not (0 <= weigths_neuroticism <= 100)
+                or type(out) is not bool
+            ):
+                raise TypeError
         except TypeError:
-            self._inv_args(__class__.__name__, self._candidate_ranking.__name__, out = out)
+            self._inv_args(__class__.__name__, self._candidate_ranking.__name__, out=out)
             return self._df_files_ranking
         else:
             try:
-                if sum([
-                    weigths_openness, weigths_conscientiousness, weigths_extraversion,
-                    weigths_agreeableness, weigths_neuroticism
-                ]) != 100: raise TypeError
-            except TypeError: self._other_error(self._sum_ranking_exceeded, out = out); return self._df_files_ranking
-            except Exception: self._other_error(self._unknown_err, out = out); return self._df_files_ranking
+                if (
+                    sum(
+                        [
+                            weigths_openness,
+                            weigths_conscientiousness,
+                            weigths_extraversion,
+                            weigths_agreeableness,
+                            weigths_neuroticism,
+                        ]
+                    )
+                    != 100
+                ):
+                    raise TypeError
+            except TypeError:
+                self._other_error(self._sum_ranking_exceeded, out=out)
+                return self._df_files_ranking
+            except Exception:
+                self._other_error(self._unknown_err, out=out)
+                return self._df_files_ranking
             else:
                 try:
-                    if len(self._df_files) == 0: raise TypeError
-                except TypeError: self._other_error(self._dataframe_empty, out = out); return self._df_files_ranking
-                except Exception: self._other_error(self._unknown_err, out = out); return self._df_files_ranking
+                    if len(self._df_files) == 0:
+                        raise TypeError
+                except TypeError:
+                    self._other_error(self._dataframe_empty, out=out)
+                    return self._df_files_ranking
+                except Exception:
+                    self._other_error(self._unknown_err, out=out)
+                    return self._df_files_ranking
                 else:
                     try:
                         self._df_files_ranking = self._df_files.copy()
 
                         df_files_ranking_neuroticism = 1 - self._df_files_ranking[self.keys_dataset_[5]]
-                        df_files_ranking = pd.concat([
-                            self._df_files_ranking[self.keys_dataset_[1:5]],
-                            df_files_ranking_neuroticism
-                        ], axis = 1, ignore_index = False)
+                        df_files_ranking = pd.concat(
+                            [self._df_files_ranking[self.keys_dataset_[1:5]], df_files_ranking_neuroticism],
+                            axis=1,
+                            ignore_index=False,
+                        )
 
-                        traits_sum = np.sum(df_files_ranking.values * [
-                            weigths_openness, weigths_conscientiousness, weigths_extraversion,
-                            weigths_agreeableness, weigths_neuroticism
-                        ], axis = 1)
+                        traits_sum = np.sum(
+                            df_files_ranking.values
+                            * [
+                                weigths_openness,
+                                weigths_conscientiousness,
+                                weigths_extraversion,
+                                weigths_agreeableness,
+                                weigths_neuroticism,
+                            ],
+                            axis=1,
+                        )
 
                         self._df_files_ranking[self._keys_score] = traits_sum
                         self._df_files_ranking = self._df_files_ranking.sort_values(
-                            by = self._keys_score, ascending = False
+                            by=self._keys_score, ascending=False
                         )
-                    except Exception: self._other_error(self._unknown_err, out = out); return self._df_files_ranking
-                    else: return self._df_files_ranking
+                    except Exception:
+                        self._other_error(self._unknown_err, out=out)
+                        return self._df_files_ranking
+                    else:
+                        return self._df_files_ranking
 
     def _priority_calculation(
-        self, correlation_coefficients: Optional[pd.DataFrame] = None, col_name_ocean: str = 'Trait',
-        threshold: float = 0.55, number_priority: int = 1, number_importance_traits: int = 1, out: bool = True
+        self,
+        correlation_coefficients: Optional[pd.DataFrame] = None,
+        col_name_ocean: str = "Trait",
+        threshold: float = 0.55,
+        number_priority: int = 1,
+        number_importance_traits: int = 1,
+        out: bool = True,
     ) -> pd.DataFrame:
         """Ранжирование предпочтений
 
@@ -3055,27 +3310,45 @@ class Core(CoreMessages):
         """
 
         # Сброс
-        self._df_files_priority = pd.DataFrame() # Пустой DataFrame с ранжированными предпочтениями
+        self._df_files_priority = pd.DataFrame()  # Пустой DataFrame с ранжированными предпочтениями
 
         try:
             # Проверка аргументов
-            if (type(correlation_coefficients) is not pd.DataFrame
-                or type(col_name_ocean) is not str or not col_name_ocean or type(threshold) is not float
-                or not (0.0 <= threshold <= 1.0) or type(number_priority) is not int or number_priority < 1
-                or type(number_importance_traits) is not int or number_importance_traits < 1
-                or type(out) is not bool): raise TypeError
+            if (
+                type(correlation_coefficients) is not pd.DataFrame
+                or type(col_name_ocean) is not str
+                or not col_name_ocean
+                or type(threshold) is not float
+                or not (0.0 <= threshold <= 1.0)
+                or type(number_priority) is not int
+                or number_priority < 1
+                or type(number_importance_traits) is not int
+                or number_importance_traits < 1
+                or type(out) is not bool
+            ):
+                raise TypeError
         except TypeError:
-            self._inv_args(__class__.__name__, self._priority_calculation.__name__, out = out)
+            self._inv_args(__class__.__name__, self._priority_calculation.__name__, out=out)
             return self._df_files_priority
         else:
-            try: matrix = pd.DataFrame(correlation_coefficients.drop([col_name_ocean], axis = 1)).values
-            except KeyError: self._other_error(self._som_ww, out = out); return self._df_files_priority
-            except Exception: self._other_error(self._unknown_err, out = out); return self._df_files_priority
+            try:
+                matrix = pd.DataFrame(correlation_coefficients.drop([col_name_ocean], axis=1)).values
+            except KeyError:
+                self._other_error(self._som_ww, out=out)
+                return self._df_files_priority
+            except Exception:
+                self._other_error(self._unknown_err, out=out)
+                return self._df_files_priority
             else:
                 try:
-                    if len(self._df_files) == 0: raise TypeError
-                except TypeError: self._other_error(self._dataframe_empty, out = out); return self._df_files_priority
-                except Exception: self._other_error(self._unknown_err, out = out); return self._df_files_priority
+                    if len(self._df_files) == 0:
+                        raise TypeError
+                except TypeError:
+                    self._other_error(self._dataframe_empty, out=out)
+                    return self._df_files_priority
+                except Exception:
+                    self._other_error(self._unknown_err, out=out)
+                    return self._df_files_priority
                 else:
                     try:
                         name_priority = correlation_coefficients.columns[1:]
@@ -3083,10 +3356,11 @@ class Core(CoreMessages):
                         self._df_files_priority = self._df_files.copy()
 
                         df_files_priority_neuroticism = 1 - self._df_files_priority[self.keys_dataset_[5]]
-                        df_files_priority = pd.concat([
-                            self._df_files_priority[self.keys_dataset_[:5]],
-                            df_files_priority_neuroticism
-                        ], axis = 1, ignore_index = False)
+                        df_files_priority = pd.concat(
+                            [self._df_files_priority[self.keys_dataset_[:5]], df_files_priority_neuroticism],
+                            axis=1,
+                            ignore_index=False,
+                        )
 
                         name_traits = correlation_coefficients[col_name_ocean].values
                         df_files_priority = df_files_priority[[self.keys_dataset_[0]] + name_traits.tolist()]
@@ -3097,29 +3371,34 @@ class Core(CoreMessages):
 
                             curr_traits_matrix = curr_traits * matrix
 
-                            curr_weights = np.sum(curr_traits_matrix, axis = 0)
+                            curr_weights = np.sum(curr_traits_matrix, axis=0)
 
                             idx_max_values = np.argsort(-np.asarray(curr_weights))[:number_priority]
                             priority = name_priority[idx_max_values]
 
                             slice_traits_matrix = curr_traits_matrix[:, idx_max_values]
-                            sum_slice_traits_matrix = np.sum(slice_traits_matrix, axis = 1)
+                            sum_slice_traits_matrix = np.sum(slice_traits_matrix, axis=1)
 
-                            id_traits = np.argsort(-sum_slice_traits_matrix, axis = 0)[:number_importance_traits]
+                            id_traits = np.argsort(-sum_slice_traits_matrix, axis=0)[:number_importance_traits]
                             importance_traits = name_traits[id_traits]
 
                             self._df_files_priority.loc[
                                 str(path + 1),
-                                [(self._keys_priority + ' {}').format(i + 1) for i in range(number_priority)]
+                                [(self._keys_priority + " {}").format(i + 1) for i in range(number_priority)],
                             ] = priority
 
                             self._df_files_priority.loc[
                                 str(path + 1),
-                                [(self._keys_trait_importance + ' {}').format(i + 1)
-                                    for i in range(number_importance_traits)]
+                                [
+                                    (self._keys_trait_importance + " {}").format(i + 1)
+                                    for i in range(number_importance_traits)
+                                ],
                             ] = importance_traits
-                    except Exception: self._other_error(self._unknown_err, out = out); return self._df_files_priority
-                    else: return self._df_files_priority
+                    except Exception:
+                        self._other_error(self._unknown_err, out=out)
+                        return self._df_files_priority
+                    else:
+                        return self._df_files_priority
 
     # ------------------------------------------------------------------------------------------------------------------
     # Внешние методы
@@ -3158,7 +3437,8 @@ class Core(CoreMessages):
 
         if self.is_notebook_ is True and len(self._notebook_history_output) > 0:
             # Отображение
-            for e in self._notebook_history_output: display(e if isinstance(e, pd.DataFrame) else Markdown(e))
+            for e in self._notebook_history_output:
+                display(e if isinstance(e, pd.DataFrame) else Markdown(e))
 
     def libs_vers(self, out: bool = True, runtime: bool = True, run: bool = True) -> None:
         """Получение и отображение версий установленных библиотек
@@ -3245,38 +3525,75 @@ class Core(CoreMessages):
                 [2022-10-15 18:18:51] Неверные типы или значения аргументов в "Core.libs_vers" ...
         """
 
-        self._clear_notebook_history_output() # Очистка истории вывода сообщений в ячейке Jupyter
+        self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter
 
         # Сброс
-        self._df_pkgs = pd.DataFrame() # Пустой DataFrame
+        self._df_pkgs = pd.DataFrame()  # Пустой DataFrame
 
-        if type(out) is not bool: out = True
+        if type(out) is not bool:
+            out = True
 
         try:
             # Проверка аргументов
-            if type(runtime) is not bool or type(run) is not bool: raise TypeError
-        except TypeError: self._inv_args(__class__.__name__, self.libs_vers.__name__, out = out)
+            if type(runtime) is not bool or type(run) is not bool:
+                raise TypeError
+        except TypeError:
+            self._inv_args(__class__.__name__, self.libs_vers.__name__, out=out)
         else:
             # Блокировка выполнения
-            if run is False: self._error(self._lock_user, out = out); return None
+            if run is False:
+                self._error(self._lock_user, out=out)
+                return None
 
-            if runtime: self._r_start()
+            if runtime:
+                self._r_start()
 
             pkgs = {
-                'Package': [
-                    'TensorFlow', 'Keras', 'OpenCV', 'MediaPipe', 'NumPy', 'SciPy', 'Pandas', 'Scikit-learn',
-                    'OpenSmile', 'Librosa', 'AudioRead', 'IPython', 'PyMediaInfo', 'Requests', 'JupyterLab'
+                "Package": [
+                    "TensorFlow",
+                    "Keras",
+                    "OpenCV",
+                    "MediaPipe",
+                    "NumPy",
+                    "SciPy",
+                    "Pandas",
+                    "Scikit-learn",
+                    "OpenSmile",
+                    "Librosa",
+                    "AudioRead",
+                    "IPython",
+                    "PyMediaInfo",
+                    "Requests",
+                    "JupyterLab",
                 ],
-                'Version': [i.__version__ for i in [
-                    tf, keras, cv2, mp, np, scipy, pd, sklearn, opensmile, librosa, audioread, IPython, pymediainfo,
-                    requests, jlab
-                ]]
+                "Version": [
+                    i.__version__
+                    for i in [
+                        tf,
+                        keras,
+                        cv2,
+                        mp,
+                        np,
+                        scipy,
+                        pd,
+                        sklearn,
+                        opensmile,
+                        librosa,
+                        audioread,
+                        IPython,
+                        pymediainfo,
+                        requests,
+                        jlab,
+                    ]
+                ],
             }
 
-            self._df_pkgs = pd.DataFrame(data = pkgs) # Версии используемых библиотек
+            self._df_pkgs = pd.DataFrame(data=pkgs)  # Версии используемых библиотек
             self._df_pkgs.index += 1
 
             # Отображение
-            if self.is_notebook_ is True and out is True: display(self._df_pkgs)
+            if self.is_notebook_ is True and out is True:
+                display(self._df_pkgs)
 
-            if runtime: self._r_end(out = out)
+            if runtime:
+                self._r_end(out=out)

@@ -8,26 +8,29 @@
 # ######################################################################################################################
 # Импорт необходимых инструментов
 # ######################################################################################################################
-# Подавление Warning
+
 import warnings
-for warn in [UserWarning, FutureWarning]: warnings.filterwarnings('ignore', category = warn)
 
-from dataclasses import dataclass # Класс данных
+# Подавление Warning
+for warn in [UserWarning, FutureWarning]:
+    warnings.filterwarnings("ignore", category=warn)
 
-import os           # Взаимодействие с файловой системой
+from dataclasses import dataclass  # Класс данных
+
+import os  # Взаимодействие с файловой системой
 import logging
-import requests     # Отправка HTTP запросов
+import requests  # Отправка HTTP запросов
 import numpy as np  # Научные вычисления
-import pandas as pd # Обработка и анализ данных
+import pandas as pd  # Обработка и анализ данных
 import math
 
 from urllib.parse import urlparse
 from urllib.error import URLError
-from pathlib import Path # Работа с путями в файловой системе
+from pathlib import Path  # Работа с путями в файловой системе
 from scipy.spatial import distance
 from scipy import stats
-from pymediainfo import MediaInfo # Получение meta данных из медиафайлов
-from datetime import datetime # Работа со временем
+from pymediainfo import MediaInfo  # Получение meta данных из медиафайлов
+from datetime import datetime  # Работа со временем
 from sklearn.metrics import mean_absolute_error
 
 # Типы данных
@@ -37,28 +40,29 @@ from types import ModuleType
 from IPython.display import clear_output
 
 # Персональные
-from oceanai.modules.lab.download import Download # Загрузка файлов
+from oceanai.modules.lab.download import Download  # Загрузка файлов
 
 # Порог регистрации сообщений TensorFlow
 logging.disable(logging.WARNING)
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
-import tensorflow as tf # Машинное обучение от Google
+import tensorflow as tf  # Машинное обучение от Google
 import keras
 import cv2
-import mediapipe as mp # Набор нейросетевых моделей и решений для компьютерного зрения
+import mediapipe as mp  # Набор нейросетевых моделей и решений для компьютерного зрения
 
 # Исправленная версия Keras_VGGFace
 from oceanai.modules.lab.keras_vggface import utils
 from oceanai.modules.lab.keras_vggface.vggface import VGGFace
 
-mp.solutions.face_mesh.FaceMesh() # Удаление сообщения: INFO: Created TensorFlow Lite XNNPACK delegate for CPU)
+mp.solutions.face_mesh.FaceMesh()  # Удаление сообщения: INFO: Created TensorFlow Lite XNNPACK delegate for CPU)
+
 
 # ######################################################################################################################
 # Сообщения
 # ######################################################################################################################
 @dataclass
-class  VideoMessages(Download):
+class VideoMessages(Download):
     """Класс для сообщений
 
     Args:
@@ -77,40 +81,48 @@ class  VideoMessages(Download):
     # ------------------------------------------------------------------------------------------------------------------
 
     def __post_init__(self):
-        super().__post_init__() # Выполнение конструктора из суперкласса
+        super().__post_init__()  # Выполнение конструктора из суперкласса
 
-        self._video_modality: str = self._(' (видео модальность) ...')
+        self._video_modality: str = self._(" (видео модальность) ...")
         self._formation_video_model_hc: str = self._formation_model_hc + self._video_modality
         self._formation_video_model_nn: str = self._formation_model_nn + self._video_modality
-        self._formation_video_deep_fe: str = self._('Формирование нейросетевой архитектуры для получения нейросетевых '
-                                                    'признаков') + self._video_modality
+        self._formation_video_deep_fe: str = (
+            self._("Формирование нейросетевой архитектуры для получения нейросетевых " "признаков")
+            + self._video_modality
+        )
         self._formation_video_models_b5: str = self._formation_models_b5 + self._video_modality
 
         self._load_video_model_weights_hc: str = self._load_model_weights_hc + self._video_modality
         self._load_video_model_weights_nn: str = self._load_model_weights_nn + self._video_modality
-        self._load_video_model_weights_deep_fe: str = self._('Загрузка весов нейросетевой модели для получения '
-                                                             'нейросетевых признаков') + self._video_modality
+        self._load_video_model_weights_deep_fe: str = (
+            self._("Загрузка весов нейросетевой модели для получения " "нейросетевых признаков") + self._video_modality
+        )
         self._load_video_models_weights_b5: str = self._load_models_weights_b5 + self._video_modality
 
         self._model_video_hc_not_formation: str = self._model_hc_not_formation + self._video_modality
         self._model_video_nn_not_formation: str = self._model_nn_not_formation + self._video_modality
-        self._model_video_deep_fe_not_formation: str = self._oh + self._('нейросетевая архитектура модели для '
-                                                                         'получения нейросетевых признаков не '
-                                                                         'сформирована') + self._video_modality
+        self._model_video_deep_fe_not_formation: str = (
+            self._oh
+            + self._("нейросетевая архитектура модели для " "получения нейросетевых признаков не " "сформирована")
+            + self._video_modality
+        )
         self._models_video_not_formation: str = self._models_not_formation + self._video_modality
 
-        self._get_visual_feature_info: str = self._('Извлечение признаков (экспертных и нейросетевых) из визуального '
-                                                    'сигнала ...')
+        self._get_visual_feature_info: str = self._(
+            "Извлечение признаков (экспертных и нейросетевых) из визуального " "сигнала ..."
+        )
 
         self._wrong_extension_video_formats = self._oh + self._('расширение видеофайла должно быть одним из: "{}"')
-        self._all_frames_is_zero: str = self._oh + self._('общее количество кадров в видеопотоке: {} ...')
-        self._calc_reshape_img_coef_error: str = self._oh + self._('вычисление коэффициента изменения размера '
-                                                                   'изображения не произведено ...')
+        self._all_frames_is_zero: str = self._oh + self._("общее количество кадров в видеопотоке: {} ...")
+        self._calc_reshape_img_coef_error: str = self._oh + self._(
+            "вычисление коэффициента изменения размера " "изображения не произведено ..."
+        )
 
-        self._faces_not_found: str = self._oh + self._('не на одном кадре видеопотока лицо не найдено ...')
+        self._faces_not_found: str = self._oh + self._("не на одном кадре видеопотока лицо не найдено ...")
 
         self._concat_video_pred_error: str = self._concat_pred_error + self._video_modality
         self._norm_video_pred_error: str = self._norm_pred_error + self._video_modality
+
 
 # ######################################################################################################################
 # Аудио
@@ -135,7 +147,7 @@ class Video(VideoMessages):
     # ------------------------------------------------------------------------------------------------------------------
 
     def __post_init__(self):
-        super().__post_init__() # Выполнение конструктора из суперкласса
+        super().__post_init__()  # Выполнение конструктора из суперкласса
 
         # Нейросетевая модель **tf.keras.Model** для получения оценок по экспертным признакам
         self._video_model_hc: Optional[keras.engine.functional.Functional] = None
@@ -144,42 +156,103 @@ class Video(VideoMessages):
         # Нейросетевая модель **tf.keras.Model** для получения оценок по нейросетевым признакам
         self._video_model_nn: Optional[keras.engine.functional.Functional] = None
         # Нейросетевые модели **tf.keras.Model** для получения результатов оценки персональных качеств
-        self._video_models_b5: Dict[str, Optional[keras.engine.functional.Functional]] = dict(zip(
-            self._b5['en'], [None] * len(self._b5['en'])
-        ))
+        self._video_models_b5: Dict[str, Optional[keras.engine.functional.Functional]] = dict(
+            zip(self._b5["en"], [None] * len(self._b5["en"]))
+        )
 
         # ----------------------- Только для внутреннего использования внутри класса
 
         # Поддерживаемые видео форматы
-        self.__supported_video_formats: List[str] = ['mp4']
+        self.__supported_video_formats: List[str] = ["mp4"]
 
-        self.__mp_face_mesh: ModuleType = mp.solutions.face_mesh # 468 3D-ориентиров лица
-        self.__mp_drawing: ModuleType = mp.solutions.drawing_utils # Утилиты MediaPipe
+        self.__mp_face_mesh: ModuleType = mp.solutions.face_mesh  # 468 3D-ориентиров лица
+        self.__mp_drawing: ModuleType = mp.solutions.drawing_utils  # Утилиты MediaPipe
 
-        self.__bndbox_face_size: List[int] = [224, 224] # Размер изображения с лицом
+        self.__bndbox_face_size: List[int] = [224, 224]  # Размер изображения с лицом
 
         # Используемые координаты ориентиров лица
         self.__coords_face_mesh: List[int] = [
-            0, 1, 386, 133, 6, 8, 267, 13, 14, 17, 145, 276, 152, 282, 411, 285, 159, 291, 37,
-            299, 46, 52, 55, 187, 61, 69, 331, 334, 336, 102, 105, 362, 107, 374, 33, 263
+            0,
+            1,
+            386,
+            133,
+            6,
+            8,
+            267,
+            13,
+            14,
+            17,
+            145,
+            276,
+            152,
+            282,
+            411,
+            285,
+            159,
+            291,
+            37,
+            299,
+            46,
+            52,
+            55,
+            187,
+            61,
+            69,
+            331,
+            334,
+            336,
+            102,
+            105,
+            362,
+            107,
+            374,
+            33,
+            263,
         ]
 
         self.__couples_face_mesh: List[List[int]] = [
-            [133, 46], [133, 52], [133, 55], [362, 285], [362, 282], [362, 276], [55, 285], [1, 6], [8, 6], [0, 1],
-            [0, 17], [61, 291], [0, 13], [61, 291], [37, 13], [267, 13], [13, 14], [17, 152], [102, 331], [102, 133],
-            [331, 362], [291, 362], [61, 133], [386, 374], [159, 145], [69, 105], [69, 107], [299, 336], [299, 334],
-            [187, 133], [411, 362]
+            [133, 46],
+            [133, 52],
+            [133, 55],
+            [362, 285],
+            [362, 282],
+            [362, 276],
+            [55, 285],
+            [1, 6],
+            [8, 6],
+            [0, 1],
+            [0, 17],
+            [61, 291],
+            [0, 13],
+            [61, 291],
+            [37, 13],
+            [267, 13],
+            [13, 14],
+            [17, 152],
+            [102, 331],
+            [102, 133],
+            [331, 362],
+            [291, 362],
+            [61, 133],
+            [386, 374],
+            [159, 145],
+            [69, 105],
+            [69, 107],
+            [299, 336],
+            [299, 334],
+            [187, 133],
+            [411, 362],
         ]
 
-        self.__len_paths: int = 0 # Количество искомых файлов
-        self.__local_path: Union[Callable[[str], str], None] = None # Локальный путь
+        self.__len_paths: int = 0  # Количество искомых файлов
+        self.__local_path: Union[Callable[[str], str], None] = None  # Локальный путь
 
         # Ключи для точности
-        self.__df_accuracy_index: List[str] = ['MAE', 'Accuracy']
-        self.__df_accuracy_index_name: str = 'Metrics'
-        self.__df_accuracy_mean: str = 'Mean'
+        self.__df_accuracy_index: List[str] = ["MAE", "Accuracy"]
+        self.__df_accuracy_index_name: str = "Metrics"
+        self.__df_accuracy_mean: str = "Mean"
 
-        clear_output(False) # Удаление сообщения: INFO: Created TensorFlow Lite XNNPACK delegate for CPU)
+        clear_output(False)  # Удаление сообщения: INFO: Created TensorFlow Lite XNNPACK delegate for CPU)
 
     # ------------------------------------------------------------------------------------------------------------------
     # Свойства
@@ -443,8 +516,13 @@ class Video(VideoMessages):
     # ------------------------------------------------------------------------------------------------------------------
 
     def __load_model_weights(
-        self, url: str, force_reload: bool = True, info_text: str = '',
-        out: bool = True, runtime: bool = True, run: bool = True
+        self,
+        url: str,
+        force_reload: bool = True,
+        info_text: str = "",
+        out: bool = True,
+        runtime: bool = True,
+        run: bool = True,
     ) -> bool:
         """Загрузка весов нейросетевой модели
 
@@ -558,52 +636,77 @@ class Video(VideoMessages):
                 False
         """
 
-        self._clear_notebook_history_output() # Очистка истории вывода сообщений в ячейке Jupyter
+        self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter
 
         try:
             # Проверка аргументов
-            if (type(url) is not str or not url or type(force_reload) is not bool
-                or type(info_text) is not str or not info_text or type(out) is not bool
-                or type(runtime) is not bool or type(run) is not bool): raise TypeError
+            if (
+                type(url) is not str
+                or not url
+                or type(force_reload) is not bool
+                or type(info_text) is not str
+                or not info_text
+                or type(out) is not bool
+                or type(runtime) is not bool
+                or type(run) is not bool
+            ):
+                raise TypeError
         except TypeError:
-            self._inv_args(__class__.__name__, self.__load_model_weights.__name__, out = out); return False
+            self._inv_args(__class__.__name__, self.__load_model_weights.__name__, out=out)
+            return False
         else:
             # Блокировка выполнения
-            if run is False: self._error(self._lock_user, out = out); return False
+            if run is False:
+                self._error(self._lock_user, out=out)
+                return False
 
-            if runtime: self._r_start()
+            if runtime:
+                self._r_start()
 
             # Информационное сообщение
-            self._info(info_text, last = False, out = out)
+            self._info(info_text, last=False, out=out)
 
-            sections = urlparse(url) # Парсинг URL адреса
+            sections = urlparse(url)  # Парсинг URL адреса
 
             try:
                 # URL файл невалидный
-                if sections.scheme == '': raise requests.exceptions.InvalidURL
+                if sections.scheme == "":
+                    raise requests.exceptions.InvalidURL
             except requests.exceptions.InvalidURL:
                 url = os.path.normpath(url)
 
                 try:
-                    if os.path.isfile(url) is False: raise FileNotFoundError # Не файл
-                except FileNotFoundError: self._other_error(self._load_model_weights_error, out = out); return False
-                except Exception: self._other_error(self._unknown_err, out = out); return False
-                else: self._url_last_filename = url; return True
+                    if os.path.isfile(url) is False:
+                        raise FileNotFoundError  # Не файл
+                except FileNotFoundError:
+                    self._other_error(self._load_model_weights_error, out=out)
+                    return False
+                except Exception:
+                    self._other_error(self._unknown_err, out=out)
+                    return False
+                else:
+                    self._url_last_filename = url
+                    return True
             else:
                 try:
-                    if force_reload is False: clear_output(True)
+                    if force_reload is False:
+                        clear_output(True)
                     # Загрузка файла из URL
                     res_download_file_from_url = self._download_file_from_url(
-                        url = url, force_reload = force_reload, runtime = False, out = out, run = True
+                        url=url, force_reload=force_reload, runtime=False, out=out, run=True
                     )
-                except Exception: self._other_error(self._unknown_err, out = out); return False
+                except Exception:
+                    self._other_error(self._unknown_err, out=out)
+                    return False
                 else:
                     # Файл загружен
-                    if res_download_file_from_url != 200: return False
+                    if res_download_file_from_url != 200:
+                        return False
 
                     return True
             finally:
-                if runtime: self._r_end(out = out)
+                if runtime:
+                    self._r_end(out=out)
 
     def __calc_reshape_img_coef(
         self, shape: Union[Tuple[int], List[int]], new_shape: Union[int, Tuple[int], List[int]], out: bool = True
@@ -698,25 +801,38 @@ class Video(VideoMessages):
         try:
             # Проверка аргументов
             if (
-                (isinstance(shape, list) is False and isinstance(shape, tuple) is False) or len(shape) != 2
-                or (isinstance(new_shape, list) is False and isinstance(new_shape, tuple) is False
-                    and type(new_shape) is not int) or type(out) is not bool
-            ): raise TypeError
+                (isinstance(shape, list) is False and isinstance(shape, tuple) is False)
+                or len(shape) != 2
+                or (
+                    isinstance(new_shape, list) is False
+                    and isinstance(new_shape, tuple) is False
+                    and type(new_shape) is not int
+                )
+                or type(out) is not bool
+            ):
+                raise TypeError
 
-            if type(shape[0]) is not int or type(shape[1]) is not int: raise TypeError
+            if type(shape[0]) is not int or type(shape[1]) is not int:
+                raise TypeError
 
-            if shape[0] < 1 or shape[1] < 1: raise ValueError
+            if shape[0] < 1 or shape[1] < 1:
+                raise ValueError
 
             if isinstance(new_shape, list) is True or isinstance(new_shape, tuple) is True:
-                if len(new_shape) != 2: raise TypeError
+                if len(new_shape) != 2:
+                    raise TypeError
 
-                if type(new_shape[0]) is not int or type(new_shape[1]) is not int: raise TypeError
+                if type(new_shape[0]) is not int or type(new_shape[1]) is not int:
+                    raise TypeError
 
-                if new_shape[0] < 1 or new_shape[1] < 1: raise ValueError
+                if new_shape[0] < 1 or new_shape[1] < 1:
+                    raise ValueError
             else:
-                if new_shape < 1: raise ValueError
+                if new_shape < 1:
+                    raise ValueError
         except (TypeError, ValueError):
-            self._inv_args(__class__.__name__, self.__calc_reshape_img_coef.__name__, out = out); return -1.0
+            self._inv_args(__class__.__name__, self.__calc_reshape_img_coef.__name__, out=out)
+            return -1.0
         else:
             if isinstance(new_shape, list) is False and isinstance(new_shape, tuple) is False:
                 new_shape = (new_shape, new_shape)
@@ -805,22 +921,30 @@ class Video(VideoMessages):
 
         try:
             # Проверка аргументов
-            if (type(pred_data) is not np.ndarray or len(pred_data) < 1 or type(len_nn) is not int or len_nn < 1
-                or type(out) is not bool): raise TypeError
+            if (
+                type(pred_data) is not np.ndarray
+                or len(pred_data) < 1
+                or type(len_nn) is not int
+                or len_nn < 1
+                or type(out) is not bool
+            ):
+                raise TypeError
         except TypeError:
-            self._inv_args(__class__.__name__, self.__norm_pred.__name__, out = out); return np.array([])
+            self._inv_args(__class__.__name__, self.__norm_pred.__name__, out=out)
+            return np.array([])
         else:
             try:
                 if pred_data.shape[0] < len_nn:
-                    return np.pad(pred_data, ((0, len_nn - pred_data.shape[0]), (0, 0)), 'mean')
+                    return np.pad(pred_data, ((0, len_nn - pred_data.shape[0]), (0, 0)), "mean")
                 return pred_data[:len_nn]
             except ValueError:
-                self._other_error(self._norm_video_pred_error, last = False, out = out); return np.array([])
-            except Exception: self._other_error(self._unknown_err, out = out); return np.array([])
+                self._other_error(self._norm_video_pred_error, last=False, out=out)
+                return np.array([])
+            except Exception:
+                self._other_error(self._unknown_err, out=out)
+                return np.array([])
 
-    def __concat_pred(
-        self, pred_hc: np.ndarray, pred_nn: np.ndarray, out: bool = True
-    ) -> List[Optional[np.ndarray]]:
+    def __concat_pred(self, pred_hc: np.ndarray, pred_nn: np.ndarray, out: bool = True) -> List[Optional[np.ndarray]]:
         """Конкатенация оценок по экспертным и нейросетевым признакам
 
         .. note::
@@ -958,29 +1082,38 @@ class Video(VideoMessages):
 
         try:
             # Проверка аргументов
-            if (type(pred_hc) is not np.ndarray or len(pred_hc) < 1
-                or type(pred_nn) is not np.ndarray or len(pred_nn) < 1
-                or type(out) is not bool): raise TypeError
+            if (
+                type(pred_hc) is not np.ndarray
+                or len(pred_hc) < 1
+                or type(pred_nn) is not np.ndarray
+                or len(pred_nn) < 1
+                or type(out) is not bool
+            ):
+                raise TypeError
         except TypeError:
-            self._inv_args(__class__.__name__, self.__concat_pred.__name__, out = out); return []
+            self._inv_args(__class__.__name__, self.__concat_pred.__name__, out=out)
+            return []
         else:
             # Нормализация оценок по экспертным и нейросетевым признакам
-            pred_hc_norm = self.__norm_pred(pred_hc, out = False)
-            pred_nn_norm = self.__norm_pred(pred_nn, out = False)
+            pred_hc_norm = self.__norm_pred(pred_hc, out=False)
+            pred_nn_norm = self.__norm_pred(pred_nn, out=False)
 
             if len(pred_hc_norm) == 0 or len(pred_nn_norm) == 0:
-                self._error(self._concat_video_pred_error, out = out); return []
+                self._error(self._concat_video_pred_error, out=out)
+                return []
 
             concat = []
 
             try:
                 # Проход по всем персональным качествам личности человека
-                for i in range(len(self._b5['en'])):
-                    concat.append(
-                        np.hstack((np.asarray(pred_hc_norm)[:, i], np.asarray(pred_nn_norm)[:, i]))
-                    )
-            except IndexError: self._other_error(self._concat_video_pred_error, last = False, out = out); return []
-            except Exception: self._other_error(self._unknown_err, out = out); return []
+                for i in range(len(self._b5["en"])):
+                    concat.append(np.hstack((np.asarray(pred_hc_norm)[:, i], np.asarray(pred_nn_norm)[:, i])))
+            except IndexError:
+                self._other_error(self._concat_video_pred_error, last=False, out=out)
+                return []
+            except Exception:
+                self._other_error(self._unknown_err, out=out)
+                return []
 
             return concat
 
@@ -1064,17 +1197,20 @@ class Video(VideoMessages):
 
         try:
             # Проверка аргументов
-            if type(show_summary) is not bool or type(out) is not bool: raise TypeError
+            if type(show_summary) is not bool or type(out) is not bool:
+                raise TypeError
         except TypeError:
-            self._inv_args(__class__.__name__, self.__load_video_model_b5.__name__, out = out); return None
+            self._inv_args(__class__.__name__, self.__load_video_model_b5.__name__, out=out)
+            return None
         else:
-            input_1 = tf.keras.Input(shape = (32,), name = 'input_1')
-            x = tf.keras.layers.Dense(units = 1, name = 'dense_1')(input_1)
-            x = tf.keras.layers.Activation('sigmoid', name = 'activ_1')(x)
+            input_1 = tf.keras.Input(shape=(32,), name="input_1")
+            x = tf.keras.layers.Dense(units=1, name="dense_1")(input_1)
+            x = tf.keras.layers.Activation("sigmoid", name="activ_1")(x)
 
-            model = tf.keras.Model(inputs = input_1, outputs = x)
+            model = tf.keras.Model(inputs=input_1, outputs=x)
 
-            if show_summary and out: model.summary()
+            if show_summary and out:
+                model.summary()
 
             return model
 
@@ -1083,8 +1219,15 @@ class Video(VideoMessages):
     # ------------------------------------------------------------------------------------------------------------------
 
     def _get_visual_features(
-        self, path: str, reduction_fps: int = 5, window: int = 10, step: int = 5,
-        last: bool = False, out: bool = True, runtime: bool = True, run: bool = True
+        self,
+        path: str,
+        reduction_fps: int = 5,
+        window: int = 10,
+        step: int = 5,
+        last: bool = False,
+        out: bool = True,
+        runtime: bool = True,
+        run: bool = True,
     ) -> Tuple[np.ndarray, np.ndarray]:
         """Извлечение признаков из визуального сигнала (без очистки истории вывода сообщений в ячейке Jupyter)
 
@@ -1223,112 +1366,151 @@ class Video(VideoMessages):
 
         try:
             # Проверка аргументов
-            if (type(path) is not str or not path or type(reduction_fps) is not int or reduction_fps < 1
-                or type(window) is not int or window < 1 or type(step) is not int or step < 1
-                or type(last) is not bool or type(out) is not bool or type(runtime) is not bool
-                or type(run) is not bool): raise TypeError
+            if (
+                type(path) is not str
+                or not path
+                or type(reduction_fps) is not int
+                or reduction_fps < 1
+                or type(window) is not int
+                or window < 1
+                or type(step) is not int
+                or step < 1
+                or type(last) is not bool
+                or type(out) is not bool
+                or type(runtime) is not bool
+                or type(run) is not bool
+            ):
+                raise TypeError
         except TypeError:
-            self._inv_args(__class__.__name__, self._get_visual_features.__name__, last = last, out = out)
+            self._inv_args(__class__.__name__, self._get_visual_features.__name__, last=last, out=out)
             return np.empty([]), np.empty([])
         else:
             # Блокировка выполнения
-            if run is False: self._error(self._lock_user, last = last, out = out); return np.empty([]), np.empty([])
+            if run is False:
+                self._error(self._lock_user, last=last, out=out)
+                return np.empty([]), np.empty([])
 
-            if runtime: self._r_start()
+            if runtime:
+                self._r_start()
 
             if last is False:
                 # Информационное сообщение
-                self._info(self._get_visual_feature_info, out = False)
-                if out: self.show_notebook_history_output() # Отображение истории вывода сообщений в ячейке Jupyter
+                self._info(self._get_visual_feature_info, out=False)
+                if out:
+                    self.show_notebook_history_output()  # Отображение истории вывода сообщений в ячейке Jupyter
 
             try:
-                if os.path.isfile(path) is False: raise FileNotFoundError # Не файл
+                if os.path.isfile(path) is False:
+                    raise FileNotFoundError  # Не файл
             except FileNotFoundError:
-                self._other_error(self._file_not_found.format(self._info_wrapper(path)), last = last, out = out)
+                self._other_error(self._file_not_found.format(self._info_wrapper(path)), last=last, out=out)
                 return np.empty([]), np.empty([])
             except Exception:
-                self._other_error(self._unknown_err, last = last, out = out)
+                self._other_error(self._unknown_err, last=last, out=out)
                 return np.empty([]), np.empty([])
             else:
                 try:
                     # Расширение файла не соответствует расширению искомых файлов
-                    if Path(path).suffix[1:].lower() not in self.__supported_video_formats: raise TypeError
-                except TypeError: self._other_error(
-                    self._wrong_extension_video_formats.format(
-                        self._info_wrapper(', '.join(x for x in self.__supported_video_formats))
-                    ), out = out
-                ); return np.empty([]), np.empty([])
-                except Exception: self._other_error(self._unknown_err, out = out); return np.empty([]), np.empty([])
+                    if Path(path).suffix[1:].lower() not in self.__supported_video_formats:
+                        raise TypeError
+                except TypeError:
+                    self._other_error(
+                        self._wrong_extension_video_formats.format(
+                            self._info_wrapper(", ".join(x for x in self.__supported_video_formats))
+                        ),
+                        out=out,
+                    )
+                    return np.empty([]), np.empty([])
+                except Exception:
+                    self._other_error(self._unknown_err, out=out)
+                    return np.empty([]), np.empty([])
                 else:
-                    metadata = MediaInfo.parse(path).to_data() # Meta данные
+                    metadata = MediaInfo.parse(path).to_data()  # Meta данные
 
-                    media_info = {} # Словарь для meta данных
+                    media_info = {}  # Словарь для meta данных
 
                     # Проход по всем meta словарям
-                    for track in metadata['tracks']:
+                    for track in metadata["tracks"]:
                         # Извлечение meta данных
-                        if track['track_type'] in [*self._type_meta_info]:
-                            media_info[track['track_type']] = {} # Словарь для meta данных определенного формата
+                        if track["track_type"] in [*self._type_meta_info]:
+                            media_info[track["track_type"]] = {}  # Словарь для meta данных определенного формата
 
                             # Проход по всем необходимым meta данным
-                            for i, curr_necessary in enumerate(self._type_meta_info[track['track_type']]):
-                                try: val = track[curr_necessary] # Текущее значение
-                                except Exception: continue
+                            for i, curr_necessary in enumerate(self._type_meta_info[track["track_type"]]):
+                                try:
+                                    val = track[curr_necessary]  # Текущее значение
+                                except Exception:
+                                    continue
                                 else:
                                     try:
-                                        if curr_necessary == 'encoded_date':
-                                            val = datetime.strptime(val.replace('UTC ', ''), '%Y-%m-%d %H:%M:%S')
-                                        if (curr_necessary == 'frame_rate' or curr_necessary == 'minimum_frame_rate'
-                                            or curr_necessary == 'maximum_frame_rate'): val = float(val)
-                                    except Exception: continue
+                                        if curr_necessary == "encoded_date":
+                                            val = datetime.strptime(val.replace("UTC ", ""), "%Y-%m-%d %H:%M:%S")
+                                        if (
+                                            curr_necessary == "frame_rate"
+                                            or curr_necessary == "minimum_frame_rate"
+                                            or curr_necessary == "maximum_frame_rate"
+                                        ):
+                                            val = float(val)
+                                    except Exception:
+                                        continue
 
                                     # Список в строку
                                     if type(val) is list:
-                                        if len(val) < 2: val = val[0]
-                                        else: val = ', '.join([str(elem) for elem in val])
+                                        if len(val) < 2:
+                                            val = val[0]
+                                        else:
+                                            val = ", ".join([str(elem) for elem in val])
 
-                                    media_info[track['track_type']][curr_necessary] = val
+                                    media_info[track["track_type"]][curr_necessary] = val
 
                     try:
                         # Всего кадров в видеопотоке
-                        all_frames = int(media_info['Video']['duration'] / 1000 * media_info['Video']['frame_rate'])
-                    except Exception: all_frames = 0
+                        all_frames = int(media_info["Video"]["duration"] / 1000 * media_info["Video"]["frame_rate"])
+                    except Exception:
+                        all_frames = 0
 
                     try:
-                        if all_frames == 0: raise ValueError
-                    except ValueError: self._other_error(
-                        self._all_frames_is_zero.format(self._info_wrapper(str(all_frames))), out = out
-                    ); return np.empty([]), np.empty([])
-                    except Exception: self._other_error(self._unknown_err, out = out); return np.empty([]), np.empty([])
+                        if all_frames == 0:
+                            raise ValueError
+                    except ValueError:
+                        self._other_error(self._all_frames_is_zero.format(self._info_wrapper(str(all_frames))), out=out)
+                        return np.empty([]), np.empty([])
+                    except Exception:
+                        self._other_error(self._unknown_err, out=out)
+                        return np.empty([]), np.empty([])
                     else:
-                        cap = cv2.VideoCapture(path) # Захват видеофайла для чтения
-                        width_video = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)) # Ширина кадров в видеопотоке
-                        height_video = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)) # Высота кадров в видеопотоке
-                        all_frames_cv2 = int(cap.get(cv2.CAP_PROP_FRAME_COUNT)) # # Всего кадров в видеопотоке
+                        cap = cv2.VideoCapture(path)  # Захват видеофайла для чтения
+                        width_video = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))  # Ширина кадров в видеопотоке
+                        height_video = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))  # Высота кадров в видеопотоке
+                        all_frames_cv2 = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))  # # Всего кадров в видеопотоке
 
-                        fps_cv2 = np.round(cap.get(cv2.CAP_PROP_FPS)) # Частота кадров (FPS)
+                        fps_cv2 = np.round(cap.get(cv2.CAP_PROP_FPS))  # Частота кадров (FPS)
 
                         # Вычисление коэффициента изменения размера изображения
                         reshape_img_coef = self.__calc_reshape_img_coef(
-                            shape = [width_video, height_video], new_shape = self.__bndbox_face_size, out = False
+                            shape=[width_video, height_video], new_shape=self.__bndbox_face_size, out=False
                         )
 
                         try:
-                            if reshape_img_coef == -1: raise ValueError
+                            if reshape_img_coef == -1:
+                                raise ValueError
                         except ValueError:
-                            self._other_error(self._calc_reshape_img_coef_error, out = out)
+                            self._other_error(self._calc_reshape_img_coef_error, out=out)
                             return np.empty([]), np.empty([])
                         else:
                             # Прореживание кадров
-                            if reduction_fps > fps_cv2: reduction_fps = fps_cv2
+                            if reduction_fps > fps_cv2:
+                                reduction_fps = fps_cv2
                             # Всего кадров после прореживания
                             all_frms_reduct = all_frames_cv2 / (fps_cv2 / reduction_fps)
 
                             # Индексы кадров, которые останутся после прореживания
-                            idx_reduction_frames = list(map(
-                                self._round_math,
-                                np.arange(0, all_frames_cv2, all_frames_cv2 / all_frms_reduct, dtype = float)
-                            ))
+                            idx_reduction_frames = list(
+                                map(
+                                    self._round_math,
+                                    np.arange(0, all_frames_cv2, all_frames_cv2 / all_frms_reduct, dtype=float),
+                                )
+                            )
 
                             def alignment_procedure(left_eye: List[int], right_eye: List[int]) -> float:
                                 """Выравнивание угла наклона головы относительно центров глаз
@@ -1347,8 +1529,12 @@ class Video(VideoMessages):
                                 left_eye_x, left_eye_y = left_eye
                                 right_eye_x, right_eye_y = right_eye
 
-                                if left_eye_y > right_eye_y: point_3rd = (right_eye_x, left_eye_y); direction = -1
-                                else: point_3rd = (left_eye_x, right_eye_y); direction = 1
+                                if left_eye_y > right_eye_y:
+                                    point_3rd = (right_eye_x, left_eye_y)
+                                    direction = -1
+                                else:
+                                    point_3rd = (left_eye_x, right_eye_y)
+                                    direction = 1
 
                                 a = distance.euclidean(np.array(left_eye), np.array(point_3rd))
                                 b = distance.euclidean(np.array(right_eye), np.array(point_3rd))
@@ -1359,35 +1545,38 @@ class Video(VideoMessages):
                                     angle = np.arccos(cos_a)
                                     angle = (angle * 180) / math.pi
 
-                                    if direction == -1: angle = 90 - angle
-                                else: angle = 0
+                                    if direction == -1:
+                                        angle = 90 - angle
+                                else:
+                                    angle = 0
 
                                 return angle
 
                             cnt_frame = 0  # Счетчик кадров
                             vt, pt = self.__mp_drawing._VISIBILITY_THRESHOLD, self.__mp_drawing._PRESENCE_THRESHOLD
 
-                            hcs = [] # Набор экспертных признаков
-                            bndbox_faces = [] # Области с лицами
+                            hcs = []  # Набор экспертных признаков
+                            bndbox_faces = []  # Области с лицами
 
                             # Получение 468 3D-ориентиров лица
                             with self.__mp_face_mesh.FaceMesh(
-                                max_num_faces = 1, # Максимальное количество лиц для обнаружения
+                                max_num_faces=1,  # Максимальное количество лиц для обнаружения
                                 # Необходимо ли дополнительно уточнять координаты ориентиров вокруг глаз и губ
                                 # и выводить дополнительные ориентиры вокруг радужной оболочки
-                                refine_landmarks = True,
+                                refine_landmarks=True,
                                 # Минимальное значение достоверности из модели обнаружения лиц,
                                 # при котором обнаружение считается успешным
-                                min_detection_confidence = 0.5,
+                                min_detection_confidence=0.5,
                                 # Минимальное значение достоверности из модели отслеживания ориентиров для того,
                                 # чтобы ориентиры лиц считались успешно отслеженными
-                                min_tracking_confidence = 0.5
+                                min_tracking_confidence=0.5,
                             ) as face_mesh:
                                 # Проход по всем кадрам видеопотока
                                 while cap.isOpened():
-                                    _, frame = cap.read() # Захват, декодирование и возврат кадра
+                                    _, frame = cap.read()  # Захват, декодирование и возврат кадра
 
-                                    if frame is None: break # Кадр не найден
+                                    if frame is None:
+                                        break  # Кадр не найден
 
                                     if cnt_frame in idx_reduction_frames:
                                         # Запись недоступна (увеличение производительности)
@@ -1401,12 +1590,13 @@ class Video(VideoMessages):
                                         if results.multi_face_landmarks:
                                             # Проход по всем лицам
                                             for idx_face, face_landmarks in enumerate(results.multi_face_landmarks):
-                                                idx_to_coors = {} # Координаты всех ориентиров лица
+                                                idx_to_coors = {}  # Координаты всех ориентиров лица
 
                                                 # Проход по всем ориентирам лица
                                                 for idx_landmark, lmk in enumerate(face_landmarks.landmark):
-                                                    if ((lmk.HasField('visibility') and lmk.visibility < vt)
-                                                            or (lmk.HasField('presence') and lmk.presence < pt)):
+                                                    if (lmk.HasField("visibility") and lmk.visibility < vt) or (
+                                                        lmk.HasField("presence") and lmk.presence < pt
+                                                    ):
                                                         continue
 
                                                     # Нормализация координат
@@ -1429,17 +1619,17 @@ class Video(VideoMessages):
                                                 start_x, start_y = (max(0, x_min), max(0, y_min))
                                                 end_x, end_y = (
                                                     min(width_video - 1, x_max),
-                                                    min(height_video - 1, y_max)
+                                                    min(height_video - 1, y_max),
                                                 )
 
                                                 # Область с лицом
                                                 bndbox_face = frame[
                                                     int(start_y / reshape_img_coef) : int(end_y / reshape_img_coef),
-                                                    int(start_x / reshape_img_coef) : int(end_x / reshape_img_coef)
+                                                    int(start_x / reshape_img_coef) : int(end_x / reshape_img_coef),
                                                 ]
                                                 # Приведение изображения с лицом в нужному размеру
                                                 bndbox_face = cv2.resize(
-                                                    bndbox_face, self.__bndbox_face_size, interpolation = cv2.INTER_AREA
+                                                    bndbox_face, self.__bndbox_face_size, interpolation=cv2.INTER_AREA
                                                 )
 
                                                 bndbox_face = tf.keras.preprocessing.image.img_to_array(bndbox_face)
@@ -1458,69 +1648,90 @@ class Video(VideoMessages):
                                                     eye_x_min = min(idx_to_coors[i[0]][0], idx_to_coors[i[1]][0])
                                                     eye_y_min = min(idx_to_coors[i[0]][1], idx_to_coors[i[1]][1])
                                                     # Разница между yголками глаза
-                                                    eye_x_diff = int(abs(
-                                                        idx_to_coors[i[0]][0] - idx_to_coors[i[1]][0]
-                                                    ) / 2)
-                                                    eye_y_diff = int(abs(
-                                                        idx_to_coors[i[0]][1] - idx_to_coors[i[1]][1]
-                                                    ) / 2)
+                                                    eye_x_diff = int(
+                                                        abs(idx_to_coors[i[0]][0] - idx_to_coors[i[1]][0]) / 2
+                                                    )
+                                                    eye_y_diff = int(
+                                                        abs(idx_to_coors[i[0]][1] - idx_to_coors[i[1]][1]) / 2
+                                                    )
 
-                                                    point_eyes.append([
-                                                        eye_x_min + eye_x_diff - x_min,
-                                                        eye_y_min + eye_y_diff - y_min
-                                                    ])
-                                                    curr_seq_hc.extend([
-                                                        eye_x_min + eye_x_diff - x_min,
-                                                        eye_y_min + eye_y_diff - y_min
-                                                    ])
+                                                    point_eyes.append(
+                                                        [eye_x_min + eye_x_diff - x_min, eye_y_min + eye_y_diff - y_min]
+                                                    )
+                                                    curr_seq_hc.extend(
+                                                        [eye_x_min + eye_x_diff - x_min, eye_y_min + eye_y_diff - y_min]
+                                                    )
 
-                                                coords_left_eye = point_eyes[0] # Координата центра левого глаза
-                                                coords_right_eye = point_eyes[1] # Координата центра правого глаза
+                                                coords_left_eye = point_eyes[0]  # Координата центра левого глаза
+                                                coords_right_eye = point_eyes[1]  # Координата центра правого глаза
 
                                                 # Вычисление расстояния между центрами глаз
-                                                curr_seq_hc.append(distance.euclidean(coords_left_eye, coords_right_eye))
+                                                curr_seq_hc.append(
+                                                    distance.euclidean(coords_left_eye, coords_right_eye)
+                                                )
                                                 # Вычисление угла наклона головы
-                                                curr_seq_hc.append(alignment_procedure(coords_left_eye, coords_right_eye))
+                                                curr_seq_hc.append(
+                                                    alignment_procedure(coords_left_eye, coords_right_eye)
+                                                )
                                                 # Вычисление расстояния между центром левого глаза и его левым углом
-                                                curr_seq_hc.append(distance.euclidean(
-                                                    coords_left_eye,
-                                                    np.asarray(idx_to_coors[263]) - np.asarray([x_min, y_min])
-                                                ))
+                                                curr_seq_hc.append(
+                                                    distance.euclidean(
+                                                        coords_left_eye,
+                                                        np.asarray(idx_to_coors[263]) - np.asarray([x_min, y_min]),
+                                                    )
+                                                )
                                                 # Вычисление расстояния между центром левого глаза и его правым углом
-                                                curr_seq_hc.append(distance.euclidean(
-                                                    coords_left_eye,
-                                                    np.asarray(idx_to_coors[362]) - np.asarray([x_min, y_min])
-                                                ))
+                                                curr_seq_hc.append(
+                                                    distance.euclidean(
+                                                        coords_left_eye,
+                                                        np.asarray(idx_to_coors[362]) - np.asarray([x_min, y_min]),
+                                                    )
+                                                )
                                                 # Вычисление расстояния между центром правого глаза и его левым углом
-                                                curr_seq_hc.append(distance.euclidean(
-                                                    coords_right_eye,
-                                                    np.asarray(idx_to_coors[133]) - np.asarray([x_min, y_min])
-                                                ))
+                                                curr_seq_hc.append(
+                                                    distance.euclidean(
+                                                        coords_right_eye,
+                                                        np.asarray(idx_to_coors[133]) - np.asarray([x_min, y_min]),
+                                                    )
+                                                )
                                                 # Вычисление расстояния между центром правого глаза и его правым углом
-                                                curr_seq_hc.append(distance.euclidean(
-                                                    coords_right_eye,
-                                                    np.asarray(idx_to_coors[33]) - np.asarray([x_min, y_min])))
+                                                curr_seq_hc.append(
+                                                    distance.euclidean(
+                                                        coords_right_eye,
+                                                        np.asarray(idx_to_coors[33]) - np.asarray([x_min, y_min]),
+                                                    )
+                                                )
                                                 # Вычисление угла наклона уголков рта
-                                                curr_seq_hc.append(alignment_procedure(
-                                                    np.asarray(idx_to_coors[105]) - np.asarray([x_min, y_min]),
-                                                    np.asarray(idx_to_coors[334]) - np.asarray([x_min, y_min])
-                                                ))
+                                                curr_seq_hc.append(
+                                                    alignment_procedure(
+                                                        np.asarray(idx_to_coors[105]) - np.asarray([x_min, y_min]),
+                                                        np.asarray(idx_to_coors[334]) - np.asarray([x_min, y_min]),
+                                                    )
+                                                )
                                                 # Вычисление угла наклона бровей
-                                                curr_seq_hc.append(alignment_procedure(
-                                                    np.asarray(idx_to_coors[61]) - np.asarray([x_min, y_min]),
-                                                    np.asarray(idx_to_coors[291]) - np.asarray([x_min, y_min])
-                                                ))
+                                                curr_seq_hc.append(
+                                                    alignment_procedure(
+                                                        np.asarray(idx_to_coors[61]) - np.asarray([x_min, y_min]),
+                                                        np.asarray(idx_to_coors[291]) - np.asarray([x_min, y_min]),
+                                                    )
+                                                )
 
                                                 for coord in self.__coords_face_mesh:
-                                                    curr_seq_hc.extend((
-                                                        np.asarray(idx_to_coors[coord]) - np.asarray([x_min, y_min])
-                                                    ).tolist())
+                                                    curr_seq_hc.extend(
+                                                        (
+                                                            np.asarray(idx_to_coors[coord]) - np.asarray([x_min, y_min])
+                                                        ).tolist()
+                                                    )
 
                                                 for cpl in self.__couples_face_mesh:
-                                                    curr_seq_hc.append(distance.euclidean(
-                                                        np.asarray(idx_to_coors[cpl[0]]) - np.asarray([x_min, y_min]),
-                                                        np.asarray(idx_to_coors[cpl[1]]) - np.asarray([x_min, y_min])
-                                                    ))
+                                                    curr_seq_hc.append(
+                                                        distance.euclidean(
+                                                            np.asarray(idx_to_coors[cpl[0]])
+                                                            - np.asarray([x_min, y_min]),
+                                                            np.asarray(idx_to_coors[cpl[1]])
+                                                            - np.asarray([x_min, y_min]),
+                                                        )
+                                                    )
 
                                             bndbox_faces.append(bndbox_face)
                                             hcs.append(curr_seq_hc)
@@ -1530,7 +1741,8 @@ class Video(VideoMessages):
 
                             # Лицо не найдено не на одном кадре
                             if len(bndbox_faces) == 0:
-                                self._error(self._faces_not_found, out = out); return np.empty([]), np.empty([])
+                                self._error(self._faces_not_found, out=out)
+                                return np.empty([]), np.empty([])
 
                             hcs = np.asarray(hcs)
 
@@ -1540,11 +1752,13 @@ class Video(VideoMessages):
                             try:
                                 # Отправка областей с лицами в нейросетевую модель для получения нейросетевых признаков
                                 extract_deep_fe = self._video_model_deep_fe(np.vstack(bndbox_faces))
-                            except TypeError: code_error_pred_deep_fe = 1
-                            except Exception: code_error_pred_deep_fe = 2
+                            except TypeError:
+                                code_error_pred_deep_fe = 1
+                            except Exception:
+                                code_error_pred_deep_fe = 2
 
                             if code_error_pred_deep_fe != -1:
-                                self._error(self._model_video_deep_fe_not_formation, out = out)
+                                self._error(self._model_video_deep_fe_not_formation, out=out)
                                 return np.empty([]), np.empty([])
 
                             # 1. Список с экспертными признаками
@@ -1553,7 +1767,7 @@ class Video(VideoMessages):
 
                             # Проход по всему набору экспертных и нейросетевых признаков
                             for idx_hc_nn in range(0, len(hcs) + 1, step):
-                                last_idx__hc_nn = idx_hc_nn + window # ID последнего элемента в подвыборке
+                                last_idx__hc_nn = idx_hc_nn + window  # ID последнего элемента в подвыборке
 
                                 # Текущие подвыборки
                                 curr_seq_nn = extract_deep_fe[idx_hc_nn:last_idx__hc_nn].numpy().tolist()
@@ -1565,23 +1779,25 @@ class Video(VideoMessages):
                                     hc_features.append(curr_seq_hc)
                                     nn_features.append(curr_seq_nn)
 
-                            hc_features = stats.zscore(hc_features, axis = -1)
+                            hc_features = stats.zscore(hc_features, axis=-1)
 
                             if last is False:
                                 # Статистика извлеченных признаков из визуального сигнала
                                 self._stat_visual_features(
-                                    last = last, out = out,
-                                    len_hc_features = len(hc_features),
-                                    len_nn_features = len(nn_features),
-                                    shape_hc_features = np.array(hc_features[0]).shape,
-                                    shape_nn_features = np.array(nn_features[0]).shape,
-                                    fps_before = self._round_math(fps_cv2, out),
-                                    fps_after = self._round_math(reduction_fps, out),
+                                    last=last,
+                                    out=out,
+                                    len_hc_features=len(hc_features),
+                                    len_nn_features=len(nn_features),
+                                    shape_hc_features=np.array(hc_features[0]).shape,
+                                    shape_nn_features=np.array(nn_features[0]).shape,
+                                    fps_before=self._round_math(fps_cv2, out),
+                                    fps_after=self._round_math(reduction_fps, out),
                                 )
 
                             return hc_features, np.asarray(nn_features)
             finally:
-                if runtime: self._r_end(out = out)
+                if runtime:
+                    self._r_end(out=out)
 
     # ------------------------------------------------------------------------------------------------------------------
     # Внешние методы
@@ -1653,36 +1869,49 @@ class Video(VideoMessages):
                 False
         """
 
-        self._clear_notebook_history_output() # Очистка истории вывода сообщений в ячейке Jupyter
+        self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter
 
         try:
             # Проверка аргументов
-            if (type(show_summary) is not bool or type(out) is not bool or type(runtime) is not bool or type(run) is
-                not bool): raise TypeError
-        except TypeError: self._inv_args(__class__.__name__, self.load_video_model_hc.__name__, out = out); return False
+            if (
+                type(show_summary) is not bool
+                or type(out) is not bool
+                or type(runtime) is not bool
+                or type(run) is not bool
+            ):
+                raise TypeError
+        except TypeError:
+            self._inv_args(__class__.__name__, self.load_video_model_hc.__name__, out=out)
+            return False
         else:
             # Блокировка выполнения
-            if run is False: self._error(self._lock_user, out = out); return False
+            if run is False:
+                self._error(self._lock_user, out=out)
+                return False
 
-            if runtime: self._r_start()
+            if runtime:
+                self._r_start()
 
             # Информационное сообщение
-            self._info(self._formation_video_model_hc, last = False, out = False)
-            if out: self.show_notebook_history_output() # Отображение истории вывода сообщений в ячейке Jupyter
+            self._info(self._formation_video_model_hc, last=False, out=False)
+            if out:
+                self.show_notebook_history_output()  # Отображение истории вывода сообщений в ячейке Jupyter
 
-            input_lstm = tf.keras.Input(shape = (10, 115))
+            input_lstm = tf.keras.Input(shape=(10, 115))
 
-            x = tf.keras.layers.LSTM(64, return_sequences = True)(input_lstm)
-            x = tf.keras.layers.Dropout(rate = 0.2)(x)
-            x = tf.keras.layers.LSTM(128, return_sequences = False)(x)
-            x = tf.keras.layers.Dropout(rate = 0.2)(x)
-            x = tf.keras.layers.Dense(5, activation = 'linear')(x)
+            x = tf.keras.layers.LSTM(64, return_sequences=True)(input_lstm)
+            x = tf.keras.layers.Dropout(rate=0.2)(x)
+            x = tf.keras.layers.LSTM(128, return_sequences=False)(x)
+            x = tf.keras.layers.Dropout(rate=0.2)(x)
+            x = tf.keras.layers.Dense(5, activation="linear")(x)
 
-            self._video_model_hc = tf.keras.Model(inputs = input_lstm, outputs = x)
+            self._video_model_hc = tf.keras.Model(inputs=input_lstm, outputs=x)
 
-            if show_summary and out: self._video_model_hc.summary()
+            if show_summary and out:
+                self._video_model_hc.summary()
 
-            if runtime: self._r_end(out = out)
+            if runtime:
+                self._r_end(out=out)
 
             return True
 
@@ -2206,41 +2435,52 @@ class Video(VideoMessages):
                 False
         """
 
-        self._clear_notebook_history_output() # Очистка истории вывода сообщений в ячейке Jupyter
+        self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter
 
         try:
             # Проверка аргументов
-            if (type(show_summary) is not bool or type(out) is not bool or type(runtime) is not bool or type(run) is
-                    not bool): raise TypeError
+            if (
+                type(show_summary) is not bool
+                or type(out) is not bool
+                or type(runtime) is not bool
+                or type(run) is not bool
+            ):
+                raise TypeError
         except TypeError:
-            self._inv_args(__class__.__name__, self.load_video_model_deep_fe.__name__, out = out)
+            self._inv_args(__class__.__name__, self.load_video_model_deep_fe.__name__, out=out)
             return False
         else:
             # Блокировка выполнения
-            if run is False: self._error(self._lock_user, out = out); return False
+            if run is False:
+                self._error(self._lock_user, out=out)
+                return False
 
-            if runtime: self._r_start()
+            if runtime:
+                self._r_start()
 
             # Информационное сообщение
-            self._info(self._formation_video_deep_fe, last = False, out = False)
-            if out: self.show_notebook_history_output() # Отображение истории вывода сообщений в ячейке Jupyter
+            self._info(self._formation_video_deep_fe, last=False, out=False)
+            if out:
+                self.show_notebook_history_output()  # Отображение истории вывода сообщений в ячейке Jupyter
 
             basis_model = VGGFace(
-                model = 'resnet50', include_top = False, input_shape = (224, 224, 3), pooling = 'avg', weights = None
+                model="resnet50", include_top=False, input_shape=(224, 224, 3), pooling="avg", weights=None
             )
 
             gauss_noise = tf.keras.layers.GaussianNoise(0.1)(basis_model.output)
             x = tf.keras.layers.Dense(
-                units = 512, kernel_regularizer = tf.keras.regularizers.l2(1e-4), activation = 'relu', name = 'dense_x'
+                units=512, kernel_regularizer=tf.keras.regularizers.l2(1e-4), activation="relu", name="dense_x"
             )(gauss_noise)
             x = tf.keras.layers.Dropout(0.5)(x)
-            x = tf.keras.layers.Dense(7, activation = 'softmax')(x)
+            x = tf.keras.layers.Dense(7, activation="softmax")(x)
 
             self._video_model_deep_fe = tf.keras.Model(basis_model.input, x)
 
-            if show_summary and out: self._video_model_deep_fe.summary()
+            if show_summary and out:
+                self._video_model_deep_fe.summary()
 
-            if runtime: self._r_end(out = out)
+            if runtime:
+                self._r_end(out=out)
 
             return True
 
@@ -2329,39 +2569,50 @@ class Video(VideoMessages):
                 False
         """
 
-        self._clear_notebook_history_output() # Очистка истории вывода сообщений в ячейке Jupyter
+        self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter
 
         try:
             # Проверка аргументов
-            if (type(show_summary) is not bool or type(out) is not bool or type(runtime) is not bool or type(run) is
-                not bool): raise TypeError
+            if (
+                type(show_summary) is not bool
+                or type(out) is not bool
+                or type(runtime) is not bool
+                or type(run) is not bool
+            ):
+                raise TypeError
         except TypeError:
-            self._inv_args(__class__.__name__, self.load_video_model_nn.__name__, out = out); return False
+            self._inv_args(__class__.__name__, self.load_video_model_nn.__name__, out=out)
+            return False
         else:
             # Блокировка выполнения
-            if run is False: self._error(self._lock_user, out = out); return False
+            if run is False:
+                self._error(self._lock_user, out=out)
+                return False
 
-            if runtime: self._r_start()
+            if runtime:
+                self._r_start()
 
             # Информационное сообщение
-            self._info(self._formation_video_model_nn, last = False, out = False)
-            if out: self.show_notebook_history_output() # Отображение истории вывода сообщений в ячейке Jupyter
+            self._info(self._formation_video_model_nn, last=False, out=False)
+            if out:
+                self.show_notebook_history_output()  # Отображение истории вывода сообщений в ячейке Jupyter
 
-            input_lstm = tf.keras.Input(shape = (10, 512))
+            input_lstm = tf.keras.Input(shape=(10, 512))
 
-            x = tf.keras.layers.LSTM(
-                1024, return_sequences = False,
-                kernel_regularizer = tf.keras.regularizers.l2(1e-3)
-            )(input_lstm)
-            x = tf.keras.layers.Dropout(rate = 0.2)(x)
-            x = tf.keras.layers.Dense(units = 5)(x)
-            x = tf.keras.layers.Activation('linear')(x)
+            x = tf.keras.layers.LSTM(1024, return_sequences=False, kernel_regularizer=tf.keras.regularizers.l2(1e-3))(
+                input_lstm
+            )
+            x = tf.keras.layers.Dropout(rate=0.2)(x)
+            x = tf.keras.layers.Dense(units=5)(x)
+            x = tf.keras.layers.Activation("linear")(x)
 
-            self._video_model_nn = tf.keras.Model(inputs = input_lstm, outputs = x)
+            self._video_model_nn = tf.keras.Model(inputs=input_lstm, outputs=x)
 
-            if show_summary and out: self._video_model_nn.summary()
+            if show_summary and out:
+                self._video_model_nn.summary()
 
-            if runtime: self._r_end(out = out)
+            if runtime:
+                self._r_end(out=out)
 
             return True
 
@@ -2446,30 +2697,42 @@ class Video(VideoMessages):
                 False
         """
 
-        self._clear_notebook_history_output() # Очистка истории вывода сообщений в ячейке Jupyter
+        self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter
 
         try:
             # Проверка аргументов
-            if (type(show_summary) is not bool or type(out) is not bool or type(runtime) is not bool or type(run) is
-                not bool): raise TypeError
+            if (
+                type(show_summary) is not bool
+                or type(out) is not bool
+                or type(runtime) is not bool
+                or type(run) is not bool
+            ):
+                raise TypeError
         except TypeError:
-            self._inv_args(__class__.__name__, self.load_video_models_b5.__name__, out = out); return False
+            self._inv_args(__class__.__name__, self.load_video_models_b5.__name__, out=out)
+            return False
         else:
             # Блокировка выполнения
-            if run is False: self._error(self._lock_user, out = out); return False
+            if run is False:
+                self._error(self._lock_user, out=out)
+                return False
 
-            if runtime: self._r_start()
+            if runtime:
+                self._r_start()
 
             # Информационное сообщение
-            self._info(self._formation_video_models_b5, last = False, out = False)
-            if out: self.show_notebook_history_output() # Отображение истории вывода сообщений в ячейке Jupyter
+            self._info(self._formation_video_models_b5, last=False, out=False)
+            if out:
+                self.show_notebook_history_output()  # Отображение истории вывода сообщений в ячейке Jupyter
 
             for key, _ in self._video_models_b5.items():
                 self._video_models_b5[key] = self.__load_video_model_b5()
 
-            if show_summary and out: self._video_models_b5[key].summary()
+            if show_summary and out:
+                self._video_models_b5[key].summary()
 
-            if runtime: self._r_end(out = out)
+            if runtime:
+                self._r_end(out=out)
 
             return True
 
@@ -2586,14 +2849,20 @@ class Video(VideoMessages):
                 False
         """
 
-        if runtime: self._r_start()
+        if runtime:
+            self._r_start()
 
         if self.__load_model_weights(url, force_reload, self._load_video_model_weights_hc, out, False, run) is True:
-            try: self._video_model_hc.load_weights(self._url_last_filename)
-            except Exception: self._error(self._model_video_hc_not_formation, out = out); return False
-            else: return True
+            try:
+                self._video_model_hc.load_weights(self._url_last_filename)
+            except Exception:
+                self._error(self._model_video_hc_not_formation, out=out)
+                return False
+            else:
+                return True
             finally:
-                if runtime: self._r_end(out = out)
+                if runtime:
+                    self._r_end(out=out)
 
         return False
 
@@ -2710,21 +2979,27 @@ class Video(VideoMessages):
                 False
         """
 
-        if runtime: self._r_start()
+        if runtime:
+            self._r_start()
 
-        if self.__load_model_weights(
-            url, force_reload, self._load_video_model_weights_deep_fe, out, False, run
-        ) is True:
+        if (
+            self.__load_model_weights(url, force_reload, self._load_video_model_weights_deep_fe, out, False, run)
+            is True
+        ):
             try:
                 self._video_model_deep_fe.load_weights(self._url_last_filename)
                 self._video_model_deep_fe = tf.keras.Model(
-                    inputs = self._video_model_deep_fe.input,
-                    outputs = [self._video_model_deep_fe.get_layer('dense_x').output]
+                    inputs=self._video_model_deep_fe.input,
+                    outputs=[self._video_model_deep_fe.get_layer("dense_x").output],
                 )
-            except Exception: self._error(self._model_video_deep_fe_not_formation, out = out); return False
-            else: return True
+            except Exception:
+                self._error(self._model_video_deep_fe_not_formation, out=out)
+                return False
+            else:
+                return True
             finally:
-                if runtime: self._r_end(out = out)
+                if runtime:
+                    self._r_end(out=out)
 
         return False
 
@@ -2841,20 +3116,34 @@ class Video(VideoMessages):
                 False
         """
 
-        if runtime: self._r_start()
+        if runtime:
+            self._r_start()
 
         if self.__load_model_weights(url, force_reload, self._load_video_model_weights_nn, out, False, run) is True:
-            try: self._video_model_nn.load_weights(self._url_last_filename)
-            except Exception: self._error(self._model_video_nn_not_formation, out = out); return False
-            else: return True
+            try:
+                self._video_model_nn.load_weights(self._url_last_filename)
+            except Exception:
+                self._error(self._model_video_nn_not_formation, out=out)
+                return False
+            else:
+                return True
             finally:
-                if runtime: self._r_end(out = out)
+                if runtime:
+                    self._r_end(out=out)
 
         return False
 
     def load_video_models_weights_b5(
-        self, url_openness: str, url_conscientiousness: str, url_extraversion: str, url_agreeableness: str,
-        url_neuroticism: str, force_reload: bool = True, out: bool = True, runtime: bool = True, run: bool = True
+        self,
+        url_openness: str,
+        url_conscientiousness: str,
+        url_extraversion: str,
+        url_agreeableness: str,
+        url_neuroticism: str,
+        force_reload: bool = True,
+        out: bool = True,
+        runtime: bool = True,
+        run: bool = True,
     ) -> bool:
         """Загрузка весов нейросетевых моделей для получения результатов оценки персональных качеств
 
@@ -3035,76 +3324,103 @@ class Video(VideoMessages):
                 False
         """
 
-        self._clear_notebook_history_output() # Очистка истории вывода сообщений в ячейке Jupyter
+        self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter
 
         try:
             # Проверка аргументов
-            if (type(url_openness) is not str or not url_openness
-                or type(url_conscientiousness) is not str or not url_conscientiousness
-                or type(url_extraversion) is not str or not url_extraversion
-                or type(url_agreeableness) is not str or not url_agreeableness
-                or type(url_neuroticism) is not str or not url_neuroticism
+            if (
+                type(url_openness) is not str
+                or not url_openness
+                or type(url_conscientiousness) is not str
+                or not url_conscientiousness
+                or type(url_extraversion) is not str
+                or not url_extraversion
+                or type(url_agreeableness) is not str
+                or not url_agreeableness
+                or type(url_neuroticism) is not str
+                or not url_neuroticism
                 or type(force_reload) is not bool
                 or type(out) is not bool
-                or type(runtime) is not bool or type(run) is not bool): raise TypeError
+                or type(runtime) is not bool
+                or type(run) is not bool
+            ):
+                raise TypeError
         except TypeError:
-            self._inv_args(__class__.__name__, self.load_video_models_weights_b5.__name__, out = out); return False
+            self._inv_args(__class__.__name__, self.load_video_models_weights_b5.__name__, out=out)
+            return False
         else:
             # Блокировка выполнения
-            if run is False: self._error(self._lock_user, out = out); return False
+            if run is False:
+                self._error(self._lock_user, out=out)
+                return False
 
-            if runtime: self._r_start()
+            if runtime:
+                self._r_start()
 
-            result_download_models = 0 # Все веса нейросетевых моделей по умолчанию загружены
+            result_download_models = 0  # Все веса нейросетевых моделей по умолчанию загружены
 
             # Информационное сообщение
-            self._info(self._load_video_models_weights_b5, last = False, out = out)
+            self._info(self._load_video_models_weights_b5, last=False, out=out)
 
             # Проход по всем URL с весами нейросетевых моделей
-            for cnt, url in enumerate([
-                (url_openness, self._b5['ru'][0]),
-                (url_conscientiousness, self._b5['ru'][1]),
-                (url_extraversion, self._b5['ru'][2]),
-                (url_agreeableness, self._b5['ru'][3]),
-                (url_neuroticism, self._b5['ru'][4]),
-            ]):
-                sections = urlparse(url[0]) # Парсинг URL адреса
+            for cnt, url in enumerate(
+                [
+                    (url_openness, self._b5["ru"][0]),
+                    (url_conscientiousness, self._b5["ru"][1]),
+                    (url_extraversion, self._b5["ru"][2]),
+                    (url_agreeableness, self._b5["ru"][3]),
+                    (url_neuroticism, self._b5["ru"][4]),
+                ]
+            ):
+                sections = urlparse(url[0])  # Парсинг URL адреса
 
                 try:
                     # URL файл невалидный
-                    if sections.scheme == '': raise requests.exceptions.InvalidURL
+                    if sections.scheme == "":
+                        raise requests.exceptions.InvalidURL
                 except requests.exceptions.InvalidURL:
                     url_norm = os.path.normpath(url[0])
 
                     try:
-                        if os.path.isfile(url_norm) is False: raise FileNotFoundError # Не файл
-                    except FileNotFoundError: self._other_error(
-                            self._load_model_weights_error + ' ' + self._bold_wrapper(url[1].capitalize()), out = out
-                        ); continue
-                    except Exception: self._other_error(self._unknown_err, out = out); continue
+                        if os.path.isfile(url_norm) is False:
+                            raise FileNotFoundError  # Не файл
+                    except FileNotFoundError:
+                        self._other_error(
+                            self._load_model_weights_error + " " + self._bold_wrapper(url[1].capitalize()), out=out
+                        )
+                        continue
+                    except Exception:
+                        self._other_error(self._unknown_err, out=out)
+                        continue
                     else:
                         self._url_last_filename = url_norm
 
                         # Отображение истории вывода сообщений в ячейке Jupyter
-                        if out: self.show_notebook_history_output()
+                        if out:
+                            self.show_notebook_history_output()
                 else:
                     try:
-                        if force_reload is False: clear_output(True)
+                        if force_reload is False:
+                            clear_output(True)
                         # Загрузка файла из URL
                         res_download_file_from_url = self._download_file_from_url(
-                            url = url[0], force_reload = force_reload, runtime = False, out = out, run = True
+                            url=url[0], force_reload=force_reload, runtime=False, out=out, run=True
                         )
-                    except Exception: self._other_error(self._unknown_err, out = out); continue
+                    except Exception:
+                        self._other_error(self._unknown_err, out=out)
+                        continue
                     else:
                         # Файл загружен
-                        if res_download_file_from_url != 200: continue
+                        if res_download_file_from_url != 200:
+                            continue
 
                         try:
-                            self._video_models_b5[self._b5['en'][cnt]].load_weights(self._url_last_filename)
-                        except Exception: self._other_error(
-                                self._load_model_weights_error + ' ' + self._bold_wrapper(url[1].capitalize()),
-                                out = out
-                            ); continue
+                            self._video_models_b5[self._b5["en"][cnt]].load_weights(self._url_last_filename)
+                        except Exception:
+                            self._other_error(
+                                self._load_model_weights_error + " " + self._bold_wrapper(url[1].capitalize()), out=out
+                            )
+                            continue
                         else:
                             self._add_last_el_notebook_history_output(self._bold_wrapper(url[1].capitalize()))
 
@@ -3112,16 +3428,25 @@ class Video(VideoMessages):
 
             clear_output(True)
             # Отображение истории вывода сообщений в ячейке Jupyter
-            if out: self.show_notebook_history_output()
+            if out:
+                self.show_notebook_history_output()
 
-            if runtime: self._r_end(out = out)
+            if runtime:
+                self._r_end(out=out)
 
-            if result_download_models != len(self._b5['ru']): return False
+            if result_download_models != len(self._b5["ru"]):
+                return False
             return True
 
     def get_visual_features(
-        self, path: str, reduction_fps: int = 5, window: int = 10, step: int = 5,
-        out: bool = True, runtime: bool = True, run: bool = True
+        self,
+        path: str,
+        reduction_fps: int = 5,
+        window: int = 10,
+        step: int = 5,
+        out: bool = True,
+        runtime: bool = True,
+        run: bool = True,
     ) -> Tuple[np.ndarray, np.ndarray]:
         """Извлечение признаков из визуального сигнала
 
@@ -3143,17 +3468,32 @@ class Video(VideoMessages):
         :bdg-link-light:`Пример <../../user_guide/notebooks/Video-get_visual_features.ipynb>`
         """
 
-        self._clear_notebook_history_output() # Очистка истории вывода сообщений в ячейке Jupyter
+        self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter
 
         return self._get_visual_features(
-            path = path, reduction_fps = reduction_fps, window = window, step = step,
-            last = False, out = out, runtime = runtime, run = run
+            path=path,
+            reduction_fps=reduction_fps,
+            window=window,
+            step=step,
+            last=False,
+            out=out,
+            runtime=runtime,
+            run=run,
         )
 
     def get_video_union_predictions(
-        self, depth: int = 1, recursive: bool = False, reduction_fps: int = 5, window: int = 10, step: int = 5,
-        accuracy = True, url_accuracy: str = '', logs: bool = True, out: bool = True, runtime: bool = True,
-        run: bool = True
+        self,
+        depth: int = 1,
+        recursive: bool = False,
+        reduction_fps: int = 5,
+        window: int = 10,
+        step: int = 5,
+        accuracy=True,
+        url_accuracy: str = "",
+        logs: bool = True,
+        out: bool = True,
+        runtime: bool = True,
+        run: bool = True,
     ) -> bool:
         """Получения прогнозов по видео
 
@@ -3176,34 +3516,52 @@ class Video(VideoMessages):
         :bdg-link-light:`Пример <../../user_guide/notebooks/Video-get_video_union_predictions.ipynb>`
         """
 
-        self._clear_notebook_history_output() # Очистка истории вывода сообщений в ячейке Jupyter
+        self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter
 
         # Сброс
-        self._df_files = pd.DataFrame() # Пустой DataFrame с данными
-        self._df_accuracy = pd.DataFrame() # Пустой DataFrame с результатами вычисления точности
+        self._df_files = pd.DataFrame()  # Пустой DataFrame с данными
+        self._df_accuracy = pd.DataFrame()  # Пустой DataFrame с результатами вычисления точности
 
         try:
             # Проверка аргументов
-            if (type(depth) is not int or depth < 1 or type(out) is not bool or type(recursive) is not bool
-                    or type(reduction_fps) is not int or reduction_fps < 1
-                    or type(window) is not int or window < 1 or type(step) is not int or step < 1
-                    or type(accuracy) is not bool or type(url_accuracy) is not str
-                    or type(logs) is not bool or type(runtime) is not bool or type(run) is not bool):
+            if (
+                type(depth) is not int
+                or depth < 1
+                or type(out) is not bool
+                or type(recursive) is not bool
+                or type(reduction_fps) is not int
+                or reduction_fps < 1
+                or type(window) is not int
+                or window < 1
+                or type(step) is not int
+                or step < 1
+                or type(accuracy) is not bool
+                or type(url_accuracy) is not str
+                or type(logs) is not bool
+                or type(runtime) is not bool
+                or type(run) is not bool
+            ):
                 raise TypeError
         except TypeError:
-            self._inv_args(__class__.__name__, self.get_video_union_predictions.__name__, out = out); return False
+            self._inv_args(__class__.__name__, self.get_video_union_predictions.__name__, out=out)
+            return False
         else:
             # Блокировка выполнения
-            if run is False: self._error(self._lock_user, out = out); return False
+            if run is False:
+                self._error(self._lock_user, out=out)
+                return False
 
-            if runtime: self._r_start()
+            if runtime:
+                self._r_start()
 
             try:
                 # Получение директорий, где хранятся данные
-                path_to_data = self._get_paths(self.path_to_dataset_, depth, out = out)
-                if type(path_to_data) is bool: return False
+                path_to_data = self._get_paths(self.path_to_dataset_, depth, out=out)
+                if type(path_to_data) is bool:
+                    return False
 
-                if type(self.keys_dataset_) is not list: raise TypeError
+                if type(self.keys_dataset_) is not list:
+                    raise TypeError
 
                 # Словарь для DataFrame набора данных с данными
                 self._dict_of_files = dict(zip(self.keys_dataset_, [[] for _ in range(0, len(self.keys_dataset_))]))
@@ -3212,129 +3570,170 @@ class Video(VideoMessages):
                     zip(self.keys_dataset_[1:], [[] for _ in range(0, len(self.keys_dataset_[1:]))])
                 )
             except (TypeError, FileNotFoundError):
-                self._other_error(self._folder_not_found.format(self._info_wrapper(self.path_to_dataset_)), out = out)
+                self._other_error(self._folder_not_found.format(self._info_wrapper(self.path_to_dataset_)), out=out)
                 return False
-            except Exception: self._other_error(self._unknown_err, out = out); return False
+            except Exception:
+                self._other_error(self._unknown_err, out=out)
+                return False
             else:
                 # Вычисление точности
                 if accuracy is True:
                     get_video_union_predictions_info = self._get_union_predictions_info + self._get_accuracy_info
-                else: get_video_union_predictions_info = self._get_union_predictions_info
+                else:
+                    get_video_union_predictions_info = self._get_union_predictions_info
 
                 get_video_union_predictions_info += self._video_modality
 
                 # Вычисление точности
                 if accuracy is True:
                     # Информационное сообщение
-                    self._info(get_video_union_predictions_info, out = out)
+                    self._info(get_video_union_predictions_info, out=out)
 
-                    if not url_accuracy: url_accuracy = self._true_traits['sberdisk']
+                    if not url_accuracy:
+                        url_accuracy = self._true_traits["sberdisk"]
 
                     try:
                         # Загрузка верных предсказаний
                         data_true_traits = pd.read_csv(url_accuracy)
                     except (FileNotFoundError, URLError, UnicodeDecodeError):
-                        self._other_error(self._load_data_true_traits_error, out = out); return False
-                    except Exception: self._other_error(self._unknown_err, out = out); return False
+                        self._other_error(self._load_data_true_traits_error, out=out)
+                        return False
+                    except Exception:
+                        self._other_error(self._unknown_err, out=out)
+                        return False
                     else:
                         true_traits = []
                         self._del_last_el_notebook_history_output()
 
-                paths = [] # Пути до искомых файлов
+                paths = []  # Пути до искомых файлов
 
                 # Проход по всем директориям
                 for curr_path in path_to_data:
-                    empty = True # По умолчанию директория пустая
+                    empty = True  # По умолчанию директория пустая
 
                     # Рекурсивный поиск данных
-                    if recursive is True: g = Path(curr_path).rglob('*')
-                    else: g = Path(curr_path).glob('*')
+                    if recursive is True:
+                        g = Path(curr_path).rglob("*")
+                    else:
+                        g = Path(curr_path).glob("*")
 
                     # Формирование словаря для DataFrame
                     for p in g:
                         try:
-                            if type(self.ext_) is not list or len(self.ext_) < 1: raise TypeError
+                            if type(self.ext_) is not list or len(self.ext_) < 1:
+                                raise TypeError
 
                             self.ext_ = [x.lower() for x in self.ext_]
-                        except TypeError: self._other_error(self._wrong_ext, out = out); return False
-                        except Exception: self._other_error(self._unknown_err, out = out); return False
+                        except TypeError:
+                            self._other_error(self._wrong_ext, out=out)
+                            return False
+                        except Exception:
+                            self._other_error(self._unknown_err, out=out)
+                            return False
                         else:
                             # Расширение файла соответствует расширению искомых файлов
                             if p.suffix.lower() in self.ext_:
-                                if empty is True: empty = False # Каталог не пустой
+                                if empty is True:
+                                    empty = False  # Каталог не пустой
 
                                 paths.append(p.resolve())
 
                 try:
-                    self.__len_paths = len(paths) # Количество искомых файлов
+                    self.__len_paths = len(paths)  # Количество искомых файлов
 
-                    if self.__len_paths == 0: raise TypeError
-                except TypeError: self._other_error(self._files_not_found, out = out); return False
-                except Exception: self._other_error(self._unknown_err, out = out); return False
+                    if self.__len_paths == 0:
+                        raise TypeError
+                except TypeError:
+                    self._other_error(self._files_not_found, out=out)
+                    return False
+                except Exception:
+                    self._other_error(self._unknown_err, out=out)
+                    return False
                 else:
                     # Локальный путь
                     self.__local_path = lambda path: os.path.join(
-                        *Path(path).parts[-abs((len(Path(path).parts) - len(Path(self.path_to_dataset_).parts))):]
+                        *Path(path).parts[-abs((len(Path(path).parts) - len(Path(self.path_to_dataset_).parts))) :]
                     )
 
-                    last = False # Замена последнего сообщения
+                    last = False  # Замена последнего сообщения
 
                     # Проход по всем искомым файлов
                     for i, curr_path in enumerate(paths):
-                        if i != 0: last = True
+                        if i != 0:
+                            last = True
 
                         # Индикатор выполнения
                         self._progressbar_union_predictions(
-                            get_video_union_predictions_info, i, self.__local_path(curr_path), self.__len_paths,
-                            True, last, out
+                            get_video_union_predictions_info,
+                            i,
+                            self.__local_path(curr_path),
+                            self.__len_paths,
+                            True,
+                            last,
+                            out,
                         )
 
                         # Извлечение признаков из визуального сигнала
                         hc_features, nn_features = self._get_visual_features(
-                            path = str(curr_path.resolve()),
-                            reduction_fps = reduction_fps,
-                            window = window,
-                            step = step,
-                            last = True, out = False, runtime = False, run = run
+                            path=str(curr_path.resolve()),
+                            reduction_fps=reduction_fps,
+                            window=window,
+                            step=step,
+                            last=True,
+                            out=False,
+                            runtime=False,
+                            run=run,
                         )
 
                         # Признаки из акустического сигнала извлечены
-                        if (type(hc_features) is np.ndarray and type(nn_features) is np.ndarray
-                            and len(hc_features) > 0 and len(nn_features) > 0):
+                        if (
+                            type(hc_features) is np.ndarray
+                            and type(nn_features) is np.ndarray
+                            and len(hc_features) > 0
+                            and len(nn_features) > 0
+                        ):
                             # Коды ошибок нейросетевых моделей
                             code_error_pred_hc = -1
                             code_error_pred_nn = -1
 
                             try:
                                 # Оправка экспертных признаков в нейросетевую модель
-                                pred_hc = self.video_model_hc_(np.array(hc_features, dtype = np.float16)).numpy()
-                            except TypeError: code_error_pred_hc = 1
-                            except Exception: code_error_pred_hc = 2
+                                pred_hc = self.video_model_hc_(np.array(hc_features, dtype=np.float16)).numpy()
+                            except TypeError:
+                                code_error_pred_hc = 1
+                            except Exception:
+                                code_error_pred_hc = 2
 
                             try:
                                 # Отправка нейросетевых признаков в нейросетевую модель
-                                pred_nn = self.video_model_nn_(np.array(nn_features, dtype = np.float16)).numpy()
-                            except TypeError: code_error_pred_nn = 1
-                            except Exception: code_error_pred_nn = 2
+                                pred_nn = self.video_model_nn_(np.array(nn_features, dtype=np.float16)).numpy()
+                            except TypeError:
+                                code_error_pred_nn = 1
+                            except Exception:
+                                code_error_pred_nn = 2
 
                             if code_error_pred_hc != -1 and code_error_pred_nn != -1:
-                                self._error(self._models_video_not_formation, out = out); return False
+                                self._error(self._models_video_not_formation, out=out)
+                                return False
 
                             if code_error_pred_hc != -1:
-                                self._error(self._model_video_hc_not_formation, out = out); return False
+                                self._error(self._model_video_hc_not_formation, out=out)
+                                return False
 
                             if code_error_pred_nn != -1:
-                                self._error(self._model_video_nn_not_formation, out = out); return False
+                                self._error(self._model_video_nn_not_formation, out=out)
+                                return False
 
                             # Конкатенация оценок по экспертным и нейросетевым признакам
-                            union_pred = self.__concat_pred(pred_hc, pred_nn, out = out)
+                            union_pred = self.__concat_pred(pred_hc, pred_nn, out=out)
 
-                            if len(union_pred) == 0: return False
+                            if len(union_pred) == 0:
+                                return False
 
                             final_pred = []
 
                             for cnt, (name_b5, model) in enumerate(self.video_models_b5_.items()):
-                                result = model(np.expand_dims(union_pred[cnt], axis = 0)).numpy()[0][0]
+                                result = model(np.expand_dims(union_pred[cnt], axis=0)).numpy()[0][0]
 
                                 final_pred.append(result)
 
@@ -3345,29 +3744,46 @@ class Video(VideoMessages):
                             # Вычисление точности
                             if accuracy is True:
                                 try:
-                                    true_trait = data_true_traits[
-                                        data_true_traits.NAME_VIDEO == curr_path.name
-                                    ][list(self._b5['en'])].values[0].tolist()
+                                    true_trait = (
+                                        data_true_traits[data_true_traits.NAME_VIDEO == curr_path.name][
+                                            list(self._b5["en"])
+                                        ]
+                                        .values[0]
+                                        .tolist()
+                                    )
                                 except IndexError:
-                                    self._other_error(self._expert_values_not_found, out = out); return False
-                                except Exception: self._other_error(self._unknown_err, out = out); return False
-                                else: true_traits.append(true_trait)
+                                    self._other_error(self._expert_values_not_found, out=out)
+                                    return False
+                                except Exception:
+                                    self._other_error(self._unknown_err, out=out)
+                                    return False
+                                else:
+                                    true_traits.append(true_trait)
                         else:
                             # Добавление данных в словарь для DataFrame
-                            if self._append_to_list_of_files(
-                                str(curr_path.resolve()), [None] * len(self._b5['en']), out
-                            ) is False: return False
+                            if (
+                                self._append_to_list_of_files(
+                                    str(curr_path.resolve()), [None] * len(self._b5["en"]), out
+                                )
+                                is False
+                            ):
+                                return False
 
                             self._del_last_el_notebook_history_output()
 
                     # Индикатор выполнения
                     self._progressbar_union_predictions(
-                        get_video_union_predictions_info, self.__len_paths, self.__local_path(paths[-1]),
-                        self.__len_paths, True, last, out
+                        get_video_union_predictions_info,
+                        self.__len_paths,
+                        self.__local_path(paths[-1]),
+                        self.__len_paths,
+                        True,
+                        last,
+                        out,
                     )
 
                     # Отображение в DataFrame с данными
-                    self._df_files = pd.DataFrame.from_dict(data = self._dict_of_files, orient = 'index').transpose()
+                    self._df_files = pd.DataFrame.from_dict(data=self._dict_of_files, orient="index").transpose()
                     self._df_files.index.name = self._keys_id
                     self._df_files.index += 1
 
@@ -3375,7 +3791,7 @@ class Video(VideoMessages):
 
                     # Отображение
                     if out is True:
-                        self._add_notebook_history_output(self._df_files.iloc[0:self.num_to_df_display_, :])
+                        self._add_notebook_history_output(self._df_files.iloc[0 : self.num_to_df_display_, :])
 
                     # Подсчет точности
                     if accuracy is True:
@@ -3388,8 +3804,10 @@ class Video(VideoMessages):
                                         np.asarray(true_traits)[:, cnt], self._df_files[name_b5].to_list()
                                     )
                                 )
-                            except IndexError: continue
-                            except Exception: continue
+                            except IndexError:
+                                continue
+                            except Exception:
+                                continue
 
                         mae_curr = [round(float(i), 4) for i in mae_curr]
                         mae_mean = round(float(np.mean(mae_curr)), 4)
@@ -3398,62 +3816,65 @@ class Video(VideoMessages):
 
                         for curr_acc in [mae_curr, accuracy_curr]:
                             # Добавление данных в словарь для DataFrame с результатами вычисления точности
-                            if self._append_to_list_of_accuracy(curr_acc, out) is False: return False
+                            if self._append_to_list_of_accuracy(curr_acc, out) is False:
+                                return False
 
-                        self._dict_of_accuracy.update({
-                            self.__df_accuracy_mean: [mae_mean, accuracy_mean]
-                        })
+                        self._dict_of_accuracy.update({self.__df_accuracy_mean: [mae_mean, accuracy_mean]})
                         # Отображение в DataFrame с данными
-                        self._df_accuracy = pd.DataFrame.from_dict(data = self._dict_of_accuracy,
-                                                                   orient = 'index').transpose()
+                        self._df_accuracy = pd.DataFrame.from_dict(
+                            data=self._dict_of_accuracy, orient="index"
+                        ).transpose()
                         self._df_accuracy.index = self.__df_accuracy_index
                         self._df_accuracy.index.name = self.__df_accuracy_index_name
 
                         # Информационное сообщение
-                        self._info(self._get_union_predictions_result, out = False)
+                        self._info(self._get_union_predictions_result, out=False)
 
                         # Отображение
                         if out is True:
-                            self._add_notebook_history_output(self._df_accuracy.iloc[0:self.num_to_df_display_, :])
+                            self._add_notebook_history_output(self._df_accuracy.iloc[0 : self.num_to_df_display_, :])
 
                         self._info(
                             self._get_union_predictions_results_mean.format(
-                                self._info_wrapper(str(mae_mean)),
-                                self._info_wrapper(str(accuracy_mean))
+                                self._info_wrapper(str(mae_mean)), self._info_wrapper(str(accuracy_mean))
                             ),
-                            out = False
+                            out=False,
                         )
 
                     clear_output(True)
                     # Отображение истории вывода сообщений в ячейке Jupyter
-                    if out is True: self.show_notebook_history_output()
+                    if out is True:
+                        self.show_notebook_history_output()
 
                     if logs is True:
                         # Текущее время для лог-файла
                         # см. datetime.fromtimestamp()
-                        curr_ts = str(datetime.now().timestamp()).replace('.', '_')
+                        curr_ts = str(datetime.now().timestamp()).replace(".", "_")
 
                         name_logs_file = self.get_video_union_predictions.__name__
 
                         # Сохранение LOG
                         res_save_logs_df_files = self._save_logs(
-                            self._df_files, name_logs_file + '_df_files_' + curr_ts
+                            self._df_files, name_logs_file + "_df_files_" + curr_ts
                         )
 
                         # Подсчет точности
                         if accuracy is True:
                             # Сохранение LOG
                             res_save_logs_df_accuracy = self._save_logs(
-                                self._df_accuracy, name_logs_file + '_df_accuracy_' + curr_ts
+                                self._df_accuracy, name_logs_file + "_df_accuracy_" + curr_ts
                             )
 
                         if res_save_logs_df_files is True:
                             # Сохранение LOG файла/файлов
-                            if accuracy is True and res_save_logs_df_accuracy is True: logs_s = self._logs_saves_true
-                            else: logs_s = self._logs_save_true
+                            if accuracy is True and res_save_logs_df_accuracy is True:
+                                logs_s = self._logs_saves_true
+                            else:
+                                logs_s = self._logs_save_true
 
-                            self._info_true(logs_s, out = out)
+                            self._info_true(logs_s, out=out)
 
                     return True
             finally:
-                if runtime: self._r_end(out = out)
+                if runtime:
+                    self._r_end(out=out)
