@@ -14,6 +14,7 @@
    lab/download
    lab/audio
    lab/video
+   lab/text
    lab/prediction
    lab/build
 
@@ -40,6 +41,9 @@
 
 :doc:`lab/video`
    Документация для файла ``modules/lab/video.py``
+
+:doc:`lab/text`
+   Документация для файла ``modules/lab/text.py``
 
 :doc:`lab/prediction`
    Документация для файла ``modules/lab/prediction.py``
