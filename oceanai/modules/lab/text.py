@@ -69,10 +69,13 @@ class TextMessages(Download):
 
         self._text_modality: str = self._(" (текстовая модальность) ...")
         self._formation_text_model_hc: str = self._formation_model_hc + self._text_modality
+        self._formation_text_model_nn: str = self._formation_model_nn + self._text_modality
 
         self._load_text_model_weights_hc: str = self._load_model_weights_hc + self._text_modality
+        self._load_text_model_weights_nn: str = self._load_model_weights_nn + self._text_modality
 
         self._model_text_hc_not_formation: str = self._model_hc_not_formation + self._text_modality
+        self._model_text_nn_not_formation: str = self._model_nn_not_formation + self._text_modality
 
 
 # ######################################################################################################################
@@ -102,6 +105,8 @@ class Text(TextMessages):
 
         # Нейросетевая модель **tf.keras.Model** для получения оценок по экспертным признакам
         self._text_model_hc: Optional[keras.engine.functional.Functional] = None
+        # Нейросетевая модель **tf.keras.Model** для получения оценок по нейросетевым признакам
+        self._text_model_nn: Optional[keras.engine.functional.Functional] = None
 
         # ----------------------- Только для внутреннего использования внутри класса
 
@@ -121,6 +126,16 @@ class Text(TextMessages):
         """
 
         return self._text_model_hc
+
+    @property
+    def text_model_nn_(self) -> Optional[keras.engine.functional.Functional]:
+        """Получение нейросетевой модели **tf.keras.Model** для получения оценок по нейросетевым признакам
+
+        Returns:
+            Optional[keras.engine.functional.Functional]: Нейросетевая модель **tf.keras.Model** или None
+        """
+
+        return self._text_model_nn
 
     # ------------------------------------------------------------------------------------------------------------------
     # Внутренние методы (приватные)
@@ -311,6 +326,85 @@ class Text(TextMessages):
 
             return True
 
+    def load_text_model_nn(
+        self, corpus: str = "", show_summary: bool = False, out: bool = True, runtime: bool = True, run: bool = True
+    ) -> bool:
+        """Формирование нейросетевой архитектуры для получения оценок по нейросетевым признакам
+
+        Args:
+            corpus (str): Корпус для тестирования нейросетевой модели
+            show_summary (bool): Отображение сформированной нейросетевой архитектуры модели
+            out (bool): Отображение
+            runtime (bool): Подсчет времени выполнения
+            run (bool): Блокировка выполнения
+
+        Returns:
+            bool: **True** если нейросетевая архитектура модели сформирована, в обратном случае **False**
+        """
+
+        self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter
+
+        try:
+            # Проверка аргументов
+            if (
+                type(corpus) is not str
+                or not corpus
+                or (corpus in self.__multi_corpora) is False
+                or type(show_summary) is not bool
+                or type(out) is not bool
+                or type(runtime) is not bool
+                or type(run) is not bool
+            ):
+                raise TypeError
+        except TypeError:
+            self._inv_args(__class__.__name__, self.load_text_model_nn.__name__, out=out)
+            return False
+        else:
+            # Блокировка выполнения
+            if run is False:
+                self._error(self._lock_user, out=out)
+                return False
+
+            if runtime:
+                self._r_start()
+
+            # Информационное сообщение
+            self._info(self._formation_text_model_nn, last=False, out=False)
+            if out:
+                self.show_notebook_history_output()  # Отображение истории вывода сообщений в ячейке Jupyter
+
+            # fi
+            if corpus is self.__multi_corpora[0]:
+                input_shape = (104, 768)
+            # mupta
+            elif corpus is self.__multi_corpora[1]:
+                input_shape = (414, 768)
+            else:
+                input_shape = (104, 768)
+
+            input_lstm = tf.keras.Input(shape=input_shape, name="model_nn/input")
+
+            x = tf.keras.layers.Bidirectional(
+                tf.keras.layers.LSTM(32, return_sequences=True), name="model_nn/bilstm_1"
+            )(input_lstm)
+
+            x = Attention(use_scale=False, score_mode="dot", name="model_nn/attention")(x, x)
+
+            x = tf.keras.layers.Dense(128, name="model_nn/dence_2")(x)
+            x = Addition(name="model_nn/add")(x)
+            x = tf.keras.layers.Dense(128, name="model_nn/dence_3")(x)
+
+            x = tf.keras.layers.Dense(5, activation="sigmoid")(x)
+            self._text_model_nn = tf.keras.Model(input_lstm, outputs=x, name="model_nn")
+
+            if show_summary and out:
+                self._text_model_nn.summary()
+
+            if runtime:
+                self._r_end(out=out)
+
+            return True
+
     def load_text_model_weights_hc(
         self, url: str, force_reload: bool = True, out: bool = True, runtime: bool = True, run: bool = True
     ) -> bool:
@@ -335,6 +429,39 @@ class Text(TextMessages):
                 self._text_model_hc.load_weights(self._url_last_filename)
             except Exception:
                 self._error(self._model_text_hc_not_formation, out=out)
+                return False
+            else:
+                return True
+            finally:
+                if runtime:
+                    self._r_end(out=out)
+
+        return False
+
+    def load_text_model_weights_nn(
+        self, url: str, force_reload: bool = True, out: bool = True, runtime: bool = True, run: bool = True
+    ) -> bool:
+        """Загрузка весов нейросетевой модели для получения оценок по нейросетевым признакам
+
+        Args:
+            url (str): Полный путь к файлу с весами нейросетевой модели
+            force_reload (bool): Принудительная загрузка файла с весами нейросетевой модели из сети
+            out (bool): Отображение
+            runtime (bool): Подсчет времени выполнения
+            run (bool): Блокировка выполнения
+
+        Returns:
+            bool: **True** если веса нейросетевой модели загружены, в обратном случае **False**
+        """
+
+        if runtime:
+            self._r_start()
+
+        if self.__load_model_weights(url, force_reload, self._load_text_model_weights_nn, out, False, run) is True:
+            try:
+                self._text_model_nn.load_weights(self._url_last_filename)
+            except Exception:
+                self._error(self._model_text_nn_not_formation, out=out)
                 return False
             else:
                 return True

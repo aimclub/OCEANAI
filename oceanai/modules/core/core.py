@@ -253,10 +253,16 @@ class Core(CoreMessages):
                     "hc": {
                         "sberdisk": "https://download.sberdisk.ru/download/file/472034034?token=59eA6DXo6GXWV77&filename=weights_2023-07-15_10-52-15.h5",
                     },
+                    "nn": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/472139570?token=LpndWNlovMhxU3O&filename=weights_2023-07-03_15-01-08.h5",
+                    },
                 },
                 "mupta": {
                     "hc": {
                         "sberdisk": "https://download.sberdisk.ru/download/file/472042355?token=MUJ82JsJiRe6RIz&filename=weights_2023-07-15_10-53-38.h5",
+                    },
+                    "nn": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/472139571?token=DvEzGThzqaMl2pp&filename=weights_2023-07-16_18-12-01.h5",
                     },
                 },
             },

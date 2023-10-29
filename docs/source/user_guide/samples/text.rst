@@ -6,3 +6,4 @@
    :caption: Содержание:
 
    ../notebooks/Text-load_text_model_hc
+   ../notebooks/Text-load_text_model_nn
