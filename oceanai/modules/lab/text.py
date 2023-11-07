@@ -17,12 +17,17 @@ for warn in [UserWarning, FutureWarning]:
 import os  # Взаимодействие с файловой системой
 import logging
 import requests  # Отправка HTTP запросов
+import liwc  # Анализатор лингвистических запросов и подсчета слов
+
+from transformers import MarianTokenizer, MarianMTModel, AutoModelForSeq2SeqLM
 
 from urllib.parse import urlparse
 
 from dataclasses import dataclass  # Класс данных
 
-from typing import List, Optional  # Типы данных
+# Типы данных
+from typing import List, Optional
+from types import FunctionType
 
 from IPython.display import clear_output
 
@@ -77,6 +82,21 @@ class TextMessages(Download):
         self._model_text_hc_not_formation: str = self._model_hc_not_formation + self._text_modality
         self._model_text_nn_not_formation: str = self._model_nn_not_formation + self._text_modality
 
+        self._load_text_features: str = self._("Загрузка словаря с экспертными признаками ...")
+        self._load_text_features_error: str = self._oh + self._(
+            "не удалось загрузить словарь с экспертными признаками ..."
+        )
+
+        self._load_token_parser_error: str = self._oh + self._("не удалось считать лексикон LIWC ...")
+
+        self._load_translation_model: str = self._(
+            "Формирование токенизатора и нейросетевой модели машинного перевода ..."
+        )
+        self._load_bert_model: str = self._("Формирование токенизатора и нейросетевой модели BERT ...")
+        self._load_bert_model_error: str = self._oh + self._(
+            "не удалось загрузить токенизатор и нейросетевую модель BERT ..."
+        )
+
 
 # ######################################################################################################################
 # Текст
@@ -108,10 +128,26 @@ class Text(TextMessages):
         # Нейросетевая модель **tf.keras.Model** для получения оценок по нейросетевым признакам
         self._text_model_nn: Optional[keras.engine.functional.Functional] = None
 
+        # Словарь для формирования экспертных признаков
+        self._text_features: str = (
+            "https://download.sberdisk.ru/download/file/473268573?token=X3NB5VYGyPn8mjw&filename=LIWC2007.txt",
+        )
+        # BERT модель
+        self._bert_multi_model: str = "https://download.sberdisk.ru/download/file/473319508?token=p8hYNIjxacEARxl&filename=bert-base-multilingual-cased.zip"
+
+        # Нейросетевая модель машинного перевода (RU -> EN)
+        self._translation_model: str = "Helsinki-NLP/opus-mt-ru-en"
+
+        self._tokenizer: Optional[MarianTokenizer] = None  # Токенизатор для машинного перевода
+        self._traslate_model: Optional[MarianMTModel] = None  # Нейросетевая модель для машинного перевода
+
         # ----------------------- Только для внутреннего использования внутри класса
 
         # Названия мультимодальных корпусов
         self.__multi_corpora: List[str] = ["fi", "mupta"]
+
+        self.__parse_text_features: Optional[FunctionType] = None  # Парсинг экспертных признаков
+        self.__category_text_features: List[str] = []  # Словарь с экспертными признаками
 
     # ------------------------------------------------------------------------------------------------------------------
     # Свойства
@@ -211,6 +247,193 @@ class Text(TextMessages):
                         raise FileNotFoundError  # Не файл
                 except FileNotFoundError:
                     self._other_error(self._load_model_weights_error, out=out)
+                    return False
+                except Exception:
+                    self._other_error(self._unknown_err, out=out)
+                    return False
+                else:
+                    self._url_last_filename = url
+                    return True
+            else:
+                try:
+                    if force_reload is False:
+                        clear_output(True)
+                    # Загрузка файла из URL
+                    res_download_file_from_url = self._download_file_from_url(
+                        url=url, force_reload=force_reload, runtime=False, out=out, run=True
+                    )
+                except Exception:
+                    self._other_error(self._unknown_err, out=out)
+                    return False
+                else:
+                    # Файл загружен
+                    if res_download_file_from_url != 200:
+                        return False
+
+                    return True
+            finally:
+                if runtime:
+                    self._r_end(out=out)
+
+    def __load_text_features(
+        self,
+        url: str,
+        force_reload: bool = True,
+        info_text: str = "",
+        out: bool = True,
+        runtime: bool = True,
+        run: bool = True,
+    ) -> bool:
+        """Загрузка словаря с экспертными признаками
+
+        .. note::
+            private (приватный метод)
+
+        Args:
+            url (str): Полный путь к файлу с экспертными признаками
+            force_reload (bool): Принудительная загрузка файла с экспертными признаками из сети
+            info_text (str): Текст для информационного сообщения
+            out (bool): Отображение
+            runtime (bool): Подсчет времени выполнения
+            run (bool): Блокировка выполнения
+
+        Returns:
+            bool: **True** если словарь с экспертными признаками загружен, в обратном случае **False**
+        """
+
+        self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter
+
+        try:
+            # Проверка аргументов
+            if (
+                type(url) is not str
+                or not url
+                or type(force_reload) is not bool
+                or type(info_text) is not str
+                or not info_text
+                or type(out) is not bool
+                or type(runtime) is not bool
+                or type(run) is not bool
+            ):
+                raise TypeError
+        except TypeError:
+            self._inv_args(__class__.__name__, self.__load_text_features.__name__, out=out)
+            return False
+        else:
+            # Блокировка выполнения
+            if run is False:
+                self._error(self._lock_user, out=out)
+                return False
+
+            if runtime:
+                self._r_start()
+
+            # Информационное сообщение
+            self._info(info_text, last=False, out=out)
+
+            sections = urlparse(url)  # Парсинг URL адреса
+
+            try:
+                # URL файл невалидный
+                if sections.scheme == "":
+                    raise requests.exceptions.InvalidURL
+            except requests.exceptions.InvalidURL:
+                url = os.path.normpath(url)
+
+                try:
+                    if os.path.isfile(url) is False:
+                        raise FileNotFoundError  # Не файл
+                except FileNotFoundError:
+                    self._other_error(self._load_text_features_error, out=out)
+                    return False
+                except Exception:
+                    self._other_error(self._unknown_err, out=out)
+                    return False
+                else:
+                    self._url_last_filename = url
+                    return True
+            else:
+                try:
+                    if force_reload is False:
+                        clear_output(True)
+                    # Загрузка файла из URL
+                    res_download_file_from_url = self._download_file_from_url(
+                        url=url, force_reload=force_reload, runtime=False, out=out, run=True
+                    )
+                except Exception:
+                    self._other_error(self._unknown_err, out=out)
+                    return False
+                else:
+                    # Файл загружен
+                    if res_download_file_from_url != 200:
+                        return False
+
+                    return True
+            finally:
+                if runtime:
+                    self._r_end(out=out)
+
+    def __load_bert_model(
+        self,
+        url: str,
+        force_reload: bool = True,
+        out: bool = True,
+        runtime: bool = True,
+        run: bool = True,
+    ) -> bool:
+        """Загрузка нейросетевой модели BERT
+
+        .. note::
+            private (приватный метод)
+
+        Args:
+            url (str): Полный путь к файлу с нейросетевой модели BERT
+            force_reload (bool): Принудительная загрузка файла с нейросетевой модели BERT из сети
+            out (bool): Отображение
+            runtime (bool): Подсчет времени выполнения
+            run (bool): Блокировка выполнения
+
+        Returns:
+            bool: **True** если нейросетевая модель BERT загружена, в обратном случае **False**
+        """
+
+        try:
+            # Проверка аргументов
+            if (
+                type(url) is not str
+                or not url
+                or type(force_reload) is not bool
+                or type(out) is not bool
+                or type(runtime) is not bool
+                or type(run) is not bool
+            ):
+                raise TypeError
+        except TypeError:
+            self._inv_args(__class__.__name__, self.__load_bert_model.__name__, out=out)
+            return False
+        else:
+            # Блокировка выполнения
+            if run is False:
+                self._error(self._lock_user, out=out)
+                return False
+
+            if runtime:
+                self._r_start()
+
+            sections = urlparse(url)  # Парсинг URL адреса
+
+            try:
+                # URL файл невалидный
+                if sections.scheme == "":
+                    raise requests.exceptions.InvalidURL
+            except requests.exceptions.InvalidURL:
+                url = os.path.normpath(url)
+
+                try:
+                    if os.path.isfile(url) is False:
+                        raise FileNotFoundError  # Не файл
+                except FileNotFoundError:
+                    self._other_error(self._load_bert_model_error, out=out)
                     return False
                 except Exception:
                     self._other_error(self._unknown_err, out=out)
@@ -470,3 +693,146 @@ class Text(TextMessages):
                     self._r_end(out=out)
 
         return False
+
+    def load_text_features(
+        self, force_reload: bool = True, out: bool = True, runtime: bool = True, run: bool = True
+    ) -> bool:
+        """Загрузка словаря с экспертными признаками
+
+        Args:
+            force_reload (bool): Принудительная загрузка файла с весами нейросетевой модели из сети
+            out (bool): Отображение
+            runtime (bool): Подсчет времени выполнения
+            run (bool): Блокировка выполнения
+
+        Returns:
+            bool: **True** если словарь с экспертными признаками загружен, в обратном случае **False**
+        """
+
+        if runtime:
+            self._r_start()
+
+        if (
+            self.__load_text_features(self._text_features[0], force_reload, self._load_text_features, out, False, run)
+            is True
+        ):
+            try:
+                self.__parse_text_features, self.__category_text_features = liwc.load_token_parser(
+                    self._url_last_filename
+                )
+                self.__category_text_features = sorted(self.__category_text_features)
+            except Exception:
+                self._error(self._load_token_parser_error, out=out)
+                return False
+            else:
+                return True
+            finally:
+                if runtime:
+                    self._r_end(out=out)
+
+    def setup_translation_model(self, out: bool = True, runtime: bool = True, run: bool = True) -> bool:
+        """Формирование токенизатора и нейросетевой модели машинного перевода
+
+        Args:
+            out (bool): Отображение
+            runtime (bool): Подсчет времени выполнения
+            run (bool): Блокировка выполнения
+
+        Returns:
+            bool: **True** если токенизатор и нейросетевая модель сформированы, в обратном случае **False**
+        """
+
+        self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter
+
+        try:
+            # Проверка аргументов
+            if type(out) is not bool or type(runtime) is not bool or type(run) is not bool:
+                raise TypeError
+        except TypeError:
+            self._inv_args(__class__.__name__, self.setup_translation_model.__name__, out=out)
+            return False
+        else:
+            # Блокировка выполнения
+            if run is False:
+                self._error(self._lock_user, out=out)
+                return False
+
+            if runtime:
+                self._r_start()
+
+            # Информационное сообщение
+            self._info(self._load_translation_model, last=False, out=out)
+
+            try:
+                self._tokenizer = MarianTokenizer.from_pretrained(self._translation_model)
+                self._traslate_model = AutoModelForSeq2SeqLM.from_pretrained(self._translation_model).to(self._device)
+            except Exception:
+                self._other_error(self._unknown_err, out=out)
+                return False
+            else:
+                return True
+        finally:
+            if runtime:
+                self._r_end(out=out)
+
+    def setup_bert_encoder(
+        self, force_reload: bool = True, out: bool = True, runtime: bool = True, run: bool = True
+    ) -> bool:
+        """Формирование токенизатора и нейросетевой модели BERT
+
+        Args:
+            force_reload (bool): Принудительная загрузка файла с нейросетевой моделью BERT из сети
+            out (bool): Отображение
+            runtime (bool): Подсчет времени выполнения
+            run (bool): Блокировка выполнения
+
+        Returns:
+            bool: **True** если токенизатор и нейросетевая модель BERT сформированы, в обратном случае **False**
+        """
+
+        self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter
+
+        try:
+            # Проверка аргументов
+            if (
+                type(force_reload) is not bool
+                or type(out) is not bool
+                or type(runtime) is not bool
+                or type(run) is not bool
+            ):
+                raise TypeError
+        except TypeError:
+            self._inv_args(__class__.__name__, self.setup_bert_encoder.__name__, out=out)
+            return False
+        else:
+            # Блокировка выполнения
+            if run is False:
+                self._error(self._lock_user, out=out)
+                return False
+
+            if runtime:
+                self._r_start()
+
+            # Информационное сообщение
+            self._info(self._load_bert_model, last=False, out=out)
+
+            if self.__load_bert_model(self._bert_multi_model, force_reload, out, False, run) is True:
+                try:
+                    # Распаковка архива
+                    res_unzip = self._unzip(
+                        path_to_zipfile=os.path.join(self._url_last_filename),
+                        new_name=None,
+                        force_reload=force_reload,
+                    )
+                except Exception:
+                    self.message_error(self._unknown_err, start=True, out=out)
+                    return False
+                else:
+                    # Файл распакован
+                    if res_unzip is True:
+                        return True
+            else:
+                return False
+        finally:
+            if runtime:
+                self._r_end(out=out)

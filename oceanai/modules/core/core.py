@@ -37,6 +37,11 @@ import logging
 import pymediainfo  # Получение meta данных из медиафайлов
 import urllib.error  # Обработка ошибок URL
 import math
+import liwc  # Анализатор лингвистических запросов и подсчета слов
+import transformers  # Доступ к Hugging Face Transformers
+import sentencepiece  # Обработка и токенизация текста с использованием SentencePiece
+import torch  # Машинное обучение от Facebook
+import torchaudio  # Работа с аудио от Facebook
 
 from datetime import datetime  # Работа со временем
 from typing import List, Dict, Tuple, Union, Optional, Iterable  # Типы данных
@@ -325,6 +330,8 @@ class Core(CoreMessages):
                 "encoded_date",
             ]
         }
+
+        self._device = "cuda:0" if torch.cuda.is_available() else "cpu"
 
         # ----------------------- Только для внутреннего использования внутри класса
 
@@ -3475,25 +3482,30 @@ class Core(CoreMessages):
                 :execution-count: 1
                 :linenos:
 
-                |----|--------------|---------|
-                |    | Package      | Version |
-                |----|--------------|---------|
-                | 1  | TensorFlow   | 2.11.0  |
-                | 2  | Keras        | 2.11.0  |
-                | 3  | OpenCV       | 4.6.0   |
-                | 4  | MediaPipe    | 0.9.0   |
-                | 5  | NumPy        | 1.23.5  |
-                | 6  | SciPy        | 1.9.3   |
-                | 7  | Pandas       | 1.5.2   |
-                | 8  | Scikit-learn | 1.1.3   |
-                | 9  | OpenSmile    | 2.4.1   |
-                | 10 | Librosa      | 0.9.2   |
-                | 11 | AudioRead    | 3.0.0   |
-                | 12 | IPython      | 8.7.0   |
-                | 13 | PyMediaInfo  | 6.0.1   |
-                | 14 | Requests     | 2.28.1  |
-                | 15 | JupyterLab   | 3.5.0   |
-                |----|--------------|---------|
+                |----|---------------|---------|
+                |    | Package       | Version |
+                |----|---------------|---------|
+                | 1  | TensorFlow    | 2.11.0  |
+                | 2  | Keras         | 2.11.0  |
+                | 3  | OpenCV        | 4.6.0   |
+                | 4  | MediaPipe     | 0.9.0   |
+                | 5  | NumPy         | 1.23.5  |
+                | 6  | SciPy         | 1.9.3   |
+                | 7  | Pandas        | 1.5.2   |
+                | 8  | Scikit-learn  | 1.1.3   |
+                | 9  | OpenSmile     | 2.4.1   |
+                | 10 | Librosa       | 0.9.2   |
+                | 11 | AudioRead     | 3.0.0   |
+                | 12 | IPython       | 8.7.0   |
+                | 13 | PyMediaInfo   | 6.0.1   |
+                | 14 | Requests      | 2.28.1  |
+                | 15 | JupyterLab    | 3.5.0   |
+                | 16 | LIWC          | 0.5.0   |
+                | 17 | Transformers  | 4.24.0  |
+                | 18 | Sentencepiece | 0.1.99  |
+                | 19 | Torch         | 1.12.1  |
+                | 20 | Torchaudio    | 0.12.1  |
+                |----|---------------|---------|
                 --- Время выполнения: 0.005 сек. ---
 
             :bdg-light:`-- 2 --`
@@ -3571,6 +3583,11 @@ class Core(CoreMessages):
                     "PyMediaInfo",
                     "Requests",
                     "JupyterLab",
+                    "LIWC",
+                    "Transformers",
+                    "Sentencepiece",
+                    "Torch",
+                    "Torchaudio",
                 ],
                 "Version": [
                     i.__version__
@@ -3590,6 +3607,11 @@ class Core(CoreMessages):
                         pymediainfo,
                         requests,
                         jlab,
+                        liwc,
+                        transformers,
+                        sentencepiece,
+                        torch,
+                        torchaudio,
                     ]
                 ],
             }

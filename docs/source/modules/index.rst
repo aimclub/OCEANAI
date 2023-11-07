@@ -11,6 +11,7 @@
    core/messages
    core/settings
    core/core
+   lab/unzip
    lab/download
    lab/audio
    lab/video
@@ -32,6 +33,9 @@
 
 :doc:`core/core`
    Документация для файла ``modules/core/core.py``
+
+:doc:`lab/unzip`
+   Документация для файла ``modules/lab/unzip.py``
 
 :doc:`lab/download`
    Документация для файла ``modules/lab/download.py``

@@ -28,7 +28,7 @@ from pathlib import Path  # Работа с путями в файловой с�
 from IPython.display import clear_output
 
 # Персональные
-from oceanai.modules.core.core import Core  # Ядро
+from oceanai.modules.lab.unzip import Unzip  # Обработка архивов
 from oceanai.modules.core.exceptions import InvalidContentLength
 
 
@@ -36,7 +36,7 @@ from oceanai.modules.core.exceptions import InvalidContentLength
 # Сообщения
 # ######################################################################################################################
 @dataclass
-class DownloadMessages(Core):
+class DownloadMessages(Unzip):
     """Класс для сообщений
 
     Args:
