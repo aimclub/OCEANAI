@@ -14,19 +14,21 @@ import warnings
 for warn in [UserWarning, FutureWarning]:
     warnings.filterwarnings("ignore", category=warn)
 
+from dataclasses import dataclass  # Класс данных
+
 import os  # Взаимодействие с файловой системой
 import logging
 import requests  # Отправка HTTP запросов
 import liwc  # Анализатор лингвистических запросов и подсчета слов
+import numpy as np  # Научные вычисления
 
 from transformers import MarianTokenizer, MarianMTModel, AutoModelForSeq2SeqLM
 
 from urllib.parse import urlparse
-
-from dataclasses import dataclass  # Класс данных
+from pathlib import Path  # Работа с путями в файловой системе
 
 # Типы данных
-from typing import List, Optional
+from typing import List, Tuple, Optional
 from types import FunctionType
 
 from IPython.display import clear_output
@@ -97,6 +99,10 @@ class TextMessages(Download):
             "не удалось загрузить токенизатор и нейросетевую модель BERT ..."
         )
 
+        self._get_text_feature_info: str = self._("Извлечение признаков (экспертных и нейросетевых) из текста ...")
+
+        self._text_is_empty: str = self._oh + self._('текстовый файл "{}" пуст ...')
+
 
 # ######################################################################################################################
 # Текст
@@ -148,6 +154,9 @@ class Text(TextMessages):
 
         self.__parse_text_features: Optional[FunctionType] = None  # Парсинг экспертных признаков
         self.__category_text_features: List[str] = []  # Словарь с экспертными признаками
+
+        # Поддерживаемые текстовые форматы
+        self.__supported_text_formats: List[str] = ["txt"]
 
     # ------------------------------------------------------------------------------------------------------------------
     # Свойства
@@ -458,6 +467,121 @@ class Text(TextMessages):
                         return False
 
                     return True
+            finally:
+                if runtime:
+                    self._r_end(out=out)
+
+    # ------------------------------------------------------------------------------------------------------------------
+    # Внутренние методы (защищенные)
+    # ------------------------------------------------------------------------------------------------------------------
+
+    def _get_text_features(
+        self,
+        path: str,
+        asr: bool = False,
+        last: bool = False,
+        out: bool = True,
+        runtime: bool = True,
+        run: bool = True,
+    ) -> Tuple[np.ndarray, np.ndarray]:
+        """Извлечение признаков из текста (без очистки истории вывода сообщений в ячейке Jupyter)
+
+        .. note::
+            protected (защищенный метод)
+
+        Args:
+            path (str): Путь к видеофайлу или текст
+            asr (bool): Автоматическое распознавание речи
+            last (bool): Замена последнего сообщения
+            out (bool): Отображение
+            runtime (bool): Подсчет времени выполнения
+            run (bool): Блокировка выполнения
+
+        Returns:
+            Tuple[np.ndarray, np.ndarray]: Кортеж с двумя np.ndarray:
+
+                1. np.ndarray с экспертными признаками
+                2. np.ndarray с нейросетевыми признаками
+        """
+
+        try:
+            # Проверка аргументов
+            if (
+                type(path) is not str
+                or not path
+                or type(asr) is not bool
+                or type(last) is not bool
+                or type(out) is not bool
+                or type(runtime) is not bool
+                or type(run) is not bool
+            ):
+                raise TypeError
+        except TypeError:
+            self._inv_args(__class__.__name__, self._get_text_features.__name__, last=last, out=out)
+            return np.empty([]), np.empty([])
+        else:
+            # Блокировка выполнения
+            if run is False:
+                self._error(self._lock_user, last=last, out=out)
+                return np.empty([]), np.empty([])
+
+            if runtime:
+                self._r_start()
+
+            if last is False:
+                # Информационное сообщение
+                self._info(self._get_text_feature_info, out=False)
+                if out:
+                    self.show_notebook_history_output()  # Отображение истории вывода сообщений в ячейке Jupyter
+
+            try:
+                text = ""
+
+                if os.path.isfile(path) is False:
+                    raise FileNotFoundError  # Не файл
+            except FileNotFoundError:
+                try:
+                    path_to_text = os.path.join(
+                        str(Path(path).parent), Path(path).stem + "." + self.__supported_text_formats[0]
+                    )
+
+                    if os.path.isfile(path_to_text) is False:
+                        raise FileNotFoundError  # Не текстовый файл
+                except FileNotFoundError:
+                    text = path.strip()
+
+                    print(text)
+
+                    return np.empty([]), np.empty([])
+                except Exception:
+                    self._other_error(self._unknown_err, last=last, out=out)
+                    return np.empty([]), np.empty([])
+                else:
+                    try:
+                        with open(path_to_text, "r", encoding="utf-8") as file:
+                            lines = file.readlines()
+                            text = " ".join(line.strip() for line in lines)
+                    except Exception:
+                        self._other_error(self._unknown_err, last=last, out=out)
+                        return np.empty([]), np.empty([])
+                    else:
+                        try:
+                            if not text:
+                                raise ValueError
+                        except ValueError:
+                            self._other_error(
+                                self._text_is_empty.format(self._info_wrapper(path_to_text)), last=last, out=out
+                            )
+                            return np.empty([]), np.empty([])
+                        else:
+                            print(text)
+
+                            return np.empty([]), np.empty([])
+            except Exception:
+                self._other_error(self._unknown_err, last=last, out=out)
+                return np.empty([]), np.empty([])
+            else:
+                return np.empty([]), np.empty([])
             finally:
                 if runtime:
                     self._r_end(out=out)
@@ -836,3 +960,38 @@ class Text(TextMessages):
         finally:
             if runtime:
                 self._r_end(out=out)
+
+    def get_text_features(
+        self,
+        path: str,
+        asr: bool = False,
+        out: bool = True,
+        runtime: bool = True,
+        run: bool = True,
+    ):
+        """Извлечение признаков из текста
+
+        Args:
+            path (str): Путь к видеофайлу или текст
+            asr (bool): Автоматическое распознавание речи
+            out (bool): Отображение
+            runtime (bool): Подсчет времени выполнения
+            run (bool): Блокировка выполнения
+
+        Returns:
+            Tuple[np.ndarray, np.ndarray]: Кортеж с двумя np.ndarray:
+
+                1. np.ndarray с экспертными признаками
+                2. np.ndarray с нейросетевыми признаками
+        """
+
+        self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter
+
+        return self._get_text_features(
+            path=path,
+            asr=asr,
+            last=False,
+            out=out,
+            runtime=runtime,
+            run=run,
+        )

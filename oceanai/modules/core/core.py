@@ -301,6 +301,8 @@ class Core(CoreMessages):
         self._df_files_ranking: pd.DataFrame = pd.DataFrame()  # DataFrame с ранжированными данными
         # DataFrame с ранжированными предпочтениями на основе данных
         self._df_files_priority: pd.DataFrame = pd.DataFrame()
+        # DataFrame с ранжированными коллегами на основе данных
+        self._df_files_colleague: pd.DataFrame = pd.DataFrame()
         self._dict_of_files: Dict[str, List[Union[int, str, float]]] = {}  # Словарь для DataFrame с данными
 
         self._df_accuracy: pd.DataFrame = pd.DataFrame()  # DataFrame с результатами вычисления точности
@@ -309,6 +311,7 @@ class Core(CoreMessages):
 
         self._keys_id: str = "ID"  # Идентификатор
         self._keys_score: str = "Candidate score"  # Комплексная оценка кандидатов
+        self._keys_colleague: str = "Match"
         self._keys_priority: str = "Priority"  # Приоритетные предпочтения
         # Наиболее важные качества влияющие на приоритетные предпочтения
         self._keys_trait_importance: str = "Trait importance"
@@ -332,6 +335,8 @@ class Core(CoreMessages):
         }
 
         self._device = "cuda:0" if torch.cuda.is_available() else "cpu"
+
+        self._colleague: List[str] = ["major", "minor"]
 
         # ----------------------- Только для внутреннего использования внутри класса
 
@@ -640,6 +645,16 @@ class Core(CoreMessages):
         """
 
         return self._df_files_priority
+
+    @property
+    def df_files_colleague_(self) -> pd.DataFrame:
+        """Получение DataFrame c ранжированными коллегами на основе данных
+
+        Returns:
+            pd.DataFrame: **DataFrame** c данными
+        """
+
+        return self._df_files_colleague
 
     @property
     def df_accuracy_(self) -> pd.DataFrame:
@@ -2583,6 +2598,7 @@ class Core(CoreMessages):
     # ------------------------------------------------------------------------------------------------------------------
     # Внутренние методы (защищенные)
     # ------------------------------------------------------------------------------------------------------------------
+
     def _get_paths(self, path: Iterable, depth: int = 1, out: bool = True) -> Union[List[str], bool]:
         """Получение директорий где хранятся данные
 
@@ -2720,6 +2736,68 @@ class Core(CoreMessages):
                 return self._get_paths(new_path, depth - 1)
 
             return new_path  # Список с директориями
+
+    def _search_file(self, path_to_file: str, ext: str, create: bool = False, out: bool = True) -> bool:
+        """Поиск файла
+
+        .. note::
+            protected (защищенный метод)
+
+        Args:
+            path_to_file (str): Путь к файлу
+            ext (str): Расширение файла
+            create (bool): Создание файла в случае его отсутствия
+            out (bool): Печатать процесс выполнения
+
+        Returns:
+            bool: **True** если файл найден, в обратном случае **False**
+        """
+
+        # Проверка аргументов
+        if (
+            type(path_to_file) is not str
+            or type(ext) is not str
+            or not ext
+            or type(create) is not bool
+            or type(out) is not bool
+        ):
+            self.inv_args(__class__.__name__, self._search_file.__name__, out=out)
+            return False
+
+        # Файл не передан
+        if not path_to_file:
+            self._other_error(self._file_name.format(ext.lower()), out=out)
+            return False
+
+        path_to_file = os.path.normpath(path_to_file)
+        ext = ext.replace(".", "")
+
+        # Передана директория
+        if os.path.isdir(path_to_file) is True:
+            self._other_error(self._dir_found, out=out)
+            return False
+
+        self._file_load = self._file_find_hide  # Установка сообщения в исходное состояние
+
+        _, extension = os.path.splitext(path_to_file)  # Расширение файла
+
+        if ext != extension.replace(".", ""):
+            self._other_error(self._wrong_extension.format(ext), out=out)
+            return False
+
+        # Файл не найден
+        if os.path.isfile(path_to_file) is False:
+            # Создание файла
+            if create is True:
+                open(path_to_file, "a", encoding="utf-8").close()
+
+                self._other_error(self._file_not_found_create.format(os.path.basename(path_to_file)), out=out)
+                return False
+
+            self._other_error(self._file_not_found.format(os.path.basename(path_to_file)), out=out)
+            return False
+
+        return True  # Результат
 
     def _append_to_list_of_files(self, path: str, preds: List[Optional[float]], out: bool = True) -> bool:
         """Добавление значений в словарь для DataFrame c данными
@@ -3412,6 +3490,102 @@ class Core(CoreMessages):
                         return self._df_files_priority
                     else:
                         return self._df_files_priority
+
+    def _colleague_ranking(
+        self,
+        correlation_coefficients: Optional[pd.DataFrame] = None,
+        target_scores: List[float] = [0.47, 0.63, 0.35, 0.58, 0.51],
+        colleague: str = "major",
+        equal_coefficients: float = 0.5,
+        out: bool = True,
+    ) -> pd.DataFrame:
+        """Ранжирование предпочтений
+
+        .. note::
+            protected (защищенный метод)
+
+        Args:
+            correlation_coefficients (pd.DataFrame): **DataFrame** c коэффициентами корреляции
+            target_scores (List[float]): Список оценок персональных качеств личности целевого человека
+            colleague (str): Ранг коллеги по совместимости
+            equal_coefficients (float): Коэффициент применяемый к оценкам в случае равенства оценок двух человек
+            out (bool): Отображение
+
+        Returns:
+             pd.DataFrame: **DataFrame** c ранжированными предпочтениями
+        """
+
+        # Сброс
+        self._df_files_colleague = pd.DataFrame()  # Пустой DataFrame с ранжированными предпочтениями
+
+        try:
+            # Проверка аргументов
+            if (
+                type(correlation_coefficients) is not pd.DataFrame
+                or not isinstance(target_scores, list)
+                or not all(isinstance(score, float) for score in target_scores)
+                or len(target_scores) != 5
+                or not isinstance(colleague, str)
+                or colleague not in self._colleague
+                or type(equal_coefficients) is not float
+                or not (0.0 <= equal_coefficients <= 1.0)
+                or type(out) is not bool
+            ):
+                raise TypeError
+        except TypeError:
+            self._inv_args(__class__.__name__, self._colleague_ranking.__name__, out=out)
+            return self._df_files_colleague
+        else:
+            try:
+                if len(self._df_files) == 0:
+                    raise TypeError
+            except TypeError:
+                self._other_error(self._dataframe_empty, out=out)
+                return self._df_files_colleague
+            except Exception:
+                self._other_error(self._unknown_err, out=out)
+                return self._df_files_colleague
+            else:
+                try:
+                    self._df_files_colleague = self._df_files.copy()
+
+                    correlation_coefficients = correlation_coefficients[self.keys_dataset_[1:]].values
+
+                    score_colleague = self._df_files_colleague[self.keys_dataset_[1:]].values.tolist()
+
+                    score_target_colleague = np.round(target_scores, 4).astype("float16")
+                    score_colleague = np.round(score_colleague, 4).astype("float16")
+
+                    intermediate_scores = np.zeros((len(score_colleague), 5))
+
+                    if colleague == self._colleague[0]:
+                        for i, curr_score in enumerate(score_colleague):
+                            for j in range(5):
+                                if score_target_colleague[j] > curr_score[j]:
+                                    intermediate_scores[i, j] = curr_score[j] * correlation_coefficients[1][j]
+                                elif score_target_colleague[j] == curr_score[j]:
+                                    intermediate_scores[i, j] = curr_score[j] * equal_coefficients
+                                else:
+                                    intermediate_scores[i, j] = curr_score[j] * correlation_coefficients[0][j]
+                    elif colleague == self._colleague[1]:
+                        for i, curr_score in enumerate(score_colleague):
+                            for j in range(5):
+                                if score_target_colleague[j] > curr_score[j]:
+                                    intermediate_scores[i, j] = curr_score[j] * correlation_coefficients[0][j]
+                                elif score_target_colleague[j] == curr_score[j]:
+                                    intermediate_scores[i, j] = curr_score[j] * equal_coefficients
+                                else:
+                                    intermediate_scores[i, j] = curr_score[j] * correlation_coefficients[1][j]
+
+                    self._df_files_colleague[self._keys_colleague] = np.sum(intermediate_scores, axis=1)
+                    self._df_files_colleague = self._df_files_colleague.sort_values(
+                        by=self._keys_colleague, ascending=False
+                    )
+                except Exception:
+                    self._other_error(self._unknown_err, out=out)
+                    return self._df_files_colleague
+                else:
+                    return self._df_files_colleague
 
     # ------------------------------------------------------------------------------------------------------------------
     # Внешние методы
