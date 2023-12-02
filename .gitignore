@@ -178,3 +178,8 @@ docs/source/user_guide/notebooks/models
 docs/source/user_guide/notebooks/video_FI
 docs/source/user_guide/notebooks/DELETE
 docs/source/user_guide/notebooks/temporal_files
+docs/source/user_guide/notebooks/*.wav
+docs/source/user_guide/notebooks/*.mp4
+docs/source/user_guide/notebooks/*.mov
+docs/source/user_guide/notebooks/*.txt
+docs/source/user_guide/notebooks/Untitled.ipynb

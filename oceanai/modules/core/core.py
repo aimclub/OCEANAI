@@ -135,7 +135,7 @@ class CoreMessages(Settings):
             )
             + self._mul
             + " {}"
-            + self._("{}Размерность тензора с нейросетевыми признаками одного сегмента:")
+            + self._("{}Размерность матрицы с нейросетевыми признаками одного сегмента:")
             + "{} "
             + self._mul
             + " {} "
@@ -144,6 +144,19 @@ class CoreMessages(Settings):
             + self._("до")
             + " {} "
         )
+
+        self._get_text_feature_stat: str = (
+            "{}" * 4
+            + self._("Статистика извлеченных признаков из текста:" "{}Размерность матрицы экспертных признаков: " "{} ")
+            + self._mul
+            + " {}"
+            + self._("{}Размерность матрицы с нейросетевыми признаками:")
+            + "{} "
+            + self._mul
+            + " {} "
+        )
+
+        self._get_text_feature_stat_with_text: str = self._get_text_feature_stat + self._("{}Текст:") + "{}"
 
         self._curr_progress_union_predictions: str = "{} " + self._from_precent + " {} ({}%) ... {} ..."
 
@@ -1886,6 +1899,70 @@ class Core(CoreMessages):
                 )
             except KeyError:
                 self._inv_args(__class__.__name__, self._stat_visual_features.__name__, out=out)
+                return None
+
+    def _stat_text_features(
+        self, last: bool = False, out: bool = True, **kwargs: Union[int, Tuple[int], tf.TensorShape]
+    ) -> None:
+        """Сообщение c статистикой извлеченных признаков из текста
+
+        .. note::
+            protected (защищенный метод)
+
+        Args:
+            last (bool): Замена последнего сообщения
+            out (bool): Отображение
+            **kwargs (Union[int, Tuple[int], tf.TensorShape]): Дополнительные именованные аргументы
+
+        Returns:
+            None
+        """
+
+        if self.is_notebook_ is True:
+            tab = self.__tab
+
+            b = "**" if self.bold_text_ is True else ""
+            cr = self.color_simple_
+
+            try:
+                if not kwargs["text"]:
+                    self._notebook_display_markdown(
+                        self._get_text_feature_stat.format(
+                            f'<span style="color:{cr}">{b}[</span><span style="color:{self.color_info_}">',
+                            datetime.now().strftime(self._format_time),
+                            f'</span><span style="color:{cr}">]</span> ',
+                            f'<span style="color:{cr}">',
+                            f'</span>{b}<br /><span style="color:{cr}">{tab}',
+                            f'<u>{kwargs["shape_hc_features"][0]}</u>',
+                            f'<u>{kwargs["shape_hc_features"][1]}</u></span>',
+                            f'<br /><span style="color:{cr}">{tab}',
+                            f' <u>{kwargs["shape_nn_features"][0]}</u>',
+                            f'<u>{kwargs["shape_nn_features"][1]}</u></span>',
+                        ),
+                        last,
+                        out,
+                    )
+                else:
+                    self._notebook_display_markdown(
+                        self._get_text_feature_stat_with_text.format(
+                            f'<span style="color:{cr}">{b}[</span><span style="color:{self.color_info_}">',
+                            datetime.now().strftime(self._format_time),
+                            f'</span><span style="color:{cr}">]</span> ',
+                            f'<span style="color:{cr}">',
+                            f'</span>{b}<br /><span style="color:{cr}">{tab}',
+                            f'<u>{kwargs["shape_hc_features"][0]}</u>',
+                            f'<u>{kwargs["shape_hc_features"][1]}</u></span>',
+                            f'<br /><span style="color:{cr}">{tab}',
+                            f' <u>{kwargs["shape_nn_features"][0]}</u>',
+                            f'<u>{kwargs["shape_nn_features"][1]}</u></span>',
+                            f'<br /><span style="color:{cr}">{tab}',
+                            f'<br />{tab * 2}{kwargs["text"]}</span>',
+                        ),
+                        last,
+                        out,
+                    )
+            except KeyError:
+                self._inv_args(__class__.__name__, self._stat_text_features.__name__, out=out)
                 return None
 
     def _r_start(self) -> None:
