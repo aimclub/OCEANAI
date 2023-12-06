@@ -274,6 +274,9 @@ class Core(CoreMessages):
                     "nn": {
                         "sberdisk": "https://download.sberdisk.ru/download/file/472139570?token=LpndWNlovMhxU3O&filename=weights_2023-07-03_15-01-08.h5",
                     },
+                    "b5": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/477466835?token=O1o2oZm36OBHzRb&filename=weights_2023-12-05_20-00-00.h5",
+                    },
                 },
                 "mupta": {
                     "hc": {
@@ -281,6 +284,9 @@ class Core(CoreMessages):
                     },
                     "nn": {
                         "sberdisk": "https://download.sberdisk.ru/download/file/472139571?token=DvEzGThzqaMl2pp&filename=weights_2023-07-16_18-12-01.h5",
+                    },
+                    "b5": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/477466835?token=O1o2oZm36OBHzRb&filename=weights_2023-12-05_20-00-00.h5",
                     },
                 },
             },

@@ -21,9 +21,14 @@ import logging
 import requests  # Отправка HTTP запросов
 import liwc  # Анализатор лингвистических запросов и подсчета слов
 import numpy as np  # Научные вычисления
+import pandas as pd  # Обработка и анализ данных
 import subprocess
 import torchaudio  # Работа с аудио от Facebook
 import re
+
+from urllib.error import URLError
+from sklearn.metrics import mean_absolute_error
+from datetime import datetime  # Работа со временем
 
 from transformers import (
     MarianTokenizer,
@@ -39,7 +44,7 @@ from urllib.parse import urlparse
 from pathlib import Path  # Работа с путями в файловой системе
 
 # Типы данных
-from typing import List, Tuple, Optional
+from typing import List, Tuple, Optional, Union, Optional, Callable  # Типы данных
 from types import FunctionType
 
 from IPython.display import clear_output
@@ -91,12 +96,29 @@ class TextMessages(Download):
         self._text_modality: str = self._(" (текстовая модальность) ...")
         self._formation_text_model_hc: str = self._formation_model_hc + self._text_modality
         self._formation_text_model_nn: str = self._formation_model_nn + self._text_modality
+        self._formation_text_model_b5: str = (
+            self._("Формирование нейросетевой архитектуры модели для получения " " оценок персональных качеств")
+            + self._text_modality
+        )
 
         self._load_text_model_weights_hc: str = self._load_model_weights_hc + self._text_modality
         self._load_text_model_weights_nn: str = self._load_model_weights_nn + self._text_modality
+        self._load_text_model_weights_b5: str = (
+            self._("Загрузка весов нейросетевой модели для получения " "оценок персональных качеств")
+            + self._text_modality
+        )
 
         self._model_text_hc_not_formation: str = self._model_hc_not_formation + self._text_modality
         self._model_text_nn_not_formation: str = self._model_nn_not_formation + self._text_modality
+        self._model_text_not_formation: str = (
+            self._oh
+            + self._(
+                "нейросетевая архитектура модели для получения "
+                "оценок по экспертным и нейросетевым признакам не "
+                "сформирована"
+            )
+            + self._text_modality
+        )
 
         self._load_text_features: str = self._("Загрузка словаря с экспертными признаками ...")
         self._load_text_features_error: str = self._oh + self._(
@@ -147,6 +169,7 @@ class Text(TextMessages):
         self._text_model_hc: Optional[keras.engine.functional.Functional] = None
         # Нейросетевая модель **tf.keras.Model** для получения оценок по нейросетевым признакам
         self._text_model_nn: Optional[keras.engine.functional.Functional] = None
+        self._text_model_b5: Optional[keras.engine.functional.Functional] = None
 
         # Словарь для формирования экспертных признаков
         self._text_features: str = (
@@ -305,6 +328,14 @@ class Text(TextMessages):
 
         self.__text_pred: str = ""
 
+        self.__len_paths: int = 0  # Количество искомых файлов
+        self.__local_path: Union[Callable[[str], str], None] = None  # Локальный путь
+
+        # Ключи для точности
+        self.__df_accuracy_index: List[str] = ["MAE", "Accuracy"]
+        self.__df_accuracy_index_name: str = "Metrics"
+        self.__df_accuracy_mean: str = "Mean"
+
     # ------------------------------------------------------------------------------------------------------------------
     # Свойства
     # ------------------------------------------------------------------------------------------------------------------
@@ -328,6 +359,16 @@ class Text(TextMessages):
         """
 
         return self._text_model_nn
+
+    @property
+    def text_model_b5_(self) -> Optional[keras.engine.functional.Functional]:
+        """Получение нейросетевой модели **tf.keras.Model** для получения оценок персональных качеств
+
+        Returns:
+            Optional[keras.engine.functional.Functional]: Нейросетевая модель **tf.keras.Model** или None
+        """
+
+        return self._text_model_b5
 
     # ------------------------------------------------------------------------------------------------------------------
     # Внутренние методы (приватные)
@@ -810,6 +851,44 @@ class Text(TextMessages):
 
             return self.__translate_and_extract_features(self.__text_pred, lang, show_text, last, out)
 
+    def __load_text_model_b5(
+        self, show_summary: bool = False, out: bool = True
+    ) -> Optional[keras.engine.functional.Functional]:
+        """Формирование нейросетевой архитектуры модели для получения оценок персональных качеств
+
+        .. note::
+            private (приватный метод)
+
+        Args:
+            show_summary (bool): Отображение сформированной нейросетевой архитектуры модели
+            out (bool): Отображение
+
+        Returns:
+            Optional[keras.engine.functional.Functional]:
+                **None** если неверные типы или значения аргументов, в обратном случае нейросетевая модель
+                **tf.keras.Model** для получения оценок персональных качеств
+        """
+
+        try:
+            # Проверка аргументов
+            if type(show_summary) is not bool or type(out) is not bool:
+                raise TypeError
+        except TypeError:
+            self._inv_args(__class__.__name__, self.__load_text_model_b5.__name__, out=out)
+            return None
+        else:
+            input_1 = tf.keras.Input(shape=(5,))
+            input_2 = tf.keras.Input(shape=(5,))
+            X = tf.keras.backend.concatenate((input_1, input_2), axis=1)
+            X = tf.keras.layers.Dense(5, activation="sigmoid")(X)
+
+            model = tf.keras.models.Model(inputs=[input_1, input_2], outputs=X)
+
+            if show_summary and out:
+                model.summary()
+
+            return model
+
     # ------------------------------------------------------------------------------------------------------------------
     # Внутренние методы (защищенные)
     # ------------------------------------------------------------------------------------------------------------------
@@ -1133,6 +1212,59 @@ class Text(TextMessages):
 
             return True
 
+    def load_text_model_b5(
+        self, show_summary: bool = False, out: bool = True, runtime: bool = True, run: bool = True
+    ) -> bool:
+        """Формирование нейросетевой архитектуры модели для получения результатов оценки персональных качеств
+
+        Args:
+            show_summary (bool): Отображение сформированной нейросетевой архитектуры модели
+            out (bool): Отображение
+            runtime (bool): Подсчет времени выполнения
+            run (bool): Блокировка выполнения
+
+        Returns:
+            bool: **True** если нейросетевая архитектура модели сформирована, в обратном случае **False**
+        """
+
+        self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter
+
+        try:
+            # Проверка аргументов
+            if (
+                type(show_summary) is not bool
+                or type(out) is not bool
+                or type(runtime) is not bool
+                or type(run) is not bool
+            ):
+                raise TypeError
+        except TypeError:
+            self._inv_args(__class__.__name__, self.load_text_model_b5.__name__, out=out)
+            return False
+        else:
+            # Блокировка выполнения
+            if run is False:
+                self._error(self._lock_user, out=out)
+                return False
+
+            if runtime:
+                self._r_start()
+
+            # Информационное сообщение
+            self._info(self._formation_text_model_b5, last=False, out=False)
+            if out:
+                self.show_notebook_history_output()  # Отображение истории вывода сообщений в ячейке Jupyter
+
+            self._text_model_b5 = self.__load_text_model_b5()
+
+            if show_summary and out:
+                self._text_model_b5.summary()
+
+            if runtime:
+                self._r_end(out=out)
+
+            return True
+
     def load_text_model_weights_hc(
         self, url: str, force_reload: bool = True, out: bool = True, runtime: bool = True, run: bool = True
     ) -> bool:
@@ -1155,6 +1287,11 @@ class Text(TextMessages):
         if self.__load_model_weights(url, force_reload, self._load_text_model_weights_hc, out, False, run) is True:
             try:
                 self._text_model_hc.load_weights(self._url_last_filename)
+                self._text_model_hc = tf.keras.models.Model(
+                    inputs=self._text_model_hc.input,
+                    outputs=[self._text_model_hc.output, self._text_model_hc.get_layer("model_hc/add").output],
+                )
+
             except Exception:
                 self._error(self._model_text_hc_not_formation, out=out)
                 return False
@@ -1188,8 +1325,50 @@ class Text(TextMessages):
         if self.__load_model_weights(url, force_reload, self._load_text_model_weights_nn, out, False, run) is True:
             try:
                 self._text_model_nn.load_weights(self._url_last_filename)
+                self._text_model_nn = tf.keras.models.Model(
+                    inputs=self._text_model_nn.input,
+                    outputs=[self._text_model_nn.output, self._text_model_nn.get_layer("model_nn/dence_3").output],
+                )
             except Exception:
                 self._error(self._model_text_nn_not_formation, out=out)
+                return False
+            else:
+                return True
+            finally:
+                if runtime:
+                    self._r_end(out=out)
+
+        return False
+
+    def load_text_model_weights_b5(
+        self,
+        url: str,
+        force_reload: bool = True,
+        out: bool = True,
+        runtime: bool = True,
+        run: bool = True,
+    ) -> bool:
+        """Загрузка весов нейросетевой модели для получения оценок персональных качеств
+
+        Args:
+            url (str): Полный путь к файлу с весами нейросетевой модели
+            force_reload (bool): Принудительная загрузка файлов с весами нейросетевых моделей из сети
+            out (bool): Отображение
+            runtime (bool): Подсчет времени выполнения
+            run (bool): Блокировка выполнения
+
+        Returns:
+            bool: **True** если веса нейросетевой модели загружены, в обратном случае **False**
+        """
+
+        if runtime:
+            self._r_start()
+
+        if self.__load_model_weights(url, force_reload, self._load_text_model_weights_b5, out, False, run) is True:
+            try:
+                self._text_model_b5.load_weights(self._url_last_filename)
+            except Exception:
+                self._error(self._model_text_not_formation, out=out)
                 return False
             else:
                 return True
@@ -1389,3 +1568,373 @@ class Text(TextMessages):
             runtime=runtime,
             run=run,
         )
+
+    def get_text_union_predictions(
+        self,
+        depth: int = 1,
+        recursive: bool = False,
+        asr: bool = False,
+        lang: str = "ru",
+        accuracy=True,
+        url_accuracy: str = "",
+        logs: bool = True,
+        out: bool = True,
+        runtime: bool = True,
+        run: bool = True,
+    ) -> bool:
+        """Получения прогнозов по тексту
+
+        Args:
+            depth (int): Глубина иерархии для получения данных
+            recursive (bool): Рекурсивный поиск данных
+            asr (bool): Автоматическое распознавание речи
+            lang (str): Язык
+            accuracy (bool): Вычисление точности
+            url_accuracy (str): Полный путь к файлу с верными предсказаниями для подсчета точности
+            logs (bool): При необходимости формировать LOG файл
+            out (bool): Отображение
+            runtime (bool): Подсчет времени выполнения
+            run (bool): Блокировка выполнения
+
+        Returns:
+            bool: **True** если веса прогнозы успешно получены, в обратном случае **False**
+        """
+
+        self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter
+
+        # Сброс
+        self._df_files = pd.DataFrame()  # Пустой DataFrame с данными
+        self._df_accuracy = pd.DataFrame()  # Пустой DataFrame с результатами вычисления точности
+
+        try:
+            # Проверка аргументов
+            if (
+                type(depth) is not int
+                or depth < 1
+                or type(out) is not bool
+                or type(recursive) is not bool
+                or type(asr) is not bool
+                or not isinstance(lang, str)
+                or lang not in self.__lang_traslate
+                or type(accuracy) is not bool
+                or type(url_accuracy) is not str
+                or type(logs) is not bool
+                or type(runtime) is not bool
+                or type(run) is not bool
+            ):
+                raise TypeError
+        except TypeError:
+            self._inv_args(__class__.__name__, self.get_text_union_predictions.__name__, out=out)
+            return False
+        else:
+            # Блокировка выполнения
+            if run is False:
+                self._error(self._lock_user, out=out)
+                return False
+
+            if runtime:
+                self._r_start()
+
+            try:
+                # Получение директорий, где хранятся данные
+                path_to_data = self._get_paths(self.path_to_dataset_, depth, out=out)
+                if type(path_to_data) is bool:
+                    return False
+
+                if type(self.keys_dataset_) is not list:
+                    raise TypeError
+
+                # Словарь для DataFrame набора данных с данными
+                self._dict_of_files = dict(zip(self.keys_dataset_, [[] for _ in range(0, len(self.keys_dataset_))]))
+                # Словарь для DataFrame набора данных с результатами вычисления точности
+                self._dict_of_accuracy = dict(
+                    zip(self.keys_dataset_[1:], [[] for _ in range(0, len(self.keys_dataset_[1:]))])
+                )
+            except (TypeError, FileNotFoundError):
+                self._other_error(self._folder_not_found.format(self._info_wrapper(self.path_to_dataset_)), out=out)
+                return False
+            except Exception:
+                self._other_error(self._unknown_err, out=out)
+                return False
+            else:
+                # Вычисление точности
+                if accuracy is True:
+                    get_text_union_predictions_info = self._get_union_predictions_info + self._get_accuracy_info
+                else:
+                    get_text_union_predictions_info = self._get_union_predictions_info
+
+                get_text_union_predictions_info += self._text_modality
+
+                # Вычисление точности
+                if accuracy is True:
+                    # Информационное сообщение
+                    self._info(get_text_union_predictions_info, out=out)
+
+                    if not url_accuracy:
+                        url_accuracy = self._true_traits["sberdisk"]
+
+                    try:
+                        # Загрузка верных предсказаний
+                        data_true_traits = pd.read_csv(url_accuracy)
+                    except (FileNotFoundError, URLError, UnicodeDecodeError):
+                        self._other_error(self._load_data_true_traits_error, out=out)
+                        return False
+                    except Exception:
+                        self._other_error(self._unknown_err, out=out)
+                        return False
+                    else:
+                        true_traits = []
+                        self._del_last_el_notebook_history_output()
+
+                paths = []  # Пути до искомых файлов
+
+                # Проход по всем директориям
+                for curr_path in path_to_data:
+                    empty = True  # По умолчанию директория пустая
+
+                    # Рекурсивный поиск данных
+                    if recursive is True:
+                        g = Path(curr_path).rglob("*")
+                    else:
+                        g = Path(curr_path).glob("*")
+
+                    # Формирование словаря для DataFrame
+                    for p in g:
+                        try:
+                            if type(self.ext_) is not list or len(self.ext_) < 1:
+                                raise TypeError
+
+                            self.ext_ = [x.lower() for x in self.ext_]
+                        except TypeError:
+                            self._other_error(self._wrong_ext, out=out)
+                            return False
+                        except Exception:
+                            self._other_error(self._unknown_err, out=out)
+                            return False
+                        else:
+                            # Расширение файла соответствует расширению искомых файлов
+                            if p.suffix.lower() in self.ext_:
+                                if empty is True:
+                                    empty = False  # Каталог не пустой
+
+                                paths.append(p.resolve())
+
+                try:
+                    self.__len_paths = len(paths)  # Количество искомых файлов
+
+                    if self.__len_paths == 0:
+                        raise TypeError
+                except TypeError:
+                    self._other_error(self._files_not_found, out=out)
+                    return False
+                except Exception:
+                    self._other_error(self._unknown_err, out=out)
+                    return False
+                else:
+                    # Локальный путь
+                    self.__local_path = lambda path: os.path.join(
+                        *Path(path).parts[-abs((len(Path(path).parts) - len(Path(self.path_to_dataset_).parts))) :]
+                    )
+
+                    last = False  # Замена последнего сообщения
+
+                    # Проход по всем искомым файлов
+                    for i, curr_path in enumerate(paths):
+                        if i != 0:
+                            last = True
+
+                        # Индикатор выполнения
+                        self._progressbar_union_predictions(
+                            get_text_union_predictions_info,
+                            i,
+                            self.__local_path(curr_path),
+                            self.__len_paths,
+                            True,
+                            last,
+                            out,
+                        )
+
+                        hc_features, nn_features = self.get_text_features(
+                            path=str(curr_path.resolve()),  # Путь к видеофайлу
+                            asr=asr,  # Распознавание речи
+                            lang=lang,  # Выбор языка
+                            show_text=True,  # Отображение текста
+                            out=False,  # Отображение
+                            runtime=False,  # Подсчет времени выполнения
+                            run=run,  # Блокировка выполнения
+                        )
+
+                        hc_features = np.expand_dims(hc_features, axis=0)
+                        nn_features = np.expand_dims(nn_features, axis=0)
+
+                        # Признаки из текста извлечены
+                        if len(hc_features) > 0 and len(nn_features) > 0:
+                            # Коды ошибок нейросетевых моделей
+                            code_error_pred_hc = -1
+                            code_error_pred_nn = -1
+
+                            try:
+                                # Оправка экспертных признаков в нейросетевую модель
+                                pred_hc, _ = self.text_model_hc_(np.array(hc_features, dtype=np.float16))
+                            except TypeError:
+                                code_error_pred_hc = 1
+                            except Exception:
+                                code_error_pred_hc = 2
+
+                            try:
+                                # Отправка нейросетевых признаков в нейросетевую модель
+                                pred_nn, _ = self.text_model_nn_(np.array(nn_features, dtype=np.float16))
+                            except TypeError:
+                                code_error_pred_nn = 1
+                            except Exception:
+                                code_error_pred_nn = 2
+
+                            if code_error_pred_hc != -1 and code_error_pred_nn != -1:
+                                self._error(self._models_text_not_formation, out=out)
+                                return False
+
+                            if code_error_pred_hc != -1:
+                                self._error(self._model_text_hc_not_formation, out=out)
+                                return False
+
+                            if code_error_pred_nn != -1:
+                                self._error(self._model_text_nn_not_formation, out=out)
+                                return False
+
+                            # pred_hc = pred_hc.numpy()[0]
+                            # pred_nn = pred_nn.numpy()[0]
+
+                            final_pred = self._text_model_b5([pred_hc, pred_nn]).numpy()[0].tolist()
+
+                            # Добавление данных в словарь для DataFrame
+                            if self._append_to_list_of_files(str(curr_path.resolve()), final_pred, out) is False:
+                                return False
+
+                            # Вычисление точности
+                            if accuracy is True:
+                                try:
+                                    true_trait = (
+                                        data_true_traits[data_true_traits.NAME_VIDEO == curr_path.name][
+                                            list(self._b5["en"])
+                                        ]
+                                        .values[0]
+                                        .tolist()
+                                    )
+                                except IndexError:
+                                    self._other_error(self._expert_values_not_found, out=out)
+                                    return False
+                                except Exception:
+                                    self._other_error(self._unknown_err, out=out)
+                                    return False
+                                else:
+                                    true_traits.append(true_trait)
+                        else:
+                            # Добавление данных в словарь для DataFrame
+                            if (
+                                self._append_to_list_of_files(
+                                    str(curr_path.resolve()), [None] * len(self._b5["en"]), out
+                                )
+                                is False
+                            ):
+                                return False
+
+                    # Индикатор выполнения
+                    self._progressbar_union_predictions(
+                        get_text_union_predictions_info,
+                        self.__len_paths,
+                        self.__local_path(paths[-1]),
+                        self.__len_paths,
+                        True,
+                        last,
+                        out,
+                    )
+
+                    # Отображение в DataFrame с данными
+                    self._df_files = pd.DataFrame.from_dict(data=self._dict_of_files, orient="index").transpose()
+                    self._df_files.index.name = self._keys_id
+                    self._df_files.index += 1
+
+                    self._df_files.index = self._df_files.index.map(str)
+
+                    # Отображение
+                    if out is True:
+                        self._add_notebook_history_output(self._df_files.iloc[0 : self.num_to_df_display_, :])
+
+                    # Подсчет точности
+                    if accuracy is True:
+                        mae_curr = []
+
+                        for cnt, name_b5 in enumerate(self._df_files.keys().tolist()[1:]):
+                            mae_curr.append(
+                                mean_absolute_error(np.asarray(true_traits)[:, cnt], self._df_files[name_b5].to_list())
+                            )
+
+                        mae_curr = [round(float(i), 4) for i in mae_curr]
+                        mae_mean = round(float(np.mean(mae_curr)), 4)
+                        accuracy_curr = [round(float(i), 4) for i in 1 - np.asarray(mae_curr)]
+                        accuracy_mean = round(float(np.mean(accuracy_curr)), 4)
+
+                        for curr_acc in [mae_curr, accuracy_curr]:
+                            # Добавление данных в словарь для DataFrame с результатами вычисления точности
+                            if self._append_to_list_of_accuracy(curr_acc, out) is False:
+                                return False
+
+                        self._dict_of_accuracy.update({self.__df_accuracy_mean: [mae_mean, accuracy_mean]})
+                        # Отображение в DataFrame с данными
+                        self._df_accuracy = pd.DataFrame.from_dict(
+                            data=self._dict_of_accuracy, orient="index"
+                        ).transpose()
+                        self._df_accuracy.index = self.__df_accuracy_index
+                        self._df_accuracy.index.name = self.__df_accuracy_index_name
+
+                        # Информационное сообщение
+                        self._info(self._get_union_predictions_result, out=False)
+
+                        # Отображение
+                        if out is True:
+                            self._add_notebook_history_output(self._df_accuracy.iloc[0 : self.num_to_df_display_, :])
+
+                        self._info(
+                            self._get_union_predictions_results_mean.format(
+                                self._info_wrapper(str(mae_mean)), self._info_wrapper(str(accuracy_mean))
+                            ),
+                            out=False,
+                        )
+
+                    clear_output(True)
+                    # Отображение истории вывода сообщений в ячейке Jupyter
+                    if out is True:
+                        self.show_notebook_history_output()
+
+                    if logs is True:
+                        # Текущее время для лог-файла
+                        # см. datetime.fromtimestamp()
+                        curr_ts = str(datetime.now().timestamp()).replace(".", "_")
+
+                        name_logs_file = self.get_text_union_predictions.__name__
+
+                        # Сохранение LOG
+                        res_save_logs_df_files = self._save_logs(
+                            self._df_files, name_logs_file + "_df_files_" + curr_ts
+                        )
+
+                        # Подсчет точности
+                        if accuracy is True:
+                            # Сохранение LOG
+                            res_save_logs_df_accuracy = self._save_logs(
+                                self._df_accuracy, name_logs_file + "_df_accuracy_" + curr_ts
+                            )
+
+                        if res_save_logs_df_files is True:
+                            # Сохранение LOG файла/файлов
+                            if accuracy is True and res_save_logs_df_accuracy is True:
+                                logs_s = self._logs_saves_true
+                            else:
+                                logs_s = self._logs_save_true
+
+                            self._info_true(logs_s, out=out)
+
+                    return True
+            finally:
+                if runtime:
+                    self._r_end(out=out)
