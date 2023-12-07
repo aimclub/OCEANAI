@@ -198,6 +198,7 @@ class Text(TextMessages):
         self.__multi_corpora: List[str] = ["fi", "mupta"]
 
         self.__lang_traslate: List[str] = ["ru", "en"]
+        self.lang_traslate: List[str] = self.__lang_traslate
 
         self.__parse_text_features: Optional[FunctionType] = None  # Парсинг экспертных признаков
         self.__category_text_features: List[str] = []  # Словарь с экспертными признаками

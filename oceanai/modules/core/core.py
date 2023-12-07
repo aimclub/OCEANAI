@@ -309,6 +309,13 @@ class Core(CoreMessages):
                     },
                 },
             },
+            "avt": {
+                "fi": {
+                    "b5": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/477731594?token=JFCVycXxjnYf3Hg&filename=avt_fi_v2.h5",
+                    },
+                },
+            },
         }
 
         # Верные предсказания для подсчета точности
