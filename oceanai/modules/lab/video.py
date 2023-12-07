@@ -1901,7 +1901,7 @@ class Video(VideoMessages):
 
             x = tf.keras.layers.LSTM(64, return_sequences=True)(input_lstm)
             x = tf.keras.layers.Dropout(rate=0.2)(x)
-            x = tf.keras.layers.LSTM(128, return_sequences=False, name='lstm_128_v_hc')(x)
+            x = tf.keras.layers.LSTM(128, return_sequences=False, name="lstm_128_v_hc")(x)
             x = tf.keras.layers.Dropout(rate=0.2)(x)
             x = tf.keras.layers.Dense(5, activation="linear")(x)
 
@@ -2599,9 +2599,9 @@ class Video(VideoMessages):
 
             input_lstm = tf.keras.Input(shape=(10, 512))
 
-            x = tf.keras.layers.LSTM(1024, return_sequences=False, kernel_regularizer=tf.keras.regularizers.l2(1e-3), name='lstm_1024_v_nn')(
-                input_lstm
-            )
+            x = tf.keras.layers.LSTM(
+                1024, return_sequences=False, kernel_regularizer=tf.keras.regularizers.l2(1e-3), name="lstm_1024_v_nn"
+            )(input_lstm)
             x = tf.keras.layers.Dropout(rate=0.2)(x)
             x = tf.keras.layers.Dense(units=5)(x)
             x = tf.keras.layers.Activation("linear")(x)
@@ -2855,7 +2855,10 @@ class Video(VideoMessages):
         if self.__load_model_weights(url, force_reload, self._load_video_model_weights_hc, out, False, run) is True:
             try:
                 self._video_model_hc.load_weights(self._url_last_filename)
-                self._video_model_hc = tf.keras.models.Model(inputs=self._video_model_hc.input, outputs=[self._video_model_hc.output, self._video_model_hc.get_layer('lstm_128_v_hc').output])
+                self._video_model_hc = tf.keras.models.Model(
+                    inputs=self._video_model_hc.input,
+                    outputs=[self._video_model_hc.output, self._video_model_hc.get_layer("lstm_128_v_hc").output],
+                )
             except Exception:
                 self._error(self._model_video_hc_not_formation, out=out)
                 return False
@@ -3123,7 +3126,10 @@ class Video(VideoMessages):
         if self.__load_model_weights(url, force_reload, self._load_video_model_weights_nn, out, False, run) is True:
             try:
                 self._video_model_nn.load_weights(self._url_last_filename)
-                self._video_model_nn = tf.keras.models.Model(inputs=self._video_model_nn.input, outputs=[self._video_model_nn.output, self._video_model_nn.get_layer('lstm_1024_v_nn').output])
+                self._video_model_nn = tf.keras.models.Model(
+                    inputs=self._video_model_nn.input,
+                    outputs=[self._video_model_nn.output, self._video_model_nn.get_layer("lstm_1024_v_nn").output],
+                )
             except Exception:
                 self._error(self._model_video_nn_not_formation, out=out)
                 return False
@@ -3700,7 +3706,7 @@ class Video(VideoMessages):
 
                             try:
                                 # Оправка экспертных признаков в нейросетевую модель
-                                pred_hc, _ = self.video_model_hc_(np.array(hc_features, dtype=np.float16)).numpy()
+                                pred_hc, _ = self.video_model_hc_(np.array(hc_features, dtype=np.float16))
                             except TypeError:
                                 code_error_pred_hc = 1
                             except Exception:
@@ -3708,7 +3714,7 @@ class Video(VideoMessages):
 
                             try:
                                 # Отправка нейросетевых признаков в нейросетевую модель
-                                pred_nn, _= self.video_model_nn_(np.array(nn_features, dtype=np.float16)).numpy()
+                                pred_nn, _ = self.video_model_nn_(np.array(nn_features, dtype=np.float16))
                             except TypeError:
                                 code_error_pred_nn = 1
                             except Exception:
@@ -3727,7 +3733,7 @@ class Video(VideoMessages):
                                 return False
 
                             # Конкатенация оценок по экспертным и нейросетевым признакам
-                            union_pred = self.__concat_pred(pred_hc, pred_nn, out=out)
+                            union_pred = self.__concat_pred(pred_hc.numpy(), pred_nn.numpy(), out=out)
 
                             if len(union_pred) == 0:
                                 return False

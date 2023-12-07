@@ -1419,7 +1419,7 @@ class Audio(AudioMessages):
 
             x = tf.keras.layers.LSTM(64, return_sequences=True)(input_lstm)
             x = tf.keras.layers.Dropout(rate=0.2)(x)
-            x = tf.keras.layers.LSTM(128, return_sequences=False, name='lstm_128_a_hc')(x)
+            x = tf.keras.layers.LSTM(128, return_sequences=False, name="lstm_128_a_hc")(x)
             x = tf.keras.layers.Dropout(rate=0.2)(x)
             x = tf.keras.layers.Dense(5, activation="linear")(x)
 
@@ -1590,7 +1590,7 @@ class Audio(AudioMessages):
             x = tf.keras.layers.Flatten()(x)
             x = tf.keras.layers.Dense(512, activation="relu")(x)
             x = tf.keras.layers.Dropout(0.5)(x)
-            x = tf.keras.layers.Dense(256, activation="relu", name='dense_256')(x)
+            x = tf.keras.layers.Dense(256, activation="relu", name="dense_256")(x)
             x = tf.keras.layers.Dense(5, activation="linear")(x)
 
             self._audio_model_nn = tf.keras.models.Model(inputs=vgg_model.input, outputs=x)
@@ -1843,7 +1843,10 @@ class Audio(AudioMessages):
         if self.__load_model_weights(url, force_reload, self._load_audio_model_weights_hc, out, False, run) is True:
             try:
                 self._audio_model_hc.load_weights(self._url_last_filename)
-                self._audio_model_hc = tf.keras.models.Model(inputs=self._audio_model_hc.input, outputs=[self._audio_model_hc.output, self._audio_model_hc.get_layer('lstm_128_a_hc').output])
+                self._audio_model_hc = tf.keras.models.Model(
+                    inputs=self._audio_model_hc.input,
+                    outputs=[self._audio_model_hc.output, self._audio_model_hc.get_layer("lstm_128_a_hc").output],
+                )
             except Exception:
                 self._error(self._model_audio_hc_not_formation, out=out)
                 return False
@@ -1976,7 +1979,10 @@ class Audio(AudioMessages):
         if self.__load_model_weights(url, force_reload, self._load_audio_model_weights_nn, out, False, run) is True:
             try:
                 self._audio_model_nn.load_weights(self._url_last_filename)
-                self._audio_model_nn = tf.keras.models.Model(inputs=self._audio_model_nn.input, outputs=[self._audio_model_nn.output, self._audio_model_nn.get_layer('dense_256').output])
+                self._audio_model_nn = tf.keras.models.Model(
+                    inputs=self._audio_model_nn.input,
+                    outputs=[self._audio_model_nn.output, self._audio_model_nn.get_layer("dense_256").output],
+                )
             except Exception:
                 self._error(self._model_audio_nn_not_formation, out=out)
                 return False
@@ -2547,7 +2553,7 @@ class Audio(AudioMessages):
 
                             try:
                                 # Оправка экспертных признаков в нейросетевую модель
-                                pred_hc, _ = self.audio_model_hc_(np.array(hc_features, dtype=np.float16)).numpy()
+                                pred_hc, _ = self.audio_model_hc_(np.array(hc_features, dtype=np.float16))
                             except TypeError:
                                 code_error_pred_hc = 1
                             except Exception:
@@ -2557,7 +2563,7 @@ class Audio(AudioMessages):
                                 # Отправка нейросетевых признаков в нейросетевую модель
                                 pred_melspectrogram, _ = self.audio_model_nn_(
                                     np.array(melspectrogram_features, dtype=np.float16)
-                                ).numpy()
+                                )
                             except TypeError:
                                 code_error_pred_melspectrogram = 1
                             except Exception:
@@ -2576,7 +2582,7 @@ class Audio(AudioMessages):
                                 return False
 
                             # Конкатенация оценок по экспертным и нейросетевым признакам
-                            union_pred = self.__concat_pred(pred_hc, pred_melspectrogram, out=out)
+                            union_pred = self.__concat_pred(pred_hc.numpy(), pred_melspectrogram.numpy(), out=out)
 
                             if len(union_pred) == 0:
                                 return False
