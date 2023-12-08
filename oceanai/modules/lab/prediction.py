@@ -1456,9 +1456,7 @@ class Prediction(PredictionMessages):
 
                             try:
                                 # Оправка экспертных признаков в нейросетевую модель
-                                pred_hc_audio = self.audio_model_hc_(
-                                    np.array(hc_audio_features, dtype=np.float16)
-                                ).numpy()
+                                pred_hc_audio, _ = self.audio_model_hc_(np.array(hc_audio_features, dtype=np.float16))
                             except TypeError:
                                 code_error_pred_hc_audio = 1
                             except Exception:
@@ -1466,9 +1464,9 @@ class Prediction(PredictionMessages):
 
                             try:
                                 # Отправка нейросетевых признаков в нейросетевую модель
-                                pred_melspectrogram_audio = self.audio_model_nn_(
+                                pred_melspectrogram_audio, _ = self.audio_model_nn_(
                                     np.array(melspectrogram_audio_features, dtype=np.float16)
-                                ).numpy()
+                                )
                             except TypeError:
                                 code_error_pred_melspectrogram_audio = 1
                             except Exception:
@@ -1492,9 +1490,7 @@ class Prediction(PredictionMessages):
 
                             try:
                                 # Оправка экспертных признаков в нейросетевую модель
-                                pred_hc_video = self.video_model_hc_(
-                                    np.array(hc_video_features, dtype=np.float16)
-                                ).numpy()
+                                pred_hc_video, _ = self.video_model_hc_(np.array(hc_video_features, dtype=np.float16))
                             except TypeError:
                                 code_error_pred_hc_video = 1
                             except Exception:
@@ -1502,9 +1498,7 @@ class Prediction(PredictionMessages):
 
                             try:
                                 # Отправка нейросетевых признаков в нейросетевую модель
-                                pred_nn_video = self.video_model_nn_(
-                                    np.array(nn_video_features, dtype=np.float16)
-                                ).numpy()
+                                pred_nn_video, _ = self.video_model_nn_(np.array(nn_video_features, dtype=np.float16))
                             except TypeError:
                                 code_error_pred_nn_video = 1
                             except Exception:
@@ -1524,7 +1518,11 @@ class Prediction(PredictionMessages):
 
                             # Конкатенация оценок по экспертным и нейросетевым признакам
                             union_pred = self.__concat_pred_av(
-                                pred_hc_audio, pred_melspectrogram_audio, pred_hc_video, pred_nn_video, out=out
+                                pred_hc_audio.numpy(),
+                                pred_melspectrogram_audio.numpy(),
+                                pred_hc_video.numpy(),
+                                pred_nn_video.numpy(),
+                                out=out,
                             )
 
                             if len(union_pred) == 0:
