@@ -60,6 +60,7 @@ os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 warnings.filterwarnings("ignore", category=FutureWarning, module="tensorflow")
 
 import tensorflow as tf  # Машинное обучение от Google
+
 import keras
 
 from oceanai.modules.lab.utils.attention import Attention  # Модуль внимания
@@ -817,10 +818,10 @@ class Text(TextMessages):
                         input_features = inputs.input_features.to(self._device)
                         if lang == self.__lang_traslate[0]:
                             generated_ids = self._model_transcriptions.generate(
-                                inputs=input_features, forced_decoder_ids=self.__forced_decoder_ids
+                                inputs=input_features, forced_decoder_ids=self.__forced_decoder_ids, max_new_tokens=448
                             )
                         elif lang == self.__lang_traslate[1]:
-                            generated_ids = self._model_transcriptions.generate(inputs=input_features)
+                            generated_ids = self._model_transcriptions.generate(inputs=input_features, max_new_tokens=448)
                         transcription = self._processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
                         self.__text_pred += transcription
 
@@ -960,7 +961,7 @@ class Text(TextMessages):
                 if out:
                     self.show_notebook_history_output()  # Отображение истории вывода сообщений в ячейке Jupyter
 
-            win = 448000
+            win = 400000
 
             try:
                 self.__text_pred = ""
@@ -1791,7 +1792,7 @@ class Text(TextMessages):
                                 code_error_pred_nn = 2
 
                             if code_error_pred_hc != -1 and code_error_pred_nn != -1:
-                                self._error(self._models_text_not_formation, out=out)
+                                self._error(self._model_text_not_formation, out=out)
                                 return False
 
                             if code_error_pred_hc != -1:
