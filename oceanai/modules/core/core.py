@@ -214,55 +214,78 @@ class Core(CoreMessages):
         # Веса для нейросетевых архитектур
         self._weights_for_big5: Dict[str, Dict] = {
             "audio": {
-                "hc": {
-                    "sberdisk": "https://download.sberdisk.ru/download/file/400635799?token=MMRrak8fMsyzxLE&filename=weights_2022-05-05_11-27-55.h5",
+                "fi": {
+                    "hc": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/400635799?token=MMRrak8fMsyzxLE&filename=weights_2022-05-05_11-27-55.h5",
+                    },
+                    "nn": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/400635678?token=W6LCtD33FQHnYEz&filename=weights_2022-05-03_07-46-14.h5",
+                    },
+                    "b5": {
+                        "openness": {
+                            "sberdisk": "https://download.sberdisk.ru/download/file/405035301?token=443WRA9MFWqWBAE&filename=weights_2022-06-15_16-16-20.h5",
+                        },
+                        "conscientiousness": {
+                            "sberdisk": "https://download.sberdisk.ru/download/file/405034601?token=eDG28m3H6c8bWoE&filename=weights_2022-06-15_16-21-57.h5",
+                        },
+                        "extraversion": {
+                            "sberdisk": "https://download.sberdisk.ru/download/file/405034830?token=3daBSTYnmZaesee&filename=weights_2022-06-15_16-26-41.h5",
+                        },
+                        "agreeableness": {
+                            "sberdisk": "https://download.sberdisk.ru/download/file/405034397?token=52ZPHMjb4CFmdYa&filename=weights_2022-06-15_16-32-51.h5",
+                        },
+                        "neuroticism": {
+                            "sberdisk": "https://download.sberdisk.ru/download/file/405035156?token=q8CZJ99rZqcNxkM&filename=weights_2022-06-15_16-37-46.h5",
+                        },
+                    },
                 },
-                "nn": {
-                    "sberdisk": "https://download.sberdisk.ru/download/file/400635678?token=W6LCtD33FQHnYEz&filename=weights_2022-05-03_07-46-14.h5",
-                },
-                "b5": {
-                    "openness": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/405035301?token=443WRA9MFWqWBAE&filename=weights_2022-06-15_16-16-20.h5",
+                "mupta": {
+                    "hc": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/477962562?token=pFKAlXd8koEngHa&filename=ahc_mupta_2022-06-18_08-32-05.h5",
                     },
-                    "conscientiousness": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/405034601?token=eDG28m3H6c8bWoE&filename=weights_2022-06-15_16-21-57.h5",
-                    },
-                    "extraversion": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/405034830?token=3daBSTYnmZaesee&filename=weights_2022-06-15_16-26-41.h5",
-                    },
-                    "agreeableness": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/405034397?token=52ZPHMjb4CFmdYa&filename=weights_2022-06-15_16-32-51.h5",
-                    },
-                    "neuroticism": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/405035156?token=q8CZJ99rZqcNxkM&filename=weights_2022-06-15_16-37-46.h5",
+                    "nn": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/477962561?token=lPCiioXg7ZeNUK8&filename=ann_mupta_2022-06-18_09-57-06.h5",
                     },
                 },
             },
             "video": {
-                "hc": {
-                    "sberdisk": "https://download.sberdisk.ru/download/file/412059444?token=JXerCfAjJZg6crD&filename=weights_2022-08-27_18-53-35.h5",
+                "fi": {
+                    "hc": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/412059444?token=JXerCfAjJZg6crD&filename=weights_2022-08-27_18-53-35.h5",
+                    },
+                    "nn": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/412059478?token=85KeW6q4QKy6kP8&filename=weights_2022-03-22_16-31-48.h5",
+                    },
+                    "fe": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/414207833?token=ygzxWEkndjSMnEL&filename=weights_2022-11-01_12-27-07.h5"
+                    },
+                    "b5": {
+                        "openness": {
+                            "sberdisk": "https://download.sberdisk.ru/download/file/415127050?token=rfpy9TLdbeXtiN7&filename=weights_2022-06-15_16-46-30.h5",
+                        },
+                        "conscientiousness": {
+                            "sberdisk": "https://download.sberdisk.ru/download/file/415126986?token=PnjzaHaR3wPg2RT&filename=weights_2022-06-15_16-48-50.h5",
+                        },
+                        "extraversion": {
+                            "sberdisk": "https://download.sberdisk.ru/download/file/415127012?token=s5aTwbt8DBkt7G4&filename=weights_2022-06-15_16-54-06.h5",
+                        },
+                        "agreeableness": {
+                            "sberdisk": "https://download.sberdisk.ru/download/file/415126845?token=joN7TMHk59Gffsf&filename=weights_2022-06-15_17-02-03.h5",
+                        },
+                        "neuroticism": {
+                            "sberdisk": "https://download.sberdisk.ru/download/file/415127032?token=NEBSsE7mjyjen3o&filename=weights_2022-06-15_17-06-15.h5",
+                        },
+                    },
                 },
-                "nn": {
-                    "sberdisk": "https://download.sberdisk.ru/download/file/412059478?token=85KeW6q4QKy6kP8&filename=weights_2022-03-22_16-31-48.h5",
-                },
-                "fe": {
-                    "sberdisk": "https://download.sberdisk.ru/download/file/414207833?token=ygzxWEkndjSMnEL&filename=weights_2022-11-01_12-27-07.h5"
-                },
-                "b5": {
-                    "openness": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/415127050?token=rfpy9TLdbeXtiN7&filename=weights_2022-06-15_16-46-30.h5",
+                "mupta": {
+                    "hc": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/477962567?token=oSMaqRe5xK8UBIP&filename=vhc_mupta_2022-07-22_10-02-37.h5",
                     },
-                    "conscientiousness": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/415126986?token=PnjzaHaR3wPg2RT&filename=weights_2022-06-15_16-48-50.h5",
+                    "nn": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/477962568?token=TZWoSGYW3LPoKg4&filename=vnn_mupta_2022-06-25_18-12-38.h5",
                     },
-                    "extraversion": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/415127012?token=s5aTwbt8DBkt7G4&filename=weights_2022-06-15_16-54-06.h5",
-                    },
-                    "agreeableness": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/415126845?token=joN7TMHk59Gffsf&filename=weights_2022-06-15_17-02-03.h5",
-                    },
-                    "neuroticism": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/415127032?token=NEBSsE7mjyjen3o&filename=weights_2022-06-15_17-06-15.h5",
+                    "fe": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/414207833?token=ygzxWEkndjSMnEL&filename=weights_2022-11-01_12-27-07.h5"
                     },
                 },
             },
@@ -275,7 +298,7 @@ class Core(CoreMessages):
                         "sberdisk": "https://download.sberdisk.ru/download/file/472139570?token=LpndWNlovMhxU3O&filename=weights_2023-07-03_15-01-08.h5",
                     },
                     "b5": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/477466835?token=O1o2oZm36OBHzRb&filename=weights_2023-12-05_20-00-00.h5",
+                        "sberdisk": "https://download.sberdisk.ru/download/file/477962564?token=3aCG3GRqbjkOBIK&filename=ft_fi_2023-12-09_14-25-13.h5",
                     },
                 },
                 "mupta": {
@@ -286,33 +309,43 @@ class Core(CoreMessages):
                         "sberdisk": "https://download.sberdisk.ru/download/file/472139571?token=DvEzGThzqaMl2pp&filename=weights_2023-07-16_18-12-01.h5",
                     },
                     "b5": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/477466835?token=O1o2oZm36OBHzRb&filename=weights_2023-12-05_20-00-00.h5",
+                        "sberdisk": "https://download.sberdisk.ru/download/file/477962566?token=sliTZG1OBMIrlwY&filename=ft_mupta_2023-12-09_14-25-13.h5",
                     },
                 },
             },
             "av": {
-                "b5": {
-                    "openness": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/425515223?token=Btoo2flpzGewhry&filename=weights_2022-08-28_11-14-35.h5",
+                "fi": {
+                    "b5": {
+                        "openness": {
+                            "sberdisk": "https://download.sberdisk.ru/download/file/425515223?token=Btoo2flpzGewhry&filename=weights_2022-08-28_11-14-35.h5",
+                        },
+                        "conscientiousness": {
+                            "sberdisk": "https://download.sberdisk.ru/download/file/425515311?token=bUjloqk32e4wasj&filename=weights_2022-08-28_11-08-10.h5",
+                        },
+                        "extraversion": {
+                            "sberdisk": "https://download.sberdisk.ru/download/file/425515337?token=IC44ovFFcnj4DZl&filename=weights_2022-08-28_11-17-57.h5",
+                        },
+                        "agreeableness": {
+                            "sberdisk": "https://download.sberdisk.ru/download/file/425515346?token=gFjvtM2HIabtsvc&filename=weights_2022-08-28_11-25-11.h5",
+                        },
+                        "neuroticism": {
+                            "sberdisk": "https://download.sberdisk.ru/download/file/425515375?token=pPpzOQC9z6WMzNt&filename=weights_2022-06-14_21-44-09.h5",
+                        },
                     },
-                    "conscientiousness": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/425515311?token=bUjloqk32e4wasj&filename=weights_2022-08-28_11-08-10.h5",
-                    },
-                    "extraversion": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/425515337?token=IC44ovFFcnj4DZl&filename=weights_2022-08-28_11-17-57.h5",
-                    },
-                    "agreeableness": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/425515346?token=gFjvtM2HIabtsvc&filename=weights_2022-08-28_11-25-11.h5",
-                    },
-                    "neuroticism": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/425515375?token=pPpzOQC9z6WMzNt&filename=weights_2022-06-14_21-44-09.h5",
-                    },
+                },
+                "mupta": {
+                    "b5": {},
                 },
             },
             "avt": {
                 "fi": {
                     "b5": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/477731594?token=JFCVycXxjnYf3Hg&filename=avt_fi_v2.h5",
+                        "sberdisk": "https://download.sberdisk.ru/download/file/477962565?token=YSTP75aNv8eVtxf&filename=avt_fi_2023-12-03_11-36-51.h5",
+                    },
+                },
+                "mupta": {
+                    "b5": {
+                        "sberdisk": "https://download.sberdisk.ru/download/file/477962563?token=v5hUmyJEbhyPqic&filename=avt_mupta_2023-12-09_14-25-13.h5",
                     },
                 },
             },
