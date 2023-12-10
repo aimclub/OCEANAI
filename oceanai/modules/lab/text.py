@@ -1511,7 +1511,7 @@ class Text(TextMessages):
                         force_reload=force_reload,
                     )
                 except Exception:
-                    self.message_error(self._unknown_err, start=True, out=out)
+                    self._other_error(self._unknown_err, out=out)
                     return False
                 else:
                     # Файл распакован
@@ -1520,7 +1520,7 @@ class Text(TextMessages):
                             self._bert_tokenizer = BertTokenizer.from_pretrained(Path(self._url_last_filename).stem)
                             self._bert_model = TFBertModel.from_pretrained(Path(self._url_last_filename).stem)
                         except Exception:
-                            self.message_error(self._unknown_err, start=True, out=out)
+                            self._other_error(self._unknown_err, out=out)
                             return False
                         else:
                             return True
