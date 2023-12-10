@@ -353,7 +353,8 @@ class Core(CoreMessages):
 
         # Верные предсказания для подсчета точности
         self._true_traits: Dict[str, str] = {
-            "sberdisk": "https://download.sberdisk.ru/download/file/410305241?token=TFePK6w5CW6ADnq&filename=data_true_traits.csv",
+            "fi": {"sberdisk": "https://download.sberdisk.ru/download/file/410305241?token=TFePK6w5CW6ADnq&filename=data_true_traits.csv"},
+            "mupta": {"sberdisk": "https://download.sberdisk.ru/download/file/478077400?token=sgDo8F710zGoOZy&filename=data_true_traits_mupta.csv"}
         }
 
         self._df_files: pd.DataFrame = pd.DataFrame()  # DataFrame с данными
