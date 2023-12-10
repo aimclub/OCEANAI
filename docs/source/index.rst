@@ -21,9 +21,6 @@
    :alt: PyPI - License (image)
 .. image:: https://img.shields.io/github/languages/top/dmitryryumin/oceanai
    :alt: GitHub top language (image)
-.. image:: https://readthedocs.org/projects/oceanai-ru/badge/?version=latest
-   :target: https://oceanai.readthedocs.io/ru/latest/?badge=latest
-   :alt: Documentation Status (image)
 
 -----
 

@@ -7,3 +7,4 @@
 
    ../notebooks/Prediction-load_av_models_oceanai
    ../notebooks/Prediction-get_av_union_predictions
+   ../notebooks/Prediction-get_avt_union_predictions
