@@ -170,8 +170,11 @@ class Video(VideoMessages):
 
         self.__bndbox_face_size: List[int] = [224, 224]  # Размер изображения с лицом
 
+        self.__lang_traslate: List[str] = ["ru", "en"]
+        self.lang_traslate: List[str] = self.__lang_traslate
+
         # Используемые координаты ориентиров лица
-        self.__coords_face_mesh: List[int] = [
+        self.__coords_face_mesh_fi: List[int] = [
             0,
             1,
             386,
@@ -210,7 +213,43 @@ class Video(VideoMessages):
             263,
         ]
 
-        self.__couples_face_mesh: List[List[int]] = [
+        self.__coords_face_mesh_mupta: List[int] = [
+            0, 
+            1, 
+            386, 
+            133, 
+            6, 
+            8, 
+            267, 
+            13, 
+            14, 
+            17, 
+            274, 
+            145, 
+            276, 
+            152, 
+            282, 
+            411, 
+            285, 
+            159, 
+            291, 
+            37, 
+            299, 
+            46, 
+            52, 
+            55, 
+            187, 
+            61, 
+            69, 
+            331, 
+            334, 
+            336, 
+            102, 
+            105, 
+            362,
+        ]
+
+        self.__couples_face_mesh_fi: List[List[int]] = [
             [133, 46],
             [133, 52],
             [133, 55],
@@ -236,8 +275,42 @@ class Video(VideoMessages):
             [61, 133],
             [386, 374],
             [159, 145],
-            [69, 105],
+            [69, 105], 
             [69, 107],
+            [299, 336],
+            [299, 334],
+            [187, 133],
+            [411, 362],
+        ]
+
+        self.__couples_face_mesh_mupta: List[List[int]] = [
+            [133, 46],
+            [133, 52],
+            [133, 55],
+            [362, 285],
+            [362, 282],
+            [362, 276],
+            [55, 285],
+            [1, 6],
+            [8, 6],
+            [0, 1],
+            [0, 17],
+            [61, 291],
+            [0, 13],
+            [61, 291],
+            [37, 13],
+            [267, 13],
+            [13, 14],
+            [17, 152],
+            [102, 331],
+            [102, 133],
+            [331, 362],
+            [291, 362],
+            [61, 133],
+            [386, 274],
+            [159, 145],
+            [69, 105], 
+            [69, 145],
             [299, 336],
             [299, 334],
             [187, 133],
@@ -1224,6 +1297,7 @@ class Video(VideoMessages):
         reduction_fps: int = 5,
         window: int = 10,
         step: int = 5,
+        lang: str = "ru",
         last: bool = False,
         out: bool = True,
         runtime: bool = True,
@@ -1239,6 +1313,7 @@ class Video(VideoMessages):
             reduction_fps (int): Понижение кадровой частоты
             window (int): Размер окна сегмента сигнала (в кадрах)
             step (int): Шаг сдвига окна сегмента сигнала (в кадрах)
+            lang (str): Язык
             last (bool): Замена последнего сообщения
             out (bool): Отображение
             runtime (bool): Подсчет времени выполнения
@@ -1375,6 +1450,8 @@ class Video(VideoMessages):
                 or window < 1
                 or type(step) is not int
                 or step < 1
+                or not isinstance(lang, str)
+                or lang not in self.__lang_traslate
                 or type(last) is not bool
                 or type(out) is not bool
                 or type(runtime) is not bool
@@ -1716,14 +1793,21 @@ class Video(VideoMessages):
                                                     )
                                                 )
 
-                                                for coord in self.__coords_face_mesh:
+                                                if lang == self.__lang_traslate[0]:
+                                                    coords_face_mesh = self.__coords_face_mesh_mupta
+                                                    couples_face_mesh = self.__couples_face_mesh_mupta
+                                                else:
+                                                    coords_face_mesh = self.__coords_face_mesh_fi
+                                                    couples_face_mesh = self.__couples_face_mesh_fi
+
+                                                for coord in coords_face_mesh:
                                                     curr_seq_hc.extend(
                                                         (
                                                             np.asarray(idx_to_coors[coord]) - np.asarray([x_min, y_min])
                                                         ).tolist()
                                                     )
 
-                                                for cpl in self.__couples_face_mesh:
+                                                for cpl in couples_face_mesh:
                                                     curr_seq_hc.append(
                                                         distance.euclidean(
                                                             np.asarray(idx_to_coors[cpl[0]])
@@ -1804,11 +1888,12 @@ class Video(VideoMessages):
     # ------------------------------------------------------------------------------------------------------------------
 
     def load_video_model_hc(
-        self, show_summary: bool = False, out: bool = True, runtime: bool = True, run: bool = True
+        self, lang: str, show_summary: bool = False, out: bool = True, runtime: bool = True, run: bool = True
     ) -> bool:
         """Формирование нейросетевой архитектуры модели для получения оценок по экспертным признакам
 
         Args:
+            lang (str): Язык
             show_summary (bool): Отображение сформированной нейросетевой архитектуры модели
             out (bool): Отображение
             runtime (bool): Подсчет времени выполнения
@@ -1874,7 +1959,9 @@ class Video(VideoMessages):
         try:
             # Проверка аргументов
             if (
-                type(show_summary) is not bool
+                not isinstance(lang, str)
+                or lang not in self.__lang_traslate
+                or type(show_summary) is not bool
                 or type(out) is not bool
                 or type(runtime) is not bool
                 or type(run) is not bool
@@ -1897,7 +1984,10 @@ class Video(VideoMessages):
             if out:
                 self.show_notebook_history_output()  # Отображение истории вывода сообщений в ячейке Jupyter
 
-            input_lstm = tf.keras.Input(shape=(10, 115))
+            if lang == self.__lang_traslate[0]:
+                input_lstm = tf.keras.Input(shape=(10, 109))
+            else:
+                input_lstm = tf.keras.Input(shape=(10, 115))
 
             x = tf.keras.layers.LSTM(64, return_sequences=True)(input_lstm)
             x = tf.keras.layers.Dropout(rate=0.2)(x)
@@ -3452,6 +3542,7 @@ class Video(VideoMessages):
         reduction_fps: int = 5,
         window: int = 10,
         step: int = 5,
+        lang: str = "ru",
         out: bool = True,
         runtime: bool = True,
         run: bool = True,
@@ -3463,6 +3554,7 @@ class Video(VideoMessages):
             reduction_fps (int): Понижение кадровой частоты
             window (int): Размер окна сегмента сигнала (в кадрах)
             step (int): Шаг сдвига окна сегмента сигнала (в кадрах)
+            lang (str): Язык
             out (bool): Отображение
             runtime (bool): Подсчет времени выполнения
             run (bool): Блокировка выполнения
@@ -3483,6 +3575,7 @@ class Video(VideoMessages):
             reduction_fps=reduction_fps,
             window=window,
             step=step,
+            lang=lang,
             last=False,
             out=out,
             runtime=runtime,
@@ -3496,6 +3589,7 @@ class Video(VideoMessages):
         reduction_fps: int = 5,
         window: int = 10,
         step: int = 5,
+        lang: str = "ru",
         accuracy=True,
         url_accuracy: str = "",
         logs: bool = True,
@@ -3511,6 +3605,7 @@ class Video(VideoMessages):
             reduction_fps (int): Понижение кадровой частоты
             window (int): Размер окна сегмента сигнала (в кадрах)
             step (int): Шаг сдвига окна сегмента сигнала (в кадрах)
+            lang (str): Язык
             accuracy (bool): Вычисление точности
             url_accuracy (str): Полный путь к файлу с верными предсказаниями для подсчета точности
             logs (bool): При необходимости формировать LOG файл
@@ -3543,6 +3638,8 @@ class Video(VideoMessages):
                 or window < 1
                 or type(step) is not int
                 or step < 1
+                or not isinstance(lang, str)
+                or lang not in self.__lang_traslate
                 or type(accuracy) is not bool
                 or type(url_accuracy) is not str
                 or type(logs) is not bool
@@ -3687,6 +3784,7 @@ class Video(VideoMessages):
                             reduction_fps=reduction_fps,
                             window=window,
                             step=step,
+                            lang=lang,
                             last=True,
                             out=False,
                             runtime=False,

@@ -1217,7 +1217,8 @@ class Prediction(PredictionMessages):
         reduction_fps: int = 5,
         window_video: int = 10,
         step_video: int = 5,
-        accuracy=True,
+        lang: str = "ru",
+        accuracy: bool =True,
         url_accuracy: str = "",
         logs: bool = True,
         out: bool = True,
@@ -1235,6 +1236,7 @@ class Prediction(PredictionMessages):
             reduction_fps (int): Понижение кадровой частоты
             window_video (int): Размер окна сегмента видео сигнала (в кадрах)
             step_video (int): Шаг сдвига окна сегмента видео сигнала (в кадрах)
+            lang (str): Язык
             accuracy (bool): Вычисление точности
             url_accuracy (str): Полный путь к файлу с верными предсказаниями для подсчета точности
             logs (bool): При необходимости формировать LOG файл
@@ -1276,6 +1278,8 @@ class Prediction(PredictionMessages):
                 or window_video < 1
                 or type(step_video) is not int
                 or step_video < 1
+                or not isinstance(lang, str)
+                or lang not in self.lang_traslate
                 or type(accuracy) is not bool
                 or type(url_accuracy) is not str
                 or type(logs) is not bool
@@ -1433,6 +1437,7 @@ class Prediction(PredictionMessages):
                             reduction_fps=reduction_fps,
                             window=window_video,
                             step=step_video,
+                            lang=lang,
                             last=True,
                             out=False,
                             runtime=False,
@@ -1864,6 +1869,7 @@ class Prediction(PredictionMessages):
 
                 # Проход по всем директориям
                 for curr_path in path_to_data:
+
                     empty = True  # По умолчанию директория пустая
 
                     # Рекурсивный поиск данных
@@ -1874,6 +1880,7 @@ class Prediction(PredictionMessages):
 
                     # Формирование словаря для DataFrame
                     for p in g:
+
                         try:
                             if type(self.ext_) is not list or len(self.ext_) < 1:
                                 raise TypeError
@@ -1946,6 +1953,7 @@ class Prediction(PredictionMessages):
                             reduction_fps=reduction_fps,
                             window=window_video,
                             step=step_video,
+                            lang=lang,
                             last=True,
                             out=False,
                             runtime=False,
@@ -2083,7 +2091,7 @@ class Prediction(PredictionMessages):
                                 code_error_pred_nn_text = 2
 
                             if code_error_pred_hc_text != -1 and code_error_pred_nn_text != -1:
-                                self._error(self._models_text_not_formation, out=out)
+                                self._error(self._model_text_not_formation, out=out)
                                 return False
 
                             if code_error_pred_hc_text != -1:
@@ -2116,7 +2124,6 @@ class Prediction(PredictionMessages):
                             # Добавление данных в словарь для DataFrame
                             if self._append_to_list_of_files(str(curr_path.resolve()), final_pred, out) is False:
                                 return False
-
                             # Вычисление точности
                             if accuracy is True:
                                 try:
