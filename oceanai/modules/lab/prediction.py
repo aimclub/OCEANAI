@@ -127,11 +127,11 @@ class Prediction(PredictionMessages):
         super().__post_init__()  # Выполнение конструктора из суперкласса
 
         # Нейросетевые модели **tf.keras.Model** для получения результатов оценки персональных качеств
-        self._av_models_b5: Dict[str, Optional[keras.models.Functional]] = dict(
+        self._av_models_b5: Dict[str, Optional[keras.engine.functional.Functional]] = dict(
             zip(self._b5["en"], [None] * len(self._b5["en"]))
         )
 
-        self._avt_model_b5: Optional[keras.models.Functional] = None
+        self._avt_model_b5: Optional[keras.engine.functional.Functional] = None
 
         # ----------------------- Только для внутреннего использования внутри класса
 
@@ -150,7 +150,7 @@ class Prediction(PredictionMessages):
     # ------------------------------------------------------------------------------------------------------------------
 
     @property
-    def av_models_b5_(self) -> Dict[str, Optional[keras.models.Functional]]:
+    def av_models_b5_(self) -> Dict[str, Optional[keras.engine.functional.Functional]]:
         """Получение нейросетевых моделей **tf.keras.Model** для получения результатов оценки персональных качеств
 
         Returns:
@@ -223,7 +223,7 @@ class Prediction(PredictionMessages):
         return self._av_models_b5
 
     @property
-    def avt_model_b5_(self) -> Optional[keras.models.Functional]:
+    def avt_model_b5_(self) -> Optional[keras.engine.functional.Functional]:
         """Получение нейросетевой модели **tf.keras.Model** для получения оценок персональных качеств
 
         Returns:
@@ -567,7 +567,7 @@ class Prediction(PredictionMessages):
 
     def __load_avt_model_b5(
         self, show_summary: bool = False, out: bool = True
-    ) -> Optional[keras.models.Functional]:
+    ) -> Optional[keras.engine.functional.Functional]:
         """Формирование нейросетевой архитектуры модели для получения оценок персональных качеств
 
         .. note::
@@ -628,7 +628,7 @@ class Prediction(PredictionMessages):
 
     def __load_av_model_b5(
         self, show_summary: bool = False, out: bool = True
-    ) -> Optional[keras.models.Functional]:
+    ) -> Optional[keras.engine.functional.Functional]:
         """Формирование нейросетевой архитектуры модели для получения результата оценки персонального качества
 
         .. note::

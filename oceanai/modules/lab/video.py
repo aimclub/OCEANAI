@@ -150,13 +150,13 @@ class Video(VideoMessages):
         super().__post_init__()  # Выполнение конструктора из суперкласса
 
         # Нейросетевая модель **tf.keras.Model** для получения оценок по экспертным признакам
-        self._video_model_hc: Optional[keras.models.Functional] = None
+        self._video_model_hc: Optional[keras.engine.functional.Functional] = None
         # Нейросетевая модель **tf.keras.Model** для получения нейросетевых признаков
-        self._video_model_deep_fe: Optional[keras.models.Functional] = None
+        self._video_model_deep_fe: Optional[keras.engine.functional.Functional] = None
         # Нейросетевая модель **tf.keras.Model** для получения оценок по нейросетевым признакам
-        self._video_model_nn: Optional[keras.models.Functional] = None
+        self._video_model_nn: Optional[keras.engine.functional.Functional] = None
         # Нейросетевые модели **tf.keras.Model** для получения результатов оценки персональных качеств
-        self._video_models_b5: Dict[str, Optional[keras.models.Functional]] = dict(
+        self._video_models_b5: Dict[str, Optional[keras.engine.functional.Functional]] = dict(
             zip(self._b5["en"], [None] * len(self._b5["en"]))
         )
 
@@ -332,7 +332,7 @@ class Video(VideoMessages):
     # ------------------------------------------------------------------------------------------------------------------
 
     @property
-    def video_model_hc_(self) -> Optional[keras.models.Functional]:
+    def video_model_hc_(self) -> Optional[keras.engine.functional.Functional]:
         """Получение нейросетевой модели **tf.keras.Model** для получения оценок по экспертным признакам
 
         Returns:
@@ -392,7 +392,7 @@ class Video(VideoMessages):
         return self._video_model_hc
 
     @property
-    def video_model_nn_(self) -> Optional[keras.models.Functional]:
+    def video_model_nn_(self) -> Optional[keras.engine.functional.Functional]:
         """Получение нейросетевой модели **tf.keras.Model** для получения оценок по нейросетевым признакам
 
         Returns:
@@ -452,7 +452,7 @@ class Video(VideoMessages):
         return self._video_model_nn
 
     @property
-    def video_model_deep_fe_(self) -> Optional[keras.models.Functional]:
+    def video_model_deep_fe_(self) -> Optional[keras.engine.functional.Functional]:
         """Получение нейросетевой модели **tf.keras.Model** для получения нейросетевых признаков
 
         Returns:
@@ -512,7 +512,7 @@ class Video(VideoMessages):
         return self._video_model_deep_fe
 
     @property
-    def video_models_b5_(self) -> Dict[str, Optional[keras.models.Functional]]:
+    def video_models_b5_(self) -> Dict[str, Optional[keras.engine.functional.Functional]]:
         """Получение нейросетевых моделей **tf.keras.Model** для получения результатов оценки персональных качеств
 
         Returns:
@@ -1192,7 +1192,7 @@ class Video(VideoMessages):
 
     def __load_video_model_b5(
         self, show_summary: bool = False, out: bool = True
-    ) -> Optional[keras.models.Functional]:
+    ) -> Optional[keras.engine.functional.Functional]:
         """Формирование нейросетевой архитектуры модели для получения результата оценки персонального качества
 
         .. note::
