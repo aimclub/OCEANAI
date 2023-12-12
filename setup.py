@@ -29,8 +29,8 @@ REQUIRED_PACKAGES = [
     "liwc >= 0.5.0",
     "transformers >= 4.36.0",
     "sentencepiece >= 0.1.99",
-    "torch == 1.12.1",
-    "torchaudio == 0.12.1",
+    "torch == 2.0.1",
+    "torchaudio == 2.0.2",
 ]
 
 CLASSIFIERS = """\
