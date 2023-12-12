@@ -17,8 +17,8 @@
 #        i18n/pygettext.py -d oceanai -o oceanai/modules/locales/base.pot oceanai
 #     4. msgfmt --help
 #     5. locate msgfmt.py
-#     6. /usr/local/Cellar/python@3.9/3.9.7/Frameworks/Python.framework/Versions/3.9/share/doc/python3.9/examples/Tools/
-#        i18n/msgfmt.py oceanai/modules/locales/en/LC_MESSAGES/base.po oceanai/modules/locales/en/LC_MESSAGES/base
+#     6. /Library/Frameworks/Python.framework/Versions/3.9/share/doc/python3.9/examples/Tools/i18n/msgfmt.py
+#        oceanai/modules/locales/en/LC_MESSAGES/base.po oceanai/modules/locales/en/LC_MESSAGES/base
 
 import warnings
 

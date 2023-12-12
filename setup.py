@@ -12,7 +12,7 @@ import oceanai
 REQUIRED_PACKAGES = [
     "ipython >= 8.7.0",
     "jupyterlab >= 3.5.0",
-    "tensorflow >= 2.11.0",
+    "tensorflow >= 2.15.0",
     "keras >= 2.11.0",
     "Keras-Applications>=1.0.8",
     "numpy >= 1.23.5",
@@ -27,7 +27,7 @@ REQUIRED_PACKAGES = [
     "pymediainfo >= 6.0.1",
     "mediapipe >= 0.9.0",
     "liwc >= 0.5.0",
-    "transformers >= 4.24.0",
+    "transformers >= 4.36.0",
     "sentencepiece >= 0.1.99",
     "torch == 1.12.1",
     "torchaudio == 0.12.1",

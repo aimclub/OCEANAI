@@ -191,3 +191,5 @@ docs/source/user_guide/notebooks/video_FI/test/*.wav
 docs/source/user_guide/notebooks/video_FI_2/test/*.wav
 docs/source/user_guide/notebooks/video_FI/test/*.mp4
 docs/source/user_guide/notebooks/video_FI_2/test/*.mp4
+models/
+logs/
