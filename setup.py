@@ -10,8 +10,8 @@ if sys.version_info[:2] < MIN_PYTHON_VERSION:
 import oceanai
 
 REQUIRED_PACKAGES = [
-    "ipython >= 8.7.0",
-    "jupyterlab >= 3.5.0",
+    "ipython >= 8.18.1",
+    "jupyterlab >= 4.0.9",
     "tensorflow >= 2.15.0",
     "keras >= 2.11.0",
     "Keras-Applications>=1.0.8",
@@ -31,6 +31,7 @@ REQUIRED_PACKAGES = [
     "sentencepiece >= 0.1.99",
     "torch == 2.0.1",
     "torchaudio == 2.0.2",
+    "sacremoses >= 0.0.1",
 ]
 
 CLASSIFIERS = """\
