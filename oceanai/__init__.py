@@ -18,7 +18,7 @@ __summary__ = "OCEANAI"
 __uri__ = "https://github.com/DmitryRyumin/oceanai"
 
 __version__ = "1.0"
-__release__ = __version__ + ".0a5"
+__release__ = __version__ + ".0a6"
 
 __author__ru__ = "Рюмина Елена, Рюмин Дмитрий, Карпов Алексей"
 __author__en__ = "Elena Ryumina, Dmitry Ryumin, Alexey Karpov"
@@ -29,4 +29,4 @@ __maintainer__en__ = "Elena Ryumina, Dmitry Ryumin"
 __maintainer_email__ = "ryumina_ev@mail.ru, dl_03.03.1991@mail.ru"
 
 __license__ = "BSD License"
-__copyright__ = "2022. Speech and Multimodal Interfaces Laboratory Team"
+__copyright__ = "2022-23. Speech and Multimodal Interfaces Laboratory Team"

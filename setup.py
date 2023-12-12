@@ -31,9 +31,6 @@ REQUIRED_PACKAGES = [
     "sentencepiece >= 0.1.99",
     "torch == 1.12.1",
     "torchaudio == 0.12.1",
-    # "vosk >= 0.3.44",
-    # "pydub >= 0.25.1",
-    # "translate >= 3.6.1",
 ]
 
 CLASSIFIERS = """\
