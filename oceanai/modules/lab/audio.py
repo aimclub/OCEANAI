@@ -33,6 +33,7 @@ from pathlib import Path  # Работа с путями в файловой с�
 from sklearn import preprocessing
 from sklearn.metrics import mean_absolute_error
 from datetime import datetime  # Работа со временем
+import subprocess
 
 from typing import Dict, List, Tuple, Union, Optional, Callable  # Типы данных
 
@@ -1212,7 +1213,28 @@ class Audio(AudioMessages):
 
             try:
                 # Считывание аудио или видеофайла
-                audio, sr = librosa.load(path=path, sr=sr)
+                path_to_wav = os.path.join(str(Path(path).parent), Path(path).stem + "." + "wav")
+
+                if not Path(path_to_wav).is_file():
+                    if Path(path).suffix not in ["mp3", "wav"]:
+                        ff_audio = "ffmpeg -loglevel quiet -i {} -vn -acodec pcm_s16le -ar 44100 -ac 2 {}".format(
+                            path, path_to_wav
+                        )
+                        call_audio = subprocess.call(ff_audio, shell=True)
+
+                        try:
+                            if call_audio == 1:
+                                raise OSError
+                        except OSError:
+                            self._other_error(self._unknown_err, last=last, out=out)
+                            return np.empty([]), np.empty([])
+                        except Exception:
+                            self._other_error(self._unknown_err, last=last, out=out)
+                            return np.empty([]), np.empty([])
+                        else:
+                            audio, sr = librosa.load(path=path_to_wav, sr=sr)
+                else:
+                    audio, sr = librosa.load(path=path_to_wav, sr=sr)
             except FileNotFoundError:
                 self._other_error(self._file_not_found.format(self._info_wrapper(path)), last=last, out=out)
                 return [], []

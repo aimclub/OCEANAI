@@ -696,13 +696,13 @@ class Text(TextMessages):
             r"(?<=[.,])(?=[^\s])",
             " ",
             re.sub(
-                "\[[^\[\]]+\]",
+                r"\[[^\[\]]+\]",
                 "",
                 expand_contractions(
                     re.sub(
                         r'[.,"\'?:!/;]',
                         "",
-                        re.sub("((?<=^)(\s*?(\-)??))|(((\-)??\s*?)(?=$))", "", text.lower().strip()),
+                        re.sub(r"((?<=^)(\s*?(\-)??))|(((\-)??\s*?)(?=$))", "", text.lower().strip()),
                     )
                 ),
             ),
