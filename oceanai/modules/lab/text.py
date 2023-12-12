@@ -696,13 +696,13 @@ class Text(TextMessages):
             r"(?<=[.,])(?=[^\s])",
             " ",
             re.sub(
-                "\[[^\[\]]+\]",
+                r"\[[^\[\]]+\]",
                 "",
                 expand_contractions(
                     re.sub(
                         r'[.,"\'?:!/;]',
                         "",
-                        re.sub("((?<=^)(\s*?(\-)??))|(((\-)??\s*?)(?=$))", "", text.lower().strip()),
+                        re.sub(r"((?<=^)(\s*?(\-)??))|(((\-)??\s*?)(?=$))", "", text.lower().strip()),
                     )
                 ),
             ),
@@ -818,10 +818,10 @@ class Text(TextMessages):
                         input_features = inputs.input_features.to(self._device)
                         if lang == self.__lang_traslate[0]:
                             generated_ids = self._model_transcriptions.generate(
-                                inputs=input_features, forced_decoder_ids=self.__forced_decoder_ids, max_new_tokens=448
+                                input_features=input_features, forced_decoder_ids=self.__forced_decoder_ids, max_new_tokens=448
                             )
                         elif lang == self.__lang_traslate[1]:
-                            generated_ids = self._model_transcriptions.generate(inputs=input_features, max_new_tokens=448)
+                            generated_ids = self._model_transcriptions.generate(input_features=input_features, max_new_tokens=448)
                         transcription = self._processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
                         self.__text_pred += transcription
 
@@ -844,10 +844,10 @@ class Text(TextMessages):
                 input_features = inputs.input_features.to(self._device)
                 if lang == self.__lang_traslate[0]:
                     generated_ids = self._model_transcriptions.generate(
-                        inputs=input_features, forced_decoder_ids=self.__forced_decoder_ids
+                        input_features=input_features, forced_decoder_ids=self.__forced_decoder_ids
                     )
                 elif lang == self.__lang_traslate[1]:
-                    generated_ids = self._model_transcriptions.generate(inputs=input_features)
+                    generated_ids = self._model_transcriptions.generate(input_features=input_features)
                 transcription = self._processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
                 self.__text_pred += transcription
 
