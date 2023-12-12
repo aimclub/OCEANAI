@@ -85,7 +85,7 @@ def resnet_conv_block(input_tensor, kernel_size, filters, stage, block, strides=
     return x
 
 
-def RESNET50(include_top=True, weights="vggface", input_tensor=None, input_shape=None, pooling=None, classes=8631):
+def RESNET50(include_top=True, weights="vggface", input_shape=None, pooling=None, classes=8631):
     input_shape = _obtain_input_shape(
         input_shape,
         default_size=224,
@@ -95,13 +95,8 @@ def RESNET50(include_top=True, weights="vggface", input_tensor=None, input_shape
         weights=weights,
     )
 
-    if input_tensor is None:
-        img_input = Input(shape=input_shape)
-    else:
-        if not K.is_keras_tensor(input_tensor):
-            img_input = Input(tensor=input_tensor, shape=input_shape)
-        else:
-            img_input = input_tensor
+    img_input = Input(shape=input_shape)
+
     if K.image_data_format() == "channels_last":
         bn_axis = 3
     else:
@@ -143,11 +138,6 @@ def RESNET50(include_top=True, weights="vggface", input_tensor=None, input_shape
         elif pooling == "max":
             x = GlobalMaxPooling2D()(x)
 
-    if input_tensor is not None:
-        inputs = get_source_inputs(input_tensor)
-    else:
-        inputs = img_input
-
-    model = Model(inputs, x, name="vggface_resnet50")
+    model = Model(img_input, x, name="vggface_resnet50")
 
     return model

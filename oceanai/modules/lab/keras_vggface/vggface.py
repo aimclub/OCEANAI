@@ -10,7 +10,7 @@ from oceanai.modules.lab.keras_vggface.models import RESNET50
 
 
 def VGGFace(
-    include_top=True, model="vgg16", weights="vggface", input_tensor=None, input_shape=None, pooling=None, classes=None
+    include_top=True, model="vgg16", weights="vggface", input_shape=None, pooling=None, classes=None
 ):
     if weights not in {"vggface", None}:
         raise ValueError
@@ -23,7 +23,6 @@ def VGGFace(
 
     return RESNET50(
         include_top=include_top,
-        input_tensor=input_tensor,
         input_shape=input_shape,
         pooling=pooling,
         weights=weights,
