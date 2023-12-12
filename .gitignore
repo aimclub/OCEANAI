@@ -183,6 +183,7 @@ docs/source/user_guide/notebooks/*.mp4
 docs/source/user_guide/notebooks/*.mov
 docs/source/user_guide/notebooks/*.txt
 docs/source/user_guide/notebooks/Untitled.ipynb
+docs/source/user_guide/notebooks/*/*.mov
 docs/source/user_guide/notebooks/video_MuPTA/test/*.mov
 docs/source/user_guide/notebooks/video_MuPTA_2/test/*.mov
 docs/source/user_guide/notebooks/video_MuPTA/test/*.wav
