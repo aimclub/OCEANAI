@@ -167,10 +167,10 @@ class Text(TextMessages):
         super().__post_init__()  # Выполнение конструктора из суперкласса
 
         # Нейросетевая модель **tf.keras.Model** для получения оценок по экспертным признакам
-        self._text_model_hc: Optional[keras.models.Functional] = None
+        self._text_model_hc: Optional[keras.engine.functional.Functional] = None
         # Нейросетевая модель **tf.keras.Model** для получения оценок по нейросетевым признакам
-        self._text_model_nn: Optional[keras.models.Functional] = None
-        self._text_model_b5: Optional[keras.models.Functional] = None
+        self._text_model_nn: Optional[keras.engine.functional.Functional] = None
+        self._text_model_b5: Optional[keras.engine.functional.Functional] = None
 
         # Словарь для формирования экспертных признаков
         self._text_features: str = (
@@ -343,7 +343,7 @@ class Text(TextMessages):
     # ------------------------------------------------------------------------------------------------------------------
 
     @property
-    def text_model_hc_(self) -> Optional[keras.models.Functional]:
+    def text_model_hc_(self) -> Optional[keras.engine.functional.Functional]:
         """Получение нейросетевой модели **tf.keras.Model** для получения оценок по экспертным признакам
 
         Returns:
@@ -353,7 +353,7 @@ class Text(TextMessages):
         return self._text_model_hc
 
     @property
-    def text_model_nn_(self) -> Optional[keras.models.Functional]:
+    def text_model_nn_(self) -> Optional[keras.engine.functional.Functional]:
         """Получение нейросетевой модели **tf.keras.Model** для получения оценок по нейросетевым признакам
 
         Returns:
@@ -363,7 +363,7 @@ class Text(TextMessages):
         return self._text_model_nn
 
     @property
-    def text_model_b5_(self) -> Optional[keras.models.Functional]:
+    def text_model_b5_(self) -> Optional[keras.engine.functional.Functional]:
         """Получение нейросетевой модели **tf.keras.Model** для получения оценок персональных качеств
 
         Returns:
@@ -855,7 +855,7 @@ class Text(TextMessages):
 
     def __load_text_model_b5(
         self, show_summary: bool = False, out: bool = True
-    ) -> Optional[keras.models.Functional]:
+    ) -> Optional[keras.engine.functional.Functional]:
         """Формирование нейросетевой архитектуры модели для получения оценок персональных качеств
 
         .. note::
