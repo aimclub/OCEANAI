@@ -27,4 +27,4 @@ transformers >= 4.24.0
 sentencepiece >= 0.1.99
 torch == 1.12.1
 torchaudio == 0.12.1
-oceanai==1.0.0a6
+oceanai>=1.0.0a6
