@@ -127,11 +127,11 @@ class Prediction(PredictionMessages):
         super().__post_init__()  # Выполнение конструктора из суперкласса
 
         # Нейросетевые модели **tf.keras.Model** для получения результатов оценки персональных качеств
-        self._av_models_b5: Dict[str, Optional[keras.engine.functional.Functional]] = dict(
+        self._av_models_b5: Dict[str, Optional[tf.keras.Model]] = dict(
             zip(self._b5["en"], [None] * len(self._b5["en"]))
         )
 
-        self._avt_model_b5: Optional[keras.engine.functional.Functional] = None
+        self._avt_model_b5: Optional[tf.keras.Model] = None
 
         # ----------------------- Только для внутреннего использования внутри класса
 
@@ -150,7 +150,7 @@ class Prediction(PredictionMessages):
     # ------------------------------------------------------------------------------------------------------------------
 
     @property
-    def av_models_b5_(self) -> Dict[str, Optional[keras.engine.functional.Functional]]:
+    def av_models_b5_(self) -> Dict[str, Optional[tf.keras.Model]]:
         """Получение нейросетевых моделей **tf.keras.Model** для получения результатов оценки персональных качеств
 
         Returns:
@@ -186,11 +186,11 @@ class Prediction(PredictionMessages):
                 --- Время выполнения: 0.305 сек. ---
 
                 {
-                    'openness': <keras.engine.functional.Functional at 0x14eee5790>,
-                    'conscientiousness': <keras.engine.functional.Functional at 0x14f2d9d00>,
-                    'extraversion': <keras.engine.functional.Functional at 0x14f2fb190>,
-                    'agreeableness': <keras.engine.functional.Functional at 0x14f2c7fd0>,
-                    'neuroticism': <keras.engine.functional.Functional at 0x14f2ef940>
+                    'openness': <tf.keras.Model at 0x14eee5790>,
+                    'conscientiousness': <tf.keras.Model at 0x14f2d9d00>,
+                    'extraversion': <tf.keras.Model at 0x14f2fb190>,
+                    'agreeableness': <tf.keras.Model at 0x14f2c7fd0>,
+                    'neuroticism': <tf.keras.Model at 0x14f2ef940>
                 }
 
             :bdg-danger:`Ошибка` :bdg-light:`-- 1 --`
@@ -223,7 +223,7 @@ class Prediction(PredictionMessages):
         return self._av_models_b5
 
     @property
-    def avt_model_b5_(self) -> Optional[keras.engine.functional.Functional]:
+    def avt_model_b5_(self) -> Optional[tf.keras.Model]:
         """Получение нейросетевой модели **tf.keras.Model** для получения оценок персональных качеств
 
         Returns:
@@ -567,7 +567,7 @@ class Prediction(PredictionMessages):
 
     def __load_avt_model_b5(
         self, show_summary: bool = False, out: bool = True
-    ) -> Optional[keras.engine.functional.Functional]:
+    ) -> Optional[tf.keras.Model]:
         """Формирование нейросетевой архитектуры модели для получения оценок персональных качеств
 
         .. note::
@@ -578,7 +578,7 @@ class Prediction(PredictionMessages):
             out (bool): Отображение
 
         Returns:
-            Optional[keras.engine.functional.Functional]:
+            Optional[tf.keras.Model]:
                 **None** если неверные типы или значения аргументов, в обратном случае нейросетевая модель
                 **tf.keras.Model** для получения оценок персональных качеств
         """
@@ -628,7 +628,7 @@ class Prediction(PredictionMessages):
 
     def __load_av_model_b5(
         self, show_summary: bool = False, out: bool = True
-    ) -> Optional[keras.engine.functional.Functional]:
+    ) -> Optional[tf.keras.Model]:
         """Формирование нейросетевой архитектуры модели для получения результата оценки персонального качества
 
         .. note::
@@ -639,7 +639,7 @@ class Prediction(PredictionMessages):
             out (bool): Отображение
 
         Returns:
-            Optional[keras.engine.functional.Functional]:
+            Optional[tf.keras.Model]:
                 **None** если неверные типы или значения аргументов, в обратном случае нейросетевая модель
                 **tf.keras.Model** для получения результата оценки персонального качества
 
@@ -680,7 +680,7 @@ class Prediction(PredictionMessages):
                 Trainable params: 65
                 Non-trainable params: 0
                 _________________________________________________________________
-                <keras.engine.functional.Functional at 0x147892ee0>
+                <tf.keras.Model at 0x147892ee0>
 
             :bdg-danger:`Ошибка` :bdg-light:`-- 1 --`
 

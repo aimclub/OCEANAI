@@ -150,13 +150,13 @@ class Video(VideoMessages):
         super().__post_init__()  # Выполнение конструктора из суперкласса
 
         # Нейросетевая модель **tf.keras.Model** для получения оценок по экспертным признакам
-        self._video_model_hc: Optional[keras.engine.functional.Functional] = None
+        self._video_model_hc: Optional[tf.keras.Model] = None
         # Нейросетевая модель **tf.keras.Model** для получения нейросетевых признаков
-        self._video_model_deep_fe: Optional[keras.engine.functional.Functional] = None
+        self._video_model_deep_fe: Optional[tf.keras.Model] = None
         # Нейросетевая модель **tf.keras.Model** для получения оценок по нейросетевым признакам
-        self._video_model_nn: Optional[keras.engine.functional.Functional] = None
+        self._video_model_nn: Optional[tf.keras.Model] = None
         # Нейросетевые модели **tf.keras.Model** для получения результатов оценки персональных качеств
-        self._video_models_b5: Dict[str, Optional[keras.engine.functional.Functional]] = dict(
+        self._video_models_b5: Dict[str, Optional[tf.keras.Model]] = dict(
             zip(self._b5["en"], [None] * len(self._b5["en"]))
         )
 
@@ -332,11 +332,11 @@ class Video(VideoMessages):
     # ------------------------------------------------------------------------------------------------------------------
 
     @property
-    def video_model_hc_(self) -> Optional[keras.engine.functional.Functional]:
+    def video_model_hc_(self) -> Optional[tf.keras.Model]:
         """Получение нейросетевой модели **tf.keras.Model** для получения оценок по экспертным признакам
 
         Returns:
-            Optional[keras.engine.functional.Functional]: Нейросетевая модель **tf.keras.Model** или None
+            Optional[tf.keras.Model]: Нейросетевая модель **tf.keras.Model** или None
 
         .. dropdown:: Примеры
             :class-body: sd-pr-5
@@ -367,7 +367,7 @@ class Video(VideoMessages):
 
                 --- Время выполнения: 1.112 сек. ---
 
-                <keras.engine.functional.Functional at 0x1434eb1f0>
+                <tf.keras.Model at 0x1434eb1f0>
 
             :bdg-danger:`Ошибка` :bdg-light:`-- 1 --`
 
@@ -392,11 +392,11 @@ class Video(VideoMessages):
         return self._video_model_hc
 
     @property
-    def video_model_nn_(self) -> Optional[keras.engine.functional.Functional]:
+    def video_model_nn_(self) -> Optional[tf.keras.Model]:
         """Получение нейросетевой модели **tf.keras.Model** для получения оценок по нейросетевым признакам
 
         Returns:
-            Optional[keras.engine.functional.Functional]: Нейросетевая модель **tf.keras.Model** или None
+            Optional[tf.keras.Model]: Нейросетевая модель **tf.keras.Model** или None
 
         .. dropdown:: Примеры
             :class-body: sd-pr-5
@@ -427,7 +427,7 @@ class Video(VideoMessages):
 
                 --- Время выполнения: 1.986 сек. ---
 
-                <keras.engine.functional.Functional at 0x13d5295b0>
+                <tf.keras.Model at 0x13d5295b0>
 
             :bdg-danger:`Ошибка` :bdg-light:`-- 1 --`
 
@@ -452,11 +452,11 @@ class Video(VideoMessages):
         return self._video_model_nn
 
     @property
-    def video_model_deep_fe_(self) -> Optional[keras.engine.functional.Functional]:
+    def video_model_deep_fe_(self) -> Optional[tf.keras.Model]:
         """Получение нейросетевой модели **tf.keras.Model** для получения нейросетевых признаков
 
         Returns:
-            Optional[keras.engine.functional.Functional]: Нейросетевая модель **tf.keras.Model** или None
+            Optional[tf.keras.Model]: Нейросетевая модель **tf.keras.Model** или None
 
         .. dropdown:: Примеры
             :class-body: sd-pr-5
@@ -487,7 +487,7 @@ class Video(VideoMessages):
 
                 --- Время выполнения: 1.468 сек. ---
 
-                <keras.engine.functional.Functional at 0x14e138100>
+                <tf.keras.Model at 0x14e138100>
 
             :bdg-danger:`Ошибка` :bdg-light:`-- 1 --`
 
@@ -512,7 +512,7 @@ class Video(VideoMessages):
         return self._video_model_deep_fe
 
     @property
-    def video_models_b5_(self) -> Dict[str, Optional[keras.engine.functional.Functional]]:
+    def video_models_b5_(self) -> Dict[str, Optional[tf.keras.Model]]:
         """Получение нейросетевых моделей **tf.keras.Model** для получения результатов оценки персональных качеств
 
         Returns:
@@ -548,11 +548,11 @@ class Video(VideoMessages):
                 --- Время выполнения: 0.07 сек. ---
 
                 {
-                    'openness': <keras.engine.functional.Functional at 0x1481e03a0>,
-                    'conscientiousness': <keras.engine.functional.Functional at 0x147d13520>,
-                    'extraversion': <keras.engine.functional.Functional at 0x1481edfa0>,
-                    'agreeableness': <keras.engine.functional.Functional at 0x1481cfc40>,
-                    'neuroticism': <keras.engine.functional.Functional at 0x1481cffd0>
+                    'openness': <tf.keras.Model at 0x1481e03a0>,
+                    'conscientiousness': <tf.keras.Model at 0x147d13520>,
+                    'extraversion': <tf.keras.Model at 0x1481edfa0>,
+                    'agreeableness': <tf.keras.Model at 0x1481cfc40>,
+                    'neuroticism': <tf.keras.Model at 0x1481cffd0>
                 }
 
             :bdg-danger:`Ошибка` :bdg-light:`-- 1 --`
@@ -1192,7 +1192,7 @@ class Video(VideoMessages):
 
     def __load_video_model_b5(
         self, show_summary: bool = False, out: bool = True
-    ) -> Optional[keras.engine.functional.Functional]:
+    ) -> Optional[tf.keras.Model]:
         """Формирование нейросетевой архитектуры модели для получения результата оценки персонального качества
 
         .. note::
@@ -1203,7 +1203,7 @@ class Video(VideoMessages):
             out (bool): Отображение
 
         Returns:
-            Optional[keras.engine.functional.Functional]:
+            Optional[tf.keras.Model]:
                 **None** если неверные типы или значения аргументов, в обратном случае нейросетевая модель
                 **tf.keras.Model** для получения результата оценки персонального качества
 
@@ -1244,7 +1244,7 @@ class Video(VideoMessages):
                 Trainable params: 33
                 Non-trainable params: 0
                 _________________________________________________________________
-                <keras.engine.functional.Functional at 0x13d442940>
+                <tf.keras.Model at 0x13d442940>
 
             :bdg-danger:`Ошибка` :bdg-light:`-- 1 --`
 

@@ -167,10 +167,10 @@ class Text(TextMessages):
         super().__post_init__()  # Выполнение конструктора из суперкласса
 
         # Нейросетевая модель **tf.keras.Model** для получения оценок по экспертным признакам
-        self._text_model_hc: Optional[keras.engine.functional.Functional] = None
+        self._text_model_hc: Optional[tf.keras.Model] = None
         # Нейросетевая модель **tf.keras.Model** для получения оценок по нейросетевым признакам
-        self._text_model_nn: Optional[keras.engine.functional.Functional] = None
-        self._text_model_b5: Optional[keras.engine.functional.Functional] = None
+        self._text_model_nn: Optional[tf.keras.Model] = None
+        self._text_model_b5: Optional[tf.keras.Model] = None
 
         # Словарь для формирования экспертных признаков
         self._text_features: str = (
@@ -343,31 +343,31 @@ class Text(TextMessages):
     # ------------------------------------------------------------------------------------------------------------------
 
     @property
-    def text_model_hc_(self) -> Optional[keras.engine.functional.Functional]:
+    def text_model_hc_(self) -> Optional[tf.keras.Model]:
         """Получение нейросетевой модели **tf.keras.Model** для получения оценок по экспертным признакам
 
         Returns:
-            Optional[keras.engine.functional.Functional]: Нейросетевая модель **tf.keras.Model** или None
+            Optional[tf.keras.Model]: Нейросетевая модель **tf.keras.Model** или None
         """
 
         return self._text_model_hc
 
     @property
-    def text_model_nn_(self) -> Optional[keras.engine.functional.Functional]:
+    def text_model_nn_(self) -> Optional[tf.keras.Model]:
         """Получение нейросетевой модели **tf.keras.Model** для получения оценок по нейросетевым признакам
 
         Returns:
-            Optional[keras.engine.functional.Functional]: Нейросетевая модель **tf.keras.Model** или None
+            Optional[tf.keras.Model]: Нейросетевая модель **tf.keras.Model** или None
         """
 
         return self._text_model_nn
 
     @property
-    def text_model_b5_(self) -> Optional[keras.engine.functional.Functional]:
+    def text_model_b5_(self) -> Optional[tf.keras.Model]:
         """Получение нейросетевой модели **tf.keras.Model** для получения оценок персональных качеств
 
         Returns:
-            Optional[keras.engine.functional.Functional]: Нейросетевая модель **tf.keras.Model** или None
+            Optional[tf.keras.Model]: Нейросетевая модель **tf.keras.Model** или None
         """
 
         return self._text_model_b5
@@ -855,7 +855,7 @@ class Text(TextMessages):
 
     def __load_text_model_b5(
         self, show_summary: bool = False, out: bool = True
-    ) -> Optional[keras.engine.functional.Functional]:
+    ) -> Optional[tf.keras.Model]:
         """Формирование нейросетевой архитектуры модели для получения оценок персональных качеств
 
         .. note::
@@ -866,7 +866,7 @@ class Text(TextMessages):
             out (bool): Отображение
 
         Returns:
-            Optional[keras.engine.functional.Functional]:
+            Optional[tf.keras.Model]:
                 **None** если неверные типы или значения аргументов, в обратном случае нейросетевая модель
                 **tf.keras.Model** для получения оценок персональных качеств
         """
