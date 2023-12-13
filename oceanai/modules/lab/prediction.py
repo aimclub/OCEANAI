@@ -605,9 +605,9 @@ class Prediction(PredictionMessages):
             i_hc_v_1_n = tf.keras.layers.LayerNormalization(axis=1, name="ln_hc_v")(i_hc_v_1)
             i_nn_v_1_n = tf.keras.layers.LayerNormalization(axis=1, name="ln_nn_v")(i_nn_v_1)
 
-            gf_ta = GFL(output_dim=64, kernel_initializer="truncated_normal", name="gata")
-            gf_tv = GFL(output_dim=64, kernel_initializer="truncated_normal", name="gatv")
-            gf_av = GFL(output_dim=64, kernel_initializer="truncated_normal", name="gaav")
+            gf_ta = GFL(output_dim=64, kernel_initializer=tf.keras.initializers.TruncatedNormal(seed=42), name="gata")
+            gf_tv = GFL(output_dim=64, kernel_initializer=tf.keras.initializers.TruncatedNormal(seed=42), name="gatv")
+            gf_av = GFL(output_dim=64, kernel_initializer=tf.keras.initializers.TruncatedNormal(seed=42), name="gaav")
 
             gf_ta_1 = gf_ta([i_hc_t_1_n, i_hc_a_1_n, i_nn_t_1_n, i_nn_a_1_n])
             gf_tv_1 = gf_tv([i_hc_t_1_n, i_hc_v_1_n, i_nn_t_1_n, i_nn_v_1_n])
