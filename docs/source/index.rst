@@ -24,6 +24,13 @@
 
 -----
 
+.. figure:: _static/Pipeline_OCEANAI_ru.svg
+   :scale: 80 %
+   :align: center
+   :alt: Функциональная схема библиотеки OCEAN-AI
+
+-----
+
 `OCEANAI <https://oceanai.readthedocs.io/ru/latest/>`_ включает четыре основных алгоритма:
 
 #. Алгоритм анализа аудиоинформации (ААИ).
