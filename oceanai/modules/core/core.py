@@ -3779,6 +3779,9 @@ class Core(CoreMessages):
 
                     self._df_files_priority_skill = pd.DataFrame(data=new_list,columns=self.keys_dataset_+skills_name)
                     self._df_files_priority_skill = self._df_files_priority_skill.sort_values(by=skills_name, ascending=False)
+                    self._df_files_priority_skill.index.name = 'ID'
+                    self._df_files_priority_skill.index += 1
+                    self._df_files_priority_skill.index = self._df_files_priority_skill.index.map(str)
 
                 except Exception:
                     self._other_error(self._unknown_err, out=out)
