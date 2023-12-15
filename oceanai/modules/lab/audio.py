@@ -340,7 +340,7 @@ class Audio(AudioMessages):
                     'conscientiousness': <tf.keras.Model at 0x147d13520>,
                     'extraversion': <tf.keras.Model at 0x1481edfa0>,
                     'agreeableness': <tf.keras.Model at 0x1481cfc40>,
-                    'neuroticism': <tf.keras.Model at 0x1481cffd0>
+                    'non_neuroticism': <tf.keras.Model at 0x1481cffd0>
                 }
 
             :bdg-danger:`Ошибка` :bdg-light:`-- 1 --`
@@ -366,7 +366,7 @@ class Audio(AudioMessages):
                     'conscientiousness': None,
                     'extraversion': None,
                     'agreeableness': None,
-                    'neuroticism': None
+                    'non_neuroticism': None
                 }
         """
 
@@ -2022,7 +2022,7 @@ class Audio(AudioMessages):
         url_conscientiousness: str,
         url_extraversion: str,
         url_agreeableness: str,
-        url_neuroticism: str,
+        url_non_neuroticism: str,
         force_reload: bool = True,
         out: bool = True,
         runtime: bool = True,
@@ -2035,7 +2035,7 @@ class Audio(AudioMessages):
             url_conscientiousness (str): Полный путь к файлу с весами нейросетевой модели (добросовестность)
             url_extraversion (str): Полный путь к файлу с весами нейросетевой модели (экстраверсия)
             url_agreeableness (str): Полный путь к файлу с весами нейросетевой модели (доброжелательность)
-            url_neuroticism (str): Полный путь к файлу с весами нейросетевой модели (нейротизм)
+            url_non_neuroticism (str): Полный путь к файлу с весами нейросетевой модели (эмоциональная стабильность)
             force_reload (bool): Принудительная загрузка файлов с весами нейросетевых моделей из сети
             out (bool): Отображение
             runtime (bool): Подсчет времени выполнения
@@ -2086,14 +2086,14 @@ class Audio(AudioMessages):
                 url_conscientiousness = audio.weights_for_big5_['audio']['b5']['conscientiousness']['sberdisk']
                 url_extraversion = audio.weights_for_big5_['audio']['b5']['extraversion']['sberdisk']
                 url_agreeableness = audio.weights_for_big5_['audio']['b5']['agreeableness']['sberdisk']
-                url_neuroticism = audio.weights_for_big5_['audio']['b5']['neuroticism']['sberdisk']
+                url_non_neuroticism = audio.weights_for_big5_['audio']['b5']['non_neuroticism']['sberdisk']
 
                 audio.load_audio_models_weights_b5(
                     url_openness = url_openness,
                     url_conscientiousness = url_conscientiousness,
                     url_extraversion = url_extraversion,
                     url_agreeableness = url_agreeableness,
-                    url_neuroticism = url_neuroticism,
+                    url_non_neuroticism = url_non_neuroticism,
                     force_reload = True,
                     out = True,
                     runtime = True,
@@ -2115,7 +2115,7 @@ class Audio(AudioMessages):
 
                 [2022-10-18 23:08:38] Загрузка файла "weights_2022-06-15_16-32-51.h5" (100.0%) ... Доброжелательность
 
-                [2022-10-18 23:08:39] Загрузка файла "weights_2022-06-15_16-37-46.h5" (100.0%) ... Нейротизм
+                [2022-10-18 23:08:39] Загрузка файла "weights_2022-06-15_16-37-46.h5" (100.0%) ... Эмоциональная стабильность
 
                 --- Время выполнения: 1.611 сек. ---
 
@@ -2139,14 +2139,14 @@ class Audio(AudioMessages):
                 url_conscientiousness = audio.weights_for_big5_['audio']['b5']['conscientiousness']['sberdisk']
                 url_extraversion = audio.weights_for_big5_['audio']['b5']['extraversion']['sberdisk']
                 url_agreeableness = audio.weights_for_big5_['audio']['b5']['agreeableness']['sberdisk']
-                url_neuroticism = audio.weights_for_big5_['audio']['b5']['neuroticism']['sberdisk']
+                url_non_neuroticism = audio.weights_for_big5_['audio']['b5']['non_neuroticism']['sberdisk']
 
                 audio.load_audio_models_weights_b5(
                     url_openness = url_openness,
                     url_conscientiousness = url_conscientiousness,
                     url_extraversion = url_extraversion,
                     url_agreeableness = url_agreeableness,
-                    url_neuroticism = url_neuroticism,
+                    url_non_neuroticism = url_non_neuroticism,
                     force_reload = True,
                     out = True,
                     runtime = True,
@@ -2203,7 +2203,7 @@ class Audio(AudioMessages):
                 [2022-10-18 23:09:42] Загрузка файла "weights_2022-06-15_16-37-46.h5" (100.0%) ...
 
                 [2022-10-18 23:09:42] Что-то пошло не так ... не удалось загрузить веса нейросетевой модели ...
-                Нейротизм
+                Эмоциональная стабильность
 
                     Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/audio.py
                     Линия: 1764
@@ -2228,8 +2228,8 @@ class Audio(AudioMessages):
                 or not url_extraversion
                 or type(url_agreeableness) is not str
                 or not url_agreeableness
-                or type(url_neuroticism) is not str
-                or not url_neuroticism
+                or type(url_non_neuroticism) is not str
+                or not url_non_neuroticism
                 or type(force_reload) is not bool
                 or type(out) is not bool
                 or type(runtime) is not bool
@@ -2260,7 +2260,7 @@ class Audio(AudioMessages):
                     (url_conscientiousness, self._b5["ru"][1]),
                     (url_extraversion, self._b5["ru"][2]),
                     (url_agreeableness, self._b5["ru"][3]),
-                    (url_neuroticism, self._b5["ru"][4]),
+                    (url_non_neuroticism, self._b5["ru"][4]),
                 ]
             ):
                 sections = urlparse(url[0])  # Парсинг URL адреса

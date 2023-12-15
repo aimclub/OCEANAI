@@ -27,7 +27,7 @@ _b5.chunk_size_ = CHUNK_SIZE
 
 _b5.path_to_dataset_ = PATH_TO_DIR
 _b5.ignore_dirs_ = []
-_b5.keys_dataset_ = ["Path", "Openness", "Conscientiousness", "Extraversion", "Agreeableness", "Neuroticism"]
+_b5.keys_dataset_ = ["Path", "Openness", "Conscientiousness", "Extraversion", "Agreeableness", "Non-Neuroticism"]
 _b5.ext_ = [".mp4"]
 _b5.path_to_logs_ = "./logs"
 
@@ -99,13 +99,13 @@ def test_get_audio_union_predictions():
     url_conscientiousness = _b5.weights_for_big5_["audio"][corpus]["b5"]["conscientiousness"]["sberdisk"]
     url_extraversion = _b5.weights_for_big5_["audio"][corpus]["b5"]["extraversion"]["sberdisk"]
     url_agreeableness = _b5.weights_for_big5_["audio"][corpus]["b5"]["agreeableness"]["sberdisk"]
-    url_neuroticism = _b5.weights_for_big5_["audio"][corpus]["b5"]["neuroticism"]["sberdisk"]
+    url_non_neuroticism = _b5.weights_for_big5_["audio"][corpus]["b5"]["non_neuroticism"]["sberdisk"]
     _b5.load_audio_models_weights_b5(
         url_openness=url_openness,
         url_conscientiousness=url_conscientiousness,
         url_extraversion=url_extraversion,
         url_agreeableness=url_agreeableness,
-        url_neuroticism=url_neuroticism,
+        url_non_neuroticism=url_non_neuroticism,
         out=False,
     )
 
@@ -135,13 +135,13 @@ def test_get_video_union_predictions():
     url_conscientiousness = _b5.weights_for_big5_["video"][corpus]["b5"]["conscientiousness"]["sberdisk"]
     url_extraversion = _b5.weights_for_big5_["video"][corpus]["b5"]["extraversion"]["sberdisk"]
     url_agreeableness = _b5.weights_for_big5_["video"][corpus]["b5"]["agreeableness"]["sberdisk"]
-    url_neuroticism = _b5.weights_for_big5_["video"][corpus]["b5"]["neuroticism"]["sberdisk"]
+    url_non_neuroticism = _b5.weights_for_big5_["video"][corpus]["b5"]["non_neuroticism"]["sberdisk"]
     _b5.load_video_models_weights_b5(
         url_openness=url_openness,
         url_conscientiousness=url_conscientiousness,
         url_extraversion=url_extraversion,
         url_agreeableness=url_agreeableness,
-        url_neuroticism=url_neuroticism,
+        url_non_neuroticism=url_non_neuroticism,
         out=False,
     )
 
@@ -204,13 +204,13 @@ def test_get_av_union_predictions():
     url_conscientiousness = _b5.weights_for_big5_["av"][corpus]["b5"]["conscientiousness"]["sberdisk"]
     url_extraversion = _b5.weights_for_big5_["av"][corpus]["b5"]["extraversion"]["sberdisk"]
     url_agreeableness = _b5.weights_for_big5_["av"][corpus]["b5"]["agreeableness"]["sberdisk"]
-    url_neuroticism = _b5.weights_for_big5_["av"][corpus]["b5"]["neuroticism"]["sberdisk"]
+    url_non_neuroticism = _b5.weights_for_big5_["av"][corpus]["b5"]["non_neuroticism"]["sberdisk"]
     _b5.load_av_models_weights_b5(
         url_openness=url_openness,
         url_conscientiousness=url_conscientiousness,
         url_extraversion=url_extraversion,
         url_agreeableness=url_agreeableness,
-        url_neuroticism=url_neuroticism,
+        url_non_neuroticism=url_non_neuroticism,
         out=False,
     )
 

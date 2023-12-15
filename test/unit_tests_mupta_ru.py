@@ -27,7 +27,7 @@ _b5.chunk_size_ = CHUNK_SIZE
 
 _b5.path_to_dataset_ = PATH_TO_DIR
 _b5.ignore_dirs_ = []
-_b5.keys_dataset_ = ["Path", "Openness", "Conscientiousness", "Extraversion", "Agreeableness", "Neuroticism"]
+_b5.keys_dataset_ = ["Path", "Openness", "Conscientiousness", "Extraversion", "Agreeableness", "Non-Neuroticism"]
 _b5.ext_ = [".mov"]
 _b5.path_to_logs_ = "./logs"
 

@@ -20,8 +20,6 @@ from keras.layers import (
     MaxPooling2D,
     BatchNormalization,
     AveragePooling2D,
-    Reshape,
-    multiply,
 )
 from keras.models import Model
 from keras_applications.imagenet_utils import _obtain_input_shape

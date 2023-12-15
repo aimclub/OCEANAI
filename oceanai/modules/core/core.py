@@ -201,13 +201,13 @@ class Core(CoreMessages):
 
         # Персональные качества личности человека (Порядок только такой)
         self._b5: Dict[str, Tuple[str, ...]] = {
-            "en": ("openness", "conscientiousness", "extraversion", "agreeableness", "neuroticism"),
+            "en": ("openness", "conscientiousness", "extraversion", "agreeableness", "non-neuroticism"),
             "ru": (
                 self._("открытость опыту"),
                 self._("добросовестность"),
                 self._("экстраверсия"),
                 self._("доброжелательность"),
-                self._("нейротизм"),
+                self._("эмоциональная стабильность"),
             ),
         }
 
@@ -234,7 +234,7 @@ class Core(CoreMessages):
                         "agreeableness": {
                             "sberdisk": "https://download.sberdisk.ru/download/file/405034397?token=52ZPHMjb4CFmdYa&filename=weights_2022-06-15_16-32-51.h5",
                         },
-                        "neuroticism": {
+                        "non_neuroticism": {
                             "sberdisk": "https://download.sberdisk.ru/download/file/405035156?token=q8CZJ99rZqcNxkM&filename=weights_2022-06-15_16-37-46.h5",
                         },
                     },
@@ -272,7 +272,7 @@ class Core(CoreMessages):
                         "agreeableness": {
                             "sberdisk": "https://download.sberdisk.ru/download/file/415126845?token=joN7TMHk59Gffsf&filename=weights_2022-06-15_17-02-03.h5",
                         },
-                        "neuroticism": {
+                        "non_neuroticism": {
                             "sberdisk": "https://download.sberdisk.ru/download/file/415127032?token=NEBSsE7mjyjen3o&filename=weights_2022-06-15_17-06-15.h5",
                         },
                     },
@@ -328,7 +328,7 @@ class Core(CoreMessages):
                         "agreeableness": {
                             "sberdisk": "https://download.sberdisk.ru/download/file/425515346?token=gFjvtM2HIabtsvc&filename=weights_2022-08-28_11-25-11.h5",
                         },
-                        "neuroticism": {
+                        "non_neuroticism": {
                             "sberdisk": "https://download.sberdisk.ru/download/file/425515375?token=pPpzOQC9z6WMzNt&filename=weights_2022-06-14_21-44-09.h5",
                         },
                     },
@@ -353,8 +353,8 @@ class Core(CoreMessages):
 
         # Верные предсказания для подсчета точности
         self._true_traits: Dict[str, str] = {
-            "fi": {"sberdisk": "https://download.sberdisk.ru/download/file/410305241?token=TFePK6w5CW6ADnq&filename=data_true_traits.csv"},
-            "mupta": {"sberdisk": "https://download.sberdisk.ru/download/file/478077400?token=sgDo8F710zGoOZy&filename=data_true_traits_mupta.csv"}
+            "fi": {"sberdisk": "https://download.sberdisk.ru/download/file/478675810?token=anU8umMha1GiWPQ&filename=data_true_traits_fi.csv"},
+            "mupta": {"sberdisk": "https://download.sberdisk.ru/download/file/478675811?token=hUMsrUSKjSRrV5e&filename=data_true_traits_mupta.csv"}
         }
 
         self._df_files: pd.DataFrame = pd.DataFrame()  # DataFrame с данными
@@ -363,6 +363,7 @@ class Core(CoreMessages):
         self._df_files_priority: pd.DataFrame = pd.DataFrame()
         # DataFrame с ранжированными коллегами на основе данных
         self._df_files_colleague: pd.DataFrame = pd.DataFrame()
+        self._df_files_priority_skill: pd.DataFrame = pd.DataFrame()
         self._dict_of_files: Dict[str, List[Union[int, str, float]]] = {}  # Словарь для DataFrame с данными
 
         self._df_accuracy: pd.DataFrame = pd.DataFrame()  # DataFrame с результатами вычисления точности
@@ -717,6 +718,16 @@ class Core(CoreMessages):
         return self._df_files_colleague
 
     @property
+    def df_files_priority_skill_(self) -> pd.DataFrame:
+        """Получение DataFrame c ранжированными коллегами на основе данных
+
+        Returns:
+            pd.DataFrame: **DataFrame** c данными
+        """
+
+        return self._df_files_priority_skill
+
+    @property
     def df_accuracy_(self) -> pd.DataFrame:
         """Получение DataFrame с результатами вычисления точности
 
@@ -793,7 +804,7 @@ class Core(CoreMessages):
                             'agreeableness': {
                                 'sberdisk': 'https://download.sberdisk.ru/download/file/405034397?token=52ZPHMjb4CFmdYa&filename=weights_2022-06-15_16-32-51.h5',
                             },
-                            'neuroticism': {
+                            'non_neuroticism': {
                                 'sberdisk': 'https://download.sberdisk.ru/download/file/405035156?token=q8CZJ99rZqcNxkM&filename=weights_2022-06-15_16-37-46.h5',
                             },
                         },
@@ -821,7 +832,7 @@ class Core(CoreMessages):
                             'agreeableness': {
                                 'sberdisk': 'https://download.sberdisk.ru/download/file/415126845?token=joN7TMHk59Gffsf&filename=weights_2022-06-15_17-02-03.h5',
                             },
-                            'neuroticism': {
+                            'non_neuroticism': {
                                 'sberdisk': 'https://download.sberdisk.ru/download/file/415127032?token=NEBSsE7mjyjen3o&filename=weights_2022-06-15_17-06-15.h5',
                             }
                         }
@@ -3392,10 +3403,10 @@ class Core(CoreMessages):
         weigths_conscientiousness: int = 0,
         weigths_extraversion: int = 0,
         weigths_agreeableness: int = 0,
-        weigths_neuroticism: int = 0,
+        weigths_non_neuroticism: int = 0,
         out: bool = True,
     ) -> pd.DataFrame:
-        """Ранжирование кандидатов
+        """Ранжирование кандидатов по профессиональным обязанностям
 
         .. note::
             protected (защищенный метод)
@@ -3405,7 +3416,7 @@ class Core(CoreMessages):
             weigths_conscientiousness (int): Вес для ранжирования персонального качества (добросовестность)
             weigths_extraversion (int): Вес для ранжирования персонального качества (экстраверсия)
             weigths_agreeableness (int): Вес для ранжирования персонального качества (доброжелательность)
-            weigths_neuroticism (int): Вес для ранжирования персонального качества (нейротизм)
+            weigths_non_neuroticism (int): Вес для ранжирования персонального качества (эмоциональная стабильность)
             out (bool): Отображение
 
         Returns:
@@ -3426,8 +3437,8 @@ class Core(CoreMessages):
                 or not (0 <= weigths_extraversion <= 100)
                 or type(weigths_agreeableness) is not int
                 or not (0 <= weigths_agreeableness <= 100)
-                or type(weigths_neuroticism) is not int
-                or not (0 <= weigths_neuroticism <= 100)
+                or type(weigths_non_neuroticism) is not int
+                or not (0 <= weigths_non_neuroticism <= 100)
                 or type(out) is not bool
             ):
                 raise TypeError
@@ -3443,7 +3454,7 @@ class Core(CoreMessages):
                             weigths_conscientiousness,
                             weigths_extraversion,
                             weigths_agreeableness,
-                            weigths_neuroticism,
+                            weigths_non_neuroticism,
                         ]
                     )
                     != 100
@@ -3469,12 +3480,7 @@ class Core(CoreMessages):
                     try:
                         self._df_files_ranking = self._df_files.copy()
 
-                        df_files_ranking_neuroticism = 1 - self._df_files_ranking[self.keys_dataset_[5]]
-                        df_files_ranking = pd.concat(
-                            [self._df_files_ranking[self.keys_dataset_[1:5]], df_files_ranking_neuroticism],
-                            axis=1,
-                            ignore_index=False,
-                        )
+                        df_files_ranking = self._df_files_ranking[self.keys_dataset_[1:]]
 
                         traits_sum = np.sum(
                             df_files_ranking.values
@@ -3483,7 +3489,7 @@ class Core(CoreMessages):
                                 weigths_conscientiousness,
                                 weigths_extraversion,
                                 weigths_agreeableness,
-                                weigths_neuroticism,
+                                weigths_non_neuroticism,
                             ],
                             axis=1,
                         )
@@ -3566,22 +3572,17 @@ class Core(CoreMessages):
                     return self._df_files_priority
                 else:
                     try:
+                        
+                        self._df_files_priority = self._df_files.copy()
+                        df_files_priority = self._df_files.copy()
+
                         name_priority = correlation_coefficients.columns[1:]
 
-                        self._df_files_priority = self._df_files.copy()
-
-                        df_files_priority_neuroticism = 1 - self._df_files_priority[self.keys_dataset_[5]]
-                        df_files_priority = pd.concat(
-                            [self._df_files_priority[self.keys_dataset_[:5]], df_files_priority_neuroticism],
-                            axis=1,
-                            ignore_index=False,
-                        )
-
                         name_traits = correlation_coefficients[col_name_ocean].values
-                        df_files_priority = df_files_priority[[self.keys_dataset_[0]] + name_traits.tolist()]
 
                         for path in range(len(df_files_priority)):
                             curr_traits = df_files_priority.iloc[path].values[1:]
+
                             curr_traits = np.where(curr_traits < threshold, -1 * curr_traits, curr_traits).reshape(5, 1)
 
                             curr_traits_matrix = curr_traits * matrix
@@ -3623,7 +3624,7 @@ class Core(CoreMessages):
         equal_coefficients: float = 0.5,
         out: bool = True,
     ) -> pd.DataFrame:
-        """Ранжирование предпочтений
+        """Поиск подходящего коллеги
 
         .. note::
             protected (защищенный метод)
@@ -3636,11 +3637,11 @@ class Core(CoreMessages):
             out (bool): Отображение
 
         Returns:
-             pd.DataFrame: **DataFrame** c ранжированными предпочтениями
+             pd.DataFrame: **DataFrame** c ранжированными коллегами
         """
 
         # Сброс
-        self._df_files_colleague = pd.DataFrame()  # Пустой DataFrame с ранжированными предпочтениями
+        self._df_files_colleague = pd.DataFrame()  # Пустой DataFrame с ранжированными коллегами
 
         try:
             # Проверка аргументов
@@ -3710,6 +3711,80 @@ class Core(CoreMessages):
                     return self._df_files_colleague
                 else:
                     return self._df_files_colleague
+                
+    def _priority_skill_calculation(
+        self,
+        correlation_coefficients: Optional[pd.DataFrame] = None,
+        threshold: float = 0.55,
+        out: bool = True,
+    ) -> pd.DataFrame:
+        """Ранжирование кандидатов по профессиональным навыкам
+
+        .. note::
+            protected (защищенный метод)
+
+        Args:
+            correlation_coefficients (pd.DataFrame): **DataFrame** c коэффициентами корреляции
+            threshold (float): Порог для оценок полярности качеств (например, интроверт < 0.55, экстраверт > 0.55)
+            out (bool): Отображение
+
+        Returns:
+             pd.DataFrame: **DataFrame** c ранжированными кандидатами
+        """
+
+        # Сброс
+        self._df_files_priority_skill = pd.DataFrame()  # Пустой DataFrame с ранжированными кандидатами
+
+        try:
+            # Проверка аргументов
+            if (
+                type(correlation_coefficients) is not pd.DataFrame
+                or type(threshold) is not float
+                or not (0.0 <= threshold <= 1.0)
+                or type(out) is not bool
+            ):
+                raise TypeError
+        except TypeError:
+            self._inv_args(__class__.__name__, self._priority_skill_calculation.__name__, out=out)
+            return self._df_files_priority_skill
+        else:
+            try:
+                if len(self._df_files) == 0:
+                    raise TypeError
+            except TypeError:
+                self._other_error(self._dataframe_empty, out=out)
+                return self._df_files_priority_skill
+            except Exception:
+                self._other_error(self._unknown_err, out=out)
+                return self._df_files_priority_skill
+            else:
+                try:
+                    self._df_files_priority_skill = self._df_files.copy()
+                    skills_name = correlation_coefficients.columns[2:].tolist()
+                    score_level=['high', 'low']
+                    traits = self.keys_dataset_[1:]
+                    pred_list = self._df_files_priority_skill[traits].values.tolist()
+                    new_list = []
+
+                    for index_person, curr_scores in enumerate(pred_list):
+                        result = np.zeros((len(traits),len(skills_name)))
+
+                        for index_traits, score in enumerate(curr_scores):
+                            trait = traits[index_traits]
+                            category = score_level[0] if score >= threshold else score_level[1]
+                            coefficient = correlation_coefficients[correlation_coefficients.Trait==trait].values[score_level.index(category)][2:]
+                            result[index_traits] = score*coefficient
+
+                        new_list.append(np.hstack((self._df_files_priority_skill.iloc[index_person], np.mean(result, axis=0))))
+
+                    self._df_files_priority_skill = pd.DataFrame(data=new_list,columns=self.keys_dataset_+skills_name)
+                    self._df_files_priority_skill = self._df_files_priority_skill.sort_values(by=skills_name, ascending=False)
+
+                except Exception:
+                    self._other_error(self._unknown_err, out=out)
+                    return self._df_files_priority_skill
+                else:
+                    return self._df_files_priority_skill
 
     # ------------------------------------------------------------------------------------------------------------------
     # Внешние методы
