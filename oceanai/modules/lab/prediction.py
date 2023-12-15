@@ -190,7 +190,7 @@ class Prediction(PredictionMessages):
                     'conscientiousness': <tf.keras.Model at 0x14f2d9d00>,
                     'extraversion': <tf.keras.Model at 0x14f2fb190>,
                     'agreeableness': <tf.keras.Model at 0x14f2c7fd0>,
-                    'neuroticism': <tf.keras.Model at 0x14f2ef940>
+                    'non_neuroticism': <tf.keras.Model at 0x14f2ef940>
                 }
 
             :bdg-danger:`Ошибка` :bdg-light:`-- 1 --`
@@ -216,7 +216,7 @@ class Prediction(PredictionMessages):
                     'conscientiousness': None,
                     'extraversion': None,
                     'agreeableness': None,
-                    'neuroticism': None
+                    'non_neuroticism': None
                 }
         """
 
@@ -908,7 +908,7 @@ class Prediction(PredictionMessages):
         url_conscientiousness: str,
         url_extraversion: str,
         url_agreeableness: str,
-        url_neuroticism: str,
+        url_non_neuroticism: str,
         force_reload: bool = True,
         out: bool = True,
         runtime: bool = True,
@@ -921,7 +921,7 @@ class Prediction(PredictionMessages):
             url_conscientiousness (str): Полный путь к файлу с весами нейросетевой модели (добросовестность)
             url_extraversion (str): Полный путь к файлу с весами нейросетевой модели (экстраверсия)
             url_agreeableness (str): Полный путь к файлу с весами нейросетевой модели (доброжелательность)
-            url_neuroticism (str): Полный путь к файлу с весами нейросетевой модели (нейротизм)
+            url_non_neuroticism (str): Полный путь к файлу с весами нейросетевой модели ('эмоциональная стабильность')
             force_reload (bool): Принудительная загрузка файлов с весами нейросетевых моделей из сети
             out (bool): Отображение
             runtime (bool): Подсчет времени выполнения
@@ -971,14 +971,14 @@ class Prediction(PredictionMessages):
                 url_conscientiousness = pred.weights_for_big5_['av']['b5']['conscientiousness']['sberdisk']
                 url_extraversion = pred.weights_for_big5_['av']['b5']['extraversion']['sberdisk']
                 url_agreeableness = pred.weights_for_big5_['av']['b5']['agreeableness']['sberdisk']
-                url_neuroticism = pred.weights_for_big5_['av']['b5']['neuroticism']['sberdisk']
+                url_non_neuroticism = pred.weights_for_big5_['av']['b5']['non_neuroticism']['sberdisk']
 
                 pred.load_av_models_weights_b5(
                     url_openness = url_openness,
                     url_conscientiousness = url_conscientiousness,
                     url_extraversion = url_extraversion,
                     url_agreeableness = url_agreeableness,
-                    url_neuroticism = url_neuroticism,
+                    url_non_neuroticism = url_non_neuroticism,
                     force_reload = True,
                     out = True,
                     runtime = True,
@@ -999,7 +999,7 @@ class Prediction(PredictionMessages):
 
                 [2022-12-08 17:03:21] Загрузка файла "weights_2022-08-28_11-25-11.h5" (100.0%) ... Доброжелательность
 
-                [2022-12-08 17:03:21] Загрузка файла "weights_2022-06-14_21-44-09.h5" (100.0%) ... Нейротизм
+                [2022-12-08 17:03:21] Загрузка файла "weights_2022-06-14_21-44-09.h5" (100.0%) ... Эмоциональная стабильность
 
                 --- Время выполнения: 3.399 сек. ---
 
@@ -1023,14 +1023,14 @@ class Prediction(PredictionMessages):
                 url_conscientiousness = pred.weights_for_big5_['av']['b5']['conscientiousness']['sberdisk']
                 url_extraversion = pred.weights_for_big5_['av']['b5']['extraversion']['sberdisk']
                 url_agreeableness = pred.weights_for_big5_['av']['b5']['agreeableness']['sberdisk']
-                url_neuroticism = pred.weights_for_big5_['av']['b5']['neuroticism']['sberdisk']
+                url_non_neuroticism = pred.weights_for_big5_['av']['b5']['non_neuroticism']['sberdisk']
 
                 pred.load_av_models_weights_b5(
                     url_openness = url_openness,
                     url_conscientiousness = url_conscientiousness,
                     url_extraversion = url_extraversion,
                     url_agreeableness = url_agreeableness,
-                    url_neuroticism = url_neuroticism,
+                    url_non_neuroticism = url_non_neuroticism,
                     force_reload = True,
                     out = True,
                     runtime = True,
@@ -1081,7 +1081,7 @@ class Prediction(PredictionMessages):
 
                 [2022-12-08 17:05:33] Загрузка файла "weights_2022-06-14_21-44-09.h5" (100.0%) ...
 
-                [2022-12-08 17:05:33] Что-то пошло не так ... не удалось загрузить веса нейросетевой модели ... Нейротизм
+                [2022-12-08 17:05:33] Что-то пошло не так ... не удалось загрузить веса нейросетевой модели ... Эмоциональная стабильность
 
                     Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/prediction.py
                     Линия: 639
@@ -1106,8 +1106,8 @@ class Prediction(PredictionMessages):
                 or not url_extraversion
                 or type(url_agreeableness) is not str
                 or not url_agreeableness
-                or type(url_neuroticism) is not str
-                or not url_neuroticism
+                or type(url_non_neuroticism) is not str
+                or not url_non_neuroticism
                 or type(force_reload) is not bool
                 or type(out) is not bool
                 or type(runtime) is not bool
@@ -1138,7 +1138,7 @@ class Prediction(PredictionMessages):
                     (url_conscientiousness, self._b5["ru"][1]),
                     (url_extraversion, self._b5["ru"][2]),
                     (url_agreeableness, self._b5["ru"][3]),
-                    (url_neuroticism, self._b5["ru"][4]),
+                    (url_non_neuroticism, self._b5["ru"][4]),
                 ]
             ):
                 sections = urlparse(url[0])  # Парсинг URL адреса

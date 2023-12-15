@@ -38,7 +38,7 @@ CHUNK_SIZE: int = 1000000  # Размер загрузки файла из се�
 EXT: List[str] = []  # Расширения искомых файлов
 IGNORE_DIRS: List[str] = []  # Директории не входящие в выборку
 # Названия ключей для DataFrame набора данных
-KEYS_DATASET: List[str] = ["Path", "Openness", "Conscientiousness", "Extraversion", "Agreeableness", "Neuroticism"]
+KEYS_DATASET: List[str] = ["Path", "Openness", "Conscientiousness", "Extraversion", "Agreeableness", "Non-Neuroticism"]
 NUM_TO_DF_DISPLAY: int = 30  # Количество строк для отображения в таблицах
 PATH_TO_DATASET: str = ""  # Директория набора данных
 PATH_TO_SAVE: str = "./models"  # Директория для сохранения данных
@@ -1946,7 +1946,7 @@ class Settings(Messages):
                     'Conscientiousness',
                     'Extraversion',
                     'Agreeableness',
-                    'Neuroticism'
+                    'Non-Neuroticism'
                 ]
 
             :bdg-light:`-- 2 --`
@@ -1989,7 +1989,7 @@ class Settings(Messages):
                     'Conscientiousness',
                     'Extraversion',
                     'Agreeableness',
-                    'Neuroticism'
+                    'Non-Neuroticism'
                 ]
 
             :bdg-light:`-- 2 --`
@@ -2014,7 +2014,7 @@ class Settings(Messages):
                     'Conscientiousness',
                     'Extraversion',
                     'Agreeableness',
-                    'Neuroticism'
+                    'Non-Neuroticism'
                 ]
 
             :bdg-light:`-- 3 --`
@@ -2039,7 +2039,7 @@ class Settings(Messages):
                     'Conscientiousness',
                     'Extraversion',
                     'Agreeableness',
-                    'Neuroticism'
+                    'Non-Neuroticism'
                 ]
         """
 
@@ -2052,7 +2052,8 @@ class Settings(Messages):
 
         if type(keys) is list and len(keys) == len(KEYS_DATASET):
             try:
-                self._keys_dataset = [x.capitalize() for x in keys]
+                # .capitalize()
+                self._keys_dataset = [x for x in keys]
             except Exception:
                 pass
 
@@ -2061,7 +2062,8 @@ class Settings(Messages):
                 for x in keys:
                     if type(x) is not str or not x:
                         raise TypeError
-                self._keys_dataset[1:] = [x.capitalize() for x in keys]
+                # .capitalize()
+                self._keys_dataset[1:] = [x for x in keys]
             except Exception:
                 pass
 
