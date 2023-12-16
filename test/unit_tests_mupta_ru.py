@@ -5,7 +5,7 @@ import os
 import numpy as np
 from oceanai.modules.lab.build import Run
 
-# The test videos were taken from the M corpus
+# The test videos were taken from the MuPTA corpus
 # Please click the link https://hci.nw.ru/ru/pages/mupta-corpus
 # for access to all videos from the corpus
 
