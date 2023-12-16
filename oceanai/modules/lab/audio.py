@@ -2666,6 +2666,8 @@ class Audio(AudioMessages):
 
                     self._df_files.index = self._df_files.index.map(str)
 
+                    self._df_files.Path = [os.path.basename(i) for i in self._df_files.Path]
+
                     # Отображение
                     if out is True:
                         self._add_notebook_history_output(self._df_files.iloc[0 : self.num_to_df_display_, :])

@@ -370,7 +370,7 @@ class Core(CoreMessages):
         # Словарь для DataFrame с результатами вычисления точности
         self._dict_of_accuracy: Dict[str, List[Union[int, float]]] = {}
 
-        self._keys_id: str = "ID"  # Идентификатор
+        self._keys_id: str = "Person ID"  # Идентификатор
         self._keys_score: str = "Candidate score"  # Комплексная оценка кандидатов
         self._keys_colleague: str = "Match"
         self._keys_priority: str = "Priority"  # Приоритетные предпочтения
@@ -3779,7 +3779,7 @@ class Core(CoreMessages):
 
                     self._df_files_priority_skill = pd.DataFrame(data=new_list,columns=self.keys_dataset_+skills_name)
                     self._df_files_priority_skill = self._df_files_priority_skill.sort_values(by=skills_name, ascending=False)
-                    self._df_files_priority_skill.index.name = 'ID'
+                    self._df_files_priority_skill.index.name = self._keys_id
                     self._df_files_priority_skill.index += 1
                     self._df_files_priority_skill.index = self._df_files_priority_skill.index.map(str)
 
