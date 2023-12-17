@@ -140,6 +140,7 @@ panels_delimiters = (r"^\-{3,}$", r"^\^{3,}$", r"^\+{3,}$")
 # HTML-тема документации: https://sphinx-themes.org/
 #     pydata_sphinx_theme
 #     sphinx_rtd_theme
+#     sphinx_material
 html_theme = "sphinx_rtd_theme"
 
 # Путь к пользовательским статическим файлам (изображения, стили (*.css) и тд.)

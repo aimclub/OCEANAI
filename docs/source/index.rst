@@ -24,7 +24,7 @@
 
 -----
 
-.. figure:: _static/Pipeline_OCEANAI_ru.svg
+.. figure:: _static/Pipeline_OCEANAI.svg
    :scale: 80 %
    :align: center
    :alt: Функциональная схема библиотеки OCEAN-AI
