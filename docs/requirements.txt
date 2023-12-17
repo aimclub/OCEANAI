@@ -27,5 +27,5 @@ transformers >= 4.36.0
 sentencepiece >= 0.1.99
 torch == 2.0.1
 torchaudio == 2.0.2
-oceanai>=1.0.0a16
+oceanai>=1.0.0a17
 sacremoses>=0.0.1

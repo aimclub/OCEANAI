@@ -13,8 +13,8 @@
 #     - brew link gettext --force
 #     1. gettext --help
 #     2. locate pygettext.py
-#     3. /usr/local/Cellar/python@3.9/3.9.7/Frameworks/Python.framework/Versions/3.9/share/doc/python3.9/examples/Tools/
-#        i18n/pygettext.py -d oceanai -o oceanai/modules/locales/base.pot oceanai
+#     3. /Library/Frameworks/Python.framework/Versions/3.9/share/doc/python3.9/examples/Tools/i18n/pygettext.py
+#        -d oceanai -o oceanai/modules/locales/base.pot oceanai
 #     4. msgfmt --help
 #     5. locate msgfmt.py
 #     6. /Library/Frameworks/Python.framework/Versions/3.9/share/doc/python3.9/examples/Tools/i18n/msgfmt.py

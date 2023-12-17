@@ -1,12 +1,12 @@
 # base Russian translation.
-# Copyright (C) 2022. Speech and Multimodal Interfaces Laboratory Team
-# Elena Ryumina <ryumina_ev@mail.ru>, 2022.
+# Copyright (C) 2022-23. Speech and Multimodal Interfaces Laboratory Team
+# Elena Ryumina <ryumina_ev@mail.ru>, 2022-23.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 2022-12-11 11:18+0300\n"
-"PO-Revision-Date: 2022-12-11 11:18+0300\n"
+"POT-Creation-Date: 2023-12-16 21:18+0300\n"
+"PO-Revision-Date: 2023-12-16 21:18+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin <dl_03.03.1991@mail.ru>\n"
 "Language-Team: Russian <ryumina_ev@mail.ru>\n"
 "MIME-Version: 1.0\n"
@@ -14,314 +14,398 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: pygettext.py 1.5\n"
 
-#: oceanai/modules/core/core.py:80
+#: oceanai/modules/core/core.py:89
 msgid "Файл"
 msgstr ""
 
-#: oceanai/modules/core/core.py:81
+#: oceanai/modules/core/core.py:90
 msgid "Линия"
 msgstr ""
 
-#: oceanai/modules/core/core.py:82
+#: oceanai/modules/core/core.py:91
 msgid "Метод"
 msgstr ""
 
-#: oceanai/modules/core/core.py:83
+#: oceanai/modules/core/core.py:92
 msgid "Тип ошибки"
 msgstr ""
 
-#: oceanai/modules/core/core.py:85
+#: oceanai/modules/core/core.py:94
 msgid "сек."
 msgstr ""
 
-#: oceanai/modules/core/core.py:87
+#: oceanai/modules/core/core.py:96
 msgid "директория \"{}\" не найдена ..."
 msgstr ""
 
-#: oceanai/modules/core/core.py:88
+#: oceanai/modules/core/core.py:97
 msgid "в указанной директории необходимые файлы не найдены ..."
 msgstr ""
 
-#: oceanai/modules/core/core.py:89
+#: oceanai/modules/core/core.py:98
 msgid "файл \"{}\" не найден ..."
 msgstr ""
 
-#: oceanai/modules/core/core.py:90
+#: oceanai/modules/core/core.py:99
 msgid "вместо файла передана директория \"{}\" ..."
 msgstr ""
 
-#: oceanai/modules/core/core.py:91
+#: oceanai/modules/core/core.py:100
 msgid "файл \"{}\" не содержит акустического сигнала ..."
 msgstr ""
 
-#: oceanai/modules/core/core.py:92
+#: oceanai/modules/core/core.py:101
 msgid "не удалось сохранить LOG файл{} ..."
 msgstr ""
 
-#: oceanai/modules/core/core.py:93 oceanai/modules/lab/download.py:60
+#: oceanai/modules/core/core.py:102 oceanai/modules/lab/download.py:64
 msgid " (ошибка {})"
 msgstr ""
 
-#: oceanai/modules/core/core.py:97
+#: oceanai/modules/core/core.py:108
 msgid "Статистика извлеченных признаков из акустического сигнала:{}Общее количество сегментов с:{}1. экспертными признаками: {}{}2. лог мел-спектрограммами: {}{}Размерность матрицы экспертных признаков одного сегмента: {} "
 msgstr ""
 
-#: oceanai/modules/core/core.py:104
+#: oceanai/modules/core/core.py:118
 msgid "{}Размерность тензора с лог мел-спектрограммами одного сегмента:"
 msgstr ""
 
-#: oceanai/modules/core/core.py:107
+#: oceanai/modules/core/core.py:128
 msgid "Статистика извлеченных признаков из визуального сигнала:{}Общее количество сегментов с:{}1. экспертными признаками: {}{}2. нейросетевыми признаками: {}{}Размерность матрицы экспертных признаков одного сегмента: {} "
 msgstr ""
 
-#: oceanai/modules/core/core.py:114
-msgid "{}Размерность тензора с нейросетевыми признаками одного сегмента:"
+#: oceanai/modules/core/core.py:138
+msgid "{}Размерность матрицы с нейросетевыми признаками одного сегмента:"
 msgstr ""
 
-#: oceanai/modules/core/core.py:116
+#: oceanai/modules/core/core.py:142
 msgid "{}Понижение кадровой частоты: с"
 msgstr ""
 
-#: oceanai/modules/core/core.py:116
+#: oceanai/modules/core/core.py:144
 msgid "до"
 msgstr ""
 
-#: oceanai/modules/core/core.py:155
-msgid "добросовестность"
+#: oceanai/modules/core/core.py:150
+msgid "Статистика извлеченных признаков из текста:{}Размерность матрицы экспертных признаков: {} "
 msgstr ""
 
-#: oceanai/modules/core/core.py:155
+#: oceanai/modules/core/core.py:153
+msgid "{}Размерность матрицы с нейросетевыми признаками:"
+msgstr ""
+
+#: oceanai/modules/core/core.py:159
+msgid "{}Текст:"
+msgstr ""
+
+#: oceanai/modules/core/core.py:163
+msgid "сумма весов для ранжирования персональных качеств должна быть равна 100 ..."
+msgstr ""
+
+#: oceanai/modules/core/core.py:167
+msgid "DataFrame с данными пуст ..."
+msgstr ""
+
+#: oceanai/modules/core/core.py:206
 msgid "открытость опыту"
 msgstr ""
 
-#: oceanai/modules/core/core.py:155
+#: oceanai/modules/core/core.py:207
+msgid "добросовестность"
+msgstr ""
+
+#: oceanai/modules/core/core.py:208
 msgid "экстраверсия"
 msgstr ""
 
-#: oceanai/modules/core/core.py:156
+#: oceanai/modules/core/core.py:209
 msgid "доброжелательность"
 msgstr ""
 
-#: oceanai/modules/core/core.py:156
-msgid "нейротизм"
+#: oceanai/modules/core/core.py:210
+msgid "эмоциональная стабильность"
 msgstr ""
 
-#: oceanai/modules/core/messages.py:41
+#: oceanai/modules/core/messages.py:45
 msgid "OCEANAI - персональные качества личности человека"
 msgstr ""
 
-#: oceanai/modules/core/messages.py:42
+#: oceanai/modules/core/messages.py:46
 msgid "Авторы"
 msgstr ""
 
-#: oceanai/modules/core/messages.py:42
-msgid "Версия"
-msgstr ""
-
-#: oceanai/modules/core/messages.py:42
-msgid "Лицензия"
-msgstr ""
-
-#: oceanai/modules/core/messages.py:42
+#: oceanai/modules/core/messages.py:47
 msgid "Сопровождающие"
 msgstr ""
 
-#: oceanai/modules/core/messages.py:47
+#: oceanai/modules/core/messages.py:48
+msgid "Версия"
+msgstr ""
+
+#: oceanai/modules/core/messages.py:49
+msgid "Лицензия"
+msgstr ""
+
+#: oceanai/modules/core/messages.py:54
 msgid "Неверные типы или значения аргументов в \"{}\" ..."
 msgstr ""
 
-#: oceanai/modules/core/messages.py:48
+#: oceanai/modules/core/messages.py:55
 msgid "Неверные типы или значения аргументов ..."
 msgstr ""
 
-#: oceanai/modules/core/messages.py:50
+#: oceanai/modules/core/messages.py:57
 msgid "Что-то пошло не так ... "
 msgstr ""
 
-#: oceanai/modules/core/messages.py:51
+#: oceanai/modules/core/messages.py:58
 msgid "Прям беда! "
 msgstr ""
 
-#: oceanai/modules/core/messages.py:53
+#: oceanai/modules/core/messages.py:60
 msgid "Не обработанную ошибку необходимо проанализировать и выявить причину ..."
 msgstr ""
 
-#: oceanai/modules/core/messages.py:56
+#: oceanai/modules/core/messages.py:64
 msgid "смотрите настройки ядра и цепочку выполнения действий ..."
 msgstr ""
 
-#: oceanai/modules/core/messages.py:58
+#: oceanai/modules/core/messages.py:66
 msgid "Выполнение заблокировано пользователем ..."
 msgstr ""
 
-#: oceanai/modules/core/messages.py:60
+#: oceanai/modules/core/messages.py:68
 msgid "Время выполнения"
 msgstr ""
 
-#: oceanai/modules/core/messages.py:64
+#: oceanai/modules/core/messages.py:72
 msgid "из"
 msgstr ""
 
-#: oceanai/modules/core/messages.py:66
+#: oceanai/modules/core/messages.py:74
 msgid "Лог файл успешно сохранен ..."
 msgstr ""
 
-#: oceanai/modules/core/messages.py:67
+#: oceanai/modules/core/messages.py:75
 msgid "Лог файлы успешно сохранены ..."
 msgstr ""
 
-#: oceanai/modules/core/messages.py:69
+#: oceanai/modules/core/messages.py:77
 msgid "Формирование нейросетевой архитектуры модели для получения оценок по экспертным признакам"
 msgstr ""
 
-#: oceanai/modules/core/messages.py:71
+#: oceanai/modules/core/messages.py:80
 msgid "Загрузка весов нейросетевой модели для получения оценок по экспертным признакам"
 msgstr ""
 
-#: oceanai/modules/core/messages.py:73
+#: oceanai/modules/core/messages.py:83
 msgid "не удалось загрузить веса нейросетевой модели ..."
 msgstr ""
 
-#: oceanai/modules/core/messages.py:74
+#: oceanai/modules/core/messages.py:84
 msgid "нейросетевая архитектура модели для получения оценок по экспертным признакам не сформирована"
 msgstr ""
 
-#: oceanai/modules/core/messages.py:76
+#: oceanai/modules/core/messages.py:87
 msgid "нейросетевая архитектура модели для получения оценок по нейросетевым признакам не сформирована"
 msgstr ""
 
-#: oceanai/modules/core/messages.py:78
+#: oceanai/modules/core/messages.py:90
 msgid "нейросетевые архитектуры моделей для получения оценок по экспертным и нейросетевым признакам не сформированы"
 msgstr ""
 
-#: oceanai/modules/core/messages.py:81
+#: oceanai/modules/core/messages.py:95
 msgid "Формирование нейросетевой архитектуры для получения оценок по нейросетевым признакам"
 msgstr ""
 
-#: oceanai/modules/core/messages.py:83
+#: oceanai/modules/core/messages.py:98
 msgid "Загрузка весов нейросетевой модели для получения оценок по нейросетевым признакам"
 msgstr ""
 
-#: oceanai/modules/core/messages.py:85
+#: oceanai/modules/core/messages.py:101
 msgid "Формирование нейросетевых архитектур моделей для получения результатов оценки персональных качеств"
 msgstr ""
 
-#: oceanai/modules/core/messages.py:87
+#: oceanai/modules/core/messages.py:104
 msgid "Загрузка весов нейросетевых моделей для получения результатов оценки персональных качеств"
 msgstr ""
 
-#: oceanai/modules/core/messages.py:90
+#: oceanai/modules/core/messages.py:108
 msgid "конкатенация оценок по экспертным и нейросетевым признакам не произведена"
 msgstr ""
 
-#: oceanai/modules/core/messages.py:92
+#: oceanai/modules/core/messages.py:111
 msgid "нормализация оценок по экспертным и нейросетевым признакам не произведена"
 msgstr ""
 
-#: oceanai/modules/core/messages.py:95
+#: oceanai/modules/core/messages.py:115
 msgid "Получение прогнозов"
 msgstr ""
 
-#: oceanai/modules/core/messages.py:96
+#: oceanai/modules/core/messages.py:116
 msgid " и вычисление точности"
 msgstr ""
 
-#: oceanai/modules/core/messages.py:98
+#: oceanai/modules/core/messages.py:118
 msgid "не удалось загрузить файл с верными предсказаниями для подсчета точности ..."
 msgstr ""
 
-#: oceanai/modules/core/messages.py:101
+#: oceanai/modules/core/messages.py:122
 msgid "не указано минимум одно расширение искомых файлов ..."
 msgstr ""
 
-#: oceanai/modules/core/messages.py:103
+#: oceanai/modules/core/messages.py:124
 msgid "отсутствуют экспертные оценки ..."
 msgstr ""
 
-#: oceanai/modules/core/messages.py:105
+#: oceanai/modules/core/messages.py:126
 msgid "Точность по отдельным персональным качествам личности человека ..."
 msgstr ""
 
-#: oceanai/modules/core/messages.py:107
+#: oceanai/modules/core/messages.py:129
 msgid "Средняя средних абсолютных ошибок: {}, средняя точность: {} ..."
 msgstr ""
 
-#: oceanai/modules/lab/audio.py:82
+#: oceanai/modules/lab/audio.py:87
 msgid " (аудио модальность) ..."
 msgstr ""
 
-#: oceanai/modules/lab/audio.py:91
+#: oceanai/modules/lab/audio.py:96
 msgid "Извлечение признаков (экспертных и лог мел-спектрограмм) из акустического сигнала ..."
 msgstr ""
 
-#: oceanai/modules/lab/audio.py:93
+#: oceanai/modules/lab/audio.py:99
 msgid "экспертные признаки из акустического сигнала не извлечены ..."
 msgstr ""
 
-#: oceanai/modules/lab/audio.py:95
+#: oceanai/modules/lab/audio.py:102
 msgid "лог мел-спектрограммы из акустического сигнала не извлечены ..."
 msgstr ""
 
-#: oceanai/modules/lab/audio.py:98
+#: oceanai/modules/lab/audio.py:106
 msgid "указан слишком маленький размер ({}) окна сегмента сигнала ..."
 msgstr ""
 
-#: oceanai/modules/lab/download.py:56
+#: oceanai/modules/lab/download.py:60
 msgid "не удалось обработать указанный URL ..."
 msgstr ""
 
-#: oceanai/modules/lab/download.py:57
+#: oceanai/modules/lab/download.py:61
 msgid "URL указан некорректно ..."
 msgstr ""
 
-#: oceanai/modules/lab/download.py:58
+#: oceanai/modules/lab/download.py:62
 msgid "Не определен размер файла для загрузки ..."
 msgstr ""
 
-#: oceanai/modules/lab/download.py:59
+#: oceanai/modules/lab/download.py:63
 msgid "Загрузка файла \"{}\""
 msgstr ""
 
-#: oceanai/modules/lab/download.py:61
+#: oceanai/modules/lab/download.py:65
 msgid "не удалось скачать файл \"{}\"{} ..."
 msgstr ""
 
-#: oceanai/modules/lab/prediction.py:70
+#: oceanai/modules/lab/prediction.py:77
 msgid " (мультимодальное объединение) ..."
 msgstr ""
 
-#: oceanai/modules/lab/video.py:82
+#: oceanai/modules/lab/prediction.py:82 oceanai/modules/lab/text.py:101
+msgid "Формирование нейросетевой архитектуры модели для получения  оценок персональных качеств"
+msgstr ""
+
+#: oceanai/modules/lab/prediction.py:86 oceanai/modules/lab/text.py:108
+msgid "Загрузка весов нейросетевой модели для получения оценок персональных качеств"
+msgstr ""
+
+#: oceanai/modules/lab/prediction.py:92
+msgid "нейросетевая архитектура модели для получения оценок по мультимодальным данным не сформирована"
+msgstr ""
+
+#: oceanai/modules/lab/text.py:97
+msgid " (текстовая модальность) ..."
+msgstr ""
+
+#: oceanai/modules/lab/text.py:116
+msgid "нейросетевая архитектура модели для получения оценок по экспертным и нейросетевым признакам не сформирована"
+msgstr ""
+
+#: oceanai/modules/lab/text.py:124
+msgid "Загрузка словаря с экспертными признаками ..."
+msgstr ""
+
+#: oceanai/modules/lab/text.py:125
+msgid "не удалось загрузить словарь с экспертными признаками ..."
+msgstr ""
+
+#: oceanai/modules/lab/text.py:129
+msgid "не удалось считать лексикон LIWC ..."
+msgstr ""
+
+#: oceanai/modules/lab/text.py:131
+msgid "Формирование токенизатора и нейросетевой модели машинного перевода ..."
+msgstr ""
+
+#: oceanai/modules/lab/text.py:134
+msgid "Формирование токенизатора и нейросетевой модели BERT ..."
+msgstr ""
+
+#: oceanai/modules/lab/text.py:135
+msgid "не удалось загрузить токенизатор и нейросетевую модель BERT ..."
+msgstr ""
+
+#: oceanai/modules/lab/text.py:139
+msgid "Извлечение признаков (экспертных и нейросетевых) из текста ..."
+msgstr ""
+
+#: oceanai/modules/lab/text.py:141
+msgid "текстовый файл \"{}\" пуст ..."
+msgstr ""
+
+#: oceanai/modules/lab/unzip.py:62
+msgid "Разархивирование архива \"{}\" ..."
+msgstr ""
+
+#: oceanai/modules/lab/unzip.py:65
+msgid "не удалось разархивировать архив \"{}\" ..."
+msgstr ""
+
+#: oceanai/modules/lab/unzip.py:66
+msgid "не удалось переименовать директорию из \"{}\" в \"{}\" ..."
+msgstr ""
+
+#: oceanai/modules/lab/video.py:86
 msgid " (видео модальность) ..."
 msgstr ""
 
-#: oceanai/modules/lab/video.py:85
+#: oceanai/modules/lab/video.py:90
 msgid "Формирование нейросетевой архитектуры для получения нейросетевых признаков"
 msgstr ""
 
-#: oceanai/modules/lab/video.py:91
+#: oceanai/modules/lab/video.py:98
 msgid "Загрузка весов нейросетевой модели для получения нейросетевых признаков"
 msgstr ""
 
-#: oceanai/modules/lab/video.py:97
+#: oceanai/modules/lab/video.py:106
 msgid "нейросетевая архитектура модели для получения нейросетевых признаков не сформирована"
 msgstr ""
 
-#: oceanai/modules/lab/video.py:102
+#: oceanai/modules/lab/video.py:111
 msgid "Извлечение признаков (экспертных и нейросетевых) из визуального сигнала ..."
 msgstr ""
 
-#: oceanai/modules/lab/video.py:105
+#: oceanai/modules/lab/video.py:115
 msgid "расширение видеофайла должно быть одним из: \"{}\""
 msgstr ""
 
-#: oceanai/modules/lab/video.py:106
+#: oceanai/modules/lab/video.py:116
 msgid "общее количество кадров в видеопотоке: {} ..."
 msgstr ""
 
-#: oceanai/modules/lab/video.py:107
+#: oceanai/modules/lab/video.py:117
 msgid "вычисление коэффициента изменения размера изображения не произведено ..."
 msgstr ""
 
-#: oceanai/modules/lab/video.py:110
+#: oceanai/modules/lab/video.py:121
 msgid "не на одном кадре видеопотока лицо не найдено ..."
 msgstr ""
