@@ -11,7 +11,7 @@ import oceanai
 
 REQUIRED_PACKAGES = [
     "ipython >= 8.18.1",
-    "jupyterlab >= 3.5.0",
+    "jupyterlab == 3.5.0",
     "tensorflow >= 2.15.0",
     "keras >= 2.11.0",
     "Keras-Applications>=1.0.8",
