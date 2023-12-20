@@ -6,7 +6,7 @@ sphinx-intl==2.0.1
 nbsphinx==0.8.10
 sphinx-copybutton==0.5.1
 ipython>=8.18.1
-jupyterlab>=4.0.9
+jupyterlab>=3.5.0
 tensorflow>=2.15.0
 keras>=2.11.0
 Keras-Applications>=1.0.8
@@ -27,5 +27,5 @@ transformers >= 4.36.0
 sentencepiece >= 0.1.99
 torch == 2.0.1
 torchaudio == 2.0.2
-oceanai>=1.0.0a17
+oceanai>=1.0.0a18
 sacremoses>=0.0.1
