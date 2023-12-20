@@ -9,7 +9,6 @@ if sys.version_info[:2] < MIN_PYTHON_VERSION:
 
 import oceanai
 
-
 REQUIRED_PACKAGES = [
     "ipython >= 8.18.1",
     "jupyterlab == 3.5.0",
