@@ -21,7 +21,11 @@
 
 <h4 align="center"><span style="color:#EC256F;">Описание</span></h4>
 
-> **[OCEANAI](https://oceanai.readthedocs.io/ru/latest/)** - библиотека с открытым исходным кодом, состоящая из набора алгоритмов интеллектуального анализа поведения человека на основе его мультимодальных данных для автоматического оценивания уровня отдельных персональных качеств личности человека для выполнения профессиональных обязанностей. Библиотека оценивает 5 качеств: Открытость опыту (**O**penness), Добросовестность (**C**onscientiousness), Экстраверсия (**E**xtraversion), Доброжелательность (**A**greeableness), Нейротизм/невротизм (**N**euroticism).
+> **[OCEANAI](https://oceanai.readthedocs.io/ru/latest/)** - библиотека с открытым исходным кодом, состоящая из набора алгоритмов интеллектуального анализа поведения человека на основе его мультимодальных данных для автоматического оценивания уровня отдельных персональных качеств личности человека (ПКЛЧ). Библиотека оценивает 5 ПКЛЧ: Открытость опыту (**O**penness), Добросовестность (**C**onscientiousness), Экстраверсия (**E**xtraversion), Доброжелательность (**A**greeableness), Эмоциональная стабильность (Non-**N**euroticism).
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/aimclub/OCEANAI/main/docs/source/_static/Pipeline_OCEANAI.ru.svg" alt="Pipeline">
+<p>
 
 ---
 
@@ -53,11 +57,13 @@
 
 1. **[Ранжирование потенциальных кандидатов по профессиональным обязанностям](https://oceanai.readthedocs.io/ru/latest/user_guide/notebooks/Pipeline_practical_task_1.html)**.
 2. **[Прогнозирование потребительских предпочтений на промышленные товары](https://oceanai.readthedocs.io/ru/latest/user_guide/notebooks/Pipeline_practical_task_2.html)**.
+3. **[Формирование эффективных рабочих коллективов](https://oceanai.readthedocs.io/ru/latest/user_guide/notebooks/Pipeline_practical_task_3.html)**.
 
 **[OCEANAI](https://oceanai.readthedocs.io/ru/latest/)** использует самые актуальные библиотеки с открытым исходным кодом для обработки аудио и видеоинформации: **[librosa](https://librosa.org/)**,
 **[openSMILE](https://audeering.github.io/opensmile-python/)**,
 **[openCV](https://pypi.org/project/opencv-python/)**,
-**[mediapipe](https://google.github.io/mediapipe/getting_started/python)**.
+**[mediapipe](https://google.github.io/mediapipe/getting_started/python)**,
+**[transformers](https://pypi.org/project/transformers)**.
 
 **[OCEANAI](https://github.com/DmitryRyumin/oceanai)** написана на языке программирования
 **[python](https://www.python.org/)**. Нейросетевые модели
@@ -83,6 +89,53 @@
 ## Свидетельство о государственной регистрации программы для ЭВМ
 
 **[Библиотека алгоритмов интеллектуального анализа поведения человека на основе его мультимодальных данных, обеспечивающих оценивание уровня отдельных персональных качеств личности человека для выполнения профессиональных обязанностей (OCEAN-AI)](https://new.fips.ru/registers-doc-view/fips_servlet?DB=EVM&DocNumber=2023613724&TypeFile=html)**
+
+## Свидетельство о государственной регистрации базы данных
+
+**[Корпус для мультимодального оценивания персональных качеств личности человека (MuPTA - Multimodal Personality Traits Assessment Corpus)](https://new.fips.ru/registers-doc-view/fips_servlet?DB=DB&DocNumber=2023624011&TypeFile=html)**
+
+---
+
+## Публикации
+
+### Журналы
+
+```bibtex
+    @article{ryumina22_neurocomputing,
+        author = {Elena Ryumina and Denis Dresvyanskiy and Alexey Karpov},
+        title = {In Search of a Robust Facial Expressions Recognition Model: A Large-Scale Visual Cross-Corpus Study},
+        journal = {Neurocomputing},
+        volume = {514},
+        pages = {435-450},
+        year = {2022},
+        doi = {https://doi.org/10.1016/j.neucom.2022.10.013},
+    }
+```
+
+```bibtex
+    @article{ryumina24_eswa,
+        author = {Elena Ryumina and Maxim Markitantov and Dmitry Ryumin and Alexey Karpov},
+        title = {OCEAN-AI Framework with EmoFormer Cross-Hemiface Attention Approach for Personality Traits Assessment},
+        journal = {Expert Systems with Applications},
+        volume = {239},
+        pages = {122441},
+        year = {2024},
+        doi = {https://doi.org/10.1016/j.eswa.2023.122441},
+    }
+```
+
+### Конференции
+
+```bibtex
+    @inproceedings{ryumina23_interspeech,
+        author = {Elena Ryumina and Dmitry Ryumin and Maxim Markitantov and Heysem Kaya and Alexey Karpov},
+        title = {Multimodal Personality Traits Assessment (MuPTA) Corpus: The Impact of Spontaneous and Read Speech},
+        year = {2023},
+        booktitle = {INTERSPEECH},
+        pages = {4049--4053},
+        doi = {https://doi.org/10.21437/Interspeech.2023-1686},
+    }
+```
 
 ---
 
