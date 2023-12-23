@@ -1,0 +1,191 @@
+# Russian translation.
+# Copyright (C) 2022. Speech and Multimodal Interfaces Laboratory Team
+# This file is distributed under the same license as the big5 package.
+# Elena Ryumina <ryumina_ev@mail.ru>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  1.0\n"
+"Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
+"POT-Creation-Date: 2023-12-23 15:56+0300\n"
+"PO-Revision-Date: 2022-12-01 09:13+0300\n"
+"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
+"<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
+"Language-Team: Russian <ryumina_ev@mail.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../source/modules/lab/unzip.rst:2 a962a0c7512d4e2abacc3c690ed2e4af
+msgid "Обработка архивов"
+msgstr ""
+
+#: 7b7041608e264b9280c3de08ead66b1e oceanai.modules.lab.unzip.UnzipMessages:1
+#: of
+msgid "Базовые классы: :py:class:`~oceanai.modules.core.core.Core`"
+msgstr ""
+
+#: beab9190446b4fd2b1b337207679a2e3 oceanai.modules.lab.unzip.UnzipMessages:1
+#: of
+msgid "Класс для сообщений"
+msgstr ""
+
+#: 40163a13e98049a4940197a09ad8e29c 8a44afca6be4419ea8fe92e1beaa7e9c
+#: fd4dc77746c246d496c263018e8e2276 oceanai.modules.lab.unzip.Unzip
+#: oceanai.modules.lab.unzip.Unzip.__progressbar_unzip
+#: oceanai.modules.lab.unzip.Unzip._unzip oceanai.modules.lab.unzip.Unzip.unzip
+#: oceanai.modules.lab.unzip.UnzipMessages of
+msgid "Параметры"
+msgstr ""
+
+#: 46fb56732058435ba9df13b014028aa8 9ec5301ed0554b3db4ec39fad31727ee
+#: oceanai.modules.lab.unzip.Unzip:3 oceanai.modules.lab.unzip.UnzipMessages:3
+#: of
+msgid "Смотреть :attr:`~oceanai.modules.core.language.Language.lang`"
+msgstr ""
+
+#: 1f6491a8af01453ea1fbf7c334d18e77 ed511790aad849ca8bb590ec4ca25640
+#: oceanai.modules.lab.unzip.Unzip:5 oceanai.modules.lab.unzip.UnzipMessages:5
+#: of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_simple`"
+msgstr ""
+
+#: 2975cc6024d546a48f532f040040cb95 c169e29e222f4d13a743f61a6dee324e
+#: oceanai.modules.lab.unzip.Unzip:7 oceanai.modules.lab.unzip.UnzipMessages:7
+#: of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_info`"
+msgstr ""
+
+#: 08c384122d3c47d78c99e61f8c922945 fe041cb960c84a709c766291c045c98e
+#: oceanai.modules.lab.unzip.Unzip:9 oceanai.modules.lab.unzip.UnzipMessages:9
+#: of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_err`"
+msgstr ""
+
+#: 1e2976092d104013b2fed337a5edbd0f a8c48ed5e3eb4f69885facdce7a8ea0c
+#: oceanai.modules.lab.unzip.Unzip:11
+#: oceanai.modules.lab.unzip.UnzipMessages:11 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_true`"
+msgstr ""
+
+#: 706b81a0fdc34f61aa60d134a7c66498 b01fc7d36f1a496fa31c97e6c080733b
+#: oceanai.modules.lab.unzip.Unzip:13
+#: oceanai.modules.lab.unzip.UnzipMessages:13 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.bold_text`"
+msgstr ""
+
+#: 0c67632c536345449a9485376d2777de 592070552da94bc58ad42f4a114e89b8
+#: oceanai.modules.lab.unzip.Unzip:15
+#: oceanai.modules.lab.unzip.UnzipMessages:15 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.num_to_df_display`"
+msgstr ""
+
+#: 43a06f54ae6d4bffaada35a7b8f754d3 64f7c7aae54e44fbbc578bbfdbc5d7f1
+#: oceanai.modules.lab.unzip.Unzip:17
+#: oceanai.modules.lab.unzip.UnzipMessages:17 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.text_runtime`"
+msgstr ""
+
+#: 76e810c771fd4419a2436dbf38784731 oceanai.modules.lab.unzip.Unzip:1 of
+msgid "Базовые классы: :py:class:`~oceanai.modules.lab.unzip.UnzipMessages`"
+msgstr ""
+
+#: 790875fde0974018a5dcef25a0c01ef4 oceanai.modules.lab.unzip.Unzip:1 of
+msgid "Класс для обработки архивов"
+msgstr ""
+
+#: 45b99781f2ec4bf29b44710ce2209a91
+#: oceanai.modules.lab.unzip.Unzip.__progressbar_unzip:1 of
+msgid "Индикатор выполнения"
+msgstr ""
+
+#: 1c222f1abf0e4606b1273b8c17d4c379
+#: oceanai.modules.lab.unzip.Unzip.__progressbar_unzip:4 of
+msgid "private (приватный метод)"
+msgstr ""
+
+#: 67d9076b293f460294601866490532f4
+#: oceanai.modules.lab.unzip.Unzip.__progressbar_unzip:6 of
+msgid "Путь до архива"
+msgstr ""
+
+#: 68f9c229dd994be2a99247a9eb2956f0
+#: oceanai.modules.lab.unzip.Unzip.__progressbar_unzip:8 of
+msgid "Процент выполнения (от **0.0** до **100.0**)"
+msgstr ""
+
+#: 7694b37c7f6a409a80817537e0ab3dee
+#: oceanai.modules.lab.unzip.Unzip.__progressbar_unzip:10 of
+msgid "Очистка области вывода"
+msgstr ""
+
+#: 0afdef88adee451d8d4dc586919e239a
+#: oceanai.modules.lab.unzip.Unzip.__progressbar_unzip:12 of
+msgid "Замена последнего сообщения"
+msgstr ""
+
+#: 0524d3372a62475fa3e18be46e2036bb
+#: oceanai.modules.lab.unzip.Unzip.__progressbar_unzip:14
+#: oceanai.modules.lab.unzip.Unzip._unzip:12
+#: oceanai.modules.lab.unzip.Unzip.unzip:9 of
+msgid "Отображение"
+msgstr ""
+
+#: 6305dd43fc7245c5aaa228f65a1fb91b
+#: oceanai.modules.lab.unzip.Unzip.__progressbar_unzip
+#: oceanai.modules.lab.unzip.Unzip._unzip
+#: oceanai.modules.lab.unzip.Unzip.path_to_unzip
+#: oceanai.modules.lab.unzip.Unzip.unzip of
+msgid "Тип результата"
+msgstr ""
+
+#: f90e671135644d0eb13de99071654a4b oceanai.modules.lab.unzip.Unzip._unzip:1 of
+msgid ""
+"Разархивирование архива (без очистки истории вывода сообщений в ячейке "
+"Jupyter)"
+msgstr ""
+
+#: 31bdfa6ac2094fe49cd446780139142a oceanai.modules.lab.unzip.Unzip._unzip:4 of
+msgid "protected (защищенный метод)"
+msgstr ""
+
+#: 67d9076b293f460294601866490532f4 oceanai.modules.lab.unzip.Unzip._unzip:6
+#: oceanai.modules.lab.unzip.Unzip.unzip:3 of
+msgid "Полный путь до архива"
+msgstr ""
+
+#: cc270462159c4e74a7f5061094b21866 oceanai.modules.lab.unzip.Unzip._unzip:8
+#: oceanai.modules.lab.unzip.Unzip.unzip:5 of
+msgid "Имя директории для разархивирования"
+msgstr ""
+
+#: d6456e5de95245548282e86e02f1fe37 oceanai.modules.lab.unzip.Unzip._unzip:10
+#: oceanai.modules.lab.unzip.Unzip.unzip:7 of
+msgid "Принудительное разархивирование"
+msgstr ""
+
+#: 8709b944742a4c55bcaaa06f8361294a oceanai.modules.lab.unzip.Unzip._unzip
+#: oceanai.modules.lab.unzip.Unzip.path_to_unzip
+#: oceanai.modules.lab.unzip.Unzip.unzip of
+msgid "Результат"
+msgstr ""
+
+#: e94cc2fc7da347d4b65e9f5dd95c1a59 oceanai.modules.lab.unzip.Unzip._unzip:15
+#: oceanai.modules.lab.unzip.Unzip.unzip:12 of
+msgid "**True** если разархивирование прошло успешно, в обратном случае **False**"
+msgstr ""
+
+#: 9891970d4cec47648d7e0768c5d8cb2d
+#: oceanai.modules.lab.unzip.Unzip.path_to_unzip:1 of
+msgid "Получение директории для разархивирования"
+msgstr ""
+
+#: 97d87471268447bab5faed8e7d5a251b
+#: oceanai.modules.lab.unzip.Unzip.path_to_unzip:3 of
+msgid "Директория для разархивирования"
+msgstr ""
+
+#: 9280f4c03c354cc596c29e3bee791f9d oceanai.modules.lab.unzip.Unzip.unzip:1 of
+msgid "Разархивирование архива"
+msgstr ""

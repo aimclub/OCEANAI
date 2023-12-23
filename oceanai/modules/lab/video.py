@@ -3614,7 +3614,7 @@ class Video(VideoMessages):
             run (bool): Блокировка выполнения
 
         Returns:
-            bool: **True** если веса прогнозы успешно получены, в обратном случае **False**
+            bool: **True** если прогнозы успешно получены, в обратном случае **False**
 
         :bdg-link-light:`Пример <../../user_guide/notebooks/Video-get_video_union_predictions.ipynb>`
         """

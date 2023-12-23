@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2022-12-11 15:53+0300\n"
+"POT-Creation-Date: 2023-12-23 16:50+0300\n"
 "PO-Revision-Date: 2022-12-01 09:13+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -17,28 +17,28 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.11.0\n"
 
-#: ../../source/modules/lab/audio.rst:2 d73abc63ccc14769a694c82df98dfc15
+#: ../../source/modules/lab/audio.rst:2 88791696c3744174b2ac3160ba915b23
 msgid "Аудио"
 msgstr ""
 
-#: 4c9e223cd126408f888e6754d92a43c4 oceanai.modules.lab.audio.AudioMessages:1
+#: b61ce3cec957440c92392961ac0d3820 oceanai.modules.lab.audio.AudioMessages:1
 #: of
 msgid "Базовые классы: :py:class:`~oceanai.modules.lab.download.Download`"
 msgstr ""
 
-#: b9913b5615db4a189b953da1d983b136 oceanai.modules.lab.audio.AudioMessages:1
+#: e463c538f1ba4883b18306f3774ec21d oceanai.modules.lab.audio.AudioMessages:1
 #: of
 msgid "Класс для сообщений"
 msgstr ""
 
-#: 20032560acf84ec08f4710a417d385dc 31579a57efdc46318994f873c15f946c
-#: 5af51abc20d647d8bcbdaef4559c87e5 84e0d01b9ba44d82a5b7a25d56699ca4
-#: 8fdc66068b2942f09df3c36e17ed9994 98625d8d4cae4566813ee0d6225b615d
-#: 9af96a54d02e4111a7f3415d4253f592 9c776a4c5acc40cb9ad86531128abeae
-#: ba738bde8d93475182a09da4e2fdfb2e c1bc062b858a4b8ab98f596375dd0254
-#: c400459531934dcc85f9fd1f89691a6c db381de6d04f4868a3716944b823aab9
-#: de80e611e15d4c0885a8b1d89f535153 e138b92b99c949daa61de0b314a20ea2
-#: f28a31082fa94f279facba33863e86d7 oceanai.modules.lab.audio.Audio
+#: 008f66829980471a92b3e4ef1a26f20a 12de099e7a3546afb36ffce211596071
+#: 19738f36f4484b4d85118252aed97b18 28711d45d2de49f39c73401ea7859d0e
+#: 3aff015f802b4d778a15408979fa29ce 43907a3d6abf4fddbda32b0fb8b91140
+#: 58274de5adb9488a9c0f7eeba70a5185 716e9909442344a0983ea5f94dfceee3
+#: 7e6b50d364dd405ab42cc4e989a3eec3 a5139eed3b5c4172a56edf37f6952ec0
+#: a821dbbb3afe4162bb60880d5ad744aa a922200e0b09416e92d59101d8820bf0
+#: bd6e0e74b42f4eed8fb2275a59e70916 c46dce1ea85143cf80f590883032a9af
+#: da472230dc5d4642ad89643bf7e119e1 oceanai.modules.lab.audio.Audio
 #: oceanai.modules.lab.audio.Audio.__concat_pred
 #: oceanai.modules.lab.audio.Audio.__load_audio_model_b5
 #: oceanai.modules.lab.audio.Audio.__load_model_weights
@@ -56,70 +56,70 @@ msgstr ""
 msgid "Параметры"
 msgstr ""
 
-#: 03c036dad532494b93109fe48fdf0daf e27175ecb5ed4d13b0f9ffd472fa5c7b
+#: 201ee7ac1748452ba190a566e81f5878 f695a7b31cb948949f68fcc411442e8d
 #: oceanai.modules.lab.audio.Audio:3 oceanai.modules.lab.audio.AudioMessages:3
 #: of
 msgid "Смотреть :attr:`~oceanai.modules.core.language.Language.lang`"
 msgstr ""
 
-#: 982eb2c8b0a140e4b8b23bb6a86ee520 f96b67eecc514abf963b558f39cb8304
+#: 382b8100b3fe489cb1d88c9829e6ea7f bff0121f67e541b2b98fec49561431dc
 #: oceanai.modules.lab.audio.Audio:5 oceanai.modules.lab.audio.AudioMessages:5
 #: of
 msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_simple`"
 msgstr ""
 
-#: b1ce571390c64fe4bc9a787048269ddb f0836ff04a6048ce97198cee30e140fc
+#: 72f885a96890477fa4c9906581d01cde 98ad24dbabef4e8db103b69612b0b52b
 #: oceanai.modules.lab.audio.Audio:7 oceanai.modules.lab.audio.AudioMessages:7
 #: of
 msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_info`"
 msgstr ""
 
-#: 3ed255672b4d4a9d885a6496d6a4af69 ab30c320ef3c4b398d78d779ace2a032
+#: 0d8f3f43bac14a66be29411338bc4577 b3d4951675a5445088d7e2c953d8f837
 #: oceanai.modules.lab.audio.Audio:9 oceanai.modules.lab.audio.AudioMessages:9
 #: of
 msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_err`"
 msgstr ""
 
-#: b886fa1206e441d29031a1f7f1d12cab c289e51a6b864c16b46c9fe3602b7abe
+#: 0834433f1c1a4618b2a19360e3a058ef 78c08dfccbf34d5685389b6d24182bd7
 #: oceanai.modules.lab.audio.Audio:11
 #: oceanai.modules.lab.audio.AudioMessages:11 of
 msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_true`"
 msgstr ""
 
-#: 087a2c7a29e346b6b639d249a55b7dbf 57b8021f0bf04121a8f08943641b30e4
+#: 27864daa74b94077b1f6afe14cac900c 56d225e8e12f420aad02455846e64783
 #: oceanai.modules.lab.audio.Audio:13
 #: oceanai.modules.lab.audio.AudioMessages:13 of
 msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.bold_text`"
 msgstr ""
 
-#: 041721e068dc4241b9a41d058bba2d0b adcf78a33bca452886cd50203bbba8f8
+#: 4542eaba35814163a69db74f0865d003 54b626f993484f6ca6656cdb7b373192
 #: oceanai.modules.lab.audio.Audio:15
 #: oceanai.modules.lab.audio.AudioMessages:15 of
 msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.num_to_df_display`"
 msgstr ""
 
-#: 804cba8442e8436b865a516881421e37 8818877f915049cca2120709cc355633
+#: 10b150e858374bf5a7aa3a89b9bb4f06 3195e6dcbf1e4867a25774f0270d2638
 #: oceanai.modules.lab.audio.Audio:17
 #: oceanai.modules.lab.audio.AudioMessages:17 of
 msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.text_runtime`"
 msgstr ""
 
-#: cf55970249a2452ba7faec7bc5996452 oceanai.modules.lab.audio.Audio:1 of
+#: a4dc4fca6ab04bf2b7dc64d291a3becd oceanai.modules.lab.audio.Audio:1 of
 msgid "Базовые классы: :py:class:`~oceanai.modules.lab.audio.AudioMessages`"
 msgstr ""
 
-#: 6b662ecabaf94f7c86b46b10eb4227c4 oceanai.modules.lab.audio.Audio:1 of
+#: 7ca28f4a903b4cd49a9724910803a599 oceanai.modules.lab.audio.Audio:1 of
 msgid "Класс для обработки аудио"
 msgstr ""
 
-#: c1339d7cad664c5b849be94da09a2050
+#: 8b7f8a7be7874f14a50a82eccd90842c
 #: oceanai.modules.lab.audio.Audio.__concat_pred:1 of
 msgid "Конкатенация оценок по экспертным и нейросетевым признакам"
 msgstr ""
 
-#: 54892983981c486eb8f46657d43294b2 6a6430633fd147fe996e4a67ed653e64
-#: a423b4c9ed2842319492aadfff79bfc4 ab92942dea1e45d2b4e32f097cfac29d
-#: b483501f010f4daf97da2dbd6a67ac1b
+#: 0935488ad7294f3fa8afbfbea1f789ed 3407f61e16e44420abd4de6ee50f87c7
+#: 4e5451aaa0c14082aa862094bffd9af5 832637b1fff74a08baa2d510fd625bb5
+#: d994fc2bd99a46768ea247f9c142f09a
 #: oceanai.modules.lab.audio.Audio.__concat_pred:4
 #: oceanai.modules.lab.audio.Audio.__load_audio_model_b5:4
 #: oceanai.modules.lab.audio.Audio.__load_model_weights:4
@@ -128,23 +128,23 @@ msgstr ""
 msgid "private (приватный метод)"
 msgstr ""
 
-#: c27f0cfa079b45bb91b53010aa577c87
+#: 8de119bbd8704c0f98667de57eed1059
 #: oceanai.modules.lab.audio.Audio.__concat_pred:6 of
 msgid "Оценки по экспертным признакам"
 msgstr ""
 
-#: e0c6ba99f3304f1da8d9b2a31a02f47e
+#: 0850ae7a20d44c3c81abfabf63a05f9c
 #: oceanai.modules.lab.audio.Audio.__concat_pred:8 of
 msgid "Оценки по нейросетевым признакам"
 msgstr ""
 
-#: 04c8c0e05a184db1b376cbdb45186343 21567ca80edc4b74a1d7ad5ca3438d01
-#: 49b6e95800724f2cb058cd329820c0b3 500d492e31254257a1e020c98ce336b2
-#: 51dffd514184438199fa07ffe4c44fba 5ce7cef63c8b461f8cc7f9b739cd1d2c
-#: 724b821adac54f1490b7412622167a0f 75cf7a2832864070a7d5207a5cc47e7a
-#: a7fbe7ae18b744e3800e0c786e0cc9f3 bea3920efa944c1fb051ee0aec928d1d
-#: ce641894e8f84026bc313495f518a9f1 eae30c39b2e94d968d68140ca02c4554
-#: f904a202abbd48e39a84ac4ac3e48eab
+#: 21a43e58763941b59c9ae9f32d543955 2aa45ff4827047a6a9dc03f97e404ead
+#: 3d26d85202ee4da6bfb784210a9bd9d5 791f68eb7aa644819375ba8470703ba2
+#: 99b67d1477f74c5db0b7dd6cfb0cf4be 9a2a0f9307eb4bc5b19bffdb37a657dc
+#: 9d53ec574bc14ae2975fec5e2ae2fccb b9194835ec0b43279770a34066909a74
+#: bc56d794ee2240238107235b04724e5c be48ec53bc9f4296b51829e5e6d4c6ea
+#: e4d69258c7564f52883393372f867eb2 f690e8b1070c4c6887994a7f2d51fe2d
+#: ffb412ee0a444153a953a628ad9ef6aa
 #: oceanai.modules.lab.audio.Audio.__concat_pred:10
 #: oceanai.modules.lab.audio.Audio.__load_audio_model_b5:8
 #: oceanai.modules.lab.audio.Audio.__load_model_weights:12
@@ -161,15 +161,15 @@ msgstr ""
 msgid "Отображение"
 msgstr ""
 
-#: 053c6566f06e460990061eec2b17751b 0956394567744255b73bbbf3ab7faab0
-#: 0eb237083ef04165a6eb4ec6403c4b66 121936e447914a608c8e21c131f381d8
-#: 15769b17fff94cfaabdd4ea3e5973753 3c421ddcc5b84e42a7d11f87544923b2
-#: 3e237700d18b4485a539ef09ea624843 4aed8aa7f1924a5b9267d8d317153cd6
-#: 60fe4d95597947f299b308ac77f26b25 716baab79b844ac19d6cc21ef5f98f5b
-#: 808e09d3cc67474cb4a0ee00ed6e5ab3 81f1f39ba02f4552a9c3e62c8024fc37
-#: 83dca218b37a4438b92648ea1c5deffc 943abd090c5940a18ce43acf5f49b8eb
-#: 9b912e52535c466f9c24c377431e8a3b a7114458e18245b18f1b328026fda425
-#: b99cf90816c345e68dbc651ad98e3c87 f67a0d0961614f1fa4074b7364b52000
+#: 099cf2cdad944a1588220baf2fe5414e 0c0d2950c1904513a1fb93f01e336684
+#: 267e9dcc39124b66a3154b97ba5bc8f7 31fcaf69dfc64137914664260448048c
+#: 53685978d5364585b68832bb730d13cf 5c2d2c8b18e045779fdfc941012f7b98
+#: 6bd61ba0c7d74dbfbfe46e8f17764dcc 7fa9fda3ced548f4a063f53a74e2713a
+#: 8a030226f545452a9309df6f1ee1d729 9d6415efc2b34188908d8b545e7aacf4
+#: b64a7964c6e44e598c6b5c7b740c40b7 baf3268abb67451e9899265e96dda36c
+#: dda7a0917b304e7bb0028301b92da2be ee173bd5d9284a4895f45e118d9c0c56
+#: ee756bc02c624ca19c6d80538aac12e7 fa2c8eeff81b4a3680657b6705ce2d2f
+#: feffde0d5e7144a494369dc7a98caf86 ffdba2f7e1244a8c9fca30dbacbe90e8
 #: oceanai.modules.lab.audio.Audio.__concat_pred
 #: oceanai.modules.lab.audio.Audio.__load_audio_model_b5
 #: oceanai.modules.lab.audio.Audio.__load_model_weights
@@ -191,20 +191,20 @@ msgstr ""
 msgid "Результат"
 msgstr ""
 
-#: c3cae5d1fa0d4144960891c57271f251
+#: 1ecdcd6bdd8342bfa474e6a015b4ff52
 #: oceanai.modules.lab.audio.Audio.__concat_pred:13 of
 msgid "Конкатенированные оценки по экспертным и нейросетевым признакам"
 msgstr ""
 
-#: 164416d9f5474be68cb4dc73305c3282 22820895710f48759f9ef4f446d177a8
-#: 39638b982ade45e38c8777c7706dfa0b 3a9ae279764b42f6bbbd9e0b639a7118
-#: 3c536274a8844238a149aba17d3bc333 4e5f7fc1d47b4fa09401627c0fe1085c
-#: 55921956e7d44ac882593446c53a4a46 7f97d66b09fa4f7fb8e89317eccf0a3f
-#: 80d97cd3736f4de4ab45715ccafc0d25 8aa3f4d40ac142ff966251484cc86834
-#: 98f1534e32034550b3c5cbd605345af8 d1b65adb8a9a4b8e9db605564288b80e
-#: dc69d39771884306834d75af96d2496e e0a28dc1d06b495582314cfb6557fc95
-#: e58869394f24469bbec0b6a3de69529d eeceda4b60e847fe930669c2613b2206
-#: f6bb83c7b2164dc0a907b5327c4feca9 f8ae2f0a1dca440387ca349b7d0a383e
+#: 05100fb1d5fe4279a0b4809c6086fee1 1174dcae059b49728f1e2c129cd471b5
+#: 1ebe3847d85e46c9b9666ef2c6b16652 1ec9325a8d9c46b7a97d3760b2de5379
+#: 21363f7b403d44a69cb8e4a7f8c74a01 481262eec4de4df48c61fa440c078d5e
+#: 70aa5d60718b40cc87d6392a6e75621c 8a401d47abbe4ae3b87632a5925852dc
+#: 913f61fe357a42a49cb864885606cf55 982b4ff49f0c41f9ad56abc9674fb88b
+#: a0cc9a1ea2774f1ead84d680edf0470f a7381ab4aec64990a7ba29eb145c94e8
+#: bcd03c96ce404f418f7e42d07f6a0f85 c71f0eca03154b439ca554586a9b13e2
+#: cbe788cc2774489e969c94b2547a9cd8 e26094759e10438cac723f2d9b42daf7
+#: f65a7453ff9548268a845041497dc821 ffaf458a0461422b97b79235506ec911
 #: oceanai.modules.lab.audio.Audio.__concat_pred
 #: oceanai.modules.lab.audio.Audio.__load_audio_model_b5
 #: oceanai.modules.lab.audio.Audio.__load_model_weights
@@ -226,13 +226,13 @@ msgstr ""
 msgid "Тип результата"
 msgstr ""
 
-#: 078d067612724ce5ac0df52cd2082970 195a20f586a844159c7ce977bc1e4906
-#: 19e858e6669d4868b349d0808a3e6923 1aa4c9db43844c6e96389a760bba1ee6
-#: 2b4c68016bbc40d0b52df2326f89a0ad 3dde2ffc348d4f3fb02ed89189f4f800
-#: 52c26b006b31422ea618921ffa37d5f4 57997de49c7c4c6ead2162500a91bc6a
-#: 7be5f49cf8144a789e67285e4765e64f 8978be0da3ff41a48c16a3f39afd110d
-#: 99a402acf87448b68fe45f1e2d6f0e49 d3f342d129e34c75aa5942a16946db8d
-#: d62e17e304854cc58aa0f4c87895c03b f055832204a14d13827e6927c9a98aea
+#: 0549d099e2834a9093996e77bbdfb122 2a3b1f90672c40d291d31ce89d88d1da
+#: 35b6aa6952564a2f9938a41b995faa3a 44b765bd9a0e42a4b93856ccff2c8d46
+#: 63b9018e8bd94c13adecb30e576c7a37 677e89367b4a43d3b8e2359966828b8b
+#: 714fc87720a1430aa6b8924e55896a3f 76a2a85d41424032b720dfe79059cc91
+#: 8ac1ed22ca074389984d39225e925834 97aab990908b4a30804b90b4bab145ab
+#: bc922db066c94a8583d9150def340acd ca8cbd2adcc84944877d27b88ad0f76c
+#: d9386cd69ce54f9f89435fcb0526d472 e08962f3e12441e5a00007feaafe07a4
 #: oceanai.modules.lab.audio.Audio.__concat_pred
 #: oceanai.modules.lab.audio.Audio.__load_audio_model_b5
 #: oceanai.modules.lab.audio.Audio.__load_model_weights
@@ -250,14 +250,14 @@ msgstr ""
 msgid "Примеры"
 msgstr ""
 
-#: 0557e32275db45e59692436d416885db 09865f259f2d47e286010145bd0ead30
-#: 324af004c1a94b1cb7876468b14fff4d 42c9dc362f074fa5846dcf585c708c2f
-#: 4ae18674ecd7434987bdd42cd3b6e949 54af456dd8ec47f783283e7f8ff18d04
-#: 5801fe2cc88b405984df026c38d58bc8 8058c1bb253d4e39bb16ab080f46c96d
-#: 9235f3e14ea84dcd9acc972f895e778d 98a82f4775f640f9befb233e48a3d2a0
-#: 9f5163ebae544f2999963af01516c49d aec0e25dab4844c1bf016c5cd5fd2ed7
-#: b11b3feb225b45b1a54498be5b4c7f2f ccf4432458f9451095c386272df132ac
-#: d37a1e03f07949808f9beda5f1bdbf1c fbfe426ee29d464cb24efd9d1b1a8674
+#: 09c0c15156cc47c8a905b233c8b87ff2 13f7b12c752d4c46b2167679d1363479
+#: 1a0fb5c7280b4e03a2d3b10e9227ca65 27efd6afd11d4ccda87d016f16b1220b
+#: 2a76f932f8514913a93a53dd27406bdd 300adfeb5ae14301808c36a5ac885072
+#: 473dc77fb4124cdeaa5049b288064743 7200caaac95a4250bb78f667ceab6ec9
+#: 76662f4a4f69485bb0f36c1bbf625161 7f2196aa8873438993e22d7c78ab7fcb
+#: 7fc818fc85c442f5bfc916334603df4f b65cfd561cb1426a84fd4a5dc152618a
+#: c5cf8bb8dc6e4ae28e5372a2c8f83208 cf73d2ad3b3a40659f0a4f1d12361b64
+#: e7068b04757a48f999663f5efe65af45 f9425051a4f0499ead209fbfc8a88a23
 #: oceanai.modules.lab.audio.Audio.__concat_pred:19
 #: oceanai.modules.lab.audio.Audio.__load_audio_model_b5:18
 #: oceanai.modules.lab.audio.Audio.__load_model_weights:25
@@ -277,7 +277,7 @@ msgstr ""
 msgid ":bdg-success:`Верно` :bdg-light:`-- 1 --`"
 msgstr ""
 
-#: 9d73f630713048d3bfb9272e433dffa3
+#: c54dd341dc1148d6b76665376cf3bb72
 #: oceanai.modules.lab.audio.Audio.__concat_pred:21 of
 msgid ""
 "import numpy as np\n"
@@ -302,7 +302,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 2e208dff1e9748d8a7b74ff443eb9620
+#: 76c73f0092844cbd9b9279280ffd9c6a
 #: oceanai.modules.lab.audio.Audio.__concat_pred:47 of
 msgid ""
 "[\n"
@@ -354,13 +354,13 @@ msgid ""
 "]"
 msgstr ""
 
-#: 007830255d4c40fbb819d751c41a22b3 126c10a91f4a4e52856f49e5ae12fa00
-#: 22d5bad8658b484daef8f6be73cb1244 239cf2ee50414c58ab406a261d2de674
-#: 3915212ac1ae440fac2941cdac0e7484 615cb4994dcb42a08f37dec54f04f085
-#: 798ce2f18e014d12b42c07b7197acbc3 8c817a81152c4451ad42f4ad298e329f
-#: 8fad5aaa430a4f29afeaff82b5ea1ff3 956ef5b2ec9a49a2a17ec703ef2bd537
-#: 960e9e1424364aeabbce6268f83c9e14 9ddeac873dc14f6c98164ed1dce52cb2
-#: e7e2f14b2e4e42baac688a24ecc6f2ad
+#: 0596783e85f1435fad0df1a71d51b9d5 05b6e5b8fbe14b5b948d2b9c78cfcb5b
+#: 1bc275d157034d3fba919abef0179986 1f8069de91f445b19add80d735942e21
+#: 258ce15ceee247e5b2e0da660b51c9ce 2c18de90c3c04a3698d566ac90e651ed
+#: 2cf259cc700847589cd1100910fe4f01 5d56ad8e6de741959bf8db3a961e78cd
+#: 64a20e26beab4a27b3956186cb2411aa 77f4d8792c3147968403c10fe687608f
+#: 99df0a3a50cb4358a452c9afb0bbac1a b8c5a3f5404e4ae38733a6c2daeb8e9f
+#: c4151997e18b4535a114fd86887ee8ec
 #: oceanai.modules.lab.audio.Audio.__concat_pred:100
 #: oceanai.modules.lab.audio.Audio.__load_audio_model_b5:54
 #: oceanai.modules.lab.audio.Audio.__load_model_weights:89
@@ -377,7 +377,7 @@ msgstr ""
 msgid ":bdg-danger:`Ошибка` :bdg-light:`-- 1 --`"
 msgstr ""
 
-#: 88476cdb7fcb417087d03b7ef715e8cb
+#: 171a97ba81df4d78b6d1b5f666469e76
 #: oceanai.modules.lab.audio.Audio.__concat_pred:102 of
 msgid ""
 "import numpy as np\n"
@@ -402,7 +402,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 6e820e239925447d9a741cd288fc5109
+#: 062ef67afe3f47cc9f9c9fa602139da9
 #: oceanai.modules.lab.audio.Audio.__concat_pred:128 of
 msgid ""
 "[2022-10-20 22:33:31] Что-то пошло не так ... конкатенация оценок по "
@@ -412,22 +412,22 @@ msgid ""
 "[]"
 msgstr ""
 
-#: 1aa89dabfaa14301b4182ba2581097e7
+#: 730a738dd53e463b8310efcb0a883292
 #: oceanai.modules.lab.audio.Audio.__load_audio_model_b5:1 of
 msgid ""
 "Формирование нейросетевой архитектуры модели для получения результата "
 "оценки персонального качества"
 msgstr ""
 
-#: 01a95b554fed4d0488e4b3dc1bf45c8d 545b4c068f4b484fb51a729300aaae77
-#: e5cd245ced7d4de8b1a9d16fb29394db
+#: 2e44f630455d4d10b88a74f2c3626c67 48822e3c867c4e899bd0751001c6253a
+#: c1b7d51558b44fc1b6db697e300dea5b
 #: oceanai.modules.lab.audio.Audio.__load_audio_model_b5:6
 #: oceanai.modules.lab.audio.Audio.load_audio_model_hc:3
 #: oceanai.modules.lab.audio.Audio.load_audio_model_nn:3 of
 msgid "Отображение сформированной нейросетевой архитектуры модели"
 msgstr ""
 
-#: 5ccdfa5077114bc38e2afdfb78f9c763
+#: 5d5faf584e2e4aacb7ca9c9f8425f736
 #: oceanai.modules.lab.audio.Audio.__load_audio_model_b5:11 of
 msgid ""
 "**None** если неверные типы или значения аргументов, в обратном случае "
@@ -435,7 +435,7 @@ msgid ""
 "персонального качества"
 msgstr ""
 
-#: 07975d83abd84bccb520176683899a00
+#: 7b3ea0ec9df349f7a461c54ac6127197
 #: oceanai.modules.lab.audio.Audio.__load_audio_model_b5:20 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -447,7 +447,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 830c706cdbff4d078a94e905abcbbe96
+#: b413de46525349daa8374af5d9dac2f8
 #: oceanai.modules.lab.audio.Audio.__load_audio_model_b5:33 of
 msgid ""
 "Model: \"model\"\n"
@@ -465,10 +465,10 @@ msgid ""
 "Trainable params: 33\n"
 "Non-trainable params: 0\n"
 "_________________________________________________________________\n"
-"<keras.engine.functional.Functional at 0x13d442940>"
+"<tf.keras.Model at 0x13d442940>"
 msgstr ""
 
-#: 9a1df98b778e478d8bd3da72fc937e8e
+#: efb60b88da91461281d6c609745d0e7c
 #: oceanai.modules.lab.audio.Audio.__load_audio_model_b5:56 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -480,44 +480,44 @@ msgid ""
 ")"
 msgstr ""
 
-#: 8d0f84a51bc848c7910053f489f9bc9b
+#: afcacadc10d347ebad5be91eddc24ded
 #: oceanai.modules.lab.audio.Audio.__load_audio_model_b5:69 of
 msgid ""
 "[2022-10-17 10:53:03] Неверные типы или значения аргументов в "
 "\"Audio.__load_audio_model_b5\" ..."
 msgstr ""
 
-#: 7438ae38b1b346f487379c0d50bd63b5
+#: 91437e2ed6e446349570a4c0f2e534a3
 #: oceanai.modules.lab.audio.Audio.__load_model_weights:1 of
 msgid "Загрузка весов нейросетевой модели"
 msgstr ""
 
-#: 5376c45b08594e0fbe8573a40356a92e d84544436f5043939456b8d1bd219b50
-#: fe73ecefe2ed4d18bbf1e9ac1271a6c4
+#: 1388b5811f8d46d08bc045e23694dc4c 38fc6ee0e950400da2d1737846e0a675
+#: 8b90de4317364c0f97e9bae5e6a1eccc
 #: oceanai.modules.lab.audio.Audio.__load_model_weights:6
 #: oceanai.modules.lab.audio.Audio.load_audio_model_weights_hc:3
 #: oceanai.modules.lab.audio.Audio.load_audio_model_weights_nn:3 of
 msgid "Полный путь к файлу с весами нейросетевой модели"
 msgstr ""
 
-#: 4a5a14cf06a14a69b9da10018c217986 80069bbbb6194bb48bcb84b15f0cb312
-#: f52986ca7c5646418b50a74a1b4cfd61
+#: 59a8dbd29b504e9e8f8b0dc25d0fdc94 7e50d681445b43feb0f6c5796797f900
+#: bc2abe4ef0134178bb84ab1f93dfccb6
 #: oceanai.modules.lab.audio.Audio.__load_model_weights:8
 #: oceanai.modules.lab.audio.Audio.load_audio_model_weights_hc:5
 #: oceanai.modules.lab.audio.Audio.load_audio_model_weights_nn:5 of
 msgid "Принудительная загрузка файла с весами нейросетевой модели из сети"
 msgstr ""
 
-#: 1329735d5629466594f136f8ed91e4b3
+#: ac33f253f4f0473ea95bff62671ef3ec
 #: oceanai.modules.lab.audio.Audio.__load_model_weights:10 of
 msgid "Текст для информационного сообщения"
 msgstr ""
 
-#: 126ef994c9dc4fe38a35012f86043be0 2509cc90101d4a1eb31384cc482481f6
-#: 28f824cec94145d192de83fed7388972 3522457e946f437c865648a149435e57
-#: 3e6afee059354b3a844554d90d9f6101 4bd3ef7675f3447b8363f8f0036804f8
-#: 9bd8d72fe4d14d0d945e0d495ed22c4e ab2598bb629c47a58683f54eedcd8f9b
-#: b75d57883cad44af8c3c274d8b3b7bff e02e75ee56254ec28b347bb851faf9a9
+#: 067819b9df7d4a6ea21097b18a8664e6 119910d9f97240f38a89eff4d80baae4
+#: 4e6e53be25064ad19438e3624a18d2f7 5a21b94d51414764a7a87c008fe3a90b
+#: 5fd19038ffd9438ab7554a6e6482ae76 be9748c599e6469c8529f0ebd6682f9a
+#: d093184ee99a48d4bc47069a118140a2 d965377febe540979233e647d4a4668a
+#: ec031fe449994c7292bc6ae29d01521a fd4ff38ddf964a6f9aa7d62b54f30325
 #: oceanai.modules.lab.audio.Audio.__load_model_weights:14
 #: oceanai.modules.lab.audio.Audio._get_acoustic_features:18
 #: oceanai.modules.lab.audio.Audio.get_acoustic_features:13
@@ -531,11 +531,11 @@ msgstr ""
 msgid "Подсчет времени выполнения"
 msgstr ""
 
-#: 092127cc5ba3418391417aa5b691e550 15387227e2ee40189860730ab3e76ea2
-#: 3b7c072da47a4d6ea153f19b60c73ee6 5bb9941ef7fb4a65b3d840a5e558bcc5
-#: 731340a5b2624c0a897585da68a22efa 77b7b39d86354af39648bb05c462e885
-#: a7e1a652f3284f8a801a528a5d462cb0 b600857cc71d409783fd345936e390cd
-#: de233e3ee0cc4627a3d1ed35017dfa9e e4ec04bf13ae4c3a80ac956514ce0642
+#: 0a028f0079fc4c81b2926d56a9cb5fe3 119c949aa60641baa8e540e8ada6cddb
+#: 2752dcbd0b0c462db8b34b9f78815c5b 3a4abbc81fbc487faab2c5e123b4bbb3
+#: 5b854af79e964ca0bfeda4326b7e9058 634e73afae0249b78e93ec741207c4a4
+#: 6fbaa11050bc47d687f10939d05300d9 d0a613217c1b46bab869563885364040
+#: d212bb9b93f0442ba4d887495dd7aa6c fc9f6b37a86f4e06a4af72702fc6482a
 #: oceanai.modules.lab.audio.Audio.__load_model_weights:16
 #: oceanai.modules.lab.audio.Audio._get_acoustic_features:20
 #: oceanai.modules.lab.audio.Audio.get_acoustic_features:15
@@ -549,8 +549,8 @@ msgstr ""
 msgid "Блокировка выполнения"
 msgstr ""
 
-#: 80a6bcdc21964bd2bddb7d0c3374a429 f7addeec0bce4496bb06153032786239
-#: fc2bc5244eb941e28094f7e5da21a169
+#: 7e8b1378b1bb4dab937525c54c975b07 aadd0b479e614619b074787262e7c624
+#: e71a2d2121b04354a328a71179028be3
 #: oceanai.modules.lab.audio.Audio.__load_model_weights:19
 #: oceanai.modules.lab.audio.Audio.load_audio_model_weights_hc:14
 #: oceanai.modules.lab.audio.Audio.load_audio_model_weights_nn:14 of
@@ -559,7 +559,7 @@ msgid ""
 "**False**"
 msgstr ""
 
-#: b516fa9a44da4cc999f8398a72166608
+#: c61c0205fef040a8a463c4354e448fba
 #: oceanai.modules.lab.audio.Audio.__load_model_weights:27 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -579,7 +579,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 483a00ccf807403283d5cc9fc6a6e970
+#: f1b8ed3f356644528eebf3a7c8185db5
 #: oceanai.modules.lab.audio.Audio.__load_model_weights:46 of
 msgid ""
 "[2022-10-17 12:21:48] Загрузка весов нейросетевой модели\n"
@@ -592,13 +592,13 @@ msgid ""
 "True"
 msgstr ""
 
-#: 2ab98ff308b345eebbef529a055ae4ab a5070ce0d59b4a18a31befba02caf781
+#: 50eba4f950654619967a9f5043cdd907 d87b81c619194cbc9bddace3abffc08f
 #: oceanai.modules.lab.audio.Audio.__load_model_weights:58
 #: oceanai.modules.lab.audio.Audio._get_acoustic_features:97 of
 msgid ":bdg-light:`-- 2 --`"
 msgstr ""
 
-#: 8031d3be409546cbb4f30801cc8ecc01
+#: bf741687e0ca461e8e8d0b8470c80433
 #: oceanai.modules.lab.audio.Audio.__load_model_weights:60 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -616,7 +616,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 314519fed08249888bd68f1de16c8ad9
+#: 138752f08e7b40288c6452658358f831
 #: oceanai.modules.lab.audio.Audio.__load_model_weights:79 of
 msgid ""
 "[2022-10-17 12:21:50] Загрузка весов нейросетевой модели\n"
@@ -626,7 +626,7 @@ msgid ""
 "True"
 msgstr ""
 
-#: bd3a08bbb0a44ee3a3075979d8c27dd5
+#: d59723925a4341d28c1e0eee45c7e6be
 #: oceanai.modules.lab.audio.Audio.__load_model_weights:91 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -645,7 +645,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 449b2b1265504a62b18f2114e343e029
+#: dfde40a3537f4a60857df20e255957cb
 #: oceanai.modules.lab.audio.Audio.__load_model_weights:109 of
 msgid ""
 "[2022-10-17 12:21:57] Неверные типы или значения аргументов в "
@@ -654,27 +654,27 @@ msgid ""
 "False"
 msgstr ""
 
-#: 96ac0e308699440c8b729b5f0c12b860
+#: a40248cb0e8c44178e112c95fc64a3d8
 #: oceanai.modules.lab.audio.Audio.__norm_pred:1 of
 msgid "Нормализация оценок по экспертным и нейросетевым признакам"
 msgstr ""
 
-#: 92adccac53a2486cb00f4458cb1e4418
+#: 90a03ca5ec774da18128ad84a81a0194
 #: oceanai.modules.lab.audio.Audio.__norm_pred:6 of
 msgid "Оценки"
 msgstr ""
 
-#: 81584252e9bc42798c4787cb8ea89573
+#: 988164f661124596b9b3195a16e7835e
 #: oceanai.modules.lab.audio.Audio.__norm_pred:8 of
 msgid "Максимальный размер вектора оценок"
 msgstr ""
 
-#: 46bec869de5241fa9a12e5c0b219641f
+#: 4a2dd165caac436eba945bd0a72438cd
 #: oceanai.modules.lab.audio.Audio.__norm_pred:13 of
 msgid "Нормализованные оценки по экспертным и нейросетевым признакам"
 msgstr ""
 
-#: 09b48dd6e8264d899186f0562268ac92
+#: 6db0865df9ce4eabb1efd00730b9c440
 #: oceanai.modules.lab.audio.Audio.__norm_pred:21 of
 msgid ""
 "import numpy as np\n"
@@ -694,7 +694,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: ca873c5be88847dc90b4df2a62ce1466
+#: 770e1a91fc3744d4995c9d8045744d5e
 #: oceanai.modules.lab.audio.Audio.__norm_pred:42 of
 msgid ""
 "array([\n"
@@ -705,7 +705,7 @@ msgid ""
 "])"
 msgstr ""
 
-#: 1203e9f3ce9f46639d4db2516bc47129
+#: f2e6658a5ac5410b882d055b427109fb
 #: oceanai.modules.lab.audio.Audio.__norm_pred:56 of
 msgid ""
 "import numpy as np\n"
@@ -722,7 +722,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: d1e23eab5c124899ad0fed274dc4b588
+#: 6ad6c53286024a929c0c4ccf79aab594
 #: oceanai.modules.lab.audio.Audio.__norm_pred:74 of
 msgid ""
 "[2022-10-20 22:03:17] Неверные типы или значения аргументов в "
@@ -731,24 +731,24 @@ msgid ""
 "array([], dtype=float64)"
 msgstr ""
 
-#: 2cd12b322d384207b75bbf290d519468 oceanai.modules.lab.audio.Audio.__smile:1
+#: 77ff2375795e4b85b396d71bc2183a00 oceanai.modules.lab.audio.Audio.__smile:1
 #: of
 msgid "Извлечение функций OpenSmile"
 msgstr ""
 
-#: d050678ea5af4179aa564ff4252a5734 e15f1f9f3a4e4f8b8a94f05ca2601305
+#: e08f99c04a6b43bd94345de434552636 e1feaa9907e241c3a4501927298d5b82
 #: oceanai.modules.lab.audio.Audio.__smile:6
 #: oceanai.modules.lab.audio.Audio.smile_:3 of
 msgid "Извлеченные функции OpenSmile"
 msgstr ""
 
-#: 8f493d0eed844e71afd00830720ea22c e98149738b114bcb82b3f162c3835c33
+#: 442297c20d1a465ca7264c24cb6be725 a77da9ac290e4299b0f28e8c47f580b2
 #: oceanai.modules.lab.audio.Audio.__smile
 #: oceanai.modules.lab.audio.Audio.smile_ of
 msgid "Пример"
 msgstr ""
 
-#: fb3fb039e2524504a92750015346dde6 oceanai.modules.lab.audio.Audio.__smile:14
+#: 53023c0709ee476da13af5c8b323bb6c oceanai.modules.lab.audio.Audio.__smile:14
 #: of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -757,7 +757,7 @@ msgid ""
 "audio._Audio__smile()"
 msgstr ""
 
-#: ce5c4a88b7a646a08848659ee8176e1e cff2e034708542cd8518fe8ad9092392
+#: 7e077aeccdf6469b9786be13cf93cc99 c3a1b4f2e7c6414583aff1aebbc7920e
 #: oceanai.modules.lab.audio.Audio.__smile:24
 #: oceanai.modules.lab.audio.Audio.smile_:21 of
 msgid ""
@@ -774,54 +774,54 @@ msgid ""
 "}"
 msgstr ""
 
-#: 3f8337aa37554510a98fea2b95a7a794
+#: a9f21568285f48c4af7940a7c8e8f966
 #: oceanai.modules.lab.audio.Audio._get_acoustic_features:1 of
 msgid ""
 "Извлечение признаков из акустического сигнала (без очистки истории вывода"
 " сообщений в ячейке Jupyter)"
 msgstr ""
 
-#: d1af87c208ba4b56881416b92d6a09d3
+#: 69f1d8dfb77043a883576c5f78231c26
 #: oceanai.modules.lab.audio.Audio._get_acoustic_features:4 of
 msgid "protected (защищенный метод)"
 msgstr ""
 
-#: 02684c270b6b4990944044c9ab639f5f 906420ec1b9c44cfa7bf12fed773d110
+#: 4a55024756d948edb665f613ab038914 aaef83ee38954809a50de5967e47ffdf
 #: oceanai.modules.lab.audio.Audio._get_acoustic_features:6
 #: oceanai.modules.lab.audio.Audio.get_acoustic_features:3 of
 msgid "Путь к аудио или видеофайлу"
 msgstr ""
 
-#: 0045eeb5f56f4c84a58bad5abd3f57e8 6eef103bdcb745dab43a984958c28ffc
-#: fa9dd93c930548b7b7239016f2fd78bb
+#: 3cd146037be1488bbebf617d5674c6ca 5a0d08bafdc44eca8763c6355fd944eb
+#: f6e2aeac19924def8a4cb3160b5d6a92
 #: oceanai.modules.lab.audio.Audio._get_acoustic_features:8
 #: oceanai.modules.lab.audio.Audio.get_acoustic_features:5
 #: oceanai.modules.lab.audio.Audio.get_audio_union_predictions:7 of
 msgid "Частота дискретизации"
 msgstr ""
 
-#: 433fc56c7d8d418786c049cc4bda1b3f a4be8d0652624b51a8465f2bd8063473
-#: c965f8d4d6dd4c6a90ae4c7e18220c82
+#: 82a8e4a0b1f04f2183d29c000d38c43b 8b7b65472edc4b3fb52a39694b669494
+#: 9eca0907df6644cc80f60b57134901cd
 #: oceanai.modules.lab.audio.Audio._get_acoustic_features:10
 #: oceanai.modules.lab.audio.Audio.get_acoustic_features:7
 #: oceanai.modules.lab.audio.Audio.get_audio_union_predictions:9 of
 msgid "Размер окна сегмента сигнала (в секундах)"
 msgstr ""
 
-#: 4359178ed9574e579da60d1aa63e0010 5588f138c2464ca6a285cfd6fef48f1c
-#: d7cbf84e9dd045c6afed90a9514f5753
+#: 02f1e2d4e13e477594e4e3f39f2bce8a 8ea216add9d64d729e456578f7610eb0
+#: b5cf3b44be6e4b838dbd47e878af48a4
 #: oceanai.modules.lab.audio.Audio._get_acoustic_features:12
 #: oceanai.modules.lab.audio.Audio.get_acoustic_features:9
 #: oceanai.modules.lab.audio.Audio.get_audio_union_predictions:11 of
 msgid "Шаг сдвига окна сегмента сигнала (в секундах)"
 msgstr ""
 
-#: b857fc7c27eb446fa802b47d804d0c63
+#: 44666b3881c8417792a1a3cd9942bbca
 #: oceanai.modules.lab.audio.Audio._get_acoustic_features:14 of
 msgid "Замена последнего сообщения"
 msgstr ""
 
-#: 288871946db14c37b5a6bdc1383a61f0 d1d296145b2d4c8389c7d35f91a34756
+#: b563e317fe5742e9ada471b0fb03a35d e719b97df9ff45379cb251933f724ee2
 #: oceanai.modules.lab.audio.Audio._get_acoustic_features:23
 #: oceanai.modules.lab.audio.Audio.get_acoustic_features:18 of
 msgid ""
@@ -829,25 +829,25 @@ msgid ""
 "Список с лог мел-спектрограммами"
 msgstr ""
 
-#: 1888174e3f7a46feacf54e78ecb2fbf5 e6684bbc34c74e06981c817a5199a375
+#: 04d579bcd0b6486eb8c0cb062f69b426 1b71dffb7fe94136b386da943a77e2e9
 #: oceanai.modules.lab.audio.Audio._get_acoustic_features:25
 #: oceanai.modules.lab.audio.Audio.get_acoustic_features:20 of
 msgid "Кортеж с двумя списками:"
 msgstr ""
 
-#: ae92c422df234a7eae140e823f8d80eb cc2b316507554951908eba73a4c6c40e
+#: 622a7cfb8b1d46f4a2ac02210bd91dc9 f1e8bd6e74664d7099059fa7c4e033d6
 #: oceanai.modules.lab.audio.Audio._get_acoustic_features:27
 #: oceanai.modules.lab.audio.Audio.get_acoustic_features:22 of
 msgid "Список с экспертными признаками"
 msgstr ""
 
-#: a0ccba02ae99473194fb537230d0a213 fc4850ec42294962b9feabb829cc6feb
+#: ac09eefca42d4c4fae2aa004315bb75e fe020a4c0ebb4e07a6bf68b05b9f34b0
 #: oceanai.modules.lab.audio.Audio._get_acoustic_features:28
 #: oceanai.modules.lab.audio.Audio.get_acoustic_features:23 of
 msgid "Список с лог мел-спектрограммами"
 msgstr ""
 
-#: ee24258567d24e0ca19627db97171b04
+#: 7113dad2aeb24140bf6e0ed889f53536
 #: oceanai.modules.lab.audio.Audio._get_acoustic_features:36 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -867,7 +867,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 040ac2ba29504b5c89cfefadde936fcc
+#: 2dcfd43bcc924dc9bbde5690a1205e2f
 #: oceanai.modules.lab.audio.Audio._get_acoustic_features:55 of
 msgid ""
 "[2022-10-19 14:58:19] Извлечение признаков (экспертных и лог "
@@ -885,12 +885,12 @@ msgid ""
 "--- Время выполнения: 1.273 сек. ---"
 msgstr ""
 
-#: c7088135dece4086894e984dc52d3909
+#: 3e6be619783a44baa5df35e4a28f7436
 #: oceanai.modules.lab.audio.Audio._get_acoustic_features:70 of
 msgid ":bdg-danger:`Ошибки` :bdg-light:`-- 1 --`"
 msgstr ""
 
-#: cf2fe0dc88d044ca98126b17e0dc5b09
+#: 6cbb36c5847142b3bdb08266029e0c3e
 #: oceanai.modules.lab.audio.Audio._get_acoustic_features:72 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -910,14 +910,14 @@ msgid ""
 ")"
 msgstr ""
 
-#: 3a265ebe2cd6457a838fca24ddeeaf15
+#: 715a1c748351466cae87d6ee8ab5aa45
 #: oceanai.modules.lab.audio.Audio._get_acoustic_features:91 of
 msgid ""
 "[2022-10-19 15:33:04] Неверные типы или значения аргументов в "
 "\"Audio._get_acoustic_features\" ..."
 msgstr ""
 
-#: 6fb86eccea2b499cbe4acae777b38cd3
+#: 0a637da0869e4d66b82deaafd2e80b32
 #: oceanai.modules.lab.audio.Audio._get_acoustic_features:99 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -937,7 +937,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 0bcb411f93fc4d17b703d788e6ce87d1
+#: 8b8eaf6f19bb4979b120cc8c81348dcc
 #: oceanai.modules.lab.audio.Audio._get_acoustic_features:118 of
 msgid ""
 "[2022-10-19 15:34:38] Извлечение признаков (экспертных и лог "
@@ -954,20 +954,20 @@ msgid ""
 "--- Время выполнения: 0.049 сек. ---"
 msgstr ""
 
-#: 6e0374cc2de1443cb107f37d2e5dc15d
+#: 8b81be3e8535449387a0befecbd5e7bb
 #: oceanai.modules.lab.audio.Audio.audio_model_hc_:1 of
 msgid ""
 "Получение нейросетевой модели **tf.keras.Model** для получения оценок по "
 "экспертным признакам"
 msgstr ""
 
-#: 3dd350754d0f4cf18edc991f5f256e6c e76cf9193e8a41358b8ba02f326b9507
+#: bcd1e68f5853427c991721a6af5c06c5 e6dbb1b53c564c36b17592d4a555a527
 #: oceanai.modules.lab.audio.Audio.audio_model_hc_:3
 #: oceanai.modules.lab.audio.Audio.audio_model_nn_:3 of
 msgid "Нейросетевая модель **tf.keras.Model** или None"
 msgstr ""
 
-#: fc5a317321d74e03a4bef50b13783ac9
+#: bc8ec06b384a49e5a4966b75c4a237f2
 #: oceanai.modules.lab.audio.Audio.audio_model_hc_:11 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -982,7 +982,7 @@ msgid ""
 "audio.audio_model_hc_"
 msgstr ""
 
-#: 238ead06354e40bdbf46e335f0827e40
+#: c6658076a5024fefaf9df809d7f287d2
 #: oceanai.modules.lab.audio.Audio.audio_model_hc_:27 of
 msgid ""
 "[2022-10-17 13:54:35] Формирование нейросетевой архитектуры модели для "
@@ -990,10 +990,10 @@ msgid ""
 "\n"
 "--- Время выполнения: 0.509 сек. ---\n"
 "\n"
-"<keras.engine.functional.Functional at 0x13dd600a0>"
+"<tf.keras.Model at 0x13dd600a0>"
 msgstr ""
 
-#: c6418f9f0b844d959e241f8c11cc06a6
+#: a2fdf92414d04954bfb9a4ef038921e9
 #: oceanai.modules.lab.audio.Audio.audio_model_hc_:39 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -1003,14 +1003,14 @@ msgid ""
 "audio.audio_model_hc_"
 msgstr ""
 
-#: 8275077e4d074567a4e13cfb358c3e58
+#: 6673457ce50645f390dbf5aa78f0dfc4
 #: oceanai.modules.lab.audio.Audio.audio_model_nn_:1 of
 msgid ""
 "Получение нейросетевой модели **tf.keras.Model** для получения оценок по "
 "нейросетевым признакам"
 msgstr ""
 
-#: 2fa5bbb61038478bbcc214fd29504ee9
+#: 515134cebfa14703bd65f4c790011c00
 #: oceanai.modules.lab.audio.Audio.audio_model_nn_:11 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -1025,7 +1025,7 @@ msgid ""
 "audio.audio_model_nn_"
 msgstr ""
 
-#: 30068815972e4ad386f96e9a0da5f71a
+#: 10cb3a1101444bb0ade566726a2b3da8
 #: oceanai.modules.lab.audio.Audio.audio_model_nn_:27 of
 msgid ""
 "[2022-10-17 13:58:29] Формирование нейросетевой архитектуры для получения"
@@ -1033,10 +1033,10 @@ msgid ""
 "\n"
 "--- Время выполнения: 0.444 сек. ---\n"
 "\n"
-"<keras.engine.functional.Functional at 0x13db97760>"
+"<tf.keras.Model at 0x13db97760>"
 msgstr ""
 
-#: a09c4650b855444f900e675aeea1feee
+#: 1bae6bb8031f4fee8582f7d068ec0c9f
 #: oceanai.modules.lab.audio.Audio.audio_model_nn_:39 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -1046,19 +1046,19 @@ msgid ""
 "audio.audio_model_nn_"
 msgstr ""
 
-#: 0c5238ca7e6a4e80875abb5a0039e6af
+#: f1f587fab7be4c11b679079f7349f72f
 #: oceanai.modules.lab.audio.Audio.audio_models_b5_:1 of
 msgid ""
 "Получение нейросетевых моделей **tf.keras.Model** для получения "
 "результатов оценки персональных качеств"
 msgstr ""
 
-#: 0ac3d7bb45f8491797901857253dfcf9
+#: 993eadf9d3f24fd6a81e520efde8da37
 #: oceanai.modules.lab.audio.Audio.audio_models_b5_:3 of
 msgid "Словарь с нейросетевыми моделями **tf.keras.Model**"
 msgstr ""
 
-#: d359e92c23584f29ae2b281618e32482
+#: 9d62c767e2e343fc9b91fb49731775a4
 #: oceanai.modules.lab.audio.Audio.audio_models_b5_:11 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -1073,7 +1073,7 @@ msgid ""
 "audio.audio_models_b5_"
 msgstr ""
 
-#: 43f52511a78b4631a458d6fc75a57458
+#: a3bb2cc595d14ff78b216201b559bd72
 #: oceanai.modules.lab.audio.Audio.audio_models_b5_:27 of
 msgid ""
 "[2022-10-19 15:45:35] Формирование нейросетевых архитектур моделей для "
@@ -1083,17 +1083,15 @@ msgid ""
 "--- Время выполнения: 0.07 сек. ---\n"
 "\n"
 "{\n"
-"    'openness': <keras.engine.functional.Functional at 0x1481e03a0>,\n"
-"    'conscientiousness': <keras.engine.functional.Functional at "
-"0x147d13520>,\n"
-"    'extraversion': <keras.engine.functional.Functional at 0x1481edfa0>,\n"
-"    'agreeableness': <keras.engine.functional.Functional at 0x1481cfc40>,"
-"\n"
-"    'neuroticism': <keras.engine.functional.Functional at 0x1481cffd0>\n"
+"    'openness': <tf.keras.Model at 0x1481e03a0>,\n"
+"    'conscientiousness': <tf.keras.Model at 0x147d13520>,\n"
+"    'extraversion': <tf.keras.Model at 0x1481edfa0>,\n"
+"    'agreeableness': <tf.keras.Model at 0x1481cfc40>,\n"
+"    'non_neuroticism': <tf.keras.Model at 0x1481cffd0>\n"
 "}"
 msgstr ""
 
-#: e794b5eea9904f6fa2245782e42cf0e1
+#: 39261103e3d64252a2b41c9f2368cb4c
 #: oceanai.modules.lab.audio.Audio.audio_models_b5_:46 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -1103,7 +1101,7 @@ msgid ""
 "audio.audio_models_b5_"
 msgstr ""
 
-#: 829cd61df837490e9e4566e17f9bac3f
+#: 13bb86a332d8411c886cebddb95e674a
 #: oceanai.modules.lab.audio.Audio.audio_models_b5_:57 of
 msgid ""
 "{\n"
@@ -1111,72 +1109,72 @@ msgid ""
 "    'conscientiousness': None,\n"
 "    'extraversion': None,\n"
 "    'agreeableness': None,\n"
-"    'neuroticism': None\n"
+"    'non_neuroticism': None\n"
 "}"
 msgstr ""
 
-#: 61658beba2f84b128fcf8c1933fd8cba
+#: 01c9a5046be2474e92bd2e842501f91c
 #: oceanai.modules.lab.audio.Audio.get_acoustic_features:1 of
 msgid "Извлечение признаков из акустического сигнала"
 msgstr ""
 
-#: 5be74554812047608a085727b8748bf5
+#: c3ca5235bf544778bb157d0ddcfd3035
 #: oceanai.modules.lab.audio.Audio.get_acoustic_features:26 of
 msgid ""
 ":bdg-link-light:`Пример <../../user_guide/notebooks/Audio-"
 "get_acoustic_features.ipynb>`"
 msgstr ""
 
-#: d85daa7ac444422fafb5b1d33d16b9d5
+#: 9862555ef18c4617aeb01aa0ecc33c49
 #: oceanai.modules.lab.audio.Audio.get_audio_union_predictions:1 of
 msgid "Получения прогнозов по аудио"
 msgstr ""
 
-#: f828a038402e4458a83757721564f6ab
+#: dbe6606714cd43568052ea323f7d426b
 #: oceanai.modules.lab.audio.Audio.get_audio_union_predictions:3 of
 msgid "Глубина иерархии для получения данных"
 msgstr ""
 
-#: c761ff8c576c4d87bbcd2a5ace1d4eae
+#: 0f869771c72949d28e77c24a93fabb6d
 #: oceanai.modules.lab.audio.Audio.get_audio_union_predictions:5 of
 msgid "Рекурсивный поиск данных"
 msgstr ""
 
-#: a8c5f7379f204ef499ebb3b30cf5a5c3
+#: 6115f001a79f4e21b64515099d599f99
 #: oceanai.modules.lab.audio.Audio.get_audio_union_predictions:13 of
 msgid "Вычисление точности"
 msgstr ""
 
-#: 32f82e8958294ba6927fd5c070d132f5
+#: c15333f979654f71b8158d06c7832bf9
 #: oceanai.modules.lab.audio.Audio.get_audio_union_predictions:15 of
 msgid "Полный путь к файлу с верными предсказаниями для подсчета точности"
 msgstr ""
 
-#: 91961211c46d4690856d72eb637f3632
+#: 8cbc7f1b5057448d8f53057d36649cec
 #: oceanai.modules.lab.audio.Audio.get_audio_union_predictions:17 of
 msgid "При необходимости формировать LOG файл"
 msgstr ""
 
-#: d0bcdf010e9a4820bbad337934b0ef02
+#: dec75044ed5c4a3ba71fbd9afc1efb87
 #: oceanai.modules.lab.audio.Audio.get_audio_union_predictions:26 of
-msgid "**True** если веса прогнозы успешно получены, в обратном случае **False**"
+msgid "**True** если прогнозы успешно получены, в обратном случае **False**"
 msgstr ""
 
-#: f8aa558a41fd4b55903109f03e514504
+#: 855d00919d3848cc8aee6caa90b3358f
 #: oceanai.modules.lab.audio.Audio.get_audio_union_predictions:29 of
 msgid ""
 ":bdg-link-light:`Пример <../../user_guide/notebooks/Audio-"
 "get_audio_union_predictions.ipynb>`"
 msgstr ""
 
-#: 09f177e5cc964688804e49f8c2e0646d
+#: e22ca01ba6fc459b9441550697ee1097
 #: oceanai.modules.lab.audio.Audio.load_audio_model_hc:1 of
 msgid ""
 "Формирование нейросетевой архитектуры модели для получения оценок по "
 "экспертным признакам"
 msgstr ""
 
-#: c29dcdbc9a5a4cde96ef037c7f27ed36 df28e5dfdc6d4237b5fa460070740ef2
+#: 40d84373a6de491e94fdc4ddb904941d ebaea0b1e7024a89803b13ff8551eaf2
 #: oceanai.modules.lab.audio.Audio.load_audio_model_hc:12
 #: oceanai.modules.lab.audio.Audio.load_audio_model_nn:12 of
 msgid ""
@@ -1184,7 +1182,7 @@ msgid ""
 "случае **False**"
 msgstr ""
 
-#: f3e2351d7c704551a6b0680b9ae1c88c
+#: b812da32e5de40569a2ad1f5bb273fe7
 #: oceanai.modules.lab.audio.Audio.load_audio_model_hc:20 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -1196,7 +1194,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 19674dc6b6744bd7b075a30efdee747b
+#: d85123b4a0614c6492980aebb4d4554e
 #: oceanai.modules.lab.audio.Audio.load_audio_model_hc:33 of
 msgid ""
 "[2022-10-17 13:16:23] Формирование нейросетевой архитектуры модели для "
@@ -1207,7 +1205,7 @@ msgid ""
 "True"
 msgstr ""
 
-#: cf2a01329ca54115a2f1ccf8dbedff20
+#: a13e3e9b7f9b47698128c4bda074214c
 #: oceanai.modules.lab.audio.Audio.load_audio_model_hc:45 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -1219,7 +1217,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 68eadbf81e574b4e9e4d48fda7a5ba94
+#: 7b2512624f6f4fad9bbbb58aa451498b
 #: oceanai.modules.lab.audio.Audio.load_audio_model_hc:58 of
 msgid ""
 "[2022-10-17 13:20:04] Неверные типы или значения аргументов в "
@@ -1228,14 +1226,14 @@ msgid ""
 "False"
 msgstr ""
 
-#: 7663238218ae40a985af8c2d495f2027
+#: e79b2079ba494db2ae85ea9ab2f70cb7
 #: oceanai.modules.lab.audio.Audio.load_audio_model_nn:1 of
 msgid ""
 "Формирование нейросетевой архитектуры для получения оценок по "
 "нейросетевым признакам"
 msgstr ""
 
-#: ecc58b57354b47ae9a0b77c3ed42e930
+#: 74eabf6fa3cb4b4d8c59008b763aef57
 #: oceanai.modules.lab.audio.Audio.load_audio_model_nn:20 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -1247,7 +1245,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 126e9ca14f5b4be28cdcb2d101829861
+#: 97de877da2984177aabafb16fbd4b675
 #: oceanai.modules.lab.audio.Audio.load_audio_model_nn:33 of
 msgid ""
 "[2022-10-17 13:25:34] Формирование нейросетевой архитектуры для получения"
@@ -1315,7 +1313,7 @@ msgid ""
 "True"
 msgstr ""
 
-#: 493b8c4967954f0b8b5937abbbe118b4
+#: d2e854f25bda4ab0a869f0665b803051
 #: oceanai.modules.lab.audio.Audio.load_audio_model_nn:102 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -1327,7 +1325,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 6532812730254177ba6f26e0c6505fb6
+#: 43bd348eeb064875b056671443097b09
 #: oceanai.modules.lab.audio.Audio.load_audio_model_nn:115 of
 msgid ""
 "[2022-10-17 13:25:40] Неверные типы или значения аргументов в "
@@ -1336,14 +1334,14 @@ msgid ""
 "False"
 msgstr ""
 
-#: c083f650dfa1444c9b785d45c641862e
+#: c0ee7455fde24f12b78b690ae146e60f
 #: oceanai.modules.lab.audio.Audio.load_audio_model_weights_hc:1 of
 msgid ""
 "Загрузка весов нейросетевой модели для получения оценок по экспертным "
 "признакам"
 msgstr ""
 
-#: cee16d37898b4df19a57172d0754ba6c
+#: 57c435097c0447fc9944f8f675f9a7d4
 #: oceanai.modules.lab.audio.Audio.load_audio_model_weights_hc:22 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -1356,7 +1354,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: b28ac19ba17d49f8965da0640cbdb189
+#: ce10e414b27848fca4748f6239e77233
 #: oceanai.modules.lab.audio.Audio.load_audio_model_weights_hc:36 of
 msgid ""
 "[2022-10-17 14:24:28] Формирование нейросетевой архитектуры модели для "
@@ -1367,7 +1365,7 @@ msgid ""
 "True"
 msgstr ""
 
-#: ab4e03d5fd604ec98a1804d1e7f06ad0
+#: db7cfdd05b8e491daad4c898840d1dc3
 #: oceanai.modules.lab.audio.Audio.load_audio_model_weights_hc:46 of
 msgid ""
 "audio.path_to_save_ = './models'\n"
@@ -1384,7 +1382,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: c66ed5abd4af4eff97cec37bc7ddc1b3
+#: d894b73a3590423fbf44e46ffb46d33f
 #: oceanai.modules.lab.audio.Audio.load_audio_model_weights_hc:64 of
 msgid ""
 "[2022-10-17 14:24:30] Загрузка весов нейросетевой модели для получения "
@@ -1398,7 +1396,7 @@ msgid ""
 "True"
 msgstr ""
 
-#: e836f189ef1d488792323ebd646f2b6c
+#: 5e1f2c3850304ba39fd2ae02ca5a7859
 #: oceanai.modules.lab.audio.Audio.load_audio_model_weights_hc:78 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -1419,7 +1417,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: cc8ef5541d5b4345be0693db78d4f95b
+#: 9093bae2572843bbad4aa3d915b7e939
 #: oceanai.modules.lab.audio.Audio.load_audio_model_weights_hc:100 of
 msgid ""
 "[2022-10-17 15:21:13] Загрузка весов нейросетевой модели для получения "
@@ -1437,14 +1435,14 @@ msgid ""
 "False"
 msgstr ""
 
-#: edca18464f4c4524ab20999eceb25e4f
+#: ca44a68e250a495d8dc0483573a048af
 #: oceanai.modules.lab.audio.Audio.load_audio_model_weights_nn:1 of
 msgid ""
 "Загрузка весов нейросетевой модели для получения оценок по нейросетевым "
 "признакам"
 msgstr ""
 
-#: e2597f944d1d4fb5bebd9ee4a782da8f
+#: 23b15f82295541d7aeafbbbf330aa5f1
 #: oceanai.modules.lab.audio.Audio.load_audio_model_weights_nn:22 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -1457,7 +1455,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: fbf272a2c73142d082578a288dca2197
+#: 9395bb5eea40448d824e74a176dc3794
 #: oceanai.modules.lab.audio.Audio.load_audio_model_weights_nn:36 of
 msgid ""
 "[2022-10-17 15:47:20] Формирование нейросетевой архитектуры для получения"
@@ -1469,7 +1467,7 @@ msgid ""
 "True"
 msgstr ""
 
-#: f4ae863627874aa9b1b5dd20a87003f6
+#: 542d5af2e58244e09110d231cfa80b45
 #: oceanai.modules.lab.audio.Audio.load_audio_model_weights_nn:47 of
 msgid ""
 "audio.path_to_save_ = './models'\n"
@@ -1486,7 +1484,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 289b1d3fb5e948f6b9a976d6680e87f8
+#: e73ea63e536d40a0949ec77fe29c8cb0
 #: oceanai.modules.lab.audio.Audio.load_audio_model_weights_nn:65 of
 msgid ""
 "[2022-10-17 15:47:22] Загрузка весов нейросетевой модели для получения "
@@ -1501,7 +1499,7 @@ msgid ""
 "True"
 msgstr ""
 
-#: 6f2792d08c36480dbca4ee19b5d5dff5
+#: 9104ecb169fc4243a19cc1cbd95cac9b
 #: oceanai.modules.lab.audio.Audio.load_audio_model_weights_nn:80 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -1522,7 +1520,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 15991c0355f5405895bf0028688c78b6
+#: c8f846bf06eb412789c79b81175d9e9b
 #: oceanai.modules.lab.audio.Audio.load_audio_model_weights_nn:102 of
 msgid ""
 "[2022-10-17 15:49:57] Загрузка весов нейросетевой модели для получения "
@@ -1540,26 +1538,26 @@ msgid ""
 "False"
 msgstr ""
 
-#: 542c00b7fb284418856e8cc06b453c97
+#: d14d5528076c40319d5a4f8119970403
 #: oceanai.modules.lab.audio.Audio.load_audio_models_b5:1 of
 msgid ""
 "Формирование нейросетевых архитектур моделей для получения результатов "
 "оценки персональных качеств"
 msgstr ""
 
-#: 6feca6d9f0bf4a52aca646c8a7c881fd
+#: 6c5e55d00248451687a570680023a3e6
 #: oceanai.modules.lab.audio.Audio.load_audio_models_b5:3 of
 msgid "Отображение последней сформированной нейросетевой архитектуры моделей"
 msgstr ""
 
-#: 168d61b01706483b848d976871304103
+#: f3ad9a920a7a48e9b5ec8a154b095da2
 #: oceanai.modules.lab.audio.Audio.load_audio_models_b5:12 of
 msgid ""
 "**True** если нейросетевые архитектуры модели сформированы, в обратном "
 "случае **False**"
 msgstr ""
 
-#: ca6f3f098952476d84456ebb74e4872b
+#: 977264d60e5d409bbe3e0f0a8a1e6709
 #: oceanai.modules.lab.audio.Audio.load_audio_models_b5:20 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -1571,7 +1569,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: cd2950b6b20449c3b92c02fb10bf7189
+#: 14c8aca1a08c4f2fa4c584846f6a8265
 #: oceanai.modules.lab.audio.Audio.load_audio_models_b5:33 of
 msgid ""
 "[2022-10-18 11:39:22] Формирование нейросетевых архитектур моделей для "
@@ -1598,7 +1596,7 @@ msgid ""
 "True"
 msgstr ""
 
-#: 47ecb2a9f38947d7a44765ac1b593f88
+#: 3a0ef35dedc74ae29bb9c8caed8e9ea1
 #: oceanai.modules.lab.audio.Audio.load_audio_models_b5:61 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -1610,7 +1608,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 5da10a22ddaa4abc94a55ee087f9684b
+#: 941b5333275f40719728da5cda463d93
 #: oceanai.modules.lab.audio.Audio.load_audio_models_b5:74 of
 msgid ""
 "[2022-10-18 13:47:36] Неверные типы или значения аргументов в "
@@ -1619,51 +1617,53 @@ msgid ""
 "False"
 msgstr ""
 
-#: e9a5d9f006c349ff993c20639d6cb332
+#: 7b5b318728c44bd08c9be79d93b6b8f6
 #: oceanai.modules.lab.audio.Audio.load_audio_models_weights_b5:1 of
 msgid ""
 "Загрузка весов нейросетевых моделей для получения результатов оценки "
 "персональных качеств"
 msgstr ""
 
-#: 3ba323e0c6a149c281e3bb5757c3adf6
+#: 9c809160dc8f4cdc851baa6a8b467be5
 #: oceanai.modules.lab.audio.Audio.load_audio_models_weights_b5:3 of
 msgid "Полный путь к файлу с весами нейросетевой модели (открытость опыту)"
 msgstr ""
 
-#: e4e5c53a78994a96a89176cbf6ce4bf4
+#: 3d2800070c5b461193b1c3abfa604b6d
 #: oceanai.modules.lab.audio.Audio.load_audio_models_weights_b5:5 of
 msgid "Полный путь к файлу с весами нейросетевой модели (добросовестность)"
 msgstr ""
 
-#: b999dc53474d4e6e92d9e2a1f21458d3
+#: 47c48257cc2e4c77b8b867872dc877e3
 #: oceanai.modules.lab.audio.Audio.load_audio_models_weights_b5:7 of
 msgid "Полный путь к файлу с весами нейросетевой модели (экстраверсия)"
 msgstr ""
 
-#: dea90f53f7bb41658287e529da0fa2c4
+#: 2926e7897e6549caa90632f3dc8f25e6
 #: oceanai.modules.lab.audio.Audio.load_audio_models_weights_b5:9 of
 msgid "Полный путь к файлу с весами нейросетевой модели (доброжелательность)"
 msgstr ""
 
-#: fc1f7e8f253b4f4d81f294782b716654
+#: 601e3d328ed34d858e3d6d21d13600c6
 #: oceanai.modules.lab.audio.Audio.load_audio_models_weights_b5:11 of
-msgid "Полный путь к файлу с весами нейросетевой модели (нейротизм)"
+msgid ""
+"Полный путь к файлу с весами нейросетевой модели (эмоциональная "
+"стабильность)"
 msgstr ""
 
-#: 2c6e431f59e84f578002f7f0752cd19b
+#: e41eadbdea424b3583d360d948fe01c4
 #: oceanai.modules.lab.audio.Audio.load_audio_models_weights_b5:13 of
 msgid "Принудительная загрузка файлов с весами нейросетевых моделей из сети"
 msgstr ""
 
-#: be212f1c68a04358a950cef7c0593dc7
+#: 0b3e145f00ae4d4cbddd8525284e00c2
 #: oceanai.modules.lab.audio.Audio.load_audio_models_weights_b5:22 of
 msgid ""
 "**True** если веса нейросетевых моделей загружены, в обратном случае "
 "**False**"
 msgstr ""
 
-#: f778dad74b86447ca6908f3fc24ecc81
+#: c8e6463ba8e442f09fc63b4bed0af2d4
 #: oceanai.modules.lab.audio.Audio.load_audio_models_weights_b5:30 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -1676,7 +1676,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 22b8502b80734adf839910d5328d9c3f
+#: 370a65bde81f4478b2ff1207b2b7bb9c
 #: oceanai.modules.lab.audio.Audio.load_audio_models_weights_b5:44 of
 msgid ""
 "[2022-10-18 22:40:05] Формирование нейросетевых архитектур моделей для "
@@ -1688,7 +1688,7 @@ msgid ""
 "True"
 msgstr ""
 
-#: cb50c6d7f34b496288e4a0edff620d27
+#: c54ae70e15034ff78775e8342c19c9c1
 #: oceanai.modules.lab.audio.Audio.load_audio_models_weights_b5:55 of
 msgid ""
 "audio.path_to_save_ = './models'\n"
@@ -1702,15 +1702,15 @@ msgid ""
 "audio.weights_for_big5_['audio']['b5']['extraversion']['sberdisk']\n"
 "url_agreeableness = "
 "audio.weights_for_big5_['audio']['b5']['agreeableness']['sberdisk']\n"
-"url_neuroticism = "
-"audio.weights_for_big5_['audio']['b5']['neuroticism']['sberdisk']\n"
+"url_non_neuroticism = "
+"audio.weights_for_big5_['audio']['b5']['non_neuroticism']['sberdisk']\n"
 "\n"
 "audio.load_audio_models_weights_b5(\n"
 "    url_openness = url_openness,\n"
 "    url_conscientiousness = url_conscientiousness,\n"
 "    url_extraversion = url_extraversion,\n"
 "    url_agreeableness = url_agreeableness,\n"
-"    url_neuroticism = url_neuroticism,\n"
+"    url_non_neuroticism = url_non_neuroticism,\n"
 "    force_reload = True,\n"
 "    out = True,\n"
 "    runtime = True,\n"
@@ -1718,7 +1718,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 7e943a999dac459388b32fce78cdd5c3
+#: c657ee6cd4ad48b7b9c2aac8e125c2a1
 #: oceanai.modules.lab.audio.Audio.load_audio_models_weights_b5:81 of
 msgid ""
 "[2022-10-18 23:08:37] Загрузка весов нейросетевых моделей для получения "
@@ -1738,14 +1738,14 @@ msgid ""
 "(100.0%) ... Доброжелательность\n"
 "\n"
 "[2022-10-18 23:08:39] Загрузка файла \"weights_2022-06-15_16-37-46.h5\" "
-"(100.0%) ... Нейротизм\n"
+"(100.0%) ... Эмоциональная стабильность\n"
 "\n"
 "--- Время выполнения: 1.611 сек. ---\n"
 "\n"
 "True"
 msgstr ""
 
-#: 324d2bed62cb4ccbb4196c00be60df30
+#: 6a254e5c603a42f186d22dd94c5d69c2
 #: oceanai.modules.lab.audio.Audio.load_audio_models_weights_b5:104 of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -1763,15 +1763,15 @@ msgid ""
 "audio.weights_for_big5_['audio']['b5']['extraversion']['sberdisk']\n"
 "url_agreeableness = "
 "audio.weights_for_big5_['audio']['b5']['agreeableness']['sberdisk']\n"
-"url_neuroticism = "
-"audio.weights_for_big5_['audio']['b5']['neuroticism']['sberdisk']\n"
+"url_non_neuroticism = "
+"audio.weights_for_big5_['audio']['b5']['non_neuroticism']['sberdisk']\n"
 "\n"
 "audio.load_audio_models_weights_b5(\n"
 "    url_openness = url_openness,\n"
 "    url_conscientiousness = url_conscientiousness,\n"
 "    url_extraversion = url_extraversion,\n"
 "    url_agreeableness = url_agreeableness,\n"
-"    url_neuroticism = url_neuroticism,\n"
+"    url_non_neuroticism = url_non_neuroticism,\n"
 "    force_reload = True,\n"
 "    out = True,\n"
 "    runtime = True,\n"
@@ -1779,7 +1779,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 56193536214643b3bc27b61b076bfef0
+#: cf941936fc05459a81c5c889aa9f8182
 #: oceanai.modules.lab.audio.Audio.load_audio_models_weights_b5:134 of
 msgid ""
 "[2022-10-18 23:09:40] Загрузка весов нейросетевых моделей для получения "
@@ -1839,7 +1839,7 @@ msgid ""
 "\n"
 "[2022-10-18 23:09:42] Что-то пошло не так ... не удалось загрузить веса "
 "нейросетевой модели ...\n"
-"Нейротизм\n"
+"Эмоциональная стабильность\n"
 "\n"
 "    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/audio.py\n"
 "    Линия: 1764\n"
@@ -1851,11 +1851,11 @@ msgid ""
 "False"
 msgstr ""
 
-#: 5e5bed5421fc48bf89775c35cd6ff12b oceanai.modules.lab.audio.Audio.smile_:1 of
+#: 8a5f5f485d6546149508c54504cb16a7 oceanai.modules.lab.audio.Audio.smile_:1 of
 msgid "Получение функций OpenSmile"
 msgstr ""
 
-#: 73bd730f9af44c1c942f9af1c70d9161 oceanai.modules.lab.audio.Audio.smile_:11
+#: 3ba6331d65064549b37541191540aa5f oceanai.modules.lab.audio.Audio.smile_:11
 #: of
 msgid ""
 "from oceanai.modules.lab.audio import Audio\n"
@@ -1863,3 +1863,259 @@ msgid ""
 "audio = Audio()\n"
 "audio.smile_"
 msgstr ""
+
+#~ msgid ""
+#~ "Model: \"model\"\n"
+#~ "_________________________________________________________________\n"
+#~ " Layer (type)                Output Shape              Param #\n"
+#~ "=================================================================\n"
+#~ " input_1 (InputLayer)        [(None, 32)]              0\n"
+#~ "\n"
+#~ " dense_1 (Dense)             (None, 1)                 33\n"
+#~ "\n"
+#~ " activ_1 (Activation)        (None, 1)                 0\n"
+#~ "\n"
+#~ "=================================================================\n"
+#~ "Total params: 33\n"
+#~ "Trainable params: 33\n"
+#~ "Non-trainable params: 0\n"
+#~ "_________________________________________________________________\n"
+#~ "<keras.engine.functional.Functional at 0x13d442940>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "[2022-10-17 13:54:35] Формирование нейросетевой "
+#~ "архитектуры модели для получения оценок "
+#~ "по экспертным признакам (аудио модальность)"
+#~ " ...\n"
+#~ "\n"
+#~ "--- Время выполнения: 0.509 сек. ---\n"
+#~ "\n"
+#~ "<keras.engine.functional.Functional at 0x13dd600a0>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "[2022-10-17 13:58:29] Формирование нейросетевой "
+#~ "архитектуры для получения оценок по "
+#~ "нейросетевым признакам ...\n"
+#~ "\n"
+#~ "--- Время выполнения: 0.444 сек. ---\n"
+#~ "\n"
+#~ "<keras.engine.functional.Functional at 0x13db97760>"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "[2022-10-19 15:45:35] Формирование нейросетевых "
+#~ "архитектур моделей для получения результатов"
+#~ " оценки\n"
+#~ "персональных качеств (аудио модальность) ...\n"
+#~ "\n"
+#~ "--- Время выполнения: 0.07 сек. ---\n"
+#~ "\n"
+#~ "{\n"
+#~ "    'openness': <keras.engine.functional.Functional at 0x1481e03a0>,\n"
+#~ "    'conscientiousness': "
+#~ "<keras.engine.functional.Functional at 0x147d13520>,\n"
+#~ ""
+#~ "    'extraversion': <keras.engine.functional.Functional"
+#~ " at 0x1481edfa0>,\n"
+#~ "    'agreeableness': <keras.engine.functional.Functional"
+#~ " at 0x1481cfc40>,\n"
+#~ "    'neuroticism': <keras.engine.functional.Functional "
+#~ "at 0x1481cffd0>\n"
+#~ "}"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "{\n"
+#~ "    'openness': None,\n"
+#~ "    'conscientiousness': None,\n"
+#~ "    'extraversion': None,\n"
+#~ "    'agreeableness': None,\n"
+#~ "    'neuroticism': None\n"
+#~ "}"
+#~ msgstr ""
+
+#~ msgid "Полный путь к файлу с весами нейросетевой модели (нейротизм)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "audio.path_to_save_ = './models'\n"
+#~ "audio.chunk_size_ = 2000000\n"
+#~ "\n"
+#~ "url_openness = "
+#~ "audio.weights_for_big5_['audio']['b5']['openness']['sberdisk']\n"
+#~ "url_conscientiousness = "
+#~ "audio.weights_for_big5_['audio']['b5']['conscientiousness']['sberdisk']"
+#~ "\n"
+#~ "url_extraversion = "
+#~ "audio.weights_for_big5_['audio']['b5']['extraversion']['sberdisk']"
+#~ "\n"
+#~ "url_agreeableness = "
+#~ "audio.weights_for_big5_['audio']['b5']['agreeableness']['sberdisk']"
+#~ "\n"
+#~ "url_neuroticism = "
+#~ "audio.weights_for_big5_['audio']['b5']['neuroticism']['sberdisk']\n"
+#~ ""
+#~ "\n"
+#~ "audio.load_audio_models_weights_b5(\n"
+#~ "    url_openness = url_openness,\n"
+#~ "    url_conscientiousness = url_conscientiousness,\n"
+#~ "    url_extraversion = url_extraversion,\n"
+#~ "    url_agreeableness = url_agreeableness,\n"
+#~ "    url_neuroticism = url_neuroticism,\n"
+#~ "    force_reload = True,\n"
+#~ "    out = True,\n"
+#~ "    runtime = True,\n"
+#~ "    run = True\n"
+#~ ")"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "[2022-10-18 23:08:37] Загрузка весов "
+#~ "нейросетевых моделей для получения результатов"
+#~ " оценки\n"
+#~ "персональных качеств (аудио модальность) ...\n"
+#~ "\n"
+#~ "[2022-10-18 23:08:37] Загрузка файла "
+#~ "\"weights_2022-06-15_16-16-20.h5\" (100.0%) ... "
+#~ "Открытость опыту\n"
+#~ "\n"
+#~ "[2022-10-18 23:08:38] Загрузка файла "
+#~ "\"weights_2022-06-15_16-21-57.h5\" (100.0%) ... "
+#~ "Добросовестность\n"
+#~ "\n"
+#~ "[2022-10-18 23:08:38] Загрузка файла "
+#~ "\"weights_2022-06-15_16-26-41.h5\" (100.0%) ... "
+#~ "Экстраверсия\n"
+#~ "\n"
+#~ "[2022-10-18 23:08:38] Загрузка файла "
+#~ "\"weights_2022-06-15_16-32-51.h5\" (100.0%) ... "
+#~ "Доброжелательность\n"
+#~ "\n"
+#~ "[2022-10-18 23:08:39] Загрузка файла "
+#~ "\"weights_2022-06-15_16-37-46.h5\" (100.0%) ... "
+#~ "Нейротизм\n"
+#~ "\n"
+#~ "--- Время выполнения: 1.611 сек. ---\n"
+#~ "\n"
+#~ "True"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "from oceanai.modules.lab.audio import Audio\n"
+#~ "\n"
+#~ "audio = Audio()\n"
+#~ "\n"
+#~ "audio.path_to_save_ = './models'\n"
+#~ "audio.chunk_size_ = 2000000\n"
+#~ "\n"
+#~ "url_openness = "
+#~ "audio.weights_for_big5_['audio']['b5']['openness']['sberdisk']\n"
+#~ "url_conscientiousness = "
+#~ "audio.weights_for_big5_['audio']['b5']['conscientiousness']['sberdisk']"
+#~ "\n"
+#~ "url_extraversion = "
+#~ "audio.weights_for_big5_['audio']['b5']['extraversion']['sberdisk']"
+#~ "\n"
+#~ "url_agreeableness = "
+#~ "audio.weights_for_big5_['audio']['b5']['agreeableness']['sberdisk']"
+#~ "\n"
+#~ "url_neuroticism = "
+#~ "audio.weights_for_big5_['audio']['b5']['neuroticism']['sberdisk']\n"
+#~ ""
+#~ "\n"
+#~ "audio.load_audio_models_weights_b5(\n"
+#~ "    url_openness = url_openness,\n"
+#~ "    url_conscientiousness = url_conscientiousness,\n"
+#~ "    url_extraversion = url_extraversion,\n"
+#~ "    url_agreeableness = url_agreeableness,\n"
+#~ "    url_neuroticism = url_neuroticism,\n"
+#~ "    force_reload = True,\n"
+#~ "    out = True,\n"
+#~ "    runtime = True,\n"
+#~ "    run = True\n"
+#~ ")"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "[2022-10-18 23:09:40] Загрузка весов "
+#~ "нейросетевых моделей для получения результатов"
+#~ " оценки\n"
+#~ "персональных качеств (аудио модальность) ...\n"
+#~ "\n"
+#~ "[2022-10-18 23:09:41] Загрузка файла "
+#~ "\"weights_2022-06-15_16-16-20.h5\" (100.0%) ...\n"
+#~ "\n"
+#~ "[2022-10-18 23:09:41] Что-то пошло не "
+#~ "так ... не удалось загрузить веса "
+#~ "нейросетевой модели ...\n"
+#~ "Открытость опыту\n"
+#~ "\n"
+#~ "    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/audio.py\n"
+#~ "    Линия: 1764\n"
+#~ "    Метод: load_audio_models_weights_b5\n"
+#~ "    Тип ошибки: AttributeError\n"
+#~ "\n"
+#~ "[2022-10-18 23:09:41] Загрузка файла "
+#~ "\"weights_2022-06-15_16-21-57.h5\" (100.0%) ...\n"
+#~ "\n"
+#~ "[2022-10-18 23:09:41] Что-то пошло не "
+#~ "так ... не удалось загрузить веса "
+#~ "нейросетевой модели ...\n"
+#~ "Добросовестность\n"
+#~ "\n"
+#~ "    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/audio.py\n"
+#~ "    Линия: 1764\n"
+#~ "    Метод: load_audio_models_weights_b5\n"
+#~ "    Тип ошибки: AttributeError\n"
+#~ "\n"
+#~ "[2022-10-18 23:09:41] Загрузка файла "
+#~ "\"weights_2022-06-15_16-26-41.h5\" (100.0%) ...\n"
+#~ "\n"
+#~ "[2022-10-18 23:09:41] Что-то пошло не "
+#~ "так ... не удалось загрузить веса "
+#~ "нейросетевой модели ...\n"
+#~ "Экстраверсия\n"
+#~ "\n"
+#~ "    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/audio.py\n"
+#~ "    Линия: 1764\n"
+#~ "    Метод: load_audio_models_weights_b5\n"
+#~ "    Тип ошибки: AttributeError\n"
+#~ "\n"
+#~ "[2022-10-18 23:09:42] Загрузка файла "
+#~ "\"weights_2022-06-15_16-32-51.h5\" (100.0%) ...\n"
+#~ "\n"
+#~ "[2022-10-18 23:09:42] Что-то пошло не "
+#~ "так ... не удалось загрузить веса "
+#~ "нейросетевой модели ...\n"
+#~ "Доброжелательность\n"
+#~ "\n"
+#~ "    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/audio.py\n"
+#~ "    Линия: 1764\n"
+#~ "    Метод: load_audio_models_weights_b5\n"
+#~ "    Тип ошибки: AttributeError\n"
+#~ "\n"
+#~ "[2022-10-18 23:09:42] Загрузка файла "
+#~ "\"weights_2022-06-15_16-37-46.h5\" (100.0%) ...\n"
+#~ "\n"
+#~ "[2022-10-18 23:09:42] Что-то пошло не "
+#~ "так ... не удалось загрузить веса "
+#~ "нейросетевой модели ...\n"
+#~ "Нейротизм\n"
+#~ "\n"
+#~ "    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/audio.py\n"
+#~ "    Линия: 1764\n"
+#~ "    Метод: load_audio_models_weights_b5\n"
+#~ "    Тип ошибки: AttributeError\n"
+#~ "\n"
+#~ "--- Время выполнения: 1.573 сек. ---\n"
+#~ "\n"
+#~ "False"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**True** если веса прогнозы успешно "
+#~ "получены, в обратном случае **False**"
+#~ msgstr ""
+

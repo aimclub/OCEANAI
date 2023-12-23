@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""Текст
+"""
+Текст
 """
 
 # ######################################################################################################################
@@ -818,10 +819,14 @@ class Text(TextMessages):
                         input_features = inputs.input_features.to(self._device)
                         if lang == self.__lang_traslate[0]:
                             generated_ids = self._model_transcriptions.generate(
-                                input_features=input_features, forced_decoder_ids=self.__forced_decoder_ids, max_new_tokens=448
+                                input_features=input_features,
+                                forced_decoder_ids=self.__forced_decoder_ids,
+                                max_new_tokens=448,
                             )
                         elif lang == self.__lang_traslate[1]:
-                            generated_ids = self._model_transcriptions.generate(input_features=input_features, max_new_tokens=448)
+                            generated_ids = self._model_transcriptions.generate(
+                                input_features=input_features, max_new_tokens=448
+                            )
                         transcription = self._processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
                         self.__text_pred += transcription
 
@@ -853,9 +858,7 @@ class Text(TextMessages):
 
             return self.__translate_and_extract_features(self.__text_pred, lang, show_text, last, out)
 
-    def __load_text_model_b5(
-        self, show_summary: bool = False, out: bool = True
-    ) -> Optional[tf.keras.Model]:
+    def __load_text_model_b5(self, show_summary: bool = False, out: bool = True) -> Optional[tf.keras.Model]:
         """Формирование нейросетевой архитектуры модели для получения оценок персональных качеств
 
         .. note::
@@ -1599,7 +1602,7 @@ class Text(TextMessages):
             run (bool): Блокировка выполнения
 
         Returns:
-            bool: **True** если веса прогнозы успешно получены, в обратном случае **False**
+            bool: **True** если прогнозы успешно получены, в обратном случае **False**
         """
 
         self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter

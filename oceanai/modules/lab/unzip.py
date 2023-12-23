@@ -119,7 +119,7 @@ class Unzip(UnzipMessages):
         .. note::
             private (приватный метод)
 
-        Аргументы:
+        Args:
             path_to_zipfile (str): Путь до архива
             progress (float): Процент выполнения (от **0.0** до **100.0**)
             clear_out (bool): Очистка области вывода

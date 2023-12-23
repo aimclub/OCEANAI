@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2022-12-11 11:33+0300\n"
+"POT-Creation-Date: 2023-12-23 16:50+0300\n"
 "PO-Revision-Date: 2022-12-01 09:13+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -17,29 +17,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.11.0\n"
 
-#: ../../source/modules/lab/video.rst:2 0041b789cc824132a3452c7b6b7fc3bc
+#: ../../source/modules/lab/video.rst:2 9a378beb71c341aebf6ae2f75928b549
 msgid "Видео"
 msgstr ""
 
-#: fff81a93ca904209bfde116c2e57fe1b oceanai.modules.lab.video.VideoMessages:1
+#: 1923bc753009446d9eb701536417b29d oceanai.modules.lab.video.VideoMessages:1
 #: of
 msgid "Базовые классы: :py:class:`~oceanai.modules.lab.download.Download`"
 msgstr ""
 
-#: 9230c6fe4e3140b9abaad50c7d9b1d7e oceanai.modules.lab.video.VideoMessages:1
+#: a9aa22f91b90403e886f0af307164a9a oceanai.modules.lab.video.VideoMessages:1
 #: of
 msgid "Класс для сообщений"
 msgstr ""
 
-#: 1931aeab28ff493a9fe3e1f4b5f8c429 19cee5fd903c4059821d4641d9bd0372
-#: 30a47f8645a9425c87ff69dd511d185f 3fa9b289f87d4afb8ca9664173975faf
-#: 40678262d13745298ac0a47493638793 49fb01d0c6414f1cabfa56309a9acd9d
-#: 4eb89d9b49614918a725755a326a1aa2 5606e40493d649119270fb86c27f273b
-#: 6321abcf44a345bc8f2f0fd2d468f23d 8d7d3ee2413d41b8a565951414a5eb47
-#: 917c4b265dff4e1bbe9a0e485b852bf0 b3351646601247238f30a8b3032b5c98
-#: b395d5af560c4df9bc6d41f9132a773f be427b36ff104e719693258d7fc4f3ce
-#: d2183bd18a984af2a307610afbdf2362 d443ea1144fc4666a351e231a9cf967c
-#: e3ff5490515946d4b1c544f947f8b860 e53e01b14c08495cb9386f0a439e7334
+#: 06713a7f27304c61af8cf8a7a01f357e 0fd083b7c2784d958074c2a99fade5b1
+#: 1d379a8cacd648e2b8e49489bf767618 221e57e8fcdb4aa79c8004c8a1c55b17
+#: 24e073d8e3ef4cd497ca62afdeec0291 254f9864d2bc4374b90ae4f396f88490
+#: 35db25a4803c4ac0b8f738096ec64da8 54f569b1cea044dfa0c35d9e5352fe6e
+#: 6fe109f7ccdb418a938725241694dd5f 73119f6889a0405eaaebbb91df1e4549
+#: 946d0defd8604872909106bb9db2875b bbce588e375c44e782d1a018045247e2
+#: d33562ab89054374b4b11340737883f0 d398193658ec4c3fa1a953ed81484e04
+#: e450f98e2d094c9f91f5774c429da71d e9c10e6a158d46678bdb78c7718054df
+#: ea64e187cdc94810bd048c6dc3535f3d f6c507eefb4348639aca3e16f3179767
 #: oceanai.modules.lab.video.Video
 #: oceanai.modules.lab.video.Video.__calc_reshape_img_coef
 #: oceanai.modules.lab.video.Video.__concat_pred
@@ -61,70 +61,70 @@ msgstr ""
 msgid "Параметры"
 msgstr ""
 
-#: 0fd602e3f7be4b269cac44f542cdfe50 e5e8049b8dd842358e5c58b31114bb34
+#: 5671f1a815bd42d39967288df08d5847 6f639af6221c477c85846e74ff851e3a
 #: oceanai.modules.lab.video.Video:3 oceanai.modules.lab.video.VideoMessages:3
 #: of
 msgid "Смотреть :attr:`~oceanai.modules.core.language.Language.lang`"
 msgstr ""
 
-#: 08f639f23a48472488b3aa3a146542e7 8478d3d4e76148e9bbb1ff65943e7c6b
+#: 6e17c2567b494355b1fbb8181c46020d f6424b236c90448584a24ac8cc11d20d
 #: oceanai.modules.lab.video.Video:5 oceanai.modules.lab.video.VideoMessages:5
 #: of
 msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_simple`"
 msgstr ""
 
-#: 03405ace0b6e441bb8e64608215a18fb 18f262f17f3c488cb1cbed7631d0f4a9
+#: 8b265d94af924df09125a3c6f9d6d66a f103bd548b344451acc04bbf002c351f
 #: oceanai.modules.lab.video.Video:7 oceanai.modules.lab.video.VideoMessages:7
 #: of
 msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_info`"
 msgstr ""
 
-#: 6cbe262aa4ff4851ac9de61cca35545e acbc581ffca94709b5ff3eab4a6b38bb
+#: 1a236a38d2b14a2597a07fcd0864f2b9 e8792a3705f34d93877cf4c7e24c7d2c
 #: oceanai.modules.lab.video.Video:9 oceanai.modules.lab.video.VideoMessages:9
 #: of
 msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_err`"
 msgstr ""
 
-#: 5b0a06e8729b4851a1e414e7a3373863 d75f7e13854a4a10a361a97f040c7ead
+#: 312c53e0b6084eacb170f0b42805ae7b af25452fc0184078a9aa8e585e0f4f15
 #: oceanai.modules.lab.video.Video:11
 #: oceanai.modules.lab.video.VideoMessages:11 of
 msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_true`"
 msgstr ""
 
-#: 38d2da565b504f408fc36109d8a47dd3 3bead79285384b8d851e9364d1dcfd7e
+#: 491ea5c28ce34730a0717decf159681d acac3bfb29b74383b9f6d076298f271f
 #: oceanai.modules.lab.video.Video:13
 #: oceanai.modules.lab.video.VideoMessages:13 of
 msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.bold_text`"
 msgstr ""
 
-#: 7544fbccd70d4915b17851138ef79772 79a5094ff441420da9018839e296a9bb
+#: 3cc821ab1bc04d07a5848ecf75c37aa1 505ddd996d5940c8acdfb6e560d614d8
 #: oceanai.modules.lab.video.Video:15
 #: oceanai.modules.lab.video.VideoMessages:15 of
 msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.num_to_df_display`"
 msgstr ""
 
-#: 2270a363c5c34b9a92efe015e78d1a76 a41a422fe9e34310b4c53ab56f88129c
+#: 51baaf7d7b1c4b8aaa4393784d5f80e7 d1175bb0e5c84b278fbc3ee50e8ebf2d
 #: oceanai.modules.lab.video.Video:17
 #: oceanai.modules.lab.video.VideoMessages:17 of
 msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.text_runtime`"
 msgstr ""
 
-#: 6df3084ab5a54663b77dabe7f9b1bd48 oceanai.modules.lab.video.Video:1 of
+#: 3e05ceb8a3474a39bbc6e97a36ad7093 oceanai.modules.lab.video.Video:1 of
 msgid "Базовые классы: :py:class:`~oceanai.modules.lab.video.VideoMessages`"
 msgstr ""
 
-#: d82772b288f04754b8bef21c1fee1788 oceanai.modules.lab.video.Video:1 of
+#: eed4380e2c744e30ab9b314747ffed88 oceanai.modules.lab.video.Video:1 of
 msgid "Класс для обработки видео"
 msgstr ""
 
-#: 56f7f441a0394ebf837f477760797a7b
+#: 3b2368163d8e437fadf710ac2a9568ee
 #: oceanai.modules.lab.video.Video.__calc_reshape_img_coef:1 of
 msgid "Вычисление коэффициента изменения размера изображения"
 msgstr ""
 
-#: 03744a801d62431aa9ef9834654ac8ad 219e0fe4c10949fc981990f64bacf6a7
-#: 3011b65b7b0c40de802784dbced81bad 3c786ab684a947ad8a16a49a3384e530
-#: a7a75cfe34044ecd896237ffabac815d
+#: 25ff23f410d14d078654ad63865821c0 455730c62d5b42f0b7642cca9c3cc391
+#: 4ced55d957674777804228b44314a781 513e40608f5247cdb03670e873da78db
+#: 61494c9040534704bff21fbfdcd80add
 #: oceanai.modules.lab.video.Video.__calc_reshape_img_coef:4
 #: oceanai.modules.lab.video.Video.__concat_pred:4
 #: oceanai.modules.lab.video.Video.__load_model_weights:4
@@ -133,34 +133,34 @@ msgstr ""
 msgid "private (приватный метод)"
 msgstr ""
 
-#: 6b65552f7ada4b32986f9e4acb110015
+#: 4435a6cd80be4103b705e468a0a343ea
 #: oceanai.modules.lab.video.Video.__calc_reshape_img_coef:6 of
 msgid "Текущий размер изображения (ширина, высота)"
 msgstr ""
 
-#: e461f438e56a47efbcecf0230e2bfa7e
+#: 1a2dc16e608143699a48806c6e3ef7d6
 #: oceanai.modules.lab.video.Video.__calc_reshape_img_coef:8 of
 msgid "Желаемый размер изображения"
 msgstr ""
 
-#: 0980f2d7123e4d61850b12819ec125b6 0f44463714bb42a98ab41628838d1ae6
-#: 1514a46654cc4fd29943d74967d6317c 1dbaa9c5e6764d1f83bcae1bf105d92a
-#: 31410f9b168642ce9f6d23e12d731fd2 4d679d78f8174b3fbed406589948037c
-#: 545abf1a69ce4ec8a88ce3a63b947841 667036e03ada4cfba593d33b8937d988
-#: 76814066182d4e77b43d154f47addeec 7cf8c363bd9d4a5da421fe579e0c82de
-#: 828637f507ef474cbe5fc5fe1f9f0f81 c216d40f639a47c6a2e16f327ad1e735
-#: d88e65dabe324c57822bc6fe6b46d76f d8b89bdb3d7e4ea8863107c27166e854
-#: e6a8c0f7c3ff49aa97d675d54a085763 f855dccdc4d84574a32c7e75daf255ea
+#: 40d0df80083442a5b4f2ddf21efa35a9 6411411730954bc084c01c0c4bf1d9be
+#: 8c26a25e26214edc9bb27102008dee59 91b53e2b46b046fb9b39eb1cd54f6ac5
+#: 9685478e533249e18902e77c855dd110 97b72dbc5cea4ad58079e43f0ee74799
+#: ac03ace408d84a33a02cfc129fe3c307 b20408f125df47e0973bc431377b26b3
+#: c804c606c28b4d2087fd5a4ae66afa6a d2b9d594d9364b87b832166e2db3436b
+#: d590bea5ab3d48c5bb69fad136f02be9 ed7915db81df42d58b001c86a5c2c3b7
+#: eda511ff281d4567aea932fcbd87edb1 f4f6c1cc4bd44e2a9b7144dd3a40bca1
+#: f539095bd8f340ae8879bbc9c3c515d5 fd5b3ac1235b46ff85bee433f83e0e7e
 #: oceanai.modules.lab.video.Video.__calc_reshape_img_coef:10
 #: oceanai.modules.lab.video.Video.__concat_pred:10
 #: oceanai.modules.lab.video.Video.__load_model_weights:12
 #: oceanai.modules.lab.video.Video.__load_video_model_b5:8
 #: oceanai.modules.lab.video.Video.__norm_pred:10
-#: oceanai.modules.lab.video.Video._get_visual_features:16
-#: oceanai.modules.lab.video.Video.get_video_union_predictions:19
-#: oceanai.modules.lab.video.Video.get_visual_features:11
+#: oceanai.modules.lab.video.Video._get_visual_features:18
+#: oceanai.modules.lab.video.Video.get_video_union_predictions:21
+#: oceanai.modules.lab.video.Video.get_visual_features:13
 #: oceanai.modules.lab.video.Video.load_video_model_deep_fe:5
-#: oceanai.modules.lab.video.Video.load_video_model_hc:5
+#: oceanai.modules.lab.video.Video.load_video_model_hc:7
 #: oceanai.modules.lab.video.Video.load_video_model_nn:5
 #: oceanai.modules.lab.video.Video.load_video_model_weights_deep_fe:7
 #: oceanai.modules.lab.video.Video.load_video_model_weights_hc:7
@@ -170,16 +170,16 @@ msgstr ""
 msgid "Отображение"
 msgstr ""
 
-#: 10ef63ee489546149a26d544bbe69e3b 1eec4c4774d14ab0af9528e4c705aa58
-#: 23fd50b704424161b526e1fdd1fc4e44 3927e6ad029b4f43bf7b5c3771626b10
-#: 3fe9337577424f44af2e6c193dd80159 48e8b0f4fa1e4b618933ad3cc20ab024
-#: 5b2cdfafadd8436a8b60c5f797d4833f 5ca11f9e6f794f3b872a34cbeb7b348e
-#: 5f2e50f02399489e88c2dfecbd548fa1 602871b33b694b49a621b3fadade1221
-#: 6c6d81ac22414620ab19535ade9ac856 734f2dda29844c96b3d03472c33fee5f
-#: 73b9ad0f32c1484e8094399c2b61a857 8d60877a17bd42e8a15d7116d9479f51
-#: 961be10d64f54fadad8633b0179dcd53 985f587ed96648119bdbac289bcc24cb
-#: b0e5fd90193a444a9e232b86cb447d04 c998fd668e4b4cd89916baab82494e43
-#: dd8d7d12aed0420b8054bf9a9a9d6125 fa11b4d9bd5b44a08ea96bbdd876503e
+#: 0e967e3442f646ec85de8e88b2204069 20c54ba39ce44d90be6ca9e5ba002079
+#: 2375ec5d270f4feba430959c5e7e1f0b 31e3a7754452417180971ff5624780ba
+#: 3bcae86b459343f4a3008433802fbb20 3cdb23cfdd9d46df819b0a47f7ec0b36
+#: 44a611b99bac467abc68697925c5bf95 5609ae45790a4d5bbcc2232671550e34
+#: 7c45d0843a344b059a47abf1009ea926 85511032217f47488b774b8ef454e69f
+#: 882819bffcb345b1a16ce87b090d9b8b 906afaaccd9b4ffd8aecb8fbe5e51abe
+#: adfc032b10f4401f926407c6dd7fe029 b54941186cb249aebe00c55688092272
+#: b587536823b54ae88fbee1e15553fd89 b8da7128911547afbac3e42407037dd7
+#: ba3da6c5b68e41cf933e04c1ab95cd55 cc9c0a68955542caa8c54de52981edf9
+#: e3aebdc375594835ba1c53ea348c1b30 ee2cd35f1af345a8ab0daabd44de57b7
 #: oceanai.modules.lab.video.Video.__calc_reshape_img_coef
 #: oceanai.modules.lab.video.Video.__concat_pred
 #: oceanai.modules.lab.video.Video.__load_model_weights
@@ -203,21 +203,21 @@ msgstr ""
 msgid "Результат"
 msgstr ""
 
-#: 200d7271d71f474796923785970e9dfe
+#: f2e6d8786a004d34a1f6701cd6e33836
 #: oceanai.modules.lab.video.Video.__calc_reshape_img_coef:13 of
 msgid "Коэффициент изменения размера изображения"
 msgstr ""
 
-#: 059424c9272941febe83734cd082d57a 0e53184ca5604026a34f6f92e767e857
-#: 26a00062218744edbfc69f0d1516c102 2732a13420f84e378a22702424f1ff5e
-#: 2da13fc608d648d1ad5b8d7f823e2ea7 371399054e974ab983a49a8b14072cc9
-#: 3cb60213e77241a091631a91b71c6fb5 3d62962054714c43bd7eb6b3512d14d0
-#: 45dcd7e7a5f6457a93477b0cc054f706 6975cace6e9e4093bb349b045ea412e4
-#: 76395ef21f174a96b764885c0d3309f3 89c21e020f094d66a0a1352595d4541f
-#: 92c2c4e395674e31accbc5f135242d37 97c1906334254c52a6321d451ee15997
-#: a0145d7174e34f46bc93f6930b1d62f7 a757eb46706e4d048d381d0c19c666b9
-#: a7a3f3ee8353484faf263d6fd9ee613b adb2392dc90648d68acb0f8d8d7f0afb
-#: af569164fa17483d8495fbf0dd82f417 aff16f82eefd488b8442fc95deb85795
+#: 1fb50007581343ceaae7f9c3ca4be0e4 2516c61dca784e8fbaae43641f873bc0
+#: 3728b7616e3b42c49e71d03aaa832477 37f72bcb556345069626c79e412aa735
+#: 431bdb5259c249d38c70094cc28cfbe7 4884a03a206842239324e2c851a06690
+#: 5f1ad6b139534307aaef15d552d2e67e 6912b669fb694a568698db60c0d925ad
+#: 743078a944f2405493c79273ffa96403 7f8c330454204feca69007454bf8a40b
+#: 867a6786fd6d40cfaf2905147c0ac8e0 88f740aa4f414b288622d36262771110
+#: a03e7790522845a6b412e3e15c0cc4bb a0d8b17c701843799d6a6e44198e120c
+#: b182d3fec67645408dd620fc1d1887f4 d3b735ae321043f29eaee7ad9389e394
+#: edc1996fe8664683bda5df3fe3e112dc fa4177f8b66d4128ace7617b4f8c5a03
+#: fbe21d4c8ef44906a65599e4b08d26af fde6c9e030bc4223a0054cd2fbcc59db
 #: oceanai.modules.lab.video.Video.__calc_reshape_img_coef
 #: oceanai.modules.lab.video.Video.__concat_pred
 #: oceanai.modules.lab.video.Video.__load_model_weights
@@ -241,15 +241,15 @@ msgstr ""
 msgid "Тип результата"
 msgstr ""
 
-#: 1f0a7fee942d401a8477bf754a185a7d 32c057df168f495a949aaabac4f7c504
-#: 3bb255e6ad6746689dc78dda1c5f6ebe 476517f80c51409ab65b9009ae0fec8e
-#: 63049dcbbd2c498dbde30d260f1d2d8e 76f31af625c04e42a21875ca1c034e50
-#: 8849dfe74a1647cfa33ea4e90815585a 8deddd71576f46a4b149f4e79f7215a0
-#: 8eddc84d9dfc47359256fc385c8af86b 96a465018aa1449e8fdf6887a3565960
-#: 9b9bd2719b3e4756b771d353ec4927d6 a0a69a53fbe94d2f80ca5069028da151
-#: a35e820372064c58a3a56067411aa6d4 a4a225993c5e412cabd9f89de5457511
-#: a67a9d0bbc094fa190663c9ee855ce49 ab5ff72f496e4135bd2e030ed7e3a51f
-#: defeead6796c479d9e4b06cb2b273b50 df658dabb13f433e8dcd055b08f70334
+#: 08511a83aa0d4aaba2a9255fbe542d35 1360dc067dd94e7eb06d03036fc00da5
+#: 14ac8b0f4af94d1d87c448690a1076c3 17bd8190ba314262a0e1b63f30533a6e
+#: 18804424c14f476aa8ce82d773071276 2718ff4eedd7462cb739b4105f4f2f9a
+#: 493477a6b4ab4873a4a06c50148e5e49 5366c38aac3b47bba9786dd2899ff08f
+#: 5d37ed0fe67440f5ae01bd17333dd7b6 5e52f49c291c4ae68af826e69b9c7ba1
+#: 693fee559b9f4cb4b3e07d8cd98f36c7 6c07419f72324f848a6418e4634392e7
+#: 7f19600971184d1db65ca579390de051 91aeddb586fb4ea3b13ddac7d51e0ce7
+#: 976afbb6239645019c947f85a08ac63e b480ea528a5e4ba585446eb74f91d671
+#: c21f4038aac04c1fb594b6c5702fa0ff e972f05c6d5c440fa5d9eadf0dc77eaf
 #: oceanai.modules.lab.video.Video.__calc_reshape_img_coef
 #: oceanai.modules.lab.video.Video.__concat_pred
 #: oceanai.modules.lab.video.Video.__load_model_weights
@@ -271,23 +271,23 @@ msgstr ""
 msgid "Примеры"
 msgstr ""
 
-#: 072d68baeb074505a5f9d32856ab183d 125235b44f094f2ba3057363da7981c1
-#: 220312277be249b886bc6651be39cf4d 29a7675fbfdd470ca576a55b99c43c69
-#: 34f8ed18d91a42a5ad4e0417410668b0 367822a00b7f42f78cb22ffe0e69255f
-#: 3b1a2e2d53dd4e07b1d9c0fd02cdf73c 4215f4dc16364a34b6946d61be9db9c5
-#: 4aef1cbf2d0a4471a367373c06836ec0 6adb12f19a1c43d58f5c4e9cf5098b3b
-#: 783f6cac08144906b778a4b3f85d1b78 8a893ce493c54f4ebe5ed2acb8c47915
-#: a5f4908332ac46bbb01fe24e43e0d6da b9b58ae5951846358178b7f61b822325
-#: d6a778a9900c49e58ea70d78af612f53 d8d625038e484f4cb5ae4b4962cec168
-#: db62f0d4f6544811a8928e7fb086b942 f71a937f07bf48e89bdb62cbafdf0d52
+#: 1a39437893874aedbbfebbda992d0dab 2073803592fb490b86af07043f42ce87
+#: 38ae7455004e4c87a54ae823b044f3fd 4120547ab6aa405585303114ba8f6e64
+#: 52dc80669b58434fa2cd219cb4525c61 55f26a162b4c45db91ad63061422a4c6
+#: 6068b14d4ce442e6b15b3212ef0c0917 752d81ca5d7c4fb6834e7944fd6cea13
+#: 865e0850f3a7469dac95a237d2fd1983 9b8a79834fb74c62b5bdea1fa99292fd
+#: a3a6ccb8fcda4350996fd4b1eb763338 b5ec3e9475564af4b64620f5f6a983b5
+#: b6aa734509eb4d048ad91bfb1f458ac3 cdf00ac548e3463490281a7d7bb15c18
+#: d782a566584b45d68934ec214c3316ae e2b47f9b706c401f9ecd488adb532c80
+#: ed8315f54ad44853975228cf765b221f f2cbf9e2cc4c4aa0bd4a8f44f121e9e6
 #: oceanai.modules.lab.video.Video.__calc_reshape_img_coef:19
 #: oceanai.modules.lab.video.Video.__concat_pred:19
 #: oceanai.modules.lab.video.Video.__load_model_weights:25
 #: oceanai.modules.lab.video.Video.__load_video_model_b5:18
 #: oceanai.modules.lab.video.Video.__norm_pred:19
-#: oceanai.modules.lab.video.Video._get_visual_features:34
+#: oceanai.modules.lab.video.Video._get_visual_features:36
 #: oceanai.modules.lab.video.Video.load_video_model_deep_fe:18
-#: oceanai.modules.lab.video.Video.load_video_model_hc:18
+#: oceanai.modules.lab.video.Video.load_video_model_hc:20
 #: oceanai.modules.lab.video.Video.load_video_model_nn:18
 #: oceanai.modules.lab.video.Video.load_video_model_weights_deep_fe:20
 #: oceanai.modules.lab.video.Video.load_video_model_weights_hc:20
@@ -301,7 +301,7 @@ msgstr ""
 msgid ":bdg-success:`Верно` :bdg-light:`-- 1 --`"
 msgstr ""
 
-#: 9aa298f2983a46568f90cc1e0a39492f
+#: 37eb8a493c714880b676746de83d16a8
 #: oceanai.modules.lab.video.Video.__calc_reshape_img_coef:21 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -315,17 +315,17 @@ msgid ""
 ")"
 msgstr ""
 
-#: d9bd6444b6a24934a9e2e68c6a734e2d
+#: 78aa5ee16a844447905056508edee1ed
 #: oceanai.modules.lab.video.Video.__calc_reshape_img_coef:36 of
 msgid "0.175"
 msgstr ""
 
-#: 908f4129c0c446d1929e18217f562403
+#: 120c218491584b12a45660c947046994
 #: oceanai.modules.lab.video.Video.__calc_reshape_img_coef:42 of
 msgid ":bdg-success:`Верно` :bdg-light:`-- 2 --`"
 msgstr ""
 
-#: 68eb1406f7804b0caf9812e11dcce45b
+#: d8baefcb78664e3090c3b9ca40ed5308
 #: oceanai.modules.lab.video.Video.__calc_reshape_img_coef:44 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -339,28 +339,28 @@ msgid ""
 ")"
 msgstr ""
 
-#: 220023f735c241dbb736b7244284bb7e
+#: cd558556be5748b6bbf09192f19ebd8b
 #: oceanai.modules.lab.video.Video.__calc_reshape_img_coef:59 of
 msgid "1.5"
 msgstr ""
 
-#: 05807e51091346b9b2c17f0a591204ed 0a0732cafc5a49cd869cbe09f56be077
-#: 15edd89029a34f67910442461295b7c1 2f75f0b9f18c40ae90b283872ca28b8f
-#: 354630ffbd324046a928e0f23c23d96d 446198d23fe241e1bd18ca614034018b
-#: 566fb57f7386432ea47c30b81f88bc01 66531bb4489a44ca96aa36d0888522f6
-#: 856d8c2b3a2f4f18b5f4e4fdd87cf811 943c1ec177324584a36857beb6bca7df
-#: 9c15ca7f037342d6aec56f3e86dbe663 b3d6142a6e1c40ada19e0ff091f5abdb
-#: b6a451bba9ad4e2095da6e3771b61374 be315fe8306c41528cf8341f61951e59
-#: ce3931a966404ddcb89f4eadc9d06bd1 d0d2cb17c94f4e269f881f35f9b185c1
-#: d461cc7a6e3e48aa89a96c64ab83aebf d8c486aa710c4a108f4fe00ac73fc8b9
+#: 03d90280381c4bcb88ef1e201c5ff48c 0a62d43a309f49ca80cb6889280d8692
+#: 2ae8f8a0f20042a3b530f98270406812 3648dab635ad43aca88225efa9389aa1
+#: 6e234bf0465e43419547724ce2ada74c 787865f82d064d03a5b5c5e5d3a09c1a
+#: 8094880d38a04b488cb86a75db40c739 8469ccf146b74ee88e24033f55f17371
+#: 9b14d556c95a4858aa0fb71d5608aa33 a3c78a84c2b64b45b7e7f90afe4beea0
+#: b130cb4be91b49e4a5714a7b7e1852c0 b4c9c820099c4688b73f6f07764017f0
+#: be784f4a512b4035bd172a88157bfe19 df47b832a95248fd97621342c5e0eb17
+#: e37fb2e1bcd44f778395a84bfc1375db ece161639b494d18a3155dbb104a0476
+#: fc94df3de6034722a49b96d6f8c6f99a fd64182fb4d349d2901a814732d0f524
 #: oceanai.modules.lab.video.Video.__calc_reshape_img_coef:65
 #: oceanai.modules.lab.video.Video.__concat_pred:100
 #: oceanai.modules.lab.video.Video.__load_model_weights:89
 #: oceanai.modules.lab.video.Video.__load_video_model_b5:54
 #: oceanai.modules.lab.video.Video.__norm_pred:54
-#: oceanai.modules.lab.video.Video._get_visual_features:115
+#: oceanai.modules.lab.video.Video._get_visual_features:117
 #: oceanai.modules.lab.video.Video.load_video_model_deep_fe:497
-#: oceanai.modules.lab.video.Video.load_video_model_hc:43
+#: oceanai.modules.lab.video.Video.load_video_model_hc:45
 #: oceanai.modules.lab.video.Video.load_video_model_nn:62
 #: oceanai.modules.lab.video.Video.load_video_model_weights_deep_fe:76
 #: oceanai.modules.lab.video.Video.load_video_model_weights_hc:76
@@ -374,7 +374,7 @@ msgstr ""
 msgid ":bdg-danger:`Ошибка` :bdg-light:`-- 1 --`"
 msgstr ""
 
-#: baca1c2835424b188a66f10af0c65239
+#: e71bf33d924a4a3b9218a46377952244
 #: oceanai.modules.lab.video.Video.__calc_reshape_img_coef:67 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -388,7 +388,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: b10498bbf3b74eeb9ca7299bc015c418
+#: ae62951d37cc43408eec29788ff384a1
 #: oceanai.modules.lab.video.Video.__calc_reshape_img_coef:81 of
 msgid ""
 "[2022-10-29 13:24:27] Неверные типы или значения аргументов в "
@@ -397,27 +397,27 @@ msgid ""
 "-1.0"
 msgstr ""
 
-#: 497f1de2b1d64ad6aeeef7e5237c57a0
+#: 4bb30210a1ed4f33a2068837bfa7eec5
 #: oceanai.modules.lab.video.Video.__concat_pred:1 of
 msgid "Конкатенация оценок по экспертным и нейросетевым признакам"
 msgstr ""
 
-#: b2f62070514946c28e666f264c375093
+#: 976619543cde4e19bd41b18510a81b15
 #: oceanai.modules.lab.video.Video.__concat_pred:6 of
 msgid "Оценки по экспертным признакам"
 msgstr ""
 
-#: e1f450b90a0f4c77b2f324b623efd6e4
+#: 0571ec41ff024d88909bd288c59747cd
 #: oceanai.modules.lab.video.Video.__concat_pred:8 of
 msgid "Оценки по нейросетевым признакам"
 msgstr ""
 
-#: 64f34d792e594ada8f32ecbf6d3b6eac
+#: f20e7273ab844b6880045b5e59ebf2a8
 #: oceanai.modules.lab.video.Video.__concat_pred:13 of
 msgid "Конкатенированные оценки по экспертным и нейросетевым признакам"
 msgstr ""
 
-#: 7c7d10cb4f084d4aa175fd8e33c86f6b
+#: 99fd52a2ce5441cb93438512b2c0a0c9
 #: oceanai.modules.lab.video.Video.__concat_pred:21 of
 msgid ""
 "import numpy as np\n"
@@ -442,7 +442,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 9b107d8b8b314ff382cccd3ed3b32f05
+#: 82d8dfc3a817484787f77bac824a3677
 #: oceanai.modules.lab.video.Video.__concat_pred:47 of
 msgid ""
 "[\n"
@@ -494,7 +494,7 @@ msgid ""
 "]"
 msgstr ""
 
-#: 4de9751854b94989a9579bfc40d40f6c
+#: 83e69ebbdbd947749ad254aa6d9fcd25
 #: oceanai.modules.lab.video.Video.__concat_pred:102 of
 msgid ""
 "import numpy as np\n"
@@ -519,7 +519,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 2ac4bbf0fc73425fa9f51406058f0715
+#: c9dc108b7e30430cb61553d1c85069b8
 #: oceanai.modules.lab.video.Video.__concat_pred:128 of
 msgid ""
 "[2022-10-20 22:33:31] Ой! Что-то пошло не так ... конкатенация оценок по "
@@ -529,13 +529,13 @@ msgid ""
 "[]"
 msgstr ""
 
-#: 73cdb21160204213acc939bd0817d17a
+#: ee407f214aff4c6fa4d6ee2f18d346af
 #: oceanai.modules.lab.video.Video.__load_model_weights:1 of
 msgid "Загрузка весов нейросетевой модели"
 msgstr ""
 
-#: 054cb21515b448979ce11462e92f6253 30d15ade5755419e976acd9e414dcba0
-#: f56733e322704e7a86f73904a5896fb9 ff2e1419875142579c4bc4f21cff2bc1
+#: 0a6654659522463797d8e59b9bfc4dee 3cc4f8300e1248d8b185ccbccd1f80ec
+#: 57408e61a96249e2968f03aafeae4f0a e893fcaa65c34b77abd3156f773e4f0f
 #: oceanai.modules.lab.video.Video.__load_model_weights:6
 #: oceanai.modules.lab.video.Video.load_video_model_weights_deep_fe:3
 #: oceanai.modules.lab.video.Video.load_video_model_weights_hc:3
@@ -543,8 +543,8 @@ msgstr ""
 msgid "Полный путь к файлу с весами нейросетевой модели"
 msgstr ""
 
-#: 1d2ea705feb74fe2967198a7369d5cdb 30d742af2c544416a91402d01af1f3ec
-#: 394de32444514cc2a8c6c1b282cffd46 8449a45a3c974ebc88b35ce41f04925c
+#: 3ed71ad8028b463abf7f62ccc174d5e5 74bd566eebb34f428875e5a997ad3597
+#: 9b6ae98cc8984050b3f45f280d2e2c04 b7159dba6f8c40c1a82cb1403b478016
 #: oceanai.modules.lab.video.Video.__load_model_weights:8
 #: oceanai.modules.lab.video.Video.load_video_model_weights_deep_fe:5
 #: oceanai.modules.lab.video.Video.load_video_model_weights_hc:5
@@ -552,23 +552,23 @@ msgstr ""
 msgid "Принудительная загрузка файла с весами нейросетевой модели из сети"
 msgstr ""
 
-#: f72af2f060524182a32352a9e709c0c4
+#: 95a36854f2c945cba6248c9a50ea63b4
 #: oceanai.modules.lab.video.Video.__load_model_weights:10 of
 msgid "Текст для информационного сообщения"
 msgstr ""
 
-#: 082b37962d394a01b3d8155a962ce7b5 17291a6147e44766ab3a3302611b3657
-#: 23bd9dbb0a39421d94bfcdc9e9f30bd2 341b6a819cde423da41a0276579e409a
-#: 3b49b2f00c1b4a4fac61a05fd929e681 64fe543c63314f3d8c08406b562f0ae8
-#: a6409c569f2a4ce78a3c7301980964d6 afd45315ebe844489216967f4831559c
-#: d7958812147345ab922e4e0967828cb5 e016f3a3a9ed443a8fca52c7dbb48ba7
-#: f5836fb5e7734d6cab3fabf4d328d7ec f768142fd9a04a9f9fe23841bf840dcc
+#: 20cbc876b3394250b4b597e913a1ae66 2b06104517e747e7bddd69aca3ad2488
+#: 584b125f8383430daf2732a40c5ce7e4 6433c671ce5d45adb4ca1371f82c177f
+#: 8934b10c07854b63a64d642be5f1118b c79f8e8e4dce4740bb68a3376a5eaa02
+#: d40f685fea9741829530cdaf8a2963ae e9aad462b3014881a78c6204b7a68ee4
+#: f33abce1d15140a3a44a66423d693e4f f84337df07c8435591e40d33b8ebd0cf
+#: f98caea09f3d41989e4171a1af6ac37c fd5ee56047484623816a681f23945814
 #: oceanai.modules.lab.video.Video.__load_model_weights:14
-#: oceanai.modules.lab.video.Video._get_visual_features:18
-#: oceanai.modules.lab.video.Video.get_video_union_predictions:21
-#: oceanai.modules.lab.video.Video.get_visual_features:13
+#: oceanai.modules.lab.video.Video._get_visual_features:20
+#: oceanai.modules.lab.video.Video.get_video_union_predictions:23
+#: oceanai.modules.lab.video.Video.get_visual_features:15
 #: oceanai.modules.lab.video.Video.load_video_model_deep_fe:7
-#: oceanai.modules.lab.video.Video.load_video_model_hc:7
+#: oceanai.modules.lab.video.Video.load_video_model_hc:9
 #: oceanai.modules.lab.video.Video.load_video_model_nn:7
 #: oceanai.modules.lab.video.Video.load_video_model_weights_deep_fe:9
 #: oceanai.modules.lab.video.Video.load_video_model_weights_hc:9
@@ -578,18 +578,18 @@ msgstr ""
 msgid "Подсчет времени выполнения"
 msgstr ""
 
-#: 1181359445b4453c8ed1872ffa9ca4de 154438fe8e70479e9eb267ad11a6b24e
-#: 1b9e5116313c4064a4ca8266d8d2666c 3a1d81c17e674d9c9112da473aba7f56
-#: 55ace225e36f488d8bc4b6756c0b07ca 8e6204820a0049d8b7ee25bc4bf20c2d
-#: a681a0fa889e4994973284e5b8b3c0d1 b36e3278d7744ea1907069f83389a5e7
-#: c84908713d134d40bc3a5fc2ca01dbb5 f0043d164c9643e8b02ac4001e2150ed
-#: fbdf6212b7704b8b81bc5fd2004cbb22 ff21c326851941809d3194951a98e740
+#: 159f00201089457f9b34a956e29bbd22 3c0074d4fcea4309b5c507cf348021fc
+#: 50c6bb7ba97e45c2aad7948bb41645e3 9a0724816c054451ae2a3ad45ffb2ca3
+#: 9b85b94885224ee58dcb0d4766fdda27 9db964cdacad40139a1dfc2e433a9670
+#: b1c73742ce334d8a93151aa7439968b9 b2b2b158ea5d49b2bb7e3fbb33554be6
+#: dc2fc78082be4f81bcb881e222e283eb df94827a19a14f05a3054bfe1a59ce2d
+#: e4851dcdf190412f9f259f08f4ecfdf6 ec0311fae2c2453084533abb5a5b3922
 #: oceanai.modules.lab.video.Video.__load_model_weights:16
-#: oceanai.modules.lab.video.Video._get_visual_features:20
-#: oceanai.modules.lab.video.Video.get_video_union_predictions:23
-#: oceanai.modules.lab.video.Video.get_visual_features:15
+#: oceanai.modules.lab.video.Video._get_visual_features:22
+#: oceanai.modules.lab.video.Video.get_video_union_predictions:25
+#: oceanai.modules.lab.video.Video.get_visual_features:17
 #: oceanai.modules.lab.video.Video.load_video_model_deep_fe:9
-#: oceanai.modules.lab.video.Video.load_video_model_hc:9
+#: oceanai.modules.lab.video.Video.load_video_model_hc:11
 #: oceanai.modules.lab.video.Video.load_video_model_nn:9
 #: oceanai.modules.lab.video.Video.load_video_model_weights_deep_fe:11
 #: oceanai.modules.lab.video.Video.load_video_model_weights_hc:11
@@ -599,8 +599,8 @@ msgstr ""
 msgid "Блокировка выполнения"
 msgstr ""
 
-#: 85afe82278514d4d9235f8129d613685 9793340729724364a0b501acf4709164
-#: 9968ecd4832e43e39290f328812a3007 d8b3e60f7f294d8f883efa0749613f15
+#: 2c0def10f62f4957a81b54e29690555f 6b6e189668b24a049cf5d4b05427d4f3
+#: 8b2a1eb1fbd24058becee1fa58753f7c ca08c0e964b54fec933b41a52e34585d
 #: oceanai.modules.lab.video.Video.__load_model_weights:19
 #: oceanai.modules.lab.video.Video.load_video_model_weights_deep_fe:14
 #: oceanai.modules.lab.video.Video.load_video_model_weights_hc:14
@@ -610,7 +610,7 @@ msgid ""
 "**False**"
 msgstr ""
 
-#: c55038db482f48d9af153e60332a658f
+#: 293e30b1a00f4d0ba4b310be2a26ba19
 #: oceanai.modules.lab.video.Video.__load_model_weights:27 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -630,7 +630,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: b32b12d06a804b4da72c74f8b767d4e1
+#: add1a09ce990473b976a1649bbfc6d55
 #: oceanai.modules.lab.video.Video.__load_model_weights:46 of
 msgid ""
 "[2022-10-27 12:46:55] Загрузка весов нейросетевой модели\n"
@@ -643,12 +643,12 @@ msgid ""
 "True"
 msgstr ""
 
-#: 39cd22d393324f4ca1d994fd8a81036a
+#: 82a623a8f7094da383b84da6c8232195
 #: oceanai.modules.lab.video.Video.__load_model_weights:58 of
 msgid ":bdg-light:`-- 2 --`"
 msgstr ""
 
-#: 0053eb15311541dfaee4035b8558b8c0
+#: ca532170265d425f9cad67219ed26f36
 #: oceanai.modules.lab.video.Video.__load_model_weights:60 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -666,7 +666,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 2b31f928ceac4c70ac18e88bf4da5408
+#: 7fdadeadcd044ed1a7bb2788733064d0
 #: oceanai.modules.lab.video.Video.__load_model_weights:79 of
 msgid ""
 "[2022-10-27 12:47:52] Загрузка весов нейросетевой модели\n"
@@ -676,7 +676,7 @@ msgid ""
 "True"
 msgstr ""
 
-#: b3144413f55248ac9322a84520f20e44
+#: e6b1dc432e964c6db6025231877164fa
 #: oceanai.modules.lab.video.Video.__load_model_weights:91 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -695,7 +695,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 54808c4d040b42cc9ab767a601a46ddf
+#: 7cdfeb58b6e04dc496861cd52b842364
 #: oceanai.modules.lab.video.Video.__load_model_weights:109 of
 msgid ""
 "[2022-10-27 12:48:24] Неверные типы или значения аргументов в "
@@ -704,23 +704,23 @@ msgid ""
 "False"
 msgstr ""
 
-#: 1b7dfcd54b1a427789e2473c246b4d59
+#: 3ea53f2bf1184b9fa39f9e89d45b7212
 #: oceanai.modules.lab.video.Video.__load_video_model_b5:1 of
 msgid ""
 "Формирование нейросетевой архитектуры модели для получения результата "
 "оценки персонального качества"
 msgstr ""
 
-#: 173521574a0c447ea809f10c897e583a 36df7853a74642bd9a53f9ec084d5483
-#: cd557fb84d5e472a9c83019009f5a293 dab99f793ea5479285ae5af922dc46e5
+#: 01e31132f8e844a1824e397955384c01 30f294813a4c420884bbca8114e0cdce
+#: 4252850fca444aab84be2c985a20a445 786091108f8047b7a9236f8d8d68e976
 #: oceanai.modules.lab.video.Video.__load_video_model_b5:6
 #: oceanai.modules.lab.video.Video.load_video_model_deep_fe:3
-#: oceanai.modules.lab.video.Video.load_video_model_hc:3
+#: oceanai.modules.lab.video.Video.load_video_model_hc:5
 #: oceanai.modules.lab.video.Video.load_video_model_nn:3 of
 msgid "Отображение сформированной нейросетевой архитектуры модели"
 msgstr ""
 
-#: e1a8deaec3d54eeabca0ee61832b1d96
+#: ff34ad8da1a344078e66162830625fa5
 #: oceanai.modules.lab.video.Video.__load_video_model_b5:11 of
 msgid ""
 "**None** если неверные типы или значения аргументов, в обратном случае "
@@ -728,7 +728,7 @@ msgid ""
 "персонального качества"
 msgstr ""
 
-#: 62a80cf9ece04e77a9c6aedb8def46b4
+#: 00bcd36827614c1a8892f9526df43bdd
 #: oceanai.modules.lab.video.Video.__load_video_model_b5:20 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -740,7 +740,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 07c0371a0d6c4f81b51aac29b8d009bf
+#: fe7e1cebb44c40e788ae6757616449e8
 #: oceanai.modules.lab.video.Video.__load_video_model_b5:33 of
 msgid ""
 "Model: \"model\"\n"
@@ -758,10 +758,10 @@ msgid ""
 "Trainable params: 33\n"
 "Non-trainable params: 0\n"
 "_________________________________________________________________\n"
-"<keras.engine.functional.Functional at 0x13d442940>"
+"<tf.keras.Model at 0x13d442940>"
 msgstr ""
 
-#: 960a289ae1e64006ad83bc4c5ef1c3b5
+#: cdc7686e0ac54713b0678e13770bf1ed
 #: oceanai.modules.lab.video.Video.__load_video_model_b5:56 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -773,34 +773,34 @@ msgid ""
 ")"
 msgstr ""
 
-#: 6b07ad4f3b3746f19aec3713fcb83153
+#: 4e5396ae192a4da2a1a40c39451d7bb3
 #: oceanai.modules.lab.video.Video.__load_video_model_b5:69 of
 msgid ""
 "[2022-10-17 10:53:03] Неверные типы или значения аргументов в "
 "\"Video.__load_video_model_b5\" ..."
 msgstr ""
 
-#: f5bb970efdc34de28ab364ca9cc26c45
+#: 3223f747f18b49e6ab97ca233b0112b6
 #: oceanai.modules.lab.video.Video.__norm_pred:1 of
 msgid "Нормализация оценок по экспертным и нейросетевым признакам"
 msgstr ""
 
-#: ee389b73c21b4848b0f86b0d3f9727f1
+#: b7c35215e09c4852a50ffb9269d1bca7
 #: oceanai.modules.lab.video.Video.__norm_pred:6 of
 msgid "Оценки"
 msgstr ""
 
-#: e901bd2b90c24e449e4b16e22b592e0e
+#: e40a952882c04f1f9a33b0ca31ad2ac4
 #: oceanai.modules.lab.video.Video.__norm_pred:8 of
 msgid "Максимальный размер вектора оценок"
 msgstr ""
 
-#: 9baae9c6fc0749519a43c8ca493d87d1
+#: 849e1c23e98f4a09b74c37b328b15bcc
 #: oceanai.modules.lab.video.Video.__norm_pred:13 of
 msgid "Нормализованные оценки по экспертным и нейросетевым признакам"
 msgstr ""
 
-#: 6bddea35c9284529bac3a1653ba9e8a6
+#: eaeeb5358748442e8740ba33117256b2
 #: oceanai.modules.lab.video.Video.__norm_pred:21 of
 msgid ""
 "import numpy as np\n"
@@ -820,7 +820,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 53ae2e77e1874483873a5c23042681f2
+#: 6a75ce20b5e74f61808782157dd0dfe4
 #: oceanai.modules.lab.video.Video.__norm_pred:42 of
 msgid ""
 "array([\n"
@@ -831,7 +831,7 @@ msgid ""
 "])"
 msgstr ""
 
-#: df929d8c1d8c4bd391459d8904570cdf
+#: 4ee6f746deea493aa827417a5b2bf459
 #: oceanai.modules.lab.video.Video.__norm_pred:56 of
 msgid ""
 "import numpy as np\n"
@@ -848,7 +848,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 689d8a07e1cf4410b79dd220eab8b4cf
+#: 45b9007dfbf34ee79440c15029cbac5f
 #: oceanai.modules.lab.video.Video.__norm_pred:74 of
 msgid ""
 "[2022-10-20 22:03:17] Неверные типы или значения аргументов в "
@@ -857,81 +857,90 @@ msgid ""
 "array([], dtype=float64)"
 msgstr ""
 
-#: 67f75d9f1bc94ab9aff53ac3b8cdc97b
+#: 56e44535c2c14a33a301248b4a7e62d4
 #: oceanai.modules.lab.video.Video._get_visual_features:1 of
 msgid ""
 "Извлечение признаков из визуального сигнала (без очистки истории вывода "
 "сообщений в ячейке Jupyter)"
 msgstr ""
 
-#: f81e7cd847914008bcf2e8e08a358656
+#: 95d48e34d23e4bc58e7a49b26f888b91
 #: oceanai.modules.lab.video.Video._get_visual_features:4 of
 msgid "protected (защищенный метод)"
 msgstr ""
 
-#: 52ebd0a0a55c476cbf9901d126749c7a e9bc8ad7345b4d3e83d0480b5564edd6
+#: 6f528cac9b6b433f9fb07b13263b0602 c82fa29171554095a8ce854f53139ee1
 #: oceanai.modules.lab.video.Video._get_visual_features:6
 #: oceanai.modules.lab.video.Video.get_visual_features:3 of
 msgid "Путь к видеофайлу"
 msgstr ""
 
-#: 135f560c5834433486eaf62c9be7f672 8f8a5ad6bc71413db5c437c7c3894819
-#: fb27214f293c42b4a0ea05e632cbb331
+#: 491c206c79e2486e9ac0676c833984a3 4ab9adafbb4d47358a6ea10580d18795
+#: cd38e83f5b6c49dbb57a70e0adc6af2c
 #: oceanai.modules.lab.video.Video._get_visual_features:8
 #: oceanai.modules.lab.video.Video.get_video_union_predictions:7
 #: oceanai.modules.lab.video.Video.get_visual_features:5 of
 msgid "Понижение кадровой частоты"
 msgstr ""
 
-#: 0b5dc320ee744dfc825265394e843e6f 7ac522d4b25045df8f4b4d67c9298cd4
-#: bd08b2ef232a4e3385f21c992a2e8a84
+#: 946f5e0c53ae4238983c6660d54fb8a1 a4c77b3132e548118cb443e814e75117
+#: de4cf6e16e65444d852ad90c1751e2f6
 #: oceanai.modules.lab.video.Video._get_visual_features:10
 #: oceanai.modules.lab.video.Video.get_video_union_predictions:9
 #: oceanai.modules.lab.video.Video.get_visual_features:7 of
 msgid "Размер окна сегмента сигнала (в кадрах)"
 msgstr ""
 
-#: 0bbaefcb0c9844fba0c0945f62c08b12 bbb96556d02e4e15974acc59c6113e60
-#: cb0e7c6495c14f418560cad16b61baa5
+#: 00d672f614e9460d9e515ee93ee5ffd1 3f9231c6feca4b1b95d991dea7437d9c
+#: 78b566bc6fb44469bb8172c3ea79ccac
 #: oceanai.modules.lab.video.Video._get_visual_features:12
 #: oceanai.modules.lab.video.Video.get_video_union_predictions:11
 #: oceanai.modules.lab.video.Video.get_visual_features:9 of
 msgid "Шаг сдвига окна сегмента сигнала (в кадрах)"
 msgstr ""
 
-#: fa36b772ad804142b3b997b113f7836c
-#: oceanai.modules.lab.video.Video._get_visual_features:14 of
+#: 69250d522a1245feaf14de5ae1b74a40 780a23f58e004be0bc60369b6b2155e8
+#: 7bfc163e8f1e4670a38a0615f983697a b3a39954cd7241d2a356ee0002d6080f
+#: oceanai.modules.lab.video.Video._get_visual_features:14
+#: oceanai.modules.lab.video.Video.get_video_union_predictions:13
+#: oceanai.modules.lab.video.Video.get_visual_features:11
+#: oceanai.modules.lab.video.Video.load_video_model_hc:3 of
+msgid "Язык"
+msgstr ""
+
+#: 699ef582cc3a4ed18084291db7962d18
+#: oceanai.modules.lab.video.Video._get_visual_features:16 of
 msgid "Замена последнего сообщения"
 msgstr ""
 
-#: 29fe1dd0ddb6416daef74b74f83c20f5 d2e1c56796204efc82443ed6c2671ea2
-#: oceanai.modules.lab.video.Video._get_visual_features:23
-#: oceanai.modules.lab.video.Video.get_visual_features:18 of
+#: 441cc5b5355e4a23b1733304ead8767b e5720c52b0384b1b88e4854ecdbad1c8
+#: oceanai.modules.lab.video.Video._get_visual_features:25
+#: oceanai.modules.lab.video.Video.get_visual_features:20 of
 msgid ""
 "Кортеж с двумя np.ndarray:      1. np.ndarray с экспертными признаками"
 "     2. np.ndarray с нейросетевыми признаками"
 msgstr ""
 
-#: 77bf077c58544074ade8def8de5e4b21 82d0dfb3d42a47f0ba4d70e2529b5399
-#: oceanai.modules.lab.video.Video._get_visual_features:25
-#: oceanai.modules.lab.video.Video.get_visual_features:20 of
+#: 171d2dc4fb284d5d8113516258ad7b68 34f4b79bd35242f1972f1104a72cb578
+#: oceanai.modules.lab.video.Video._get_visual_features:27
+#: oceanai.modules.lab.video.Video.get_visual_features:22 of
 msgid "Кортеж с двумя np.ndarray:"
 msgstr ""
 
-#: 0a291439e1564a8c9b22c16395ca99e4 d306e0ba37b9480e9530130deba47ce6
-#: oceanai.modules.lab.video.Video._get_visual_features:27
-#: oceanai.modules.lab.video.Video.get_visual_features:22 of
+#: 3fdfe53553954bcdae35975f7af54c7d b3f14680b2a041b8b532681c3f81130c
+#: oceanai.modules.lab.video.Video._get_visual_features:29
+#: oceanai.modules.lab.video.Video.get_visual_features:24 of
 msgid "np.ndarray с экспертными признаками"
 msgstr ""
 
-#: 5a2e2b0586bf4014a600fe70a7363db3 95fc268ff58946fcbb451cb4979ba866
-#: oceanai.modules.lab.video.Video._get_visual_features:28
-#: oceanai.modules.lab.video.Video.get_visual_features:23 of
+#: 5412369972c74cb9980422f73d3822e5 55e1e55999e1422abb28e0a8df7bdbf3
+#: oceanai.modules.lab.video.Video._get_visual_features:30
+#: oceanai.modules.lab.video.Video.get_visual_features:25 of
 msgid "np.ndarray с нейросетевыми признаками"
 msgstr ""
 
-#: 19b022b2fd4449d4b40c9915e884f718
-#: oceanai.modules.lab.video.Video._get_visual_features:36 of
+#: dd838a6df3ff41b2a55a694c512804ee
+#: oceanai.modules.lab.video.Video._get_visual_features:38 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
 "\n"
@@ -945,8 +954,8 @@ msgid ""
 ")"
 msgstr ""
 
-#: 9b7fae6f173c4db79b02afdadedb3fa1
-#: oceanai.modules.lab.video.Video._get_visual_features:52 of
+#: f104da9a04ba49d3ac6e0cb44ef5d508
+#: oceanai.modules.lab.video.Video._get_visual_features:54 of
 msgid ""
 "[2022-11-03 16:37:12] Формирование нейросетевой архитектуры для получения"
 " нейросетевых признаков (видео модальность) ...\n"
@@ -954,8 +963,8 @@ msgid ""
 "--- Время выполнения: 1.564 сек. ---"
 msgstr ""
 
-#: 445abb06246749a1946ca9635085ba6e
-#: oceanai.modules.lab.video.Video._get_visual_features:60 of
+#: ec6e573d35164aefab693bf866c27680
+#: oceanai.modules.lab.video.Video._get_visual_features:62 of
 msgid ""
 "video.path_to_save_ = './models'\n"
 "video.chunk_size_ = 2000000\n"
@@ -970,8 +979,8 @@ msgid ""
 ")"
 msgstr ""
 
-#: bf56580839fc46589adc4df35e967d4a
-#: oceanai.modules.lab.video.Video._get_visual_features:76 of
+#: f43814d47f4247438f1efb542a9fcf5e
+#: oceanai.modules.lab.video.Video._get_visual_features:78 of
 msgid ""
 "[2022-11-03 16:39:10] Загрузка весов нейросетевой модели для получения "
 "нейросетевых признаков (видео модальность) ...\n"
@@ -982,8 +991,8 @@ msgid ""
 "--- Время выполнения: 4.874 сек. ---"
 msgstr ""
 
-#: 67fc8c1c762a407f9c59ae290131e521
-#: oceanai.modules.lab.video.Video._get_visual_features:86 of
+#: fd3e7a633a594246b5d6e192284319b5
+#: oceanai.modules.lab.video.Video._get_visual_features:88 of
 msgid ""
 "path = "
 "'/Users/dl/GitHub/oceanai/oceanai/dataset/test80_01/glgfB3vFewc.004.mp4'"
@@ -996,8 +1005,8 @@ msgid ""
 ")"
 msgstr ""
 
-#: efc469f6f9cc458994b4763020fcfb37
-#: oceanai.modules.lab.video.Video._get_visual_features:99 of
+#: 07668c4014224e03a3102ed6be678337
+#: oceanai.modules.lab.video.Video._get_visual_features:101 of
 msgid ""
 "[2022-11-03 16:56:52] Извлечение признаков (экспертных и нейросетевых) из"
 " визуального сигнала ...\n"
@@ -1015,8 +1024,8 @@ msgid ""
 "--- Время выполнения: 6.109 сек. ---"
 msgstr ""
 
-#: 313a1677f2694c949cd71b088b398507
-#: oceanai.modules.lab.video.Video._get_visual_features:117 of
+#: 8dd655ed5f314fd3b6d203af74844e0c
+#: oceanai.modules.lab.video.Video._get_visual_features:119 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
 "\n"
@@ -1033,8 +1042,8 @@ msgid ""
 ")"
 msgstr ""
 
-#: 2121df57c62b45699690aead92412ba4
-#: oceanai.modules.lab.video.Video._get_visual_features:134 of
+#: 6c169a5288d94feb98caec79460c05af
+#: oceanai.modules.lab.video.Video._get_visual_features:136 of
 msgid ""
 "[2022-11-03 16:59:45] Извлечение признаков (экспертных и нейросетевых) из"
 " визуального сигнала ...\n"
@@ -1046,76 +1055,76 @@ msgid ""
 "--- Время выполнения: 1.358 сек. ---"
 msgstr ""
 
-#: c1a08b39d37d40359d570597f0165d4a
+#: 5c066e4a42d34f4b9a27eca28f8a5db4
 #: oceanai.modules.lab.video.Video.get_video_union_predictions:1 of
 msgid "Получения прогнозов по видео"
 msgstr ""
 
-#: be578245f24b4c458a5bd9e3b1d1368e
+#: c8600445bea34bfc9b5d7e1dfaa86c77
 #: oceanai.modules.lab.video.Video.get_video_union_predictions:3 of
 msgid "Глубина иерархии для получения данных"
 msgstr ""
 
-#: 4549b0212c934448af765a7fbb9566a7
+#: 33bcb68964f64343843105c400330a96
 #: oceanai.modules.lab.video.Video.get_video_union_predictions:5 of
 msgid "Рекурсивный поиск данных"
 msgstr ""
 
-#: 6492f0bcf7e04370a69ba993a0f45529
-#: oceanai.modules.lab.video.Video.get_video_union_predictions:13 of
+#: a6276a90080a4593868581b2ede0937b
+#: oceanai.modules.lab.video.Video.get_video_union_predictions:15 of
 msgid "Вычисление точности"
 msgstr ""
 
-#: 57046f47df7b4d7bac1f0ee9b8046760
-#: oceanai.modules.lab.video.Video.get_video_union_predictions:15 of
+#: 8803185b081641879b5becdaf93ac113
+#: oceanai.modules.lab.video.Video.get_video_union_predictions:17 of
 msgid "Полный путь к файлу с верными предсказаниями для подсчета точности"
 msgstr ""
 
-#: 13a1fb8f1b2c43fa9a22c18038e1b59f
-#: oceanai.modules.lab.video.Video.get_video_union_predictions:17 of
+#: 1ab008a301fe47c6ab359bfbec401842
+#: oceanai.modules.lab.video.Video.get_video_union_predictions:19 of
 msgid "При необходимости формировать LOG файл"
 msgstr ""
 
-#: 37676dcbd1da4ba587a51008e3df692b
-#: oceanai.modules.lab.video.Video.get_video_union_predictions:26 of
-msgid "**True** если веса прогнозы успешно получены, в обратном случае **False**"
+#: 3e75ae6863654b1c8ab37d99335e0167
+#: oceanai.modules.lab.video.Video.get_video_union_predictions:28 of
+msgid "**True** если прогнозы успешно получены, в обратном случае **False**"
 msgstr ""
 
-#: b574727ebe734d1ea30b2c86c55bf93b
-#: oceanai.modules.lab.video.Video.get_video_union_predictions:29 of
+#: 1de2418727924a33a3d5509756f5ed88
+#: oceanai.modules.lab.video.Video.get_video_union_predictions:31 of
 msgid ""
 ":bdg-link-light:`Пример <../../user_guide/notebooks/Video-"
 "get_video_union_predictions.ipynb>`"
 msgstr ""
 
-#: 24d11e0f2d3f40638b441ca222986625
+#: 0befd51e18084aa39f3b33c5ed66ba32
 #: oceanai.modules.lab.video.Video.get_visual_features:1 of
 msgid "Извлечение признаков из визуального сигнала"
 msgstr ""
 
-#: 01043c6af56d4e978dad8ad3389ba598
-#: oceanai.modules.lab.video.Video.get_visual_features:26 of
+#: 9a8ec107f27b4e27b3198e7b64042397
+#: oceanai.modules.lab.video.Video.get_visual_features:28 of
 msgid ""
 ":bdg-link-light:`Пример <../../user_guide/notebooks/Video-"
 "get_visual_features.ipynb>`"
 msgstr ""
 
-#: 594b362d57a247188d2f51e0ce172d77
+#: 03f9a5aca6884b1a9fa924f45bcf44ce
 #: oceanai.modules.lab.video.Video.load_video_model_deep_fe:1 of
 msgid "Формирование нейросетевой архитектуры для получения нейросетевых признаков"
 msgstr ""
 
-#: 1502cbdc7e514aba85cc9c5bb4f60938 231e171e490247a18ed766b6e78c107b
-#: 489bf163bc5a43a4a7c7b4cd03552e9c
+#: 2a0b45fb2a6a495bb83dcdf478c66dac 9a5a1d8394514a848e191372dcec8970
+#: 9d48e48ad44a44ecbe1b2b47aa433bfc
 #: oceanai.modules.lab.video.Video.load_video_model_deep_fe:12
-#: oceanai.modules.lab.video.Video.load_video_model_hc:12
+#: oceanai.modules.lab.video.Video.load_video_model_hc:14
 #: oceanai.modules.lab.video.Video.load_video_model_nn:12 of
 msgid ""
 "**True** если нейросетевая архитектура модели сформирована, в обратном "
 "случае **False**"
 msgstr ""
 
-#: 206792e8bea444bf912fe3851e94904b
+#: ce8e8851e5e1457ca2ee0f463c13bfb5
 #: oceanai.modules.lab.video.Video.load_video_model_deep_fe:20 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -1127,7 +1136,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 38ef416d2fe64e1a8fa3f01d4beeac81
+#: eb1a5129707e4c949687cfe2554c35b8
 #: oceanai.modules.lab.video.Video.load_video_model_deep_fe:33 of
 msgid ""
 "[2022-11-01 12:18:14] Формирование нейросетевой архитектуры для получения"
@@ -1776,7 +1785,7 @@ msgid ""
 "True"
 msgstr ""
 
-#: d022ed2e18034917a82d013c15e5a208
+#: 086a26caca664f31a8e88253954df46c
 #: oceanai.modules.lab.video.Video.load_video_model_deep_fe:499 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -1788,7 +1797,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 4643fe0583424cfc8befd3338221d564
+#: c14563a9856a4d3690b72449b25e3c68
 #: oceanai.modules.lab.video.Video.load_video_model_deep_fe:512 of
 msgid ""
 "[2022-11-01 12:21:23] Неверные типы или значения аргументов в "
@@ -1797,15 +1806,15 @@ msgid ""
 "False"
 msgstr ""
 
-#: 07d099fda0614b34b2c9926f04aa0ac9
+#: 485a3d150906441589a2bbfd30e24495
 #: oceanai.modules.lab.video.Video.load_video_model_hc:1 of
 msgid ""
 "Формирование нейросетевой архитектуры модели для получения оценок по "
 "экспертным признакам"
 msgstr ""
 
-#: 505f2a379e8e41d49b8f65f1cafd5975
-#: oceanai.modules.lab.video.Video.load_video_model_hc:20 of
+#: 74354416f0fa44efb3f5dbe94af04874
+#: oceanai.modules.lab.video.Video.load_video_model_hc:22 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
 "\n"
@@ -1816,8 +1825,8 @@ msgid ""
 ")"
 msgstr ""
 
-#: e2edc1d02ac0425d86264769e87f6bc1
-#: oceanai.modules.lab.video.Video.load_video_model_hc:33 of
+#: 97dba41c2b254b7ebe3360ca3664d053
+#: oceanai.modules.lab.video.Video.load_video_model_hc:35 of
 msgid ""
 "[2022-10-25 16:37:43] Формирование нейросетевой архитектуры модели для "
 "получения оценок по экспертным признакам (видео модальность) ...\n"
@@ -1827,8 +1836,8 @@ msgid ""
 "True"
 msgstr ""
 
-#: d91610ddb8604fb6953b2042da4edd5a
-#: oceanai.modules.lab.video.Video.load_video_model_hc:45 of
+#: 5177ee5050ad424a866e7f21fc6e654d
+#: oceanai.modules.lab.video.Video.load_video_model_hc:47 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
 "\n"
@@ -1839,8 +1848,8 @@ msgid ""
 ")"
 msgstr ""
 
-#: 4550e020f2ed44818b6389c6e0d3af7d
-#: oceanai.modules.lab.video.Video.load_video_model_hc:58 of
+#: 82a1760712e44772900c4f378bb02068
+#: oceanai.modules.lab.video.Video.load_video_model_hc:60 of
 msgid ""
 "[2022-10-26 12:27:41] Неверные типы или значения аргументов в "
 "\"Video.load_video_model_hc\" ...\n"
@@ -1848,14 +1857,14 @@ msgid ""
 "False"
 msgstr ""
 
-#: 8658c5e7d6054cd8948df1777c2b6e41
+#: 8a35205f8c434199af86c6e60750f6af
 #: oceanai.modules.lab.video.Video.load_video_model_nn:1 of
 msgid ""
 "Формирование нейросетевой архитектуры для получения оценок по "
 "нейросетевым признакам"
 msgstr ""
 
-#: 0b16f96120ba46398cffc16cffafe670
+#: 5814a870441045beac799a9c91060cb9
 #: oceanai.modules.lab.video.Video.load_video_model_nn:20 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -1867,7 +1876,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 8165fe7d12f44b47bf4d459d059d18dd
+#: 47fda7b74a3e4043b5d9fd6b60eddb03
 #: oceanai.modules.lab.video.Video.load_video_model_nn:33 of
 msgid ""
 "[2022-10-27 14:46:11] Формирование нейросетевой архитектуры для получения"
@@ -1897,7 +1906,7 @@ msgid ""
 "True"
 msgstr ""
 
-#: 5a2daebc9e954bb1835435e8b324c5ae
+#: 26f4600bd4eb448195df6d6c9f50c039
 #: oceanai.modules.lab.video.Video.load_video_model_nn:64 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -1909,7 +1918,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 81b485d6d1c143e181d05f7f6c2af76b
+#: 95554269e2e74d648bba2ddbfc96f93f
 #: oceanai.modules.lab.video.Video.load_video_model_nn:77 of
 msgid ""
 "[2022-10-27 14:47:22] Неверные типы или значения аргументов в "
@@ -1918,12 +1927,12 @@ msgid ""
 "False"
 msgstr ""
 
-#: ed3d5557e6a4480f998d34ef8e35839e
+#: 7bb057a5f60f48b598758bb557484523
 #: oceanai.modules.lab.video.Video.load_video_model_weights_deep_fe:1 of
 msgid "Загрузка весов нейросетевой модели для получения нейросетевых признаков"
 msgstr ""
 
-#: 157060b9712f47a5b5fa0f35f14cf930
+#: df96f50264f548659a3cabecb908de15
 #: oceanai.modules.lab.video.Video.load_video_model_weights_deep_fe:22 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -1936,7 +1945,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 917e9d667c0a4790bcb2a4eb9675f387
+#: 9875e3e7500b43ddb703209ff4d52866
 #: oceanai.modules.lab.video.Video.load_video_model_weights_deep_fe:36 of
 msgid ""
 "[2022-11-01 12:41:59] Формирование нейросетевой архитектуры для получения"
@@ -1947,7 +1956,7 @@ msgid ""
 "True"
 msgstr ""
 
-#: c3bfbd4bea964688a49def4b320c438d
+#: 577d7d7175094c9d8f2aef487b5425a5
 #: oceanai.modules.lab.video.Video.load_video_model_weights_deep_fe:46 of
 msgid ""
 "video.path_to_save_ = './models'\n"
@@ -1964,7 +1973,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 490096d829c942d8acefaf8cc8165a97
+#: f2ca6375fe4a4174ab500cf7bbc2bcc6
 #: oceanai.modules.lab.video.Video.load_video_model_weights_deep_fe:64 of
 msgid ""
 "[2022-11-01 12:42:51] Загрузка весов нейросетевой модели для получения "
@@ -1978,7 +1987,7 @@ msgid ""
 "True"
 msgstr ""
 
-#: 4fc6d77a4fb24bc59343e18297b1dd2d
+#: a176cf8c4cc34f189f02cd6aaeab291c
 #: oceanai.modules.lab.video.Video.load_video_model_weights_deep_fe:78 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -1999,7 +2008,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: cd87d5e237ff4545b591f4b133c3481b
+#: c1f26f24ab334c4d895324019112b4b9
 #: oceanai.modules.lab.video.Video.load_video_model_weights_deep_fe:100 of
 msgid ""
 "[2022-11-01 12:44:14] Загрузка весов нейросетевой модели для получения "
@@ -2017,14 +2026,14 @@ msgid ""
 "False"
 msgstr ""
 
-#: f296c6806f6b480489ac74a205dc8953
+#: e1b34396889545b7969518f76933ab1d
 #: oceanai.modules.lab.video.Video.load_video_model_weights_hc:1 of
 msgid ""
 "Загрузка весов нейросетевой модели для получения оценок по экспертным "
 "признакам"
 msgstr ""
 
-#: 178123aabcb74bf7bdb92210133a8f33
+#: c270be22390940ec9861960753e970ce
 #: oceanai.modules.lab.video.Video.load_video_model_weights_hc:22 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -2037,7 +2046,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 437de612ad9f4770b0c5e0564ad960a3
+#: e997dd48f0b74a55a749898027d78600
 #: oceanai.modules.lab.video.Video.load_video_model_weights_hc:36 of
 msgid ""
 "[2022-10-27 12:55:31] Формирование нейросетевой архитектуры модели для "
@@ -2048,7 +2057,7 @@ msgid ""
 "True"
 msgstr ""
 
-#: 3aaa250e11a24331bf582359f4c2f04a
+#: 8416d9866f044ea39768d802797c62ba
 #: oceanai.modules.lab.video.Video.load_video_model_weights_hc:46 of
 msgid ""
 "video.path_to_save_ = './models'\n"
@@ -2065,7 +2074,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: f7e01bc508f0480d88d8668b690f73ff
+#: 80f2b223f66341a4ac9c32611333ae27
 #: oceanai.modules.lab.video.Video.load_video_model_weights_hc:64 of
 msgid ""
 "[2022-10-27 13:08:04] Загрузка весов нейросетевой модели для получения "
@@ -2079,7 +2088,7 @@ msgid ""
 "True"
 msgstr ""
 
-#: d359ba9ac8de4f8e968fb48d24308bc5
+#: c83756d6c9dd407e93b75b844996c518
 #: oceanai.modules.lab.video.Video.load_video_model_weights_hc:78 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -2100,7 +2109,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 8b1c4fd56cf6497d998e439756510809
+#: eb4036d02bf14e0fae9a3d5c5611fe7f
 #: oceanai.modules.lab.video.Video.load_video_model_weights_hc:100 of
 msgid ""
 "[2022-10-27 13:09:54] Загрузка весов нейросетевой модели для получения "
@@ -2118,14 +2127,14 @@ msgid ""
 "False"
 msgstr ""
 
-#: b4bef8b403374c5aa0d4270638149c84
+#: e81a1f474cc241a99cd2624a982d5772
 #: oceanai.modules.lab.video.Video.load_video_model_weights_nn:1 of
 msgid ""
 "Загрузка весов нейросетевой модели для получения оценок по нейросетевым "
 "признакам"
 msgstr ""
 
-#: d5bf1c1cf13c4c1daf5cef5f331d42c0
+#: 32f276a65d134c1fbf29757cf8dc5574
 #: oceanai.modules.lab.video.Video.load_video_model_weights_nn:22 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -2138,7 +2147,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: b62ca4952da144fb8fdc21a12522cc1b
+#: b185e20ea8b04454b24e4159c3e9fb31
 #: oceanai.modules.lab.video.Video.load_video_model_weights_nn:36 of
 msgid ""
 "[2022-10-27 15:17:13] Формирование нейросетевой архитектуры для получения"
@@ -2149,7 +2158,7 @@ msgid ""
 "True"
 msgstr ""
 
-#: 5e0e853a9a02405e87d6bddf2896d68b
+#: 02b76e73c3b94dd1bf79b8df1c040e65
 #: oceanai.modules.lab.video.Video.load_video_model_weights_nn:46 of
 msgid ""
 "video.path_to_save_ = './models'\n"
@@ -2166,7 +2175,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 42b3648b58a54d46b219c500a1f580b0
+#: f0f6f3e234b04d46a362b6449ef041b0
 #: oceanai.modules.lab.video.Video.load_video_model_weights_nn:64 of
 msgid ""
 "[2022-10-27 15:19:08] Загрузка весов нейросетевой модели для получения "
@@ -2180,7 +2189,7 @@ msgid ""
 "True"
 msgstr ""
 
-#: 3f1dc938e5ba42198efb733b47725164
+#: 79188e7409ff4e99beff0433c5148f4c
 #: oceanai.modules.lab.video.Video.load_video_model_weights_nn:78 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -2201,7 +2210,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: bb2d5416fd2449188864fc81fd5300de
+#: e2fb133450bb41deae4d7dcba3de3f5e
 #: oceanai.modules.lab.video.Video.load_video_model_weights_nn:100 of
 msgid ""
 "[2022-10-27 15:19:40] Загрузка весов нейросетевой модели для получения "
@@ -2219,26 +2228,26 @@ msgid ""
 "False"
 msgstr ""
 
-#: 2d7da096f0514c19a4fe7f1952266def
+#: f082506add6d47c48631c15100118d3d
 #: oceanai.modules.lab.video.Video.load_video_models_b5:1 of
 msgid ""
 "Формирование нейросетевых архитектур моделей для получения результатов "
 "оценки персональных качеств"
 msgstr ""
 
-#: ea1bb52f15d249e6aed7ca1abfa87a43
+#: 98b5bf8fc6264ffbb2dec3d2b4f212af
 #: oceanai.modules.lab.video.Video.load_video_models_b5:3 of
 msgid "Отображение последней сформированной нейросетевой архитектуры моделей"
 msgstr ""
 
-#: d652958609fb4350ade0745499efde17
+#: eac8e9cceece46c78b060cd954ae8f3d
 #: oceanai.modules.lab.video.Video.load_video_models_b5:12 of
 msgid ""
 "**True** если нейросетевые архитектуры модели сформированы, в обратном "
 "случае **False**"
 msgstr ""
 
-#: 3d78603bca3d4b6588c67d2b455ec093
+#: 54d3a02f0f4a49a2ae904e1b629ee1b2
 #: oceanai.modules.lab.video.Video.load_video_models_b5:20 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -2250,7 +2259,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 9ddc4099fb754b1f97c1f944354ad719
+#: 7480ff3ac3b04fd78481f3b5994e537d
 #: oceanai.modules.lab.video.Video.load_video_models_b5:33 of
 msgid ""
 "[2022-11-04 15:29:26] Формирование нейросетевых архитектур моделей для "
@@ -2277,7 +2286,7 @@ msgid ""
 "True"
 msgstr ""
 
-#: fc98a3015d444086b98ac796fd92d8b0
+#: c9554ffe5a984a10ae9a22b45ca91751
 #: oceanai.modules.lab.video.Video.load_video_models_b5:60 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -2289,7 +2298,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: a677ed097df746a8877b1cd99e1d549a
+#: 54e215fb0c5446839c32bd4b2cf64d46
 #: oceanai.modules.lab.video.Video.load_video_models_b5:73 of
 msgid ""
 "[2022-11-04 15:30:15] Неверные типы или значения аргументов в "
@@ -2298,51 +2307,53 @@ msgid ""
 "False"
 msgstr ""
 
-#: 13d47a387af54a99a1869571b28fd793
+#: 64495f11b0e3411484c69e1d18507974
 #: oceanai.modules.lab.video.Video.load_video_models_weights_b5:1 of
 msgid ""
 "Загрузка весов нейросетевых моделей для получения результатов оценки "
 "персональных качеств"
 msgstr ""
 
-#: 8c765caa9a8348478a5792670e0e85bb
+#: c06494d2fcab44b891a0bc302c89936b
 #: oceanai.modules.lab.video.Video.load_video_models_weights_b5:3 of
 msgid "Полный путь к файлу с весами нейросетевой модели (открытость опыту)"
 msgstr ""
 
-#: 1505c7313b31450687191456689e6184
+#: 52264ca2f07b4817baafc25f2b1dc2d7
 #: oceanai.modules.lab.video.Video.load_video_models_weights_b5:5 of
 msgid "Полный путь к файлу с весами нейросетевой модели (добросовестность)"
 msgstr ""
 
-#: 6ae00d5276034e139be4b991a014978c
+#: 2f0e2896e78644cbb14d276e8bf73974
 #: oceanai.modules.lab.video.Video.load_video_models_weights_b5:7 of
 msgid "Полный путь к файлу с весами нейросетевой модели (экстраверсия)"
 msgstr ""
 
-#: f27dc5a206214177b0be3eddb71c1ee7
+#: 2658ce1e833841b3911ab7e853569ded
 #: oceanai.modules.lab.video.Video.load_video_models_weights_b5:9 of
 msgid "Полный путь к файлу с весами нейросетевой модели (доброжелательность)"
 msgstr ""
 
-#: 20b07bea2c014f7e83e917d748aae041
+#: 88b30111df7643bfb14dcddd9637d93d
 #: oceanai.modules.lab.video.Video.load_video_models_weights_b5:11 of
-msgid "Полный путь к файлу с весами нейросетевой модели (нейротизм)"
+msgid ""
+"Полный путь к файлу с весами нейросетевой модели (эмоциональная "
+"стабильность)"
 msgstr ""
 
-#: 8a437fbd3b0b4a15936e93cef1e8ad10
+#: bb8dcdb2d7ee48acbeb070132d12a5c3
 #: oceanai.modules.lab.video.Video.load_video_models_weights_b5:13 of
 msgid "Принудительная загрузка файлов с весами нейросетевых моделей из сети"
 msgstr ""
 
-#: 3c12aea374214d98a0632ca166580e21
+#: a5f5a63973f049b1b03e6185cf7bd86f
 #: oceanai.modules.lab.video.Video.load_video_models_weights_b5:22 of
 msgid ""
 "**True** если веса нейросетевых моделей загружены, в обратном случае "
 "**False**"
 msgstr ""
 
-#: b743d55f2e3a4cf0a979578af13da48a
+#: a7eadd9db98642e4be78a711422dbd29
 #: oceanai.modules.lab.video.Video.load_video_models_weights_b5:30 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -2355,7 +2366,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: 0a231cc888fd4eb1ab066c3b552c216f
+#: ffadf84e6b594e5a9ebca32f38db7a08
 #: oceanai.modules.lab.video.Video.load_video_models_weights_b5:44 of
 msgid ""
 "[2022-11-04 18:56:41] Формирование нейросетевых архитектур моделей для "
@@ -2367,7 +2378,7 @@ msgid ""
 "True"
 msgstr ""
 
-#: c6fe0641204d498b89fd777445caadf1
+#: 3da71d54c41b4f95b12714ee8444360c
 #: oceanai.modules.lab.video.Video.load_video_models_weights_b5:54 of
 msgid ""
 "video.path_to_save_ = './models'\n"
@@ -2381,15 +2392,15 @@ msgid ""
 "video.weights_for_big5_['video']['b5']['extraversion']['sberdisk']\n"
 "url_agreeableness = "
 "video.weights_for_big5_['video']['b5']['agreeableness']['sberdisk']\n"
-"url_neuroticism = "
-"video.weights_for_big5_['video']['b5']['neuroticism']['sberdisk']\n"
+"url_non_neuroticism = "
+"video.weights_for_big5_['video']['b5']['non_neuroticism']['sberdisk']\n"
 "\n"
 "video.load_video_models_weights_b5(\n"
 "    url_openness = url_openness,\n"
 "    url_conscientiousness = url_conscientiousness,\n"
 "    url_extraversion = url_extraversion,\n"
 "    url_agreeableness = url_agreeableness,\n"
-"    url_neuroticism = url_neuroticism,\n"
+"    url_non_neuroticism = url_non_neuroticism,\n"
 "    force_reload = True,\n"
 "    out = True,\n"
 "    runtime = True,\n"
@@ -2397,7 +2408,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: f75ae548e1e14eb88067f40776d5ddb9
+#: 9b16675d064449b7b46729cfad430342
 #: oceanai.modules.lab.video.Video.load_video_models_weights_b5:80 of
 msgid ""
 "[2022-11-04 18:58:59] Загрузка весов нейросетевых моделей для получения "
@@ -2416,14 +2427,14 @@ msgid ""
 "(100.0%) ... Доброжелательность\n"
 "\n"
 "[2022-11-04 18:59:01] Загрузка файла \"weights_2022-06-15_17-06-15.h5\" "
-"(100.0%) ... Нейротизм\n"
+"(100.0%) ... Эмоциональная стабильность\n"
 "\n"
 "--- Время выполнения: 1.827 сек. ---\n"
 "\n"
 "True"
 msgstr ""
 
-#: 44d1d3dc361f474e83fb6bf5686d9baa
+#: fa8dcc9eccb2414398ba1d230199f231
 #: oceanai.modules.lab.video.Video.load_video_models_weights_b5:102 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -2441,15 +2452,15 @@ msgid ""
 "video.weights_for_big5_['video']['b5']['extraversion']['sberdisk']\n"
 "url_agreeableness = "
 "video.weights_for_big5_['video']['b5']['agreeableness']['sberdisk']\n"
-"url_neuroticism = "
-"video.weights_for_big5_['video']['b5']['neuroticism']['sberdisk']\n"
+"url_non_neuroticism = "
+"video.weights_for_big5_['video']['b5']['non_neuroticism']['sberdisk']\n"
 "\n"
 "video.load_video_models_weights_b5(\n"
 "    url_openness = url_openness,\n"
 "    url_conscientiousness = url_conscientiousness,\n"
 "    url_extraversion = url_extraversion,\n"
 "    url_agreeableness = url_agreeableness,\n"
-"    url_neuroticism = url_neuroticism,\n"
+"    url_non_neuroticism = url_non_neuroticism,\n"
 "    force_reload = True,\n"
 "    out = True,\n"
 "    runtime = True,\n"
@@ -2457,7 +2468,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: bfb16a91d7e2460986ac25055efd714b
+#: ce2d1669d7704af39d4dba51531648f0
 #: oceanai.modules.lab.video.Video.load_video_models_weights_b5:132 of
 msgid ""
 "[2022-11-04 19:02:32] Загрузка весов нейросетевых моделей для получения "
@@ -2511,7 +2522,7 @@ msgid ""
 "(100.0%) ...\n"
 "\n"
 "[2022-11-04 19:02:34] Ой! Что-то пошло не так ... не удалось загрузить "
-"веса нейросетевой модели ... Нейротизм\n"
+"веса нейросетевой модели ... Эмоциональная стабильность\n"
 "\n"
 "    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/video.py\n"
 "    Линия: 2833\n"
@@ -2523,22 +2534,22 @@ msgid ""
 "False"
 msgstr ""
 
-#: b77a657282e14c17b2643f79aa8895dc
+#: ead62fec284d4055b428536c63e992d4
 #: oceanai.modules.lab.video.Video.video_model_deep_fe_:1 of
 msgid ""
 "Получение нейросетевой модели **tf.keras.Model** для получения "
 "нейросетевых признаков"
 msgstr ""
 
-#: 1962461d4dc44aeabb3d18919088a254 2b54993c72784a3fbea3bac48dfdcddf
-#: d34aa2b50229482ab71220ae67ad9e0e
+#: 2c398862a8b74256a615eadea7a59613 7fc3b1de3f7d42baaf595237f89f8457
+#: b0b56231370748adad3017016af2e294
 #: oceanai.modules.lab.video.Video.video_model_deep_fe_:3
 #: oceanai.modules.lab.video.Video.video_model_hc_:3
 #: oceanai.modules.lab.video.Video.video_model_nn_:3 of
 msgid "Нейросетевая модель **tf.keras.Model** или None"
 msgstr ""
 
-#: 95ed7144b67c489cb6b75b653f01b452
+#: 9f7b46b42ca14beb80254b6b70092b3b
 #: oceanai.modules.lab.video.Video.video_model_deep_fe_:11 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -2553,7 +2564,7 @@ msgid ""
 "video.video_model_deep_fe_"
 msgstr ""
 
-#: 34a207d68b774b61ad0effbe70388ca9
+#: 559807e6bd9740699683a5a05e3412cf
 #: oceanai.modules.lab.video.Video.video_model_deep_fe_:27 of
 msgid ""
 "[2022-11-01 12:12:35] Формирование нейросетевой архитектуры для получения"
@@ -2561,10 +2572,10 @@ msgid ""
 "\n"
 "--- Время выполнения: 1.468 сек. ---\n"
 "\n"
-"<keras.engine.functional.Functional at 0x14e138100>"
+"<tf.keras.Model at 0x14e138100>"
 msgstr ""
 
-#: abc58f95e5e248768ea0a61514c5be8b
+#: 00d60cacb47e40b4a0ebb3ffc2aa1a21
 #: oceanai.modules.lab.video.Video.video_model_deep_fe_:39 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -2574,14 +2585,14 @@ msgid ""
 "video.video_model_deep_fe_"
 msgstr ""
 
-#: 396d3f73158c47b4af3d42af25d0b78f
+#: 2c12849932524a9aa05acb38350dc31a
 #: oceanai.modules.lab.video.Video.video_model_hc_:1 of
 msgid ""
 "Получение нейросетевой модели **tf.keras.Model** для получения оценок по "
 "экспертным признакам"
 msgstr ""
 
-#: 5be033b6d54f48d79659b45c2dc50b9a
+#: 28b0ebdb3dc74f25945440ad6675c673
 #: oceanai.modules.lab.video.Video.video_model_hc_:11 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -2596,7 +2607,7 @@ msgid ""
 "video.video_model_hc_"
 msgstr ""
 
-#: 4cedf86404b047c580255a7b5f8dc773
+#: da140c6ffb0b4a6b9dab7f0fb9c7b1e1
 #: oceanai.modules.lab.video.Video.video_model_hc_:27 of
 msgid ""
 "[2022-10-26 12:37:42] Формирование нейросетевой архитектуры модели для "
@@ -2604,10 +2615,10 @@ msgid ""
 "\n"
 "--- Время выполнения: 1.112 сек. ---\n"
 "\n"
-"<keras.engine.functional.Functional at 0x1434eb1f0>"
+"<tf.keras.Model at 0x1434eb1f0>"
 msgstr ""
 
-#: 3e9c86bbd85244f7a633f7ac4ef371f8
+#: 80fed4c991e84ab2bb54bc8cfbe42dcd
 #: oceanai.modules.lab.video.Video.video_model_hc_:39 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -2617,14 +2628,14 @@ msgid ""
 "video.video_model_hc_"
 msgstr ""
 
-#: 4520cc83f5ba4e0983b2e23eca28bfb6
+#: 4901abb81b5340d9ad4fae574566e41f
 #: oceanai.modules.lab.video.Video.video_model_nn_:1 of
 msgid ""
 "Получение нейросетевой модели **tf.keras.Model** для получения оценок по "
 "нейросетевым признакам"
 msgstr ""
 
-#: 88c2c734eb934b41b830f93097d21166
+#: 0ed9f6785ff34270a94af15148b480c3
 #: oceanai.modules.lab.video.Video.video_model_nn_:11 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -2639,7 +2650,7 @@ msgid ""
 "video.video_model_nn_"
 msgstr ""
 
-#: fd91c093b66e47918b0a4052819a3fad
+#: d8ecccdf904546aa93852e02c1429b96
 #: oceanai.modules.lab.video.Video.video_model_nn_:27 of
 msgid ""
 "[2022-10-27 14:49:00] Формирование нейросетевой архитектуры для получения"
@@ -2647,10 +2658,10 @@ msgid ""
 "\n"
 "--- Время выполнения: 1.986 сек. ---\n"
 "\n"
-"<keras.engine.functional.Functional at 0x13d5295b0>"
+"<tf.keras.Model at 0x13d5295b0>"
 msgstr ""
 
-#: b7db5727a3884443a6d92e9f652cb58c
+#: 97254d78e3e44557814b6640771513a8
 #: oceanai.modules.lab.video.Video.video_model_nn_:39 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -2660,19 +2671,19 @@ msgid ""
 "video.video_model_nn_"
 msgstr ""
 
-#: b09845e36dbe42f4a18f8ac197315fd4
+#: 3a1fa569e21f45eca9e5eac00838f51a
 #: oceanai.modules.lab.video.Video.video_models_b5_:1 of
 msgid ""
 "Получение нейросетевых моделей **tf.keras.Model** для получения "
 "результатов оценки персональных качеств"
 msgstr ""
 
-#: e605cf3c07ae41f1a105333fc36760de
+#: de2d8963156e42fbaa67e4b9146d1e28
 #: oceanai.modules.lab.video.Video.video_models_b5_:3 of
 msgid "Словарь с нейросетевыми моделями **tf.keras.Model**"
 msgstr ""
 
-#: 400688f579f04d7980ded4e6ed01b8b8
+#: f77e31d185c848749cf184f59bb3b9e6
 #: oceanai.modules.lab.video.Video.video_models_b5_:11 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -2687,7 +2698,7 @@ msgid ""
 "video.video_models_b5_"
 msgstr ""
 
-#: 273292a967db4505bb982d221e63d68c
+#: a2b69929d36049019cf022843f62fead
 #: oceanai.modules.lab.video.Video.video_models_b5_:27 of
 msgid ""
 "[2022-10-19 15:45:35] Формирование нейросетевых архитектур моделей для "
@@ -2696,17 +2707,15 @@ msgid ""
 "--- Время выполнения: 0.07 сек. ---\n"
 "\n"
 "{\n"
-"    'openness': <keras.engine.functional.Functional at 0x1481e03a0>,\n"
-"    'conscientiousness': <keras.engine.functional.Functional at "
-"0x147d13520>,\n"
-"    'extraversion': <keras.engine.functional.Functional at 0x1481edfa0>,\n"
-"    'agreeableness': <keras.engine.functional.Functional at 0x1481cfc40>,"
-"\n"
-"    'neuroticism': <keras.engine.functional.Functional at 0x1481cffd0>\n"
+"    'openness': <tf.keras.Model at 0x1481e03a0>,\n"
+"    'conscientiousness': <tf.keras.Model at 0x147d13520>,\n"
+"    'extraversion': <tf.keras.Model at 0x1481edfa0>,\n"
+"    'agreeableness': <tf.keras.Model at 0x1481cfc40>,\n"
+"    'non_neuroticism': <tf.keras.Model at 0x1481cffd0>\n"
 "}"
 msgstr ""
 
-#: dc52862cc9df470a9d5fb215e1a62139
+#: bb6ca81152b1428692a460ae01a04fe3
 #: oceanai.modules.lab.video.Video.video_models_b5_:45 of
 msgid ""
 "from oceanai.modules.lab.video import Video\n"
@@ -2716,7 +2725,7 @@ msgid ""
 "video.video_models_b5_"
 msgstr ""
 
-#: 49344be82a3e4c37a28bf0425084d59f
+#: f6873135751a4111b6d23bd6fc38dccf
 #: oceanai.modules.lab.video.Video.video_models_b5_:56 of
 msgid ""
 "{\n"
@@ -2724,6 +2733,6 @@ msgid ""
 "    'conscientiousness': None,\n"
 "    'extraversion': None,\n"
 "    'agreeableness': None,\n"
-"    'neuroticism': None\n"
+"    'non_neuroticism': None\n"
 "}"
 msgstr ""

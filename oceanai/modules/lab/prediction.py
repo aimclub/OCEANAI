@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Объединение аудио и видео
+Мультимодальное объединение информации
 """
 
 # ######################################################################################################################
@@ -102,11 +102,11 @@ class PredictionMessages(Audio, Video, Text):
 
 
 # ######################################################################################################################
-# Аудио
+# Мультимодальное объединение
 # ######################################################################################################################
 @dataclass
 class Prediction(PredictionMessages):
-    """Класс для объединения аудио и видео
+    """Класс для мультимодального объединения информации
 
     Args:
         lang (str): Смотреть :attr:`~oceanai.modules.core.language.Language.lang`
@@ -565,9 +565,7 @@ class Prediction(PredictionMessages):
                 if runtime:
                     self._r_end(out=out)
 
-    def __load_avt_model_b5(
-        self, show_summary: bool = False, out: bool = True
-    ) -> Optional[tf.keras.Model]:
+    def __load_avt_model_b5(self, show_summary: bool = False, out: bool = True) -> Optional[tf.keras.Model]:
         """Формирование нейросетевой архитектуры модели для получения оценок персональных качеств
 
         .. note::
@@ -626,9 +624,7 @@ class Prediction(PredictionMessages):
 
             return model
 
-    def __load_av_model_b5(
-        self, show_summary: bool = False, out: bool = True
-    ) -> Optional[tf.keras.Model]:
+    def __load_av_model_b5(self, show_summary: bool = False, out: bool = True) -> Optional[tf.keras.Model]:
         """Формирование нейросетевой архитектуры модели для получения результата оценки персонального качества
 
         .. note::
@@ -1218,7 +1214,7 @@ class Prediction(PredictionMessages):
         window_video: int = 10,
         step_video: int = 5,
         lang: str = "ru",
-        accuracy: bool =True,
+        accuracy: bool = True,
         url_accuracy: str = "",
         logs: bool = True,
         out: bool = True,
@@ -1245,7 +1241,7 @@ class Prediction(PredictionMessages):
             run (bool): Блокировка выполнения
 
         Returns:
-            bool: **True** если веса прогнозы успешно получены, в обратном случае **False**
+            bool: **True** если прогнозы успешно получены, в обратном случае **False**
 
         :bdg-link-light:`Пример <../../user_guide/notebooks/Prediction-get_av_union_predictions.ipynb>`
         """
@@ -1762,7 +1758,7 @@ class Prediction(PredictionMessages):
             run (bool): Блокировка выполнения
 
         Returns:
-            bool: **True** если веса прогнозы успешно получены, в обратном случае **False**
+            bool: **True** если прогнозы успешно получены, в обратном случае **False**
         """
 
         self._clear_notebook_history_output()  # Очистка истории вывода сообщений в ячейке Jupyter
@@ -1871,7 +1867,6 @@ class Prediction(PredictionMessages):
 
                 # Проход по всем директориям
                 for curr_path in path_to_data:
-
                     empty = True  # По умолчанию директория пустая
 
                     # Рекурсивный поиск данных
@@ -1882,7 +1877,6 @@ class Prediction(PredictionMessages):
 
                     # Формирование словаря для DataFrame
                     for p in g:
-
                         try:
                             if type(self.ext_) is not list or len(self.ext_) < 1:
                                 raise TypeError

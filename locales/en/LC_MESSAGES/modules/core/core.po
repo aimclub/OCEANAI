@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2023-01-03 16:35+0300\n"
+"POT-Creation-Date: 2023-12-17 14:43+0300\n"
 "PO-Revision-Date: 2022-12-01 09:13+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -17,22 +17,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.11.0\n"
 
-#: ../../source/modules/core/core.rst:2 76adccc21ab54f14b93cd6585b2e576a
+#: ../../source/modules/core/core.rst:2 60f67cc612fe4e4aa785138dcd812ea9
 msgid "Ядро"
 msgstr "Core"
 
-#: 4fb1d39f4c044c2890fd4f31229ddec4 oceanai.modules.core.core.CoreMessages:1 of
+#: 1adfe986ae934a68a044e684edd18829 oceanai.modules.core.core.CoreMessages:1 of
 msgid "Базовые классы: :py:class:`~oceanai.modules.core.settings.Settings`"
 msgstr "Base classes: :py:class:`~oceanai.modules.core.settings.Settings`"
 
-#: af1b65977aee4f838bc6d5352e47f064 oceanai.modules.core.core.CoreMessages:1 of
+#: ed5f42553292478ab7bfcb09b45b0ffc oceanai.modules.core.core.CoreMessages:1 of
 msgid "Класс для сообщений"
 msgstr "Class for messages"
 
-#: 39d137246a5a4984b513f514c4dca156 73aa590d3f2d43fa8b21c9f732fbf1dd
-#: 753b9a1e0d5c4aa6a86d64d9cbecb0bc 78758e08fd0c4c5095f83e6deaf86efe
-#: 7c3460ce4e4248d1b21278519e437355 db76f84a21c84f61a95e2c9d22fcf31a
-#: e072a12eff564d84a471a8b174ab59ae f8049008801a41b492d33e0122d5e536
+#: 0670fb061871442ea0a8364539274466 18d8df4a82bb42f8b04064ef606fc4b7
+#: 1dd32589201f47af9f388461efd97f71 2751ea8c7b6f499689cf0b78867a83bc
+#: 2841ae0759584c6ab4bdf101504827c2 2b0da5aa1d2c41dd956d06fadb0b7fd5
+#: 3043493959694ce9a37eae7cedc3ef35 3a9a4b9526db415a8849a1c391d2b7c5
+#: 487ae14bbabb492eb15e5f50118aacda 5296ba98502d4384b3fa9a480a54468c
+#: 53064159725a4628a39a5c35dbf011cf 570104b2b500421d9c7c9793e9ba1a78
+#: 6c2a454b9e634f50888ca7a6cfdcc850 6d90cb11e15f4cc6be6e00df877c18fc
+#: 7093a26464294e26bff9d545ee06a51b 78657c26cfaf430482856e3a64f38926
+#: 880fbbf322c84297aeb93f6504aa53d4 8f1efafee57b40d48d89cfb6d71254a5
+#: 93817df42c9540d391d3c1d9d5830a7e 98b45e46d12545bf9c0003f0228cb4d0
+#: 99e20cc1241640e793331d7a53b834ac 9feb10e1f67e4d6abad23c3b779be925
+#: aa0b77f42feb45b49c35de2267972879 aec6d33a2ee64437a39c458d26f09a90
+#: b0748ac1c1bf469b8352e6de719f8407 b0993f14e86146ddadd424630fcddfb2
+#: b32366a2cca2458b8a77e1b9919f60ea befc8883e3e74a769b38fcf9bb9d996c
+#: cb1674ae529148e9ba39d1ffc31ae517 d6a68c382f634185a12cc4be74fd7cfd
+#: e18a0277009a4dfa9ae5f5f617b9c23f fb1a3e83f4a046ba907c2c9b7a2cd68a
 #: oceanai.modules.core.core.Core
 #: oceanai.modules.core.core.Core._add_last_el_notebook_history_output
 #: oceanai.modules.core.core.Core._add_notebook_history_output
@@ -40,6 +52,7 @@ msgstr "Class for messages"
 #: oceanai.modules.core.core.Core._append_to_list_of_files
 #: oceanai.modules.core.core.Core._bold_wrapper
 #: oceanai.modules.core.core.Core._candidate_ranking
+#: oceanai.modules.core.core.Core._colleague_ranking
 #: oceanai.modules.core.core.Core._create_folder_for_logs
 #: oceanai.modules.core.core.Core._error
 #: oceanai.modules.core.core.Core._error_wrapper
@@ -52,85 +65,109 @@ msgstr "Class for messages"
 #: oceanai.modules.core.core.Core._notebook_display_markdown
 #: oceanai.modules.core.core.Core._other_error
 #: oceanai.modules.core.core.Core._priority_calculation
+#: oceanai.modules.core.core.Core._priority_skill_calculation
 #: oceanai.modules.core.core.Core._progressbar
 #: oceanai.modules.core.core.Core._progressbar_union_predictions
 #: oceanai.modules.core.core.Core._r_end
 #: oceanai.modules.core.core.Core._round_math
 #: oceanai.modules.core.core.Core._save_logs
+#: oceanai.modules.core.core.Core._search_file
 #: oceanai.modules.core.core.Core._stat_acoustic_features
+#: oceanai.modules.core.core.Core._stat_text_features
 #: oceanai.modules.core.core.Core._stat_visual_features
 #: oceanai.modules.core.core.Core.libs_vers
 #: oceanai.modules.core.core.CoreMessages of
 msgid "Параметры"
 msgstr "Options"
 
-#: acb2be7f91404614986183f663df7395 efcd48e0f1464f1098b148fe77e9c1da
+#: 0d787dbc191f48208f251654e116c686 58e409977fe445baa2ee94b2bd86f1f7
 #: oceanai.modules.core.core.Core:3 oceanai.modules.core.core.CoreMessages:3 of
 msgid "Смотреть :attr:`~oceanai.modules.core.language.Language.lang`"
 msgstr "See :attr:`~oceanai.modules.core.language.Language.lang`"
 
-#: 0129e047a41d46288defe861a1d1c9b6 8ba5413d44964746b71e46b8010017a9
+#: 04dfa25baf954a73a6a574d155546592 610f16c9ef564e33a3a02445d8f0f35f
 #: oceanai.modules.core.core.Core:5 oceanai.modules.core.core.CoreMessages:5 of
 msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_simple`"
 msgstr "See :attr:`~oceanai.modules.core.settings.Settings.color_simple`"
 
-#: 7f025752e55c458bb60e171123b09554 c505b72179d845b5b48913e5de7a39dc
+#: e6745f5326314bfaa84789af0b5b7654 f0fe49f8679d462b96a8c01e5df81e9a
 #: oceanai.modules.core.core.Core:7 oceanai.modules.core.core.CoreMessages:7 of
 msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_info`"
 msgstr "See :attr:`~oceanai.modules.core.settings.Settings.color_info`"
 
-#: 8fd1ced243fe4fba81099327a747018e dfd3f7090a124b168d5eeb89187d09ea
+#: 055b0cf27b494a65bbced29095572ce8 a43ca8d056bb4a5c96e13975560cb449
 #: oceanai.modules.core.core.Core:9 oceanai.modules.core.core.CoreMessages:9 of
 msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_err`"
 msgstr "See :attr:`~oceanai.modules.core.settings.Settings.color_err`"
 
-#: 89e1359e94a541d7ac7bc1f43f8352d6 e4616c8857fb4c9c9a0da13b5f69a4e6
+#: 1ec9f92fd2e64070be1f6155bc026d38 65410b2be2734f4f80c97320782e3722
 #: oceanai.modules.core.core.Core:11 oceanai.modules.core.core.CoreMessages:11
 #: of
 msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_true`"
 msgstr "See :attr:`~oceanai.modules.core.settings.Settings.color_true`"
 
-#: 914b79668535489283c0063befd3c812 ffac892275044c4daf8fce6b40358bab
+#: 601f167ca5ea4f88ba61e3bde7137137 e8f62b051cc24d9dacb88b615e5ea335
 #: oceanai.modules.core.core.Core:13 oceanai.modules.core.core.CoreMessages:13
 #: of
 msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.bold_text`"
 msgstr "See :attr:`~oceanai.modules.core.settings.Settings.bold_text`"
 
-#: 42bbcf8a295446c2ad4da92113d58083 b70edd13872a4b8e87e7364f47525187
+#: 1349aef960e24724ab9ea2a93b89df53 fd7ca3fe64a64faf8a068c00fdb7019a
 #: oceanai.modules.core.core.Core:15 oceanai.modules.core.core.CoreMessages:15
 #: of
 msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.num_to_df_display`"
 msgstr "See :attr:`~oceanai.modules.core.settings.Settings.num_to_df_display`"
 
-#: 78f484cad65e4a18aad9bc64354a4c49 a4155aee3fbb411ba28354d7db38a7d8
+#: 862d2a40889742f89232f40e533bc087 c10c587352cf413d935ae0c87149902d
 #: oceanai.modules.core.core.Core:17 oceanai.modules.core.core.CoreMessages:17
 #: of
 msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.text_runtime`"
 msgstr "See :attr:`~oceanai.modules.core.settings.Settings.text_runtime`"
 
-#: a546919b72054ffcb366f0b51d350133 oceanai.modules.core.core.Core:1 of
+#: 99f418dfdc3243bbb59f03990bacfa24 oceanai.modules.core.core.Core:1 of
 msgid "Базовые классы: :py:class:`~oceanai.modules.core.core.CoreMessages`"
 msgstr "Base classes: :py:class:`~oceanai.modules.core.core.CoreMessages`"
 
-#: 17f6a73126474b4b830d20d1d7f577d1 oceanai.modules.core.core.Core:1 of
+#: fd77a50327464e08888d38c4f461e895 oceanai.modules.core.core.Core:1 of
 msgid "Класс-ядро модулей"
 msgstr "Core class of modules"
 
-#: 6f542b2f3492428686a6896e233da81e
+#: dfae312d3a0f4fc8bfe3d8ad6a63aff4
 #: oceanai.modules.core.core.Core.__is_notebook:1 of
 msgid "Определение запуска библиотеки в Jupyter или аналогах"
 msgstr "Determining how to run a library in Jupyter or similar"
 
-#: 97b3dbbde8d047139beef4700a1952d0 e44ce3e248de4c82980603d4249659a5
+#: 738ff043e9234e16befc96f35e8fe6c1 c403b1ae90f244479b0d0d2fd5251b3d
 #: oceanai.modules.core.core.Core.__is_notebook:4
 #: oceanai.modules.core.core.Core._progressbar_union_predictions:4 of
 msgid "private (приватный метод)"
 msgstr "private method"
 
-#: 07d1fa3456d24cfb88987521cdab9503 206a529c546c42699b132a3121b27700
-#: 40a8e13d7f6c4ad5b4cb36dce62b54f8 419bbb629b464a16bcad903feaae14ea
-#: 68ffbf1e61124b9593480dc85177eb17 a1ee57fba0944ec397058348a9975243
-#: bd501cb9602046dd910d664274e8c586
+#: 05b1eaca4d61406692eb9b0b40db5793 07a594ab10b6408499e2a73d7abd9641
+#: 0a9620a3fa1d48ba8c07b8c889557f63 146f46e03de74ae4b206e6243d330396
+#: 17ab04d12aec47658ee72ed82f3f0c87 1a1402605450486891abc73048cb8877
+#: 1d74196892eb4557b48d8a1e16483308 1fd49cd3d76e4a1585441a7aac3ec750
+#: 2397475b0b374cd3b826f36f2251f83c 2856fd2b54784b2abedcf72af4f7827e
+#: 28b104bff8a74338b062e754938a7c24 2b3fdbd7d1f54392889a8b396e78870e
+#: 2bd63a6ace0044fd992424c41ef7bcac 2c607a6c00d443208adba82e081833f7
+#: 316a54826874466a83fb2121376cf63d 3a7db92b67e84035b8ab1b080fd3c100
+#: 3b798e37d87f4dbd8a762c049e2c9a8d 414e3e97771240f9a10a5e6a2460637d
+#: 45940e3cb6da48bfb2949724c7016982 56f0b20c991b46ca9d174e1ad49b485f
+#: 57468ad290924835abe331bdcc033bdd 5e11d04113b24024af1d1bc5c4f21768
+#: 620b5f010ed347c483dfc1e4f6c457ce 62e3e8a99aba420dbe2480d507169536
+#: 64bcd403d6524b43b67ef99d1a05a23f 6fae81908d8645e8b31480eef74955df
+#: 73dd4547b8054fa78424b20c26d2b011 76db5a086da34a63abe5893a74ba2fdc
+#: 7a412b6f69154ef4afdbf4f75b6e76e5 8fb833a0558a4aa6a74d2b08c5313b02
+#: 90a6c88efd7d41939fd17fc5f7cf4d67 a12e3fef3be145a8bbd8eea60a628d3a
+#: a69ee22b345a44e09c6f1178e0d040e8 a6d0ef659e254bdab9e9c1655bcaa9a5
+#: b03936f2a382441d8ef1c6f85bc581e2 bba2415cbe4d458a8f40b4e86112f385
+#: c118bcd2eeeb4c3fa64cc97bcc19d243 c3d4b59a5a5240bfa19585da17333f37
+#: c4a88fc3316f4bb0aaf0a6d1dc49a3f9 ca38283d396b4277aeb7fb330778a638
+#: d0e05a6a80294d0986f7717eeec34ed4 d22cf6c7e12e4af4ab2928f1bfef6f86
+#: dd28c7ef827e4f109e4af187e01f3a7a e0772cd4bcda42f88f69bf81efa0426d
+#: ea7c714100614ecbb50667c9a6a0d3d5 eb5a0c5b1b5145fcaeb47e6e5e59d858
+#: eb8afd57ec3844899d23c665e385dfbf f2f8d40f1cd4439d96ce40411c066831
+#: f8fb6f496f7141659c571e7bd773263d
 #: oceanai.modules.core.core.Core.__is_notebook
 #: oceanai.modules.core.core.Core._add_last_el_notebook_history_output
 #: oceanai.modules.core.core.Core._add_notebook_history_output
@@ -139,6 +176,7 @@ msgstr "private method"
 #: oceanai.modules.core.core.Core._bold_wrapper
 #: oceanai.modules.core.core.Core._candidate_ranking
 #: oceanai.modules.core.core.Core._clear_notebook_history_output
+#: oceanai.modules.core.core.Core._colleague_ranking
 #: oceanai.modules.core.core.Core._create_folder_for_logs
 #: oceanai.modules.core.core.Core._del_last_el_notebook_history_output
 #: oceanai.modules.core.core.Core._error
@@ -152,18 +190,23 @@ msgstr "private method"
 #: oceanai.modules.core.core.Core._notebook_display_markdown
 #: oceanai.modules.core.core.Core._other_error
 #: oceanai.modules.core.core.Core._priority_calculation
+#: oceanai.modules.core.core.Core._priority_skill_calculation
 #: oceanai.modules.core.core.Core._progressbar
 #: oceanai.modules.core.core.Core._progressbar_union_predictions
 #: oceanai.modules.core.core.Core._r_end
 #: oceanai.modules.core.core.Core._r_start
 #: oceanai.modules.core.core.Core._round_math
 #: oceanai.modules.core.core.Core._save_logs
+#: oceanai.modules.core.core.Core._search_file
 #: oceanai.modules.core.core.Core._stat_acoustic_features
+#: oceanai.modules.core.core.Core._stat_text_features
 #: oceanai.modules.core.core.Core._stat_visual_features
 #: oceanai.modules.core.core.Core._traceback
 #: oceanai.modules.core.core.Core.df_accuracy_
 #: oceanai.modules.core.core.Core.df_files_
+#: oceanai.modules.core.core.Core.df_files_colleague_
 #: oceanai.modules.core.core.Core.df_files_priority_
+#: oceanai.modules.core.core.Core.df_files_priority_skill_
 #: oceanai.modules.core.core.Core.df_files_ranking_
 #: oceanai.modules.core.core.Core.df_pkgs_
 #: oceanai.modules.core.core.Core.dict_of_accuracy_
@@ -177,7 +220,7 @@ msgstr "private method"
 msgid "Результат"
 msgstr "Result"
 
-#: 49a7bcf3d8c04bfe8b56f1eb134ad0f1 e7ad1de29dbb42cfa1f60fa8704319bc
+#: b2fe5f2f740840eb8cb9d363265acfa8 d9182ca8247646ed9ea8fb46066f4ed6
 #: oceanai.modules.core.core.Core.__is_notebook:6
 #: oceanai.modules.core.core.Core.is_notebook_:3 of
 msgid ""
@@ -185,10 +228,31 @@ msgid ""
 "случае **False**"
 msgstr "**True** if the library is run in Jupyter or similar, otherwise **False**"
 
-#: 024c238b998545639c5f559d567b4083 237df8439cff401490b50cdbcbc58443
-#: 357ea5dad34041ac9931f601eb0c6034 9e3ac45741ba4e499c00fc4250ae21de
-#: cf7303dad2534371b519a777191340b6 d203caa720084bcfa1ee3e152630fe3d
-#: fbf8120849034f21a2a469ede77a840e
+#: 091c453155424fcc8460b4ece25d96e0 0fc2b239dde04cc5bbe08d092719882c
+#: 10187030bf2a426db6c1a1586aa55f6b 17a186879a3c4ce0a2b20507f946ca8d
+#: 1c9386a725f44e70aadbf23a7b0f9c4a 1f2df3bf157b4573884b72fe1251f715
+#: 22961b15527a42fbbbdc834ac273a59c 2367b8a4144c40ac91e6e3ebfc3bd5b2
+#: 2612bf341a1a456dbc76545df6dad578 268f4e38b3504703935aeba429c8383e
+#: 2ef84fbb0c91453e90f54b2e24f868a5 45512715fa9e4032a2d78bc450d97140
+#: 4c8ab9fb42b1473b8893bde3427de900 4d7dc8c1109249c0bd3bf0118e93a02b
+#: 582e78b05d224f26b363467f48a2ed63 59d0608b025948fb8af0fb277e792660
+#: 608b42576fbc4d18b93da5473b4b84e2 61eaafcaebfa44ff82fdacb65300765f
+#: 6411beb2a71845d5b57abe305ce3faa6 6d211e027acc4b59b3840420a787207c
+#: 6db8407a69014055875de3af4bdcfd0c 756ef2253ff140df8bad4dcaa4f7549c
+#: 77b0dc3f943940a2a54ad41f29e0ebe0 7ffc24e4dabc49f0b90d2f1cfa95274d
+#: 8c293af4eb0244ce9026afd617efbc90 8d37bdb40ff34e1f9ed7b3b8916b48a5
+#: 9394c8c8b96e42a4aff02d1f8781e3db 93b87aab72ba438b9c158b381cc4a92a
+#: 94d50704edba4cc4b022113a7284a99e 968e148f1ca04a778c45e94141c169aa
+#: 96ec176bd8e34e3eabd13338869c8a52 a4f0638d7e534596847fc68a402ca067
+#: aa075aa25a5043928e6a9630374388e0 aa32584fd18043eab6b15147b1208b47
+#: af9e4e05c7cc4842b566b22d4a2495cd b4819d08fbfb4889934aa799756aed93
+#: bb106f398b14434ebb1068aca5aae175 bbe5acfeea8842588c8af68ce7a72fcd
+#: bd3bf452fea142f68dc518e0bfd14ac4 c151bf7d15694efcbeb823ece1bc551e
+#: c74f945a02614f69bccd64c96f5fc820 d59d8ff134724028b98ad950c3402e5a
+#: d9cc03c6e23842e0a3c373b1c33ee707 dbb18de2f1064936b032c3396054db85
+#: e9b1bc4cc68b435f8cc63e7151b86644 ebb3414be66f4b929ed82e7c37782451
+#: f82d7c524bd745cfa6ccb8d6b6417a43 fb6087fc282948589c909249244cd7ab
+#: fc40cdecfccf483694c58e59e21483aa
 #: oceanai.modules.core.core.Core.__is_notebook
 #: oceanai.modules.core.core.Core._add_last_el_notebook_history_output
 #: oceanai.modules.core.core.Core._add_notebook_history_output
@@ -197,6 +261,7 @@ msgstr "**True** if the library is run in Jupyter or similar, otherwise **False*
 #: oceanai.modules.core.core.Core._bold_wrapper
 #: oceanai.modules.core.core.Core._candidate_ranking
 #: oceanai.modules.core.core.Core._clear_notebook_history_output
+#: oceanai.modules.core.core.Core._colleague_ranking
 #: oceanai.modules.core.core.Core._create_folder_for_logs
 #: oceanai.modules.core.core.Core._del_last_el_notebook_history_output
 #: oceanai.modules.core.core.Core._error
@@ -210,18 +275,23 @@ msgstr "**True** if the library is run in Jupyter or similar, otherwise **False*
 #: oceanai.modules.core.core.Core._notebook_display_markdown
 #: oceanai.modules.core.core.Core._other_error
 #: oceanai.modules.core.core.Core._priority_calculation
+#: oceanai.modules.core.core.Core._priority_skill_calculation
 #: oceanai.modules.core.core.Core._progressbar
 #: oceanai.modules.core.core.Core._progressbar_union_predictions
 #: oceanai.modules.core.core.Core._r_end
 #: oceanai.modules.core.core.Core._r_start
 #: oceanai.modules.core.core.Core._round_math
 #: oceanai.modules.core.core.Core._save_logs
+#: oceanai.modules.core.core.Core._search_file
 #: oceanai.modules.core.core.Core._stat_acoustic_features
+#: oceanai.modules.core.core.Core._stat_text_features
 #: oceanai.modules.core.core.Core._stat_visual_features
 #: oceanai.modules.core.core.Core._traceback
 #: oceanai.modules.core.core.Core.df_accuracy_
 #: oceanai.modules.core.core.Core.df_files_
+#: oceanai.modules.core.core.Core.df_files_colleague_
 #: oceanai.modules.core.core.Core.df_files_priority_
+#: oceanai.modules.core.core.Core.df_files_priority_skill_
 #: oceanai.modules.core.core.Core.df_files_ranking_
 #: oceanai.modules.core.core.Core.df_pkgs_
 #: oceanai.modules.core.core.Core.dict_of_accuracy_
@@ -235,9 +305,16 @@ msgstr "**True** if the library is run in Jupyter or similar, otherwise **False*
 msgid "Тип результата"
 msgstr "Result type"
 
-#: 0885a0f354584a09adb023627fd120b7 4bfd7401de2941c59a93d86b7d4ad4d0
-#: 62bc1b5d8a7f48b4957f354b9cf0830c 6afd98778f3d4038824ab92f233c75f5
-#: a1eecd64e8004cc5b26a2526a768f489
+#: 0072679e95c649d691f08622626354de 0f29cdada6a34d08ab980c02f88f1b24
+#: 23de3a223e6a41df8ba9daddcca49268 27d4dc90924e4ab1a4135ca11f3d4f7d
+#: 3d10f8528adb434eb8a0365d3bd7e95c 4269235cd1534097a6f86a6359ef2f86
+#: 47428d8285674ccca48a980e1cadca38 4ee71572d96c4747815f37828c532710
+#: 69d9fcd26933445dbe59d3857d857367 7e899f409fd34a68ab2955c6d83ce061
+#: 835a4ceea639440f9250735fe1a0ae28 8684e0c5aca34a3fb5f643d4f2ad912f
+#: 8de99b2629e74e3cbffb0365aac0eced a001d44aa6814f9db0ff6614a1e84b0e
+#: a006d5f818c342138896341f0e844286 b0c35d991b1d4877a12b14b406588b02
+#: d1867e500f7e4e0f9b92ae6b64997071 da56bde47f654c50aea1d38c6512753d
+#: df7ad022a051414bb5586c460b58c2a1 f09e7273eaa240adb32007d780fc8dbb
 #: oceanai.modules.core.core.Core.__is_notebook
 #: oceanai.modules.core.core.Core._add_notebook_history_output
 #: oceanai.modules.core.core.Core._append_to_list_of_accuracy
@@ -261,10 +338,27 @@ msgstr "Result type"
 msgid "Примеры"
 msgstr "Examples"
 
-#: 10afd5a762d9405aadb78fbf81e229f1 7dca980eef894ef8bce3bd9b0db7fab6
-#: 8071df0951c54237af801ac813b90d5a b1e6e146abee4521bd6e67192b508ea0
-#: b43ebb10a82f422c958f35fd2930c2bd ce62d84401894a239b31154b07dd9c92
-#: fae9d9bd7205465d92114c5fe0531626
+#: 0961e59ca6bf4732bfea82d2064a89d0 0f2b34b80808401aa42e9eac15feb5ae
+#: 18815db1b4594e4f9692b77d49741598 18cae06a15a94ad298fcb9cf68eb95e2
+#: 18d6683b8e7043bc9cf08c4cc4f0c651 1b4e8de22da148cb926fd3d20eb5aa97
+#: 25f9bbd295544b3eb09746ef0cce1812 3760f7f67c3545dab0a3a84f77dd69e4
+#: 4488279a4c4e4948b277994fa89fbe0c 518230ecea8545a48be797d0914e9e96
+#: 600af2ab450646a6befcaea8a3911515 63d0e03043fb4cf29bea104daba1162d
+#: 64a5b78bc5474ed7b334b6b36dd39dcf 73909cf45a9d46bd841d4f822f4743eb
+#: 74eeccc7f05843ddb9a66f541e7b4f2f 794e8eee10b7448daefd286c760a665e
+#: 7e554e2f11d54fa59774790311dfd767 82fd2a1834f6429f9db7ff6593e9465c
+#: 83451926ba914c84ac9adc5647e849e3 84486cb5a0ec4220ab197d8ab78bfe27
+#: 8d17561a112a4f339652ebe28c0ac471 8e72fe0532c0493db965eb0355ddb2dd
+#: 95bce132205f48d2a9c9e1fa4115bed4 9dac97e24d5b4899a2d4a54abe38eb60
+#: a97c737544bc4805bdc1441804abfe30 acafc74a584440058a590d15b324e0ca
+#: bbea6dcdeae441ec9ad701ce5775d9e8 beab489cc91e4788872d5f6eed46fe82
+#: c27194a287654aeba5db94cb75f37527 c6118a6b5b6d4f6e9e224100fa0626eb
+#: ce65b59884d84ed795b8e56b05410182 d43fced709a144879e2be5bcbfba04ed
+#: d4d46d49c2e740939478991351eae802 dc6305b4e9ee42d7a4383ffd995d1084
+#: e3e6f46c5bd849bda3bb623a4326fba2 e76158b4f2274a1090816e457499eb29
+#: eec1e94b7da0464783f4d4a25db0ed00 f50f8a2e71344c47a1b2498f818f0514
+#: f63ca7d4d79d4a7d8c90eb67d033fe1d fe3b250a51ef479a94176a83327518fb
+#: ffdcde3e3c3a45e29a339bb3468f893f
 #: oceanai.modules.core.core.Core.__is_notebook:11
 #: oceanai.modules.core.core.Core._add_last_el_notebook_history_output:13
 #: oceanai.modules.core.core.Core._add_notebook_history_output:15
@@ -309,7 +403,7 @@ msgstr "Examples"
 msgid ":bdg-success:`Верно` :bdg-light:`-- 1 --`"
 msgstr ":bdg-success:`True` :bdg-light:`-- 1 --`"
 
-#: f525ddd1fc414a5e8f2756376723805e
+#: cca68593d74a4fe387f8d34ab3305d20
 #: oceanai.modules.core.core.Core.__is_notebook:13 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -318,8 +412,8 @@ msgid ""
 "core._Core__is_notebook()"
 msgstr ""
 
-#: 42247aa977b84f0c9441c2de3f6af853 9b84d5b843574003a6af7908f5873cce
-#: a7727143d0fa45eb843c7d0a6b977dc8
+#: 3d16cd4f3e994e959c140194500bfe71 3e96812b62d54464b01c7d1d28a199d2
+#: a113de78416149d5ba50d0afe6cf3845 aeda4ddec9f74b38aff5aa979ec964f0
 #: oceanai.modules.core.core.Core.__is_notebook:22
 #: oceanai.modules.core.core.Core.__is_notebook:38
 #: oceanai.modules.core.core.Core._save_logs:40
@@ -327,9 +421,11 @@ msgstr ""
 msgid "True"
 msgstr ""
 
-#: 0c285ad7dca146579c8fdf6fafa1453a 27fde395bfa247c48db363ac735bd37e
-#: 6b302adc879d4963abbb8ad4797fc077 7acff553938b44e7a7ffbf7fb61680c7
-#: 8ffc7e0e192245e08ccbb84ac60c2203
+#: 17924558aa994554af9941f4e2904aee 56ae8711e46942b9a6f65bad5d6915af
+#: 6c689b6f296b4e8a986e24ce10e0e6e0 7d9519f9cd4a4df1943f610c3a99389d
+#: 8bf08935d231438587b9170064a115b5 93853729f5ca480b969ea0199d643d49
+#: 9d839ccef03540519e2854e7e3754bf6 bcc04a75a06b43099f94191ba16f9090
+#: f3305f35159345b3a70f6cd2b9b5894e ff713dfd22a54fa3a25410bdd996f460
 #: oceanai.modules.core.core.Core.__is_notebook:28
 #: oceanai.modules.core.core.Core._add_notebook_history_output:44
 #: oceanai.modules.core.core.Core._append_to_list_of_accuracy:79
@@ -338,12 +434,12 @@ msgstr ""
 #: oceanai.modules.core.core.Core._progressbar:57
 #: oceanai.modules.core.core.Core._progressbar_union_predictions:65
 #: oceanai.modules.core.core.Core._round_math:35
-#: oceanai.modules.core.core.Core.libs_vers:51
+#: oceanai.modules.core.core.Core.libs_vers:56
 #: oceanai.modules.core.core.Core.runtime_:48 of
 msgid ":bdg-light:`-- 2 --`"
 msgstr ""
 
-#: f16f6afd07ed41b38f63a8ce5493806c
+#: 94eacd8f8c70481d8e1d9e7a394534c3
 #: oceanai.modules.core.core.Core.__is_notebook:30 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -351,7 +447,7 @@ msgid ""
 "Core._Core__is_notebook()"
 msgstr ""
 
-#: c431379000fc47ce94e3980c973deff9
+#: 5b50df8e56594d3d88d7e4d3b61a71c9
 #: oceanai.modules.core.core.Core._add_last_el_notebook_history_output:1 of
 msgid ""
 "Добавление текста к последнему сообщению из истории вывода сообщений в "
@@ -360,10 +456,22 @@ msgstr ""
 "Adding text to the latest message from the message output history in a "
 "Jupyter cell"
 
-#: 064e9d12fe3944cc9748a83a1be855fa 680d6bf7e5484923b2535b90f732a5f0
-#: 6a09d0591aeb4e8eabca4f34892449ab 9d71fd3bffb041c1b2a1dc7bd8b82e27
-#: d0b32b3709a84a1db4218f7cf97cffe5 d942d9b6cfa045dfba0c3ee31a0be590
-#: ef426679ce6b458e85b65be1c0298f83
+#: 00462eaf78c34d2db2442f07aa49bff2 0b47a197e87b44ba9858ad91982f5c6f
+#: 1406b1cb5f53472ea7edb9a5f2f69eef 19368690f9c74fb9b5197b5a9c2b81e4
+#: 1a3ac2e7f38644dc889609c539f08efb 203007ed0130420684ead720cd101723
+#: 26cba9aaace74445abdedc1da2278dbb 289e0e96c99b4eacb104ebd825440b35
+#: 332401c1d9854a35ac0b1a9fb5275444 36b3acdf4edb4bef953de85e8e44afe9
+#: 3e4a39591ea34ed48a447e59795dcde8 407aae657e8b4ddb97d5fde058d469c5
+#: 424d9ef78d9549da9445dbbb1e465e59 46b2b318b2bf490c9549912f18e54571
+#: 4e8d216c8add43c3a3c5181064bc7129 5042d8b442bd4bec9c0b24d993df1c6a
+#: 52c87966d1a6485383c82d35e35bf151 556fc875ac0e4f0a9471d748e1f3f095
+#: 691f3287c8a9452b9d2520535bd459d0 82cec119060c4413bb2d8fad00059082
+#: 83a8d7fcabe24ebcae0a169c5b5d09c7 8c1c1d11ee2f4e4c9f8ffa59483206e3
+#: 8e490ff1324f4f2ba136e593bee7e55a 97a90de247bb4383845ab8cb4f93ed7f
+#: 983e34f57bbb49ff8d96d1a9d38e0e43 9c23d97db6e54df8ac4264ba101494e7
+#: a4b8e7d303fa40488e432f8892570d8b ac1c3aadbef54761ad1e09503398e1e9
+#: d79c108cf5884909aa9f528b89fc7c59 e70fa607a60445a281cab7cc52d0bd41
+#: f71dbcd1497a468faa44acc3196ebedf fe4bfcce5b2a4cba9c8299bd21bb7106
 #: oceanai.modules.core.core.Core._add_last_el_notebook_history_output:4
 #: oceanai.modules.core.core.Core._add_notebook_history_output:4
 #: oceanai.modules.core.core.Core._append_to_list_of_accuracy:4
@@ -371,6 +479,7 @@ msgstr ""
 #: oceanai.modules.core.core.Core._bold_wrapper:4
 #: oceanai.modules.core.core.Core._candidate_ranking:4
 #: oceanai.modules.core.core.Core._clear_notebook_history_output:4
+#: oceanai.modules.core.core.Core._colleague_ranking:4
 #: oceanai.modules.core.core.Core._create_folder_for_logs:4
 #: oceanai.modules.core.core.Core._del_last_el_notebook_history_output:4
 #: oceanai.modules.core.core.Core._error:4
@@ -384,19 +493,27 @@ msgstr ""
 #: oceanai.modules.core.core.Core._notebook_display_markdown:4
 #: oceanai.modules.core.core.Core._other_error:4
 #: oceanai.modules.core.core.Core._priority_calculation:4
+#: oceanai.modules.core.core.Core._priority_skill_calculation:4
 #: oceanai.modules.core.core.Core._progressbar:4
 #: oceanai.modules.core.core.Core._r_end:4
 #: oceanai.modules.core.core.Core._r_start:4
 #: oceanai.modules.core.core.Core._round_math:4
 #: oceanai.modules.core.core.Core._save_logs:4
+#: oceanai.modules.core.core.Core._search_file:4
 #: oceanai.modules.core.core.Core._stat_acoustic_features:4
+#: oceanai.modules.core.core.Core._stat_text_features:4
 #: oceanai.modules.core.core.Core._stat_visual_features:4
 #: oceanai.modules.core.core.Core._traceback:4 of
 msgid "protected (защищенный метод)"
 msgstr "protected method"
 
-#: 172d2e8efa374f3abd33359a952fcbb8 a7e0315345cb4145b3be544aceea69c9
-#: cf4da69bb4384bc089a1e8fd5d4aff36 fbc1b18bea464c19a94e1d97519f9448
+#: 0d4ceec2baa7417ca94f6861c448f2f7 663d9079577e4608b0ecda00d46d2492
+#: 6713270bb59e4cc7b3f42af6b4389997 6e20658f554f46aaa583ef271dc3870e
+#: 79dd8dbf1c4f44c18b19dae89ffdf0c7 8d237b4a9a8848baad40fd60d32be5a3
+#: bd58426697bb42e29d04b65d314aad3e c3ee5441d9cd44fba13cfb8753a7aa4b
+#: cc093835b502420b9e8c9cc52000829d cd052592dea9467d92fb978ec094bf94
+#: d7533c51ab344d17b82e602a70bce54f e613bb6200cb4d46866b329dac7331cb
+#: f4fe4a1ff7734c84a13215489952e8f7
 #: oceanai.modules.core.core.Core._add_last_el_notebook_history_output:6
 #: oceanai.modules.core.core.Core._add_notebook_history_output:6
 #: oceanai.modules.core.core.Core._bold_wrapper:6
@@ -413,8 +530,16 @@ msgstr "protected method"
 msgid "Сообщение"
 msgstr "Message"
 
-#: 003f538090ce44488de8092e862874ab b221432c50fa47018105900a9301d349
-#: e056d6f0a5604c6cbccdfcf30cbd0503
+#: 080569c3c361449fa1366a1dd471de91 1d2dcd9d44c04e8980f0397668168e1c
+#: 22750889dc074cdc8d6680c37242333a 2c97c0de869b4e968b90f6b2a36603d5
+#: 2e20c8208a4d412aabf45939bc920bf1 3888aaae33c34339b5f5518a4d44a407
+#: 46704d448cd24a4786d4c0b0f7058d06 4d9ef49d3d374bb9bf556b7f6bc11c30
+#: 50b9f6a35b6e4373990fc9f20104197f 68ab48c41e8c49df8a380494ad0b0adf
+#: 7abff1c47deb4cada4ec0d768f4c2feb 8832a5aeab3242b880def0ae43811d8a
+#: 91a5feedc48449d2ac917a2e31b6cb4b 95270d2c56e1498286ce894bb67aa209
+#: 9f26c9b017294137a343ba0b649541e1 c9587a17f2344cb48f96ad7f2a04e98d
+#: ca6ac696d30f419aab63af21a1eade2a dc39f39ec1ec4f2c9db56a4e8baeb463
+#: f11586513599405c8d1c2dbf628899c1 fe172caadd364e6b9e7cac27fbef8ed7
 #: oceanai.modules.core.core.Core._add_last_el_notebook_history_output:9
 #: oceanai.modules.core.core.Core._add_notebook_history_output:11
 #: oceanai.modules.core.core.Core._clear_notebook_history_output:6
@@ -431,14 +556,24 @@ msgstr "Message"
 #: oceanai.modules.core.core.Core._r_end:13
 #: oceanai.modules.core.core.Core._r_start:8
 #: oceanai.modules.core.core.Core._stat_acoustic_features:13
+#: oceanai.modules.core.core.Core._stat_text_features:13
 #: oceanai.modules.core.core.Core._stat_visual_features:13
 #: oceanai.modules.core.core.Core.libs_vers:10
 #: oceanai.modules.core.core.Core.show_notebook_history_output:3 of
 msgid "None"
 msgstr ""
 
-#: 12357e12f22b408a8623d2cf0156b3b7 39e6f228792e4e77b44fec873b782d4c
-#: 74bbadc695cd4ea09278388f9848d86d
+#: 0249bb3e3ffa4137b46f349dc6ea1f60 07b5255e19234f10ab1e5ee81bae9f51
+#: 0cd20d2c934a45dd8939f1e110715fcd 0fbad9e125f348e79ae98a0481cc589c
+#: 259c9e42695f48fca319bb72627e195d 330da465f2e747398b699f8ad751bbeb
+#: 52c0d49f52cf4ec0a337b55eac1b58b5 596d527c21ee4710b3c4bcc986381931
+#: 5aa11b7a5c1844088229d90ddf4a94a9 5aaaaedf1ddb45ae9b067dd50fdf2027
+#: 6b18f6bd9d104c9b914d6a0b3aa0bbc6 74962d4a18864f078c88af010781d9b5
+#: 74be76f9232b40bcbb60386fa84f8c09 79dad42982694ec4a569601534da13f8
+#: 83161fe2f8aa458bb42cfa5f2b748706 aa5f43779bbb492b82a919570cb2ff67
+#: ab08594703414bc6a9cef48a4ca441ba b2188e9a60194ffa9ba20c94f7e4ffc0
+#: bb194d35c9724b1c8ecb409ed437b888 c26e344b2bf046b597ba7e04561a9905
+#: dc669246bc1240f3b12c6ebf87fd8d97
 #: oceanai.modules.core.core.Core._add_last_el_notebook_history_output
 #: oceanai.modules.core.core.Core._bold_wrapper
 #: oceanai.modules.core.core.Core._clear_notebook_history_output
@@ -463,7 +598,7 @@ msgstr ""
 msgid "Пример"
 msgstr "Example"
 
-#: 6110e6c3a1104babb58eb64985e2cbbb
+#: e5113bef7477448c883ac514b7536998
 #: oceanai.modules.core.core.Core._add_last_el_notebook_history_output:15 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -492,7 +627,7 @@ msgstr ""
 "\n"
 "core.show_notebook_history_output()"
 
-#: e1968a18b66b43d9836dca3835e66bc0
+#: ce14808d35b74a6c90e462247a4a7a05
 #: oceanai.modules.core.core.Core._add_last_el_notebook_history_output:32 of
 msgid ""
 "...\n"
@@ -501,12 +636,18 @@ msgstr ""
 "...\n"
 "Message 1 ..."
 
-#: d73fd02407324ecd8e26ad8ff889d7ff
+#: 971e1e92f6e64d138303526b48a6b5f2
 #: oceanai.modules.core.core.Core._add_notebook_history_output:1 of
 msgid "Добавление истории вывода сообщений в ячейке Jupyter"
 msgstr "Adding message output history to Jupyter cell"
 
-#: 03473138104848f8a0b17a8ddf7eedef 9a26521d362c4d15a69400e72a927674
+#: 0bd0250b06744d50b321cebd03381bc5 10804fc2de4945c594d63b3dc7682120
+#: 2dbbd69014f4448fbd034b206acff5e0 440a0fd1896f4c04aefde73637cb9450
+#: 6d1f19735ea146aaa431df1ae082312c 6ea0c4c6495d4349aa59195e0b2d404d
+#: 768ee91c05334fcab5aaa98cba04b83b 8b27d8936ba94bd4b1708d5685346ec4
+#: 8f8046f8afde40d2917690742c5c960f b821d30b7f0346a19f797451d24d0717
+#: b978d45e6ba44a3aad2aa40a4778752b bfc4eec0b0e14b17b5cdb213f1611773
+#: f5d39205e0634de389fbf5541ef8b05b fd8b8f093e8f417baaa841ce38928024
 #: oceanai.modules.core.core.Core._add_notebook_history_output:8
 #: oceanai.modules.core.core.Core._error:8
 #: oceanai.modules.core.core.Core._info:8
@@ -519,11 +660,12 @@ msgstr "Adding message output history to Jupyter cell"
 #: oceanai.modules.core.core.Core._progressbar_union_predictions:16
 #: oceanai.modules.core.core.Core._r_end:8
 #: oceanai.modules.core.core.Core._stat_acoustic_features:6
+#: oceanai.modules.core.core.Core._stat_text_features:6
 #: oceanai.modules.core.core.Core._stat_visual_features:6 of
 msgid "Замена последнего сообщения"
 msgstr "Replacing the last message"
 
-#: b0cb45e637ff4cd4a7a35e8c768adfd3
+#: 5f4345efbb7a499ba844bfcbbf2932f1
 #: oceanai.modules.core.core.Core._add_notebook_history_output:17 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -558,7 +700,7 @@ msgstr ""
 "\n"
 "core.show_notebook_history_output()"
 
-#: a68495f663304ee0b702b22074061e5e b6a92296b0034ba5904e08c3ad3f45e0
+#: 1ff8cf65cfd14c0abafd157eec99ac20 e4c74b57744644ecba21c612d7f9dea9
 #: oceanai.modules.core.core.Core._add_notebook_history_output:37
 #: oceanai.modules.core.core.Core._add_notebook_history_output:69 of
 msgid ""
@@ -568,7 +710,7 @@ msgstr ""
 "Message 1\n"
 "Replacing the last message"
 
-#: b7ae5a2b49ba493793b33d02ea05b21d
+#: 1cee85922855453db875502f6e53d1f3
 #: oceanai.modules.core.core.Core._add_notebook_history_output:46 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -607,24 +749,35 @@ msgstr ""
 "\n"
 "core.show_notebook_history_output()"
 
-#: cb482f67160545afbf5c0367fd0faf0c
+#: 0355ca3b54e342e493db644ba4fc24e6
 #: oceanai.modules.core.core.Core._append_to_list_of_accuracy:1 of
 msgid ""
 "Добавление значений в словарь для DataFrame с результатами вычисления "
 "точности"
 msgstr "Adding values to the dictionary for a DataFrame with precision results"
 
-#: 2fc7578529804b708186c165fd6d2c4f 836974b369f742c4950063db03a8edcd
+#: 1694615983e144f18bb53fcdaad295f7 474f686f62e74117bc8e86bf1c0651e3
 #: oceanai.modules.core.core.Core._append_to_list_of_accuracy:6
 #: oceanai.modules.core.core.Core._append_to_list_of_files:8 of
 msgid "Предсказания персональных качеств"
-msgstr "Predictions of personal traits"
+msgstr "Personality traits scores"
 
-#: 02567ef83efe449c8925ba42ae5b2f19 5a18c272758b454b8a2383cd29338be5
-#: 9e67ecf288154ce58962c9e3229f3834
+#: 09053a8989774f70bf1a046de6311453 0b4c019bee4f4b66afa5f9bd70f6075f
+#: 0e63ec69fe3b4bf88ed632073dfff66c 1a0bd32cecfc495bba782a98775d7d01
+#: 1c96b786f0da4e52803360dfc40eec05 2b13bb10613046f2814fafecf7155818
+#: 2cdeafc1f44b4583ab22cac95fafa22c 33b51d353a3246f3930a4f839c71f02e
+#: 36c6fa5b1c2f4359ad9aa37538fc34c0 383c954f50f94685af00f3e7eeffc442
+#: 4652cc290bfa4ec7ad6c8562210e0eb9 4a12666e4bd646fd81949b4562d2fbf2
+#: 55005722586c4836be216b96ef29aaa2 61723b49448a48f8983b69c018f94ddb
+#: 81da27ae83da4bbf8f33fbd3c04eca04 83ddace7af1348c6a183845f1f69e1c0
+#: 8c7315a3f4414aec8c3671c1728e43ad 93640aa67dea4f13aab598b3694329a6
+#: a49114db88c642ce891d5371708f7806 bfdede9e721e49e89a2c7adf990128ca
+#: c5672cfbad43491ab64e98bb855e2d76 d1b4a8e25d9441c984b1063a265cfbd8
+#: d404f6c7ba0d402684d4681227e59abc f312d58670a24f889ccdf7350e91b3eb
 #: oceanai.modules.core.core.Core._append_to_list_of_accuracy:8
 #: oceanai.modules.core.core.Core._append_to_list_of_files:10
 #: oceanai.modules.core.core.Core._candidate_ranking:16
+#: oceanai.modules.core.core.Core._colleague_ranking:14
 #: oceanai.modules.core.core.Core._create_folder_for_logs:6
 #: oceanai.modules.core.core.Core._error:10
 #: oceanai.modules.core.core.Core._get_paths:10
@@ -635,18 +788,20 @@ msgstr "Predictions of personal traits"
 #: oceanai.modules.core.core.Core._notebook_display_markdown:10
 #: oceanai.modules.core.core.Core._other_error:10
 #: oceanai.modules.core.core.Core._priority_calculation:16
+#: oceanai.modules.core.core.Core._priority_skill_calculation:10
 #: oceanai.modules.core.core.Core._progressbar:14
 #: oceanai.modules.core.core.Core._progressbar_union_predictions:18
 #: oceanai.modules.core.core.Core._r_end:10
 #: oceanai.modules.core.core.Core._round_math:8
 #: oceanai.modules.core.core.Core._save_logs:10
 #: oceanai.modules.core.core.Core._stat_acoustic_features:8
+#: oceanai.modules.core.core.Core._stat_text_features:8
 #: oceanai.modules.core.core.Core._stat_visual_features:8
 #: oceanai.modules.core.core.Core.libs_vers:3 of
 msgid "Отображение"
 msgstr "Display"
 
-#: 4708f83f402a48df87f2ff7099b5d17d 96c122491f31462ba206322fba990c2a
+#: 667104c1d6294742971ab964d18e2e69 97415b9bca1a4a81afa8fbec60f87a98
 #: oceanai.modules.core.core.Core._append_to_list_of_accuracy:11
 #: oceanai.modules.core.core.Core._append_to_list_of_files:13 of
 msgid ""
@@ -656,7 +811,7 @@ msgstr ""
 "**True** if values have been added to the dictionary for the DataFrame, "
 "otherwise **False**"
 
-#: a288add442d344f6ae119fde3510979c
+#: 3dc1e6ee1abb4e3da908fda927fabb36
 #: oceanai.modules.core.core.Core._append_to_list_of_accuracy:19 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -678,7 +833,7 @@ msgid ""
 "core.dict_of_accuracy_"
 msgstr ""
 
-#: e0ebdb2113144940ad16b669ed74a9c2
+#: 82412c21c25f4f0784b1851b563e3979
 #: oceanai.modules.core.core.Core._append_to_list_of_accuracy:41 of
 msgid ""
 "{\n"
@@ -690,8 +845,15 @@ msgid ""
 "}"
 msgstr ""
 
-#: 04895f1c3a924bfe942c5f5f68ced757 3d5f82b486d8491b997e9731eef6ca65
-#: c10cb09149c3462b9947be3d59fe7e03
+#: 09a7f8f9628a4d6399bcaea88a74d6c9 0b41e5ef4adb43e0ac32600268fc057f
+#: 1c1e26fd8e294bd89185cfac7047f861 22e3e169679b4939bdf95b14bb220fb2
+#: 307a52746f454985bdd4cef69a50e411 6498c535d0154cd089b8250e778362c8
+#: 6b883bddcd8e4d4cb152ea37730542e9 7095049775f44cb4aa49b8692abd53e9
+#: 7877d81ef5554bf2830e56a8147943b2 865cfb6941e74a5785311b9d2d6a1be8
+#: 8a73afd99abe4f0bb767d29b576d1ee1 8b18f14af4454fcea14d3f5eb983e3a9
+#: 9cc825bda4344f89a5a869b5fac2ea4f a7e16ff8710c48fc96c69b8f1e593d74
+#: b7b994056c5b45a19f35749af1598494 c08347d916f74484b8b71efcb34278bd
+#: e16271c006d44420b90f211a4f62ec0c
 #: oceanai.modules.core.core.Core._append_to_list_of_accuracy:53
 #: oceanai.modules.core.core.Core._append_to_list_of_files:58
 #: oceanai.modules.core.core.Core._error:49
@@ -707,12 +869,12 @@ msgstr ""
 #: oceanai.modules.core.core.Core._round_math:53
 #: oceanai.modules.core.core.Core._stat_acoustic_features:53
 #: oceanai.modules.core.core.Core._stat_visual_features:56
-#: oceanai.modules.core.core.Core.libs_vers:68
+#: oceanai.modules.core.core.Core.libs_vers:73
 #: oceanai.modules.core.core.Core.runtime_:30 of
 msgid ":bdg-danger:`Ошибка` :bdg-light:`-- 1 --`"
 msgstr ":bdg-danger:`Error` :bdg-light:`-- 1 --`"
 
-#: 3c8c01da471e45a59538b7d41e9ba2de
+#: 75878b8545274324893994a4e78964e0
 #: oceanai.modules.core.core.Core._append_to_list_of_accuracy:55 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -736,7 +898,7 @@ msgid ""
 "core.dict_of_accuracy_"
 msgstr ""
 
-#: d4bea7e4ecc444c3b8944beaa45ce879
+#: b39db6832ed94b6a940072da4dee1b0e
 #: oceanai.modules.core.core.Core._append_to_list_of_accuracy:81 of
 msgid ""
 "[2022-12-03 23:08:15] Ой! Что-то пошло не так ... смотрите настройки ядра"
@@ -771,17 +933,18 @@ msgstr ""
 "    'N': [0.8, 0.7]\n"
 "}"
 
-#: b7b6fa57572844449c8339a5d9a1da9c
+#: 47a3f6b7d5624d028a9b2cfc791b1d98
 #: oceanai.modules.core.core.Core._append_to_list_of_files:1 of
 msgid "Добавление значений в словарь для DataFrame c данными"
 msgstr "Adding values to a dictionary for a DataFrame with data"
 
-#: dad42fd396cd4859a5bd3082039b46d3
-#: oceanai.modules.core.core.Core._append_to_list_of_files:6 of
+#: 6fd7161abf194c67b246043742963365 b6d6d77ca03e4c13af79d551f408d15e
+#: oceanai.modules.core.core.Core._append_to_list_of_files:6
+#: oceanai.modules.core.core.Core._search_file:6 of
 msgid "Путь к файлу"
 msgstr "The path to the file"
 
-#: 975ab19f7ca54927b022e7d9268659f1
+#: 6b56552037da4b88be2d53146787db62
 #: oceanai.modules.core.core.Core._append_to_list_of_files:21 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -805,7 +968,7 @@ msgid ""
 "core.dict_of_files_"
 msgstr ""
 
-#: 5b15c08894514603b5ee887fedf40dd8
+#: e924f9679ac54dd6adfed25a9f40a059
 #: oceanai.modules.core.core.Core._append_to_list_of_files:45 of
 msgid ""
 "{\n"
@@ -818,7 +981,7 @@ msgid ""
 "}"
 msgstr ""
 
-#: ed90adb4427247f881cf670c5ecfb569
+#: 67f10f624d814f048143b803591a9405
 #: oceanai.modules.core.core.Core._append_to_list_of_files:60 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -865,7 +1028,7 @@ msgstr ""
 "\n"
 "core.dict_of_files_"
 
-#: bce1bbd454f14829b2c0b4dcfd4a57c3
+#: a9cff94f571f465d8e72f2175745d5e0
 #: oceanai.modules.core.core.Core._append_to_list_of_files:88 of
 msgid ""
 "[2022-10-13 18:22:40] Ой! Что-то пошло не так ... смотрите настройки ядра"
@@ -902,13 +1065,13 @@ msgstr ""
 "    'N': [0.8]\n"
 "}"
 
-#: 10c5a21a342b4b5e83287b9e39e984fd fc60ae822fca44b99f7b44490060bdce
+#: 4a5e9b8ad3754594b230cdb507e85de8 54b19b35d5bb494ebc508dfae899fffb
 #: oceanai.modules.core.core.Core._bold_wrapper:1
 #: oceanai.modules.core.core.Core._bold_wrapper:9 of
 msgid "Обернутое сообщение с жирным начертанием"
 msgstr "Wrapped message with bold text"
 
-#: ff42e7adb83347c8866bbfb2a279eded
+#: 44d452ad7739479cb372f2f995ced9ed
 #: oceanai.modules.core.core.Core._bold_wrapper:17 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -935,7 +1098,7 @@ msgstr ""
 "    'Wrapped message with bold text'\n"
 "))"
 
-#: 02c2f3ad7d8547c0bbe7dd42c87c1fc2
+#: 423d9a5df8214266bea770044213e70c
 #: oceanai.modules.core.core.Core._bold_wrapper:33 of
 msgid ""
 "<span style=\"color:#666\">Обернутое сообщение без жирного "
@@ -946,47 +1109,47 @@ msgstr ""
 "<span style=\"color:#FF0000\">Wrapped message without bold text</span>\n"
 "<span style=\"color:#FF4545\">Wrapped message with bold text</span>"
 
-#: 745372ed6a1d47398adce6057bfd98e7
+#: 47b6cba7315247479d3c0125e70ad5ca
 #: oceanai.modules.core.core.Core._candidate_ranking:1 of
-msgid "Ранжирование кандидатов"
-msgstr ""
+msgid "Ранжирование кандидатов по профессиональным обязанностям"
+msgstr "Ranking candidates by professional responsibilities"
 
-#: 621f17231cf94fbe845d4b79f199f750
+#: d1219aaa51784075a481cb5e2af577bb
 #: oceanai.modules.core.core.Core._candidate_ranking:6 of
 msgid "Вес для ранжирования персонального качества (открытость опыту)"
-msgstr ""
+msgstr "Weight for ranking personality trait (openness)"
 
-#: 31de277d873a4409893217847388febc
+#: dd49086633a549e288e6f79800acbcd9
 #: oceanai.modules.core.core.Core._candidate_ranking:8 of
 msgid "Вес для ранжирования персонального качества (добросовестность)"
-msgstr ""
+msgstr "Weight for ranking personality trait (conscientiousness)"
 
-#: 16a681bc71e1469485de0375dd3b6193
+#: d93697c42a0444eb9b045a0e8492554e
 #: oceanai.modules.core.core.Core._candidate_ranking:10 of
 msgid "Вес для ранжирования персонального качества (экстраверсия)"
-msgstr ""
+msgstr "Weight for ranking personality trait (extraversion)"
 
-#: a6ea5c235aaf4a2ea4312dbe3af6a486
+#: 5fcc9605e2a3491bb384808abf114f05
 #: oceanai.modules.core.core.Core._candidate_ranking:12 of
 msgid "Вес для ранжирования персонального качества (доброжелательность)"
-msgstr ""
+msgstr "Weight for ranking personality trait (agreeableness)"
 
-#: ebc2a8942a5d4319abab6e2b9cc64ffc
+#: 7ce3348989744dd48cd4715581f2263d
 #: oceanai.modules.core.core.Core._candidate_ranking:14 of
-msgid "Вес для ранжирования персонального качества (нейротизм)"
-msgstr ""
+msgid "Вес для ранжирования персонального качества (эмоциональная стабильность)"
+msgstr "Weight for ranking personality trait (non-neuroticism)"
 
-#: 3b9e521ee8c14ba693c34906f5453230
+#: 7b5ce79cf68d40debb63556c47dfa670
 #: oceanai.modules.core.core.Core._candidate_ranking:19 of
 msgid "**DataFrame** c ранжированными данными"
 msgstr "**DataFrame** with ranking data"
 
-#: f46f7750b06544848e4ecb219f97fabc
+#: f690d77ea7264d7380d19564feb9ca53
 #: oceanai.modules.core.core.Core._clear_notebook_history_output:1 of
 msgid "Очистка истории вывода сообщений в ячейке Jupyter"
 msgstr "Clearing message output history in a Jupyter cell"
 
-#: 1af39daa06434ed1a434fa063174fb73
+#: c4c9c6920e8742f2bcbedcb1b82d3514
 #: oceanai.modules.core.core.Core._clear_notebook_history_output:12 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -1019,19 +1182,52 @@ msgstr ""
 "\n"
 "core.show_notebook_history_output()"
 
-#: a1bb3b79f16b45e98d9ae123c386d741
+#: 24cc0cbc79b249b6a05ebe34d97088ac
+#: oceanai.modules.core.core.Core._colleague_ranking:1 of
+msgid "Поиск подходящего коллеги"
+msgstr "Finding a suitable colleague"
+
+#: 352c1ce23ca74b13a1936fab3e64aba9 5b26a01a3248490db7edd1a051e59ad6
+#: 7df9f27d33444dcaa0140ad1319ed7f3
+#: oceanai.modules.core.core.Core._colleague_ranking:6
+#: oceanai.modules.core.core.Core._priority_calculation:6
+#: oceanai.modules.core.core.Core._priority_skill_calculation:6 of
+msgid "**DataFrame** c коэффициентами корреляции"
+msgstr "**DataFrame** with correlation coefficients"
+
+#: c4426b7007a84907bb9b806294cb99c3
+#: oceanai.modules.core.core.Core._colleague_ranking:8 of
+msgid "Список оценок персональных качеств личности целевого человека"
+msgstr "List with the names of personality traits scores"
+
+#: 5982b73ac12a48b98df053bbefcff93d
+#: oceanai.modules.core.core.Core._colleague_ranking:10 of
+msgid "Ранг коллеги по совместимости"
+msgstr "Rank of compatibility colleague"
+
+#: 9e217688e0ff45a9870834625b86b3e1
+#: oceanai.modules.core.core.Core._colleague_ranking:12 of
+msgid "Коэффициент применяемый к оценкам в случае равенства оценок двух человек"
+msgstr "Coefficient applied to scores in case of equality of scores of two people"
+
+#: 02cb3d7b6d604564a93db2b6a41d7fb1
+#: oceanai.modules.core.core.Core._colleague_ranking:17 of
+msgid "**DataFrame** c ранжированными коллегами"
+msgstr "**DataFrame** with ranked colleagues"
+
+#: 1ac09ca8aac649caa83b8ecb46ce9d2e
 #: oceanai.modules.core.core.Core._create_folder_for_logs:1 of
 msgid "Создание директории для сохранения LOG файлов"
 msgstr "Creating a directory for saving LOG files"
 
-#: 6ab2c432a07b4efbaa83d3093bf31aea
+#: 471aba3d5a1b4ae6adf1da1d9e105edc
 #: oceanai.modules.core.core.Core._create_folder_for_logs:9 of
 msgid ""
 "**True** если директория создана или существует, в обратном случае "
 "**False**"
 msgstr "**True** if the directory is created or exists, otherwise **False**"
 
-#: d861367e7f46455193d3600a4b431413
+#: 39e1c718bdc448118b55af64da37ad0b
 #: oceanai.modules.core.core.Core._create_folder_for_logs:17 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -1043,19 +1239,19 @@ msgid ""
 "core._create_folder_for_logs(out = True)"
 msgstr ""
 
-#: 972357932dbe4b88bfcb6855183fa858
+#: da2c680d83e04b359b84654e3ed404d4
 #: oceanai.modules.core.core.Core._create_folder_for_logs:29 of
 msgid "true"
 msgstr ""
 
-#: 39f002d60705404986b83dd90d8445c8
+#: b4aac794418c463ca24966595a054131
 #: oceanai.modules.core.core.Core._del_last_el_notebook_history_output:1 of
 msgid "Удаление последнего сообщения из истории вывода сообщений в ячейке Jupyter"
 msgstr ""
 "Removing the last message from the message output history in a Jupyter "
 "cell"
 
-#: 83a9aba6b5b3430a9905a4f066478199
+#: fb2d39bd211d4a609af19d0e8a622599
 #: oceanai.modules.core.core.Core._del_last_el_notebook_history_output:12 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -1088,16 +1284,16 @@ msgstr ""
 "\n"
 "core.show_notebook_history_output()"
 
-#: 7d9097e3e8994bb4b1ef319ac8520c61
+#: 079717a68d2445cda977ed0b17a91007
 #: oceanai.modules.core.core.Core._del_last_el_notebook_history_output:31 of
 msgid "Сообщение 1"
 msgstr "Message 1"
 
-#: 8594176e65ce41769545b40fa941e789 oceanai.modules.core.core.Core._error:1 of
+#: 64be79edbea94542b20e1f2b51d01eae oceanai.modules.core.core.Core._error:1 of
 msgid "Сообщение об ошибке"
 msgstr "Error message"
 
-#: d00390c37ff34d0484b3051661b922af oceanai.modules.core.core.Core._error:20 of
+#: 3e2f9604de7d4228ba464b2fe643af76 oceanai.modules.core.core.Core._error:20 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
 "\n"
@@ -1135,7 +1331,7 @@ msgstr ""
 "    last = True, out = True\n"
 ")"
 
-#: 20da3eb2125f477c98246f12ee868564 oceanai.modules.core.core.Core._error:42 of
+#: 570a69bda7b74e88a0a415392bf29631 oceanai.modules.core.core.Core._error:42 of
 msgid ""
 "[2022-10-12 15:21:00] Сообщение об ошибке 1\n"
 "[2022-10-12 15:21:00] Сообщение об ошибке 2"
@@ -1143,7 +1339,7 @@ msgstr ""
 "[2022-10-12 15:21:00] Error message 1\n"
 "[2022-10-12 15:21:00] Error message 2"
 
-#: b6ce63f7c2ce4d9c83443d32e48aad99 oceanai.modules.core.core.Core._error:51 of
+#: 62a1fb2d06b9476a9905d6a0873bb15c oceanai.modules.core.core.Core._error:51 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
 "\n"
@@ -1163,7 +1359,7 @@ msgstr ""
 "    last = False, out = True\n"
 ")"
 
-#: 234dcc2e143d4ea88d7e1dc56404a9b4 oceanai.modules.core.core.Core._error:64 of
+#: 5999fbceb14e47ed98b295d82e401e1e oceanai.modules.core.core.Core._error:64 of
 msgid ""
 "[2022-10-12 17:06:04] Неверные типы или значения аргументов в "
 "\"Core._error\" ..."
@@ -1171,13 +1367,13 @@ msgstr ""
 "[2022-10-12 17:06:04] Invalid argument types or values in \"Core._error\""
 " ..."
 
-#: 455ea3f2786a4affb9d7b8aff69b6388
+#: 30837da9ab29439ab8831918c974d4b2 88293219b781429894f2dd3321bc7231
 #: oceanai.modules.core.core.Core._error_wrapper:1
 #: oceanai.modules.core.core.Core._error_wrapper:9 of
 msgid "Обернутое сообщение об ошибке"
 msgstr "Wrapped error message"
 
-#: bfd0ce1b7b034568b201263e2a94fd0e
+#: 41e5a4160f514e48bc29918828cb25a1
 #: oceanai.modules.core.core.Core._error_wrapper:16 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -1204,7 +1400,7 @@ msgstr ""
 "    'Wrapped error message 2'\n"
 "))"
 
-#: f5f241459fc142238d6c29fb75cd30d4
+#: 853df9762b224395980d46471c04906a
 #: oceanai.modules.core.core.Core._error_wrapper:32 of
 msgid ""
 "<span style=\"color:#FF0000\">Обернутое сообщение об ошибке 1</span>\n"
@@ -1213,27 +1409,27 @@ msgstr ""
 "<span style=\"color:#FF0000\">Wrapped error message 1</span>\n"
 "<span style=\"color:#FF4545\">Wrapped error message 2</span>"
 
-#: 1a0017ebbb01487b80a24ddba36b8572 oceanai.modules.core.core.Core._get_paths:1
+#: a355d84c77bd4bddb2aff0cafb7230a1 oceanai.modules.core.core.Core._get_paths:1
 #: of
 msgid "Получение директорий где хранятся данные"
 msgstr "Getting directories where data is stored"
 
-#: c040fcb7f6914bf0997245f190b5f6e6 oceanai.modules.core.core.Core._get_paths:6
+#: a2e5385346a44d658a422219751a1852 oceanai.modules.core.core.Core._get_paths:6
 #: of
 msgid "Директория набора данных"
 msgstr "Dataset directory"
 
-#: f126937751964ce2aae2f945773e11a4 oceanai.modules.core.core.Core._get_paths:8
+#: 922f7b5189d649648c92544912ee23c1 oceanai.modules.core.core.Core._get_paths:8
 #: of
 msgid "Глубина иерархии для извлечения классов"
 msgstr "Hierarchy depth for class extraction"
 
-#: 9770acc7674b4f1ea63889ada85d6cb4
+#: 837fbc62291548bba354a6323a97d724
 #: oceanai.modules.core.core.Core._get_paths:13 of
 msgid "**False** если проверка аргументов не удалась или список с директориями"
 msgstr "**False** if the argument check fails or a list of directories"
 
-#: 97704ca0250549e086ac224aa0247430
+#: 34fbf9406b7a4dac8836c4d0c31828cf
 #: oceanai.modules.core.core.Core._get_paths:21 of
 msgid ""
 "core = Core()\n"
@@ -1243,7 +1439,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: c3b0788be01441429181a2e36e2b1aa3
+#: ef6a364fafd64344b0477cee7c7d4fca
 #: oceanai.modules.core.core.Core._get_paths:31 of
 msgid ""
 "[\n"
@@ -1253,12 +1449,12 @@ msgid ""
 "]"
 msgstr ""
 
-#: 8a18dbdc86094f13988fc7958021de90
+#: 8a29fd867b9f4aefa08b40d6c452df79
 #: oceanai.modules.core.core.Core._get_paths:41 of
 msgid ":bdg-danger:`Ошибки` :bdg-light:`-- 1 --`"
 msgstr ":bdg-danger:`Errors` :bdg-light:`-- 1 --`"
 
-#: 860233119ddf406bb46e896eb1dfa0af
+#: b040e11ab5434e94a289952ddf57a065
 #: oceanai.modules.core.core.Core._get_paths:43 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -1277,7 +1473,7 @@ msgstr ""
 "    depth = 1, out = True\n"
 ")"
 
-#: bf2448a4170a47089de7fb91900be289
+#: c836d894a51f42d5af50ccd968b44b84
 #: oceanai.modules.core.core.Core._get_paths:55 of
 msgid ""
 "[2022-10-12 16:36:16] Неверные типы или значения аргументов в "
@@ -1288,7 +1484,7 @@ msgstr ""
 "\"Core._get_paths\" ...\n"
 "False"
 
-#: 71ef4372049a4b00b38e0e79bd3fb05f
+#: 52b6246593a347aa87b0012b91577ff0
 #: oceanai.modules.core.core.Core._get_paths:64 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -1307,7 +1503,7 @@ msgstr ""
 "    depth = 1, out = True\n"
 ")"
 
-#: 7ba6fe1c816e4476a9151eda82aeaa61
+#: cb7a257d69f147f1affa4fd06453c74e
 #: oceanai.modules.core.core.Core._get_paths:76 of
 msgid ""
 "[2022-10-13 18:37:11] Ой! Что-то пошло не так ... директория "
@@ -1330,11 +1526,11 @@ msgstr ""
 "\n"
 "False"
 
-#: 37d256b0e7b74bfeac58554e603e2e12 oceanai.modules.core.core.Core._info:1 of
+#: 97a8b7f105c7428e878aab533397b2ba oceanai.modules.core.core.Core._info:1 of
 msgid "Информационное сообщение"
 msgstr "Announcement"
 
-#: 9ef59bb17a884c469b24cbda86a021c2 oceanai.modules.core.core.Core._info:20 of
+#: 0db8be6af1404bbaacc88b469c09a1f5 oceanai.modules.core.core.Core._info:20 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
 "\n"
@@ -1372,7 +1568,7 @@ msgstr ""
 "    last = True, out = True\n"
 ")"
 
-#: 770d3387d5b34b5aa3e66add3163dac8 oceanai.modules.core.core.Core._info:42 of
+#: cd45195f7b4645bdaf89f4ec86b80148 oceanai.modules.core.core.Core._info:42 of
 msgid ""
 "[2022-10-14 11:35:00] Информационное сообщение 1\n"
 "[2022-10-14 11:35:00] Информационное сообщение 2"
@@ -1380,7 +1576,7 @@ msgstr ""
 "[2022-10-14 11:35:00] Announcement 1\n"
 "[2022-10-14 11:35:00] Announcement 2"
 
-#: 79b8609154bf4a7aa159b9ac1ffc79c7 oceanai.modules.core.core.Core._info:51 of
+#: 9833d9f94348424483bd343711d44b7b oceanai.modules.core.core.Core._info:51 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
 "\n"
@@ -1400,7 +1596,7 @@ msgstr ""
 "    last = False, out = True\n"
 ")"
 
-#: d9e46de92cc14207ac46c021d7229b65 oceanai.modules.core.core.Core._info:64 of
+#: ac7978d85b264a50ac2db03d225c0461 oceanai.modules.core.core.Core._info:64 of
 msgid ""
 "[2022-10-14 11:43:00] Неверные типы или значения аргументов в "
 "\"Core._info\" ..."
@@ -1408,12 +1604,12 @@ msgstr ""
 "[2022-10-14 11:43:00] Invalid argument types or values in \"Core._info\" "
 "..."
 
-#: 21cfd14337664d31906d17620d3dbb7d oceanai.modules.core.core.Core._info_true:1
+#: 2fdc3fe9056940e28301868d379ffae8 oceanai.modules.core.core.Core._info_true:1
 #: of
 msgid "Положительная информация"
 msgstr "True information"
 
-#: 4a9231bdb2014852b2fb22e7edebe68c
+#: 9aa686241c44401bb8ea9345e27886f3
 #: oceanai.modules.core.core.Core._info_true:20 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -1450,7 +1646,7 @@ msgstr ""
 "    last = True, out = True\n"
 ")"
 
-#: 6a6ae7ebbb1c4125a29c241fc44bed17
+#: 0aac67e18024400c85c0486dc6f005f3
 #: oceanai.modules.core.core.Core._info_true:41 of
 msgid ""
 "Информационное положительное сообщение 1\n"
@@ -1461,7 +1657,7 @@ msgstr ""
 "\n"
 "Informational true message 2"
 
-#: abe6469504ea475398a94f7c1d10dc26
+#: 8caf6f37f0e944c49c8d56479d22514b
 #: oceanai.modules.core.core.Core._info_true:51 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -1482,7 +1678,7 @@ msgstr ""
 "    last = False, out = True\n"
 ")"
 
-#: 18c06fc62d774e6f8f4b0b3dfbef6411
+#: 13706dfc699547a3997d4cb35f499dca
 #: oceanai.modules.core.core.Core._info_true:64 of
 msgid ""
 "[2022-10-22 16:46:56] Неверные типы или значения аргументов в "
@@ -1491,13 +1687,13 @@ msgstr ""
 "[2022-10-22 16:46:56] Invalid argument types or values in "
 "\"Core._info_true\" ..."
 
-#: d5a28c0d8b9641e6b456cf7e6d83f63f
+#: 8bfb920fb2cf44b193bc912b61380e65 d576bca321f543859a30910639f7af6b
 #: oceanai.modules.core.core.Core._info_wrapper:1
 #: oceanai.modules.core.core.Core._info_wrapper:9 of
 msgid "Обернутое информационное сообщение"
 msgstr "Wrapped announcement"
 
-#: ede96603e3664414be59955918699756
+#: 29c4e8bb0ae24863a4f5efa09d5bd736
 #: oceanai.modules.core.core.Core._info_wrapper:17 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -1516,7 +1712,7 @@ msgstr ""
 "core.color_info_ = '#0B45B9'\n"
 "print(core._info_wrapper('Wrapped announcement 2'))"
 
-#: 9883f87f3ed74cd48f3204c561853991
+#: ca2b4d0ef30c48bba0a37866f62cc072
 #: oceanai.modules.core.core.Core._info_wrapper:29 of
 msgid ""
 "<span style=\"color:#1776D2\">Обернутое информационное сообщение 1</span>"
@@ -1526,22 +1722,22 @@ msgstr ""
 "<span style=\"color:#1776D2\">Wrapped announcement 1</span>\n"
 "<span style=\"color:#0B45B9\">Wrapped announcement 2</span>"
 
-#: 9a9530a44dbe4f6aac3e3f5444d8e7fa oceanai.modules.core.core.Core._inv_args:1
+#: 8bf8620a4ea64fffb8f0b157f9e4a8bb oceanai.modules.core.core.Core._inv_args:1
 #: of
 msgid "Сообщение об указании неверных типов аргументов"
 msgstr "Message about specifying invalid argument types"
 
-#: 0403bc650bd0444895f81138981416ba oceanai.modules.core.core.Core._inv_args:6
+#: 210dbd5b23644268a817e4bbac5bf8a7 oceanai.modules.core.core.Core._inv_args:6
 #: of
 msgid "Имя класса"
 msgstr "Class name"
 
-#: da71b8fa680c4d35b2529e179600864b oceanai.modules.core.core.Core._inv_args:8
+#: 753df763d65442a0bdd9b4f4c5b604ad oceanai.modules.core.core.Core._inv_args:8
 #: of
 msgid "Имя метода/функции"
 msgstr "Function method/name"
 
-#: 18ac4c6874684f5997544ce66f1be7c0 oceanai.modules.core.core.Core._inv_args:22
+#: bafad32b1a8e473d850fae6968269b08 oceanai.modules.core.core.Core._inv_args:22
 #: of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -1560,7 +1756,7 @@ msgstr ""
 "    last = False, out = True\n"
 ")"
 
-#: eb9aabf1532e44efaef8f3a28b4c3bd0 oceanai.modules.core.core.Core._inv_args:34
+#: f04b8d03fa544fc9a4fd3491129d7b83 oceanai.modules.core.core.Core._inv_args:34
 #: of
 msgid ""
 "[2022-10-14 11:58:04] Неверные типы или значения аргументов в "
@@ -1569,7 +1765,7 @@ msgstr ""
 "[2022-10-14 11:58:04] Invalid argument types or values in \"Core._info\" "
 "..."
 
-#: 0fba5e410ce24a4d9d5de515ce033115 oceanai.modules.core.core.Core._inv_args:42
+#: 260b48ba5a2149ffa637a9eefc5a8307 oceanai.modules.core.core.Core._inv_args:42
 #: of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -1582,7 +1778,7 @@ msgstr ""
 "core = Core(lang = 'en')\n"
 "core._inv_args(1, '', last = False, out = True)"
 
-#: ca5e7f945c914affa41bc83e4a9cf31b oceanai.modules.core.core.Core._inv_args:51
+#: 2ffd02f7576c40a5bec85a8699a970db oceanai.modules.core.core.Core._inv_args:51
 #: of
 msgid ""
 "[2022-10-14 11:58:04] Неверные типы или значения аргументов в "
@@ -1591,12 +1787,12 @@ msgstr ""
 "[2022-10-14 11:58:04] Invalid argument types or values in "
 "\"Core._inv_args\" ..."
 
-#: 29b79f22ddda4bfaa8365f3877b3f3d4
+#: 65d88a0f472b47d597b862075a9f3dbb
 #: oceanai.modules.core.core.Core._metadata_info:1 of
 msgid "Информация об библиотеке"
 msgstr "Library Information"
 
-#: fe37ac8260f34f9ea5c20f663dd23d58
+#: 569fbdc2842646389a43d7ce59fa5987
 #: oceanai.modules.core.core.Core._metadata_info:17 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -1609,7 +1805,7 @@ msgstr ""
 "core = Core(lang = 'en')\n"
 "core._metadata_info(last = False, out = True)"
 
-#: 5a8b931639924bd4a84ea9e987caf126
+#: 956f4d42fa564a208c85b8876a149a50 dfbfb081d39f4073b1cdef5b4f3ddd61
 #: oceanai.modules.core.core.Core._metadata_info:26
 #: oceanai.modules.core.core.Core._metadata_info:53 of
 msgid ""
@@ -1624,7 +1820,7 @@ msgid ""
 "    Версия: 1.0.0-a7\n"
 "    Лицензия: GPLv3"
 msgstr ""
-"[2022-10-14 13:05:54] oceanai - personal traits:\n"
+"[2022-10-14 13:05:54] oceanai - personality traits:\n"
 "    Authors:\n"
 "        Elena Ryumina [ryumina_ev@mail.ru]\n"
 "        Dmitry Ryumin [dl_03.03.1991@mail.ru]\n"
@@ -1635,12 +1831,12 @@ msgstr ""
 "    Version: 1.0.0-a7\n"
 "    License: GPLv3"
 
-#: 6bb1d6c971ae409aa4ad98e4e17fbd60
+#: c989afa67d134eb1b8f6a3cede1b1743
 #: oceanai.modules.core.core.Core._metadata_info:42 of
 msgid ":bdg-warning:`Лучше так не делать` :bdg-light:`-- 1 --`"
 msgstr ":bdg-warning:`Better not to do that` :bdg-light:`-- 1 --`"
 
-#: f9b4a62104404615b1e6c9208ba45060
+#: cbe5ada33d97462e8b17b2e15f0489df
 #: oceanai.modules.core.core.Core._metadata_info:44 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -1653,12 +1849,12 @@ msgstr ""
 "core = Core(lang = 'en')\n"
 "core._metadata_info(last = 1, out = [])"
 
-#: 60f5af76b6204ccda87c920ce0eeb469
+#: 4e660b13d0444b7a93a739f0d5c33fc0
 #: oceanai.modules.core.core.Core._notebook_display_markdown:1 of
 msgid "Отображение сообщения"
 msgstr "Message display"
 
-#: 98b7cd4d237b40f0aab892cd51f574fa
+#: 203c11ad856c4d848629b67cfcdf62da
 #: oceanai.modules.core.core.Core._notebook_display_markdown:20 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -1671,7 +1867,7 @@ msgstr ""
 "core = Core(lang = 'en')\n"
 "core._notebook_display_markdown('Message')"
 
-#: 623ba09634e548f2a406eab5e22dfc63
+#: 33fd5431a7e94dbbbc5206ea4ef806b0
 #: oceanai.modules.core.core.Core._notebook_display_markdown:37 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -1684,7 +1880,7 @@ msgstr ""
 "core = Core(lang = 'en')\n"
 "core._notebook_display_markdown(1)"
 
-#: c34afc3414e34899906f39a8e3aaafde
+#: d153c18a13194cf9beb27ff7f8d3f945
 #: oceanai.modules.core.core.Core._notebook_display_markdown:46 of
 msgid ""
 "[2022-10-14 15:52:03] Неверные типы или значения аргументов в "
@@ -1693,12 +1889,12 @@ msgstr ""
 "[2022-10-14 15:52:03] Invalid argument types or values in "
 "\"Core._notebook_display_markdown\" ..."
 
-#: d0fc1a979cc24e09b437ff418e1809a8
+#: ff3d45d92b99403ebf073d9836172c2a
 #: oceanai.modules.core.core.Core._other_error:1 of
 msgid "Сообщение об прочей ошибке"
 msgstr "Other error message"
 
-#: fc460ca0c99946afa7b790dffcc3f8ec
+#: 6bb957a2bfa44f7d999e97179b30443a
 #: oceanai.modules.core.core.Core._other_error:20 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -1745,7 +1941,7 @@ msgstr ""
 "        last = True, out = True\n"
 "    )"
 
-#: a960153248e340f09b0c7f119a665ad1
+#: 73b431cb64ca42ab8d27eac962147283
 #: oceanai.modules.core.core.Core._other_error:47 of
 msgid ""
 "[2022-10-14 16:25:11] Сообщение об ошибке 1\n"
@@ -1784,7 +1980,7 @@ msgstr ""
 "    Method: <cell line: 16>\n"
 "    Error type: Exception"
 
-#: 4be979aad5f6437aa929ec57888da41e
+#: 2b14ebb0b1b04263ae2697e3a06a21a2
 #: oceanai.modules.core.core.Core._other_error:67 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -1809,7 +2005,7 @@ msgstr ""
 "        last = False, out = True\n"
 "    )"
 
-#: 7e1fa4698c6d42839c183d67c91859b6
+#: 3a7b4cccec354c89a149f9730cb25244
 #: oceanai.modules.core.core.Core._other_error:83 of
 msgid ""
 "[2022-10-14 16:25:11] Неверные типы или значения аргументов в "
@@ -1818,56 +2014,63 @@ msgstr ""
 "[2022-10-14 16:25:11] Invalid argument types or values in "
 "\"Core._other_error\" ..."
 
-#: 5e1d8389eefc40f4a372be0f33498895
+#: 7fb09ec4c19b477d898501143f27ac16
 #: oceanai.modules.core.core.Core._priority_calculation:1 of
 msgid "Ранжирование предпочтений"
-msgstr ""
+msgstr "Ranking preferences"
 
-#: 0180497dae2648c7a924b3c3f3937918
-#: oceanai.modules.core.core.Core._priority_calculation:6 of
-msgid "**DataFrame** c коэффициентами корреляции"
-msgstr ""
-
-#: df109c5c6a254fad9a0f68ca9f98ab15
+#: e96643be99444382917a70a1212f2a8d
 #: oceanai.modules.core.core.Core._priority_calculation:8 of
 msgid "Столбец с названиями персональных качеств личности человека"
-msgstr "Column with the names of personal qualities of a person's personality"
+msgstr "Column with the names of personality traits"
 
-#: 5fd7f15212214019b66dd83851ed5b14
-#: oceanai.modules.core.core.Core._priority_calculation:10 of
+#: 7f44085ccfeb476d86dc42c6aea769aa 81f640f8a2fd4feabbe3b2be1806b923
+#: oceanai.modules.core.core.Core._priority_calculation:10
+#: oceanai.modules.core.core.Core._priority_skill_calculation:8 of
 msgid ""
 "Порог для оценок полярности качеств (например, интроверт < 0.55, "
 "экстраверт > 0.55)"
 msgstr ""
+"Threshold for scores of traits polarity (e.g., introvert < 0.55, extrovert > 0.55)"
 
-#: d0a1b73c5d224386a8e3d93042fcc705
+#: 4c0b4fa5ba664a68a84a270c9bfe1153
 #: oceanai.modules.core.core.Core._priority_calculation:12 of
 msgid "Количество приоритетных предпочтений"
-msgstr ""
+msgstr "Number of priority preferences"
 
-#: d9a2fab82fb74347b0f8c479205f5f76
+#: 53aefc36191141b2b983f5c939c25216
 #: oceanai.modules.core.core.Core._priority_calculation:14 of
 msgid "Количество наиболее важных персональных качеств личности человека"
-msgstr ""
+msgstr "Number of the most important personality traits"
 
-#: 584672828986481c8469c139460bd24a
+#: a448232272354c08beb9f938d3a75e1b
 #: oceanai.modules.core.core.Core._priority_calculation:19 of
 msgid "**DataFrame** c ранжированными предпочтениями"
 msgstr "**DataFrame** with ranked priority"
 
-#: fbabd62200d1436795f9e6ead02c6727
+#: db9f981ce738408d90270ee13a5c80eb
+#: oceanai.modules.core.core.Core._priority_skill_calculation:1 of
+msgid "Ранжирование кандидатов по профессиональным навыкам"
+msgstr "Ranking candidates by professional skills"
+
+#: 5adcc7dd6b8b44a0be7775eecbff7d2f
+#: oceanai.modules.core.core.Core._priority_skill_calculation:13 of
+msgid "**DataFrame** c ранжированными кандидатами"
+msgstr "**DataFrame** with ranked candidates"
+
+#: 6c084a41f343426fb83401ae7b5c4d4e a5fec97a708242e591cba0585e3149ae
 #: oceanai.modules.core.core.Core._progressbar:1
 #: oceanai.modules.core.core.Core._progressbar:8 of
 msgid "Индикатор выполнения"
 msgstr "Progressbar"
 
-#: 85087c816ca44ed98b6b08c2ce1405b0
+#: ccc355e1c17d407dafbbe52e13601212 da773223c5b34351abc4be9cc60bef82
 #: oceanai.modules.core.core.Core._progressbar:10
 #: oceanai.modules.core.core.Core._progressbar_union_predictions:14 of
 msgid "Очистка области вывода"
 msgstr "Clearing the output area"
 
-#: 902d739a8fe5469d88fd869d1eab7b40
+#: 3100d59bdbd44cb2910135024b2727a5
 #: oceanai.modules.core.core.Core._progressbar:24 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -1894,7 +2097,7 @@ msgstr ""
 "        last = False, out = True\n"
 "    )"
 
-#: b0bff19e6cb948e69f81ac2967bef536
+#: e9b5cfa48c834534b696403cb7266973
 #: oceanai.modules.core.core.Core._progressbar:41 of
 msgid ""
 "[2022-10-14 16:52:20] Цикл действий\n"
@@ -1921,7 +2124,7 @@ msgstr ""
 "\n"
 "    Iteration 3"
 
-#: a275c535e7d94188afa3baf9e08439d3
+#: bf8de89da0554fe5b0f631a265a37ffb
 #: oceanai.modules.core.core.Core._progressbar:59 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -1948,7 +2151,7 @@ msgstr ""
 "        last = True, out = True\n"
 "    )"
 
-#: b7116f39ef73450aacfa6c46246555d7
+#: a3937e9a684c4604a9c80e2669cbb4cb
 #: oceanai.modules.core.core.Core._progressbar:76 of
 msgid ""
 "[2022-10-14 16:52:20] Цикл действий\n"
@@ -1959,7 +2162,7 @@ msgstr ""
 "\n"
 "    Iteration 3"
 
-#: 602aed51367249b4a138e5b15b4217ac
+#: 6004a08a8cdc434dbe9c663af761e39d
 #: oceanai.modules.core.core.Core._progressbar:86 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -1986,7 +2189,7 @@ msgstr ""
 "        last = False, out = True\n"
 "    )"
 
-#: 97186e8511ab48fca8dbf41ab262eaa5
+#: 6713f9d02e224e7781a3f5f0a76138d0
 #: oceanai.modules.core.core.Core._progressbar:103 of
 msgid ""
 "[2022-10-14 16:52:38] Неверные типы или значения аргументов в "
@@ -1995,27 +2198,27 @@ msgstr ""
 "[2022-10-14 16:52:38] Invalid argument types or values in "
 "\"Core._progressbar\" ..."
 
-#: a5e713f33a1c4265999a80c1c8771c5c
+#: 7ff12014d5c94bdf984836f56dce547e
 #: oceanai.modules.core.core.Core._progressbar_union_predictions:1 of
 msgid "Индикатор выполнения получения прогнозов по аудио"
-msgstr "Progress bar for getting audio predictions"
+msgstr "Progressbar for getting scores by audio"
 
-#: 243a498daf74419399217e19336af662
+#: 9859e8cf457144489059b345fedd5f29
 #: oceanai.modules.core.core.Core._progressbar_union_predictions:8 of
 msgid "Номер видеофайла"
 msgstr "Number video file"
 
-#: 002c5cff652143e3b8e94f3bb216ddc6
+#: 420dfa1d2905416189b7b81e54a15758
 #: oceanai.modules.core.core.Core._progressbar_union_predictions:10 of
 msgid "Локальный путь"
 msgstr "Local path"
 
-#: 5452c06cc17d47e7899653b6f2dc4944
+#: b3bc0e22a71b44e3abc74450eb5c0d05
 #: oceanai.modules.core.core.Core._progressbar_union_predictions:12 of
 msgid "Количество видеофайлов"
 msgstr "Number of video files"
 
-#: 881ea2bb041d4bdf82a5c677b3862ece
+#: 07256fd2701f49a5adad71aa7a90c283
 #: oceanai.modules.core.core.Core._progressbar_union_predictions:28 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2050,7 +2253,7 @@ msgstr ""
 "        last = False, out = True\n"
 "    )"
 
-#: 2c50f88d07b8425687b76eff217c2fce
+#: e97b1aeb1a6c45f5a8a75c20bd7c8f22
 #: oceanai.modules.core.core.Core._progressbar_union_predictions:49 of
 msgid ""
 "[2022-10-20 16:51:49] Цикл действий\n"
@@ -2077,7 +2280,7 @@ msgstr ""
 "\n"
 "    3 из 3 (100.0%) ... The path to the file ..."
 
-#: 138f9d1e6f0748bca5e2a80ef8c47675
+#: fa409ba1ec224e6fb92e26b18873f9f7
 #: oceanai.modules.core.core.Core._progressbar_union_predictions:67 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2112,7 +2315,7 @@ msgstr ""
 "        last = True, out = True\n"
 "    )"
 
-#: e3b9aff5fe774377874f419f5c5d3b01
+#: 9ab2dc32ca2749b686a9456b45b1119f
 #: oceanai.modules.core.core.Core._progressbar_union_predictions:88 of
 msgid ""
 "[2022-10-20 16:51:55] Цикл действий\n"
@@ -2123,7 +2326,7 @@ msgstr ""
 "\n"
 "    3 из 3 (100.0%) ... The path to the file ..."
 
-#: 78805d10ec3640d687c09913ded1b67a
+#: 0065078f8db64ce1b86614ffe10bb290
 #: oceanai.modules.core.core.Core._progressbar_union_predictions:98 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2158,7 +2361,7 @@ msgstr ""
 "        last = False, out = True\n"
 "    )"
 
-#: 23e150d33f2346e4aaa1a59fa593b41e
+#: c97ec31dfd9e4cbc991e36b8cc811d48
 #: oceanai.modules.core.core.Core._progressbar_union_predictions:119 of
 msgid ""
 "[2022-10-20 16:55:15] Неверные типы или значения аргументов в "
@@ -2167,15 +2370,16 @@ msgstr ""
 "[2022-10-20 16:55:15] Invalid argument types or values in "
 "\"Audio._progressbar_union_predictions\" ..."
 
-#: b4de1effd4774c3ab515325fbc285857 oceanai.modules.core.core.Core._r_end:1 of
+#: 56f7707e450640b69354f6f69f5dfe96 oceanai.modules.core.core.Core._r_end:1 of
 msgid "Конец отсчета времени выполнения"
 msgstr "End of runtime countdown"
 
-#: 3687cef5b2eb4795b330b717fcdc3b99 oceanai.modules.core.core.Core._r_end:6 of
+#: 7cef3088596842b391d6ee0c9d3c1935 oceanai.modules.core.core.Core._r_end:6 of
 msgid "Работает в связке с ``_r_start()``"
 msgstr "Works in conjunction with ``_r_start()``"
 
-#: ebfd7cc6a8d14eb894759f189cb4fdc4 oceanai.modules.core.core.Core._r_end:19
+#: 2d72a33db4154a9eb6c211ed92d1289c e34b59c586ee4635aff5845791760f1c
+#: oceanai.modules.core.core.Core._r_end:19
 #: oceanai.modules.core.core.Core._r_start:14 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2194,12 +2398,14 @@ msgstr ""
 "for cnt in range(0, 10000000): res = cnt * 2\n"
 "core._r_end()"
 
-#: 13dfa01531f64d25a16ef927505d144e oceanai.modules.core.core.Core._r_end:31
+#: 3308dec225c645ebb75654bc4a63ee8c c572fcec89ec4b36a92ca1499de06516
+#: oceanai.modules.core.core.Core._r_end:31
 #: oceanai.modules.core.core.Core._r_start:26 of
 msgid "--- Время выполнения: 0.819 сек. ---"
 msgstr "--- Runtime: 0.819 sec. ---"
 
-#: 5771262685164932995b4794a36da986 oceanai.modules.core.core.Core._r_end:39
+#: 4330a6e3043645f8a28f73b0b9091db4 d4820014ffe046abb9f76891248ef7cc
+#: oceanai.modules.core.core.Core._r_end:39
 #: oceanai.modules.core.core.Core._r_start:34 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2216,37 +2422,38 @@ msgstr ""
 "for cnt in range(0, 10000000): res = cnt * 2\n"
 "core._r_end()"
 
-#: 45cb692f67504319a305176596bb8d78 oceanai.modules.core.core.Core._r_end:50
+#: 709954de0064480f815c59f8f1d08a3e e8ae2551dce444c897826c5fbbccc8e9
+#: oceanai.modules.core.core.Core._r_end:50
 #: oceanai.modules.core.core.Core._r_start:45 of
 msgid "--- Время выполнения: 1665756222.704 сек. ---"
 msgstr "--- Runtime: 1665756222.704 сек. ---"
 
-#: 15eb93819d934185b8907fce5f0e452c oceanai.modules.core.core.Core._r_start:1
+#: 6f29a25972ae4c6c88778c71ac4d57fa oceanai.modules.core.core.Core._r_start:1
 #: of
 msgid "Начало отсчета времени выполнения"
 msgstr "Start time countdown"
 
-#: 03092616f8264c2ca19a15e93abca7c8 oceanai.modules.core.core.Core._r_start:6
+#: d8da4eec415645c29d8691c1fb2a8292 oceanai.modules.core.core.Core._r_start:6
 #: of
 msgid "Работает в связке с ``_r_end()``"
 msgstr "Works in conjunction with ``_r_end()``"
 
-#: a002c2bc4b484b1fbf0ff6ee9647d65e
+#: d19af3efa4664ee2af8d28fed58c829f
 #: oceanai.modules.core.core.Core._round_math:1 of
 msgid "Округление чисел по математическому закону"
 msgstr "Rounding numbers according to mathematical law"
 
-#: 2b0d227a174443c38b8c3c392ab848ea
+#: 9cdde23a29fd4bdc8a33520446a5d435
 #: oceanai.modules.core.core.Core._round_math:6 of
 msgid "Число для округления"
 msgstr "Number to round"
 
-#: 9a1e1f1f8e4942119f2c1596f8c7004f
+#: 414efa33b5fa43aa9d26cebc12abf2d7
 #: oceanai.modules.core.core.Core._round_math:11 of
 msgid "Округленное число если ошибок не выявлено, в обратном случае **False**"
 msgstr "Rounded number if no errors found, **False** otherwise"
 
-#: 7368eb64298a4092a5479d76737fb744
+#: 5f1c2fdf0b484fda851827fdce74bbe5
 #: oceanai.modules.core.core.Core._round_math:19 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2256,12 +2463,12 @@ msgid ""
 "core._round_math(4.5)"
 msgstr ""
 
-#: 5d56b61a6cf1419c8b876240f612338c
+#: 823593b09147480b8e1e4dbe8df5c0c8
 #: oceanai.modules.core.core.Core._round_math:29 of
 msgid "5"
 msgstr ""
 
-#: 9aead59eb107427388e9566942636a83
+#: fba78b5cb7974327bde06becdf031491
 #: oceanai.modules.core.core.Core._round_math:37 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2271,12 +2478,12 @@ msgid ""
 "core._round_math(-2.5)"
 msgstr ""
 
-#: 7b93ae152a684295a2182f3560fcc8d2
+#: b5e52916be1e45c6ae8874de01968d6f
 #: oceanai.modules.core.core.Core._round_math:47 of
 msgid "-3"
 msgstr ""
 
-#: 851c36caf89f48a5bc49efcde528807e
+#: 45bba511683247ca884b42b85969535b
 #: oceanai.modules.core.core.Core._round_math:55 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2291,7 +2498,7 @@ msgstr ""
 "\n"
 "core._round_math('')"
 
-#: 55578ebf5db842d2b415aa44e5b6a6ce
+#: 125a5c49e46245cea4c5c0a804a3db94
 #: oceanai.modules.core.core.Core._round_math:66 of
 msgid ""
 "[2022-11-03 15:52:30] Неверные типы или значения аргументов в "
@@ -2304,27 +2511,27 @@ msgstr ""
 "\n"
 "False"
 
-#: dc9a2adb9caa49d58557801c4eaa0bfc oceanai.modules.core.core.Core._save_logs:1
+#: 77af886e459946608f2e4c49d2dbec10 oceanai.modules.core.core.Core._save_logs:1
 #: of
 msgid "Сохранение LOG файла"
 msgstr "Saving the LOG file"
 
-#: 78bbefc42bb746b28d51303d07dad67d oceanai.modules.core.core.Core._save_logs:6
+#: 4942728e3ba543b0a6fa3fd461e7f3c0 oceanai.modules.core.core.Core._save_logs:6
 #: of
 msgid "DataFrame который будет сохранен в LOG файл"
 msgstr "DataFrame to be saved to LOG file"
 
-#: bd428b356446411dba1debf039d80b5a oceanai.modules.core.core.Core._save_logs:8
+#: f14b7b1d2f3040efa922ede358263fa1 oceanai.modules.core.core.Core._save_logs:8
 #: of
 msgid "Имя LOG файла"
 msgstr "LOG filename"
 
-#: c6b1665dc6f64455b3f752cd9f23d994
+#: c783371572834054aca559eb5be644f6
 #: oceanai.modules.core.core.Core._save_logs:13 of
 msgid "**True** если LOG файл сохранен, в обратном случае **False**"
 msgstr "**True** if the LOG file is saved, otherwise **False**"
 
-#: 0d3743bf744249bea4646edad96c0324
+#: ed6218ecaa6e466d8cae2fd3f80c9017
 #: oceanai.modules.core.core.Core._save_logs:21 of
 msgid ""
 "import pandas as pd\n"
@@ -2357,18 +2564,45 @@ msgstr ""
 "    df = df, name = 'test', out = True\n"
 ")"
 
-#: cc19ff2b413842598b325c1369b7846f
+#: 7659a46713e74bc1a39e03ec1961da8e
+#: oceanai.modules.core.core.Core._search_file:1 of
+msgid "Поиск файла"
+msgstr "File Search"
+
+#: 5f4139f70bc74faab0f7beff55f2e958
+#: oceanai.modules.core.core.Core._search_file:8 of
+msgid "Расширение файла"
+msgstr "File extension"
+
+#: 437e80a9d4704f63803442c99ff6b7a1
+#: oceanai.modules.core.core.Core._search_file:10 of
+msgid "Создание файла в случае его отсутствия"
+msgstr "Creating a file in case of its absence"
+
+#: b1fdc4399fb54ae2a43a8ffdd23212c1
+#: oceanai.modules.core.core.Core._search_file:12 of
+msgid "Печатать процесс выполнения"
+msgstr "Print the execution process"
+
+#: f6459cb2f5de4822a3d4c9a2661f29cf
+#: oceanai.modules.core.core.Core._search_file:15 of
+msgid "**True** если файл найден, в обратном случае **False**"
+msgstr "**True** if the file is found, otherwise **False**"
+
+#: 073e9b2a6687402b9325271631274bba
 #: oceanai.modules.core.core.Core._stat_acoustic_features:1 of
 msgid "Сообщение со статистикой извлеченных признаков из акустического сигнала"
 msgstr "Message with statistics of extracted features from an acoustic signal"
 
-#: 2cf382d5d6df4b9e8b05203a080de19b
+#: 5b8ebf2861fc4a778d007c08743cfd14 a3c3de8cf10d4c12aebd3d007f951e48
+#: eeeda754872048c6ae2ae59231cd3db9
 #: oceanai.modules.core.core.Core._stat_acoustic_features:10
+#: oceanai.modules.core.core.Core._stat_text_features:10
 #: oceanai.modules.core.core.Core._stat_visual_features:10 of
 msgid "Дополнительные именованные аргументы"
 msgstr "Additional named arguments"
 
-#: e6a0b954c4ef4229a89f50d53796b3e3
+#: af827079b14f4cb1b74cee307db8f3ca
 #: oceanai.modules.core.core.Core._stat_acoustic_features:20 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2404,7 +2638,7 @@ msgstr ""
 "    shape_melspectrogram_features = [224, 224, 3],\n"
 ")"
 
-#: fab677a8333d48d2ac81be2249ab95c9
+#: 88f26e6980e5489aba0f8f084bbffb1d
 #: oceanai.modules.core.core.Core._stat_acoustic_features:41 of
 msgid ""
 "[2022-10-14 17:59:20] Статистика извлеченных признаков из акустического "
@@ -2425,7 +2659,7 @@ msgstr ""
 "    Tensor dimension with log chalk spectrograms of one segment: 224 ✕ "
 "224 ✕ 3"
 
-#: 06e645e0a43f43bfa959c9ccafcdeb5f
+#: d1274629502e4c9c83a705b549e88575
 #: oceanai.modules.core.core.Core._stat_acoustic_features:55 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2453,7 +2687,7 @@ msgstr ""
 "    last = False, out = True\n"
 ")"
 
-#: 3b32dbe129734435a8d412e14bec5e1e
+#: dd8418781bf34da492b5eabd5c980059
 #: oceanai.modules.core.core.Core._stat_acoustic_features:72 of
 msgid ""
 "[2022-10-14 17:59:21] Неверные типы или значения аргументов в "
@@ -2462,12 +2696,17 @@ msgstr ""
 "[2022-10-14 17:59:21] Invalid argument types or values in "
 "\"Core._stat_acoustic_features\" ..."
 
-#: a4c52b4e9985401582bb2110105d14c5
+#: 80ea1c881f394cd3a030f0ee92908879
+#: oceanai.modules.core.core.Core._stat_text_features:1 of
+msgid "Сообщение c статистикой извлеченных признаков из текста"
+msgstr "Message with statistics of extracted features from a text"
+
+#: 75289b98c2b4474b869094c35225ba95
 #: oceanai.modules.core.core.Core._stat_visual_features:1 of
 msgid "Сообщение c статистикой извлеченных признаков из визуального сигнала"
 msgstr "Message with statistics of extracted features from a visual signal"
 
-#: 6d4bc3e101b1465ca8c7a72d769d5763
+#: a6e7c55e546b4b62b5b0257747ff55d9
 #: oceanai.modules.core.core.Core._stat_visual_features:20 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2507,7 +2746,7 @@ msgstr ""
 "    fps_after = 10\n"
 ")"
 
-#: c86e45733f3f4187a99a803d3097458a
+#: 2b4a1ab75b684e34af4cd996ab389325
 #: oceanai.modules.core.core.Core._stat_visual_features:43 of
 msgid ""
 "[2022-11-03 16:18:40] Статистика извлеченных признаков из визуального "
@@ -2530,7 +2769,7 @@ msgstr ""
 " ✕ 512\n"
 "    FPS down: with 30 to 10"
 
-#: 75c33c2b97374d0fa163361b8b75f145
+#: e6c08bf543694836b9342632f19d77a3
 #: oceanai.modules.core.core.Core._stat_visual_features:58 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2558,7 +2797,7 @@ msgstr ""
 "    last = False, out = True\n"
 ")"
 
-#: 3894a506240f43dc8e5f6119da032973
+#: c96e499e212a48d3b2f5134c090c2bdb
 #: oceanai.modules.core.core.Core._stat_visual_features:75 of
 msgid ""
 "[2022-11-03 16:19:35] Неверные типы или значения аргументов в "
@@ -2567,17 +2806,17 @@ msgstr ""
 "[2022-11-03 16:19:35] Invalid argument types or values in "
 "\"Core._stat_visual_features\" ..."
 
-#: 3232cc8cbd9e4de3b925935805ec4451 oceanai.modules.core.core.Core._traceback:1
+#: a49ddb75c3c74a0aba0ec0f7931df323 oceanai.modules.core.core.Core._traceback:1
 #: of
 msgid "Трассировка исключений"
 msgstr "Exception trace"
 
-#: 5541e7ed8fab4eaf948e8991fece6514 oceanai.modules.core.core.Core._traceback:6
+#: fc642b17b2eb471e8e7d6c3a0c6212db oceanai.modules.core.core.Core._traceback:6
 #: of
 msgid "Словарь с описанием исключения"
 msgstr "Dictionary describing the exception"
 
-#: 6edb77a9b43a48f5af4f88ac5ba213e0
+#: bb7fe01be16d4255a4bf83dd47956235
 #: oceanai.modules.core.core.Core._traceback:14 of
 msgid ""
 "import pprint\n"
@@ -2591,7 +2830,7 @@ msgid ""
 "    pp.pprint(core._traceback())"
 msgstr ""
 
-#: b5f4086a348e4d2eaa79c06bf681f8e1
+#: 1fc0ccf387e64cdf888904679aca44d3
 #: oceanai.modules.core.core.Core._traceback:28 of
 msgid ""
 "{\n"
@@ -2604,17 +2843,17 @@ msgid ""
 "}"
 msgstr ""
 
-#: 250d93e037ca4d579c41c20bab2de2b3
+#: 918e3b50e23f4f44b88bea7c000c3963
 #: oceanai.modules.core.core.Core.df_accuracy_:1 of
 msgid "Получение DataFrame с результатами вычисления точности"
 msgstr "Getting a DataFrame with precision calculation results"
 
-#: 0180497dae2648c7a924b3c3f3937918
+#: 84d256319d1c439c86544bbb7ce664b1
 #: oceanai.modules.core.core.Core.df_accuracy_:3 of
 msgid "**DataFrame** с результатами вычисления точности"
 msgstr "**DataFrame** with precision calculation results"
 
-#: 809fc749264745438da2381a27e78069
+#: ef24e9aa6cbf4e7bb86fb9042ace48cf
 #: oceanai.modules.core.core.Core.df_accuracy_:10 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2623,7 +2862,9 @@ msgid ""
 "len(core.df_accuracy_)"
 msgstr ""
 
-#: 671334671fcc4ec8a3430f9d7c9e0f48
+#: 085f9f2b6e06437c93d762c6265cc75e 27901ca4e723408284461899f6378989
+#: 28688da6f31146f5a59024b95e1de0c5 8167e1848b42410983742f227cbf6185
+#: c430d93eb6f546febee8deb3fa54c8b9 cfcb4c70c4f54e8c86b322903de322c1
 #: oceanai.modules.core.core.Core.df_accuracy_:19
 #: oceanai.modules.core.core.Core.df_files_:19
 #: oceanai.modules.core.core.Core.df_files_priority_:19
@@ -2633,18 +2874,22 @@ msgstr ""
 msgid "0"
 msgstr ""
 
-#: 72b519863f5c4794b7ddc4b8274e0d9c oceanai.modules.core.core.Core.df_files_:1
+#: e1fceb44940a4a86b8e18236019af8f5 oceanai.modules.core.core.Core.df_files_:1
 #: of
 msgid "Получение DataFrame c данными"
 msgstr "Getting a DataFrame with data"
 
-#: 82e59dc6d2324ad0818ff8edccf62be3 oceanai.modules.core.core.Core.df_files_:3
+#: 14bb1e9d824d440a90ba21f078727cd5 45a85b0865fc4112bed77596f007da7e
+#: 85c9954c6eb547428328569239183b44 9cefbee8af0648f89637b2deb3e78cec
+#: d0d86569fb814f64bd4ddbd8205d6591 oceanai.modules.core.core.Core.df_files_:3
+#: oceanai.modules.core.core.Core.df_files_colleague_:3
 #: oceanai.modules.core.core.Core.df_files_priority_:3
+#: oceanai.modules.core.core.Core.df_files_priority_skill_:3
 #: oceanai.modules.core.core.Core.df_files_ranking_:3 of
 msgid "**DataFrame** c данными"
 msgstr "**DataFrame** with data"
 
-#: 4893c5f4bf394c00aabc2b32612b83b0 oceanai.modules.core.core.Core.df_files_:10
+#: 30264dcabb5c4de2b2ebd8375689d45b oceanai.modules.core.core.Core.df_files_:10
 #: of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2653,12 +2898,18 @@ msgid ""
 "len(core.df_files_)"
 msgstr ""
 
-#: 584672828986481c8469c139460bd24a
+#: a8f024ddb35b4b79abd469acc348ed24 ec6d912582bc462e95b7e9a9e5b13e3c
+#: oceanai.modules.core.core.Core.df_files_colleague_:1
+#: oceanai.modules.core.core.Core.df_files_priority_skill_:1 of
+msgid "Получение DataFrame c ранжированными коллегами на основе данных"
+msgstr "Getting a DataFrame with ranked colleagues based on data"
+
+#: 9506a312745f4faa89377ead2143b1f5
 #: oceanai.modules.core.core.Core.df_files_priority_:1 of
 msgid "Получение DataFrame c ранжированными предпочтениями на основе данных"
 msgstr "Getting a DataFrame with ranked priority based on the data"
 
-#: 4893c5f4bf394c00aabc2b32612b83b0
+#: ee4da051d4fc4cb1a1dd37c9ab4e5310
 #: oceanai.modules.core.core.Core.df_files_priority_:10 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2671,12 +2922,12 @@ msgstr ""
 "core = Core(lang = 'en')\n"
 "len(core.df_files_priority_)"
 
-#: 584672828986481c8469c139460bd24a
+#: e25b670117844b65ab3d537299b9734f
 #: oceanai.modules.core.core.Core.df_files_ranking_:1 of
 msgid "Получение DataFrame c ранжированными данными"
 msgstr "Getting a DataFrame with ranked data"
 
-#: 4893c5f4bf394c00aabc2b32612b83b0
+#: e4a2c9b4b8dd43bca8007b459d3a6ad5
 #: oceanai.modules.core.core.Core.df_files_ranking_:10 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2690,17 +2941,17 @@ msgstr ""
 "\n"
 "core._round_math('')"
 
-#: 584672828986481c8469c139460bd24a oceanai.modules.core.core.Core.df_pkgs_:1
+#: f11afab1635741f0bcf6650434f6244a oceanai.modules.core.core.Core.df_pkgs_:1
 #: of
 msgid "Получение DataFrame c версиями установленных библиотек"
 msgstr "Getting a DataFrame with versions of installed libraries"
 
-#: 3b9e521ee8c14ba693c34906f5453230 oceanai.modules.core.core.Core.df_pkgs_:3
+#: 403b643252fa486598b4e1cde91db588 oceanai.modules.core.core.Core.df_pkgs_:3
 #: of
 msgid "**DataFrame** c версиями установленных библиотек"
 msgstr "**DataFrame** with versions of installed libraries"
 
-#: b796a854cc344e37bf22854743533b76 oceanai.modules.core.core.Core.df_pkgs_:10
+#: 7f1737c0164a45b29a570a8a73e8b4f2 oceanai.modules.core.core.Core.df_pkgs_:10
 #: of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2710,7 +2961,7 @@ msgid ""
 "core.df_pkgs_"
 msgstr ""
 
-#: 8631037d129e473c976d1c3f899391fb oceanai.modules.core.core.Core.df_pkgs_:20
+#: a0deff71b14b427b936417861f36ef69 oceanai.modules.core.core.Core.df_pkgs_:20
 #: of
 msgid ""
 "|----|--------------|---------|\n"
@@ -2734,24 +2985,24 @@ msgid ""
 "|----|--------------|---------|"
 msgstr ""
 
-#: 644fdc74d3d042a6b72e32db41f03af6
+#: f0443373a12e4be4b295bb69904b687c
 #: oceanai.modules.core.core.Core.dict_of_accuracy_:1 of
 msgid "Получение словаря для DataFrame с результатами вычисления точности"
 msgstr "Getting a dictionary for a DataFrame with precision results"
 
-#: ce7dc3a9095941fbbfed91617a018ce2
+#: b3243f039b844a30ae3264309c698124
 #: oceanai.modules.core.core.Core.dict_of_accuracy_:3 of
 msgid "На основе данного словаря формируется DataFrame с данными ``df_accuracy_``"
 msgstr ""
 "Based on this dictionary, a DataFrame is formed with the data "
 "``df_accuracy_``"
 
-#: c81ca6edc0b74de5a0798cbf636acb66
+#: e054139cdeb747059bac4eac075a6cc5
 #: oceanai.modules.core.core.Core.dict_of_accuracy_:5 of
 msgid "Словарь для DataFrame с результатами вычисления точности"
 msgstr "Dictionary for DataFrame with precision results"
 
-#: a86070963f424e3b9d1e2aa14db97e8a
+#: c3e40eeb7a954e01a50c7d0739abee7c
 #: oceanai.modules.core.core.Core.dict_of_accuracy_:12 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2760,24 +3011,24 @@ msgid ""
 "len(core.dict_of_accuracy_)"
 msgstr ""
 
-#: 18a62521496d4e0382a8c55ac4051f4c
+#: 0411414c223f4bd3bac419b42bd4317e
 #: oceanai.modules.core.core.Core.dict_of_files_:1 of
 msgid "Получение словаря для DataFrame с данными"
 msgstr "Getting a dictionary for a DataFrame with data"
 
-#: 89bd8a08ff0c49afb7b831bc61979581
+#: 5033e43e0ae74c8c9af81ad853c0fabb
 #: oceanai.modules.core.core.Core.dict_of_files_:3 of
 msgid "На основе данного словаря формируется DataFrame с данными ``df_files_``"
 msgstr ""
 "Based on this dictionary, a DataFrame is formed with the data "
 "``df_files_``"
 
-#: d9158ebedeb743a4b272071515cb2dc6
+#: ad1ab0ae360e41958fdb7dba6d9fc55c
 #: oceanai.modules.core.core.Core.dict_of_files_:5 of
 msgid "Словарь для DataFrame с данными"
 msgstr "Dictionary for DataFrame with data"
 
-#: 85bb3ae6fff541f8986f9a5512fab89e
+#: cc7a9fd38e8d4a8987b0dd53b051baf4
 #: oceanai.modules.core.core.Core.dict_of_files_:12 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2786,12 +3037,12 @@ msgid ""
 "len(core.dict_of_files_)"
 msgstr ""
 
-#: 25f5da5b2e7c44c9b5b43e6c100e2b7f
+#: 935b37dc2d1f44178078c386ce26b60d
 #: oceanai.modules.core.core.Core.is_notebook_:1 of
 msgid "Получение результата определения запуска библиотеки в Jupyter или аналогах"
 msgstr "Getting the result of a library run definition in Jupyter or similar"
 
-#: 2c4a274e50664df39f65cb392999a050
+#: 04f8e15f20d349b190f6f63d4553b65e
 #: oceanai.modules.core.core.Core.is_notebook_:10 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2800,22 +3051,22 @@ msgid ""
 "print(core.is_notebook_)"
 msgstr ""
 
-#: c547ad6d487143dda818a393322ebf9d oceanai.modules.core.core.Core.libs_vers:1
+#: 46a06491a253491f91051f7765b9cbc0 oceanai.modules.core.core.Core.libs_vers:1
 #: of
 msgid "Получение и отображение версий установленных библиотек"
 msgstr "Getting and Displaying Versions of Installed Libraries"
 
-#: 90ad3a82c3094033824f2d44bf3e68eb oceanai.modules.core.core.Core.libs_vers:5
+#: 894828d19446470aa62323ebe50ed54c oceanai.modules.core.core.Core.libs_vers:5
 #: of
 msgid "Подсчет времени выполнения"
 msgstr "Run runtime"
 
-#: 94458abcd17345adb58a47eb7f35c1ee oceanai.modules.core.core.Core.libs_vers:7
+#: 23931fb46ec446f8ad0ec95d600337ce oceanai.modules.core.core.Core.libs_vers:7
 #: of
 msgid "Блокировка выполнения"
 msgstr "Run blocking"
 
-#: 0407437d16d34ad5b0e64629945486ca oceanai.modules.core.core.Core.libs_vers:17
+#: 3f4d12229df541c08f2e11e5fa6702fc oceanai.modules.core.core.Core.libs_vers:17
 #: of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2828,28 +3079,33 @@ msgstr ""
 "core = Core(lang = 'en')\n"
 "core.libs_vers(out = True, runtime = True, run = True)"
 
-#: d3104fdb607c47bea1d86b020cdac6c9 oceanai.modules.core.core.Core.libs_vers:26
+#: 69d26308996640efa692dddafb50a299 oceanai.modules.core.core.Core.libs_vers:26
 #: of
 msgid ""
-"|----|--------------|---------|\n"
-"|    | Package      | Version |\n"
-"|----|--------------|---------|\n"
-"| 1  | TensorFlow   | 2.11.0  |\n"
-"| 2  | Keras        | 2.11.0  |\n"
-"| 3  | OpenCV       | 4.6.0   |\n"
-"| 4  | MediaPipe    | 0.9.0   |\n"
-"| 5  | NumPy        | 1.23.5  |\n"
-"| 6  | SciPy        | 1.9.3   |\n"
-"| 7  | Pandas       | 1.5.2   |\n"
-"| 8  | Scikit-learn | 1.1.3   |\n"
-"| 9  | OpenSmile    | 2.4.1   |\n"
-"| 10 | Librosa      | 0.9.2   |\n"
-"| 11 | AudioRead    | 3.0.0   |\n"
-"| 12 | IPython      | 8.7.0   |\n"
-"| 13 | PyMediaInfo  | 6.0.1   |\n"
-"| 14 | Requests     | 2.28.1  |\n"
-"| 15 | JupyterLab   | 3.5.0   |\n"
-"|----|--------------|---------|\n"
+"|----|---------------|---------|\n"
+"|    | Package       | Version |\n"
+"|----|---------------|---------|\n"
+"| 1  | TensorFlow    | 2.11.0  |\n"
+"| 2  | Keras         | 2.11.0  |\n"
+"| 3  | OpenCV        | 4.6.0   |\n"
+"| 4  | MediaPipe     | 0.9.0   |\n"
+"| 5  | NumPy         | 1.23.5  |\n"
+"| 6  | SciPy         | 1.9.3   |\n"
+"| 7  | Pandas        | 1.5.2   |\n"
+"| 8  | Scikit-learn  | 1.1.3   |\n"
+"| 9  | OpenSmile     | 2.4.1   |\n"
+"| 10 | Librosa       | 0.9.2   |\n"
+"| 11 | AudioRead     | 3.0.0   |\n"
+"| 12 | IPython       | 8.7.0   |\n"
+"| 13 | PyMediaInfo   | 6.0.1   |\n"
+"| 14 | Requests      | 2.28.1  |\n"
+"| 15 | JupyterLab    | 3.5.0   |\n"
+"| 16 | LIWC          | 0.5.0   |\n"
+"| 17 | Transformers  | 4.24.0  |\n"
+"| 18 | Sentencepiece | 0.1.99  |\n"
+"| 19 | Torch         | 1.12.1  |\n"
+"| 20 | Torchaudio    | 0.12.1  |\n"
+"|----|---------------|---------|\n"
 "--- Время выполнения: 0.005 сек. ---"
 msgstr ""
 "|----|--------------|---------|\n"
@@ -2870,10 +3126,15 @@ msgstr ""
 "| 13 | PyMediaInfo  | 6.0.1   |\n"
 "| 14 | Requests     | 2.28.1  |\n"
 "| 15 | JupyterLab   | 3.5.0   |\n"
+"| 16 | LIWC          | 0.5.0   |\n"
+"| 17 | Transformers  | 4.24.0  |\n"
+"| 18 | Sentencepiece | 0.1.99  |\n"
+"| 19 | Torch         | 1.12.1  |\n"
+"| 20 | Torchaudio    | 0.12.1  |\n"
 "|----|--------------|---------|\n"
 "--- Runtime: 0.005 сек. ---"
 
-#: 0fcec6892a4f4395b15bd541f2718b31 oceanai.modules.core.core.Core.libs_vers:53
+#: 5220c778760f4e9bb00e3cd685e5b123 oceanai.modules.core.core.Core.libs_vers:58
 #: of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2886,12 +3147,12 @@ msgstr ""
 "core = Core(lang = 'en')\n"
 "core.libs_vers(out = True, runtime = True, run = False)"
 
-#: 9af280a899394d489c39b143286b9b8e oceanai.modules.core.core.Core.libs_vers:62
+#: 5e850d9bed22486cb04aa28442a238a9 oceanai.modules.core.core.Core.libs_vers:67
 #: of
 msgid "[2022-10-15 18:17:27] Выполнение заблокировано пользователем ..."
 msgstr "[2022-10-15 18:17:27] Run blocked by user ..."
 
-#: bc713d23ef8f46d2955c4d5dfbce9cae oceanai.modules.core.core.Core.libs_vers:70
+#: e94bebbc3d40451c9fe7cf421aa92e02 oceanai.modules.core.core.Core.libs_vers:75
 #: of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2904,7 +3165,7 @@ msgstr ""
 "core = Core(lang = 'en')\n"
 "core.libs_vers(out = True, runtime = True, run = 1)"
 
-#: 4e20b313c7ab499baf1c9ebe308a64c9 oceanai.modules.core.core.Core.libs_vers:79
+#: 8e3d0de625174c159269ed95f306d39b oceanai.modules.core.core.Core.libs_vers:84
 #: of
 msgid ""
 "[2022-10-15 18:18:51] Неверные типы или значения аргументов в "
@@ -2913,17 +3174,17 @@ msgstr ""
 "[2022-10-15 18:18:51] Invalid argument types or values in "
 "\"Core.libs_vers\" ..."
 
-#: 0c6bfccbf9024a3f93146ddedfbc9977 oceanai.modules.core.core.Core.runtime_:1
+#: fcc47896cb454d139f271f92b54d44b3 oceanai.modules.core.core.Core.runtime_:1
 #: of
 msgid "Получение времени выполнения"
 msgstr "Getting runtime"
 
-#: 1ee62fa29d36425db01069fdc5d9c666 oceanai.modules.core.core.Core.runtime_:3
+#: 8a4e1312de3145a5a3fda7d5e39692e6 oceanai.modules.core.core.Core.runtime_:3
 #: of
 msgid "Время выполнения"
 msgstr "Runtime"
 
-#: 2d6a54dd20094502a6788de2ef86453e oceanai.modules.core.core.Core.runtime_:10
+#: ec546c5fa6254572bc971e7edba5e1d4 oceanai.modules.core.core.Core.runtime_:10
 #: of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2937,12 +3198,12 @@ msgid ""
 "print(core.runtime_)"
 msgstr ""
 
-#: 02508439cf0f4898a5ce936e00a5a12b oceanai.modules.core.core.Core.runtime_:24
+#: 6426cd19f2ed41e8acd691e1e15a14c4 oceanai.modules.core.core.Core.runtime_:24
 #: of
 msgid "0.838"
 msgstr ""
 
-#: 63c8565b45784df3b59cb7b45d80fef6 oceanai.modules.core.core.Core.runtime_:32
+#: 5969adfcba1144d08f8c051e5a2fda91 oceanai.modules.core.core.Core.runtime_:32
 #: of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2952,12 +3213,13 @@ msgid ""
 "print(core.runtime_)"
 msgstr ""
 
-#: 496ae506fab14703b0ee4783ee0b06ac oceanai.modules.core.core.Core.runtime_:42
+#: 0b77b097575f456c9c3703c639e4ab51 beabd160246c4efd9e5eda930ae268b6
+#: oceanai.modules.core.core.Core.runtime_:42
 #: oceanai.modules.core.core.Core.runtime_:63 of
 msgid "-1"
 msgstr ""
 
-#: 1249059e540d45cd9f03322137bf73e7 oceanai.modules.core.core.Core.runtime_:50
+#: cef233791a28497090494b5afd0cac10 oceanai.modules.core.core.Core.runtime_:50
 #: of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2970,12 +3232,12 @@ msgid ""
 "print(core.runtime_)"
 msgstr ""
 
-#: 8519eeebd01d47d0b968726387eeb2ad
+#: 8186054c823441b4b2a564c2ebfb1c5c
 #: oceanai.modules.core.core.Core.show_notebook_history_output:1 of
 msgid "Отображение истории вывода сообщений в ячейке Jupyter"
 msgstr "Display message output history in a Jupyter cell"
 
-#: d3dfbdfb795245ca899d86ea138263b6
+#: c072b9e03f854b90a0028de22d370a75
 #: oceanai.modules.core.core.Core.show_notebook_history_output:9 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -2998,22 +3260,22 @@ msgstr ""
 "\n"
 "core.show_notebook_history_output()"
 
-#: da364dd07715497cbea5d2438880265c
+#: e73197ee42ad4eebb534b04cfd560794
 #: oceanai.modules.core.core.Core.show_notebook_history_output:23 of
 msgid "[2022-10-15 18:27:46] Информационное сообщение"
 msgstr "[2022-10-15 18:27:46] Announcement"
 
-#: 3fc86b246a8b4643912cd4a8c388c015
+#: 25632aa9187d437a8901cb3027ca3002
 #: oceanai.modules.core.core.Core.true_traits_:1 of
 msgid "Получение путей к верным предсказаниям для подсчета точности"
-msgstr "Getting paths to correct predictions for calculating accuracy"
+msgstr "Getting paths to ground truth scores for calculating accuracy"
 
-#: 9e5629f2cd1a47c399e902d9d2ec0f03
+#: 76a5ea46edb34793a350aa1e9df4f7c5
 #: oceanai.modules.core.core.Core.true_traits_:3 of
 msgid "Словарь с путями к верным предсказаниям для подсчета точности"
-msgstr "Dictionary with paths to correct predictions for calculating accuracy"
+msgstr "Dictionary with paths to ground truth scores for calculating accuracy"
 
-#: 7a31f5e8aca249d48a977761404140b4
+#: 08bbb12457984206adefc2cdcaedd104
 #: oceanai.modules.core.core.Core.true_traits_:11 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -3022,7 +3284,7 @@ msgid ""
 "core.true_traits_"
 msgstr ""
 
-#: 99e30f9c853e417196aecb500d21367f
+#: 01fb923afe174adca8fdb26ea239ac4d
 #: oceanai.modules.core.core.Core.true_traits_:21 of
 msgid ""
 "{\n"
@@ -3032,17 +3294,17 @@ msgid ""
 "}"
 msgstr ""
 
-#: 8c1e589fe8d04e01a50a6e3cefd4c04a
+#: 22e3baa7f5d34e95a2b4b010d86dccee
 #: oceanai.modules.core.core.Core.weights_for_big5_:1 of
 msgid "Получение весов для нейросетевых архитектур"
 msgstr "Obtaining weights for neural network architectures"
 
-#: eab51f668fa84041b74ba08765c07d15
+#: ac8f182f26e949988a855f901440bc9b
 #: oceanai.modules.core.core.Core.weights_for_big5_:3 of
 msgid "Словарь с весами для нейросетевых архитектур"
 msgstr "Dictionary with weights for neural network architectures"
 
-#: d946bc0ebb484e5e8840e6e6f8df0e37
+#: 6addc76067e44e4e8d3cea56de04de48
 #: oceanai.modules.core.core.Core.weights_for_big5_:11 of
 msgid ""
 "from oceanai.modules.core.core import Core\n"
@@ -3055,7 +3317,7 @@ msgstr ""
 "core = Core(lang = 'en')\n"
 "core.weights_for_big5_"
 
-#: 6223b825d6564d9fb7b4140cd001682b
+#: 0bae9cebd1b9455995d05415c43aa60c
 #: oceanai.modules.core.core.Core.weights_for_big5_:21 of
 msgid ""
 "{\n"
@@ -3091,7 +3353,7 @@ msgid ""
 "'https://download.sberdisk.ru/download/file/405034397?token=52ZPHMjb4CFmdYa&filename=weights_2022-06-15_16-32-51.h5',"
 "\n"
 "                },\n"
-"                'neuroticism': {\n"
+"                'non_neuroticism': {\n"
 "                        'sberdisk': "
 "'https://download.sberdisk.ru/download/file/405035156?token=q8CZJ99rZqcNxkM&filename=weights_2022-06-15_16-37-46.h5',"
 "\n"
@@ -3135,7 +3397,7 @@ msgid ""
 "'https://download.sberdisk.ru/download/file/415126845?token=joN7TMHk59Gffsf&filename=weights_2022-06-15_17-02-03.h5',"
 "\n"
 "                },\n"
-"                'neuroticism': {\n"
+"                'non_neuroticism': {\n"
 "                        'sberdisk': "
 "'https://download.sberdisk.ru/download/file/415127032?token=NEBSsE7mjyjen3o&filename=weights_2022-06-15_17-06-15.h5',"
 "\n"
@@ -3144,4 +3406,3 @@ msgid ""
 "    }\n"
 "}"
 msgstr ""
-
