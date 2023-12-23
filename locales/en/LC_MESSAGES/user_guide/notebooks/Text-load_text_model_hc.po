@@ -1,0 +1,592 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022-23. Speech and Multimodal Interfaces Laboratory Team
+# This file is distributed under the same license as the OCEANAI package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OCEANAI 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-17 14:43+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:9
+#: 6eb73f7197394f9181afdb8a38243431
+msgid ""
+"Формирование нейросетевой архитектуры модели и загрузка ее весов для "
+"получения признаков / оценок на базе экспертных признаков (текстовая "
+"модальность)"
+msgstr ""
+"Formation of the neural network architecture of the model and downloading its"
+" weights to obtain features / scores based on hand-crafted features (text modality)"
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:11
+#: d7d4583b675b4521b74f3c64dd45a1fc
+msgid "<hr>"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:17
+#: 9e717c1c23ba443d88e0c429f15c099c
+msgid ""
+"``_b5.text_model_hc_`` - Нейросетевая модель **tf.keras.Model** для "
+"получения признаков / оценок на базе экспертных признаков"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:29
+#: 9030dfdfbc8b4389998e156c3b5add50
+msgid "Импорт необходимых инструментов"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:-1
+#: 6feb534cdf6f45b49749b7f972e7a82d
+msgid "[2]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:-1
+#: 46136b84e4824c8597d56db2886282a8
+msgid "from oceanai.modules.lab.build import Run"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:51
+#: 315c779be5e24ba7b269393cac5445bf
+msgid "Сборка"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:-1
+#: 6bd94dcdd7804f46841363f31803a8c9
+msgid "[3]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:-1
+#: 8e0b0712b061486891a4b8e44df76d5a
+msgid ""
+"_b5 = Run(\n"
+"    lang = 'ru', # Язык\n"
+"    color_simple = '#333', # Цвет обычного текста (шестнадцатеричный код)"
+"\n"
+"    color_info = '#1776D2', # Цвет текста содержащего информацию "
+"(шестнадцатеричный код)\n"
+"    color_err = '#FF0000', # Цвет текста содержащего ошибку "
+"(шестнадцатеричный код)\n"
+"    color_true = '#008001', # Цвет текста содержащего положительную "
+"информацию (шестнадцатеричный код)\n"
+"    bold_text = True, # Жирное начертание текста\n"
+"    num_to_df_display = 30, # Количество строк для отображения в таблицах"
+"\n"
+"    text_runtime = 'Время выполнения', # Текст времени выполнения\n"
+"    metadata = True # Отображение информации о библиотеке\n"
+")"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:81
+#: 6727971e2db640fbbb61cd66a41988d8
+msgid ""
+"\\ **[2023-12-10 16:53:54] OCEANAI - персональные качества личности "
+"человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
+"        Рюмин Дмитрий [dl_03.03.1991@mail.ru]        Карпов Алексей "
+"[karpov@iias.spb.su]    Сопровождающие:        Рюмина Елена "
+"[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
+"Версия: 1.0.0a5    Лицензия: BSD License"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:83
+#: acf4e1de023a4e5eb8a47e291e033c5d
+msgid "</p>"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:97
+#: aebf5ad35e86416db068d5c72add6c33
+msgid "Формирование нейросетевой архитектуры модели (``FI V2``)"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:-1
+#: 0660a6287d1b46c7be9dd33ad7d41e50
+msgid "[4]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:-1
+#: 9745fddb51154a9991ec39acc43fcc40
+msgid ""
+"res_load_text_model_hc_fi = _b5.load_text_model_hc(\n"
+"    corpus = \"fi\", # Корпус для тестирования нейросетевой модели\n"
+"    show_summary = False, # Отображение сформированной нейросетевой "
+"архитектуры модели\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:124
+#: afbf2d2b158a442e8555d6afe77cdedf
+msgid ""
+"\\ **[2023-12-10 16:53:55] Формирование нейросетевой архитектуры модели "
+"для получения оценок по экспертным признакам (текстовая модальность) …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:134
+#: 7a293d7a051947e6a6b724dbb86d1470
+msgid "— Время выполнения: 1.886 сек. —"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:146
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:394
+#: b7e350022622474fb780f42295da95b0 e72faa977b764c1fa4d0b5d21eeaa987
+msgid "Загрузка весов нейросетевой модели"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:-1
+#: 54f6950611f14cafa334d0bb7f25cb37
+msgid "[5]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:-1
+#: 6db065b42b9f4a0d807f5c0e1df96043
+msgid ""
+"# Настройки ядра\n"
+"_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
+"_b5.chunk_size_ = 2000000 # Размер загрузки файла из сети за 1 шаг\n"
+"\n"
+"url = _b5.weights_for_big5_['text']['fi']['hc']['sberdisk']\n"
+"\n"
+"res_load_text_model_weights_hc_fi = _b5.load_text_model_weights_hc(\n"
+"    url = url, # Полный путь к файлу с весами нейросетевой модели\n"
+"    force_reload = True, # Принудительная загрузка файла с весами "
+"нейросетевой модели из сети\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:179
+#: 33cde3cf02344429b0bc9a50d7b3fc92
+msgid ""
+"\\ **[2023-12-10 16:54:00] Загрузка весов нейросетевой модели для "
+"получения оценок по экспертным признакам (текстовая модальность) …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:190
+#: 4adafcf209674382ae668add869ac92e
+msgid ""
+"\\ **[2023-12-10 16:54:01] Загрузка файла "
+"“weights_2023-07-15_10-52-15.h5” 100.0% …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:200
+#: 755a5202fc524a68a320f9a5e282191b
+msgid "— Время выполнения: 0.311 сек. —"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:212
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:460
+#: 47bc22d892bb4bbbb429e4bd6e522447 647c4b0ea3c442279b22819cea51868d
+msgid "Отображение сформированной нейросетевой архитектуры модели"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:-1
+#: 3effe785f4944dd7a76882252d3fe05a
+msgid "[6]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:-1
+#: 5f878faf16b44ade83e92518ee8920f8 a07c9a3c1a27451fad64cfb175024d62
+msgid "_b5.text_model_hc_.summary()"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:233
+#: 2e8ba098c7514ec5970db8fcb3ab4ab2
+msgid ""
+"<pre>\n"
+"Model: &#34;model&#34;\n"
+"__________________________________________________________________________________________________"
+"\n"
+" Layer (type)                   Output Shape         Param #     "
+"Connected to\n"
+"=================================================================================================="
+"\n"
+" model_hc/input (InputLayer)    [(None, 89, 64)]     0           []\n"
+"\n"
+" model_hc/bilstm_1 (Bidirection  (None, 89, 64)      24832       "
+"[&#39;model_hc/input[0][0]&#39;]\n"
+" al)\n"
+"\n"
+" model_hc/dence_2 (Dense)       (None, 89, 64)       4160        "
+"[&#39;model_hc/input[0][0]&#39;]\n"
+"\n"
+" model_hc/attention (Attention)  (None, 89, 64)      0           "
+"[&#39;model_hc/bilstm_1[0][0]&#39;,\n"
+"                                                                  "
+"&#39;model_hc/bilstm_1[0][0]&#39;]\n"
+"\n"
+" model_hc/bilstm_2 (Bidirection  (None, 89, 64)      24832       "
+"[&#39;model_hc/dence_2[0][0]&#39;]\n"
+" al)\n"
+"\n"
+" add (Add)                      (None, 89, 64)       0           "
+"[&#39;model_hc/bilstm_1[0][0]&#39;,\n"
+"                                                                  "
+"&#39;model_hc/attention[0][0]&#39;,\n"
+"                                                                  "
+"&#39;model_hc/bilstm_2[0][0]&#39;]\n"
+"\n"
+" model_hc/add (Addition)        (None, 128)          0           "
+"[&#39;add[0][0]&#39;]\n"
+"\n"
+" dense (Dense)                  (None, 5)            645         "
+"[&#39;model_hc/add[0][0]&#39;]\n"
+"\n"
+"=================================================================================================="
+"\n"
+"Total params: 54,469\n"
+"Trainable params: 54,469\n"
+"Non-trainable params: 0\n"
+"__________________________________________________________________________________________________"
+"\n"
+"</pre>"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:268
+#: d2b7e8ecafe547d1a7f919090e0e3cf5
+msgid ""
+"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
+"Model: \"model\"\n"
+"\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_"
+"\n"
+" Layer (type)                   Output Shape         Param \\#     "
+"Connected to\n"
+"=================================================================================================="
+"\n"
+" model\\_hc/input (InputLayer)    [(None, 89, 64)]     0           []\n"
+"\n"
+" model\\_hc/bilstm\\_1 (Bidirection  (None, 89, 64)      24832       "
+"['model\\_hc/input[0][0]']\n"
+" al)\n"
+"\n"
+" model\\_hc/dence\\_2 (Dense)       (None, 89, 64)       4160        "
+"['model\\_hc/input[0][0]']\n"
+"\n"
+" model\\_hc/attention (Attention)  (None, 89, 64)      0           "
+"['model\\_hc/bilstm\\_1[0][0]',\n"
+"                                                                  "
+"'model\\_hc/bilstm\\_1[0][0]']\n"
+"\n"
+" model\\_hc/bilstm\\_2 (Bidirection  (None, 89, 64)      24832       "
+"['model\\_hc/dence\\_2[0][0]']\n"
+" al)\n"
+"\n"
+" add (Add)                      (None, 89, 64)       0           "
+"['model\\_hc/bilstm\\_1[0][0]',\n"
+"                                                                  "
+"'model\\_hc/attention[0][0]',\n"
+"                                                                  "
+"'model\\_hc/bilstm\\_2[0][0]']\n"
+"\n"
+" model\\_hc/add (Addition)        (None, 128)          0           "
+"['add[0][0]']\n"
+"\n"
+" dense (Dense)                  (None, 5)            645         "
+"['model\\_hc/add[0][0]']\n"
+"\n"
+"=================================================================================================="
+"\n"
+"Total params: 54,469\n"
+"Trainable params: 54,469\n"
+"Non-trainable params: 0\n"
+"\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_"
+"\n"
+"\\end{sphinxVerbatim}"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:304
+#: bf295c50600c4d4f8b861396b2ca490e
+msgid ""
+"Model: \"model\"\n"
+"__________________________________________________________________________________________________"
+"\n"
+" Layer (type)                   Output Shape         Param #     "
+"Connected to\n"
+"=================================================================================================="
+"\n"
+" model_hc/input (InputLayer)    [(None, 89, 64)]     0           []\n"
+"\n"
+" model_hc/bilstm_1 (Bidirection  (None, 89, 64)      24832       "
+"['model_hc/input[0][0]']\n"
+" al)\n"
+"\n"
+" model_hc/dence_2 (Dense)       (None, 89, 64)       4160        "
+"['model_hc/input[0][0]']\n"
+"\n"
+" model_hc/attention (Attention)  (None, 89, 64)      0           "
+"['model_hc/bilstm_1[0][0]',\n"
+"                                                                  "
+"'model_hc/bilstm_1[0][0]']\n"
+"\n"
+" model_hc/bilstm_2 (Bidirection  (None, 89, 64)      24832       "
+"['model_hc/dence_2[0][0]']\n"
+" al)\n"
+"\n"
+" add (Add)                      (None, 89, 64)       0           "
+"['model_hc/bilstm_1[0][0]',\n"
+"                                                                  "
+"'model_hc/attention[0][0]',\n"
+"                                                                  "
+"'model_hc/bilstm_2[0][0]']\n"
+"\n"
+" model_hc/add (Addition)        (None, 128)          0           "
+"['add[0][0]']\n"
+"\n"
+" dense (Dense)                  (None, 5)            645         "
+"['model_hc/add[0][0]']\n"
+"\n"
+"=================================================================================================="
+"\n"
+"Total params: 54,469\n"
+"Trainable params: 54,469\n"
+"Non-trainable params: 0\n"
+"__________________________________________________________________________________________________"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:345
+#: 655f86f23d4343f0882d8a44c24b7cb4
+msgid "Формирование нейросетевой архитектуры модели (``MuPTA``)"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:-1
+#: 814427dc1cf24dbea9469a51857b5e21
+msgid "[7]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:-1
+#: 0f73230325484de6b525d35e6c53f4e6
+msgid ""
+"res_load_text_model_hc_mupta = _b5.load_text_model_hc(\n"
+"    corpus = \"mupta\", # Корпус для тестирования нейросетевой модели\n"
+"    show_summary = False, # Отображение сформированной нейросетевой "
+"архитектуры модели\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:372
+#: 9f1a0f79410244b3bf4b03f2e6d4c5d1
+msgid ""
+"\\ **[2023-12-10 16:54:06] Формирование нейросетевой архитектуры модели "
+"для получения оценок по экспертным признакам (текстовая модальность) …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:382
+#: 4d784b7a8db34019a24a9342be39736d
+msgid "— Время выполнения: 0.577 сек. —"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:-1
+#: 6e6fa66050c1491fa30e348613614208
+msgid "[8]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:-1
+#: 2ad31b3672e049a8989b1187b227bf35
+msgid ""
+"# Настройки ядра\n"
+"_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
+"_b5.chunk_size_ = 2000000 # Размер загрузки файла из сети за 1 шаг\n"
+"\n"
+"url = _b5.weights_for_big5_['text']['mupta']['hc']['sberdisk']\n"
+"\n"
+"res_load_text_model_weights_hc_mupta = _b5.load_text_model_weights_hc(\n"
+"    url = url, # Полный путь к файлу с весами нейросетевой модели\n"
+"    force_reload = True, # Принудительная загрузка файла с весами "
+"нейросетевой модели из сети\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:427
+#: b92070745cdb4cb5ad54550cdfbb27f9
+msgid ""
+"\\ **[2023-12-10 16:54:19] Загрузка весов нейросетевой модели для "
+"получения оценок по экспертным признакам (текстовая модальность) …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:438
+#: b11f529d53e946028843b211766de203
+msgid ""
+"\\ **[2023-12-10 16:54:19] Загрузка файла "
+"“weights_2023-07-15_10-53-38.h5” 100.0% …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:448
+#: 3308aa42ae9f4981b49d22c01460b5ea
+msgid "— Время выполнения: 0.264 сек. —"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:-1
+#: 21d05fc990934c269113eefba0f8ec43
+msgid "[9]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:481
+#: 3f6dfac3396c4237b1b84f5f85d216b3
+msgid ""
+"<pre>\n"
+"Model: &#34;model_1&#34;\n"
+"__________________________________________________________________________________________________"
+"\n"
+" Layer (type)                   Output Shape         Param #     "
+"Connected to\n"
+"=================================================================================================="
+"\n"
+" model_hc/input (InputLayer)    [(None, 365, 64)]    0           []\n"
+"\n"
+" model_hc/bilstm_1 (Bidirection  (None, 365, 64)     24832       "
+"[&#39;model_hc/input[0][0]&#39;]\n"
+" al)\n"
+"\n"
+" model_hc/dence_2 (Dense)       (None, 365, 64)      4160        "
+"[&#39;model_hc/input[0][0]&#39;]\n"
+"\n"
+" model_hc/attention (Attention)  (None, 365, 64)     0           "
+"[&#39;model_hc/bilstm_1[0][0]&#39;,\n"
+"                                                                  "
+"&#39;model_hc/bilstm_1[0][0]&#39;]\n"
+"\n"
+" model_hc/bilstm_2 (Bidirection  (None, 365, 64)     24832       "
+"[&#39;model_hc/dence_2[0][0]&#39;]\n"
+" al)\n"
+"\n"
+" add_1 (Add)                    (None, 365, 64)      0           "
+"[&#39;model_hc/bilstm_1[0][0]&#39;,\n"
+"                                                                  "
+"&#39;model_hc/attention[0][0]&#39;,\n"
+"                                                                  "
+"&#39;model_hc/bilstm_2[0][0]&#39;]\n"
+"\n"
+" model_hc/add (Addition)        (None, 128)          0           "
+"[&#39;add_1[0][0]&#39;]\n"
+"\n"
+" dense_1 (Dense)                (None, 5)            645         "
+"[&#39;model_hc/add[0][0]&#39;]\n"
+"\n"
+"=================================================================================================="
+"\n"
+"Total params: 54,469\n"
+"Trainable params: 54,469\n"
+"Non-trainable params: 0\n"
+"__________________________________________________________________________________________________"
+"\n"
+"</pre>"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:516
+#: 2cd79082daa9436296c0d5c8d7f935ca
+msgid ""
+"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
+"Model: \"model\\_1\"\n"
+"\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_"
+"\n"
+" Layer (type)                   Output Shape         Param \\#     "
+"Connected to\n"
+"=================================================================================================="
+"\n"
+" model\\_hc/input (InputLayer)    [(None, 365, 64)]    0           []\n"
+"\n"
+" model\\_hc/bilstm\\_1 (Bidirection  (None, 365, 64)     24832       "
+"['model\\_hc/input[0][0]']\n"
+" al)\n"
+"\n"
+" model\\_hc/dence\\_2 (Dense)       (None, 365, 64)      4160        "
+"['model\\_hc/input[0][0]']\n"
+"\n"
+" model\\_hc/attention (Attention)  (None, 365, 64)     0           "
+"['model\\_hc/bilstm\\_1[0][0]',\n"
+"                                                                  "
+"'model\\_hc/bilstm\\_1[0][0]']\n"
+"\n"
+" model\\_hc/bilstm\\_2 (Bidirection  (None, 365, 64)     24832       "
+"['model\\_hc/dence\\_2[0][0]']\n"
+" al)\n"
+"\n"
+" add\\_1 (Add)                    (None, 365, 64)      0           "
+"['model\\_hc/bilstm\\_1[0][0]',\n"
+"                                                                  "
+"'model\\_hc/attention[0][0]',\n"
+"                                                                  "
+"'model\\_hc/bilstm\\_2[0][0]']\n"
+"\n"
+" model\\_hc/add (Addition)        (None, 128)          0           "
+"['add\\_1[0][0]']\n"
+"\n"
+" dense\\_1 (Dense)                (None, 5)            645         "
+"['model\\_hc/add[0][0]']\n"
+"\n"
+"=================================================================================================="
+"\n"
+"Total params: 54,469\n"
+"Trainable params: 54,469\n"
+"Non-trainable params: 0\n"
+"\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_"
+"\n"
+"\\end{sphinxVerbatim}"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_hc.ipynb:552
+#: 40356b4667c940e3be95f84bbb6c937d
+msgid ""
+"Model: \"model_1\"\n"
+"__________________________________________________________________________________________________"
+"\n"
+" Layer (type)                   Output Shape         Param #     "
+"Connected to\n"
+"=================================================================================================="
+"\n"
+" model_hc/input (InputLayer)    [(None, 365, 64)]    0           []\n"
+"\n"
+" model_hc/bilstm_1 (Bidirection  (None, 365, 64)     24832       "
+"['model_hc/input[0][0]']\n"
+" al)\n"
+"\n"
+" model_hc/dence_2 (Dense)       (None, 365, 64)      4160        "
+"['model_hc/input[0][0]']\n"
+"\n"
+" model_hc/attention (Attention)  (None, 365, 64)     0           "
+"['model_hc/bilstm_1[0][0]',\n"
+"                                                                  "
+"'model_hc/bilstm_1[0][0]']\n"
+"\n"
+" model_hc/bilstm_2 (Bidirection  (None, 365, 64)     24832       "
+"['model_hc/dence_2[0][0]']\n"
+" al)\n"
+"\n"
+" add_1 (Add)                    (None, 365, 64)      0           "
+"['model_hc/bilstm_1[0][0]',\n"
+"                                                                  "
+"'model_hc/attention[0][0]',\n"
+"                                                                  "
+"'model_hc/bilstm_2[0][0]']\n"
+"\n"
+" model_hc/add (Addition)        (None, 128)          0           "
+"['add_1[0][0]']\n"
+"\n"
+" dense_1 (Dense)                (None, 5)            645         "
+"['model_hc/add[0][0]']\n"
+"\n"
+"=================================================================================================="
+"\n"
+"Total params: 54,469\n"
+"Trainable params: 54,469\n"
+"Non-trainable params: 0\n"
+"__________________________________________________________________________________________________"
+msgstr ""
+

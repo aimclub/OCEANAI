@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2022-12-11 14:18+0300\n"
+"POT-Creation-Date: 2023-12-17 14:43+0300\n"
 "PO-Revision-Date: 2022-12-11 14:18+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -18,80 +18,62 @@ msgstr ""
 "Generated-By: Babel 2.11.0\n"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:9
-#: 1d1e2b46012b4eac862e3a110725844a
+#: 384fd956f0f2434e8fe949a7eb1b1306
 msgid ""
 "Формирование нейросетевой архитектуры модели и загрузка ее весов для "
-"получения оценок по экспертным признакам (видео модальность)"
+"получения признаков / оценок на базе экспертных признаков (видео "
+"модальность)"
 msgstr ""
-"Formation of the neural network architecture of the model and loading its"
-" weights to obtain estimates by expert features (video modality)"
+"Formation of the neural network architecture of the model and downloading its"
+" weights to obtain features / scores based on hand-crafted features (video modality)"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:11
-#: 4954d4fc3099444aad2cab86ae4b7ed9
+#: 901857dc1252452ca1f4f93c80ae9ec9
 msgid "<hr>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:17
-#: a60d0ece0b8d4aafb60231ca8d8cf543
+#: 5f4e5dfaa83d4027acd2b4579edf0c73
+#, fuzzy
 msgid ""
 "``_b5.video_model_hc_`` - Нейросетевая модель **tf.keras.Model** для "
-"получения оценок по экспертным признакам"
+"получения признаков / оценок на базе экспертных признаков"
 msgstr ""
-"``_b5.video_model_hc_`` - Neural network model **tf.keras.Model** "
-"for obtaining estimates by expert features"
+"``_b5.video_model_hc_`` - Neural network model **tf.keras.Model** for "
+"obtaining estimates by expert features"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:29
-#: 8ab35a5debd74836b7b804af2386740a
+#: 33512eaf7d9f4e9c8b713cd303241480
 msgid "Импорт необходимых инструментов"
 msgstr "Import required packages"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:-1
-#: 1e685982aed341b7b689f250c6c90572
+#: c47444a3ac9e4760ade4d83e31c9f254
 msgid "[2]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:-1
-#: 7a5615e4e2a94c42bed8d71da859a566
+#: b1bb54c12d654f58bc59c9ab81e46d0b
 msgid "from oceanai.modules.lab.build import Run"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:51
-#: 0fe238bbb52d4f159c9bab6c0eda8237
-msgid ""
-"<pre>\n"
-"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
-"</pre>"
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:57
-#: 3bd0e49922514eef924aabf87047001e
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
-"\\end{sphinxVerbatim}"
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:64
-#: 568258f5dae549869424be98f153a23e
-msgid "INFO: Created TensorFlow Lite XNNPACK delegate for CPU."
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:76
-#: 8558ed3bec2b4dfa8f5ed905a4f4bbaf
+#: a9e21c758cf7407e9015b1ff29ee3b73
 msgid "Сборка"
 msgstr "Build"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:-1
-#: e2ea72ac53e04a799d7759eb942558b3
+#: 3809507f9eeb4618a01963ab35609f2b
 msgid "[3]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:-1
-#: 5678a3c7d702455489e19ad4c05e6103
+#: 80a13c858ce646928a62fc2f9d2af4d3
+#, fuzzy
 msgid ""
 "_b5 = Run(\n"
 "    lang = 'ru', # Язык\n"
-"    color_simple = '#FFF', # Цвет обычного текста (шестнадцатеричный код)"
+"    color_simple = '#333', # Цвет обычного текста (шестнадцатеричный код)"
 "\n"
 "    color_info = '#1776D2', # Цвет текста содержащего информацию "
 "(шестнадцатеричный код)\n"
@@ -120,41 +102,46 @@ msgstr ""
 "    metadata = True # Displaying information about library\n"
 ")"
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:106
-#: b67da362ab084ca18948308fba624bf4
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:81
+#: debcc3d2f3c747b081adcee10c6b3bad
+#, fuzzy
 msgid ""
-"\\ **[2022-12-11 14:17:28] OCEANAI - персональные качества личности "
+"\\ **[2023-12-10 17:11:13] OCEANAI - персональные качества личности "
 "человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
 "        Рюмин Дмитрий [dl_03.03.1991@mail.ru]        Карпов Алексей "
 "[karpov@iias.spb.su]    Сопровождающие:        Рюмина Елена "
 "[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
-"Версия: 1.0.0a2    Лицензия: BSD License"
+"Версия: 1.0.0a5    Лицензия: BSD License"
 msgstr ""
-"\\ **[2022-12-11 14:17:28] OCEANAI - personal traits:**\\     Authors:        Elena Ryumina [ryumina_ev@mail.ru]"
-"        Dmitry Ryumin [dl_03.03.1991@mail.ru]        Alexey Karpov "
-"[karpov@iias.spb.su]    Maintainers:        Elena Ryumina "
-"[ryumina_ev@mail.ru]        Dmitry Ryumin [dl_03.03.1991@mail.ru]    "
-"Version: 1.0.0a2    License: BSD License"
+"\\ **[2022-12-11 14:17:28] OCEANAI - personal traits:**\\     Authors:"
+"        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry Ryumin "
+"[dl_03.03.1991@mail.ru]        Alexey Karpov [karpov@iias.spb.su]    "
+"Maintainers:        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry "
+"Ryumin [dl_03.03.1991@mail.ru]    Version: 1.0.0a2    License: BSD "
+"License"
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:108
-#: d5e1d7127af745499a1a7f5f547430cf
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:83
+#: f7d82cc5d131447c805da43395538f67
 msgid "</p>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:122
-#: d28823b669a04538a66863f6b9ca84bc
-msgid "Формирование нейросетевой архитектуры модели"
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:97
+#: a5bf25938fa84c849f2f1a634e2603da
+#, fuzzy
+msgid "Формирование нейросетевой архитектуры модели (``FI V2``)"
 msgstr "Formation of the neural network architecture of the model"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:-1
-#: 406a12f970b4433fa3135107e45acde9
+#: 3d1cbeb7e19e4539a7cfddb98d68d086
 msgid "[4]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:-1
-#: 83415cae197a45bebcfcdf70639d8838
+#: dacfab2778784d478edc837e29a78d60
+#, fuzzy
 msgid ""
 "res_load_video_model_hc = _b5.load_video_model_hc(\n"
+"    lang = 'en',\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
 "архитектуры модели\n"
 "    out = True, # Отображение\n"
@@ -170,39 +157,43 @@ msgstr ""
 "    run = True # Run blocking\n"
 ")"
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:148
-#: f587dd3adc834d31992ae37acff89e57
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:124
+#: 3011f680e5dd4bcbacaf3af179fee638
+#, fuzzy
 msgid ""
-"\\ **[2022-12-11 14:17:39] Формирование нейросетевой архитектуры модели "
+"\\ **[2023-12-10 17:11:13] Формирование нейросетевой архитектуры модели "
 "для получения оценок по экспертным признакам (видео модальность) …**"
 msgstr ""
 "\\ **[2022-12-11 14:17:39] Formation of the neural network architecture "
 "of the model for obtaining estimates by expert features (video modality) "
 "…**"
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:158
-#: a0dc1f00de614b6493d2394d3a3ab0bb
-msgid "— Время выполнения: 0.661 сек. —"
-msgstr "— Runtime: 0.661 sec. —"
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:134
+#: 852eb1870ac048d0835b1caaf645ca3b
+#, fuzzy
+msgid "— Время выполнения: 0.789 сек. —"
+msgstr "— Runtime: 0.309 sec. —"
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:170
-#: 732561c2acc24ed0ad2dcbae611a719a
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:146
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:367
+#: 22d2bf3696b24ba4a8f22f84de88a0cd 8f53762efbbb4425ae79bffaef912a54
 msgid "Загрузка весов нейросетевой модели"
 msgstr "Downloading the weights of the neural network model"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:-1
-#: ed1a89fd3f8b477595007676b545f230
+#: 62a544ee733349918e7345b83d6e34d4
 msgid "[5]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:-1
-#: 084bb94989044546884f16b12415af80
+#: 4fee8a3eb82b41bca3c7e0d3adaa03a0
+#, fuzzy
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
 "_b5.chunk_size_ = 2000000 # Размер загрузки файла из сети за 1 шаг\n"
 "\n"
-"url = _b5.weights_for_big5_['video']['hc']['sberdisk']\n"
+"url = _b5.weights_for_big5_['video']['fi']['hc']['sberdisk']\n"
 "\n"
 "res_load_video_model_weights_hc = _b5.load_video_model_weights_hc(\n"
 "    url = url, # Полный путь к файлу с весами нейросетевой модели\n"
@@ -215,8 +206,7 @@ msgid ""
 msgstr ""
 "# Core settings\n"
 "_b5.path_to_save_ = './models' # Directory to save the file\n"
-"_b5.chunk_size_ = 2000000 # File download size from network in 1 "
-"step\n"
+"_b5.chunk_size_ = 2000000 # File download size from network in 1 step\n"
 "\n"
 "url = _b5.weights_for_big5_['video']['hc']['sberdisk']\n"
 "\n"
@@ -230,49 +220,54 @@ msgstr ""
 "    run = True # Run blocking\n"
 ")"
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:203
-#: 2601ecd943634fc8b2062610050fd00a
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:179
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:400
+#: 355ad677ea734cd0ab90823ee6c13ff4 6b2dceedff7643ab9cd2f99ef99cec99
+#, fuzzy
 msgid ""
-"\\ **[2022-12-11 14:18:05] Загрузка весов нейросетевой модели для "
+"\\ **[2023-12-10 17:11:14] Загрузка весов нейросетевой модели для "
 "получения оценок по экспертным признакам (видео модальность) …**"
 msgstr ""
 "\\ **[2022-12-11 14:18:05] Downloading the weights of the neural network "
 "model to obtain estimates by expert features (video modality) …**"
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:214
-#: c1668b056f9c45c682c71934c096f7e3
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:190
+#: 9a10f8bdc5fd4f6b87fee2f9afe2e599
+#, fuzzy
 msgid ""
-"\\ **[2022-12-11 14:18:05] Загрузка файла "
-"“weights_2022-08-27_18-53-35.h5” (100.0%) …**"
+"\\ **[2023-12-10 17:11:14] Загрузка файла "
+"“weights_2022-08-27_18-53-35.h5” 100.0% …**"
 msgstr ""
 "\\ **[2022-12-11 14:18:05] File download “weights_2022-08-27_18-53-35.h5”"
 " (100.0%) …**"
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:224
-#: a0dc1f00de614b6493d2394d3a3ab0bb
-msgid "— Время выполнения: 0.309 сек. —"
-msgstr "— Runtime: 0.309 sec. —"
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:200
+#: 5aa902aa659e45d3bb55a7e35b18e92c
+#, fuzzy
+msgid "— Время выполнения: 0.226 сек. —"
+msgstr "— Runtime: 0.661 sec. —"
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:236
-#: 5c829b17c45f487e96c8fbc31e52584c
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:212
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:433
+#: 048833ea1f3d4ad69d796195796779f1 50f2247388df4c55a542ef39e623e13f
 msgid "Отображение сформированной нейросетевой архитектуры модели"
 msgstr "Displaying the formed neural network architecture of the model"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:-1
-#: 3f73055e37854494b37b3ec22a52b99e
+#: ef46c0ce2e1b459bbfaed611003601db
 msgid "[6]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:-1
-#: a1f40545d9274960983154236606c504
+#: 799cff0c781d492b9eb8e24aee2c8bbb d08822481e284b13bf86a744773e78ed
 msgid "_b5.video_model_hc_.summary()"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:257
-#: 4280c981616b4e5aafa383f5b78c9626
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:233
+#: 19bd12de64134deeac0c99ff548bd8fd
 msgid ""
 "<pre>\n"
-"Model: &#34;model&#34;\n"
+"Model: &#34;model_1&#34;\n"
 "_________________________________________________________________\n"
 " Layer (type)                Output Shape              Param #\n"
 "=================================================================\n"
@@ -282,7 +277,7 @@ msgid ""
 "\n"
 " dropout (Dropout)           (None, 10, 64)            0\n"
 "\n"
-" lstm_1 (LSTM)               (None, 128)               98816\n"
+" lstm_128_v_hc (LSTM)        (None, 128)               98816\n"
 "\n"
 " dropout_1 (Dropout)         (None, 128)               0\n"
 "\n"
@@ -296,11 +291,11 @@ msgid ""
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:283
-#: 37a95d4f3de14be2b1cafcdb667a0164
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:259
+#: 6c77a5f1c3ab4ae9a44cc2665bfdb366
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"Model: \"model\"\n"
+"Model: \"model\\_1\"\n"
 "\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_"
 "\n"
 " Layer (type)                Output Shape              Param \\#\n"
@@ -311,7 +306,7 @@ msgid ""
 "\n"
 " dropout (Dropout)           (None, 10, 64)            0\n"
 "\n"
-" lstm\\_1 (LSTM)               (None, 128)               98816\n"
+" lstm\\_128\\_v\\_hc (LSTM)        (None, 128)               98816\n"
 "\n"
 " dropout\\_1 (Dropout)         (None, 128)               0\n"
 "\n"
@@ -326,10 +321,10 @@ msgid ""
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:310
-#: 115181b4c2c94cf2b171d10da6b66ec8
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:286
+#: 8c01fe7e5e5c4da899410b9fabbffad1
 msgid ""
-"Model: \"model\"\n"
+"Model: \"model_1\"\n"
 "_________________________________________________________________\n"
 " Layer (type)                Output Shape              Param #\n"
 "=================================================================\n"
@@ -339,7 +334,7 @@ msgid ""
 "\n"
 " dropout (Dropout)           (None, 10, 64)            0\n"
 "\n"
-" lstm_1 (LSTM)               (None, 128)               98816\n"
+" lstm_128_v_hc (LSTM)        (None, 128)               98816\n"
 "\n"
 " dropout_1 (Dropout)         (None, 128)               0\n"
 "\n"
@@ -348,6 +343,200 @@ msgid ""
 "=================================================================\n"
 "Total params: 145,541\n"
 "Trainable params: 145,541\n"
+"Non-trainable params: 0\n"
+"_________________________________________________________________"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:318
+#: fc1d758b57d8402996fe34d78c96433b
+#, fuzzy
+msgid "Формирование нейросетевой архитектуры модели (``MuPTA``)"
+msgstr "Formation of the neural network architecture of the model"
+
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:-1
+#: 257eea3c710d42caad4df75b47c3caa8
+msgid "[7]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:-1
+#: 8c3341a3d7e346f9b573b0aa15447706
+#, fuzzy
+msgid ""
+"res_load_video_model_hc = _b5.load_video_model_hc(\n"
+"    lang = 'ru',\n"
+"    show_summary = False, # Отображение сформированной нейросетевой "
+"архитектуры модели\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+"res_load_video_model_hc = _b5.load_video_model_hc(\n"
+"    show_summary = False, # Displaying the formed neural network "
+"architecture of the model\n"
+"    out = True, # Display\n"
+"    runtime = True, # Runtime count\n"
+"    run = True # Run blocking\n"
+")"
+
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:345
+#: bf229e0c06a049878e59a77d99339e4d
+#, fuzzy
+msgid ""
+"\\ **[2023-12-10 17:11:14] Формирование нейросетевой архитектуры модели "
+"для получения оценок по экспертным признакам (видео модальность) …**"
+msgstr ""
+"\\ **[2022-12-11 14:17:39] Formation of the neural network architecture "
+"of the model for obtaining estimates by expert features (video modality) "
+"…**"
+
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:355
+#: f2acc9f587f24dd38f731ddc99eed6d3
+#, fuzzy
+msgid "— Время выполнения: 0.25 сек. —"
+msgstr "— Runtime: 0.661 sec. —"
+
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:-1
+#: 36ea5d43a1614d6fa69a7cd23f80a6a9
+msgid "[8]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:-1
+#: 364afcbbdc584f88a35a1359c77e82d2
+#, fuzzy
+msgid ""
+"# Настройки ядра\n"
+"_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
+"_b5.chunk_size_ = 2000000 # Размер загрузки файла из сети за 1 шаг\n"
+"\n"
+"url = _b5.weights_for_big5_['video']['mupta']['hc']['sberdisk']\n"
+"\n"
+"res_load_video_model_weights_hc = _b5.load_video_model_weights_hc(\n"
+"    url = url, # Полный путь к файлу с весами нейросетевой модели\n"
+"    force_reload = True, # Принудительная загрузка файла с весами "
+"нейросетевой модели из сети\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+"# Core settings\n"
+"_b5.path_to_save_ = './models' # Directory to save the file\n"
+"_b5.chunk_size_ = 2000000 # File download size from network in 1 step\n"
+"\n"
+"url = _b5.weights_for_big5_['video']['hc']['sberdisk']\n"
+"\n"
+"res_load_video_model_weights_hc = _b5_video.load_video_model_weights_hc(\n"
+"    url = url, # Full path to the file with weights of the neural network"
+" model\n"
+"    force_reload = True, # Forced download of a file with weights of a "
+"neural network model from the network\n"
+"    out = True, # Display\n"
+"    runtime = True, # Runtime count\n"
+"    run = True # Run blocking\n"
+")"
+
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:411
+#: 483992c0a5304135b25768dbbe41bae1
+#, fuzzy
+msgid ""
+"\\ **[2023-12-10 17:11:15] Загрузка файла "
+"“vhc_mupta_2022-07-22_10-02-37.h5” 100.0% …**"
+msgstr ""
+"\\ **[2022-12-11 14:18:05] File download “weights_2022-08-27_18-53-35.h5”"
+" (100.0%) …**"
+
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:421
+#: b01570e3da214807a499cd3f47136813
+#, fuzzy
+msgid "— Время выполнения: 0.307 сек. —"
+msgstr "— Runtime: 0.309 sec. —"
+
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:-1
+#: fe5d1c352459472eb1827b2fc3de4ff6
+msgid "[9]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:454
+#: 4da54442552d4605b0980d00320616a4
+msgid ""
+"<pre>\n"
+"Model: &#34;model_3&#34;\n"
+"_________________________________________________________________\n"
+" Layer (type)                Output Shape              Param #\n"
+"=================================================================\n"
+" input_2 (InputLayer)        [(None, 10, 109)]         0\n"
+"\n"
+" lstm_1 (LSTM)               (None, 10, 64)            44544\n"
+"\n"
+" dropout_2 (Dropout)         (None, 10, 64)            0\n"
+"\n"
+" lstm_128_v_hc (LSTM)        (None, 128)               98816\n"
+"\n"
+" dropout_3 (Dropout)         (None, 128)               0\n"
+"\n"
+" dense_1 (Dense)             (None, 5)                 645\n"
+"\n"
+"=================================================================\n"
+"Total params: 144,005\n"
+"Trainable params: 144,005\n"
+"Non-trainable params: 0\n"
+"_________________________________________________________________\n"
+"</pre>"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:480
+#: d5d13e3f49fa4beeb8b0e400135b9974
+msgid ""
+"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
+"Model: \"model\\_3\"\n"
+"\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_"
+"\n"
+" Layer (type)                Output Shape              Param \\#\n"
+"=================================================================\n"
+" input\\_2 (InputLayer)        [(None, 10, 109)]         0\n"
+"\n"
+" lstm\\_1 (LSTM)               (None, 10, 64)            44544\n"
+"\n"
+" dropout\\_2 (Dropout)         (None, 10, 64)            0\n"
+"\n"
+" lstm\\_128\\_v\\_hc (LSTM)        (None, 128)               98816\n"
+"\n"
+" dropout\\_3 (Dropout)         (None, 128)               0\n"
+"\n"
+" dense\\_1 (Dense)             (None, 5)                 645\n"
+"\n"
+"=================================================================\n"
+"Total params: 144,005\n"
+"Trainable params: 144,005\n"
+"Non-trainable params: 0\n"
+"\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_"
+"\n"
+"\\end{sphinxVerbatim}"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:507
+#: 4cd2a446effa4bd7ad6c2b7e5f2d0a5b
+msgid ""
+"Model: \"model_3\"\n"
+"_________________________________________________________________\n"
+" Layer (type)                Output Shape              Param #\n"
+"=================================================================\n"
+" input_2 (InputLayer)        [(None, 10, 109)]         0\n"
+"\n"
+" lstm_1 (LSTM)               (None, 10, 64)            44544\n"
+"\n"
+" dropout_2 (Dropout)         (None, 10, 64)            0\n"
+"\n"
+" lstm_128_v_hc (LSTM)        (None, 128)               98816\n"
+"\n"
+" dropout_3 (Dropout)         (None, 128)               0\n"
+"\n"
+" dense_1 (Dense)             (None, 5)                 645\n"
+"\n"
+"=================================================================\n"
+"Total params: 144,005\n"
+"Trainable params: 144,005\n"
 "Non-trainable params: 0\n"
 "_________________________________________________________________"
 msgstr ""

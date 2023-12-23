@@ -1,0 +1,346 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022-23. Speech and Multimodal Interfaces Laboratory Team
+# This file is distributed under the same license as the OCEANAI package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OCEANAI 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-17 14:43+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:9
+#: 2a6ade73c44a48c4aad05a0f789f54a2
+msgid ""
+"Формирование нейросетевых архитектур моделей и загрузка их весов для "
+"получения оценок персональных качеств (текстовая модальность)"
+msgstr ""
+"Formation of the neural network architecture of the model and downloading its"
+" weights to obtain personality traits scores (text modality)"
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:11
+#: 743311fb539a46edbe94437c08a28704
+msgid "<hr>"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:17
+#: 8f3fa18db81e4b76a4b7428878c1d5ad
+msgid ""
+"``_b5.audio_models_b5_`` - Нейросетевые модели **tf.keras.Model** для "
+"получения оценок персональных качеств"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:29
+#: fe86a15c7f0c47e08ac0f61d3df30abe
+msgid "Импорт необходимых инструментов"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
+#: b0afe3952ea74c47a129c498ca755fca
+msgid "[2]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
+#: 679898fae0ec41b79a5cd8f751b7f22c
+msgid "from oceanai.modules.lab.build import Run"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:51
+#: 839e2391a8074480aac981c3d8867342
+msgid "Сборка"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
+#: e5bff5da7f4345979ebe8c38b2ba7108
+msgid "[3]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
+#: f5a2cdcb9f5e43b7b01fc39837512f8f
+msgid ""
+"_b5 = Run(\n"
+"    lang = 'ru', # Язык\n"
+"    color_simple = '#333', # Цвет обычного текста (шестнадцатеричный код)"
+"\n"
+"    color_info = '#1776D2', # Цвет текста содержащего информацию "
+"(шестнадцатеричный код)\n"
+"    color_err = '#FF0000', # Цвет текста содержащего ошибку "
+"(шестнадцатеричный код)\n"
+"    color_true = '#008001', # Цвет текста содержащего положительную "
+"информацию (шестнадцатеричный код)\n"
+"    bold_text = True, # Жирное начертание текста\n"
+"    num_to_df_display = 30, # Количество строк для отображения в таблицах"
+"\n"
+"    text_runtime = 'Время выполнения', # Текст времени выполнения\n"
+"    metadata = True # Отображение информации о библиотеке\n"
+")"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:81
+#: 036dbe4f103542a69523171a46cd0ce7
+msgid ""
+"\\ **[2023-12-10 17:03:46] OCEANAI - персональные качества личности "
+"человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
+"        Рюмин Дмитрий [dl_03.03.1991@mail.ru]        Карпов Алексей "
+"[karpov@iias.spb.su]    Сопровождающие:        Рюмина Елена "
+"[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
+"Версия: 1.0.0a5    Лицензия: BSD License"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:83
+#: 07e7c55541b54b4e9813114b60b16dac
+msgid "</p>"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:97
+#: dd1e27dd8d9a43a9814723934d40a9d5
+msgid "Формирование нейросетевых архитектур моделей"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
+#: a7518d3efa744ba888f5866a67370e95
+msgid "[4]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
+#: aed5b2c53e144d889abaf562508627e4
+msgid ""
+"res_load_text_model_b5 = _b5.load_text_model_b5(\n"
+"    show_summary = False, # Отображение сформированной нейросетевой "
+"архитектуры модели\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:123
+#: 7903c6d062ab43e9bd4ee068eaea859e
+msgid ""
+"\\ **[2023-12-10 17:03:46] Формирование нейросетевой архитектуры модели "
+"для получения оценок персональных качеств (текстовая модальность) …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:133
+#: b80bc352aaa940d5a6da7363cd829166
+msgid "— Время выполнения: 0.539 сек. —"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:145
+#: f11d68fb96d24f7db4846e2640551d07
+msgid "Загрузка весов нейросетевых моделей"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:157
+#: 4e83e06c50d745db9734995adc183674
+msgid "``FI V2``"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
+#: 3efa29a069b541349812146d9f07b85e
+msgid "[5]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
+#: d7bce8dc43514e6e8ed5a3a584db667f
+msgid ""
+"# Настройки ядра\n"
+"_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
+"_b5.chunk_size_ = 2000000 # Размер загрузки файла из сети за 1 шаг\n"
+"\n"
+"url = _b5.weights_for_big5_['text']['fi']['b5']['sberdisk']\n"
+"\n"
+"res_load_text_model_weights_b5 = _b5.load_text_model_weights_b5(\n"
+"    url = url,\n"
+"    force_reload = False, # Принудительная загрузка файла с весами "
+"нейросетевой модели из сети\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:190
+#: 3f087ae3ce7c4ddd88e016b682474e8d
+msgid ""
+"\\ **[2023-12-10 17:03:46] Загрузка весов нейросетевой модели для "
+"получения оценок персональных качеств (текстовая модальность) …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:201
+#: 3301c25f9e5941a690a181ce5929049d
+msgid "\\ **[2023-12-10 17:03:47] Загрузка файла “ft_fi_2023-12-09_14-25-13.h5”**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:211
+#: 704b7f5732a648a292f5fea49eec1791
+msgid "— Время выполнения: 0.144 сек. —"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:223
+#: d149730a98604b14b094ba259fd26c94
+msgid "``MuPTA``"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
+#: cf1e0e806f67418ea0a480800c80f86a
+msgid "[6]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
+#: 3601ad8283014515b73f334722e84b48
+msgid ""
+"# Настройки ядра\n"
+"_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
+"_b5.chunk_size_ = 2000000 # Размер загрузки файла из сети за 1 шаг\n"
+"\n"
+"url = _b5.weights_for_big5_['text']['mupta']['b5']['sberdisk']\n"
+"\n"
+"res_load_text_model_weights_b5 = _b5.load_text_model_weights_b5(\n"
+"    url = url,\n"
+"    force_reload = False, # Принудительная загрузка файла с весами "
+"нейросетевой модели из сети\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:256
+#: 6dafb603276a4cc6b9a764d0da364603
+msgid ""
+"\\ **[2023-12-10 17:03:47] Загрузка весов нейросетевой модели для "
+"получения оценок персональных качеств (текстовая модальность) …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:267
+#: fc35903d98a946d1b27587215c06964d
+msgid ""
+"\\ **[2023-12-10 17:03:47] Загрузка файла "
+"“ft_mupta_2023-12-09_14-25-13.h5”**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:277
+#: 3e04514ef33f49e2bfb18f2b15ab3d65
+msgid "— Время выполнения: 0.137 сек. —"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:289
+#: adbaad8f13074351a9eb8e4f2eca3c1d
+msgid "Отображение сформированной нейросетевой архитектуры модели"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
+#: 7739fbdd5bd64faf9955f2de55c7c950
+msgid "[7]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
+#: 55347f7d9ded47faac612594fe91a623
+msgid "_b5.text_model_b5_.summary()"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:310
+#: 28cf715fd54741fdb2fa2ce98d5312b0
+msgid ""
+"<pre>\n"
+"Model: &#34;model&#34;\n"
+"__________________________________________________________________________________________________"
+"\n"
+" Layer (type)                   Output Shape         Param #     "
+"Connected to\n"
+"=================================================================================================="
+"\n"
+" input_1 (InputLayer)           [(None, 5)]          0           []\n"
+"\n"
+" input_2 (InputLayer)           [(None, 5)]          0           []\n"
+"\n"
+" tf.concat (TFOpLambda)         (None, 10)           0           "
+"[&#39;input_1[0][0]&#39;,\n"
+"                                                                  "
+"&#39;input_2[0][0]&#39;]\n"
+"\n"
+" dense (Dense)                  (None, 5)            55          "
+"[&#39;tf.concat[0][0]&#39;]\n"
+"\n"
+"=================================================================================================="
+"\n"
+"Total params: 55\n"
+"Trainable params: 55\n"
+"Non-trainable params: 0\n"
+"__________________________________________________________________________________________________"
+"\n"
+"</pre>"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:333
+#: 3e33621018264cccba208528aa13c5a1
+msgid ""
+"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
+"Model: \"model\"\n"
+"\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_"
+"\n"
+" Layer (type)                   Output Shape         Param \\#     "
+"Connected to\n"
+"=================================================================================================="
+"\n"
+" input\\_1 (InputLayer)           [(None, 5)]          0           []\n"
+"\n"
+" input\\_2 (InputLayer)           [(None, 5)]          0           []\n"
+"\n"
+" tf.concat (TFOpLambda)         (None, 10)           0           "
+"['input\\_1[0][0]',\n"
+"                                                                  "
+"'input\\_2[0][0]']\n"
+"\n"
+" dense (Dense)                  (None, 5)            55          "
+"['tf.concat[0][0]']\n"
+"\n"
+"=================================================================================================="
+"\n"
+"Total params: 55\n"
+"Trainable params: 55\n"
+"Non-trainable params: 0\n"
+"\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_"
+"\n"
+"\\end{sphinxVerbatim}"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:357
+#: be7a56600c6540508627e87c2f6c4c86
+msgid ""
+"Model: \"model\"\n"
+"__________________________________________________________________________________________________"
+"\n"
+" Layer (type)                   Output Shape         Param #     "
+"Connected to\n"
+"=================================================================================================="
+"\n"
+" input_1 (InputLayer)           [(None, 5)]          0           []\n"
+"\n"
+" input_2 (InputLayer)           [(None, 5)]          0           []\n"
+"\n"
+" tf.concat (TFOpLambda)         (None, 10)           0           "
+"['input_1[0][0]',\n"
+"                                                                  "
+"'input_2[0][0]']\n"
+"\n"
+" dense (Dense)                  (None, 5)            55          "
+"['tf.concat[0][0]']\n"
+"\n"
+"=================================================================================================="
+"\n"
+"Total params: 55\n"
+"Trainable params: 55\n"
+"Non-trainable params: 0\n"
+"__________________________________________________________________________________________________"
+msgstr ""
+

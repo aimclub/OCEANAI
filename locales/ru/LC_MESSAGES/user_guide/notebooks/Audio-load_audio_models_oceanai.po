@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2022-12-11 13:06+0300\n"
+"POT-Creation-Date: 2023-12-17 14:43+0300\n"
 "PO-Revision-Date: 2022-12-11 13:06+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -18,76 +18,55 @@ msgstr ""
 "Generated-By: Babel 2.11.0\n"
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:9
-#: 05b23ec9fa2c4bb0827d090395b7e9e2
+#: 89d4f5e00a7346339f32c8019dc95194
 msgid ""
 "Формирование нейросетевых архитектур моделей и загрузка их весов для "
-"получения результатов оценки персональных качеств (аудио модальность)"
+"получения оценок персональных качеств (аудио модальность)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:11
-#: 4a9c39c7715642b7871e8c7ea5773079
+#: c579a77cfef6421aaae655d77daf137d
 msgid "<hr>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:17
-#: e25a6fbd376f419a83e653193172fd8f
+#: f6a5ae0a30a24cfba4e43cb6304bb430
 msgid ""
 "``_b5.audio_models_b5_`` - Нейросетевые модели **tf.keras.Model** для "
-"получения результатов оценки персональных качеств"
+"получения оценок персональных качеств"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:29
-#: ccd756b7b8d645f5bab92568ed652f12
+#: 30086edd41ae4e0b816b329b84fe8da4
 msgid "Импорт необходимых инструментов"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:-1
-#: 45344266c1514018b8a354800e1246ea
+#: 9d873b5a75e240e7a0b21c855d872553
 msgid "[2]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:-1
-#: 3dbe515269d7495d96a4a88855a3eb13
+#: 7666567858004f7a865293baa6107aa4
 msgid "from oceanai.modules.lab.build import Run"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:51
-#: 6cad8a627d04436fa198807ad2ba820f
-msgid ""
-"<pre>\n"
-"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
-"</pre>"
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:57
-#: b6b54bc9cdd444a089908e22783925e3
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
-"\\end{sphinxVerbatim}"
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:64
-#: 3631a51ed78046abb14af178bf7cd219
-msgid "INFO: Created TensorFlow Lite XNNPACK delegate for CPU."
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:76
-#: a0beefe046af498887c2a86d4e434d30
+#: ea94f58748814869988071d4ebcdd064
 msgid "Сборка"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:-1
-#: 444b3f731402470598186036dd5a46d7
+#: e7e3336d3b6043fc9f9fc4c3b8c22347
 msgid "[3]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:-1
-#: f534612b1c824f358619ba02e097da82
+#: 779ec1978e4f45f2aefd6973b7cc63b7
 msgid ""
 "_b5 = Run(\n"
 "    lang = 'ru', # Язык\n"
-"    color_simple = '#FFF', # Цвет обычного текста (шестнадцатеричный код)"
+"    color_simple = '#333', # Цвет обычного текста (шестнадцатеричный код)"
 "\n"
 "    color_info = '#1776D2', # Цвет текста содержащего информацию "
 "(шестнадцатеричный код)\n"
@@ -103,34 +82,34 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:106
-#: 5ab4b71d04e04e4596358857cfc09519
+#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:81
+#: c1048dc8b31e4eb198e525123c801e38
 msgid ""
-"\\ **[2022-12-11 13:05:23] OCEANAI - персональные качества личности "
+"\\ **[2023-12-14 11:10:51] OCEANAI - персональные качества личности "
 "человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
 "        Рюмин Дмитрий [dl_03.03.1991@mail.ru]        Карпов Алексей "
 "[karpov@iias.spb.su]    Сопровождающие:        Рюмина Елена "
 "[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
-"Версия: 1.0.0a2    Лицензия: BSD License"
+"Версия: 1.0.0a16    Лицензия: BSD License"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:108
-#: dc5c65205c134699a6dd76363b007cfa
+#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:83
+#: a99ba4d8c30c4e6e92fd13aa441ee65a
 msgid "</p>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:122
-#: c9aa9d844f164855b6f3408c66951034
+#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:97
+#: f4242c8447824c5bb2fc0f5e7cb754d5
 msgid "Формирование нейросетевых архитектур моделей"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:-1
-#: 8096e800ad4f4c558c34d8935368be27
+#: 5f7ac92c8160418abcc36ce61d560778
 msgid "[4]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:-1
-#: 45f96d20c17c477baf90e54a76d9a6b1
+#: 6ba7d9f5059c419b8ccde478cee92533
 msgid ""
 "res_load_audio_models_b5 = _b5.load_audio_models_b5(\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
@@ -141,53 +120,56 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:148
-#: 8d3d6fbf60814fd39b15287934b97b25
+#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:123
+#: cd5e86ee9b8242098f2b67bcaed343ff
 msgid ""
-"\\ **[2022-12-11 13:05:33] Формирование нейросетевых архитектур моделей "
+"\\ **[2023-12-14 11:10:51] Формирование нейросетевых архитектур моделей "
 "для получения результатов оценки персональных качеств (аудио модальность)"
 " …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:158
-#: 9d548580b2fe478082501631e6b96bad
-msgid "— Время выполнения: 0.133 сек. —"
+#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:133
+#: f40724e4552548fc91e6aa2e4f9e41e3
+msgid "— Время выполнения: 0.157 сек. —"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:170
-#: 89a97817218143cebeaca40b2f77e763
+#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:145
+#: bc54814bc47e4545987a61bf07e92b49
 msgid "Загрузка весов нейросетевых моделей"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:-1
-#: 7ce4f14f96d54c0abbfe555074a0212f
+#: ae2377235e7d4256ab433083fa7d4b11
 msgid "[5]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:-1
-#: 2d69b3957f4c49c88309496c47d7796c
+#: 80ec17fa3ddb44b8af7b72f838b7e43b
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
 "_b5.chunk_size_ = 2000000 # Размер загрузки файла из сети за 1 шаг\n"
 "\n"
 "url_openness = "
-"_b5.weights_for_big5_['audio']['b5']['openness']['sberdisk']\n"
+"_b5.weights_for_big5_['audio']['fi']['b5']['openness']['sberdisk']\n"
 "url_conscientiousness = "
-"_b5.weights_for_big5_['audio']['b5']['conscientiousness']['sberdisk']\n"
+"_b5.weights_for_big5_['audio']['fi']['b5']['conscientiousness']['sberdisk']"
+"\n"
 "url_extraversion = "
-"_b5.weights_for_big5_['audio']['b5']['extraversion']['sberdisk']\n"
+"_b5.weights_for_big5_['audio']['fi']['b5']['extraversion']['sberdisk']\n"
 "url_agreeableness = "
-"_b5.weights_for_big5_['audio']['b5']['agreeableness']['sberdisk']\n"
-"url_neuroticism = "
-"_b5.weights_for_big5_['audio']['b5']['neuroticism']['sberdisk']\n"
+"_b5.weights_for_big5_['audio']['fi']['b5']['agreeableness']['sberdisk']\n"
+"url_non_neuroticism = "
+"_b5.weights_for_big5_['audio']['fi']['b5']['non_neuroticism']['sberdisk']"
+"\n"
 "\n"
 "res_load_audio_models_weights_b5 = _b5.load_audio_models_weights_b5(\n"
 "    url_openness = url_openness, # Открытость опыту\n"
 "    url_conscientiousness = url_conscientiousness, # Добросовестность\n"
 "    url_extraversion = url_extraversion, # Экстраверсия\n"
 "    url_agreeableness = url_agreeableness, # Доброжелательность\n"
-"    url_neuroticism = url_neuroticism, # Нейротизм\n"
+"    url_non_neuroticism = url_non_neuroticism, # Эмоциональная "
+"стабильность\n"
 "    force_reload = True, # Принудительная загрузка файла с весами "
 "нейросетевой модели из сети\n"
 "    out = True, # Отображение\n"
@@ -196,95 +178,95 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:211
-#: 80db658272c348c5a7d252b202731a12
+#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:186
+#: f94137817f3b4a398b75903da23a8bf3
 msgid ""
-"\\ **[2022-12-11 13:06:11] Загрузка весов нейросетевых моделей для "
+"\\ **[2023-12-14 11:11:23] Загрузка весов нейросетевых моделей для "
 "получения результатов оценки персональных качеств (аудио модальность) …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:222
-#: 5cb3babd3d3c400991c0da1d57ac7f60
+#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:197
+#: 7805553b4baf4d159400b6dd03c09c6d
 msgid ""
-"\\ **[2022-12-11 13:06:11] Загрузка файла "
-"“weights_2022-06-15_16-16-20.h5” (100.0%) …** Открытость опыту"
+"\\ **[2023-12-14 11:11:23] Загрузка файла "
+"“weights_2022-06-15_16-16-20.h5” 100.0% …** Открытость опыту"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:233
-#: 6a99f092bc2e4d098eb71a460dd52903
+#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:208
+#: d10a135000c842c58162299adbc27ddb
 msgid ""
-"\\ **[2022-12-11 13:06:11] Загрузка файла "
-"“weights_2022-06-15_16-21-57.h5” (100.0%) …** Добросовестность"
+"\\ **[2023-12-14 11:11:23] Загрузка файла "
+"“weights_2022-06-15_16-21-57.h5” 100.0% …** Добросовестность"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:244
-#: 74d5e246dc764edd8ee3c90d0957ef33
+#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:219
+#: 4d48f453fd5449a6941d9bc6524132d1
 msgid ""
-"\\ **[2022-12-11 13:06:12] Загрузка файла "
-"“weights_2022-06-15_16-26-41.h5” (100.0%) …** Экстраверсия"
+"\\ **[2023-12-14 11:11:23] Загрузка файла "
+"“weights_2022-06-15_16-26-41.h5” 100.0% …** Экстраверсия"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:255
-#: 1458d8312868407b9faf066cb29aed03
+#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:230
+#: 0cab6f376e0743c9989ab8eed539face
 msgid ""
-"\\ **[2022-12-11 13:06:12] Загрузка файла "
-"“weights_2022-06-15_16-32-51.h5” (100.0%) …** Доброжелательность"
+"\\ **[2023-12-14 11:11:23] Загрузка файла "
+"“weights_2022-06-15_16-32-51.h5” 100.0% …** Доброжелательность"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:266
-#: c003152dd4a34363b5a7a537ad763460
+#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:241
+#: bdc788e2d1034767859a54b4796d48f6
 msgid ""
-"\\ **[2022-12-11 13:06:12] Загрузка файла "
-"“weights_2022-06-15_16-37-46.h5” (100.0%) …** Нейротизм"
+"\\ **[2023-12-14 11:11:24] Загрузка файла "
+"“weights_2022-06-15_16-37-46.h5” 100.0% …** Эмоциональная стабильность"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:276
-#: 4186cf4a41464550bdb11649b15047ac
-msgid "— Время выполнения: 1.055 сек. —"
+#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:251
+#: b6c56b5dbc474498ac67b149508c9bc9
+msgid "— Время выполнения: 0.907 сек. —"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:288
-#: 93de0c9699704c10866cea2d912eff50
+#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:263
+#: 71dfa45ac8474c63bca4c45a142f991a
 msgid "Отображение сформированной нейросетевой архитектуры модели"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:290
-#: 274c12f4159f4ed4a99655e0cd46451a
+#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:265
+#: ebb91129e766484f8580338f30ef8d91
 msgid "``openness`` - Открытость опыту"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:291
-#: e82ed68ae8024506ab401213438469e0
+#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:266
+#: bf71e672132744a3848a1a82c531902e
 msgid "``conscientiousness`` - Добросовестность"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:292
-#: 421e004029e5431f8cd203881b2e40da
+#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:267
+#: 76cc13c85a344e8d96b69224e19371f7
 msgid "``extraversion`` - Экстраверсия"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:293
-#: af2c838c7ce94e4caaff68ba9bbc4927
+#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:268
+#: fc6e30b8298a45de92df8ff4a3782dff
 msgid "``agreeableness`` - Доброжелательность"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:294
-#: fd21a4db55a64ffeabab936764fad619
-msgid "``neuroticism`` - Нейротизм"
+#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:269
+#: 8a0cec09bca549a48a8359612227b17a
+msgid "``non_neuroticism`` - Эмоциональная стабильность"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:-1
-#: e897b76add034390aa8acc85e2563e68
+#: 780473a95aa14f95940d13df9077fd40
 msgid "[6]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:-1
-#: b4c380572f2149bbab7897d8e206b56c
+#: c7dbbaf84f674c2e9add6a7ea1363a1d
 msgid "_b5.audio_models_b5_['openness'].summary()"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:315
-#: 8888a87a2e174965b8afb406623818c3
+#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:290
+#: ec836d6f0acb48839ee5b5d477cc736a
 msgid ""
 "<pre>\n"
 "Model: &#34;model&#34;\n"
@@ -298,15 +280,15 @@ msgid ""
 " activ_1 (Activation)        (None, 1)                 0\n"
 "\n"
 "=================================================================\n"
-"Total params: 33\n"
-"Trainable params: 33\n"
-"Non-trainable params: 0\n"
+"Total params: 33 (132.00 Byte)\n"
+"Trainable params: 33 (132.00 Byte)\n"
+"Non-trainable params: 0 (0.00 Byte)\n"
 "_________________________________________________________________\n"
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:335
-#: ffdc4d728004403c907e9c57a85aaed7
+#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:310
+#: a61f6ff9ad6f42ad8bbb7d86a6c40e81
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "Model: \"model\"\n"
@@ -321,16 +303,16 @@ msgid ""
 " activ\\_1 (Activation)        (None, 1)                 0\n"
 "\n"
 "=================================================================\n"
-"Total params: 33\n"
-"Trainable params: 33\n"
-"Non-trainable params: 0\n"
+"Total params: 33 (132.00 Byte)\n"
+"Trainable params: 33 (132.00 Byte)\n"
+"Non-trainable params: 0 (0.00 Byte)\n"
 "\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_"
 "\n"
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:356
-#: ea0a4265553549a08b19cd3bd1ec775f
+#: ../../source/user_guide/notebooks/Audio-load_audio_models_oceanai.ipynb:331
+#: b20716a055834ea89b57300f81576b52
 msgid ""
 "Model: \"model\"\n"
 "_________________________________________________________________\n"
@@ -343,8 +325,8 @@ msgid ""
 " activ_1 (Activation)        (None, 1)                 0\n"
 "\n"
 "=================================================================\n"
-"Total params: 33\n"
-"Trainable params: 33\n"
-"Non-trainable params: 0\n"
+"Total params: 33 (132.00 Byte)\n"
+"Trainable params: 33 (132.00 Byte)\n"
+"Non-trainable params: 0 (0.00 Byte)\n"
 "_________________________________________________________________"
 msgstr ""

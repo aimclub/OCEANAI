@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2022-12-11 13:33+0300\n"
+"POT-Creation-Date: 2023-12-17 14:43+0300\n"
 "PO-Revision-Date: 2022-12-11 13:33+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -18,67 +18,46 @@ msgstr ""
 "Generated-By: Babel 2.11.0\n"
 
 #: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:9
-#: 750038ebd939449e9dc719feeb58f448
+#: c059c004a8a04b9c9472fbc201c54849
 msgid "Загрузка файла из URL"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:11
-#: a7fbf589d2754c6e9087e4300366bb1f
+#: 2a9b23d59bae453c8545f65d3f6d9028
 msgid "<hr>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:25
-#: fe3b8e5b52c7440da2c04c47f38fef49
+#: 824ed1beed32468e863f227ccd4621df
 msgid "Импорт необходимых инструментов"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:-1
-#: 07071a8479c84960bad627b25aa800bc
+#: d26cb4e2310c4863925a33a50af541a2
 msgid "[2]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:-1
-#: 980cb8c5424d47daaa645cc040f9f8f4
+#: b9756306957d41ecbe495c1306faaab7
 msgid "from oceanai.modules.lab.build import Run"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:47
-#: 26de5b6dcee747ff846a3616c41eb460
-msgid ""
-"<pre>\n"
-"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
-"</pre>"
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:53
-#: dc1d75b941a04da6b03e5870360a4d44
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
-"\\end{sphinxVerbatim}"
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:60
-#: 59c18f0dedb24d7bae13e5f8a3f9fa80
-msgid "INFO: Created TensorFlow Lite XNNPACK delegate for CPU."
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:72
-#: 47ee0b28f7c54aaf970597d635e72ab4
+#: 19f784ff6f1e4e29914005b1cc6ea0a6
 msgid "Сборка"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:-1
-#: abe8d430fbd3493bb9cd4f4efe39628d
+#: 04b3ab8909134775a19d037fb869a77d
 msgid "[3]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:-1
-#: 619e3b124d5c48eea83e256bedbae391
+#: cc71e7b2caa244f89a4323c51dd5d775
 msgid ""
 "_b5 = Run(\n"
 "    lang = 'ru', # Язык\n"
-"    color_simple = '#FFF', # Цвет обычного текста (шестнадцатеричный код)"
+"    color_simple = '#333', # Цвет обычного текста (шестнадцатеричный код)"
 "\n"
 "    color_info = '#1776D2', # Цвет текста содержащего информацию "
 "(шестнадцатеричный код)\n"
@@ -94,34 +73,34 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:102
-#: 8081b049f60d4aac9fc3b2faed93627b
+#: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:77
+#: 33a0c7efa50942e185ade55d7e5a4140
 msgid ""
-"\\ **[2022-12-11 13:31:54] OCEANAI - персональные качества личности "
+"\\ **[2023-12-10 16:49:03] OCEANAI - персональные качества личности "
 "человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
 "        Рюмин Дмитрий [dl_03.03.1991@mail.ru]        Карпов Алексей "
 "[karpov@iias.spb.su]    Сопровождающие:        Рюмина Елена "
 "[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
-"Версия: 1.0.0a2    Лицензия: BSD License"
+"Версия: 1.0.0a5    Лицензия: BSD License"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:104
-#: be6aafbbf2174474a266d9adf83236d5
+#: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:79
+#: 2cdd74be061c4957acb5f7f584fdd4cb
 msgid "</p>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:118
-#: 069307bb43ea4a309cc8baec863dec30
+#: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:93
+#: 29025a3ce97d4a5995bceeaa0484f2b4
 msgid "Процесс загрузки"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:-1
-#: 1a26c1f995924b3d871ec477e80a86fc
+#: fdd551be9b264ce3aac84a2f63822284
 msgid "[4]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:-1
-#: a59cad8d47094ae38fce53b4512c7b07
+#: a2c0a94d99f746dc9d0be3ce8aeb62b4
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -138,45 +117,45 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:149
-#: 33b6ecbb90d94433892ef386f55baedd
+#: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:124
+#: c5ccac436a414491816560c5a1df841a
 msgid ""
-"\\ **[2022-12-11 13:31:56] Загрузка файла "
-"“weights_2022-05-05_11-27-55.h5” (100.0%) …**"
+"\\ **[2023-12-10 16:49:04] Загрузка файла "
+"“weights_2022-05-05_11-27-55.h5” 100.0% …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:159
-#: ee0782bd841240268fcf02fe2149c329
-msgid "— Время выполнения: 0.239 сек. —"
+#: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:134
+#: 3f259bfb0d974eaf81d6dce36e310461
+msgid "— Время выполнения: 0.214 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:-1
-#: 782430c0cd2a46d9892f7752472d6267 e1e8907e09814bdf99b62029c3eb23c0
+#: 7598b1b9d33a47fe91793b8d50aa130b f02a4275f5074ed5b48059bba162130c
 msgid "[5]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:-1
-#: f88a5b7c836a4678bfb842688ad07f40
+#: db6b67370a564acb8a8d5ced51d6dc6a
 msgid "res_download_file_from_url"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:181
-#: 318682327a494aaaa32a4b8ef49a2acf
+#: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:156
+#: 6c534eefae3744c0bfd194c7da2b9add
 msgid ""
 "<pre>\n"
 "200\n"
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:187
-#: 570d4e646055415cb2fe7b06e402370b
+#: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:162
+#: 7df136683e4145e49ec3c055b1bbed79
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "200\n"
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:194
-#: 69b97f0a82c74ad4bf1eedc685e693f3
+#: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:169
+#: 1c8265befc8348768929850a9051fe60
 msgid "200"
 msgstr ""

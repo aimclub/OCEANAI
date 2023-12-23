@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2022-12-11 14:53+0300\n"
+"POT-Creation-Date: 2023-12-17 14:43+0300\n"
 "PO-Revision-Date: 2022-12-11 14:53+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -18,76 +18,55 @@ msgstr ""
 "Generated-By: Babel 2.11.0\n"
 
 #: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:9
-#: 4efa7e70b5174224be2fcbba0cc3368c
+#: a18ee549e03646e68301a96291780f92
 msgid ""
 "Формирование нейросетевых архитектур моделей и загрузка их весов для "
 "получения результатов оценки персональных качеств (видео модальность)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:11
-#: f3f634f3e13041a7b14d3dc4ad51204a
+#: f9089078a45742c8b72545257fa12976
 msgid "<hr>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:17
-#: f2d87701648440d2bb66acfa03400aa0
+#: 014ce7c1166b425a923d7d6d7b1d9211
 msgid ""
 "``_b5.video_models_b5_`` - Нейросетевые модели **tf.keras.Model** для "
 "получения результатов оценки персональных качеств"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:29
-#: 5f7bc0b214ea4899bf5d55e5d2bfb778
+#: 4e0df26f8edd4e36b4378bc0f52e082a
 msgid "Импорт необходимых инструментов"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:-1
-#: dab93c561b9b416cb440af3335d16305
+#: 9002757c8a7543dc9de84c637f3abce9
 msgid "[2]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:-1
-#: 31e3579f1805465d8ef2caf3f16282e9
+#: 0a2756a90394429b8da8a39ef1e25cbf
 msgid "from oceanai.modules.lab.build import Run"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:51
-#: d89fc2f6a3b04393a5dd52f3f49fbacb
-msgid ""
-"<pre>\n"
-"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
-"</pre>"
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:57
-#: 4c62340f20934d909f1948a25d5cdf14
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
-"\\end{sphinxVerbatim}"
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:64
-#: 232fea60b7614e2dbc24122ffcd7bc42
-msgid "INFO: Created TensorFlow Lite XNNPACK delegate for CPU."
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:76
-#: 77fe8e3585434f99babc295831caa3b6
+#: fbe20295d1d84d16a4877dcc1f0979b0
 msgid "Сборка"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:-1
-#: 5fcde5917a5c40fc99c85fbe432a280e
+#: 38d016656cca4898ae0b2c23486283c3
 msgid "[3]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:-1
-#: 2353ddac30fe4ead8b957f9bfca1ac68
+#: 53c19233fd6249c9b1c76e6185722682
 msgid ""
 "_b5 = Run(\n"
 "    lang = 'ru', # Язык\n"
-"    color_simple = '#FFF', # Цвет обычного текста (шестнадцатеричный код)"
+"    color_simple = '#333', # Цвет обычного текста (шестнадцатеричный код)"
 "\n"
 "    color_info = '#1776D2', # Цвет текста содержащего информацию "
 "(шестнадцатеричный код)\n"
@@ -103,34 +82,34 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:106
-#: 50575210b4da42c3af31fdb263d98a9b
+#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:81
+#: 71ea0883f698459b8a6c14b11e767066
 msgid ""
-"\\ **[2022-12-11 14:50:01] OCEANAI - персональные качества личности "
+"\\ **[2023-12-14 21:04:19] OCEANAI - персональные качества личности "
 "человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
 "        Рюмин Дмитрий [dl_03.03.1991@mail.ru]        Карпов Алексей "
 "[karpov@iias.spb.su]    Сопровождающие:        Рюмина Елена "
 "[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
-"Версия: 1.0.0a2    Лицензия: BSD License"
+"Версия: 1.0.0a16    Лицензия: BSD License"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:108
-#: f7b961ab3c7d4aa497889359206feca2
+#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:83
+#: e2598ada08044a2c93e0fca58cebaaf5
 msgid "</p>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:122
-#: 81acce176aaf474e91b8d45efd1d5911
-msgid "Формирование нейросетевых архитектур моделей"
+#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:97
+#: f1edf26b5a5646c2838a8a45c352874b
+msgid "Формирование нейросетевых архитектур моделей (``FI V2``)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:-1
-#: 404174ab314040bcaf52a18c4d8c622b
+#: 4739917c3598447e907cb843466adfdd
 msgid "[4]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:-1
-#: 5d30f05776f9405790b69f627328e1b4
+#: 4d68cd0457f14e2dbc5bae624ad0a9f3
 msgid ""
 "res_load_video_models_b5 = _b5.load_video_models_b5(\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
@@ -141,53 +120,55 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:148
-#: e150e90ab2294dadb3519d17bf73e4f5
+#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:123
+#: d63713a25b1e4e8d9c8d15898fb44756
 msgid ""
-"\\ **[2022-12-11 14:52:35] Формирование нейросетевых архитектур моделей "
+"\\ **[2023-12-14 21:04:19] Формирование нейросетевых архитектур моделей "
 "для получения результатов оценки персональных качеств (видео модальность)"
 " …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:158
-#: c2924a20938e453798236f5f25285d5e
-msgid "— Время выполнения: 0.327 сек. —"
+#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:133
+#: 2b33a5745bcc49379389eaca7a302a7e
+msgid "— Время выполнения: 0.094 сек. —"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:170
-#: 07be6e5c951e4ebc8290dfa23897258b
+#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:145
+#: 845fcbca562e4357aa7737c117911d22
 msgid "Загрузка весов нейросетевых моделей"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:-1
-#: 1ab0ba3103734ae7899a59e577069713
+#: ccf5eb6068d44d3a8b4c2221c77a4b2e
 msgid "[5]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:-1
-#: 2caa0cebbaa9449380244d60022d4315
+#: 5fa2672943a74212a85e890effb2c7df
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
 "_b5.chunk_size_ = 2000000 # Размер загрузки файла из сети за 1 шаг\n"
 "\n"
 "url_openness = "
-"_b5.weights_for_big5_['video']['b5']['openness']['sberdisk']\n"
+"_b5.weights_for_big5_['video']['fi']['b5']['openness']['sberdisk']\n"
 "url_conscientiousness = "
-"_b5.weights_for_big5_['video']['b5']['conscientiousness']['sberdisk']\n"
+"_b5.weights_for_big5_['video']['fi']['b5']['conscientiousness']['sberdisk']"
+"\n"
 "url_extraversion = "
-"_b5.weights_for_big5_['video']['b5']['extraversion']['sberdisk']\n"
+"_b5.weights_for_big5_['video']['fi']['b5']['extraversion']['sberdisk']\n"
 "url_agreeableness = "
-"_b5.weights_for_big5_['video']['b5']['agreeableness']['sberdisk']\n"
-"url_neuroticism = "
-"_b5.weights_for_big5_['video']['b5']['neuroticism']['sberdisk']\n"
+"_b5.weights_for_big5_['video']['fi']['b5']['agreeableness']['sberdisk']\n"
+"url_non_neuroticism = "
+"_b5.weights_for_big5_['video']['fi']['b5']['non_neuroticism']['sberdisk']"
+"\n"
 "\n"
 "res_load_video_models_weights_b5 = _b5.load_video_models_weights_b5(\n"
 "    url_openness = url_openness, # Открытость опыту\n"
 "    url_conscientiousness = url_conscientiousness, # Добросовестность\n"
 "    url_extraversion = url_extraversion, # Экстраверсия\n"
 "    url_agreeableness = url_agreeableness, # Доброжелательность\n"
-"    url_neuroticism = url_neuroticism, # Нейротизм\n"
+"    url_non_neuroticism = url_non_neuroticism, # Нейротизм\n"
 "    force_reload = True, # Принудительная загрузка файла с весами "
 "нейросетевой модели из сети\n"
 "    out = True, # Отображение\n"
@@ -196,95 +177,95 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:211
-#: 02faa95d948f46e0a3aefb229aeea4a3
+#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:186
+#: 751c18a5aa8d48048b1fdbe4c4020707
 msgid ""
-"\\ **[2022-12-11 14:53:02] Загрузка весов нейросетевых моделей для "
+"\\ **[2023-12-14 21:04:19] Загрузка весов нейросетевых моделей для "
 "получения результатов оценки персональных качеств (видео модальность) …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:222
-#: a0fb6f9b88a84a9485d5033959c488c0
+#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:197
+#: e24559db78494e36b07925e6bb96ed8a
 msgid ""
-"\\ **[2022-12-11 14:53:03] Загрузка файла "
-"“weights_2022-06-15_16-46-30.h5” (100.0%) …** Открытость опыту"
+"\\ **[2023-12-14 21:04:19] Загрузка файла "
+"“weights_2022-06-15_16-46-30.h5” 100.0% …** Открытость опыту"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:233
-#: d8553eb945884d3e8f9493f10c8c49e5
+#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:208
+#: c31ef345b5b541d5bb72e640d8110221
 msgid ""
-"\\ **[2022-12-11 14:53:03] Загрузка файла "
-"“weights_2022-06-15_16-48-50.h5” (100.0%) …** Добросовестность"
+"\\ **[2023-12-14 21:04:20] Загрузка файла "
+"“weights_2022-06-15_16-48-50.h5” 100.0% …** Добросовестность"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:244
-#: 88164e70af054686bfd7dfd4ef7ce8fe
+#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:219
+#: 4e7e8633fd7b46318f6b8c395e181a23
 msgid ""
-"\\ **[2022-12-11 14:53:03] Загрузка файла "
-"“weights_2022-06-15_16-54-06.h5” (100.0%) …** Экстраверсия"
+"\\ **[2023-12-14 21:04:20] Загрузка файла "
+"“weights_2022-06-15_16-54-06.h5” 100.0% …** Экстраверсия"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:255
-#: 484f23cdf7404ead8c7786331fc26441
+#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:230
+#: 8738db7f9e1f41c8ac4fca2323c223fa
 msgid ""
-"\\ **[2022-12-11 14:53:03] Загрузка файла "
-"“weights_2022-06-15_17-02-03.h5” (100.0%) …** Доброжелательность"
+"\\ **[2023-12-14 21:04:20] Загрузка файла "
+"“weights_2022-06-15_17-02-03.h5” 100.0% …** Доброжелательность"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:266
-#: 56be4dc41c9a4da6aff8fba2dd32db24
+#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:241
+#: 415435b01cc84723a3367c9350f24291
 msgid ""
-"\\ **[2022-12-11 14:53:04] Загрузка файла "
-"“weights_2022-06-15_17-06-15.h5” (100.0%) …** Нейротизм"
+"\\ **[2023-12-14 21:04:20] Загрузка файла "
+"“weights_2022-06-15_17-06-15.h5” 100.0% …** Эмоциональная стабильность"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:276
-#: b605ce0c08a9407aac60d3ea774509fb
-msgid "— Время выполнения: 1.346 сек. —"
+#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:251
+#: 4ab8628868054692aeef7ccd7deb74ce
+msgid "— Время выполнения: 0.998 сек. —"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:288
-#: 2757877316f04a4aab168a094b5a9755
+#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:263
+#: f7d02bbddd9643188e176ecf9243b4b4
 msgid "Отображение сформированной нейросетевой архитектуры модели"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:290
-#: c8013ce2030d4a85ac0fd99abe58aa1d
+#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:265
+#: fe0feb239c5a487696362724beb25822
 msgid "``openness`` - Открытость опыту"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:291
-#: 4b451195cd474a0daf9349376a86cfe2
+#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:266
+#: 22a2bd3c696c401d9003c96ff1f8c9ed
 msgid "``conscientiousness`` - Добросовестность"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:292
-#: e45b2aed29084b44a105675cd641aff5
+#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:267
+#: 5bbd9e1804d24c6a86e5c6b206020a41
 msgid "``extraversion`` - Экстраверсия"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:293
-#: 03c279e3c9984f57b3116453ca23259a
+#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:268
+#: 50d0e31f39f943da9833b6da014c6bf3
 msgid "``agreeableness`` - Доброжелательность"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:294
-#: 15a1832a47994fd2a91cf002191d9dd3
-msgid "``neuroticism`` - Нейротизм"
+#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:269
+#: a530d4ad60ee428e8333c4c0befbd0e3
+msgid "``non_neuroticism`` - Эмоциональная стабильность"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:-1
-#: f35918411c1c421484d0b0ee62d2bf22
+#: 7e9411fa108d4aaabece3e6ec725e282
 msgid "[6]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:-1
-#: 31668a7c8e4d4d5192f85ad44478c1a0
+#: 28304297a20e48a2b9cf9ed0d87207af
 msgid "_b5.video_models_b5_['openness'].summary()"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:315
-#: 649709cb0760423f96171b2ee9ebb88f
+#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:290
+#: d139f43e9bdc46b0ae1b8bd5d57f6824
 msgid ""
 "<pre>\n"
 "Model: &#34;model&#34;\n"
@@ -298,15 +279,15 @@ msgid ""
 " activ_1 (Activation)        (None, 1)                 0\n"
 "\n"
 "=================================================================\n"
-"Total params: 33\n"
-"Trainable params: 33\n"
-"Non-trainable params: 0\n"
+"Total params: 33 (132.00 Byte)\n"
+"Trainable params: 33 (132.00 Byte)\n"
+"Non-trainable params: 0 (0.00 Byte)\n"
 "_________________________________________________________________\n"
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:335
-#: f6e7c74421444338885931e07573c632
+#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:310
+#: dec94c4ce4e04b6388a3dfb9cdd1d991
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "Model: \"model\"\n"
@@ -321,16 +302,16 @@ msgid ""
 " activ\\_1 (Activation)        (None, 1)                 0\n"
 "\n"
 "=================================================================\n"
-"Total params: 33\n"
-"Trainable params: 33\n"
-"Non-trainable params: 0\n"
+"Total params: 33 (132.00 Byte)\n"
+"Trainable params: 33 (132.00 Byte)\n"
+"Non-trainable params: 0 (0.00 Byte)\n"
 "\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_"
 "\n"
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:356
-#: 955f632043224eada367812013c21685
+#: ../../source/user_guide/notebooks/Video-load_video_models_oceanai.ipynb:331
+#: bb69f8713c2d4d7282e758c7605be501
 msgid ""
 "Model: \"model\"\n"
 "_________________________________________________________________\n"
@@ -343,8 +324,8 @@ msgid ""
 " activ_1 (Activation)        (None, 1)                 0\n"
 "\n"
 "=================================================================\n"
-"Total params: 33\n"
-"Trainable params: 33\n"
-"Non-trainable params: 0\n"
+"Total params: 33 (132.00 Byte)\n"
+"Trainable params: 33 (132.00 Byte)\n"
+"Non-trainable params: 0 (0.00 Byte)\n"
 "_________________________________________________________________"
 msgstr ""
