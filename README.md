@@ -92,40 +92,40 @@ The **[OCEANAI](https://oceanai.readthedocs.io/en/latest/)** library was tested 
 ### Journals
 
 ```bibtex
-    @article{ryumina22_neurocomputing,
-        author = {Elena Ryumina and Denis Dresvyanskiy and Alexey Karpov},
-        title = {In Search of a Robust Facial Expressions Recognition Model: A Large-Scale Visual Cross-Corpus Study},
-        journal = {Neurocomputing},
-        volume = {514},
-        pages = {435-450},
-        year = {2022},
-        doi = {https://doi.org/10.1016/j.neucom.2022.10.013},
-    }
+@article{ryumina22_neurocomputing,
+    author = {Elena Ryumina and Denis Dresvyanskiy and Alexey Karpov},
+    title = {In Search of a Robust Facial Expressions Recognition Model: A Large-Scale Visual Cross-Corpus Study},
+    journal = {Neurocomputing},
+    volume = {514},
+    pages = {435-450},
+    year = {2022},
+    doi = {https://doi.org/10.1016/j.neucom.2022.10.013},
+}
 ```
 
 ```bibtex
-    @article{ryumina24_eswa,
-        author = {Elena Ryumina and Maxim Markitantov and Dmitry Ryumin and Alexey Karpov},
-        title = {OCEAN-AI Framework with EmoFormer Cross-Hemiface Attention Approach for Personality Traits Assessment},
-        journal = {Expert Systems with Applications},
-        volume = {239},
-        pages = {122441},
-        year = {2024},
-        doi = {https://doi.org/10.1016/j.eswa.2023.122441},
-    }
+@article{ryumina24_eswa,
+    author = {Elena Ryumina and Maxim Markitantov and Dmitry Ryumin and Alexey Karpov},
+    title = {OCEAN-AI Framework with EmoFormer Cross-Hemiface Attention Approach for Personality Traits Assessment},
+    journal = {Expert Systems with Applications},
+    volume = {239},
+    pages = {122441},
+    year = {2024},
+    doi = {https://doi.org/10.1016/j.eswa.2023.122441},
+}
 ```
 
 ### Conferences
 
 ```bibtex
-    @inproceedings{ryumina23_interspeech,
-        author = {Elena Ryumina and Dmitry Ryumin and Maxim Markitantov and Heysem Kaya and Alexey Karpov},
-        title = {Multimodal Personality Traits Assessment (MuPTA) Corpus: The Impact of Spontaneous and Read Speech},
-        year = {2023},
-        booktitle = {INTERSPEECH},
-        pages = {4049--4053},
-        doi = {https://doi.org/10.21437/Interspeech.2023-1686},
-    }
+@inproceedings{ryumina23_interspeech,
+    author = {Elena Ryumina and Dmitry Ryumin and Maxim Markitantov and Heysem Kaya and Alexey Karpov},
+    title = {Multimodal Personality Traits Assessment (MuPTA) Corpus: The Impact of Spontaneous and Read Speech},
+    year = {2023},
+    booktitle = {INTERSPEECH},
+    pages = {4049--4053},
+    doi = {https://doi.org/10.21437/Interspeech.2023-1686},
+}
 ```
 
 ---
