@@ -7,61 +7,62 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2022-12-01 11:06+0300\n"
+"POT-Creation-Date: 2023-12-23 15:27+0300\n"
 "PO-Revision-Date: 2022-12-01 09:13+0300\n"
-"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin <dl_03.03.1991@mail.ru>"
-"<dl_03.03.1991@mail.ru>\n"
+"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
+"<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
 "Language-Team: English <ryumina_ev@mail.ru>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.11.0\n"
 
-#: ../../source/faq.rst:2 9931a6406c1447f68f3ac2492bb12f1e
+#: ../../source/faq.rst:2 d9d178f9cf9548489fb467e6744c1b7d
 msgid "Ответы на часто задаваемые вопросы"
 msgstr "FAQ"
 
-#: ../../source/faq.rst:4 0136f00c4454474bbc2fdffc9a9b38ab
+#: ../../source/faq.rst:4 b13e2b6af3594d90a08d89a94a74d418
 msgid "Это список часто задаваемых вопросов о `OCEANAI` и ответов на них."
 msgstr "This is a list of FAQ about `OCEANAI` and the answers to them."
 
-#: ../../source/faq.rst:-1 57285f82b25847c7888f4d73a1fc7c88
+#: ../../source/faq.rst:-1 cce10186d3474ef69321c228017ebfea
 msgid "`OCEANAI` это?"
 msgstr "What is `OCEANAI`?"
 
-#: ../../source/faq.rst:8 c976ad44f879460398b784c19bdc053a
+#: ../../source/faq.rst:8 c11273c74fbf46b795ed1e5ced48a5cd
 msgid ""
 "*Библиотека с открытым исходным кодом, состоящая из набора алгоритмов "
 "интеллектуального анализа поведения человека на основе его "
 "мультимодальных данных для автоматического оценивания уровня отдельных "
-"персональных качеств личности человека для выполнения профессиональных "
-"обязанностей. Библиотека оценивает 5 качеств: открытость опыту, "
-"добросовестность, экстраверсия, доброжелательность, нейротизм/невротизм.*"
+"персональных качеств личности человека (ПКЛЧ). Библиотека оценивает 5 "
+"ПКЛЧ: открытость опыту, добросовестность, экстраверсия, "
+"доброжелательность, эмоциональная стабильность.*"
 msgstr ""
 "*An open-source library consisting of a set of algorithms for "
-"intellectual analysis of human behavior based on multimodal data for automatic personal traits assessment to "
-"performance of professional duties. The library evaluates 5 traits: "
-"Openness to experience, Conscientiousness, Extraversion, Agreeableness, "
-"Neuroticism.*"
+"intellectual analysis of human behavior based on multimodal data for "
+"automatic personal traits assessment. "
+"The library evaluates five traits: Openness to experience, "
+"Conscientiousness, Extraversion, Agreeableness, Non-Neuroticism.*"
 
-#: ../../source/faq.rst:-1 0ac6446d8bab4517a35cf351a7e48de9
+#: ../../source/faq.rst:-1 893b8fe57f344bc8b096484beed2d21e
 msgid "Почему библиотека называется `OCEANAI`?"
 msgstr "Why it is named `OCEANAI`?"
 
-#: ../../source/faq.rst:12 81a9147bdfdf4832a336bc815c880773
+#: ../../source/faq.rst:12 bf6235cb61b94db984afa3ed751d2842
 msgid ""
-"*OCEAN - это аббревиатура 5 персональных качеств (Openness, "
-"Conscientiousness, Extraversion, Agreeableness, Neuroticism), а AI - это "
-"аббревиатура искусственного интеллекта.*"
-msgstr "*OCEAN is an abbreviation for 5 personal traits (Openness, "
-"Conscientiousness, Extraversion, Agreeableness, Neuroticism), and AI is "
+"*OCEAN - это аббревиатура 5 ПКЛЧ (Openness, Conscientiousness, "
+"Extraversion, Agreeableness, Non-Neuroticism), а AI - это аббревиатура "
+"искусственного интеллекта.*"
+msgstr ""
+"*OCEAN is an abbreviation for five personality traits (Openness, "
+"Conscientiousness, Extraversion, Agreeableness, Non-Neuroticism), and AI is "
 "Artificial Intelligence abbreviation.*"
 
-#: ../../source/faq.rst:-1 6754a491df854e1aa0befe4679303fc0
+#: ../../source/faq.rst:-1 0231f9fc9dab4aecba7a184e43e7d881
 msgid "Можно ли установить `OCEANAI` с помошью pip?"
 msgstr "Can I install `OCEANAI` using pip?"
 
-#: ../../source/faq.rst:16 1d1f60d43aad40f8b0e14ed3c00db939
+#: ../../source/faq.rst:16 5ccb8fadae574bd189585ab026c7a2ed
 msgid ""
 "*Да, для этого нужно перейти по* `ссылке "
 "<https://pypi.org/project/oceanai>`_."

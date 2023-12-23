@@ -5,7 +5,7 @@
 Документация библиотеки алгоритмов сильного искусственного интеллекта - ``OCEANAI``
 ===================================================================================
 
-`OCEANAI <https://oceanai.readthedocs.io/ru/latest/>`_ - библиотека с открытым исходным кодом, состоящая из набора алгоритмов интеллектуального анализа поведения человека на основе его мультимодальных данных для автоматического оценивания уровня отдельных персональных качеств личности человека для выполнения профессиональных обязанностей. Библиотека оценивает 5 качеств: Открытость опыту (**O**\ p\ enness), Добросовестность (**C**\ o\ nscientiousness), Экстраверсия (**E**\ x\ traversion), Доброжелательность (**A**\ g\ reeableness), Нейротизм/невротизм (**N**\ e\ uroticism).
+`OCEANAI <https://oceanai.readthedocs.io/ru/latest/>`_ - библиотека с открытым исходным кодом, состоящая из набора алгоритмов интеллектуального анализа поведения человека на основе его мультимодальных данных для автоматического оценивания уровня отдельных персональных качеств личности человека (ПКЛЧ). Библиотека оценивает 5 ПКЛЧ: Открытость опыту (**O**\ p\ enness), Добросовестность (**C**\ o\ nscientiousness), Экстраверсия (**E**\ x\ traversion), Доброжелательность (**A**\ g\ reeableness), Эмоциональная стабильность (Non-**N**\ e\ uroticism).
 
 .. image:: https://img.shields.io/pypi/v/oceanai
    :alt: PyPI (image)
@@ -43,15 +43,27 @@
 Алгоритм МОИ является связующим звеном трех алгоритмов анализа информации (ААИ, АВИ и АТИ). Данный алгоритм выполняет
 нейросетевое объединение признаков полученных с помощью алгоритмов ААИ, АВИ и АТИ.
 
+`OCEANAI <https://oceanai.readthedocs.io/ru/latest/>`_ предоставляет примеры решения прикладных задач на основе полученных гипотез предсказаний оценок ПКЛЧ:
+
+#. Ранжирование потенциальных кандидатов для выполнения профессиональных обязанностей:
+    #. по группам профессий;
+    #. по профессиональным навыкам.
+#. Прогнозирование потребительских предпочтений по выбору промышленных потребительских товаров:
+    #. на примере характеристик автомобиля;
+    #. на примере категорий применения мобильного устройства.
+#. Формирование эффективных рабочих коллективов:
+    #. поиск подходящего младшего коллеги;
+    #. поиск подходящего старшего коллеги.
+
 Помимо основной задачи - мультимодального оценивания персональных качеств личности человека, реализованные в
 `OCEANAI <https://oceanai.readthedocs.io/ru/latest/>`_ признаки позволят исследователям решать другие задачи анализа поведения
 человека, например распознавание его аффективных состояний.
 
 `OCEANAI <https://oceanai.readthedocs.io/ru/latest/>`_ использует самые актуальные библиотеки с открытым исходным кодом
-для обработки аудио и видеоинформации: `librosa <https://librosa.org/>`_,
+для обработки аудио-, видео- и текстовой информации: `librosa <https://librosa.org/>`_,
 `openSMILE <https://audeering.github.io/opensmile-python/>`_,
 `openCV <https://pypi.org/project/opencv-python/>`_,
-`mediapipe <https://google.github.io/mediapipe/getting_started/python>`_.
+`mediapipe <https://google.github.io/mediapipe/getting_started/python>`_, `transformers <https://pypi.org/project/transformers/>`_.
 
 `OCEANAI <https://oceanai.readthedocs.io/ru/latest/>`_ написана на языке программирования
 `python <https://www.python.org/>`_. Нейросетевые модели
@@ -74,6 +86,57 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 `Библиотека алгоритмов интеллектуального анализа поведения человека на основе его мультимодальных данных, обеспечивающих оценивание уровня отдельных персональных качеств личности человека для выполнения профессиональных обязанностей (OCEAN-AI) <https://new.fips.ru/registers-doc-view/fips_servlet?DB=EVM&DocNumber=2023613724&TypeFile=html>`_
+
+Свидетельство о государственной регистрации базы данных
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+`Корпус для мультимодального оценивания персональных качеств личности человека (MuPTA - Multimodal Personality Traits Assessment Corpus) <https://new.fips.ru/registers-doc-view/fips_servlet?DB=DB&DocNumber=2023624011&TypeFile=html>`_
+
+-----
+
+Публикации
+~~~~~~~~~~
+
+Журналы
+-------
+
+.. code-block:: bibtex
+
+    @article{ryumina22_neurocomputing,
+        author = {Elena Ryumina and Denis Dresvyanskiy and Alexey Karpov},
+        title = {In Search of a Robust Facial Expressions Recognition Model: A Large-Scale Visual Cross-Corpus Study},
+        journal = {Neurocomputing},
+        volume = {514},
+        pages = {435-450},
+        year = {2022},
+        doi = {https://doi.org/10.1016/j.neucom.2022.10.013},
+    }
+
+.. code-block:: bibtex
+
+    @article{ryumina24_eswa,
+        author = {Elena Ryumina and Maxim Markitantov and Dmitry Ryumin and Alexey Karpov},
+        title = {OCEAN-AI Framework with EmoFormer Cross-Hemiface Attention Approach for Personality Traits Assessment},
+        journal = {Expert Systems with Applications},
+        volume = {239},
+        pages = {122441},
+        year = {2024},
+        doi = {https://doi.org/10.1016/j.eswa.2023.122441},
+    }
+
+Конференции
+-----------
+
+.. code-block:: bibtex
+
+    @inproceedings{ryumina23_interspeech,
+        author = {Elena Ryumina and Dmitry Ryumin and Maxim Markitantov and Heysem Kaya and Alexey Karpov},
+        title = {Multimodal Personality Traits Assessment (MuPTA) Corpus: The Impact of Spontaneous and Read Speech},
+        year = {2023},
+        booktitle = {INTERSPEECH},
+        pages = {4049--4053},
+        doi = {https://doi.org/10.21437/Interspeech.2023-1686},
+    }
 
 -----
 

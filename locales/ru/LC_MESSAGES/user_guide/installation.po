@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2022-12-01 11:06+0300\n"
+"POT-Creation-Date: 2023-12-23 15:27+0300\n"
 "PO-Revision-Date: 2022-12-01 09:13+0300\n"
-"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin <dl_03.03.1991@mail.ru>"
-"<dl_03.03.1991@mail.ru>\n"
+"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
+"<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
 "Language-Team: Russian <ryumina_ev@mail.ru>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -21,168 +21,216 @@ msgstr ""
 msgid "Содержание:"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:2 eeaaa84e583d4b178207c21ae533162b
+#: ../../source/user_guide/installation.rst:2 b1e46c00e0a6424597425f6a5fd13baf
 msgid "Установка и обновление"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:10 45263f50c85c44a19b32ed55f3e0a166
+#: ../../source/user_guide/installation.rst:10 b917edb867704a4984a7e0249d90ecf2
 msgid "Установка с помощью `PyPi <https://pypi.org/project/oceanai/>`_"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:12 6544fd922bee44b48a69fed569639bf2
+#: ../../source/user_guide/installation.rst:12 67b8764a44a448cb93dc3996e6e6052a
 msgid "pip install oceanai"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:17 1f9bc061202345f587a6e1c862182c5f
+#: ../../source/user_guide/installation.rst:17 c0739520b7df462e9386814db8637734
 msgid "Обновление с помощью `PyPi <https://pypi.org/project/oceanai/>`_"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:19 ed136c8f69d1434cb5d0ab337c1aa804
+#: ../../source/user_guide/installation.rst:19 9565313cebc94802bde35dff47a6c216
 msgid "pip install --upgrade oceanai"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:24 22b2b3d5ad504a8c9876953326db899e
+#: ../../source/user_guide/installation.rst:24 1e64ab8396e6413ab4f24b98f7a838c1
 msgid "Зависимости"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:26 f41460be1e374ac393c68bb229d2a870
+#: ../../source/user_guide/installation.rst:26 a352951efd504efdba08a95b42b5473d
 msgid "Устанавливаются автоматически"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 a067c75a216942fbaa03e9a9149f035c
+#: ../../source/user_guide/installation.rst:1 f82080269e184a2b8e9469a22cb4517d
 msgid "Библиотека"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 4823e20e94f3493eb43ebde0de3e70f1
+#: ../../source/user_guide/installation.rst:1 f33c6117426e432eacd647213d552378
 msgid "Рекомендуемая версия"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 6a9c02442f1944e9bc52581c9dcd59d6
+#: ../../source/user_guide/installation.rst:1 225f97f2b8b64520973dc0872922da4e
 msgid "Текущая версия"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 f4b015f6861741a68d9438fe89ecfe28
+#: ../../source/user_guide/installation.rst:1 940a97f3308749c1a7ef483ae523d6e0
 msgid "ipython"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 0a60ca873b8c4823bd6fefe8098cbab6
+#: ../../source/user_guide/installation.rst:1 e0cad36983e54d52bed68fdae7c8ffa7
 msgid "8.7.0"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 046c5927bc1a461b8d4c77d3e8f2362b
+#: ../../source/user_guide/installation.rst:1 d78439d01a6941ebac839fef01cd65ca
 msgid "jupyterlab"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 d76a34081b18404387b52b23441401a1
+#: ../../source/user_guide/installation.rst:1 ea52e0750cf149f28601ec0f18a47663
 msgid "3.5.0"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 130899435523471e97bb74bca95cb248
+#: ../../source/user_guide/installation.rst:1 5bc61bdc45d04aa798565ca404363aa5
 msgid "tensorflow"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 021a222b1d5241ee9165cdbc2425689d
-#: f9b71ff3eb804401aaf9a634d667e37b
+#: ../../source/user_guide/installation.rst:1 4270dfe6c2a04f80b53010212260dcd8
+#: f2268b0efae14ed9afdcc890da75d238
 msgid "2.11.0"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 c591a1db5b8b47c8b219911eca8cb73b
+#: ../../source/user_guide/installation.rst:1 cf87ebe408d5412c930de75e7677e719
 msgid "keras"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 b09ea7af19034a59bca11a2cbffe145e
+#: ../../source/user_guide/installation.rst:1 4c0b9a86a6f849c5902bd78a9f989b54
 msgid "Keras-Applications"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 4f2e6d93f7c9423a87ee1fc5f6860a04
+#: ../../source/user_guide/installation.rst:1 adfb62f4e3034911a8fd9915938dca71
 msgid "1.0.8"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 06ce1cef348141b39e6b3553322d70a0
+#: ../../source/user_guide/installation.rst:1 ac4666370460476ba637e9597ae95aa4
 msgid "numpy"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 ff2b29b6ceb44026ba39ab94a17a0116
+#: ../../source/user_guide/installation.rst:1 db38115654f345b6921dcb97d0b2ad3d
 msgid "1.23.5"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 0a55da2ddeaa4b95abfec3b59608f67a
+#: ../../source/user_guide/installation.rst:1 b758880beac9444198d4e7dfcb052fcc
 msgid "scipy"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 487611ed1d084e0eba0e7df26057c457
+#: ../../source/user_guide/installation.rst:1 43e98c4aa34c46a89533eb326de77e44
 msgid "1.9.3"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 6ff01f2c604e41838b341f23e71196ba
+#: ../../source/user_guide/installation.rst:1 f7e12a8a577d40d488cd28d24b0432c4
 msgid "pandas"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 01fe6913842c4bfd96946774835b99cf
+#: ../../source/user_guide/installation.rst:1 be87d803b138467d9b491758058fd7aa
 msgid "1.5.2"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 5c5536758b194859b1b3d990e1604e82
+#: ../../source/user_guide/installation.rst:1 e6a26e30025b4bc98adf94e6848bd826
 msgid "requests"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 b6702f92f3524fb596138dbb0e52c359
+#: ../../source/user_guide/installation.rst:1 37541fadf4c24f4d95f90294cecdfbd4
 msgid "2.28.1"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 3755768d276c425d8cadb637f2f6fc1b
+#: ../../source/user_guide/installation.rst:1 68acd737a5944c06966e8dc5ffc5e6ab
 msgid "opensmile"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 5f7a6de842f3427a819fa7788ba370cb
+#: ../../source/user_guide/installation.rst:1 b1838f8dd32d446f9e3aaa32f2346289
 msgid "2.4.1"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 77766ea357ea407bb01777df2d36c6ee
+#: ../../source/user_guide/installation.rst:1 bb9dd80eb4d84f78ac80ba1188ff1975
 msgid "librosa"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 668069884ea24941b1dd6f1676a1de95
+#: ../../source/user_guide/installation.rst:1 edeb3e4ce21c427082f9ef9749d01aeb
 msgid "0.9.2"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 d125ce7203b845b69570d36aa6e46d16
+#: ../../source/user_guide/installation.rst:1 c575bb61f96c41fc8e898ad027887621
 msgid "audioread"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 98d1a88f7b0f4423a3686961fc00d838
+#: ../../source/user_guide/installation.rst:1 7fce4694fa204a9ea13b5e5c82a5fe75
 msgid "3.0.0"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 5638e90de8cb4292b7a2eae3c28526dc
+#: ../../source/user_guide/installation.rst:1 97f4d899baba43aca99795cc037321d2
 msgid "scikit-learn"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 c8ca5246b6fa4dde89838bcce1563a6e
+#: ../../source/user_guide/installation.rst:1 59ddda6ea474448cb02fe5e04545cb87
 msgid "1.1.3"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 b1d2f24b728f4a829cbd6286c429fd51
+#: ../../source/user_guide/installation.rst:1 62fa95a61bf145a58520d31ed8cc4efb
 msgid "opencv-contrib-python"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 060eeed5e8ed4c768b22665dc5945439
+#: ../../source/user_guide/installation.rst:1 8b40bc30bdca4e2289495e3a8e545737
 msgid "4.6.0.66"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 c59b6dee8a934835bcd4e47b5312286d
+#: ../../source/user_guide/installation.rst:1 6850552d7c374eb8a4d0c8e81cd7e3fc
 msgid "pymediainfo"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 98ac7f2e4e0b4ae19ba626db67470e0d
+#: ../../source/user_guide/installation.rst:1 216b149306ab49f9b295096de83a6e54
 msgid "6.0.1"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 22c09edc95eb41d9a7a7c97e926f5f23
+#: ../../source/user_guide/installation.rst:1 c8ac2267dd4449f981b37b6479dd098f
 msgid "mediapipe"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 908c25f0d945459cbf4261e1046bc1fd
+#: ../../source/user_guide/installation.rst:1 b68dcc3f924f4f198a0f7458b5a5f735
 msgid "0.9.0"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 1c4a2c15c5e04ed3a79896a321061192
+msgid "liwc"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 693f30a639f74440a98c36573f6f2bb5
+msgid "0.5.0"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 179bf1bf3404433a966d6effb087fe38
+msgid "transformers"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 9065bb1f3a8b439e8b073103ce3dc88f
+msgid "4.36.0"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 9c0e149e506043b0bd1a636f743c436e
+msgid "sentencepiece"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 146a25d3722a4775a04ea3a6aacf0027
+msgid "0.1.99"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 cdc5d9297bfb4c659d1df22b8a085810
+msgid "torch"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 b8dbf5926df849339b646a171b2af7d9
+msgid "2.0.1"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 781526b24238451a84e51d83d3b2d416
+msgid "torchaudio"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 ba033b009ebb45c589eff4ec5983b420
+msgid "2.0.2"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 3f3f518d57d0411a8e023d763b0bceb1
+msgid "sacremoses"
+msgstr ""
+
+#: ../../source/user_guide/installation.rst:1 0e79b3802437441aad1b83f72bc66200
+msgid "0.0.1"
 msgstr ""
 
