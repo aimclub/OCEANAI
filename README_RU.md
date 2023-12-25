@@ -59,7 +59,7 @@
 2. **[Прогнозирование потребительских предпочтений на промышленные товары](https://oceanai.readthedocs.io/ru/latest/user_guide/notebooks/Pipeline_practical_task_2.html)**.
 3. **[Формирование эффективных рабочих коллективов](https://oceanai.readthedocs.io/ru/latest/user_guide/notebooks/Pipeline_practical_task_3.html)**.
 
-**[OCEANAI](https://oceanai.readthedocs.io/ru/latest/)** использует самые актуальные библиотеки с открытым исходным кодом для обработки аудио и видеоинформации: **[librosa](https://librosa.org/)**,
+**[OCEANAI](https://oceanai.readthedocs.io/ru/latest/)** использует самые актуальные библиотеки с открытым исходным кодом для обработки аудио-, видео- и текстовой информации: **[librosa](https://librosa.org/)**,
 **[openSMILE](https://audeering.github.io/opensmile-python/)**,
 **[openCV](https://pypi.org/project/opencv-python/)**,
 **[mediapipe](https://google.github.io/mediapipe/getting_started/python)**,
