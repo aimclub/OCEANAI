@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2023-12-23 12:57+0300\n"
+"POT-Creation-Date: 2023-12-25 20:35+0300\n"
 "PO-Revision-Date: 2023-01-03 18:30+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -57,13 +57,13 @@ msgid "<center>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:24
-#: a0f7ce12e6964bff853d4587097a6331
-msgid "|4dae13271f2e44e38fffd8d65e1982e7|"
+#: e0fadf4c374f44f2a40cea22ac45a825
+msgid "|9ddc43366c6b412bb86388bfacf24640|"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:44
 #: 75ee3bd3a17340f1b65f87cc8a3f00e1 ca1ce1f5ab8f43148aeb9d6f3394c320
-msgid "4dae13271f2e44e38fffd8d65e1982e7"
+msgid "9ddc43366c6b412bb86388bfacf24640"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:26
@@ -73,13 +73,13 @@ msgid "</center>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:34
-#: d6dba42cb8084ecfbef6839837ca702e
-msgid "|0b1647941a854d528f222b8487189f4f|"
+#: 873773fcd2494bc8ace1249fff408e5c
+msgid "|403e77cfe6d74686934393e191fb31f2|"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:47
 #: 4cf538672acc47d8af063562264030b5 7a02fab674a24b748ed2383e1ebec33a
-msgid "0b1647941a854d528f222b8487189f4f"
+msgid "403e77cfe6d74686934393e191fb31f2"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:40
@@ -5069,3 +5069,16 @@ msgid ""
 "9              Agreeableness  Conscientiousness       Extraversion\n"
 "10           Non-Neuroticism  Conscientiousness      Agreeableness"
 msgstr ""
+
+#~ msgid "|4dae13271f2e44e38fffd8d65e1982e7|"
+#~ msgstr ""
+
+#~ msgid "4dae13271f2e44e38fffd8d65e1982e7"
+#~ msgstr ""
+
+#~ msgid "|0b1647941a854d528f222b8487189f4f|"
+#~ msgstr ""
+
+#~ msgid "0b1647941a854d528f222b8487189f4f"
+#~ msgstr ""
+

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2023-12-23 12:57+0300\n"
+"POT-Creation-Date: 2023-12-25 20:35+0300\n"
 "PO-Revision-Date: 2022-12-11 13:33+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -30,13 +30,13 @@ msgid "<center>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_av_union_predictions.ipynb:15
-#: 16766fece9ae41dabcc0a9f1ae93885d
-msgid "|5c83045bc5134f8bb2f43ff3a1714598|"
+#: 5f0e97fab6474f769468112fe9ec0af4
+msgid "|61defae5257f4a0da33886ff23105f6b|"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_av_union_predictions.ipynb:25
 #: 5c88a6b4cf9c41bd9e729ab761487778 99d323ee53104a24831f4fb4319912a9
-msgid "5c83045bc5134f8bb2f43ff3a1714598"
+msgid "61defae5257f4a0da33886ff23105f6b"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_av_union_predictions.ipynb:17
@@ -2127,3 +2127,10 @@ msgstr ""
 #: 5b582456c98e4d718ff5f0af62d03fe9
 msgid "True"
 msgstr ""
+
+#~ msgid "|5c83045bc5134f8bb2f43ff3a1714598|"
+#~ msgstr ""
+
+#~ msgid "5c83045bc5134f8bb2f43ff3a1714598"
+#~ msgstr ""
+

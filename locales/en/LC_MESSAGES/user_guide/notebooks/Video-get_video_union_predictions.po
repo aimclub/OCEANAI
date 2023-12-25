@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2023-12-23 12:57+0300\n"
+"POT-Creation-Date: 2023-12-25 20:35+0300\n"
 "PO-Revision-Date: 2022-12-11 21:21+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -23,13 +23,13 @@ msgid "Получение прогнозов по видео"
 msgstr "Getting video scores"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:11
-#: 73f9edf3467c4be49ea4804393eb0120
-msgid "|a97dec82e5e34382bbc8994214e0c356|"
+#: bfe55845c78d47b1a174023debeebb27
+msgid "|52ac24923ea042bb9d69a3283d94adbf|"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:17
 #: 2c81a4887c794281be71bf8ae18b8ecb 82424a42246247b8bba5d3297e3539b0
-msgid "a97dec82e5e34382bbc8994214e0c356"
+msgid "52ac24923ea042bb9d69a3283d94adbf"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:13
@@ -1802,3 +1802,10 @@ msgstr "Log files saved successfully …"
 #, fuzzy
 msgid "— Время выполнения: 4762.254 сек. —"
 msgstr "— Runtime: 4.649 sec. —"
+
+#~ msgid "|a97dec82e5e34382bbc8994214e0c356|"
+#~ msgstr ""
+
+#~ msgid "a97dec82e5e34382bbc8994214e0c356"
+#~ msgstr ""
+

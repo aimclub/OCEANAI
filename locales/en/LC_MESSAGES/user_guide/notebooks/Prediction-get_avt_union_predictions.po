@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCEANAI 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-23 12:57+0300\n"
+"POT-Creation-Date: 2023-12-25 20:35+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,13 +30,13 @@ msgid "<center>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:15
-#: f93e1762784d4940823b4e9fc4a563d3
-msgid "|a346e08147454dc697079a6694da81d0|"
+#: 8a3d12686f364d4d905c013c74d302b9
+msgid "|9a7dc24180f746a1b15093074e124a63|"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:25
 #: 7b4eb9a696a54ee6b6a85cdd3ce2d5f8 b0c67d65763a4bb69c2f0bee2588d25e
-msgid "a346e08147454dc697079a6694da81d0"
+msgid "9a7dc24180f746a1b15093074e124a63"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:17
@@ -2043,4 +2043,9 @@ msgstr ""
 msgid "True"
 msgstr ""
 
+#~ msgid "|a346e08147454dc697079a6694da81d0|"
+#~ msgstr ""
+
+#~ msgid "a346e08147454dc697079a6694da81d0"
+#~ msgstr ""
 

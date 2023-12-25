@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCEANAI 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-23 12:57+0300\n"
+"POT-Creation-Date: 2023-12-25 20:35+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,10 +23,8 @@ msgid "Решение практической задачи 3"
 msgstr "Solution of practical task 3"
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_3.ipynb:12
-#: 5793465b2103448ba6fc09dce3f7a917
-msgid ""
-"Задача: Поиск подходящего коллеги по работе (младшего коллеги либо "
-"старшего коллеги)"
+#: 707221503e1d4e1da5860e578ef29c08
+msgid "Задача: Формирование эффективных рабочих коллективов"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_3.ipynb:14
@@ -36,15 +34,16 @@ msgid ""
 "необходимо использовать библиотеку OCEAN-AI для получения гипотез "
 "предсказаний (оценок персональных качеств личности человека). На втором "
 "этапе следует использовать метод \\_colleague_ranking из библиотеки "
-"OCEAN-AI для решения представленной практической задачи. Примеры "
-"результатов работы и реализации представлены ниже."
+"OCEAN-AI для решения представленной практической задачи на примере поиска"
+" подходящих коллег для целевого коллеги. Примеры результатов работы и "
+"реализации представлены ниже."
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_3.ipynb:18
 #: 00a086cbeb41408bb67f5bb04efd5751
 msgid ""
 "Таким образом, библиотека OCEAN-AI предоставляет инструменты для анализа "
-"персональных качеств личности кандидатов и может помочь в формировании "
+"персональных качеств личности коллег и может помочь в формировании "
 "эффективных рабочих групп, улучшении коммуникации и сокращении конфликтов"
 " в коллективе."
 msgstr ""
@@ -56,13 +55,13 @@ msgid "<center>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_3.ipynb:24
-#: 461d8317fd5240d29f849523a0f21641
-msgid "|d305a1f951d74684a5ca5914976a665f|"
+#: 0191a5e568b548bf90df54c360d2629e
+msgid "|88f86d7a8931435e844a33e1aadc79c7|"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_3.ipynb:44
 #: bda39977e58f40cda7cf92b09be3e080 fe06982d6b964924947c0ca426a72c15
-msgid "d305a1f951d74684a5ca5914976a665f"
+msgid "88f86d7a8931435e844a33e1aadc79c7"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_3.ipynb:26
@@ -72,13 +71,13 @@ msgid "</center>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_3.ipynb:34
-#: b64d2a62f71a42ad882308ba41c31aad
-msgid "|f89e9a46f82548878d573e1d3a46d09f|"
+#: b46a553ff88f4647abb73e1e8bffa28d
+msgid "|cba0f11462a342cbb7b4c328f9f96978|"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_3.ipynb:47
 #: 39d32e2d4ecf4a96a675ac6129ec7f55 a68ca60efcf34262a5e91864260c8919
-msgid "f89e9a46f82548878d573e1d3a46d09f"
+msgid "cba0f11462a342cbb7b4c328f9f96978"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_3.ipynb:40
@@ -3481,3 +3480,44 @@ msgid ""
 "1          speaker_01_center_83.mov  0.565  0.539  0.441  0.593  0.489 "
 "-0.271"
 msgstr ""
+
+#~ msgid ""
+#~ "Задача: Поиск подходящего коллеги по "
+#~ "работе (младшего коллеги либо старшего "
+#~ "коллеги)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Решение практической задачи выполняется в "
+#~ "два этапа. На первом этапе необходимо"
+#~ " использовать библиотеку OCEAN-AI для "
+#~ "получения гипотез предсказаний (оценок "
+#~ "персональных качеств личности человека). На"
+#~ " втором этапе следует использовать метод"
+#~ " \\_colleague_ranking из библиотеки OCEAN-"
+#~ "AI для решения представленной практической "
+#~ "задачи. Примеры результатов работы и "
+#~ "реализации представлены ниже."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Таким образом, библиотека OCEAN-AI "
+#~ "предоставляет инструменты для анализа "
+#~ "персональных качеств личности кандидатов и "
+#~ "может помочь в формировании эффективных "
+#~ "рабочих групп, улучшении коммуникации и "
+#~ "сокращении конфликтов в коллективе."
+#~ msgstr ""
+
+#~ msgid "|d305a1f951d74684a5ca5914976a665f|"
+#~ msgstr ""
+
+#~ msgid "d305a1f951d74684a5ca5914976a665f"
+#~ msgstr ""
+
+#~ msgid "|f89e9a46f82548878d573e1d3a46d09f|"
+#~ msgstr ""
+
+#~ msgid "f89e9a46f82548878d573e1d3a46d09f"
+#~ msgstr ""
+
