@@ -49,6 +49,8 @@ To work with audio information, you should refer to the **[Audio information pro
 
 To work with video information, you should refer to the **[Video information processing](https://oceanai.readthedocs.io/en/latest/user_guide/samples/video.html)**.
 
+To work with text information, you should refer to the **[Text information processing](https://oceanai.readthedocs.io/en/latest/user_guide/samples/text.html)**.
+
 To work with audio-visual information, you should refer to the **[Multimodal information processing](https://oceanai.readthedocs.io/en/latest/user_guide/samples/multimodal.html)**.
 
 The library solves practical tasks:
