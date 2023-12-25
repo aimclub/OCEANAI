@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2022-12-11 15:03+0300\n"
+"POT-Creation-Date: 2023-12-17 14:43+0300\n"
 "PO-Revision-Date: 2022-12-11 15:03+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -18,67 +18,46 @@ msgstr ""
 "Generated-By: Babel 2.11.0\n"
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:9
-#: 153fc0897e0b47e79f76cf81960f946d
+#: dfc1d6cdac0d4fd8939cdef566efd9a4
 msgid "Извлечение признаков из визуального сигнала"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:11
-#: beaeddfa8b404e2fb5997b08a74ceb67
+#: bc35b95d1a5c43c691c48b8a5b1bd493
 msgid "<hr>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:25
-#: aec536d628844b2ca81498e6fb26a946
+#: cb07076c26bd40f18268e41dfd36ab1e
 msgid "Импорт необходимых инструментов"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
-#: fe53f168c81c49cda05acfa5750b2fc2
+#: b877455ea6594513abb2878b84555baa
 msgid "[2]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
-#: 6470ac3cb8c94bb59a37477efa65a040
+#: cd45812147ce4e01a386ce6c25e3fec3
 msgid "from oceanai.modules.lab.build import Run"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:47
-#: 3897c744264944a185893662f1d4957f
-msgid ""
-"<pre>\n"
-"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
-"</pre>"
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:53
-#: 0820bf64d85e4602b319b04b4a7602a5
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
-"\\end{sphinxVerbatim}"
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:60
-#: a23b14e2677a43169e02ca993e95c485
-msgid "INFO: Created TensorFlow Lite XNNPACK delegate for CPU."
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:72
-#: 12d408d0b86b49ce81d742cd77bf0031
+#: 9131cfeb6f744eca913f21830f4497cc
 msgid "Сборка"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
-#: 22f8074cab1a4172a8d0156d5f6ed2cf
+#: 00a422e0935d40a7928791909f9d59b9
 msgid "[3]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
-#: fd489cec56dd481082b6e79db4276194
+#: a5e12b9876fa470ebafefddeb46f0742
 msgid ""
 "_b5 = Run(\n"
 "    lang = 'ru', # Язык\n"
-"    color_simple = '#FFF', # Цвет обычного текста (шестнадцатеричный код)"
+"    color_simple = '#333', # Цвет обычного текста (шестнадцатеричный код)"
 "\n"
 "    color_info = '#1776D2', # Цвет текста содержащего информацию "
 "(шестнадцатеричный код)\n"
@@ -94,34 +73,34 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:102
-#: c5f541bf36a7463cb0cfa2877e293ce4
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:77
+#: 77e09b38f34d4fa6b86e622962951e6a
 msgid ""
-"\\ **[2022-12-11 15:02:02] OCEANAI - персональные качества личности "
+"\\ **[2023-12-10 12:36:03] OCEANAI - персональные качества личности "
 "человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
 "        Рюмин Дмитрий [dl_03.03.1991@mail.ru]        Карпов Алексей "
 "[karpov@iias.spb.su]    Сопровождающие:        Рюмина Елена "
 "[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
-"Версия: 1.0.0a2    Лицензия: BSD License"
+"Версия: 1.0.0a5    Лицензия: BSD License"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:104
-#: cc9a4f4f26664684bc2119616cb95b3a
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:79
+#: 7afcb8ac2c8b45559b030752bbf3aa85
 msgid "</p>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:118
-#: ed28836d22b6498f97f92d1e09a86731
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:93
+#: 36a5e21e8d99408882582f6cbc962eab
 msgid "Формирование нейросетевой архитектуры модели"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
-#: 8d7b805e4a1140c4b0c3bb0314fef2ef
+#: 95f61bbec7ef4efe9c595a9a4adb0f76
 msgid "[4]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
-#: a8206ec02f4d4f179ba14f9821d91e82
+#: dcae9565ec874bc4bd4f3776ab261b78
 msgid ""
 "res_load_video_model_deep_fe = _b5.load_video_model_deep_fe(\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
@@ -132,36 +111,36 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:144
-#: ea946d7d138f44a79bc6d8902f16d0a1
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:119
+#: 81facf78d3c847009c00e66ee4868de2
 msgid ""
-"\\ **[2022-12-11 15:02:13] Формирование нейросетевой архитектуры для "
+"\\ **[2023-12-10 12:36:12] Формирование нейросетевой архитектуры для "
 "получения нейросетевых признаков (видео модальность) …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:154
-#: 54abb2a83c204d87826c4a05777047db
-msgid "— Время выполнения: 1.652 сек. —"
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:129
+#: 79d65319fd3c46b9b9c9566d46737103
+msgid "— Время выполнения: 1.36 сек. —"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:166
-#: 6ed8116184074451a21c115ab34c6adc
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:141
+#: 66442de5a9354dc89660c1dd0d79fac1
 msgid "Загрузка весов нейросетевой модели"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
-#: 289062afe85f498995e12e6bbca5d29e
+#: b7a8b5390ad24f61acb6635eae798e4f
 msgid "[5]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
-#: 93ef6fa37764476b98b95806c2d56d8c
+#: e83e611749aa4918b6c3a23419e580ea
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
 "_b5.chunk_size_ = 2000000 # Размер загрузки файла из сети за 1 шаг\n"
 "\n"
-"url = _b5.weights_for_big5_['video']['fe']['sberdisk']\n"
+"url = _b5.weights_for_big5_['video']['fi']['fe']['sberdisk']\n"
 "\n"
 "res_load_video_model_weights_deep_fe = "
 "_b5.load_video_model_weights_deep_fe(\n"
@@ -174,74 +153,125 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:199
-#: c081fc220f39443688f617b47df016c2
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:174
+#: 10ce8699ccdf4fd88241257784cec63a
 msgid ""
-"\\ **[2022-12-11 15:02:35] Загрузка весов нейросетевой модели для "
+"\\ **[2023-12-10 12:36:22] Загрузка весов нейросетевой модели для "
 "получения нейросетевых признаков (видео модальность) …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:210
-#: 760bc736837f4a808f652b5b718296ff
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:185
+#: dd4a0c8ccd3c4dff82cb5b9a8e61b927
 msgid ""
-"\\ **[2022-12-11 15:02:41] Загрузка файла "
-"“weights_2022-11-01_12-27-07.h5” (100.0%) …**"
+"\\ **[2023-12-10 12:36:26] Загрузка файла "
+"“weights_2022-11-01_12-27-07.h5” 100.0% …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:220
-#: e915ac1339f74f4fbd55066c37791f56
-msgid "— Время выполнения: 6.227 сек. —"
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:195
+#: 0ad913757a31490da73491459de122ad
+msgid "— Время выполнения: 4.74 сек. —"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:232
-#: 76a68cd3a10842eba9adc5c48bcc1c10
-msgid "Процесс извлечения визуальных признаков"
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
-#: 842078d8ff624ea6a8cf3308dfa201f1
-msgid "[6]:"
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:207
+#: 39fad5be6a28461eb579baf85d27278b
+msgid "Процесс извлечения визуальных признаков (``FI V2``)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
-#: f2667ca7cb73423981beb0ccdab71da2
+#: 4006e9d30bfa45698cf9365c1cac615c
+msgid "[8]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
+#: f7c1275fe33449e9816767e3212ff803
 msgid ""
 "# Настройки ядра\n"
 "# Путь к видеофайлу\n"
-"path = "
-"'/Users/dl/GitHub/OCEANAI.private/oceanai/dataset/test80_01/glgfB3vFewc.004.mp4'"
-"\n"
+"path = 'video_FI/test/_plk5k7PBEg.003.mp4'\n"
 "\n"
 "hc_features, nn_features = _b5.get_visual_features(\n"
 "    path = path, # Путь к видеофайлу\n"
 "    reduction_fps = 5, # Понижение кадровой частоты\n"
 "    window = 10, # Размер окна сегмента сигнала (в кадрах)\n"
 "    step = 5, # Шаг сдвига окна сегмента сигнала (в кадрах)\n"
+"    lang = 'en',\n"
 "    out = True, # Отображение\n"
 "    runtime = True, # Подсчет времени выполнения\n"
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:265
-#: dfae308d257e4684a223434f7d6517d5
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:241
+#: 9f9d46a915f0463eb78d168823ab493e
 msgid ""
-"\\ **[2022-12-11 15:02:57] Извлечение признаков (экспертных и "
+"\\ **[2023-12-10 12:37:26] Извлечение признаков (экспертных и "
 "нейросетевых) из визуального сигнала …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:276
-#: f370f3ba5cb942f8b5d760dc581e28ad
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:252
+#: eac624daea2d46609c19149722ae57cd
 msgid ""
-"\\ **[2022-12-11 15:03:03] Статистика извлеченных признаков из "
+"\\ **[2023-12-10 12:37:30] Статистика извлеченных признаков из "
 "визуального сигнала:**\\     Общее количество сегментов с:        1. "
-"экспертными признаками: 12        2. нейросетевыми признаками: 12    "
+"экспертными признаками: 16        2. нейросетевыми признаками: 16    "
 "Размерность матрицы экспертных признаков одного сегмента: 10 ✕ 115    "
-"Размерность тензора с нейросетевыми признаками одного сегмента: 10 ✕ 512"
+"Размерность матрицы с нейросетевыми признаками одного сегмента: 10 ✕ 512"
 "     Понижение кадровой частоты: с 30 до 5"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:286
-#: e915ac1339f74f4fbd55066c37791f56
-msgid "— Время выполнения: 6.222 сек. —"
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:262
+#: d915adf389ca4e0ca06147950b2dc9a2
+msgid "— Время выполнения: 3.682 сек. —"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:274
+#: 4f9acfb88d8f4420b0384cd2e3774e30
+msgid "Процесс извлечения визуальных признаков (``MuPTA``)"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
+#: 53c2e7b5a0a14d8c96db85551c574417
+msgid "[9]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
+#: 87d7611a9f254d89ad4c250708525d19
+msgid ""
+"# Настройки ядра\n"
+"# Путь к видеофайлу\n"
+"path = 'video_FI/test/_plk5k7PBEg.003.mp4'\n"
+"\n"
+"hc_features, nn_features = _b5.get_visual_features(\n"
+"    path = path, # Путь к видеофайлу\n"
+"    reduction_fps = 5, # Понижение кадровой частоты\n"
+"    window = 10, # Размер окна сегмента сигнала (в кадрах)\n"
+"    step = 5, # Шаг сдвига окна сегмента сигнала (в кадрах)\n"
+"    lang = 'ru',\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:308
+#: b553465d24fd437f9c788ce025c1c0cf
+msgid ""
+"\\ **[2023-12-10 12:37:40] Извлечение признаков (экспертных и "
+"нейросетевых) из визуального сигнала …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:319
+#: 5587f8ab8d0b4f96ac7d4acf5a12ea96
+msgid ""
+"\\ **[2023-12-10 12:37:41] Статистика извлеченных признаков из "
+"визуального сигнала:**\\     Общее количество сегментов с:        1. "
+"экспертными признаками: 16        2. нейросетевыми признаками: 16    "
+"Размерность матрицы экспертных признаков одного сегмента: 10 ✕ 109    "
+"Размерность матрицы с нейросетевыми признаками одного сегмента: 10 ✕ 512"
+"     Понижение кадровой частоты: с 30 до 5"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:329
+#: 15d3d4af48f948f68e92fd631d27e4f1
+msgid "— Время выполнения: 1.37 сек. —"
 msgstr ""

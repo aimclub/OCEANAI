@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2022-12-11 12:25+0300\n"
+"POT-Creation-Date: 2023-12-17 14:43+0300\n"
 "PO-Revision-Date: 2022-12-11 12:21+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -18,80 +18,62 @@ msgstr ""
 "Generated-By: Babel 2.11.0\n"
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:9
-#: a7fc07fb1b0640878f94cd3918899d1e
+#: 7304f05dd8e6426eaa7393174676caa3
 msgid ""
 "Формирование нейросетевой архитектуры модели и загрузка ее весов для "
-"получения оценок по экспертным признакам (аудио модальность)"
+"получения признаков / оценок на базе экспертных признаков (аудио "
+"модальность)"
 msgstr ""
-"Formation of the neural network architecture of the model and loading its"
-" weights to obtain estimates by expert features (audio modality)"
+"Formation of the neural network architecture of the model and downloading its"
+" weights to obtain features / scores based on hand-crafted features (audio modality)"
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:11
-#: b3aeed03ecf64554bfb3b623e1426de9
+#: a7c6fa7db7724872b3262c802c726ba9
 msgid "<hr>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:17
-#: 8f5f65891511447682747811147e8cdf
+#: 603fda676abb4cd9a20180751e3290a7
+#, fuzzy
 msgid ""
 "``_b5.audio_model_hc_`` - Нейросетевая модель **tf.keras.Model** для "
-"получения оценок по экспертным признакам"
+"получения признаков / оценок на базе экспертных признаков"
 msgstr ""
 "``_b5.audio_model_hc_`` - Neural network model **tf.keras.Model** for "
 "obtaining estimates by expert features"
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:29
-#: 2ff8beb9c81d49238c1d52fa979a8fe1
+#: 0ce1523a47834ed2ac6f2f248fe193ca
 msgid "Импорт необходимых инструментов"
 msgstr "Import required packages"
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:-1
-#: 0ba05febee0f415e8da0f3b7077809b9
+#: f1f428ed8a1a42ce8e8d689e71578a71
 msgid "[2]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:-1
-#: ab296d6343b347b0b91424f5d57a2ef1
+#: 93a88bf490ac4223bd1d222a9793ad43
 msgid "from oceanai.modules.lab.build import Run"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:51
-#: 730404aa073c492d9498f915b7ba2a18
-msgid ""
-"<pre>\n"
-"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
-"</pre>"
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:57
-#: f3d2babac5684e7abfe01acc27fa6fc9
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
-"\\end{sphinxVerbatim}"
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:64
-#: cebb9ef451dd41c29a75eec7a1ea2d3a
-msgid "INFO: Created TensorFlow Lite XNNPACK delegate for CPU."
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:76
-#: 4d8323f96afa495abd49715d3ece7aa9
+#: 326c33f8535a47a0a924ec5542416a07
 msgid "Сборка"
 msgstr "Build"
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:-1
-#: 443b4f78797e49d6a429cb8c5d518a9f
+#: 4f81c41a2e8c4c158994e1abc4140765
 msgid "[3]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:-1
-#: bfa6da7cc9e24ae6bde8b19437217299
+#: c0b8120a8ad64ce981894ab412fc50e4
+#, fuzzy
 msgid ""
 "_b5 = Run(\n"
 "    lang = 'ru', # Язык\n"
-"    color_simple = '#FFF', # Цвет обычного текста (шестнадцатеричный код)"
+"    color_simple = '#333', # Цвет обычного текста (шестнадцатеричный код)"
 "\n"
 "    color_info = '#1776D2', # Цвет текста содержащего информацию "
 "(шестнадцатеричный код)\n"
@@ -120,39 +102,41 @@ msgstr ""
 "    metadata = True # Displaying information about library\n"
 ")"
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:106
-#: 614d81c7409247ab800b31e7d52b7374
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:81
+#: ce57b827712b483b84a396eaf5b3949d
+#, fuzzy
 msgid ""
-"\\ **[2022-12-11 12:20:54] OCEANAI - персональные качества личности "
+"\\ **[2023-12-10 16:37:47] OCEANAI - персональные качества личности "
 "человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
 "        Рюмин Дмитрий [dl_03.03.1991@mail.ru]        Карпов Алексей "
 "[karpov@iias.spb.su]    Сопровождающие:        Рюмина Елена "
 "[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
-"Версия: 1.0.0a2    Лицензия: BSD License"
+"Версия: 1.0.0a5    Лицензия: BSD License"
 msgstr ""
-"\\ **[2022-12-11 12:20:54] OCEANAI - personal traits:**\\     Authors:        Elena Ryumina [ryumina_ev@mail.ru]"
-"        Dmitry Ryumin [dl_03.03.1991@mail.ru]        Alexey Karpov "
-"[karpov@iias.spb.su]    Maintainers:        Elena Ryumina "
-"[ryumina_ev@mail.ru]        Dmitry Ryumin [dl_03.03.1991@mail.ru]    "
-"Version: 1.0.0a2    License: BSD License"
+"\\ **[2022-12-11 12:20:54] OCEANAI - personal traits:**\\     Authors:"
+"        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry Ryumin "
+"[dl_03.03.1991@mail.ru]        Alexey Karpov [karpov@iias.spb.su]    "
+"Maintainers:        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry "
+"Ryumin [dl_03.03.1991@mail.ru]    Version: 1.0.0a2    License: BSD "
+"License"
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:108
-#: fefbc5da568f41c7bade5448fdab9e72
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:83
+#: ffaa55639a754afe80a2cd89bdf560cd
 msgid "</p>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:122
-#: 0d89bef630e840839474f186b7685185
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:97
+#: e8cb4cb629e442738c585522b570979f
 msgid "Формирование нейросетевой архитектуры модели"
 msgstr "Formation of the neural network architecture of the model"
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:-1
-#: 42ae2a371fc54bcd9067bbfb9fd293be
+#: d76167008eca448c95bec67c7b704a89
 msgid "[4]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:-1
-#: d8581548c5b74d53812879dc830c3128
+#: e9582bc1600b4ea0867115b9e69b66c4
 msgid ""
 "res_load_audio_model_hc = _b5.load_audio_model_hc(\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
@@ -170,39 +154,42 @@ msgstr ""
 "    run = True # Run blocking\n"
 ")"
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:148
-#: 0fa63fa130af4bf689e0c6ada1ec5af0
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:123
+#: c66019b3370147629c4f282e5b31564d
+#, fuzzy
 msgid ""
-"\\ **[2022-12-11 12:20:55] Формирование нейросетевой архитектуры модели "
+"\\ **[2023-12-10 16:37:50] Формирование нейросетевой архитектуры модели "
 "для получения оценок по экспертным признакам (аудио модальность) …**"
 msgstr ""
 "\\ **[2022-12-11 12:20:55] Formation of the neural network architecture "
 "of the model for obtaining estimates by expert features (audio modality) "
 "…**"
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:158
-#: c1e49e6d0cee48cf8c77c50241af2406
-msgid "— Время выполнения: 0.441 сек. —"
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:133
+#: 1cb93028ed354f34a8c96f3ae103cd7d
+#, fuzzy
+msgid "— Время выполнения: 3.03 сек. —"
 msgstr "— Runtime: 0.441 sec. —"
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:170
-#: fbf7b75e1d3742908b343b6423cf06c7
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:145
+#: 6597a0e015c549e884e6e23e96db8bb5
 msgid "Загрузка весов нейросетевой модели"
 msgstr "Downloading the weights of the neural network model"
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:-1
-#: baf11f97054d4c0dba0a8cc1370799dd
+#: 5dfe525a50ce4abd969c881399f6a09f
 msgid "[5]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:-1
-#: 4028cbd6f45b4fd3bf6f5533bbe01dbd
+#: 4ca379dd10144106a7cf20155daf37ee
+#, fuzzy
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
 "_b5.chunk_size_ = 2000000 # Размер загрузки файла из сети за 1 шаг\n"
 "\n"
-"url = _b5.weights_for_big5_['audio']['hc']['sberdisk']\n"
+"url = _b5.weights_for_big5_['audio']['fi']['hc']['sberdisk']\n"
 "\n"
 "res_load_audio_model_weights_hc = _b5.load_audio_model_weights_hc(\n"
 "    url = url, # Полный путь к файлу с весами нейросетевой модели\n"
@@ -229,49 +216,52 @@ msgstr ""
 "    run = True # Run blocking\n"
 ")"
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:203
-#: 5b5845b31ecd4a458b1415572be4b2ab
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:178
+#: c7aa96d0fb9845708e430056dd60af61
+#, fuzzy
 msgid ""
-"\\ **[2022-12-11 12:20:57] Загрузка весов нейросетевой модели для "
+"\\ **[2023-12-10 16:38:05] Загрузка весов нейросетевой модели для "
 "получения оценок по экспертным признакам (аудио модальность) …**"
 msgstr ""
 "\\ **[2022-12-11 12:20:57] Downloading the weights of the neural network "
 "model to obtain estimates by expert features (audio modality) …**"
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:214
-#: 3115374984c64486a140a56a16648283
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:189
+#: ca95cd89d6de4a578b79619aa867b65a
+#, fuzzy
 msgid ""
-"\\ **[2022-12-11 12:20:57] Загрузка файла "
-"“weights_2022-05-05_11-27-55.h5” (100.0%) …**"
+"\\ **[2023-12-10 16:38:05] Загрузка файла "
+"“weights_2022-05-05_11-27-55.h5” 100.0% …**"
 msgstr ""
 "\\ **[2022-12-11 12:20:57] File download “weights_2022-05-05_11-27-55.h5”"
 " (100.0%) …**"
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:224
-#: c1e49e6d0cee48cf8c77c50241af2406
-msgid "— Время выполнения: 0.275 сек. —"
-msgstr "— Runtime: 0.275 sec. —"
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:199
+#: a59f4f25c2cc480c8669e74016c0013e
+#, fuzzy
+msgid "— Время выполнения: 0.458 сек. —"
+msgstr "— Runtime: 0.441 sec. —"
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:236
-#: 4546d7acd43a4b41a94c2a658fc89d58
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:211
+#: 69d22870dd43425fa21f06ee403dfea0
 msgid "Отображение сформированной нейросетевой архитектуры модели"
 msgstr "Displaying the formed neural network architecture of the model"
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:-1
-#: 5e1280d91241439090694282e7ba97f2
+#: 69c1881b4651463bad210e7b84e2463b
 msgid "[6]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:-1
-#: af0114f837764a2dbf61d035388a81b6
+#: 3e67a8db98d046958fa48e5384b18eb8
 msgid "_b5.audio_model_hc_.summary()"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:257
-#: 6ef391a014ab4d5c9136d743b332db3f
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:232
+#: 18988958df324845be7e0741b06586c3
 msgid ""
 "<pre>\n"
-"Model: &#34;model&#34;\n"
+"Model: &#34;model_1&#34;\n"
 "_________________________________________________________________\n"
 " Layer (type)                Output Shape              Param #\n"
 "=================================================================\n"
@@ -281,7 +271,7 @@ msgid ""
 "\n"
 " dropout (Dropout)           (None, 196, 64)           0\n"
 "\n"
-" lstm_1 (LSTM)               (None, 128)               98816\n"
+" lstm_128_a_hc (LSTM)        (None, 128)               98816\n"
 "\n"
 " dropout_1 (Dropout)         (None, 128)               0\n"
 "\n"
@@ -295,11 +285,11 @@ msgid ""
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:283
-#: 214700360a194a4a84ccd5c9c729ca5b
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:258
+#: 79ddcd81294b415fa1138880853d8073
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"Model: \"model\"\n"
+"Model: \"model\\_1\"\n"
 "\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_"
 "\n"
 " Layer (type)                Output Shape              Param \\#\n"
@@ -310,7 +300,7 @@ msgid ""
 "\n"
 " dropout (Dropout)           (None, 196, 64)           0\n"
 "\n"
-" lstm\\_1 (LSTM)               (None, 128)               98816\n"
+" lstm\\_128\\_a\\_hc (LSTM)        (None, 128)               98816\n"
 "\n"
 " dropout\\_1 (Dropout)         (None, 128)               0\n"
 "\n"
@@ -325,10 +315,10 @@ msgid ""
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:310
-#: a178a48c8daa4117bc440dffb668c264
+#: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:285
+#: 96021f3ab52847a790baab3fa5f57a1f
 msgid ""
-"Model: \"model\"\n"
+"Model: \"model_1\"\n"
 "_________________________________________________________________\n"
 " Layer (type)                Output Shape              Param #\n"
 "=================================================================\n"
@@ -338,7 +328,7 @@ msgid ""
 "\n"
 " dropout (Dropout)           (None, 196, 64)           0\n"
 "\n"
-" lstm_1 (LSTM)               (None, 128)               98816\n"
+" lstm_128_a_hc (LSTM)        (None, 128)               98816\n"
 "\n"
 " dropout_1 (Dropout)         (None, 128)               0\n"
 "\n"

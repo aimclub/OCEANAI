@@ -64,7 +64,7 @@ msgstr " (error {})"
 
 #: oceanai/modules/core/core.py:108
 msgid "Статистика извлеченных признаков из акустического сигнала:{}Общее количество сегментов с:{}1. экспертными признаками: {}{}2. лог мел-спектрограммами: {}{}Размерность матрицы экспертных признаков одного сегмента: {} "
-msgstr "Statistics of the features extracted from the acoustic signal:{}Total number of segments with:{}1. expert features: {}{}2. mel-spectrogram log: {}{}Dimension of the matrix of expert features of one segment: {} "
+msgstr "Statistics of the features extracted from the acoustic signal:{}Total number of segments with:{}1. hand-crafted features: {}{}2. mel-spectrogram log: {}{}Dimension of the matrix of hand-crafted features of one segment: {} "
 
 #: oceanai/modules/core/core.py:118
 msgid "{}Размерность тензора с лог мел-спектрограммами одного сегмента:"
@@ -72,11 +72,11 @@ msgstr "{}Dimension of the tensor with log mel-spectrograms of one segment:"
 
 #: oceanai/modules/core/core.py:128
 msgid "Статистика извлеченных признаков из визуального сигнала:{}Общее количество сегментов с:{}1. экспертными признаками: {}{}2. нейросетевыми признаками: {}{}Размерность матрицы экспертных признаков одного сегмента: {} "
-msgstr "Statistics of extracted features from visual signal:{}Total number of segments since:{}1. expert features: {}{}2. neural network features: {}{}Dimension of the matrix of expert features of one segment: {} "
+msgstr "Statistics of extracted features from visual signal:{}Total number of segments since:{}1. hand-crafted features: {}{}2. deep features: {}{}Dimension of the matrix of hand-crafted features of one segment: {} "
 
 #: oceanai/modules/core/core.py:138
 msgid "{}Размерность матрицы с нейросетевыми признаками одного сегмента:"
-msgstr "{}Dimensionality of the matrix with neural network features of one segment:"
+msgstr "{}Dimensionality of the matrix with deep features of one segment:"
 
 #: oceanai/modules/core/core.py:142
 msgid "{}Понижение кадровой частоты: с"
@@ -88,11 +88,11 @@ msgstr "to"
 
 #: oceanai/modules/core/core.py:150
 msgid "Статистика извлеченных признаков из текста:{}Размерность матрицы экспертных признаков: {} "
-msgstr "Statistics of extracted features from text:{}Dimensionality of expert feature matrix: {} "
+msgstr "Statistics of extracted features from text:{}Dimensionality of hand-crafted feature matrix: {} "
 
 #: oceanai/modules/core/core.py:153
 msgid "{}Размерность матрицы с нейросетевыми признаками:"
-msgstr "{}Dimensionality of the neural network feature matrix:"
+msgstr "{}Dimensionality of the deep feature matrix:"
 
 #: oceanai/modules/core/core.py:159
 msgid "{}Текст:"
@@ -192,11 +192,11 @@ msgstr "Log files saved successfully ..."
 
 #: oceanai/modules/core/messages.py:77
 msgid "Формирование нейросетевой архитектуры модели для получения оценок по экспертным признакам"
-msgstr "Formation of the neural network architecture of the model for obtaining estimates by expert features"
+msgstr "Formation of the neural network architecture of the model for obtaining scores by hand-crafted features"
 
 #: oceanai/modules/core/messages.py:80
 msgid "Загрузка весов нейросетевой модели для получения оценок по экспертным признакам"
-msgstr "Downloading the weights of the neural network model to obtain estimates by expert features"
+msgstr "Downloading the weights of the neural network model to obtain scores by hand-crafted features"
 
 #: oceanai/modules/core/messages.py:83
 msgid "не удалось загрузить веса нейросетевой модели ..."
@@ -204,51 +204,51 @@ msgstr "failed to load neural network model weights ..."
 
 #: oceanai/modules/core/messages.py:84
 msgid "нейросетевая архитектура модели для получения оценок по экспертным признакам не сформирована"
-msgstr "the neural network architecture of the model for obtaining estimates by expert features has not been formed"
+msgstr "the neural network architecture of the model for obtaining scores by hand-crafted features has not been formed"
 
 #: oceanai/modules/core/messages.py:87
 msgid "нейросетевая архитектура модели для получения оценок по нейросетевым признакам не сформирована"
-msgstr "the neural network architecture of the model for obtaining estimates by neural network features has not been formed"
+msgstr "the neural network architecture of the model for obtaining scores by deep features has not been formed"
 
 #: oceanai/modules/core/messages.py:90
 msgid "нейросетевые архитектуры моделей для получения оценок по экспертным и нейросетевым признакам не сформированы"
-msgstr "neural network architectures of models for obtaining estimates on expert and neural network features have not been formed"
+msgstr "neural network architectures of models for obtaining scores by hand-crafted and deep features have not been formed"
 
 #: oceanai/modules/core/messages.py:95
 msgid "Формирование нейросетевой архитектуры для получения оценок по нейросетевым признакам"
-msgstr "Formation of a neural network architecture for obtaining estimates by neural network features"
+msgstr "Formation of a neural network architecture for obtaining scores by deep features"
 
 #: oceanai/modules/core/messages.py:98
 msgid "Загрузка весов нейросетевой модели для получения оценок по нейросетевым признакам"
-msgstr "Downloading the weights of the neural network model to obtain estimates for neural network features"
+msgstr "Downloading the weights of the neural network model to obtain scores for deep features"
 
 #: oceanai/modules/core/messages.py:101
 msgid "Формирование нейросетевых архитектур моделей для получения результатов оценки персональных качеств"
-msgstr "Formation of neural network architectures of models for obtaining the results of assessing personality traits"
+msgstr "Formation of neural network architectures of models for obtaining the personality traits scores"
 
 #: oceanai/modules/core/messages.py:104
 msgid "Загрузка весов нейросетевых моделей для получения результатов оценки персональных качеств"
-msgstr "Downloading the weights of neural network models to obtain the results of assessing personality traits"
+msgstr "Downloading the weights of neural network models to obtain the personality traits scores"
 
 #: oceanai/modules/core/messages.py:108
 msgid "конкатенация оценок по экспертным и нейросетевым признакам не произведена"
-msgstr "concatenation of estimates by expert and neural network features was not performed"
+msgstr "concatenation of scores by hand-crafted and deep features was not performed"
 
 #: oceanai/modules/core/messages.py:111
 msgid "нормализация оценок по экспертным и нейросетевым признакам не произведена"
-msgstr "normalization of estimates by expert and neural network features was not performed"
+msgstr "normalization of scores by hand-crafted and deep features was not performed"
 
 #: oceanai/modules/core/messages.py:115
 msgid "Получение прогнозов"
-msgstr "Getting forecasts"
+msgstr "Getting scores"
 
 #: oceanai/modules/core/messages.py:116
 msgid " и вычисление точности"
-msgstr " and precision calculation"
+msgstr " and accuracy calculation"
 
 #: oceanai/modules/core/messages.py:118
 msgid "не удалось загрузить файл с верными предсказаниями для подсчета точности ..."
-msgstr "failed to load file with correct predictions for precision calculation ..."
+msgstr "failed to load file with ground truth scores for accuracy calculation ..."
 
 #: oceanai/modules/core/messages.py:122
 msgid "не указано минимум одно расширение искомых файлов ..."
@@ -256,11 +256,11 @@ msgstr "at least one extension of the files you are looking for is missing ..."
 
 #: oceanai/modules/core/messages.py:124
 msgid "отсутствуют экспертные оценки ..."
-msgstr "no expert evaluations ..."
+msgstr "no ground truth scores ..."
 
 #: oceanai/modules/core/messages.py:126
 msgid "Точность по отдельным персональным качествам личности человека ..."
-msgstr "Accuracy on personality traits ..."
+msgstr "Trait-wise accuracy ..."
 
 #: oceanai/modules/core/messages.py:129
 msgid "Средняя средних абсолютных ошибок: {}, средняя точность: {} ..."
@@ -272,11 +272,11 @@ msgstr " (audio modality) ..."
 
 #: oceanai/modules/lab/audio.py:96
 msgid "Извлечение признаков (экспертных и лог мел-спектрограмм) из акустического сигнала ..."
-msgstr "Extraction of features (expert and mel-spectrograms) from an acoustic signal ..."
+msgstr "Extraction of features (hand-crafted and mel-spectrograms) from an acoustic signal ..."
 
 #: oceanai/modules/lab/audio.py:99
 msgid "экспертные признаки из акустического сигнала не извлечены ..."
-msgstr "expert features are not extracted from the acoustic signal ..."
+msgstr "hand-crafted features are not extracted from the acoustic signal ..."
 
 #: oceanai/modules/lab/audio.py:102
 msgid "лог мел-спектрограммы из акустического сигнала не извлечены ..."
@@ -312,15 +312,15 @@ msgstr " (multimodal fusion) ..."
 
 #: oceanai/modules/lab/prediction.py:82 oceanai/modules/lab/text.py:101
 msgid "Формирование нейросетевой архитектуры модели для получения  оценок персональных качеств"
-msgstr "Formation of neural network architecture of the model for obtaining estimates of personality qualities"
+msgstr "Formation of neural network architecture of the model for obtaining the personality traits scores"
 
 #: oceanai/modules/lab/prediction.py:86 oceanai/modules/lab/text.py:108
 msgid "Загрузка весов нейросетевой модели для получения оценок персональных качеств"
-msgstr "Downloading the weights of the neural network model to obtain estimates of personality traits"
+msgstr "Downloading the weights of the neural network model to obtain the personality traits scores"
 
 #: oceanai/modules/lab/prediction.py:92
 msgid "нейросетевая архитектура модели для получения оценок по мультимодальным данным не сформирована"
-msgstr "neural network architecture of the model for obtaining estimates from multimodal data is not formed"
+msgstr "neural network architecture of the model for obtaining scores by multimodal data is not formed"
 
 #: oceanai/modules/lab/text.py:97
 msgid " (текстовая модальность) ..."
@@ -328,15 +328,15 @@ msgstr " (text modality) ..."
 
 #: oceanai/modules/lab/text.py:116
 msgid "нейросетевая архитектура модели для получения оценок по экспертным и нейросетевым признакам не сформирована"
-msgstr "neural network architecture of the model for obtaining estimates by expert and neural network attributes is not formed"
+msgstr "neural network architecture of the model for obtaining scores by hand-crafted and deep features is not formed"
 
 #: oceanai/modules/lab/text.py:124
 msgid "Загрузка словаря с экспертными признаками ..."
-msgstr "Downloading a dictionary with expert features ..."
+msgstr "Downloading a dictionary with hand-crafted features ..."
 
 #: oceanai/modules/lab/text.py:125
 msgid "не удалось загрузить словарь с экспертными признаками ..."
-msgstr "failed to download dictionary with expert features ..."
+msgstr "failed to download dictionary with hand-crafted features ..."
 
 #: oceanai/modules/lab/text.py:129
 msgid "не удалось считать лексикон LIWC ..."
@@ -356,7 +356,7 @@ msgstr "failed to download the tokenizer and the BERT neural network model ..."
 
 #: oceanai/modules/lab/text.py:139
 msgid "Извлечение признаков (экспертных и нейросетевых) из текста ..."
-msgstr "Feature extraction (expert and neural network) from text ..."
+msgstr "Feature extraction (hand-crafted and deep) from text ..."
 
 #: oceanai/modules/lab/text.py:141
 msgid "текстовый файл \"{}\" пуст ..."
@@ -380,19 +380,19 @@ msgstr " (video modality) ..."
 
 #: oceanai/modules/lab/video.py:90
 msgid "Формирование нейросетевой архитектуры для получения нейросетевых признаков"
-msgstr "Formation of neural network architecture for obtaining neural network features"
+msgstr "Formation of neural network architecture for obtaining deep features"
 
 #: oceanai/modules/lab/video.py:98
 msgid "Загрузка весов нейросетевой модели для получения нейросетевых признаков"
-msgstr "Downloading weights of a neural network model to obtain neural network features"
+msgstr "Downloading weights of a neural network model to obtain deep features"
 
 #: oceanai/modules/lab/video.py:106
 msgid "нейросетевая архитектура модели для получения нейросетевых признаков не сформирована"
-msgstr "the neural network architecture of the model for obtaining neural network features is not formed"
+msgstr "the neural network architecture of the model for obtaining deep features is not formed"
 
 #: oceanai/modules/lab/video.py:111
 msgid "Извлечение признаков (экспертных и нейросетевых) из визуального сигнала ..."
-msgstr "Extraction of features (expert and neural network) from a visual signal ..."
+msgstr "Extraction of features (hand-crafted and deep) from a visual signal ..."
 
 #: oceanai/modules/lab/video.py:115
 msgid "расширение видеофайла должно быть одним из: \"{}\""

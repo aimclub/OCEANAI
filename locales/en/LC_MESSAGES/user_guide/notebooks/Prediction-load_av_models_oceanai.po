@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2022-12-11 15:03+0300\n"
+"POT-Creation-Date: 2023-12-17 14:43+0300\n"
 "PO-Revision-Date: 2022-12-11 15:03+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -18,78 +18,62 @@ msgstr ""
 "Generated-By: Babel 2.11.0\n"
 
 #: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:9
-#: 8f2cf549532c4bc78f4c73772dd2c5d8
+#: 20cc812df29f472f8e90b0bf4e9d7ca2
 msgid ""
 "Формирование нейросетевых архитектур моделей и загрузка их весов для "
-"получения результатов оценки персональных качеств (мультимодальное "
+"получения результатов оценки персональных качеств (аудио и видео "
 "объединение)"
 msgstr ""
-"Formation of neural network architectures of models and loading their weights to obtain the results of assessing personal traits (multimodal fusion)"
+"Formation of neural network architectures of models and downloading their "
+"weights to obtain the personality traits scores (audio and video "
+"fusion)"
 
 #: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:11
-#: 2e380a1b444d4d80a39eca8a0705fddd
+#: 9e7c5bfe8caf4c98889c585e5faf8799
 msgid "<hr>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:17
-#: 3005d7171e464a9cba709dbf90f5fd2c
+#: 5c4dedc73c604d8c8634d466153a566b
 msgid ""
 "``_b5.av_models_b5_`` - Нейросетевые модели **tf.keras.Model** для "
 "получения результатов оценки персональных качеств"
-msgstr "``_b5.av_models_b5_`` - Neural network models **tf.keras.Model** for obtaining the results of assessing personal traits"
+msgstr ""
+"``_b5.av_models_b5_`` - Neural network models **tf.keras.Model** for "
+"obtaining the results of assessing personal traits"
 
 #: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:29
-#: a88284f3c49c4e4987663618c14e648b
+#: 3ae6ab0095e64636bc07b0e4db8b163e
 msgid "Импорт необходимых инструментов"
 msgstr "Import required packages"
 
 #: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:-1
-#: b10d298c06f34cb1a5244288038fa6bf
+#: cf5372b452044d62814b7b8cf381d0bc
 msgid "[2]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:-1
-#: 55bd3350f7514b51ad7f0a15f8895f9d
+#: 9175b201bc4f44058cb0ae38b76ba71e
 msgid "from oceanai.modules.lab.build import Run"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:51
-#: 7c56b49195f045f09e670894732fca92
-msgid ""
-"<pre>\n"
-"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
-"</pre>"
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:57
-#: ad85d4ec3fb74a2a85f76a05e7b9f39e
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
-"\\end{sphinxVerbatim}"
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:64
-#: 1d1b9410863e4409bf15058e119125f3
-msgid "INFO: Created TensorFlow Lite XNNPACK delegate for CPU."
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:76
-#: 85fe4fcdf84247adba7c59d48b2c2087
+#: cbf9ef7c7e264349aa9b9e3b876a99c7
 msgid "Сборка"
 msgstr "Build"
 
 #: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:-1
-#: 84596270e1324b08be2bbc21d86e1dff
+#: 32d9eaa2a7d543b8a10ef5828784d654
 msgid "[3]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:-1
-#: 0781d3fed54f48c79e4a241026051efe
+#: 9246ef83496a45faae063803119ec0a5
+#, fuzzy
 msgid ""
 "_b5 = Run(\n"
 "    lang = 'ru', # Язык\n"
-"    color_simple = '#FFF', # Цвет обычного текста (шестнадцатеричный код)"
+"    color_simple = '#333', # Цвет обычного текста (шестнадцатеричный код)"
 "\n"
 "    color_info = '#1776D2', # Цвет текста содержащего информацию "
 "(шестнадцатеричный код)\n"
@@ -118,39 +102,41 @@ msgstr ""
 "    metadata = True # Displaying information about library\n"
 ")"
 
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:106
-#: 352f103f45ec4a92a369121adea7ece9
+#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:81
+#: 354d9ba3f2c94faf8a99a31684864c4f
+#, fuzzy
 msgid ""
-"\\ **[2022-12-11 15:50:28] OCEANAI - персональные качества личности "
+"\\ **[2023-12-14 22:44:38] OCEANAI - персональные качества личности "
 "человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
 "        Рюмин Дмитрий [dl_03.03.1991@mail.ru]        Карпов Алексей "
 "[karpov@iias.spb.su]    Сопровождающие:        Рюмина Елена "
 "[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
-"Версия: 1.0.0a2    Лицензия: BSD License"
+"Версия: 1.0.0a16    Лицензия: BSD License"
 msgstr ""
-"\\ **[2022-12-11 15:50:28] OCEANAI - personal traits:**\\     Authors:        Elena Ryumina [ryumina_ev@mail.ru]"
-"        Dmitry Ryumin [dl_03.03.1991@mail.ru]        Alexey Karpov "
-"[karpov@iias.spb.su]    Maintainers:        Elena Ryumina "
-"[ryumina_ev@mail.ru]        Dmitry Ryumin [dl_03.03.1991@mail.ru]    "
-"Version: 1.0.0a2    License: BSD License"
+"\\ **[2022-12-11 15:50:28] OCEANAI - personal traits:**\\     Authors:"
+"        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry Ryumin "
+"[dl_03.03.1991@mail.ru]        Alexey Karpov [karpov@iias.spb.su]    "
+"Maintainers:        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry "
+"Ryumin [dl_03.03.1991@mail.ru]    Version: 1.0.0a2    License: BSD "
+"License"
 
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:108
-#: 0534461b87304273af0df451099656f9
+#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:83
+#: 8ab591f3a76f4061b16907488b7fd782
 msgid "</p>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:122
-#: 25e0234e59a94a2a9c7d779c2bca26da
+#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:97
+#: d3db109e0f2142feaf5a0b505c383f38
 msgid "Формирование нейросетевых архитектур моделей"
 msgstr "Formation of neural network architectures of models"
 
 #: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:-1
-#: bc15a7687c404f71b0f13620d3a50ceb
+#: 6d3b3b4ed9a545ab88fb13e970efb39f
 msgid "[4]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:-1
-#: d21e00e2a88040f68e24cbe95bb72bb0
+#: 18e8ac48eae9437a83e77e4f13374370
 msgid ""
 "res_load_av_models_b5 = _b5.load_av_models_b5(\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
@@ -161,59 +147,67 @@ msgid ""
 ")"
 msgstr ""
 "res_load_av_models_b5 = _b5.load_av_models_b5(\n"
-"    show_summary = False, # Displaying the formed neural network architecture of the model\n"
+"    show_summary = False, # Displaying the formed neural network "
+"architecture of the model\n"
 "    out = True, # Display\n"
 "    runtime = True, # Runtime count\n"
 "    run = True # Run blocking\n"
 ")"
 
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:148
-#: df0b4532ffbb41ffac4caafe830693b0
+#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:123
+#: 4b501b35986e45488bbee10ede76ac8e
+#, fuzzy
 msgid ""
-"\\ **[2022-12-11 15:50:30] Формирование нейросетевых архитектур моделей "
+"\\ **[2023-12-14 22:44:38] Формирование нейросетевых архитектур моделей "
 "для получения результатов оценки персональных качеств (мультимодальное "
 "объединение) …**"
 msgstr ""
-"\\ **[2022-12-11 15:50:30] Formation of neural network architectures of models for obtaining the results of assessing personal traits (multimodal association) …**"
+"\\ **[2022-12-11 15:50:30] Formation of neural network architectures of "
+"models for obtaining the results of assessing personal traits (multimodal"
+" association) …**"
 
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:158
-#: 653861e4dbcc43849db42d8120593178
-msgid "— Время выполнения: 0.144 сек. —"
-msgstr "— Runtime: 0.144 sec. —"
+#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:133
+#: 32b30af5975e4a849e7b566168d39252
+#, fuzzy
+msgid "— Время выполнения: 0.095 сек. —"
+msgstr "— Runtime: 4.551 sec. —"
 
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:170
-#: 45f8bf10142d428bb01bbe5d61e09c77
+#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:145
+#: 7ebd0b3ba7bf4d4eabdec6dc671b324a
 msgid "Загрузка весов нейросетевых моделей"
 msgstr "Downloading weights of neural network models"
 
 #: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:-1
-#: 036397c440de4ff588df0c37e3cae318
+#: 2e21cb4f52ea4145b129605f1e82e4be
 msgid "[5]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:-1
-#: b07b757984c14edc91ec91ced04f55d5
+#: 18a9fdd557a44715adff60a462d4bd51
+#, fuzzy
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
 "_b5.chunk_size_ = 2000000 # Размер загрузки файла из сети за 1 шаг\n"
 "\n"
-"url_openness = _b5.weights_for_big5_['av']['b5']['openness']['sberdisk']\n"
+"url_openness = "
+"_b5.weights_for_big5_['av']['fi']['b5']['openness']['sberdisk']\n"
 "url_conscientiousness = "
-"_b5.weights_for_big5_['av']['b5']['conscientiousness']['sberdisk']\n"
+"_b5.weights_for_big5_['av']['fi']['b5']['conscientiousness']['sberdisk']"
+"\n"
 "url_extraversion = "
-"_b5.weights_for_big5_['av']['b5']['extraversion']['sberdisk']\n"
+"_b5.weights_for_big5_['av']['fi']['b5']['extraversion']['sberdisk']\n"
 "url_agreeableness = "
-"_b5.weights_for_big5_['av']['b5']['agreeableness']['sberdisk']\n"
-"url_neuroticism = "
-"_b5.weights_for_big5_['av']['b5']['neuroticism']['sberdisk']\n"
+"_b5.weights_for_big5_['av']['fi']['b5']['agreeableness']['sberdisk']\n"
+"url_non_neuroticism = "
+"_b5.weights_for_big5_['av']['fi']['b5']['non_neuroticism']['sberdisk']\n"
 "\n"
 "res_load_av_models_weights_b5 = _b5.load_av_models_weights_b5(\n"
 "    url_openness = url_openness, # Открытость опыту\n"
 "    url_conscientiousness = url_conscientiousness, # Добросовестность\n"
 "    url_extraversion = url_extraversion, # Экстраверсия\n"
 "    url_agreeableness = url_agreeableness, # Доброжелательность\n"
-"    url_neuroticism = url_neuroticism, # Нейротизм\n"
+"    url_non_neuroticism = url_non_neuroticism, # Нейротизм\n"
 "    force_reload = True, # Принудительная загрузка файла с весами "
 "нейросетевой модели из сети\n"
 "    out = True, # Отображение\n"
@@ -241,102 +235,123 @@ msgstr ""
 "    url_extraversion = url_extraversion, # Extraversion\n"
 "    url_agreeableness = url_agreeableness, # Agreeableness\n"
 "    url_neuroticism = url_neuroticism, # Neuroticism\n"
-"    force_reload = True, # Forced download of a file with weights of a neural network model from the network\n"
+"    force_reload = True, # Forced download of a file with weights of a "
+"neural network model from the network\n"
 "    out = True, # Display\n"
 "    runtime = True, # Runtime count\n"
 "    run = True # Run blocking\n"
 ")"
 
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:211
-#: f79ab1f94e8540018fe2a61bbad8256e
+#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:186
+#: 9f753d975f894ad19392defda01ce9e2
+#, fuzzy
 msgid ""
-"\\ **[2022-12-11 15:50:32] Загрузка весов нейросетевых моделей для "
+"\\ **[2023-12-14 22:44:53] Загрузка весов нейросетевых моделей для "
 "получения результатов оценки персональных качеств (мультимодальное "
 "объединение) …**"
-msgstr "\\ **[2022-12-11 15:50:32] Downloading the weights of neural network models to obtain the results of assessing personal traitss (multimodal fusion) …**"
+msgstr ""
+"\\ **[2022-12-11 15:50:32] Downloading the weights of neural network "
+"models to obtain the results of assessing personal traitss (multimodal "
+"fusion) …**"
 
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:222
-#: 19c2c8ad0a964efc882158b0ac5ecb72
+#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:197
+#: 934b31b464e84a60950689bead0071e3
+#, fuzzy
 msgid ""
-"\\ **[2022-12-11 15:50:33] Загрузка файла "
-"“weights_2022-08-28_11-14-35.h5” (100.0%) …** Открытость опыту"
-msgstr "\\ **[2022-12-11 15:50:33] File download “weights_2022-08-28_11-14-35.h5” (100.0%) …** Openness"
+"\\ **[2023-12-14 22:44:53] Загрузка файла "
+"“weights_2022-08-28_11-14-35.h5” 100.0% …** Открытость опыту"
+msgstr ""
+"\\ **[2022-12-11 15:50:33] File download “weights_2022-08-28_11-14-35.h5”"
+" (100.0%) …** Openness"
 
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:233
-#: 90433614a1db493bbd803001fe2a1e10
+#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:208
+#: e44eb072371e4f4889c15908e4939d66
+#, fuzzy
 msgid ""
-"\\ **[2022-12-11 15:50:33] Загрузка файла "
-"“weights_2022-08-28_11-08-10.h5” (100.0%) …** Добросовестность"
-msgstr "\\ **[2022-12-11 15:50:33] File download “weights_2022-08-28_11-08-10.h5” (100.0%) …** Conscientiousness"
+"\\ **[2023-12-14 22:44:54] Загрузка файла "
+"“weights_2022-08-28_11-08-10.h5” 100.0% …** Добросовестность"
+msgstr ""
+"\\ **[2022-12-11 15:50:33] File download “weights_2022-08-28_11-08-10.h5”"
+" (100.0%) …** Conscientiousness"
 
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:244
-#: 3b14f2b4654541fb8f797dec6cb295a3
+#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:219
+#: 4d9fb4378ad6466e9e92908b1c511ff5
+#, fuzzy
 msgid ""
-"\\ **[2022-12-11 15:50:35] Загрузка файла "
-"“weights_2022-08-28_11-17-57.h5” (100.0%) …** Экстраверсия"
-msgstr "\\ **[2022-12-11 15:50:35] File download “weights_2022-08-28_11-17-57.h5” (100.0%) …** Extraversion"
+"\\ **[2023-12-14 22:44:54] Загрузка файла "
+"“weights_2022-08-28_11-17-57.h5” 100.0% …** Экстраверсия"
+msgstr ""
+"\\ **[2022-12-11 15:50:35] File download “weights_2022-08-28_11-17-57.h5”"
+" (100.0%) …** Extraversion"
 
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:255
-#: a96c0509f97347e0b4c97b08581171a0
+#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:230
+#: affa03d70d07418eb95953292c100c44
+#, fuzzy
 msgid ""
-"\\ **[2022-12-11 15:50:36] Загрузка файла "
-"“weights_2022-08-28_11-25-11.h5” (100.0%) …** Доброжелательность"
-msgstr "\\ **[2022-12-11 15:50:36] File download “weights_2022-08-28_11-25-11.h5” (100.0%) …** Agreeableness"
+"\\ **[2023-12-14 22:44:54] Загрузка файла "
+"“weights_2022-08-28_11-25-11.h5” 100.0% …** Доброжелательность"
+msgstr ""
+"\\ **[2022-12-11 15:50:36] File download “weights_2022-08-28_11-25-11.h5”"
+" (100.0%) …** Agreeableness"
 
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:266
-#: 7267190fa0da4cb0b1c54d08fcba5304
+#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:241
+#: 249cd84b48d448de90de96247e538b0e
+#, fuzzy
 msgid ""
-"\\ **[2022-12-11 15:50:36] Загрузка файла "
-"“weights_2022-06-14_21-44-09.h5” (100.0%) …** Нейротизм"
-msgstr "\\ **[2022-12-11 15:50:36] File download “weights_2022-06-14_21-44-09.h5” (100.0%) …** Neuroticism"
+"\\ **[2023-12-14 22:44:54] Загрузка файла "
+"“weights_2022-06-14_21-44-09.h5” 100.0% …** Эмоциональная стабильность"
+msgstr ""
+"\\ **[2022-12-11 15:50:36] File download “weights_2022-06-14_21-44-09.h5”"
+" (100.0%) …** Neuroticism"
 
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:276
-#: 81c32d805f2844d0af38462ffc2ae49a
-msgid "— Время выполнения: 4.551 сек. —"
-msgstr "— Runtime: 4.551 sec. —"
+#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:251
+#: 5ff2bfdf2b114452bc4880eb0ba56840
+#, fuzzy
+msgid "— Время выполнения: 0.914 сек. —"
+msgstr "— Runtime: 0.144 sec. —"
 
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:288
-#: 715a605a39d4422b8bb6d271ba3c43f5
+#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:263
+#: 4d209073518b447e8523ca9a1da425c8
 msgid "Отображение сформированной нейросетевой архитектуры модели"
 msgstr "Displaying the formed neural network architecture of the model"
 
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:290
-#: fafeb4ddc0864c32a278b2455994af37
+#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:265
+#: ef2357a6671d4885ad41310f5fbd77b3
 msgid "``openness`` - Открытость опыту"
 msgstr "``openness``"
 
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:291
-#: e8b927d208bb4db1839edb46c45fe63e
+#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:266
+#: 3c352faee1774bfc8d06a1ac74b2862c
 msgid "``conscientiousness`` - Добросовестность"
 msgstr "``conscientiousness``"
 
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:292
-#: 042f4808a57a46198bd652452adc7bab
+#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:267
+#: 3ccbb3d4ae3947dd9faf7bf5843770e0
 msgid "``extraversion`` - Экстраверсия"
 msgstr "``extraversion``"
 
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:293
-#: 8579364f9be9473382a1cbe65bb8bda0
+#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:268
+#: 7d77bd17a4614ae4b52e4787465a7cb9
 msgid "``agreeableness`` - Доброжелательность"
 msgstr "``agreeableness``"
 
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:294
-#: 2d8b959f3ecd416b94f6bef28b66f26a
-msgid "``neuroticism`` - Нейротизм"
-msgstr "``neuroticism``"
+#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:269
+#: 4c869c6a6eb0419cbb921fd3328dd0f6
+msgid "``neuroticism`` - Эмоциональная стабильность"
+msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:-1
-#: c1a5004de69b4734aaf2ad9097fe4f6e
+#: 6d283f7ce71942159fc6b01307f0be1b
 msgid "[6]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:-1
-#: 44f4117d5f804439bc6585d430aaece9
+#: 31ab1386729846b2827d7776f1fcbb16
 msgid "_b5.av_models_b5_['openness'].summary()"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:315
-#: ff0059ba8e0e42dc9ec583cb4c96a36b
+#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:290
+#: 3e3a20090c8b44979e46395bb761e66f
 msgid ""
 "<pre>\n"
 "Model: &#34;model&#34;\n"
@@ -350,15 +365,15 @@ msgid ""
 " activ_1 (Activation)        (None, 1)                 0\n"
 "\n"
 "=================================================================\n"
-"Total params: 65\n"
-"Trainable params: 65\n"
-"Non-trainable params: 0\n"
+"Total params: 65 (260.00 Byte)\n"
+"Trainable params: 65 (260.00 Byte)\n"
+"Non-trainable params: 0 (0.00 Byte)\n"
 "_________________________________________________________________\n"
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:335
-#: 35ea1c89c79b4c0a8f75dafda77876c1
+#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:310
+#: d87f49deb03f402ca438dafe11707c6c
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "Model: \"model\"\n"
@@ -373,16 +388,16 @@ msgid ""
 " activ\\_1 (Activation)        (None, 1)                 0\n"
 "\n"
 "=================================================================\n"
-"Total params: 65\n"
-"Trainable params: 65\n"
-"Non-trainable params: 0\n"
+"Total params: 65 (260.00 Byte)\n"
+"Trainable params: 65 (260.00 Byte)\n"
+"Non-trainable params: 0 (0.00 Byte)\n"
 "\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_"
 "\n"
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:356
-#: d974f2fd5c6049bd8bb8075c60d28da8
+#: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:331
+#: 725e9b11f29a4b9d9d5ff1c5cbae78d3
 msgid ""
 "Model: \"model\"\n"
 "_________________________________________________________________\n"
@@ -395,8 +410,8 @@ msgid ""
 " activ_1 (Activation)        (None, 1)                 0\n"
 "\n"
 "=================================================================\n"
-"Total params: 65\n"
-"Trainable params: 65\n"
-"Non-trainable params: 0\n"
+"Total params: 65 (260.00 Byte)\n"
+"Trainable params: 65 (260.00 Byte)\n"
+"Non-trainable params: 0 (0.00 Byte)\n"
 "_________________________________________________________________"
 msgstr ""

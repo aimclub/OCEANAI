@@ -1,0 +1,666 @@
+# English translation.
+# Copyright (C) 2022. Speech and Multimodal Interfaces Laboratory Team
+# This file is distributed under the same license as the big5 package.
+# Elena Ryumina <ryumina_ev@mail.ru>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  1.0\n"
+"Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
+"POT-Creation-Date: 2023-12-23 16:50+0300\n"
+"PO-Revision-Date: 2023-12-17 14:43+0300\n"
+"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
+"<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
+"Language-Team: English <ryumina_ev@mail.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../source/modules/lab/text.rst:2 1d9bfaf3568b4c819e9488b51ec881b0
+#: b8277d1a56e14326b6e19b17fef4c9f9
+#: oceanai.modules.lab.text.Text.__translate_and_extract_features:6 of
+msgid "Текст"
+msgstr "Text"
+
+#: dd66821df0ee47f09ae98cc075887005 oceanai.modules.lab.text.TextMessages:1 of
+msgid "Базовые классы: :py:class:`~oceanai.modules.lab.download.Download`"
+msgstr "Base classes: :py:class:`~oceanai.modules.lab.download.Download`"
+
+#: 2a42b6a475114498b8af6d595226da3d oceanai.modules.lab.text.TextMessages:1 of
+msgid "Класс для сообщений"
+msgstr "Class for messages"
+
+#: 0571e6bd60814b0da026d783133725b2 06ff35fe6ea3460e9700af2a0e1c5306
+#: 0c72744d46104ccf8fcde1788360692f 125d5ded9f34423bab20e4263dbc374e
+#: 35656ddcd9a245178a6d5a456bff92ad 388193fb13ac400bb0a38fc13179a393
+#: 3ffc790631834b26ba629ca3be84dce1 43f078661277421d8eb4055d6bcd9f37
+#: 700b88e87c004296b9780b795bc464c5 772800089f484be2aeb677bfefc3f4b8
+#: a331472898894357bdff4963b0049e21 aa0e6f54586a44199f36f00faf0ea089
+#: b0276ab04e5345f588ca20c1add1b659 b061167400fe493fbaebe49385fc5fb9
+#: b57272db685342c38666d8a9a25fc28b ca83bcba284b4d91b0ed41c10af0a67e
+#: cc4f80de3c4046aab27b1c1ad4b606ec d5501adbcb6448abaf529296922a436b
+#: e3022bc549804e5186df3df81bf97342 f7f1468b5ba248dbab53cbe3efcb2480
+#: oceanai.modules.lab.text.Text
+#: oceanai.modules.lab.text.Text.__load_bert_model
+#: oceanai.modules.lab.text.Text.__load_model_weights
+#: oceanai.modules.lab.text.Text.__load_text_features
+#: oceanai.modules.lab.text.Text.__load_text_model_b5
+#: oceanai.modules.lab.text.Text.__process_audio_and_extract_features
+#: oceanai.modules.lab.text.Text.__translate_and_extract_features
+#: oceanai.modules.lab.text.Text._get_text_features
+#: oceanai.modules.lab.text.Text.get_text_features
+#: oceanai.modules.lab.text.Text.get_text_union_predictions
+#: oceanai.modules.lab.text.Text.load_text_features
+#: oceanai.modules.lab.text.Text.load_text_model_b5
+#: oceanai.modules.lab.text.Text.load_text_model_hc
+#: oceanai.modules.lab.text.Text.load_text_model_nn
+#: oceanai.modules.lab.text.Text.load_text_model_weights_b5
+#: oceanai.modules.lab.text.Text.load_text_model_weights_hc
+#: oceanai.modules.lab.text.Text.load_text_model_weights_nn
+#: oceanai.modules.lab.text.Text.setup_bert_encoder
+#: oceanai.modules.lab.text.Text.setup_translation_model
+#: oceanai.modules.lab.text.TextMessages of
+msgid "Параметры"
+msgstr "Options"
+
+#: 5793e461f3cd427e836c28e5d3a54648 62058df4f8a54cb09a3937f7caa2cd7d
+#: oceanai.modules.lab.text.Text:3 oceanai.modules.lab.text.TextMessages:3 of
+msgid "Смотреть :attr:`~oceanai.modules.core.language.Language.lang`"
+msgstr "See :attr:`~oceanai.modules.core.language.Language.lang`"
+
+#: 04590cb7c0b34a498b66b334cad3ecc9 2c8dd46aba0241be8386c9594530a362
+#: oceanai.modules.lab.text.Text:5 oceanai.modules.lab.text.TextMessages:5 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_simple`"
+msgstr "See :attr:`~oceanai.modules.core.settings.Settings.color_simple`"
+
+#: 32967913a7214cf3995fc77cc79b9e77 6886526057514aabb154337f150c62a8
+#: oceanai.modules.lab.text.Text:7 oceanai.modules.lab.text.TextMessages:7 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_info`"
+msgstr "See :attr:`~oceanai.modules.core.settings.Settings.color_info`"
+
+#: 0178724e9b244cbea69e61b8f69b3746 cb9987b8e2034dc0bbab512d497fd926
+#: oceanai.modules.lab.text.Text:9 oceanai.modules.lab.text.TextMessages:9 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_err`"
+msgstr "See :attr:`~oceanai.modules.core.settings.Settings.color_err`"
+
+#: 5b405bc2babd45fea97206b0ba50a37b eada801313b74690acf9b21967aeefd6
+#: oceanai.modules.lab.text.Text:11 oceanai.modules.lab.text.TextMessages:11 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.color_true`"
+msgstr "See :attr:`~oceanai.modules.core.settings.Settings.color_true`"
+
+#: 76c86e08e4c84b6fbb8ba2f9ad74da08 a396e677b1854f23acd2904524a0ff1d
+#: oceanai.modules.lab.text.Text:13 oceanai.modules.lab.text.TextMessages:13 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.bold_text`"
+msgstr "See :attr:`~oceanai.modules.core.settings.Settings.bold_text`"
+
+#: 89486752a5844e638bafc2e0440f0797 e8766bcc985845888038a5bd428bc28d
+#: oceanai.modules.lab.text.Text:15 oceanai.modules.lab.text.TextMessages:15 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.num_to_df_display`"
+msgstr "See :attr:`~oceanai.modules.core.settings.Settings.num_to_df_display`"
+
+#: f56cf472d1594b6eb3a6a82f85d97566 ff26f0843e7b44b8856cfb4ce1a5d9e0
+#: oceanai.modules.lab.text.Text:17 oceanai.modules.lab.text.TextMessages:17 of
+msgid "Смотреть :attr:`~oceanai.modules.core.settings.Settings.text_runtime`"
+msgstr "See :attr:`~oceanai.modules.core.settings.Settings.text_runtime`"
+
+#: eae6e42325a74a1f9f399f521e52eb03 oceanai.modules.lab.text.Text:1 of
+msgid "Базовые классы: :py:class:`~oceanai.modules.lab.text.TextMessages`"
+msgstr "Base classes: :py:class:`~oceanai.modules.lab.text.TextMessages`"
+
+#: d504f4d1033647c0963c5d18d004bf8d oceanai.modules.lab.text.Text:1 of
+msgid "Класс для обработки текста"
+msgstr "Class for text processing"
+
+#: 06ee90d2f5734cc1a1923d7fa7109cfc
+#: oceanai.modules.lab.text.Text.__load_bert_model:1 of
+msgid "Загрузка нейросетевой модели BERT"
+msgstr "Downloading the BERT model"
+
+#: 0bc773b338f84d9db6c8857294f28fda 1a5aa93ab7994ec98d15ce4ffc845dcb
+#: 3cab8cf493114312a7d76484f0280160 61874857706c4897bc26ac001717e9d5
+#: acbbd01c69de42468d7bd579c3ad0cac
+#: oceanai.modules.lab.text.Text.__load_bert_model:4
+#: oceanai.modules.lab.text.Text.__load_model_weights:4
+#: oceanai.modules.lab.text.Text.__load_text_features:4
+#: oceanai.modules.lab.text.Text.__load_text_model_b5:4
+#: oceanai.modules.lab.text.Text.__translate_and_extract_features:4 of
+msgid "private (приватный метод)"
+msgstr "private method"
+
+#: 60a1e0b122164f8faa18be4358fffee6
+#: oceanai.modules.lab.text.Text.__load_bert_model:6 of
+msgid "Полный путь к файлу с нейросетевой модели BERT"
+msgstr "Full path to the file with the BERT model"
+
+#: b81235cbd0904f9ab938240e913f1d79
+#: oceanai.modules.lab.text.Text.__load_bert_model:8 of
+msgid "Принудительная загрузка файла с нейросетевой модели BERT из сети"
+msgstr "Forcing a file download from the BERT model from the network"
+
+#: 0e0e35223958495990c960a6d6abff46 1db8f45667fd498d872d68895d254186
+#: 2c81b707fe2e4799ae83c77503be7037 2e22017075884fabb985b35d17a3a5a9
+#: 3db4e3f8c16f47a583d0e63c2475f968 5b9490fc94124e159037991c23e9e358
+#: 618155bd623b43cc81a438faad9dea5d 6480bf453a2e45a7a8e0d6de763ba737
+#: 6b42ce3f473b4fd3b4af39cdd74c4aa2 6dd789fa92934d498aa8830e6b205074
+#: 94c6e9e5f2eb4ae382786ffbf2244015 a9f24c437e2e489695db9172ded216c9
+#: afb27248726b4f83a92ad9770caa6565 d808a719a2734d078debc72dbb0cb39f
+#: ddf94b74e5444412b0f1a116e09cdc2c f6c2c1b85c894fed8eab051b9742b881
+#: fcceb162e62143e18eecdfd65db376ac
+#: oceanai.modules.lab.text.Text.__load_bert_model:10
+#: oceanai.modules.lab.text.Text.__load_model_weights:12
+#: oceanai.modules.lab.text.Text.__load_text_features:12
+#: oceanai.modules.lab.text.Text.__load_text_model_b5:8
+#: oceanai.modules.lab.text.Text.__translate_and_extract_features:14
+#: oceanai.modules.lab.text.Text._get_text_features:16
+#: oceanai.modules.lab.text.Text.get_text_features:11
+#: oceanai.modules.lab.text.Text.get_text_union_predictions:17
+#: oceanai.modules.lab.text.Text.load_text_features:5
+#: oceanai.modules.lab.text.Text.load_text_model_b5:5
+#: oceanai.modules.lab.text.Text.load_text_model_hc:7
+#: oceanai.modules.lab.text.Text.load_text_model_nn:7
+#: oceanai.modules.lab.text.Text.load_text_model_weights_b5:7
+#: oceanai.modules.lab.text.Text.load_text_model_weights_hc:7
+#: oceanai.modules.lab.text.Text.load_text_model_weights_nn:7
+#: oceanai.modules.lab.text.Text.setup_bert_encoder:5
+#: oceanai.modules.lab.text.Text.setup_translation_model:3 of
+msgid "Отображение"
+msgstr "Display"
+
+#: 074f1d0b8fc84c488789de1c524eb6d8 1eb21013378545bca4ce004a14f9e311
+#: 203d42d42b8645c4b8a758d170123466 2ad4b64851934e4c9dc00f2a1777a8ef
+#: 40b189047d9f481da1f98565ac3d7bd3 5495fe4d80234d0390a8b17067f4f5b7
+#: 7d79122045d04c68880ae0eeadb9b151 870ab2d9fa27429b927ed2a4862b4eec
+#: 8cf9ded04031405097c72030f1f51278 8d61ad1302bd4e7a82098ab4dc2b671b
+#: 9df53626851b4445a5e5cbef4aec23e2 a549b2cfa4b24a38bac91a6013dfaf20
+#: c4f72bf850f04033bf36e62c0346383d c864c2648e3846f284561d44474941b7
+#: c8d5c38e189248a09a2ff002c5be06ed
+#: oceanai.modules.lab.text.Text.__load_bert_model:12
+#: oceanai.modules.lab.text.Text.__load_model_weights:14
+#: oceanai.modules.lab.text.Text.__load_text_features:14
+#: oceanai.modules.lab.text.Text._get_text_features:18
+#: oceanai.modules.lab.text.Text.get_text_features:13
+#: oceanai.modules.lab.text.Text.get_text_union_predictions:19
+#: oceanai.modules.lab.text.Text.load_text_features:7
+#: oceanai.modules.lab.text.Text.load_text_model_b5:7
+#: oceanai.modules.lab.text.Text.load_text_model_hc:9
+#: oceanai.modules.lab.text.Text.load_text_model_nn:9
+#: oceanai.modules.lab.text.Text.load_text_model_weights_b5:9
+#: oceanai.modules.lab.text.Text.load_text_model_weights_hc:9
+#: oceanai.modules.lab.text.Text.load_text_model_weights_nn:9
+#: oceanai.modules.lab.text.Text.setup_bert_encoder:7
+#: oceanai.modules.lab.text.Text.setup_translation_model:5 of
+msgid "Подсчет времени выполнения"
+msgstr "Run time calculation"
+
+#: 285c05853f714cd1a9020a7abf2ec846 74b02df53c2f41ea941ade9f76f39cd8
+#: 8dad4c1c01de424a8c4496c0f51bac5e 97b4de03fd7b4628b55930c95c1e72d5
+#: 9ce14e6002a9471598ec921a03ccd68c b703273658074bc88625015ecdb5b43e
+#: c22f9d98d1ef413f82ec13520c8649c3 c2df06421a50496c86fa45e6dedc729c
+#: c7650fb4b1354f02aa6f5d580c65d854 d1762f25b0f2455b9ed4383ef336a47d
+#: e44836d8e1284ebe82ff4605454d8ccf e9f60370e16a40908aab8e37a28ae784
+#: edcfcc5bac834819af696a15205ccf52 f67f7ae4c2b243acb9fb5fd0dbb1f5c4
+#: fe7dc4313f54419faa96948b4ebbe2e7
+#: oceanai.modules.lab.text.Text.__load_bert_model:14
+#: oceanai.modules.lab.text.Text.__load_model_weights:16
+#: oceanai.modules.lab.text.Text.__load_text_features:16
+#: oceanai.modules.lab.text.Text._get_text_features:20
+#: oceanai.modules.lab.text.Text.get_text_features:15
+#: oceanai.modules.lab.text.Text.get_text_union_predictions:21
+#: oceanai.modules.lab.text.Text.load_text_features:9
+#: oceanai.modules.lab.text.Text.load_text_model_b5:9
+#: oceanai.modules.lab.text.Text.load_text_model_hc:11
+#: oceanai.modules.lab.text.Text.load_text_model_nn:11
+#: oceanai.modules.lab.text.Text.load_text_model_weights_b5:11
+#: oceanai.modules.lab.text.Text.load_text_model_weights_hc:11
+#: oceanai.modules.lab.text.Text.load_text_model_weights_nn:11
+#: oceanai.modules.lab.text.Text.setup_bert_encoder:9
+#: oceanai.modules.lab.text.Text.setup_translation_model:7 of
+msgid "Блокировка выполнения"
+msgstr "Run blocking"
+
+#: 09dfb6e77d054b2c9892695522305cb8 0ecd80bcdc3045a78feb8bca6b5c2245
+#: 0f3f9666a33b4ca6be050f68c40892b3 15a39284019449bba903a12230cddcde
+#: 1696f81f04a849d8a0e02fb2b3f4175c 2c5f71ff72bb45ac996a3d7463c58336
+#: 3de845b887584c22986b86ceefd80d52 44f4baf463884308b6e13acebda217d6
+#: 494c7d374f2541e1ab4ba3e2a3d0ce55 7544efc7b6964082a2aaaae45c4c0219
+#: 9037e9e948f44222b2656e9d6bde43ed 9d1a156559b54bb0877803f78d1481f0
+#: 9f8341ce721e4942aa654d5d3ce2cd37 db444267b8844f0c80d59b9d4c904a57
+#: e81fbe6e03b84006b13fe2584c88c7bc ec60b508c0c94eaea5b7eac008d8cc09
+#: f76bc9b986944bc19922197c2dedf60d f9d37ea863ab48aaac596c0ee2d577df
+#: fb9f49f62d2b4defb1e1555dd966120d fc7ceafaaf9645878726272f3bdcf96a
+#: oceanai.modules.lab.text.Text.__load_bert_model
+#: oceanai.modules.lab.text.Text.__load_model_weights
+#: oceanai.modules.lab.text.Text.__load_text_features
+#: oceanai.modules.lab.text.Text.__load_text_model_b5
+#: oceanai.modules.lab.text.Text.__translate_and_extract_features
+#: oceanai.modules.lab.text.Text._get_text_features
+#: oceanai.modules.lab.text.Text.get_text_features
+#: oceanai.modules.lab.text.Text.get_text_union_predictions
+#: oceanai.modules.lab.text.Text.load_text_features
+#: oceanai.modules.lab.text.Text.load_text_model_b5
+#: oceanai.modules.lab.text.Text.load_text_model_hc
+#: oceanai.modules.lab.text.Text.load_text_model_nn
+#: oceanai.modules.lab.text.Text.load_text_model_weights_b5
+#: oceanai.modules.lab.text.Text.load_text_model_weights_hc
+#: oceanai.modules.lab.text.Text.load_text_model_weights_nn
+#: oceanai.modules.lab.text.Text.setup_bert_encoder
+#: oceanai.modules.lab.text.Text.setup_translation_model
+#: oceanai.modules.lab.text.Text.text_model_b5_
+#: oceanai.modules.lab.text.Text.text_model_hc_
+#: oceanai.modules.lab.text.Text.text_model_nn_ of
+msgid "Результат"
+msgstr "Result"
+
+#: df5af4260bd847f4980c420b22c41ed1
+#: oceanai.modules.lab.text.Text.__load_bert_model:17 of
+msgid ""
+"**True** если нейросетевая модель BERT загружена, в обратном случае "
+"**False**"
+msgstr "**True** if the BERT model is downloaded, otherwise **False**"
+
+#: 042161ce94854f24945f00459f6913e1 0762fd951d634c93a708cf6718806780
+#: 0c38caddf5b3436ea98b24399c0217fd 40738c35894d425cae1550731c34aedb
+#: 41097137abfe480eb153706aed579a43 42cc5f2d46e34a67bdb9f6eed281a2b3
+#: 4b196f8f5358426aba960ff07cefc9ba 6161dbf93a524d9a8cc14b8553471700
+#: 636720bb0e0a4a1b86ee7ce4cfbb4d69 781b6f0ed31a47e4ae99014bf20db0b4
+#: 7ef4e25e4adc42238a2cce7532dfdf95 8a878b29aeb34258b31265d5f7955547
+#: 8b7ab8adf0434eef92ee5136308ccec9 8cd5e3c4443d4ce89f795ac3f2b73f5f
+#: 9e0de0ec7eae412f9549fc4708fecc9c b8c140647e3c45d385c05db2962f0e8f
+#: d909a0122d114935be80e62707982bf3 e7f0d916d96e43128784b935b5336a09
+#: ea316739c3244b4fb55d81048d3eb11d ecae03eb95d84380b8005454c6932496
+#: ff91ccba90254c689c60f7a024462d3c
+#: oceanai.modules.lab.text.Text.__load_bert_model
+#: oceanai.modules.lab.text.Text.__load_model_weights
+#: oceanai.modules.lab.text.Text.__load_text_features
+#: oceanai.modules.lab.text.Text.__load_text_model_b5
+#: oceanai.modules.lab.text.Text.__process_audio_and_extract_features
+#: oceanai.modules.lab.text.Text.__translate_and_extract_features
+#: oceanai.modules.lab.text.Text._get_text_features
+#: oceanai.modules.lab.text.Text.get_text_features
+#: oceanai.modules.lab.text.Text.get_text_union_predictions
+#: oceanai.modules.lab.text.Text.load_text_features
+#: oceanai.modules.lab.text.Text.load_text_model_b5
+#: oceanai.modules.lab.text.Text.load_text_model_hc
+#: oceanai.modules.lab.text.Text.load_text_model_nn
+#: oceanai.modules.lab.text.Text.load_text_model_weights_b5
+#: oceanai.modules.lab.text.Text.load_text_model_weights_hc
+#: oceanai.modules.lab.text.Text.load_text_model_weights_nn
+#: oceanai.modules.lab.text.Text.setup_bert_encoder
+#: oceanai.modules.lab.text.Text.setup_translation_model
+#: oceanai.modules.lab.text.Text.text_model_b5_
+#: oceanai.modules.lab.text.Text.text_model_hc_
+#: oceanai.modules.lab.text.Text.text_model_nn_ of
+msgid "Тип результата"
+msgstr "Result type"
+
+#: 62fb82959e97436181690be1ca7f7db8
+#: oceanai.modules.lab.text.Text.__load_model_weights:1 of
+msgid "Загрузка весов нейросетевой модели"
+msgstr "Downloading the weights of the neural network model"
+
+#: 0d90156b5fc1451aa70d75c63338aae7 1a55dcdcb1da4cb2bacedb1085f8a1b9
+#: 3e74264c016047ef8cfc879c08085543 64c3a6f69e6f4cd89dedb22b93d83bf7
+#: oceanai.modules.lab.text.Text.__load_model_weights:6
+#: oceanai.modules.lab.text.Text.load_text_model_weights_b5:3
+#: oceanai.modules.lab.text.Text.load_text_model_weights_hc:3
+#: oceanai.modules.lab.text.Text.load_text_model_weights_nn:3 of
+msgid "Полный путь к файлу с весами нейросетевой модели"
+msgstr "Full path to the file with weights of the neural network model"
+
+#: 14026b6142cf48f580d13b0b5dfb1fab 1e6f1fab9a8d427893dc55e5d09d66ed
+#: 5d7200ab019c43139536ffd62c12a3a5 dce6004b80204f0ca6a1522b9669d8bc
+#: oceanai.modules.lab.text.Text.__load_model_weights:8
+#: oceanai.modules.lab.text.Text.load_text_features:3
+#: oceanai.modules.lab.text.Text.load_text_model_weights_hc:5
+#: oceanai.modules.lab.text.Text.load_text_model_weights_nn:5 of
+msgid "Принудительная загрузка файла с весами нейросетевой модели из сети"
+msgstr ""
+"Forced download of a file with weights of a neural network model from the"
+" network"
+
+#: cf292e92ea3445b9a8d1651f9c246b35 f5855fd72b1345afa5b4184eed025b2b
+#: oceanai.modules.lab.text.Text.__load_model_weights:10
+#: oceanai.modules.lab.text.Text.__load_text_features:10 of
+msgid "Текст для информационного сообщения"
+msgstr "Text for informational message"
+
+#: 3367b7d713b4495f882635e35d739f63 6ee654c5e0cb4e8aafd54036599a91af
+#: 9d444335607c44bdab05ba0fdc755cd7 d007cbf23d784c04829cc654bf3f02fa
+#: oceanai.modules.lab.text.Text.__load_model_weights:19
+#: oceanai.modules.lab.text.Text.load_text_model_weights_b5:14
+#: oceanai.modules.lab.text.Text.load_text_model_weights_hc:14
+#: oceanai.modules.lab.text.Text.load_text_model_weights_nn:14 of
+msgid ""
+"**True** если веса нейросетевой модели загружены, в обратном случае "
+"**False**"
+msgstr ""
+"**True** if the weights of the neural network model are downloaded, "
+"otherwise **False**"
+
+#: 45ce641d721948a2949aa21d174d2363 563264980ecd42e282b8c42abaf656d4
+#: oceanai.modules.lab.text.Text.__load_text_features:1
+#: oceanai.modules.lab.text.Text.load_text_features:1 of
+msgid "Загрузка словаря с экспертными признаками"
+msgstr "Downloading the dictionary with hand-crafted features"
+
+#: 153f8a320c1e4fd4a0c0149875a8b38c
+#: oceanai.modules.lab.text.Text.__load_text_features:6 of
+msgid "Полный путь к файлу с экспертными признаками"
+msgstr "Full path to the file with hand-crafted features"
+
+#: 4dd411f829f14edaba996db8313f3095
+#: oceanai.modules.lab.text.Text.__load_text_features:8 of
+msgid "Принудительная загрузка файла с экспертными признаками из сети"
+msgstr "Forced download of a file with hand-crafted features from the network"
+
+#: 19ed99ea56324c098f8a18a2924bfdbc 4a218680345c4edc941df7b17dc61633
+#: oceanai.modules.lab.text.Text.__load_text_features:19
+#: oceanai.modules.lab.text.Text.load_text_features:12 of
+msgid ""
+"**True** если словарь с экспертными признаками загружен, в обратном "
+"случае **False**"
+msgstr ""
+"**True** if the hand-crafted feature dictionary is downloaded, otherwise "
+"**False**"
+
+#: 56da274f0a414e6382e593ca04984753
+#: oceanai.modules.lab.text.Text.__load_text_model_b5:1 of
+msgid ""
+"Формирование нейросетевой архитектуры модели для получения оценок "
+"персональных качеств"
+msgstr ""
+"Formation of a neural network model architecture for obtaining "
+"the personality traits scores"
+
+#: 11419e3a59594aa1822e9b18a07d1859 d2d024b86a91493faba558d8e3ab2e36
+#: d7422135e669495bbe177dc143ba1a2a e67b9b7cfe734fc8b143a5b897fb667d
+#: oceanai.modules.lab.text.Text.__load_text_model_b5:6
+#: oceanai.modules.lab.text.Text.load_text_model_b5:3
+#: oceanai.modules.lab.text.Text.load_text_model_hc:5
+#: oceanai.modules.lab.text.Text.load_text_model_nn:5 of
+msgid "Отображение сформированной нейросетевой архитектуры модели"
+msgstr "Displaying the formed neural network architecture of the model"
+
+#: 475f0fa5411d4f469dc317264776d30b
+#: oceanai.modules.lab.text.Text.__load_text_model_b5:11 of
+msgid ""
+"**None** если неверные типы или значения аргументов, в обратном случае "
+"нейросетевая модель **tf.keras.Model** для получения оценок персональных "
+"качеств"
+msgstr ""
+"**None** if the types or values of the arguments are invalid, otherwise "
+"the neural network model **tf.keras.Model** to get the personality traits"
+" scores"
+
+#: d7111e87266b473aad720f50fcb815ff e09a6d0f898c44b394ddca9a8c1d9a13
+#: oceanai.modules.lab.text.Text.__translate_and_extract_features:1
+#: oceanai.modules.lab.text.Text.get_text_features:1 of
+msgid "Извлечение признаков из текста"
+msgstr "Extracting features from text"
+
+#: 117e1b7e12614c7b904c756be17ba2de 4607286da1454fcebc99777d0392f45b
+#: 66a39edad70d4268afe50312607202bb a4e3d42ea1844cb5bdffaff972a23911
+#: oceanai.modules.lab.text.Text.__translate_and_extract_features:8
+#: oceanai.modules.lab.text.Text._get_text_features:10
+#: oceanai.modules.lab.text.Text.get_text_features:7
+#: oceanai.modules.lab.text.Text.get_text_union_predictions:9 of
+msgid "Язык"
+msgstr "Language"
+
+#: 125f05486e09477a900344452a7ae775 4cb6733ff41d4744b0a70392204f91e3
+#: b55077a533c6492fa2f3cae277bb3c06
+#: oceanai.modules.lab.text.Text.__translate_and_extract_features:10
+#: oceanai.modules.lab.text.Text._get_text_features:12
+#: oceanai.modules.lab.text.Text.get_text_features:9 of
+msgid "Отображение текста"
+msgstr "Text display"
+
+#: 0fde27f49180428e99616c05f376b25b 3028be79b8854d44a24d420d8607bc20
+#: oceanai.modules.lab.text.Text.__translate_and_extract_features:12
+#: oceanai.modules.lab.text.Text._get_text_features:14 of
+msgid "Замена последнего сообщения"
+msgstr "Replacing the last message"
+
+#: 0a50a9d440ae4d3ca9862bede43f9b8b 3f128b6f227e41cd857cc6135ff2743f
+#: bc10f74558eb4359a7efb5e7acc3de5b
+#: oceanai.modules.lab.text.Text.__translate_and_extract_features:17
+#: oceanai.modules.lab.text.Text._get_text_features:23
+#: oceanai.modules.lab.text.Text.get_text_features:18 of
+msgid ""
+"Кортеж с двумя np.ndarray:      1. np.ndarray с экспертными признаками"
+"     2. np.ndarray с нейросетевыми признаками"
+msgstr ""
+"Tuple with two np.ndarray:      1. np.ndarray with hand-crafted features"
+"     2. np.ndarray with deep features"
+
+#: 5125e8bad01c47e4a9da6b2fbf53ff40 e5e79b853c724b58b253f15693b91a3e
+#: f07d3c86139743b0802e8d39dca5ea38
+#: oceanai.modules.lab.text.Text.__translate_and_extract_features:19
+#: oceanai.modules.lab.text.Text._get_text_features:25
+#: oceanai.modules.lab.text.Text.get_text_features:20 of
+msgid "Кортеж с двумя np.ndarray:"
+msgstr "Tuple with two np.ndarray:"
+
+#: 8749613883e84b3d85c985f244f1fefd 8f38aa917a094c6b9d20cbb103d4c307
+#: ac3320258a39477a94892db40a6110bf
+#: oceanai.modules.lab.text.Text.__translate_and_extract_features:21
+#: oceanai.modules.lab.text.Text._get_text_features:27
+#: oceanai.modules.lab.text.Text.get_text_features:22 of
+msgid "np.ndarray с экспертными признаками"
+msgstr "np.ndarray with hand-crafted features"
+
+#: c4c7a974cf0540f1bb1be17ee74c7c15 cf002c2309844bdf9beb6f5ee605d643
+#: e788c64824d94e35889025c292d63e50
+#: oceanai.modules.lab.text.Text.__translate_and_extract_features:22
+#: oceanai.modules.lab.text.Text._get_text_features:28
+#: oceanai.modules.lab.text.Text.get_text_features:23 of
+msgid "np.ndarray с нейросетевыми признаками"
+msgstr "np.ndarray with deep features"
+
+#: 7ae457be545641469da7263589a4cf98
+#: oceanai.modules.lab.text.Text._get_text_features:1 of
+msgid ""
+"Извлечение признаков из текста (без очистки истории вывода сообщений в "
+"ячейке Jupyter)"
+msgstr ""
+"Extracting features from text (without clearing the Jupyter cell's "
+"message output history)"
+
+#: e09286e9d51b4920bad959c0bf387097
+#: oceanai.modules.lab.text.Text._get_text_features:4 of
+msgid "protected (защищенный метод)"
+msgstr "protected method"
+
+#: 6014c3511cfb41968446cc17425ded0d 75fc9fb83b7f49b29bf7c32f3942dab5
+#: oceanai.modules.lab.text.Text._get_text_features:6
+#: oceanai.modules.lab.text.Text.get_text_features:3 of
+msgid "Путь к видеофайлу или текст"
+msgstr "Path to video file or text"
+
+#: 79f504c9899844d9baa3a0a9bd8cbab6 bb7b7d64cb8642b5b2d063763ea17406
+#: f53e59dedd724cff8654556ead6c21f3
+#: oceanai.modules.lab.text.Text._get_text_features:8
+#: oceanai.modules.lab.text.Text.get_text_features:5
+#: oceanai.modules.lab.text.Text.get_text_union_predictions:7 of
+msgid "Автоматическое распознавание речи"
+msgstr "Automatic speech recognition"
+
+#: 5e8f50f236b8418591b6366e2d145515
+#: oceanai.modules.lab.text.Text.get_text_union_predictions:1 of
+msgid "Получения прогнозов по тексту"
+msgstr "Obtaining text scores"
+
+#: 2e38f5961bad4314912b78cf3e88444f
+#: oceanai.modules.lab.text.Text.get_text_union_predictions:3 of
+msgid "Глубина иерархии для получения данных"
+msgstr "Hierarchy depth for getting data"
+
+#: 981b5abec72846f1bd4adc615d757291
+#: oceanai.modules.lab.text.Text.get_text_union_predictions:5 of
+msgid "Рекурсивный поиск данных"
+msgstr "Recursive data search"
+
+#: c468f03bfa2e4ecb9954c05bad0b55a7
+#: oceanai.modules.lab.text.Text.get_text_union_predictions:11 of
+msgid "Вычисление точности"
+msgstr "Accuracy calculation"
+
+#: f450ef972a2f47189300b80962171a32
+#: oceanai.modules.lab.text.Text.get_text_union_predictions:13 of
+msgid "Полный путь к файлу с верными предсказаниями для подсчета точности"
+msgstr "Full path to the file with ground truth scores for calculating accuracy"
+
+#: 5e515728793e4a6c908ec1f915292e2b
+#: oceanai.modules.lab.text.Text.get_text_union_predictions:15 of
+msgid "При необходимости формировать LOG файл"
+msgstr "If necessary, generate a LOG file"
+
+#: 4dc3c67dafd74d3aadaf90de37f4cd38
+#: oceanai.modules.lab.text.Text.get_text_union_predictions:24 of
+msgid "**True** если прогнозы успешно получены, в обратном случае **False**"
+msgstr ""
+"**True** if scores are successfully received, otherwise "
+"**False**"
+
+#: e6fc8889f09b4b4cbca3d01281683e4b
+#: oceanai.modules.lab.text.Text.load_text_model_b5:1 of
+msgid ""
+"Формирование нейросетевой архитектуры модели для получения результатов "
+"оценки персональных качеств"
+msgstr ""
+"Formation of a neural network model architecture for the personality traits scores"
+
+#: aefeb45b3e044b17a6eed1c3f61e1770 bdbd921d367d4817bd20b02cdf3c347b
+#: ce80a787d3cb49b8ab676fc451ada417
+#: oceanai.modules.lab.text.Text.load_text_model_b5:12
+#: oceanai.modules.lab.text.Text.load_text_model_hc:14
+#: oceanai.modules.lab.text.Text.load_text_model_nn:14 of
+msgid ""
+"**True** если нейросетевая архитектура модели сформирована, в обратном "
+"случае **False**"
+msgstr ""
+"**True** if the neural network architecture of the model is formed, "
+"otherwise **False**"
+
+#: f919e89f0ab74ebfa8ce080ae5b8b353
+#: oceanai.modules.lab.text.Text.load_text_model_hc:1 of
+msgid ""
+"Формирование нейросетевой архитектуры модели для получения оценок по "
+"экспертным признакам"
+msgstr ""
+"Formation of the neural network architecture of the model for obtaining "
+"scores by hand-crafted features"
+
+#: 23b8310f0bac4459a27fc9af988f35d6 9f9f04f6e4d845e1a7f911c3e78cc742
+#: oceanai.modules.lab.text.Text.load_text_model_hc:3
+#: oceanai.modules.lab.text.Text.load_text_model_nn:3 of
+msgid "Корпус для тестирования нейросетевой модели"
+msgstr "A corpus for testing a neural network model"
+
+#: d7706889119441c1ade57fb19606b6a6
+#: oceanai.modules.lab.text.Text.load_text_model_nn:1 of
+msgid ""
+"Формирование нейросетевой архитектуры для получения оценок по "
+"нейросетевым признакам"
+msgstr ""
+"Formation of a neural network architecture for obtaining scores by deep "
+"features"
+
+#: 57a6341813a241eab32733c174136b95
+#: oceanai.modules.lab.text.Text.load_text_model_weights_b5:1 of
+msgid ""
+"Загрузка весов нейросетевой модели для получения оценок персональных "
+"качеств"
+msgstr ""
+"Downloading the weights of a neural network model to obtain the personality traits scores"
+
+#: c57958beb9f342f9b06ffdf198b96f26
+#: oceanai.modules.lab.text.Text.load_text_model_weights_b5:5 of
+msgid "Принудительная загрузка файлов с весами нейросетевых моделей из сети"
+msgstr ""
+"Forced download of files with weights of neural network models from the "
+"network"
+
+#: 72a785183d834060b1160d66402b2494
+#: oceanai.modules.lab.text.Text.load_text_model_weights_hc:1 of
+msgid ""
+"Загрузка весов нейросетевой модели для получения оценок по экспертным "
+"признакам"
+msgstr ""
+"Downloading the weights of the neural network model to obtain scores by "
+"hand-crafted features"
+
+#: 4f56545d6a2f46d69812457e0908785d
+#: oceanai.modules.lab.text.Text.load_text_model_weights_nn:1 of
+msgid ""
+"Загрузка весов нейросетевой модели для получения оценок по нейросетевым "
+"признакам"
+msgstr ""
+"Downloading the weights of the neural network model to obtain scores for "
+"deep features"
+
+#: 4bf9c259fe9049ae80a8285e37fe3daf
+#: oceanai.modules.lab.text.Text.setup_bert_encoder:1 of
+msgid "Формирование токенизатора и нейросетевой модели BERT"
+msgstr "Formation of tokenizer and BERT model"
+
+#: 826f988819bc4cbaa707451b454e4af2
+#: oceanai.modules.lab.text.Text.setup_bert_encoder:3 of
+msgid "Принудительная загрузка файла с нейросетевой моделью BERT из сети"
+msgstr "Forced downloading of a file with the BERT model from the network"
+
+#: df007635ac9d47d89bf6e59f64a5432d
+#: oceanai.modules.lab.text.Text.setup_bert_encoder:12 of
+msgid ""
+"**True** если токенизатор и нейросетевая модель BERT сформированы, в "
+"обратном случае **False**"
+msgstr ""
+"**True** if the tokenizer and the BERT model are formed, otherwise **False**"
+
+#: 3eb9e28a13a04066b35f38961bc47584
+#: oceanai.modules.lab.text.Text.setup_translation_model:1 of
+msgid "Формирование токенизатора и нейросетевой модели машинного перевода"
+msgstr "Formation of a tokenizer and neural network model of machine translation"
+
+#: 1937b2993cb248f19c40459907ed4792
+#: oceanai.modules.lab.text.Text.setup_translation_model:10 of
+msgid ""
+"**True** если токенизатор и нейросетевая модель сформированы, в обратном "
+"случае **False**"
+msgstr ""
+"**True** if the tokenizer and neural network model are generated, otherwise **False**"
+
+#: f4ed6a962b3647368bcd5787d913423e
+#: oceanai.modules.lab.text.Text.text_model_b5_:1 of
+msgid ""
+"Получение нейросетевой модели **tf.keras.Model** для получения оценок "
+"персональных качеств"
+msgstr ""
+"Obtaining a neural network model **tf.keras.Model** for obtaining the personality traits scores"
+
+#: 4ada88cd19144926a51012d370fcc38e 689ca5a361614a8586d42547de4ba463
+#: 6ae99f47e10248ebb0303d8ce8167cd3
+#: oceanai.modules.lab.text.Text.text_model_b5_:3
+#: oceanai.modules.lab.text.Text.text_model_hc_:3
+#: oceanai.modules.lab.text.Text.text_model_nn_:3 of
+msgid "Нейросетевая модель **tf.keras.Model** или None"
+msgstr "Neural network model **tf.keras.Model** or None"
+
+#: 4b59448bf1614804b1767560863a3c33
+#: oceanai.modules.lab.text.Text.text_model_hc_:1 of
+msgid ""
+"Получение нейросетевой модели **tf.keras.Model** для получения оценок по "
+"экспертным признакам"
+msgstr ""
+"Obtaining a neural network model **tf.keras.Model** to obtain scores by "
+"hand-crafted features"
+
+#: 6061884e8fb94b28b8f3d4887c79d9c1
+#: oceanai.modules.lab.text.Text.text_model_nn_:1 of
+msgid ""
+"Получение нейросетевой модели **tf.keras.Model** для получения оценок по "
+"нейросетевым признакам"
+msgstr ""
+"Obtaining a neural network model **tf.keras.Model** to obtain scores for "
+"deep features"

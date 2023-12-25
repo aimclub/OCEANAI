@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2023-12-17 21:33+0300\n"
+"POT-Creation-Date: 2023-12-23 15:27+0300\n"
 "PO-Revision-Date: 2022-12-11 11:33+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.11.0\n"
 
-#: ../../source/index.rst:91 04d2ade99f1643d8bfa488cc9b9ba87a
+#: ../../source/index.rst:154 424f687458ef487b8888665611add0fe
 msgid "Содержание:"
 msgstr ""
 
-#: ../../source/index.rst:-1 1cfff72748ab4c189def406fb5d52518
+#: ../../source/index.rst:-1 7e8174201708414a84e199bd5279ff00
 msgid "Персональные качества личности человека"
 msgstr ""
 
-#: ../../source/index.rst:-1 d3e38ad8adde4e57807452df420fc0c2
+#: ../../source/index.rst:-1 28d30867465a4117b0290c022f74ab46
 msgid ""
 "oceanai, machine learning, statistics, computer vision, artificial "
 "intelligence, preprocessing"
@@ -43,11 +43,10 @@ msgid ""
 "открытым исходным кодом, состоящая из набора алгоритмов интеллектуального"
 " анализа поведения человека на основе его мультимодальных данных для "
 "автоматического оценивания уровня отдельных персональных качеств личности"
-" человека для выполнения профессиональных обязанностей. Библиотека "
-"оценивает 5 качеств: Открытость опыту (**O**\\ p\\ enness), "
-"Добросовестность (**C**\\ o\\ nscientiousness), Экстраверсия (**E**\\ x\\"
-" traversion), Доброжелательность (**A**\\ g\\ reeableness), "
-"Нейротизм/невротизм (**N**\\ e\\ uroticism)."
+" человека (ПКЛЧ). Библиотека оценивает 5 ПКЛЧ: Открытость опыту (**O**\\ "
+"p\\ enness), Добросовестность (**C**\\ o\\ nscientiousness), Экстраверсия"
+" (**E**\\ x\\ traversion), Доброжелательность (**A**\\ g\\ reeableness), "
+"Эмоциональная стабильность (Non-**N**\\ e\\ uroticism)."
 msgstr ""
 
 #: ../../source/index.rst:-1 347da8b416da4dd38721183130fc976e
@@ -122,7 +121,54 @@ msgid ""
 "признаков полученных с помощью алгоритмов ААИ, АВИ и АТИ."
 msgstr ""
 
-#: ../../source/index.rst:46 a20e20458f0a445b8d95f124dabedbf6
+#: ../../source/index.rst:46 a410d1c23d3242ec9df853b13637470d
+msgid ""
+"`OCEANAI <https://oceanai.readthedocs.io/ru/latest/>`_ предоставляет "
+"примеры решения прикладных задач на основе полученных гипотез "
+"предсказаний оценок ПКЛЧ:"
+msgstr ""
+
+#: ../../source/index.rst:49 d12606b3fa8f49119a5b33260c948a16
+msgid ""
+"Ранжирование потенциальных кандидатов для выполнения профессиональных "
+"обязанностей:"
+msgstr ""
+
+#: ../../source/index.rst:49 2b1da61855674657a68cf8efa53195d0
+msgid "по группам профессий;"
+msgstr ""
+
+#: ../../source/index.rst:50 aa7006903f8e4d3ebd22a870679d3441
+msgid "по профессиональным навыкам."
+msgstr ""
+
+#: ../../source/index.rst:52 7d9584f2c95a40ee92184fd80839af77
+msgid ""
+"Прогнозирование потребительских предпочтений по выбору промышленных "
+"потребительских товаров:"
+msgstr ""
+
+#: ../../source/index.rst:52 2cae5e0d2510419bb2f2dea275a273db
+msgid "на примере характеристик автомобиля;"
+msgstr ""
+
+#: ../../source/index.rst:53 d16721303ed54b21b2f9dd11918f0c8f
+msgid "на примере категорий применения мобильного устройства."
+msgstr ""
+
+#: ../../source/index.rst:56 96d8c6ff28534273a694b554f4bddeab
+msgid "Формирование эффективных рабочих коллективов:"
+msgstr ""
+
+#: ../../source/index.rst:55 a779bae4b0f44d71bf527afd8fd1cb0d
+msgid "поиск подходящего младшего коллеги;"
+msgstr ""
+
+#: ../../source/index.rst:56 0952139fff684e0283bae712d17aa6ad
+msgid "поиск подходящего старшего коллеги."
+msgstr ""
+
+#: ../../source/index.rst:58 a20e20458f0a445b8d95f124dabedbf6
 msgid ""
 "Помимо основной задачи - мультимодального оценивания персональных качеств"
 " личности человека, реализованные в `OCEANAI "
@@ -131,17 +177,18 @@ msgid ""
 "распознавание его аффективных состояний."
 msgstr ""
 
-#: ../../source/index.rst:50 caee8d98992540c783e774300d708a45
+#: ../../source/index.rst:62 caee8d98992540c783e774300d708a45
 msgid ""
 "`OCEANAI <https://oceanai.readthedocs.io/ru/latest/>`_ использует самые "
-"актуальные библиотеки с открытым исходным кодом для обработки аудио и "
-"видеоинформации: `librosa <https://librosa.org/>`_, `openSMILE "
-"<https://audeering.github.io/opensmile-python/>`_, `openCV "
+"актуальные библиотеки с открытым исходным кодом для обработки аудио-, "
+"видео- и текстовой информации: `librosa <https://librosa.org/>`_, "
+"`openSMILE <https://audeering.github.io/opensmile-python/>`_, `openCV "
 "<https://pypi.org/project/opencv-python/>`_, `mediapipe "
-"<https://google.github.io/mediapipe/getting_started/python>`_."
+"<https://google.github.io/mediapipe/getting_started/python>`_, "
+"`transformers <https://pypi.org/project/transformers/>`_."
 msgstr ""
 
-#: ../../source/index.rst:56 ba8a078c25c9447bb4d23933ff078960
+#: ../../source/index.rst:68 ba8a078c25c9447bb4d23933ff078960
 msgid ""
 "`OCEANAI <https://oceanai.readthedocs.io/ru/latest/>`_ написана на языке "
 "программирования `python <https://www.python.org/>`_. Нейросетевые модели"
@@ -149,34 +196,34 @@ msgid ""
 "кодом `TensorFlow <https://www.tensorflow.org/>`_."
 msgstr ""
 
-#: ../../source/index.rst:64 a6515611d8664b25a29b2fcd35694209
+#: ../../source/index.rst:76 a6515611d8664b25a29b2fcd35694209
 msgid "Исследовательские данные"
 msgstr ""
 
-#: ../../source/index.rst:66 9d249b51e83c467f9786086d417099be
+#: ../../source/index.rst:78 9d249b51e83c467f9786086d417099be
 msgid ""
 "Библиотека `OCEANAI <https://oceanai.readthedocs.io/ru/latest/>`_ была "
 "апробирована на двух корпусах:"
 msgstr ""
 
-#: ../../source/index.rst:68 ba3edb4730c44a198230d2ca9cc1300e
+#: ../../source/index.rst:80 ba3edb4730c44a198230d2ca9cc1300e
 msgid ""
 "Общедоступном и крупномаштабном корпусе `First Empressions V2 "
 "<https://chalearnlap.cvc.uab.cat/dataset/24/description/>`_."
 msgstr ""
 
-#: ../../source/index.rst:69 934f0aae3dc740649bbd46963ab825ba
+#: ../../source/index.rst:81 934f0aae3dc740649bbd46963ab825ba
 msgid ""
 "На первом общедоступном рускоязычном мультимодальном корпусе для оценки "
 "персональных качеств - `Multimodal Personality Traits Assessment (MuPTA) "
 "Corpus <https://hci.nw.ru/ru/pages/mupta-corpus>`_."
 msgstr ""
 
-#: ../../source/index.rst:74 d558f8b77f7a47c18c5a5a94fa5ea986
+#: ../../source/index.rst:86 d558f8b77f7a47c18c5a5a94fa5ea986
 msgid "Свидетельство о государственной регистрации программы для ЭВМ"
 msgstr ""
 
-#: ../../source/index.rst:76 94ea9f27db234de59088b6e06c9684e5
+#: ../../source/index.rst:88 94ea9f27db234de59088b6e06c9684e5
 msgid ""
 "`Библиотека алгоритмов интеллектуального анализа поведения человека на "
 "основе его мультимодальных данных, обеспечивающих оценивание уровня "
@@ -185,7 +232,74 @@ msgid ""
 "doc-view/fips_servlet?DB=EVM&DocNumber=2023613724&TypeFile=html>`_"
 msgstr ""
 
-#: ../../source/index.rst:80 9f19d855f11d47cc88319f846425c73c
+#: ../../source/index.rst:91 d558f8b77f7a47c18c5a5a94fa5ea986
+msgid "Свидетельство о государственной регистрации базы данных"
+msgstr ""
+
+#: ../../source/index.rst:93 94ea9f27db234de59088b6e06c9684e5
+msgid ""
+"`Корпус для мультимодального оценивания персональных качеств личности "
+"человека (MuPTA - Multimodal Personality Traits Assessment Corpus) "
+"<https://new.fips.ru/registers-doc-"
+"view/fips_servlet?DB=DB&DocNumber=2023624011&TypeFile=html>`_"
+msgstr ""
+
+#: ../../source/index.rst:98 26ff591b2b4a4e13b6b828c6d0645a74
+msgid "Публикации"
+msgstr ""
+
+#: ../../source/index.rst:101 37fa3d11060b416c991cc99ffe1e3810
+msgid "Журналы"
+msgstr ""
+
+#: ../../source/index.rst:103 ce1241293b444d4ea9486be16a88aa80
+msgid ""
+"@article{ryumina22_neurocomputing,\n"
+"    author = {Elena Ryumina and Denis Dresvyanskiy and Alexey Karpov},\n"
+"    title = {In Search of a Robust Facial Expressions Recognition Model: "
+"A Large-Scale Visual Cross-Corpus Study},\n"
+"    journal = {Neurocomputing},\n"
+"    volume = {514},\n"
+"    pages = {435-450},\n"
+"    year = {2022},\n"
+"    doi = {https://doi.org/10.1016/j.neucom.2022.10.013},\n"
+"}"
+msgstr ""
+
+#: ../../source/index.rst:115 9426758f22bc4362a9605c8db2370cfd
+msgid ""
+"@article{ryumina24_eswa,\n"
+"    author = {Elena Ryumina and Maxim Markitantov and Dmitry Ryumin and "
+"Alexey Karpov},\n"
+"    title = {OCEAN-AI Framework with EmoFormer Cross-Hemiface Attention "
+"Approach for Personality Traits Assessment},\n"
+"    journal = {Expert Systems with Applications},\n"
+"    volume = {239},\n"
+"    pages = {122441},\n"
+"    year = {2024},\n"
+"    doi = {https://doi.org/10.1016/j.eswa.2023.122441},\n"
+"}"
+msgstr ""
+
+#: ../../source/index.rst:128 831ef614ba9e40c9bb843d0b3e791fad
+msgid "Конференции"
+msgstr ""
+
+#: ../../source/index.rst:130 255c72e33b434db8be97f0ac1434ebb5
+msgid ""
+"@inproceedings{ryumina23_interspeech,\n"
+"    author = {Elena Ryumina and Dmitry Ryumin and Maxim Markitantov and "
+"Heysem Kaya and Alexey Karpov},\n"
+"    title = {Multimodal Personality Traits Assessment (MuPTA) Corpus: The"
+" Impact of Spontaneous and Read Speech},\n"
+"    year = {2023},\n"
+"    booktitle = {INTERSPEECH},\n"
+"    pages = {4049--4053},\n"
+"    doi = {https://doi.org/10.21437/Interspeech.2023-1686},\n"
+"}"
+msgstr ""
+
+#: ../../source/index.rst:143 9f19d855f11d47cc88319f846425c73c
 msgid ""
 "Разработка поддерживается исследовательским центром `«Сильный "
 "искусственный интеллект в промышленности» <https://sai.itmo.ru/>`_ "
@@ -196,22 +310,18 @@ msgstr ""
 msgid "Сильный искусственный интеллект в промышленности (Университет ИТМО)"
 msgstr ""
 
-#: ../../source/index.rst:108 4a5e8e91598d4cb6801ee63d7fa6efdc
+#: ../../source/index.rst:171 4a5e8e91598d4cb6801ee63d7fa6efdc
 msgid "Индексация"
 msgstr ""
 
-#: ../../source/index.rst:110 198221fbee3a438fbc39cb05f750e6fd
+#: ../../source/index.rst:173 198221fbee3a438fbc39cb05f750e6fd
 msgid ":ref:`genindex`"
 msgstr ""
 
-#: ../../source/index.rst:111 bf589d4efc174aa6be29d27305760440
+#: ../../source/index.rst:174 bf589d4efc174aa6be29d27305760440
 msgid ":ref:`modindex`"
 msgstr ""
 
-#: ../../source/index.rst:112 c0777904e33f4850999501b70db57f06
+#: ../../source/index.rst:175 c0777904e33f4850999501b70db57f06
 msgid ":ref:`search`"
 msgstr ""
-
-#~ msgid "Functional diagram of the OCEAN-AI library"
-#~ msgstr ""
-

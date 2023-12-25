@@ -1,0 +1,599 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022-23. Speech and Multimodal Interfaces Laboratory Team
+# This file is distributed under the same license as the OCEANAI package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OCEANAI 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-17 14:43+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:9
+#: 7ebfb6e3334d4dbf988b97b0ab385a90
+msgid "Извлечение признаков из текстового сигнала"
+msgstr "Extracting features from a text"
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:11
+#: aa59c4d6d11e42d4a4a42f724e072f50
+msgid "<hr>"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:25
+#: 4143addc657b421090a7bb798461ffbe
+msgid "Импорт необходимых инструментов"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
+#: 1361c1fbee8343e28f4d7ec2fe49bd69
+msgid "[2]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
+#: 44a66041392a4488b8d78b25daebeda2
+msgid "from oceanai.modules.lab.build import Run"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:47
+#: c2789ff3958e4ce7ada9b3dd98ec5851
+msgid ""
+"<pre>\n"
+"2023-12-03 00:29:47.655916: I "
+"tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary"
+" is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the"
+" following CPU instructions in performance-critical operations:  AVX2 FMA"
+"\n"
+"To enable them in other operations, rebuild TensorFlow with the "
+"appropriate compiler flags.\n"
+"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
+"</pre>"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:55
+#: 04bd49407d9c4685b816e805dfcb0a68
+msgid ""
+"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
+"2023-12-03 00:29:47.655916: I "
+"tensorflow/core/platform/cpu\\_feature\\_guard.cc:193] This TensorFlow "
+"binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to "
+"use the following CPU instructions in performance-critical operations:  "
+"AVX2 FMA\n"
+"To enable them in other operations, rebuild TensorFlow with the "
+"appropriate compiler flags.\n"
+"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
+"\\end{sphinxVerbatim}"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:64
+#: f4291585795e4c8381ad343a0ff76e4f
+msgid ""
+"2023-12-03 00:29:47.655916: I "
+"tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary"
+" is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the"
+" following CPU instructions in performance-critical operations:  AVX2 FMA"
+"\n"
+"To enable them in other operations, rebuild TensorFlow with the "
+"appropriate compiler flags.\n"
+"INFO: Created TensorFlow Lite XNNPACK delegate for CPU."
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:78
+#: 1ca819f346394049a4ad2068164da787
+msgid "Сборка"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
+#: 54ffdc4f26a24cf0a6970d9026585155
+msgid "[3]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
+#: 906afc673775420fb0c9947472c8bc27
+msgid ""
+"_b5 = Run(\n"
+"    lang = 'ru', # Язык\n"
+"    color_simple = '#FFF', # Цвет обычного текста (шестнадцатеричный код)"
+"\n"
+"    color_info = '#1776D2', # Цвет текста содержащего информацию "
+"(шестнадцатеричный код)\n"
+"    color_err = '#FF0000', # Цвет текста содержащего ошибку "
+"(шестнадцатеричный код)\n"
+"    color_true = '#008001', # Цвет текста содержащего положительную "
+"информацию (шестнадцатеричный код)\n"
+"    bold_text = True, # Жирное начертание текста\n"
+"    num_to_df_display = 30, # Количество строк для отображения в таблицах"
+"\n"
+"    text_runtime = 'Время выполнения', # Текст времени выполнения\n"
+"    metadata = True # Отображение информации о библиотеке\n"
+")"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:108
+#: eba78dd3d51b434abedee119616ae319
+msgid ""
+"\\ **[2023-12-03 00:29:57] OCEANAI - персональные качества личности "
+"человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
+"        Рюмин Дмитрий [dl_03.03.1991@mail.ru]        Карпов Алексей "
+"[karpov@iias.spb.su]    Сопровождающие:        Рюмина Елена "
+"[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
+"Версия: 1.0.0a5    Лицензия: BSD License"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:110
+#: 40e69ffd86a94bd89daf8bc6a3e4d535
+msgid "</p>"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:124
+#: 749cfe4c203b40f3a875dbb7275e91f6
+msgid "Загрузка словаря с экспертными признаками"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
+#: 0ed2d82c227b47b1873ef25da1d9ae1d
+msgid "[4]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
+#: 26b0b33dc284419d87a80caad77be287
+msgid ""
+"# Настройки ядра\n"
+"_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
+"_b5.chunk_size_ = 2000000 # Размер загрузки файла из сети за 1 шаг\n"
+"\n"
+"res_load_text_features = _b5.load_text_features(\n"
+"    force_reload = True, # Принудительная загрузка файла\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:154
+#: 30a85d7c696c4c2f802a8f671a995938
+msgid "\\ **[2023-12-03 00:29:57] Загрузка словаря с экспертными признаками …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:165
+#: 5a6b9d01983c4e34aaf6058011050be8
+msgid "\\ **[2023-12-03 00:30:00] Загрузка файла “LIWC2007.txt” 100.0% …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:175
+#: 3f4925473733405ead2563777e9cd3ad
+msgid "— Время выполнения: 3.073 сек. —"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:187
+#: 31970793766a4ec3adecffbe14448655
+msgid ""
+"Формирование токенизатора и нейросетевой модели машинного перевода (``RU "
+"-> EN``)"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
+#: 9dcb54e9598e45ca88a8b78f828fb3bf
+msgid "[5]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
+#: 8bd0558fcf8c45c8a81e83e216197a5e
+msgid ""
+"res_setup_translation_model = _b5.setup_translation_model(\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:212
+#: 1764dfb9a8b64526b24668111a9dd01e
+msgid ""
+"\\ **[2023-12-03 00:30:00] Формирование токенизатора и нейросетевой "
+"модели машинного перевода …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:222
+#: f49a87ccf187410990014b744048be4f
+msgid "— Время выполнения: 3.098 сек. —"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:234
+#: d30c77cdef354d289792c079c763aaf2
+msgid ""
+"Формирование токенизатора и нейросетевой модели BERT (``для кодирования "
+"слов``)"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
+#: 7afb38863e7b4e549657699ed5dac305
+msgid "[6]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
+#: 948789e5dd4f4909a79c35f6f531ef99
+msgid ""
+"# Настройки ядра\n"
+"_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
+"_b5.chunk_size_ = 2000000 # Размер загрузки файла из сети за 1 шаг\n"
+"\n"
+"res_setup_translation_model = _b5.setup_bert_encoder(\n"
+"    force_reload = False, # Принудительная загрузка файла\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:264
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:286
+#: 015495d0e8624e72b6c3313936c4e852 4ecc1472a1064c98865285509b4e821d
+msgid ""
+"\\ **[2023-12-03 00:30:04] Формирование токенизатора и нейросетевой "
+"модели BERT …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:275
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:297
+#: 194e151d8f004ad5b97c3eff4cf9a5df 3d770ea7a9b140938846ad7bc8bfb42f
+msgid ""
+"\\ **[2023-12-03 00:30:07] Загрузка файла “bert-base-multilingual-"
+"cased.zip”**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:308
+#: 76dd07617dad4840a2836d5b04293146
+msgid ""
+"\\ **[2023-12-03 00:30:07] Разархивирование архива “bert-base-"
+"multilingual-cased.zip” …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:318
+#: 212d2f03362148c58ac25a4baef16dfd
+msgid "— Время выполнения: 14.752 сек. —"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:330
+#: 331db0f59d9a4f0f9867de1ff49b554f
+msgid "Процесс извлечения признаков из текста"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:342
+#: 8278bdd658604b5192953fcf1543f16b
+msgid "Пример 1 (Анализ видефайла (``EN``) с учетом ручной транскрипции)"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
+#: 6007a46edcb24e92ba87c8afe0581a74
+msgid "[7]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
+#: 5f7a31b8d8204e31a3b1e08134043457
+msgid ""
+"# Путь к видеофайлу\n"
+"path = "
+"'/Users/dl/GitHub/OCEANAI/docs/source/user_guide/notebooks/glgfB3vFewc.004.mp4'"
+"\n"
+"\n"
+"hc_features, nn_features = _b5.get_text_features(\n"
+"    path = path, # Путь к видеофайлу\n"
+"    asr = False, # Распознавание речи\n"
+"    lang = 'en', # Выбор языка\n"
+"    show_text = True, # Отображение текста\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:374
+#: 65db6778ad414bbeac45495ae357fefb
+msgid ""
+"\\ **[2023-12-03 00:30:18] Извлечение признаков (экспертных и "
+"нейросетевых) из текста …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:385
+#: 215aa7dd6f2d45beaa53ea27bbe5aca5
+msgid ""
+"\\ **[2023-12-03 00:30:19] Статистика извлеченных признаков из "
+"текста:**\\     Размерность матрицы экспертных признаков: 89 ✕ 64    "
+"Размерность матрицы с нейросетевыми признаками: 104 ✕ 768     Текст:"
+"        during those times i feel sad i feel confused and"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:395
+#: 1fc10d9be5ba4675a29531ed45b46400
+msgid "— Время выполнения: 0.343 сек. —"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:407
+#: 88baae7e3cae41ab91e30d4bd6c73ead
+msgid "Пример 2 (Анализ видефайла (``EN``) без учета ручной транскрипции)"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
+#: 9a844c8b8c3b404dab62b2cac00a9860
+msgid "[8]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
+#: e2d2da4c7e824cc192dc0def8baa3f78
+msgid ""
+"# Путь к видеофайлу\n"
+"path = "
+"'/Users/dl/GitHub/OCEANAI/docs/source/user_guide/notebooks/glgfB3vFewc.004.mp4'"
+"\n"
+"\n"
+"hc_features, nn_features = _b5.get_text_features(\n"
+"    path = path, # Путь к видеофайлу\n"
+"    asr = True, # Распознавание речи\n"
+"    lang = 'en', # Выбор языка\n"
+"    show_text = True, # Отображение текста\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:439
+#: a8653156fbd04fe8be22be2708a24fc0
+msgid ""
+"\\ **[2023-12-03 00:30:19] Извлечение признаков (экспертных и "
+"нейросетевых) из текста …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:450
+#: 5d074ce0b3ed4ecaba0cb0a7f36126e4
+msgid ""
+"\\ **[2023-12-03 00:30:25] Статистика извлеченных признаков из "
+"текста:**\\     Размерность матрицы экспертных признаков: 89 ✕ 64    "
+"Размерность матрицы с нейросетевыми признаками: 104 ✕ 768     Текст:"
+"        during those times i feel sad i feel confused and- the school and"
+" introduce them to our administrators and the different faculty that work"
+" throughout the school and the library and the gym and so on and then "
+"they can get comfortable if theyre in a new school as well"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:460
+#: ee7d10802c504040ac90ad9cd4462bfb
+msgid "— Время выполнения: 6.398 сек. —"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:472
+#: c7eec15fea6f417f85d02fd7768ec33f
+msgid "Пример 3 (Анализ видефайла (``RU``) без учета ручной транскрипции)"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
+#: 95f5e1337f454fa5b9de8c21b0443234
+msgid "[9]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
+#: 4ddf4ace342f4c8d93dc7e0146568967
+msgid ""
+"# Путь к текстовому файлу\n"
+"path = "
+"'/Users/dl/GitHub/OCEANAI/docs/source/user_guide/notebooks/center_42.mov'"
+"\n"
+"\n"
+"hc_features, nn_features = _b5.get_text_features(\n"
+"    path = path, # Путь к видеофайлу\n"
+"    asr = False, # Распознавание речи\n"
+"    lang = 'ru', # Выбор языка\n"
+"    show_text = True, # Отображение текста\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:504
+#: a72724a2381b40a182c4e314df042060
+msgid ""
+"\\ **[2023-12-03 00:30:25] Извлечение признаков (экспертных и "
+"нейросетевых) из текста …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:515
+#: ab4cec5b4faa4a52b1d96df7478062da
+msgid ""
+"\\ **[2023-12-03 00:30:43] Статистика извлеченных признаков из "
+"текста:**\\     Размерность матрицы экспертных признаков: 365 ✕ 64    "
+"Размерность матрицы с нейросетевыми признаками: 414 ✕ 768     Текст:"
+"        на картинке изображены скорее всего друзья которые играют в груз "
+"мечом это скорее всего происходит где-то в америке возможно в калифорнии "
+"на пляже девушка в топе и в шортах пытается словить мяч также двое парней"
+" смотрят одинаково думает как перехватить следующую подачу меча на заднем"
+" фоне видны высокие пальмы стоят дома неба голубое песок чистой чётко "
+"написки отображаются силой этой людей у парня в дали одеты солнце "
+"защитные очки он также в шортах и в майке в близи не видно головы "
+"человека он одет в темные шорты и в серую фортболку"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:526
+#: 803dd018d5904d97b31b2bf50fb7ac32
+msgid "— Время выполнения: 18.045 сек. —"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:538
+#: cec1a1c00d424b34b640e7d4e6a60ffe
+msgid "Пример 4 (Анализ текста - ``RU``)"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
+#: 20011bb5c8224dc7b03ad12cac918943
+msgid "[10]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
+#: 6714b523a1394edcb00094f03dbb277c
+msgid ""
+"# Текст\n"
+"path = '''\n"
+"На картинке изображены скорее всего друзья, которые играют в игру с "
+"мячом.\n"
+"Это скорее всего происходит где-то в Америке, возможно, в Калифорнии на "
+"пляже.\n"
+"Девушка в топе и в шортах пытается словить мяч. Также двое парней "
+"смотрят, один активно думает,\n"
+"как перехватить следующую подачу мяча. На заднем фоне видны высокие "
+"пальмы. Стоят дома.\n"
+"Небо голубое. Песок чистый. Чётко на песке отображаются силуэты людей. У "
+"парня вдали одеты солнцезащитные очки,\n"
+"он также в шортах и в майке. Вблизи не видно головы человека. Он одет в "
+"тёмные шорты и в серую футболку.\n"
+"'''\n"
+"\n"
+"hc_features, nn_features = _b5.get_text_features(\n"
+"    path = path, # Текст\n"
+"    asr = False, # Распознавание речи\n"
+"    lang = 'ru', # Выбор языка\n"
+"    show_text = True, # Отображение текста\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:577
+#: 62fbbfe9fd674acca7304b0d98a07421
+msgid ""
+"\\ **[2023-12-03 00:30:43] Извлечение признаков (экспертных и "
+"нейросетевых) из текста …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:588
+#: f7ab16f251384b9e9afd621d5e43b482
+msgid ""
+"\\ **[2023-12-03 00:30:52] Статистика извлеченных признаков из "
+"текста:**\\     Размерность матрицы экспертных признаков: 365 ✕ 64    "
+"Размерность матрицы с нейросетевыми признаками: 414 ✕ 768     Текст:"
+"        на картинке изображены скорее всего друзья которые играют в игру "
+"с мячом это скорее всего происходит где-то в америке возможно в "
+"калифорнии на пляже девушка в топе и в шортах пытается словить мяч также "
+"двое парней смотрят один активно думает как перехватить следующую подачу "
+"мяча на заднем фоне видны высокие пальмы стоят дома небо голубое песок "
+"чистый чётко на песке отображаются силуэты людей у парня вдали одеты "
+"солнцезащитные очки он также в шортах и в майке вблизи не видно головы "
+"человека он одет в тёмные шорты и в серую футболку"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:599
+#: eb0435d44aa742a8b4db4968b9e66d61
+msgid "— Время выполнения: 9.227 сек. —"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:611
+#: 3a61bd2510be4bb8a6f2030280988354
+msgid "Пример 5 (Анализ текста - ``EN``)"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
+#: 1466c734924c4cf19fe64198f6c26d5f
+msgid "[11]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
+#: 9ae2878175e742ecba6fa5a0c1da621f
+msgid ""
+"# Текст\n"
+"path = '''\n"
+"today says they to for that but right now i am just watching super girl a"
+" new images be catching up\n"
+"and some shows a good say you guys\n"
+"'''\n"
+"\n"
+"hc_features, nn_features = _b5.get_text_features(\n"
+"    path = path, # Текст\n"
+"    asr = False, # Распознавание речи\n"
+"    lang = 'en', # Выбор языка\n"
+"    show_text = True, # Отображение текста\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:646
+#: 4e837aa2f82541b59847cc810c93df24
+msgid ""
+"\\ **[2023-12-03 00:30:52] Извлечение признаков (экспертных и "
+"нейросетевых) из текста …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:657
+#: 9af0bca15373422eb77194d667925c32
+msgid ""
+"\\ **[2023-12-03 00:30:53] Статистика извлеченных признаков из "
+"текста:**\\     Размерность матрицы экспертных признаков: 89 ✕ 64    "
+"Размерность матрицы с нейросетевыми признаками: 104 ✕ 768     Текст:"
+"        today says they to for that but right now i am just watching "
+"super girl a new images be catching up and some shows a good say you guys"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:667
+#: c8545d93aa324afdb2953c78c325b6be
+msgid "— Время выполнения: 0.247 сек. —"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:679
+#: ae7863f0916b438ab072d29749ef2e1a
+msgid "Пример 6 (Анализ текстового файла - ``EN``)"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
+#: db90eb6da4ed4b6389afe41bfd73aa2b
+msgid "[12]:"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
+#: 5ba7ffb6367349e68bfcaf96ddb27f91
+msgid ""
+"# Текст\n"
+"path = "
+"'/Users/dl/GitHub/OCEANAI/docs/source/user_guide/notebooks/glgfB3vFewc.004.txt'"
+"\n"
+"\n"
+"hc_features, nn_features = _b5.get_text_features(\n"
+"    path = path, # Текст\n"
+"    asr = False, # Распознавание речи\n"
+"    lang = 'en', # Выбор языка\n"
+"    show_text = True, # Отображение текста\n"
+"    out = True, # Отображение\n"
+"    runtime = True, # Подсчет времени выполнения\n"
+"    run = True # Блокировка выполнения\n"
+")"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:711
+#: b778b36a73af412480973ab4c5ce4b70
+msgid ""
+"\\ **[2023-12-03 00:30:53] Извлечение признаков (экспертных и "
+"нейросетевых) из текста …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:722
+#: a1e1267956004854be5b123706dcdacd
+msgid ""
+"\\ **[2023-12-03 00:30:53] Статистика извлеченных признаков из "
+"текста:**\\     Размерность матрицы экспертных признаков: 89 ✕ 64    "
+"Размерность матрицы с нейросетевыми признаками: 104 ✕ 768     Текст:"
+"        during those times i feel sad i feel confused and"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:732
+#: c6a7f0317ee24cbeb26d9d5914a23924
+msgid "— Время выполнения: 0.204 сек. —"
+msgstr ""
+

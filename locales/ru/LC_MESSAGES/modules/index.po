@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2022-12-01 11:06+0300\n"
+"POT-Creation-Date: 2023-12-17 14:43+0300\n"
 "PO-Revision-Date: 2022-12-01 09:13+0300\n"
-"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin <dl_03.03.1991@mail.ru>"
-"<dl_03.03.1991@mail.ru>\n"
+"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
+"<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
 "Language-Team: Russian <ryumina_ev@mail.ru>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -21,87 +21,103 @@ msgstr ""
 msgid "Содержание:"
 msgstr ""
 
-#: ../../source/modules/index.rst:2 b4a90ebeb9044055819e89604ab9f58f
+#: ../../source/modules/index.rst:2 8e03c48d37a14cb3873d6571bd16cca6
 msgid "Модули"
 msgstr ""
 
-#: ../../source/modules/index.rst:21 9d5c4e433f2347b7a6f6ff707c3516a9
+#: ../../source/modules/index.rst:23 ef18d7e18b694d28bd97f777a67333b2
 msgid ":doc:`core/exceptions`"
 msgstr ""
 
-#: ../../source/modules/index.rst:21 22cad69e814b4e4d9a46c2cfa0596167
+#: ../../source/modules/index.rst:23 ba8c3513ea2e425b88be573dd4de3ad6
 msgid "Документация для файла ``modules/core/exceptions.py``"
 msgstr ""
 
-#: ../../source/modules/index.rst:24 edf13735e66e403abaff1bb84575d6a6
+#: ../../source/modules/index.rst:26 498b620d57be4a5bb35148b5c111ed16
 msgid ":doc:`core/language`"
 msgstr ""
 
-#: ../../source/modules/index.rst:24 8c7b16f168344cdb99716aefa88e6523
+#: ../../source/modules/index.rst:26 e327e6fddb92423ca55a1f4c179402da
 msgid "Документация для файла ``modules/core/language.py``"
 msgstr ""
 
-#: ../../source/modules/index.rst:27 9e78020051274bcebb91a3f8a155a1ce
+#: ../../source/modules/index.rst:29 2383e774970f437eb170006788ba836d
 msgid ":doc:`core/messages`"
 msgstr ""
 
-#: ../../source/modules/index.rst:27 f9be45a113a3411495a554bda2ed12f9
+#: ../../source/modules/index.rst:29 d19cca26d7914465ba46f6c361e7fcec
 msgid "Документация для файла ``modules/core/messages.py``"
 msgstr ""
 
-#: ../../source/modules/index.rst:30 afdab3c2ba1a4163aa5915837864d720
+#: ../../source/modules/index.rst:32 de065fb190ff4618b18baa25b460f8fb
 msgid ":doc:`core/settings`"
 msgstr ""
 
-#: ../../source/modules/index.rst:30 2f56b3c9caa74cc68dd06e55fb78eadc
+#: ../../source/modules/index.rst:32 a9d726c375bd4538b8878425c8eadf46
 msgid "Документация для файла ``modules/core/settings.py``"
 msgstr ""
 
-#: ../../source/modules/index.rst:33 73299a6b15534822adc2afae52512b4b
+#: ../../source/modules/index.rst:35 5659f26692c348f08dbabe9589ab7bbc
 msgid ":doc:`core/core`"
 msgstr ""
 
-#: ../../source/modules/index.rst:33 f6d782d0b00a474ab93d4eef3b65e70b
+#: ../../source/modules/index.rst:35 5ab7f12d8fa94473956988191b7b477c
 msgid "Документация для файла ``modules/core/core.py``"
 msgstr ""
 
-#: ../../source/modules/index.rst:36 e3c88eebda124f238f81a293b884098c
+#: ../../source/modules/index.rst:38 0199d20db0254c9e8bb37815d1f0cc06
+msgid ":doc:`lab/unzip`"
+msgstr ""
+
+#: ../../source/modules/index.rst:38 243d4b19e527490386227e31fdf5293d
+msgid "Документация для файла ``modules/lab/unzip.py``"
+msgstr ""
+
+#: ../../source/modules/index.rst:41 859ffec0c1024616942b810474402171
 msgid ":doc:`lab/download`"
 msgstr ""
 
-#: ../../source/modules/index.rst:36 fce4a6439fa54d3a94daaa6e193b3163
+#: ../../source/modules/index.rst:41 821b238467f24133a5e80a6aa1ffab61
 msgid "Документация для файла ``modules/lab/download.py``"
 msgstr ""
 
-#: ../../source/modules/index.rst:39 79d75e0a0cfa47f491f312f76383aa8e
+#: ../../source/modules/index.rst:44 9770843e57344952a24ab07c28a754d3
 msgid ":doc:`lab/audio`"
 msgstr ""
 
-#: ../../source/modules/index.rst:39 6477c1daca47452aad039cca7679a6cd
+#: ../../source/modules/index.rst:44 a1cdb491384d4b70922b3accfc43bdd3
 msgid "Документация для файла ``modules/lab/audio.py``"
 msgstr ""
 
-#: ../../source/modules/index.rst:42 addb001dde7e4e88a542e03e0ff5274e
+#: ../../source/modules/index.rst:47 067b94cf4a214cd2ab8ea762601f3ad9
 msgid ":doc:`lab/video`"
 msgstr ""
 
-#: ../../source/modules/index.rst:42 23eb96d97b8944a5bee4aeec839d617d
+#: ../../source/modules/index.rst:47 606f2047cb934e8ea4199e73877c96d2
 msgid "Документация для файла ``modules/lab/video.py``"
 msgstr ""
 
-#: ../../source/modules/index.rst:45 331f1f1aa98e4bdeb70632a8cf94d737
+#: ../../source/modules/index.rst:50 4cbaf53a91584b56bc9ea13ecb5781d1
+msgid ":doc:`lab/text`"
+msgstr ""
+
+#: ../../source/modules/index.rst:50 12d3c13625174726b4fc8b4968402d4c
+msgid "Документация для файла ``modules/lab/text.py``"
+msgstr ""
+
+#: ../../source/modules/index.rst:53 9339d72d3d4d4637878f0e95cec69813
 msgid ":doc:`lab/prediction`"
 msgstr ""
 
-#: ../../source/modules/index.rst:45 67fd2d9892e54cc592d0e431c6459447
+#: ../../source/modules/index.rst:53 dfeadd894cc04f90a100485e5ceefdc2
 msgid "Документация для файла ``modules/lab/prediction.py``"
 msgstr ""
 
-#: ../../source/modules/index.rst:47 8f59cd07b0184a2aa74f6a580603e29e
+#: ../../source/modules/index.rst:55 0e78631af4fc43429f9d75e366f9b3d6
 msgid ":doc:`lab/build`"
 msgstr ""
 
-#: ../../source/modules/index.rst:48 efa4d29fd2f3467aaee114b0583d5b22
+#: ../../source/modules/index.rst:56 c789c83a06aa4ee18735af1db572a83a
 msgid "Документация для файла ``modules/lab/build.py``"
 msgstr ""
 

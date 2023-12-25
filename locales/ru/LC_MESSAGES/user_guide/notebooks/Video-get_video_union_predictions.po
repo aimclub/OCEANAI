@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2022-12-11 21:21+0300\n"
+"POT-Creation-Date: 2023-12-23 12:57+0300\n"
 "PO-Revision-Date: 2022-12-11 21:21+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -18,67 +18,56 @@ msgstr ""
 "Generated-By: Babel 2.11.0\n"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:9
-#: ba71d3e0f4f74baa90cd9b699fb81467
-msgid "Получения прогнозов по видео"
+#: 1acb4b39692d430cb7664703e6b63b42
+msgid "Получение прогнозов по видео"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:11
-#: 7ddfd070ef9540889ec5e625d56b2cee
+#: 73f9edf3467c4be49ea4804393eb0120
+msgid "|a97dec82e5e34382bbc8994214e0c356|"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:17
+#: 2c81a4887c794281be71bf8ae18b8ecb 82424a42246247b8bba5d3297e3539b0
+msgid "a97dec82e5e34382bbc8994214e0c356"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:13
+#: 0caff9f675434add9d03272fcbad2e2b
 msgid "<hr>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:25
-#: a57bc0c24c3e415992332c8d1f97bd17
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:29
+#: f2cdece56ecc41dc968d14a00cfabe7b
 msgid "Импорт необходимых инструментов"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 17fc6e74c0e142e8904f7dfbe987fd39
+#: 867488f7898d432aa046fd1106cd8d12
 msgid "[2]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 12f718e8cde34144a194e3c27a3238cf
+#: cd559b0e1bd34b57b9942701ddaabf4e
 msgid "from oceanai.modules.lab.build import Run"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:47
-#: 056dfd15acc449a1b9ef36d2e7b203e9
-msgid ""
-"<pre>\n"
-"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
-"</pre>"
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:53
-#: 55e59c8a9ec144779940682fd6e831a6
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
-"\\end{sphinxVerbatim}"
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:60
-#: b14e47f973d84b2296210b2467165f24
-msgid "INFO: Created TensorFlow Lite XNNPACK delegate for CPU."
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:72
-#: e0c8619e50484fa5a46fb68e1a58c4fa
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:51
+#: b463b111783348e7ba181fe30b8bd436
 msgid "Сборка"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: d853355fb0b74d1e9e14beedb6e26142
+#: 2fbcd16b7c4541a997709e7115cde654
 msgid "[3]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 3088b9d1c2cb49b0a540068d6e556c94
+#: 343a3266fb334644a8a780df53b9abb0
 msgid ""
 "_b5 = Run(\n"
 "    lang = 'ru', # Язык\n"
-"    color_simple = '#FFF', # Цвет обычного текста (шестнадцатеричный код)"
+"    color_simple = '#333', # Цвет обычного текста (шестнадцатеричный код)"
 "\n"
 "    color_info = '#1776D2', # Цвет текста содержащего информацию "
 "(шестнадцатеричный код)\n"
@@ -94,45 +83,45 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:102
-#: 99b6d98d09d3488796f4f406a9971426
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:81
+#: 9934daf1f2d54905a2ff309166e7dc5b
 msgid ""
-"\\ **[2022-12-11 16:46:22] OCEANAI - персональные качества личности "
+"\\ **[2023-12-14 21:05:26] OCEANAI - персональные качества личности "
 "человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
 "        Рюмин Дмитрий [dl_03.03.1991@mail.ru]        Карпов Алексей "
 "[karpov@iias.spb.su]    Сопровождающие:        Рюмина Елена "
 "[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
-"Версия: 1.0.0a2    Лицензия: BSD License"
+"Версия: 1.0.0a16    Лицензия: BSD License"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:104
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:915
-#: 3ea70a292c0e4a01ae86dbd8fd6c890f 9c6095efe6554731a6d8ae319858e3e1
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:83
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:936
+#: 7c4888c57eaa4f8192f5f6b086cae72a 86d20d19115f4242b2f6d3a7a435b180
 msgid "</p>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:118
-#: 9dbc984313224310b885c882c32e20e5
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:97
+#: aab20f6113ec449eaa8b5e9f13f4328c
 msgid "Получение и отображение версий установленных библиотек"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:120
-#: 024cac113dd24e5e8ced1ab2aad28d18
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:99
+#: ea10c8856575409da987ed9c2f63bfa4
 msgid "``_b5.df_pkgs_`` - DataFrame c версиями установленных библиотек"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 5edca371900c49aaad8c0fb3069676f7
+#: 8b5e2c842c2e4d21a1eb2302c15150c7
 msgid "[4]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 53145e1d23e747ae8c85438f9948a3d0
+#: 234a60d163f7423599b27032ef176b2b
 msgid "_b5.libs_vers(runtime = True, run = True)"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:144
-#: 09971bde05b04525823a527025ccb88e
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:123
+#: 3fb67d7d5b5d4f34bc53a1de1e0e518d
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -160,17 +149,17 @@ msgid ""
 "    <tr>\n"
 "      <th>1</th>\n"
 "      <td>TensorFlow</td>\n"
-"      <td>2.11.0</td>\n"
+"      <td>2.15.0</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>2</th>\n"
 "      <td>Keras</td>\n"
-"      <td>2.11.0</td>\n"
+"      <td>2.15.0</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>3</th>\n"
 "      <td>OpenCV</td>\n"
-"      <td>4.6.0</td>\n"
+"      <td>4.8.1</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>4</th>\n"
@@ -180,159 +169,200 @@ msgid ""
 "    <tr>\n"
 "      <th>5</th>\n"
 "      <td>NumPy</td>\n"
-"      <td>1.23.5</td>\n"
+"      <td>1.26.2</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>6</th>\n"
 "      <td>SciPy</td>\n"
-"      <td>1.9.3</td>\n"
+"      <td>1.11.4</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>7</th>\n"
 "      <td>Pandas</td>\n"
-"      <td>1.5.2</td>\n"
+"      <td>2.1.3</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>8</th>\n"
 "      <td>Scikit-learn</td>\n"
-"      <td>1.1.3</td>\n"
+"      <td>1.3.2</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>9</th>\n"
 "      <td>OpenSmile</td>\n"
-"      <td>2.4.1</td>\n"
+"      <td>2.5.0</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>10</th>\n"
 "      <td>Librosa</td>\n"
-"      <td>0.9.2</td>\n"
+"      <td>0.10.1</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>11</th>\n"
 "      <td>AudioRead</td>\n"
-"      <td>3.0.0</td>\n"
+"      <td>3.0.1</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>12</th>\n"
 "      <td>IPython</td>\n"
-"      <td>8.7.0</td>\n"
+"      <td>8.18.1</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>13</th>\n"
 "      <td>PyMediaInfo</td>\n"
-"      <td>6.0.1</td>\n"
+"      <td>6.1.0</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>14</th>\n"
 "      <td>Requests</td>\n"
-"      <td>2.28.1</td>\n"
+"      <td>2.31.0</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>15</th>\n"
 "      <td>JupyterLab</td>\n"
-"      <td>3.5.0</td>\n"
+"      <td>4.0.9</td>\n"
+"    </tr>\n"
+"    <tr>\n"
+"      <th>16</th>\n"
+"      <td>LIWC</td>\n"
+"      <td>0.5.0</td>\n"
+"    </tr>\n"
+"    <tr>\n"
+"      <th>17</th>\n"
+"      <td>Transformers</td>\n"
+"      <td>4.36.0</td>\n"
+"    </tr>\n"
+"    <tr>\n"
+"      <th>18</th>\n"
+"      <td>Sentencepiece</td>\n"
+"      <td>0.1.99</td>\n"
+"    </tr>\n"
+"    <tr>\n"
+"      <th>19</th>\n"
+"      <td>Torch</td>\n"
+"      <td>2.0.1+cpu</td>\n"
+"    </tr>\n"
+"    <tr>\n"
+"      <th>20</th>\n"
+"      <td>Torchaudio</td>\n"
+"      <td>2.0.2+cpu</td>\n"
 "    </tr>\n"
 "  </tbody>\n"
 "</table>\n"
 "</div>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:255
-#: afe0c935ed0245be9345d05f9989e48e
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:259
+#: 6bd0f0e8899f4a98bd279b7a087f4f64
 msgid ""
 "<pre>\n"
-"         Package Version\n"
-"1     TensorFlow  2.11.0\n"
-"2          Keras  2.11.0\n"
-"3         OpenCV   4.6.0\n"
-"4      MediaPipe   0.9.0\n"
-"5          NumPy  1.23.5\n"
-"6          SciPy   1.9.3\n"
-"7         Pandas   1.5.2\n"
-"8   Scikit-learn   1.1.3\n"
-"9      OpenSmile   2.4.1\n"
-"10       Librosa   0.9.2\n"
-"11     AudioRead   3.0.0\n"
-"12       IPython   8.7.0\n"
-"13   PyMediaInfo   6.0.1\n"
-"14      Requests  2.28.1\n"
-"15    JupyterLab   3.5.0\n"
+"          Package    Version\n"
+"1      TensorFlow     2.15.0\n"
+"2           Keras     2.15.0\n"
+"3          OpenCV      4.8.1\n"
+"4       MediaPipe      0.9.0\n"
+"5           NumPy     1.26.2\n"
+"6           SciPy     1.11.4\n"
+"7          Pandas      2.1.3\n"
+"8    Scikit-learn      1.3.2\n"
+"9       OpenSmile      2.5.0\n"
+"10        Librosa     0.10.1\n"
+"11      AudioRead      3.0.1\n"
+"12        IPython     8.18.1\n"
+"13    PyMediaInfo      6.1.0\n"
+"14       Requests     2.31.0\n"
+"15     JupyterLab      4.0.9\n"
+"16           LIWC      0.5.0\n"
+"17   Transformers     4.36.0\n"
+"18  Sentencepiece     0.1.99\n"
+"19          Torch  2.0.1+cpu\n"
+"20     Torchaudio  2.0.2+cpu\n"
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:276
-#: db2f6abbec634bcdb313ca968621ee8f
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:285
+#: c9ed9c6f5a72460ab3f503a03b735de6
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"         Package Version\n"
-"1     TensorFlow  2.11.0\n"
-"2          Keras  2.11.0\n"
-"3         OpenCV   4.6.0\n"
-"4      MediaPipe   0.9.0\n"
-"5          NumPy  1.23.5\n"
-"6          SciPy   1.9.3\n"
-"7         Pandas   1.5.2\n"
-"8   Scikit-learn   1.1.3\n"
-"9      OpenSmile   2.4.1\n"
-"10       Librosa   0.9.2\n"
-"11     AudioRead   3.0.0\n"
-"12       IPython   8.7.0\n"
-"13   PyMediaInfo   6.0.1\n"
-"14      Requests  2.28.1\n"
-"15    JupyterLab   3.5.0\n"
+"          Package    Version\n"
+"1      TensorFlow     2.15.0\n"
+"2           Keras     2.15.0\n"
+"3          OpenCV      4.8.1\n"
+"4       MediaPipe      0.9.0\n"
+"5           NumPy     1.26.2\n"
+"6           SciPy     1.11.4\n"
+"7          Pandas      2.1.3\n"
+"8    Scikit-learn      1.3.2\n"
+"9       OpenSmile      2.5.0\n"
+"10        Librosa     0.10.1\n"
+"11      AudioRead      3.0.1\n"
+"12        IPython     8.18.1\n"
+"13    PyMediaInfo      6.1.0\n"
+"14       Requests     2.31.0\n"
+"15     JupyterLab      4.0.9\n"
+"16           LIWC      0.5.0\n"
+"17   Transformers     4.36.0\n"
+"18  Sentencepiece     0.1.99\n"
+"19          Torch  2.0.1+cpu\n"
+"20     Torchaudio  2.0.2+cpu\n"
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:298
-#: 6052f239f49c44d98670e07824823f67
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:312
+#: 36f2725f65c9478798731c77a0ff6f07
 msgid ""
-"         Package Version\n"
-"1     TensorFlow  2.11.0\n"
-"2          Keras  2.11.0\n"
-"3         OpenCV   4.6.0\n"
-"4      MediaPipe   0.9.0\n"
-"5          NumPy  1.23.5\n"
-"6          SciPy   1.9.3\n"
-"7         Pandas   1.5.2\n"
-"8   Scikit-learn   1.1.3\n"
-"9      OpenSmile   2.4.1\n"
-"10       Librosa   0.9.2\n"
-"11     AudioRead   3.0.0\n"
-"12       IPython   8.7.0\n"
-"13   PyMediaInfo   6.0.1\n"
-"14      Requests  2.28.1\n"
-"15    JupyterLab   3.5.0"
+"          Package    Version\n"
+"1      TensorFlow     2.15.0\n"
+"2           Keras     2.15.0\n"
+"3          OpenCV      4.8.1\n"
+"4       MediaPipe      0.9.0\n"
+"5           NumPy     1.26.2\n"
+"6           SciPy     1.11.4\n"
+"7          Pandas      2.1.3\n"
+"8    Scikit-learn      1.3.2\n"
+"9       OpenSmile      2.5.0\n"
+"10        Librosa     0.10.1\n"
+"11      AudioRead      3.0.1\n"
+"12        IPython     8.18.1\n"
+"13    PyMediaInfo      6.1.0\n"
+"14       Requests     2.31.0\n"
+"15     JupyterLab      4.0.9\n"
+"16           LIWC      0.5.0\n"
+"17   Transformers     4.36.0\n"
+"18  Sentencepiece     0.1.99\n"
+"19          Torch  2.0.1+cpu\n"
+"20     Torchaudio  2.0.2+cpu"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:323
-#: 3d894012909d44ca9b9b61542fc3fb95
-msgid "— Время выполнения: 0.007 сек. —"
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:342
+#: 68a76f76e88d4663bcb414b02a0a6611
+msgid "— Время выполнения: 0.005 сек. —"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:335
-#: 365959452f1c47d39ea7d2fd5fd54771
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:354
+#: c2d85ac52ddf48cda9bcb2de6b22b1dd
 msgid ""
 "Формирование нейросетевой архитектуры модели для получения оценок по "
 "экспертным признакам"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:337
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:387
-#: 98b443bf0ce24ccda7a21bae5d023775 b26a41c3012a4139b3fbc21f48e12296
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:356
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:407
+#: 0615ad5e70fd4482a8f90bd5a173dd74 8cfcf35420a54aae8b6a4899639597b7
 msgid ""
 "``_b5.video_model_hc_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения оценок по экспертным признакам"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 2d7577cdc0af4ecbabc9c646616cfd81
+#: 9876ec953e5e4d89bd94615132970406
 msgid "[5]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 7c51df8c005b4a8fa62407c7875003e6
+#: 49d725e7b3674395856292a7a3aa9ed9
 msgid ""
 "res_load_video_model_hc = _b5.load_video_model_hc(\n"
+"    lang = 'en',\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
 "архитектуры модели\n"
 "    out = True, # Отображение\n"
@@ -341,38 +371,38 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:363
-#: 37126035807a4a159c8a70a65d186c08
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:383
+#: 7bdf144f2ad44b68835ef92508755152
 msgid ""
-"\\ **[2022-12-11 16:46:22] Формирование нейросетевой архитектуры модели "
+"\\ **[2023-12-14 21:05:26] Формирование нейросетевой архитектуры модели "
 "для получения оценок по экспертным признакам (видео модальность) …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:373
-#: 55b2324d48e642f3bed7993526df00e0
-msgid "— Время выполнения: 0.55 сек. —"
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:393
+#: 211ca3b9e9274bd8b21e2e439e4bec6b
+msgid "— Время выполнения: 0.321 сек. —"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:385
-#: 238affc9abe442ecbafeadc4e1b96126
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:405
+#: fc11f59caffa4d20a506e96d8643a824
 msgid ""
 "Загрузка весов нейросетевой модели для получения оценок по экспертным "
 "признакам"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: e7b29879ae9e4633ac0fe8004abffdcf
+#: 908527c9ea1f410b99c0f47da7c80603
 msgid "[6]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: d20243c7e08b4c739f01b065d870cc8e
+#: 441fed7d5ae84551ac3351bd38cae2aa
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
 "_b5.chunk_size_ = 2000000 # Размер загрузки файла из сети за 1 шаг\n"
 "\n"
-"url = _b5.weights_for_big5_['video']['hc']['sberdisk']\n"
+"url = _b5.weights_for_big5_['video']['fi']['hc']['sberdisk']\n"
 "\n"
 "res_load_video_model_weights_hc = _b5.load_video_model_weights_hc(\n"
 "    url = url, # Полный путь к файлу с весами нейросетевой модели\n"
@@ -384,45 +414,45 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:420
-#: 2f73bc3a8cfb496b8492970f8e313e69
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:440
+#: d7b44551bc7749b79647c0da2e3b74e7
 msgid ""
-"\\ **[2022-12-11 16:46:23] Загрузка весов нейросетевой модели для "
+"\\ **[2023-12-14 21:05:27] Загрузка весов нейросетевой модели для "
 "получения оценок по экспертным признакам (видео модальность) …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:431
-#: be8023d241504e268b88eef06693efe1
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:451
+#: ea3fcddcf8e44eb785021d02cd0c4a3a
 msgid ""
-"\\ **[2022-12-11 16:46:23] Загрузка файла "
-"“weights_2022-08-27_18-53-35.h5” (100.0%) …**"
+"\\ **[2023-12-14 21:05:27] Загрузка файла "
+"“weights_2022-08-27_18-53-35.h5” 100.0% …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:441
-#: a9a04d5750fd47cbb9fe520bf17aba4f
-msgid "— Время выполнения: 0.299 сек. —"
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:461
+#: deedee55ba8545259e72fb479972dcf7
+msgid "— Время выполнения: 0.249 сек. —"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:453
-#: 1a5aa90815ec4fe082b43cebbc3a235f
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:473
+#: 4b5cf7a8e45a4d82bb64aa69e25b6d91
 msgid "Формирование нейросетевой архитектуры для получения нейросетевых признаков"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:455
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:505
-#: 2284f10d5f1046f9a00e6a9cc40430bd f3cc3064bfaa497b9a3d174955bdc383
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:475
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:525
+#: 5021df7bd97249429979cc80bc79f375 bf22d22276624eac9473d29bccc412ee
 msgid ""
 "``_b5.video_model_deep_fe_`` - Нейросетевая модель **tf.keras.Model** для"
 " получения нейросетевых признаков"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: ead42810892840cfb80623494acbf1ae
+#: adb2cad11248456196d18676fffd567d
 msgid "[7]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: b330ec7b5bdd47b0b70a49034f47c118
+#: c33f24d7d0ed421d9b5467e1e50a14d2
 msgid ""
 "res_load_video_model_deep_fe = _b5.load_video_model_deep_fe(\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
@@ -433,36 +463,36 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:481
-#: 2a08383dec6640e1a38794041b95c300
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:501
+#: 65f069b169d8476dad224e5f505a88b0
 msgid ""
-"\\ **[2022-12-11 16:46:23] Формирование нейросетевой архитектуры для "
+"\\ **[2023-12-14 21:05:27] Формирование нейросетевой архитектуры для "
 "получения нейросетевых признаков (видео модальность) …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:491
-#: 8cf9f96d5b244b5c9380ba2a9eebc103
-msgid "— Время выполнения: 1.143 сек. —"
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:511
+#: f5f5334f56a8476fb00e8f626c756178
+msgid "— Время выполнения: 0.823 сек. —"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:503
-#: c88b16584db3422394f0bc2df02a3ad5
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:523
+#: 80942df310554a6e930e019f2a5670e2
 msgid "Загрузка весов нейросетевой модели для получения нейросетевых признаков"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 3e933121e87b402f9acd1c1bb4582333
+#: 06142ba33bda4450af12617bec40e112
 msgid "[8]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 37399ff609f4442fba9707eeb1104ce1
+#: 349bae1d1974458cb523e75832ffab0f
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
 "_b5.chunk_size_ = 2000000 # Размер загрузки файла из сети за 1 шаг\n"
 "\n"
-"url = _b5.weights_for_big5_['video']['fe']['sberdisk']\n"
+"url = _b5.weights_for_big5_['video']['fi']['fe']['sberdisk']\n"
 "\n"
 "res_load_video_model_weights_deep_fe = "
 "_b5.load_video_model_weights_deep_fe(\n"
@@ -475,47 +505,47 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:538
-#: 137fc3ca58624b2bb4056987a9f50000
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:558
+#: 3378b83100fa48b8b35031d88a21ea57
 msgid ""
-"\\ **[2022-12-11 16:46:24] Загрузка весов нейросетевой модели для "
+"\\ **[2023-12-14 21:05:28] Загрузка весов нейросетевой модели для "
 "получения нейросетевых признаков (видео модальность) …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:549
-#: f285b27f55344641b84db9930594c5fb
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:569
+#: 2ecb55fc0694480289e949d49c6c7045
 msgid ""
-"\\ **[2022-12-11 16:46:29] Загрузка файла "
-"“weights_2022-11-01_12-27-07.h5” (100.0%) …**"
+"\\ **[2023-12-14 21:05:31] Загрузка файла "
+"“weights_2022-11-01_12-27-07.h5” 100.0% …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:559
-#: bf9ec155fb6e44dc93ae75aca091d785
-msgid "— Время выполнения: 4.649 сек. —"
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:579
+#: 752187764b7d42d39e5653305733c78b
+msgid "— Время выполнения: 3.342 сек. —"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:571
-#: 0f122a4a65d640c29c791e9f9de46f48
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:591
+#: a8716df4d44e4b1b86b40b98fccf5e15
 msgid ""
 "Формирование нейросетевой архитектуры модели для получения оценок по "
 "нейросетевым признакам"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:573
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:623
-#: a232ca3400bc4f4098c09ad6c5fc8624 f22e6360383341ce93b708569fc407a1
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:593
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:643
+#: 23c0ccfe0be444b289580a3430f409c6 b8745993571c4c47916bef5e11249066
 msgid ""
 "``_b5.video_model_nn_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения оценок по нейросетевым признакам"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 173b2a0b579d48389ffe2978c1726fda
+#: 41e8fa581b40494397a55ebced833943
 msgid "[9]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 51cc9dcdb8cc410cb171281d79afe8b5
+#: af74dd87bb494cc9a9e03f61e29524fb
 msgid ""
 "res_load_video_model_nn = _b5.load_video_model_nn(\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
@@ -526,38 +556,38 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:599
-#: f0173ba4056341e2b818529d6c6fb665
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:619
+#: 0da49506f3a246cfaf1d45ae10c30818
 msgid ""
-"\\ **[2022-12-11 16:46:29] Формирование нейросетевой архитектуры для "
+"\\ **[2023-12-14 21:05:31] Формирование нейросетевой архитектуры для "
 "получения оценок по нейросетевым признакам (видео модальность) …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:609
-#: 53b6420955234fc7b23d69ab6353958e
-msgid "— Время выполнения: 2.0 сек. —"
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:629
+#: 0d612acbfa5346cc912f17e637d39270
+msgid "— Время выполнения: 0.708 сек. —"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:621
-#: cf2ea364793e4f0eaf990605f1204f5b
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:641
+#: befe48a8bc584b2fa83d522ab495b296
 msgid ""
 "Загрузка весов нейросетевой модели для получения оценок по нейросетевым "
 "признакам"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 160f50bd0f02441e87976b79dc8c7f19
+#: f345e9e0b4f843bba460df9439aededa
 msgid "[10]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: f2cb13692ee84b8aa6d93915c3cd3da8
+#: 7d747475873a4c6999b5600254857e16
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
 "_b5.chunk_size_ = 2000000 # Размер загрузки файла из сети за 1 шаг\n"
 "\n"
-"url = _b5.weights_for_big5_['video']['nn']['sberdisk']\n"
+"url = _b5.weights_for_big5_['video']['fi']['nn']['sberdisk']\n"
 "\n"
 "res_load_video_model_weights_nn = _b5.load_video_model_weights_nn(\n"
 "    url = url, # Полный путь к файлу с весами нейросетевой модели\n"
@@ -569,47 +599,47 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:656
-#: 2b86ff9a55e342ad943af367453aeb6a
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:676
+#: ec62a422889d406daf66ee268c1770ca
 msgid ""
-"\\ **[2022-12-11 16:46:31] Загрузка весов нейросетевой модели для "
+"\\ **[2023-12-14 21:05:32] Загрузка весов нейросетевой модели для "
 "получения оценок по нейросетевым признакам (видео модальность) …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:667
-#: 1c0285989e794a119360c9bccb0fdbcd
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:687
+#: 2f54038f42304d9da65198dd51db0d24
 msgid ""
-"\\ **[2022-12-11 16:46:31] Загрузка файла "
+"\\ **[2023-12-14 21:05:32] Загрузка файла "
 "“weights_2022-03-22_16-31-48.h5”**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:677
-#: 1b99d9b45fd84ca79fe4e132688a688a
-msgid "— Время выполнения: 0.221 сек. —"
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:697
+#: b8e40064093e4e9a8bae55e6b875842a
+msgid "— Время выполнения: 0.209 сек. —"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:689
-#: 4fc13e8e24c5434b89693536196350c1
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:709
+#: 80231c938a7b47868f9975d4d8016f0a
 msgid ""
 "Формирование нейросетевых архитектур моделей для получения результатов "
 "оценки персональных качеств"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:691
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:741
-#: bc1fe9d1c76e40df9f0e7d4c612b3fff d063d6aedb47485396f45153a6486ae3
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:711
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:761
+#: c94b59736c5d4b4e811286781725b8ed c969c867022b4e63bf4ed77eca502718
 msgid ""
 "``_b5.video_models_b5_`` - Нейросетевые модели **tf.keras.Model** для "
 "получения результатов оценки персональных качеств"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 856a0d93779741548ea3d4c2480706c0
+#: d56bbea0bd414a9bb12141665cb5d5c1
 msgid "[11]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 3909c7eb7c6e4558b6679cb194a0cc75
+#: 39d47fe1e62f44cf8c2b434e9d770eed
 msgid ""
 "res_load_video_models_b5 = _b5.load_video_models_b5(\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
@@ -620,55 +650,57 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:717
-#: 4c02d0fae975482195d55a8af9f95661
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:737
+#: 5361c58ca3154aa28ac7a85ed22037e7
 msgid ""
-"\\ **[2022-12-11 16:46:31] Формирование нейросетевых архитектур моделей "
+"\\ **[2023-12-14 21:05:32] Формирование нейросетевых архитектур моделей "
 "для получения результатов оценки персональных качеств (видео модальность)"
 " …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:727
-#: f0360a3d8f1d4867ab114b728160ebc2
-msgid "— Время выполнения: 0.104 сек. —"
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:747
+#: 91de5be5c5214929bcfceeeca8ac66d5
+msgid "— Время выполнения: 0.046 сек. —"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:739
-#: 150d8a31607e4cf692260ab06b955e7c
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:759
+#: f4f43a0af80644a7ba9763b30a1786ab
 msgid ""
 "Загрузка весов нейросетевых моделей для получения результатов оценки "
 "персональных качеств"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 7f87d47e622a4f3587ad668b2f69bb46
+#: 2d3aa82721204a96a9f0c2f92a701046
 msgid "[12]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 3dd4076df378470bae67fc88e194844d
+#: 6d1a6810c0194cf8ad3d2eb2cba818df
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
 "_b5.chunk_size_ = 2000000 # Размер загрузки файла из сети за 1 шаг\n"
 "\n"
 "url_openness = "
-"_b5.weights_for_big5_['video']['b5']['openness']['sberdisk']\n"
+"_b5.weights_for_big5_['video']['fi']['b5']['openness']['sberdisk']\n"
 "url_conscientiousness = "
-"_b5.weights_for_big5_['video']['b5']['conscientiousness']['sberdisk']\n"
+"_b5.weights_for_big5_['video']['fi']['b5']['conscientiousness']['sberdisk']"
+"\n"
 "url_extraversion = "
-"_b5.weights_for_big5_['video']['b5']['extraversion']['sberdisk']\n"
+"_b5.weights_for_big5_['video']['fi']['b5']['extraversion']['sberdisk']\n"
 "url_agreeableness = "
-"_b5.weights_for_big5_['video']['b5']['agreeableness']['sberdisk']\n"
-"url_neuroticism = "
-"_b5.weights_for_big5_['video']['b5']['neuroticism']['sberdisk']\n"
+"_b5.weights_for_big5_['video']['fi']['b5']['agreeableness']['sberdisk']\n"
+"url_non_neuroticism = "
+"_b5.weights_for_big5_['video']['fi']['b5']['non_neuroticism']['sberdisk']"
+"\n"
 "\n"
 "res_load_video_models_weights_b5 = _b5.load_video_models_weights_b5(\n"
 "    url_openness = url_openness, # Открытость опыту\n"
 "    url_conscientiousness = url_conscientiousness, # Добросовестность\n"
 "    url_extraversion = url_extraversion, # Экстраверсия\n"
 "    url_agreeableness = url_agreeableness, # Доброжелательность\n"
-"    url_neuroticism = url_neuroticism, # Нейротизм\n"
+"    url_non_neuroticism = url_non_neuroticism, # Нейротизм\n"
 "    force_reload = False, # Принудительная загрузка файла с весами "
 "нейросетевой модели из сети\n"
 "    out = True, # Отображение\n"
@@ -677,98 +709,98 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:782
-#: a19c122753704172af4cb66863b83220
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:802
+#: 2355c3c9b13d4d529506cabe98f27f72
 msgid ""
-"\\ **[2022-12-11 16:46:31] Загрузка весов нейросетевых моделей для "
+"\\ **[2023-12-14 21:05:32] Загрузка весов нейросетевых моделей для "
 "получения результатов оценки персональных качеств (видео модальность) …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:793
-#: 261c4832ba3047a3ba39638b09ec4f3b
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:813
+#: 865f712be4f54567955386bf287157fc
 msgid ""
-"\\ **[2022-12-11 16:46:31] Загрузка файла "
+"\\ **[2023-12-14 21:05:32] Загрузка файла "
 "“weights_2022-06-15_16-46-30.h5”** Открытость опыту"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:804
-#: f7010750c15740d79ec5b5e71e4676c7
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:824
+#: 206172f892344fa0aba92ef9a187cd2c
 msgid ""
-"\\ **[2022-12-11 16:46:32] Загрузка файла "
+"\\ **[2023-12-14 21:05:32] Загрузка файла "
 "“weights_2022-06-15_16-48-50.h5”** Добросовестность"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:815
-#: 42e289d958c948b2a3ef2ed5d09a9291
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:835
+#: c08c647af67b47b7800dc3cd3127c1e9
 msgid ""
-"\\ **[2022-12-11 16:46:32] Загрузка файла "
+"\\ **[2023-12-14 21:05:33] Загрузка файла "
 "“weights_2022-06-15_16-54-06.h5”** Экстраверсия"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:826
-#: 6e4b6f20e5784246810440680c78d669
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:846
+#: 3f33d977da8944e5ba933b65254c619b
 msgid ""
-"\\ **[2022-12-11 16:46:32] Загрузка файла "
+"\\ **[2023-12-14 21:05:33] Загрузка файла "
 "“weights_2022-06-15_17-02-03.h5”** Доброжелательность"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:837
-#: 0d2c3c1969e540aabd49e2d9aa0d8b3f
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:857
+#: 4f684c3abd614b18996216e07d3b75f7
 msgid ""
-"\\ **[2022-12-11 16:46:32] Загрузка файла "
-"“weights_2022-06-15_17-06-15.h5”** Нейротизм"
+"\\ **[2023-12-14 21:05:33] Загрузка файла "
+"“weights_2022-06-15_17-06-15.h5”** Эмоциональная стабильность"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:847
-#: 17ef11577e0e49058a55302a1be8d6c0
-msgid "— Время выполнения: 0.636 сек. —"
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:867
+#: 30653f4a9d1e494a8239dbf44d5f6101
+msgid "— Время выполнения: 1.013 сек. —"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:859
-#: 24cf0e828ea5412b8a952a79481b7a83
-msgid "Получение прогнозов (аудио модальность)"
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:879
+#: 0675c91f454b493f99f3a643a12953ac
+msgid "Получение прогнозов (видео модальность)"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:861
-#: 0dfaa82ecd54443c8cd08e7b434ea30c
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:881
+#: 16d96ae4b03546ffb3da2a53fd354256
 msgid "``_b5.df_files_`` - DataFrame с данными"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:862
-#: aea4af2a2c064c86b22b8b89f5efeb85
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:882
+#: 706fe8881d214512b61ad7bda8631fcb
 msgid "``_b5.df_accuracy_`` - DataFrame с результатами вычисления точности"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: cb6d476542814395a0bb5874315e734c
+#: 6bf38b0f890345f988f48a1e062b3efa
 msgid "[13]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 7fb630f443be4d19ace59e341c244119
+#: 0a3b02693ab94cff905415b1dae97e7d
 msgid ""
 "# Настройки ядра\n"
-"_b5.path_to_dataset_ = "
-"'/Users/dl/GitHub/OCEANAI.private/oceanai/dataset/First_Impression' # "
+"_b5.path_to_dataset_ = 'E:/Databases/FirstImpressionsV2/test' # "
 "Директория набора данных\n"
 "# Директории не входящие в выборку\n"
 "_b5.ignore_dirs_ = []\n"
 "# Названия ключей для DataFrame набора данных\n"
 "_b5.keys_dataset_ = ['Path', 'Openness', 'Conscientiousness', "
-"'Extraversion', 'Agreeableness', 'Neuroticism']\n"
+"'Extraversion', 'Agreeableness', 'Non-Neuroticism']\n"
 "_b5.ext_ = ['.mp4'] # Расширения искомых файлов\n"
 "_b5.path_to_logs_ = './logs' # Директория для сохранения LOG файлов\n"
 "\n"
 "# Полный путь к файлу с верными предсказаниями для подсчета точности\n"
-"url_accuracy = _b5.true_traits_['sberdisk']\n"
+"url_accuracy = _b5.true_traits_['fi']['sberdisk']\n"
 "\n"
 "res_get_video_union_predictions = _b5.get_video_union_predictions(\n"
-"    depth = 2,         # Глубина иерархии для получения аудио и "
+"    depth = 1,         # Глубина иерархии для получения аудио и "
 "видеоданных\n"
 "    recursive = False, # Рекурсивный поиск данных\n"
 "    reduction_fps = 5, # Понижение кадровой частоты\n"
 "    window = 10,       # Размер окна сегмента сигнала (в секундах)\n"
 "    step = 5,          # Шаг сдвига окна сегмента сигнала (в секундах)\n"
+"    lang = 'en',\n"
 "    accuracy = True,   # Вычисление точности\n"
 "    url_accuracy = url_accuracy,\n"
 "    logs = True,       # При необходимости формировать LOG файл\n"
@@ -778,25 +810,25 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:907
-#: a246f19c1b8d4777b6446078834ddb2a
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:928
+#: 17ce1bdf3623492f94750dbf0d91e94d
 msgid ""
-"\\ **[2022-12-11 21:03:52] Получение прогнозов и вычисление точности "
+"\\ **[2023-12-14 22:24:55] Получение прогнозов и вычисление точности "
 "(видео модальность) …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:909
-#: be3c2eb4ce2e4786bd782a11d1aea420
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:930
+#: af4d4a24b7fa4438911f5dd23e4db5f5
 msgid "<p>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:913
-#: f7c9c8c4f0484c448959fbf6b4f3fce6
-msgid "2000 из 2000 (100.0%) … test/test80_04/yw-2AGeAjFc.000.mp4 …"
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:934
+#: 428e96987dcb48d0b7881bb21da3341b
+msgid "2000 из 2000 (100.0%) … test80_25_Q4wOgixh7E.004.mp4 …"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:931
-#: d27db94386664627a26dd21f8356c049
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:952
+#: 9d38066764104f2281bcd3fdd3a81030
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -821,7 +853,7 @@ msgid ""
 "      <th>Conscientiousness</th>\n"
 "      <th>Extraversion</th>\n"
 "      <th>Agreeableness</th>\n"
-"      <th>Neuroticism</th>\n"
+"      <th>Non-Neuroticism</th>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>ID</th>\n"
@@ -836,503 +868,563 @@ msgid ""
 "  <tbody>\n"
 "    <tr>\n"
 "      <th>1</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.608291</td>\n"
-"      <td>0.588899</td>\n"
-"      <td>0.501183</td>\n"
-"      <td>0.582908</td>\n"
-"      <td>0.576623</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.526971</td>\n"
+"      <td>0.460063</td>\n"
+"      <td>0.422793</td>\n"
+"      <td>0.502726</td>\n"
+"      <td>0.450519</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>2</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.661451</td>\n"
-"      <td>0.578297</td>\n"
-"      <td>0.593245</td>\n"
-"      <td>0.589372</td>\n"
-"      <td>0.59824</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.559385</td>\n"
+"      <td>0.432843</td>\n"
+"      <td>0.504231</td>\n"
+"      <td>0.578673</td>\n"
+"      <td>0.513424</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>3</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.527108</td>\n"
-"      <td>0.459685</td>\n"
-"      <td>0.418835</td>\n"
-"      <td>0.520207</td>\n"
-"      <td>0.42901</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.466969</td>\n"
+"      <td>0.51701</td>\n"
+"      <td>0.331863</td>\n"
+"      <td>0.451395</td>\n"
+"      <td>0.406188</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>4</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.604264</td>\n"
-"      <td>0.65761</td>\n"
-"      <td>0.517209</td>\n"
-"      <td>0.65528</td>\n"
-"      <td>0.593034</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.626113</td>\n"
+"      <td>0.597363</td>\n"
+"      <td>0.564068</td>\n"
+"      <td>0.574056</td>\n"
+"      <td>0.589245</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>5</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.505877</td>\n"
-"      <td>0.455019</td>\n"
-"      <td>0.389953</td>\n"
-"      <td>0.529122</td>\n"
-"      <td>0.462579</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.5925</td>\n"
+"      <td>0.507246</td>\n"
+"      <td>0.505394</td>\n"
+"      <td>0.585405</td>\n"
+"      <td>0.493066</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>6</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.579816</td>\n"
-"      <td>0.396078</td>\n"
-"      <td>0.412173</td>\n"
-"      <td>0.509535</td>\n"
-"      <td>0.44431</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.671855</td>\n"
+"      <td>0.642559</td>\n"
+"      <td>0.614689</td>\n"
+"      <td>0.613508</td>\n"
+"      <td>0.619511</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>7</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.636979</td>\n"
-"      <td>0.565163</td>\n"
-"      <td>0.596547</td>\n"
-"      <td>0.581199</td>\n"
-"      <td>0.594057</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.411555</td>\n"
+"      <td>0.394029</td>\n"
+"      <td>0.329323</td>\n"
+"      <td>0.488684</td>\n"
+"      <td>0.39105</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>8</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.489927</td>\n"
-"      <td>0.459276</td>\n"
-"      <td>0.401972</td>\n"
-"      <td>0.529253</td>\n"
-"      <td>0.475732</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.583696</td>\n"
+"      <td>0.568682</td>\n"
+"      <td>0.505574</td>\n"
+"      <td>0.625314</td>\n"
+"      <td>0.587337</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>9</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.459953</td>\n"
-"      <td>0.602312</td>\n"
-"      <td>0.345716</td>\n"
-"      <td>0.555249</td>\n"
-"      <td>0.465719</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.551353</td>\n"
+"      <td>0.450333</td>\n"
+"      <td>0.449763</td>\n"
+"      <td>0.495501</td>\n"
+"      <td>0.438009</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>10</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.661356</td>\n"
-"      <td>0.53626</td>\n"
-"      <td>0.592904</td>\n"
-"      <td>0.668499</td>\n"
-"      <td>0.640769</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.575084</td>\n"
+"      <td>0.517972</td>\n"
+"      <td>0.46315</td>\n"
+"      <td>0.582468</td>\n"
+"      <td>0.537961</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>11</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.676824</td>\n"
-"      <td>0.670385</td>\n"
-"      <td>0.624558</td>\n"
-"      <td>0.632891</td>\n"
-"      <td>0.645098</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.559182</td>\n"
+"      <td>0.398618</td>\n"
+"      <td>0.433806</td>\n"
+"      <td>0.480592</td>\n"
+"      <td>0.492383</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>12</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.380311</td>\n"
-"      <td>0.292063</td>\n"
-"      <td>0.26858</td>\n"
-"      <td>0.377671</td>\n"
-"      <td>0.270471</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.50948</td>\n"
+"      <td>0.432549</td>\n"
+"      <td>0.3319</td>\n"
+"      <td>0.495221</td>\n"
+"      <td>0.486891</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>13</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.669534</td>\n"
-"      <td>0.512284</td>\n"
-"      <td>0.435214</td>\n"
-"      <td>0.478462</td>\n"
-"      <td>0.478063</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.330026</td>\n"
+"      <td>0.322635</td>\n"
+"      <td>0.235595</td>\n"
+"      <td>0.369766</td>\n"
+"      <td>0.25056</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>14</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.597146</td>\n"
-"      <td>0.663032</td>\n"
-"      <td>0.5282</td>\n"
-"      <td>0.647053</td>\n"
-"      <td>0.620368</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.649351</td>\n"
+"      <td>0.550074</td>\n"
+"      <td>0.502858</td>\n"
+"      <td>0.526621</td>\n"
+"      <td>0.566755</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>15</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.512098</td>\n"
-"      <td>0.45855</td>\n"
-"      <td>0.39145</td>\n"
-"      <td>0.469369</td>\n"
-"      <td>0.427472</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.651914</td>\n"
+"      <td>0.83048</td>\n"
+"      <td>0.535514</td>\n"
+"      <td>0.695223</td>\n"
+"      <td>0.734383</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>16</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.55148</td>\n"
-"      <td>0.439325</td>\n"
-"      <td>0.441604</td>\n"
-"      <td>0.488599</td>\n"
-"      <td>0.448521</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.523986</td>\n"
+"      <td>0.435594</td>\n"
+"      <td>0.382946</td>\n"
+"      <td>0.41001</td>\n"
+"      <td>0.466265</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>17</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.507806</td>\n"
-"      <td>0.485112</td>\n"
-"      <td>0.401344</td>\n"
-"      <td>0.546405</td>\n"
-"      <td>0.463422</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.575113</td>\n"
+"      <td>0.678301</td>\n"
+"      <td>0.468646</td>\n"
+"      <td>0.602139</td>\n"
+"      <td>0.626021</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>18</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.53634</td>\n"
-"      <td>0.556031</td>\n"
-"      <td>0.502185</td>\n"
-"      <td>0.607919</td>\n"
-"      <td>0.528054</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.566349</td>\n"
+"      <td>0.558975</td>\n"
+"      <td>0.462116</td>\n"
+"      <td>0.606252</td>\n"
+"      <td>0.569516</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>19</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.441206</td>\n"
-"      <td>0.327241</td>\n"
-"      <td>0.300706</td>\n"
-"      <td>0.376834</td>\n"
-"      <td>0.315691</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.672282</td>\n"
+"      <td>0.6552</td>\n"
+"      <td>0.656699</td>\n"
+"      <td>0.627328</td>\n"
+"      <td>0.663199</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>20</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.543785</td>\n"
-"      <td>0.496215</td>\n"
-"      <td>0.461758</td>\n"
-"      <td>0.543176</td>\n"
-"      <td>0.511415</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.684442</td>\n"
+"      <td>0.602593</td>\n"
+"      <td>0.680469</td>\n"
+"      <td>0.635343</td>\n"
+"      <td>0.652304</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>21</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.607067</td>\n"
-"      <td>0.737411</td>\n"
-"      <td>0.455133</td>\n"
-"      <td>0.647487</td>\n"
-"      <td>0.644389</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.550788</td>\n"
+"      <td>0.492015</td>\n"
+"      <td>0.404885</td>\n"
+"      <td>0.562745</td>\n"
+"      <td>0.478233</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>22</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.622571</td>\n"
-"      <td>0.541001</td>\n"
-"      <td>0.550565</td>\n"
-"      <td>0.59144</td>\n"
-"      <td>0.557298</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.525446</td>\n"
+"      <td>0.469039</td>\n"
+"      <td>0.428517</td>\n"
+"      <td>0.491442</td>\n"
+"      <td>0.45359</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>23</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.493816</td>\n"
-"      <td>0.413649</td>\n"
-"      <td>0.420854</td>\n"
-"      <td>0.467975</td>\n"
-"      <td>0.428532</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.473489</td>\n"
+"      <td>0.442729</td>\n"
+"      <td>0.353017</td>\n"
+"      <td>0.447929</td>\n"
+"      <td>0.358706</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>24</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.436601</td>\n"
-"      <td>0.403559</td>\n"
-"      <td>0.36628</td>\n"
-"      <td>0.463585</td>\n"
-"      <td>0.402131</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.667829</td>\n"
+"      <td>0.655159</td>\n"
+"      <td>0.603695</td>\n"
+"      <td>0.630121</td>\n"
+"      <td>0.614812</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>25</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.648608</td>\n"
-"      <td>0.696656</td>\n"
-"      <td>0.558988</td>\n"
-"      <td>0.602866</td>\n"
-"      <td>0.605066</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.469207</td>\n"
+"      <td>0.594029</td>\n"
+"      <td>0.364701</td>\n"
+"      <td>0.522734</td>\n"
+"      <td>0.481228</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>26</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.621685</td>\n"
-"      <td>0.375665</td>\n"
-"      <td>0.446427</td>\n"
-"      <td>0.520072</td>\n"
-"      <td>0.486112</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.625514</td>\n"
+"      <td>0.641622</td>\n"
+"      <td>0.514204</td>\n"
+"      <td>0.547718</td>\n"
+"      <td>0.54766</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>27</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.551339</td>\n"
-"      <td>0.574673</td>\n"
-"      <td>0.459378</td>\n"
-"      <td>0.561397</td>\n"
-"      <td>0.479306</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.568821</td>\n"
+"      <td>0.524382</td>\n"
+"      <td>0.475687</td>\n"
+"      <td>0.520644</td>\n"
+"      <td>0.531275</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>28</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.679971</td>\n"
-"      <td>0.635061</td>\n"
-"      <td>0.610862</td>\n"
-"      <td>0.612292</td>\n"
-"      <td>0.624674</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.696397</td>\n"
+"      <td>0.665074</td>\n"
+"      <td>0.70902</td>\n"
+"      <td>0.655993</td>\n"
+"      <td>0.689747</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>29</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.660572</td>\n"
-"      <td>0.664394</td>\n"
-"      <td>0.581625</td>\n"
-"      <td>0.617902</td>\n"
-"      <td>0.626589</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.578405</td>\n"
+"      <td>0.577321</td>\n"
+"      <td>0.487293</td>\n"
+"      <td>0.557221</td>\n"
+"      <td>0.52153</td>\n"
 "    </tr>\n"
 "    <tr>\n"
 "      <th>30</th>\n"
-"      <td>/Users/dl/GitHub/OCEANAI.private/oceanai/datas...</td>\n"
-"      <td>0.457011</td>\n"
-"      <td>0.357742</td>\n"
-"      <td>0.369294</td>\n"
-"      <td>0.450881</td>\n"
-"      <td>0.392082</td>\n"
+"      <td>E:\\Databases\\FirstImpressionsV2\\test\\test80_01...</td>\n"
+"      <td>0.637576</td>\n"
+"      <td>0.587702</td>\n"
+"      <td>0.614512</td>\n"
+"      <td>0.637398</td>\n"
+"      <td>0.613861</td>\n"
 "    </tr>\n"
 "  </tbody>\n"
 "</table>\n"
 "</div>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1250
-#: f6b265bae178405e9c1c02b1218040b3
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1271
+#: bb6016964f6c43978b0616ab3872d7c0
 msgid ""
 "<pre>\n"
 "                                                 Path  Openness  \\\n"
 "ID\n"
-"1   /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.608291\n"
-"2   /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.661451\n"
-"3   /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.527108\n"
-"4   /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.604264\n"
-"5   /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.505877\n"
-"6   /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.579816\n"
-"7   /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.636979\n"
-"8   /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.489927\n"
-"9   /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.459953\n"
-"10  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.661356\n"
-"11  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.676824\n"
-"12  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.380311\n"
-"13  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.669534\n"
-"14  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.597146\n"
-"15  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.512098\n"
-"16  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...   0.55148\n"
-"17  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.507806\n"
-"18  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...   0.53634\n"
-"19  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.441206\n"
-"20  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.543785\n"
-"21  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.607067\n"
-"22  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.622571\n"
-"23  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.493816\n"
-"24  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.436601\n"
-"25  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.648608\n"
-"26  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.621685\n"
-"27  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.551339\n"
-"28  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.679971\n"
-"29  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.660572\n"
-"30  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.457011\n"
+"1   E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.526971\n"
+"2   E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.559385\n"
+"3   E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.466969\n"
+"4   E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.626113\n"
+"5   E:\\Databases\\FirstImpressionsV2\\test\\test80_01...    0.5925\n"
+"6   E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.671855\n"
+"7   E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.411555\n"
+"8   E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.583696\n"
+"9   E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.551353\n"
+"10  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.575084\n"
+"11  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.559182\n"
+"12  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...   0.50948\n"
+"13  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.330026\n"
+"14  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.649351\n"
+"15  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.651914\n"
+"16  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.523986\n"
+"17  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.575113\n"
+"18  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.566349\n"
+"19  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.672282\n"
+"20  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.684442\n"
+"21  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.550788\n"
+"22  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.525446\n"
+"23  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.473489\n"
+"24  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.667829\n"
+"25  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.469207\n"
+"26  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.625514\n"
+"27  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.568821\n"
+"28  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.696397\n"
+"29  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.578405\n"
+"30  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.637576\n"
 "\n"
-"   Conscientiousness Extraversion Agreeableness Neuroticism\n"
+"   Conscientiousness Extraversion Agreeableness Non-Neuroticism\n"
 "ID\n"
-"1           0.588899     0.501183      0.582908    0.576623\n"
-"2           0.578297     0.593245      0.589372     0.59824\n"
-"3           0.459685     0.418835      0.520207     0.42901\n"
-"4            0.65761     0.517209       0.65528    0.593034\n"
-"5           0.455019     0.389953      0.529122    0.462579\n"
-"6           0.396078     0.412173      0.509535     0.44431\n"
-"7           0.565163     0.596547      0.581199    0.594057\n"
-"8           0.459276     0.401972      0.529253    0.475732\n"
-"9           0.602312     0.345716      0.555249    0.465719\n"
-"10           0.53626     0.592904      0.668499    0.640769\n"
-"11          0.670385     0.624558      0.632891    0.645098\n"
-"12          0.292063      0.26858      0.377671    0.270471\n"
-"13          0.512284     0.435214      0.478462    0.478063\n"
-"14          0.663032       0.5282      0.647053    0.620368\n"
-"15           0.45855      0.39145      0.469369    0.427472\n"
-"16          0.439325     0.441604      0.488599    0.448521\n"
-"17          0.485112     0.401344      0.546405    0.463422\n"
-"18          0.556031     0.502185      0.607919    0.528054\n"
-"19          0.327241     0.300706      0.376834    0.315691\n"
-"20          0.496215     0.461758      0.543176    0.511415\n"
-"21          0.737411     0.455133      0.647487    0.644389\n"
-"22          0.541001     0.550565       0.59144    0.557298\n"
-"23          0.413649     0.420854      0.467975    0.428532\n"
-"24          0.403559      0.36628      0.463585    0.402131\n"
-"25          0.696656     0.558988      0.602866    0.605066\n"
-"26          0.375665     0.446427      0.520072    0.486112\n"
-"27          0.574673     0.459378      0.561397    0.479306\n"
-"28          0.635061     0.610862      0.612292    0.624674\n"
-"29          0.664394     0.581625      0.617902    0.626589\n"
-"30          0.357742     0.369294      0.450881    0.392082\n"
+"1           0.460063     0.422793      0.502726        0.450519\n"
+"2           0.432843     0.504231      0.578673        0.513424\n"
+"3            0.51701     0.331863      0.451395        0.406188\n"
+"4           0.597363     0.564068      0.574056        0.589245\n"
+"5           0.507246     0.505394      0.585405        0.493066\n"
+"6           0.642559     0.614689      0.613508        0.619511\n"
+"7           0.394029     0.329323      0.488684         0.39105\n"
+"8           0.568682     0.505574      0.625314        0.587337\n"
+"9           0.450333     0.449763      0.495501        0.438009\n"
+"10          0.517972      0.46315      0.582468        0.537961\n"
+"11          0.398618     0.433806      0.480592        0.492383\n"
+"12          0.432549       0.3319      0.495221        0.486891\n"
+"13          0.322635     0.235595      0.369766         0.25056\n"
+"14          0.550074     0.502858      0.526621        0.566755\n"
+"15           0.83048     0.535514      0.695223        0.734383\n"
+"16          0.435594     0.382946       0.41001        0.466265\n"
+"17          0.678301     0.468646      0.602139        0.626021\n"
+"18          0.558975     0.462116      0.606252        0.569516\n"
+"19            0.6552     0.656699      0.627328        0.663199\n"
+"20          0.602593     0.680469      0.635343        0.652304\n"
+"21          0.492015     0.404885      0.562745        0.478233\n"
+"22          0.469039     0.428517      0.491442         0.45359\n"
+"23          0.442729     0.353017      0.447929        0.358706\n"
+"24          0.655159     0.603695      0.630121        0.614812\n"
+"25          0.594029     0.364701      0.522734        0.481228\n"
+"26          0.641622     0.514204      0.547718         0.54766\n"
+"27          0.524382     0.475687      0.520644        0.531275\n"
+"28          0.665074      0.70902      0.655993        0.689747\n"
+"29          0.577321     0.487293      0.557221         0.52153\n"
+"30          0.587702     0.614512      0.637398        0.613861\n"
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1320
-#: 69a04e14fc2347eeb26553e81cfd17f9
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1341
+#: 2059911ae5b8489abd0315e81b9e63a1
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                                                 Path  Openness  "
 "\\textbackslash{}\n"
 "ID\n"
-"1   /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.608291\n"
-"2   /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.661451\n"
-"3   /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.527108\n"
-"4   /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.604264\n"
-"5   /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.505877\n"
-"6   /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.579816\n"
-"7   /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.636979\n"
-"8   /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.489927\n"
-"9   /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.459953\n"
-"10  /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.661356\n"
-"11  /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.676824\n"
-"12  /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.380311\n"
-"13  /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.669534\n"
-"14  /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.597146\n"
-"15  /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.512098\n"
-"16  /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}   0.55148\n"
-"17  /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.507806\n"
-"18  /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}   0.53634\n"
-"19  /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.441206\n"
-"20  /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.543785\n"
-"21  /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.607067\n"
-"22  /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.622571\n"
-"23  /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.493816\n"
-"24  /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.436601\n"
-"25  /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.648608\n"
-"26  /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.621685\n"
-"27  /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.551339\n"
-"28  /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.679971\n"
-"29  /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.660572\n"
-"30  /Users/dl/GitHub/OCEANAI.private/oceanai/datas{\\ldots}  0.457011\n"
+"1   "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.526971\n"
+"2   "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.559385\n"
+"3   "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.466969\n"
+"4   "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.626113\n"
+"5   "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"    0.5925\n"
+"6   "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.671855\n"
+"7   "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.411555\n"
+"8   "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.583696\n"
+"9   "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.551353\n"
+"10  "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.575084\n"
+"11  "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.559182\n"
+"12  "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"   0.50948\n"
+"13  "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.330026\n"
+"14  "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.649351\n"
+"15  "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.651914\n"
+"16  "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.523986\n"
+"17  "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.575113\n"
+"18  "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.566349\n"
+"19  "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.672282\n"
+"20  "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.684442\n"
+"21  "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.550788\n"
+"22  "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.525446\n"
+"23  "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.473489\n"
+"24  "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.667829\n"
+"25  "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.469207\n"
+"26  "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.625514\n"
+"27  "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.568821\n"
+"28  "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.696397\n"
+"29  "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.578405\n"
+"30  "
+"E:\\textbackslash{}Databases\\textbackslash{}FirstImpressionsV2\\textbackslash{}test\\textbackslash{}test80\\_01{\\ldots}"
+"  0.637576\n"
 "\n"
-"   Conscientiousness Extraversion Agreeableness Neuroticism\n"
+"   Conscientiousness Extraversion Agreeableness Non-Neuroticism\n"
 "ID\n"
-"1           0.588899     0.501183      0.582908    0.576623\n"
-"2           0.578297     0.593245      0.589372     0.59824\n"
-"3           0.459685     0.418835      0.520207     0.42901\n"
-"4            0.65761     0.517209       0.65528    0.593034\n"
-"5           0.455019     0.389953      0.529122    0.462579\n"
-"6           0.396078     0.412173      0.509535     0.44431\n"
-"7           0.565163     0.596547      0.581199    0.594057\n"
-"8           0.459276     0.401972      0.529253    0.475732\n"
-"9           0.602312     0.345716      0.555249    0.465719\n"
-"10           0.53626     0.592904      0.668499    0.640769\n"
-"11          0.670385     0.624558      0.632891    0.645098\n"
-"12          0.292063      0.26858      0.377671    0.270471\n"
-"13          0.512284     0.435214      0.478462    0.478063\n"
-"14          0.663032       0.5282      0.647053    0.620368\n"
-"15           0.45855      0.39145      0.469369    0.427472\n"
-"16          0.439325     0.441604      0.488599    0.448521\n"
-"17          0.485112     0.401344      0.546405    0.463422\n"
-"18          0.556031     0.502185      0.607919    0.528054\n"
-"19          0.327241     0.300706      0.376834    0.315691\n"
-"20          0.496215     0.461758      0.543176    0.511415\n"
-"21          0.737411     0.455133      0.647487    0.644389\n"
-"22          0.541001     0.550565       0.59144    0.557298\n"
-"23          0.413649     0.420854      0.467975    0.428532\n"
-"24          0.403559      0.36628      0.463585    0.402131\n"
-"25          0.696656     0.558988      0.602866    0.605066\n"
-"26          0.375665     0.446427      0.520072    0.486112\n"
-"27          0.574673     0.459378      0.561397    0.479306\n"
-"28          0.635061     0.610862      0.612292    0.624674\n"
-"29          0.664394     0.581625      0.617902    0.626589\n"
-"30          0.357742     0.369294      0.450881    0.392082\n"
+"1           0.460063     0.422793      0.502726        0.450519\n"
+"2           0.432843     0.504231      0.578673        0.513424\n"
+"3            0.51701     0.331863      0.451395        0.406188\n"
+"4           0.597363     0.564068      0.574056        0.589245\n"
+"5           0.507246     0.505394      0.585405        0.493066\n"
+"6           0.642559     0.614689      0.613508        0.619511\n"
+"7           0.394029     0.329323      0.488684         0.39105\n"
+"8           0.568682     0.505574      0.625314        0.587337\n"
+"9           0.450333     0.449763      0.495501        0.438009\n"
+"10          0.517972      0.46315      0.582468        0.537961\n"
+"11          0.398618     0.433806      0.480592        0.492383\n"
+"12          0.432549       0.3319      0.495221        0.486891\n"
+"13          0.322635     0.235595      0.369766         0.25056\n"
+"14          0.550074     0.502858      0.526621        0.566755\n"
+"15           0.83048     0.535514      0.695223        0.734383\n"
+"16          0.435594     0.382946       0.41001        0.466265\n"
+"17          0.678301     0.468646      0.602139        0.626021\n"
+"18          0.558975     0.462116      0.606252        0.569516\n"
+"19            0.6552     0.656699      0.627328        0.663199\n"
+"20          0.602593     0.680469      0.635343        0.652304\n"
+"21          0.492015     0.404885      0.562745        0.478233\n"
+"22          0.469039     0.428517      0.491442         0.45359\n"
+"23          0.442729     0.353017      0.447929        0.358706\n"
+"24          0.655159     0.603695      0.630121        0.614812\n"
+"25          0.594029     0.364701      0.522734        0.481228\n"
+"26          0.641622     0.514204      0.547718         0.54766\n"
+"27          0.524382     0.475687      0.520644        0.531275\n"
+"28          0.665074      0.70902      0.655993        0.689747\n"
+"29          0.577321     0.487293      0.557221         0.52153\n"
+"30          0.587702     0.614512      0.637398        0.613861\n"
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1391
-#: 05b6443f58ec428eb24ead5380226f2a
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1412
+#: 135bb5558b5d437ab2c575d1d51e473a
 msgid ""
 "                                                 Path  Openness  \\\n"
 "ID\n"
-"1   /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.608291\n"
-"2   /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.661451\n"
-"3   /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.527108\n"
-"4   /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.604264\n"
-"5   /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.505877\n"
-"6   /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.579816\n"
-"7   /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.636979\n"
-"8   /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.489927\n"
-"9   /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.459953\n"
-"10  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.661356\n"
-"11  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.676824\n"
-"12  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.380311\n"
-"13  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.669534\n"
-"14  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.597146\n"
-"15  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.512098\n"
-"16  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...   0.55148\n"
-"17  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.507806\n"
-"18  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...   0.53634\n"
-"19  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.441206\n"
-"20  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.543785\n"
-"21  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.607067\n"
-"22  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.622571\n"
-"23  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.493816\n"
-"24  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.436601\n"
-"25  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.648608\n"
-"26  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.621685\n"
-"27  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.551339\n"
-"28  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.679971\n"
-"29  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.660572\n"
-"30  /Users/dl/GitHub/OCEANAI.private/oceanai/datas...  0.457011\n"
+"1   E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.526971\n"
+"2   E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.559385\n"
+"3   E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.466969\n"
+"4   E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.626113\n"
+"5   E:\\Databases\\FirstImpressionsV2\\test\\test80_01...    0.5925\n"
+"6   E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.671855\n"
+"7   E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.411555\n"
+"8   E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.583696\n"
+"9   E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.551353\n"
+"10  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.575084\n"
+"11  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.559182\n"
+"12  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...   0.50948\n"
+"13  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.330026\n"
+"14  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.649351\n"
+"15  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.651914\n"
+"16  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.523986\n"
+"17  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.575113\n"
+"18  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.566349\n"
+"19  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.672282\n"
+"20  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.684442\n"
+"21  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.550788\n"
+"22  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.525446\n"
+"23  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.473489\n"
+"24  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.667829\n"
+"25  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.469207\n"
+"26  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.625514\n"
+"27  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.568821\n"
+"28  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.696397\n"
+"29  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.578405\n"
+"30  E:\\Databases\\FirstImpressionsV2\\test\\test80_01...  0.637576\n"
 "\n"
-"   Conscientiousness Extraversion Agreeableness Neuroticism\n"
+"   Conscientiousness Extraversion Agreeableness Non-Neuroticism\n"
 "ID\n"
-"1           0.588899     0.501183      0.582908    0.576623\n"
-"2           0.578297     0.593245      0.589372     0.59824\n"
-"3           0.459685     0.418835      0.520207     0.42901\n"
-"4            0.65761     0.517209       0.65528    0.593034\n"
-"5           0.455019     0.389953      0.529122    0.462579\n"
-"6           0.396078     0.412173      0.509535     0.44431\n"
-"7           0.565163     0.596547      0.581199    0.594057\n"
-"8           0.459276     0.401972      0.529253    0.475732\n"
-"9           0.602312     0.345716      0.555249    0.465719\n"
-"10           0.53626     0.592904      0.668499    0.640769\n"
-"11          0.670385     0.624558      0.632891    0.645098\n"
-"12          0.292063      0.26858      0.377671    0.270471\n"
-"13          0.512284     0.435214      0.478462    0.478063\n"
-"14          0.663032       0.5282      0.647053    0.620368\n"
-"15           0.45855      0.39145      0.469369    0.427472\n"
-"16          0.439325     0.441604      0.488599    0.448521\n"
-"17          0.485112     0.401344      0.546405    0.463422\n"
-"18          0.556031     0.502185      0.607919    0.528054\n"
-"19          0.327241     0.300706      0.376834    0.315691\n"
-"20          0.496215     0.461758      0.543176    0.511415\n"
-"21          0.737411     0.455133      0.647487    0.644389\n"
-"22          0.541001     0.550565       0.59144    0.557298\n"
-"23          0.413649     0.420854      0.467975    0.428532\n"
-"24          0.403559      0.36628      0.463585    0.402131\n"
-"25          0.696656     0.558988      0.602866    0.605066\n"
-"26          0.375665     0.446427      0.520072    0.486112\n"
-"27          0.574673     0.459378      0.561397    0.479306\n"
-"28          0.635061     0.610862      0.612292    0.624674\n"
-"29          0.664394     0.581625      0.617902    0.626589\n"
-"30          0.357742     0.369294      0.450881    0.392082"
+"1           0.460063     0.422793      0.502726        0.450519\n"
+"2           0.432843     0.504231      0.578673        0.513424\n"
+"3            0.51701     0.331863      0.451395        0.406188\n"
+"4           0.597363     0.564068      0.574056        0.589245\n"
+"5           0.507246     0.505394      0.585405        0.493066\n"
+"6           0.642559     0.614689      0.613508        0.619511\n"
+"7           0.394029     0.329323      0.488684         0.39105\n"
+"8           0.568682     0.505574      0.625314        0.587337\n"
+"9           0.450333     0.449763      0.495501        0.438009\n"
+"10          0.517972      0.46315      0.582468        0.537961\n"
+"11          0.398618     0.433806      0.480592        0.492383\n"
+"12          0.432549       0.3319      0.495221        0.486891\n"
+"13          0.322635     0.235595      0.369766         0.25056\n"
+"14          0.550074     0.502858      0.526621        0.566755\n"
+"15           0.83048     0.535514      0.695223        0.734383\n"
+"16          0.435594     0.382946       0.41001        0.466265\n"
+"17          0.678301     0.468646      0.602139        0.626021\n"
+"18          0.558975     0.462116      0.606252        0.569516\n"
+"19            0.6552     0.656699      0.627328        0.663199\n"
+"20          0.602593     0.680469      0.635343        0.652304\n"
+"21          0.492015     0.404885      0.562745        0.478233\n"
+"22          0.469039     0.428517      0.491442         0.45359\n"
+"23          0.442729     0.353017      0.447929        0.358706\n"
+"24          0.655159     0.603695      0.630121        0.614812\n"
+"25          0.594029     0.364701      0.522734        0.481228\n"
+"26          0.641622     0.514204      0.547718         0.54766\n"
+"27          0.524382     0.475687      0.520644        0.531275\n"
+"28          0.665074      0.70902      0.655993        0.689747\n"
+"29          0.577321     0.487293      0.557221         0.52153\n"
+"30          0.587702     0.614512      0.637398        0.613861"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1466
-#: 1a0a4f3016874812ae20acacfcf5533e
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1487
+#: edc97e9223d74546879699452e2e4883
 msgid ""
-"\\ **[2022-12-11 21:03:52] Точность по отдельным персональным качествам "
+"\\ **[2023-12-14 22:24:55] Точность по отдельным персональным качествам "
 "личности человека …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1480
-#: fa2d3748b10b4522803768a59515c7ac
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1501
+#: c0bea6eb3aad430883ee9c4573c9b1e0
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -1356,7 +1448,7 @@ msgid ""
 "      <th>Conscientiousness</th>\n"
 "      <th>Extraversion</th>\n"
 "      <th>Agreeableness</th>\n"
-"      <th>Neuroticism</th>\n"
+"      <th>Non-Neuroticism</th>\n"
 "      <th>Mean</th>\n"
 "    </tr>\n"
 "    <tr>\n"
@@ -1373,7 +1465,7 @@ msgid ""
 "    <tr>\n"
 "      <th>MAE</th>\n"
 "      <td>0.0873</td>\n"
-"      <td>0.0819</td>\n"
+"      <td>0.082</td>\n"
 "      <td>0.0805</td>\n"
 "      <td>0.087</td>\n"
 "      <td>0.0872</td>\n"
@@ -1382,7 +1474,7 @@ msgid ""
 "    <tr>\n"
 "      <th>Accuracy</th>\n"
 "      <td>0.9127</td>\n"
-"      <td>0.9181</td>\n"
+"      <td>0.918</td>\n"
 "      <td>0.9195</td>\n"
 "      <td>0.913</td>\n"
 "      <td>0.9128</td>\n"
@@ -1393,66 +1485,66 @@ msgid ""
 "</div>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1547
-#: 070e842eddc34ee2833b1eb25866c46a
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1568
+#: daf8a6e87c3f4d10933153d0cb4e52a3
 msgid ""
 "<pre>\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
 "Metrics\n"
-"MAE         0.0873             0.0819        0.0805          0.087\n"
-"Accuracy    0.9127             0.9181        0.9195          0.913\n"
+"MAE         0.0873              0.082        0.0805          0.087\n"
+"Accuracy    0.9127              0.918        0.9195          0.913\n"
 "\n"
-"          Neuroticism    Mean\n"
+"          Non-Neuroticism    Mean\n"
 "Metrics\n"
-"MAE            0.0872  0.0848\n"
-"Accuracy       0.9128  0.9152\n"
+"MAE                0.0872  0.0848\n"
+"Accuracy           0.9128  0.9152\n"
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1561
-#: 64d60bc5c5a4402cb02317f1c45da21c
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1582
+#: 087d95d95f2341658ad6da4a6ffa6541
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  "
 "\\textbackslash{}\n"
 "Metrics\n"
-"MAE         0.0873             0.0819        0.0805          0.087\n"
-"Accuracy    0.9127             0.9181        0.9195          0.913\n"
+"MAE         0.0873              0.082        0.0805          0.087\n"
+"Accuracy    0.9127              0.918        0.9195          0.913\n"
 "\n"
-"          Neuroticism    Mean\n"
+"          Non-Neuroticism    Mean\n"
 "Metrics\n"
-"MAE            0.0872  0.0848\n"
-"Accuracy       0.9128  0.9152\n"
+"MAE                0.0872  0.0848\n"
+"Accuracy           0.9128  0.9152\n"
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1576
-#: 86e878f485804efab938600fbb4c21f2
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1597
+#: 1fdb0133503f45549c2fd50d63ffa9dd
 msgid ""
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
 "Metrics\n"
-"MAE         0.0873             0.0819        0.0805          0.087\n"
-"Accuracy    0.9127             0.9181        0.9195          0.913\n"
+"MAE         0.0873              0.082        0.0805          0.087\n"
+"Accuracy    0.9127              0.918        0.9195          0.913\n"
 "\n"
-"          Neuroticism    Mean\n"
+"          Non-Neuroticism    Mean\n"
 "Metrics\n"
-"MAE            0.0872  0.0848\n"
-"Accuracy       0.9128  0.9152"
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1595
-#: 69628750a9aa4aeaa334935081ca2f5b
-msgid ""
-"\\ **[2022-12-11 21:03:52] Средняя средних абсолютных ошибок: 0.0848, "
-"средняя точность: 0.9152 …**"
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1606
-#: 39e64b0182834bc7b0404828b1af945a
-msgid "Лог файлы успешно сохранены …"
+"MAE                0.0872  0.0848\n"
+"Accuracy           0.9128  0.9152"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1616
-#: 054da6fe1c054bc69d11ade81aff2c3d
-msgid "— Время выполнения: 15440.126 сек. —"
+#: 9319d74094f14c0293ba4e225f34a553
+msgid ""
+"\\ **[2023-12-14 22:24:55] Средняя средних абсолютных ошибок: 0.0848, "
+"средняя точность: 0.9152 …**"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1627
+#: 412c5b64d9694a8bb7f8c2ba7067a857
+msgid "Лог файлы успешно сохранены …"
+msgstr ""
+
+#: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1637
+#: b027280b0edf47d2a58c8ee026f13d95
+msgid "— Время выполнения: 4762.254 сек. —"
 msgstr ""

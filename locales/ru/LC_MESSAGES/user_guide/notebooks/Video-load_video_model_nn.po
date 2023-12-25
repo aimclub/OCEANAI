@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2022-12-11 14:42+0300\n"
+"POT-Creation-Date: 2023-12-17 14:43+0300\n"
 "PO-Revision-Date: 2022-12-11 14:42+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -18,76 +18,55 @@ msgstr ""
 "Generated-By: Babel 2.11.0\n"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:9
-#: 72e4689e576a4293af0a36605ffa95b3
+#: 258b79d760994f71b1e70abb9968056b
 msgid ""
 "Формирование нейросетевой архитектуры модели и загрузка ее весов для "
 "получения оценок по нейросетевым признакам (видео модальность)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:11
-#: ad582b104be848e5a8192c9ee8755efc
+#: a2e04782ee4c4c28a45fbbbc588c75df
 msgid "<hr>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:17
-#: dd1a64e4cdb443ab98cd95c3fa7d1abf
+#: 8bbaaf0009354a888ef803036fb99dde
 msgid ""
 "``_b5.video_model_nn_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения оценок по нейросетевым признакам"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:29
-#: 13d79e121d86447cb2ef753196317794
+#: 80e3d275a78e4441a0ec2a9b2044dc00
 msgid "Импорт необходимых инструментов"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:-1
-#: be5e4fcc180f4b25a8789d5a5b8f786a
+#: 03590d6a4af64348ac4c074fa60748f3
 msgid "[2]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:-1
-#: 9908deb3fc4d4271bc77efa55ffd5e3a
+#: 53db40e341db4de78dcd55327464e1d6
 msgid "from oceanai.modules.lab.build import Run"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:51
-#: d6fea6f5168f499dabaa73e841593efd
-msgid ""
-"<pre>\n"
-"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
-"</pre>"
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:57
-#: 802315ac2d51473f968449bb3ac22eba
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
-"\\end{sphinxVerbatim}"
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:64
-#: 1d910cd679f6403f8876581b8ab7e398
-msgid "INFO: Created TensorFlow Lite XNNPACK delegate for CPU."
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:76
-#: 67a2488f5bd54d9182e43816da5bc56e
+#: 30a801c54d1747bc961056f519ca7e87
 msgid "Сборка"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:-1
-#: f41c91e88c464bad8ae6836ae49fcaf2
+#: 4891192534ce4ee0b72a3140fd40c9cc
 msgid "[3]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:-1
-#: 9b9ed01bb0464248bd8f1387dfce6b23
+#: 0d3d4dd64ff24fe99010c407c2dc93ec
 msgid ""
 "_b5 = Run(\n"
 "    lang = 'ru', # Язык\n"
-"    color_simple = '#FFF', # Цвет обычного текста (шестнадцатеричный код)"
+"    color_simple = '#333', # Цвет обычного текста (шестнадцатеричный код)"
 "\n"
 "    color_info = '#1776D2', # Цвет текста содержащего информацию "
 "(шестнадцатеричный код)\n"
@@ -103,34 +82,34 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:106
-#: f3fc3382639a470faa01221abd1d1993
+#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:81
+#: ceeb6c6a4f8a4b8fa2619964e9f078d3
 msgid ""
-"\\ **[2022-12-11 14:41:05] OCEANAI - персональные качества личности "
+"\\ **[2023-12-10 17:12:11] OCEANAI - персональные качества личности "
 "человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
 "        Рюмин Дмитрий [dl_03.03.1991@mail.ru]        Карпов Алексей "
 "[karpov@iias.spb.su]    Сопровождающие:        Рюмина Елена "
 "[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
-"Версия: 1.0.0a2    Лицензия: BSD License"
+"Версия: 1.0.0a5    Лицензия: BSD License"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:108
-#: 5dd2010c744b4e8baccdf06adc21b734
+#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:83
+#: e3dcf8e4056e4f1d89f2668707c49474
 msgid "</p>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:122
-#: 2c375deaeb654f8885fed84b48e31577
-msgid "Формирование нейросетевой архитектуры модели"
+#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:97
+#: 132b5bd4009141a5b9feca0fe5270c08
+msgid "Формирование нейросетевой архитектуры модели (``FI V2``)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:-1
-#: b512aa9060d24aa78cb0a936a57dc536
+#: 5887f8f174de46d782fe4b2661e5e84a
 msgid "[4]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:-1
-#: 782e6c3e31bd405e96b7c6ca36610e62
+#: f6530193b9bf4d7d905b1c4f8179fbb8
 msgid ""
 "res_load_video_model_nn = _b5.load_video_model_nn(\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
@@ -141,36 +120,36 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:148
-#: b94ab2ffb2df40f291970f9fb748b584
+#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:123
+#: cf8bc6b03ca14bb788e960a5ef132f12
 msgid ""
-"\\ **[2022-12-11 14:41:16] Формирование нейросетевой архитектуры для "
+"\\ **[2023-12-10 17:12:11] Формирование нейросетевой архитектуры для "
 "получения оценок по нейросетевым признакам (видео модальность) …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:158
-#: 19d8ec91f2a148f5b52b093aa4a05d57
-msgid "— Время выполнения: 2.464 сек. —"
+#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:133
+#: ec719e1c379f43c29489ff5c6efa3f1f
+msgid "— Время выполнения: 1.559 сек. —"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:170
-#: 43a5491f04024955a4c42d8a0d6248a9
+#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:145
+#: 19707bbf26e44b128a5afea41d4f0d21
 msgid "Загрузка весов нейросетевой модели"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:-1
-#: 8826830502fd4727b2d0e81f01cdbf93
+#: 8744660d21f6448bbfd53b5045d46c1f
 msgid "[5]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:-1
-#: 024ee772b2f44dba847ca3848d339edf
+#: c87c476aabd740e38d25b452a67684f6
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
 "_b5.chunk_size_ = 2000000 # Размер загрузки файла из сети за 1 шаг\n"
 "\n"
-"url = _b5.weights_for_big5_['video']['nn']['sberdisk']\n"
+"url = _b5.weights_for_big5_['video']['fi']['nn']['sberdisk']\n"
 "\n"
 "res_load_video_model_weights_nn = _b5.load_video_model_weights_nn(\n"
 "    url = url, # Полный путь к файлу с весами нейросетевой модели\n"
@@ -182,51 +161,51 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:203
-#: b5c8b4bf8eae4b65845460c3dc7000c5
+#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:178
+#: 24611131e781425f98d76d303b81cc04
 msgid ""
-"\\ **[2022-12-11 14:41:42] Загрузка весов нейросетевой модели для "
+"\\ **[2023-12-10 17:12:13] Загрузка весов нейросетевой модели для "
 "получения оценок по нейросетевым признакам (видео модальность) …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:214
-#: 2ff02910fba14dff9baa9c1b6769c069
+#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:189
+#: dbc09759e82f41cc870fae90b9cfd3c7
 msgid ""
-"\\ **[2022-12-11 14:41:44] Загрузка файла "
-"“weights_2022-03-22_16-31-48.h5” (100.0%) …**"
+"\\ **[2023-12-10 17:12:14] Загрузка файла "
+"“weights_2022-03-22_16-31-48.h5” 100.0% …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:224
-#: 03f1e78bf65d45cf9b55475c5e72c7a2
-msgid "— Время выполнения: 1.479 сек. —"
+#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:199
+#: 55bc61a9d5e9450d95c98c7fe664194f
+msgid "— Время выполнения: 1.053 сек. —"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:236
-#: 2f117e00ced24230acb8c1ba62a550cc
+#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:211
+#: 7eee9d7678a74b58af28e45d286a3da9
 msgid "Отображение сформированной нейросетевой архитектуры модели"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:-1
-#: c44682e5fe49422392f57cc62ace0b68
+#: 424a451d89cd4f4fade8e84bd7fb5a53
 msgid "[6]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:-1
-#: cd827b50aaee43b9a552f81283bf57b9
+#: 2e7b1293aac9417c9c486568cf6da217
 msgid "_b5.video_model_nn_.summary()"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:257
-#: 616a21db130d47ccab83cfc0afc1c3ec
+#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:232
+#: 6690b281b6dd42eaa9b60d7c066179d0
 msgid ""
 "<pre>\n"
-"Model: &#34;model&#34;\n"
+"Model: &#34;model_1&#34;\n"
 "_________________________________________________________________\n"
 " Layer (type)                Output Shape              Param #\n"
 "=================================================================\n"
 " input_1 (InputLayer)        [(None, 10, 512)]         0\n"
 "\n"
-" lstm (LSTM)                 (None, 1024)              6295552\n"
+" lstm_1024_v_nn (LSTM)       (None, 1024)              6295552\n"
 "\n"
 " dropout (Dropout)           (None, 1024)              0\n"
 "\n"
@@ -242,18 +221,18 @@ msgid ""
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:281
-#: cc37233c01624da3bf6c07db95d83af4
+#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:256
+#: d0913f137b2d4af097d3a91b7cd38c28
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"Model: \"model\"\n"
+"Model: \"model\\_1\"\n"
 "\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_"
 "\n"
 " Layer (type)                Output Shape              Param \\#\n"
 "=================================================================\n"
 " input\\_1 (InputLayer)        [(None, 10, 512)]         0\n"
 "\n"
-" lstm (LSTM)                 (None, 1024)              6295552\n"
+" lstm\\_1024\\_v\\_nn (LSTM)       (None, 1024)              6295552\n"
 "\n"
 " dropout (Dropout)           (None, 1024)              0\n"
 "\n"
@@ -270,16 +249,16 @@ msgid ""
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:306
-#: 652bf8228fc14196acee7878c4c02075
+#: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:281
+#: c4026d95bd7a4a04910c0f921da00c92
 msgid ""
-"Model: \"model\"\n"
+"Model: \"model_1\"\n"
 "_________________________________________________________________\n"
 " Layer (type)                Output Shape              Param #\n"
 "=================================================================\n"
 " input_1 (InputLayer)        [(None, 10, 512)]         0\n"
 "\n"
-" lstm (LSTM)                 (None, 1024)              6295552\n"
+" lstm_1024_v_nn (LSTM)       (None, 1024)              6295552\n"
 "\n"
 " dropout (Dropout)           (None, 1024)              0\n"
 "\n"

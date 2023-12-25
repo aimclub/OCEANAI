@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2022-12-11 13:17+0300\n"
+"POT-Creation-Date: 2023-12-17 14:43+0300\n"
 "PO-Revision-Date: 2022-12-11 13:17+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -18,67 +18,46 @@ msgstr ""
 "Generated-By: Babel 2.11.0\n"
 
 #: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:9
-#: 732b82daf8034d179ed9c7a7cede116c
+#: eb781541c2384a5cb331a82be354b2c6
 msgid "Извлечение признаков из акустического сигнала"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:11
-#: 5617beba0ec24777b512917a2b394be2
+#: ffad43bb9a484a45bc47830cf398dcbe
 msgid "<hr>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:25
-#: c9244fcde2724554b8ebc05990c751fd
+#: 31fbe2a64df349158aa420c5098b6dcc
 msgid "Импорт необходимых инструментов"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:-1
-#: 24e4376cfd7541528731ebec1dfd291a
+#: 15fd8a463eb74d2faf3fc586635f1d75
 msgid "[2]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:-1
-#: 7fd5ee5254664ffe942928cedbdd8047
+#: a2f8847a29c94e4eaab6a908ed0a9ef5
 msgid "from oceanai.modules.lab.build import Run"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:47
-#: b473403c41c7494eac86d897229e1039
-msgid ""
-"<pre>\n"
-"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
-"</pre>"
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:53
-#: 5afb257f9b8d48f48c3d527a029b6675
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n"
-"\\end{sphinxVerbatim}"
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:60
-#: bee237367f7a4e25865ecc94611a5a98
-msgid "INFO: Created TensorFlow Lite XNNPACK delegate for CPU."
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:72
-#: 85d4dce3e9ba42de976e7ff676d29eff
+#: e8dab4990be9445e8540d437fc470478
 msgid "Сборка"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:-1
-#: c8e8a421e4784ebf9e955c3a9b567ed2
+#: e71f63fdf6e0461daa1829bae5b19754
 msgid "[3]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:-1
-#: 1ac02777a6694635924eeb189c2f9d36
+#: f1dfc969c6fa4b26bbdf4f1343ac545e
 msgid ""
 "_b5 = Run(\n"
 "    lang = 'ru', # Язык\n"
-"    color_simple = '#FFF', # Цвет обычного текста (шестнадцатеричный код)"
+"    color_simple = '#333', # Цвет обычного текста (шестнадцатеричный код)"
 "\n"
 "    color_info = '#1776D2', # Цвет текста содержащего информацию "
 "(шестнадцатеричный код)\n"
@@ -94,41 +73,39 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:102
-#: 6aa91ed73f4d49249fe95513b87635fe
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:77
+#: 87ca1e481a1f4819ad0d25d982f349e2
 msgid ""
-"\\ **[2022-12-11 13:16:18] OCEANAI - персональные качества личности "
+"\\ **[2023-12-10 16:35:36] OCEANAI - персональные качества личности "
 "человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
 "        Рюмин Дмитрий [dl_03.03.1991@mail.ru]        Карпов Алексей "
 "[karpov@iias.spb.su]    Сопровождающие:        Рюмина Елена "
 "[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
-"Версия: 1.0.0a2    Лицензия: BSD License"
+"Версия: 1.0.0a5    Лицензия: BSD License"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:104
-#: 45b2014eef6b43efa3e5aa6a76e49152
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:79
+#: 0898db52776040ba9c619c1feb9f996b
 msgid "</p>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:118
-#: 931594ae1a854372a1263421030fb9c3
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:93
+#: da428f920c3a44638c1c8ba1fe99bdab
 msgid "Процесс извлечения акустических признаков"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:-1
-#: 03243f1ffb5949739e75c9c9e55db749
-msgid "[4]:"
+#: 79f9aa7142f3430c805dedc6d169d4d4
+msgid "[5]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:-1
-#: fc26ac598e2244188e6b3551ad9057ce
+#: b196a31a2120474984b3d5ac5a833dfb
 msgid ""
 "# Настройки ядра\n"
 "sr = 44100 # Частота дискретизации\n"
 "# Путь к аудио или видеофайлу\n"
-"path = "
-"'/Users/dl/GitHub/OCEANAI.private/oceanai/dataset/test80_01/glgfB3vFewc.004.mp4'"
-"\n"
+"path = 'video_FI/test/_plk5k7PBEg.003.mp4'\n"
 "\n"
 "hc_features, melspectrogram_features = _b5.get_acoustic_features(\n"
 "    path = path, # Путь к аудио или видеофайлу\n"
@@ -141,25 +118,25 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:152
-#: aa9012573d984da0b96644686c74dc7c
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:127
+#: 2936888e11424915b70ff2e1397f970e
 msgid ""
-"\\ **[2022-12-11 13:16:52] Извлечение признаков (экспертных и лог "
+"\\ **[2023-12-10 16:36:06] Извлечение признаков (экспертных и лог "
 "мел-спектрограмм) из акустического сигнала …**"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:163
-#: 535df08df63e46f6851831dfac23f08e
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:138
+#: 54ce9147de87414ab8baffd293ea5f6b
 msgid ""
-"\\ **[2022-12-11 13:16:55] Статистика извлеченных признаков из "
+"\\ **[2023-12-10 16:36:11] Статистика извлеченных признаков из "
 "акустического сигнала:**\\     Общее количество сегментов с:        1. "
-"экспертными признаками: 12        2. лог мел-спектрограммами: 12    "
+"экспертными признаками: 16        2. лог мел-спектрограммами: 16    "
 "Размерность матрицы экспертных признаков одного сегмента: 196 ✕ 25    "
 "Размерность тензора с лог мел-спектрограммами одного сегмента: 224 ✕ 224 "
 "✕ 3"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:173
-#: 9baff399ea4d4471b9d5356f146d2d6b
-msgid "— Время выполнения: 2.161 сек. —"
+#: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:148
+#: b4ee2fb7b0634619943d33fdd3c41aad
+msgid "— Время выполнения: 5.292 сек. —"
 msgstr ""

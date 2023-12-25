@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2022-12-03 16:08+0300\n"
+"POT-Creation-Date: 2023-12-17 14:43+0300\n"
 "PO-Revision-Date: 2022-12-01 09:13+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -17,26 +17,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.11.0\n"
 
-#: ../../source/modules/core/settings.rst:2 b54511a660bd42f0b1e5ffd83be852fc
+#: ../../source/modules/core/settings.rst:2 a7ef429fb40d4cacb3854c1ac0346e23
 msgid "Настройки"
 msgstr ""
 
-#: 610d209d1ff7479180401b317aa74c75 oceanai.modules.core.settings.Settings:1 of
+#: 7225f413000f46aca332051bda0b3e82 oceanai.modules.core.settings.Settings:1 of
 msgid "Базовые классы: :py:class:`~oceanai.modules.core.messages.Messages`"
 msgstr ""
 
-#: f7a88c2117a5456db27fb6cf98fb8a8d oceanai.modules.core.settings.Settings:1 of
+#: 667053a2f9ed47148b7c31df0908500a oceanai.modules.core.settings.Settings:1 of
 msgid "Класс для настроек"
 msgstr ""
 
-#: 08a69cd592da40a287453c377f1cce9d 10008835d7b04347b85a575a03cca4c8
-#: 1770092314b147449bd86f25dea0f7b8 2398d05f95724ce6ab2284f23423393d
-#: 34df087adb8d4780933c723c1d1bc458 3eb46eb9aa88426a8654beeba456a847
-#: 4d3ee23ba6a94741901185f33caed2fa 671f287746314a9b8d4869978f803df1
-#: 80c09b6a479a4ec28f794147b363988a 83c578f555f94476b198663cac02d30a
-#: 969f41c8724246d4841265e9cc73ae6d aebad113ba8045e386a61a21601d6e69
-#: b6f24939b6d5472aa349e0897b58eb78 d6bf79ece10a4d9895b61d0a62fc2bb2
-#: f58996dac91a4802b1862960f81da681 oceanai.modules.core.settings.Settings
+#: 0c49f68a13354eaeafc90d6693716c55 119d548bf01844d0a2b512fa9e903fba
+#: 25a0eb858eb34a4598abe6136d822449 2ef291423c9f421c935373d87becaad2
+#: 2fcf8ae268fe4f83907912074c920af7 415dafb4b37f47cdba5eb9837ab2a92f
+#: 43f101fd481a45d1a18e14d7775700ca 6537e480c69547d187c2ee8409ea3795
+#: 755b8eb2287244d8957e9f6fbb8adb08 8f6ddd74a3ce42f4ad78835b2c56c98a
+#: b64447d359ba4fdfb86f0b5795857021 bf9961aab42d4058b6a546bd39b957fa
+#: c8a22fb8d2ee475fba7a109360b7a62f cc9b9e1c109e42ab9d2505d9fccfb665
+#: f095fd2c321f4542834c6220b282c43a oceanai.modules.core.settings.Settings
 #: oceanai.modules.core.settings.Settings.bold_text_
 #: oceanai.modules.core.settings.Settings.chunk_size_
 #: oceanai.modules.core.settings.Settings.color_err_
@@ -54,63 +54,63 @@ msgstr ""
 msgid "Параметры"
 msgstr ""
 
-#: 1857d18e1338488d8b02ce7eb60c1b34 oceanai.modules.core.settings.Settings:3 of
+#: ab6fda2e1e2a4fb59101568765f1a1cd oceanai.modules.core.settings.Settings:3 of
 msgid "Смотреть :attr:`~oceanai.modules.core.language.Language.lang`"
 msgstr ""
 
-#: ../../../docstring 40f8a81daf4a4d37b3f71b32bc21f0f7
-#: aa797c5c7cff4f96b529e92b7bb556a7 oceanai.modules.core.settings.Settings:5
+#: ../../../docstring 67cce12c4c84411396d45d5e4607499d
+#: f533b8fbbe1d42f494c3b0e6310a69f8 oceanai.modules.core.settings.Settings:5
 #: oceanai.modules.core.settings.Settings.color_simple:1 of
 msgid "Цвет обычного текста (шестнадцатеричный код)"
 msgstr ""
 
-#: ../../../docstring 8a9f75987de44c5da870d5edffb15177
-#: ef54b7fa27c04e418f93b11f10ad1804 oceanai.modules.core.settings.Settings:7
+#: ../../../docstring 3ad3f80cf758462eaf994818a297a790
+#: e3a0515c7cff47b8ad20ddd4b6cf5229 oceanai.modules.core.settings.Settings:7
 #: oceanai.modules.core.settings.Settings.color_info:1 of
 msgid "Цвет текста содержащего информацию (шестнадцатеричный код)"
 msgstr ""
 
-#: ../../../docstring 3345f2ac418744ebad90dac9996d829e
-#: b77ee66a0d2a470a8e741aecc1ab490d oceanai.modules.core.settings.Settings:9
+#: ../../../docstring 0cafa552f47c4108b7c862e830c83581
+#: b51aafde0f3f4253bb2abd4d415dc619 oceanai.modules.core.settings.Settings:9
 #: oceanai.modules.core.settings.Settings.color_err:1 of
 msgid "Цвет текста содержащего ошибку (шестнадцатеричный код)"
 msgstr ""
 
-#: ../../../docstring 2caf06effacf4836a557d0af2b18bac3
-#: 79cea95321aa48c8930916dbf36badfd oceanai.modules.core.settings.Settings:11
+#: ../../../docstring 783a077966684c86a8f7a287f4043e44
+#: d097969cf82940aebd2f102d6c4765cb oceanai.modules.core.settings.Settings:11
 #: oceanai.modules.core.settings.Settings.color_true:1 of
 msgid "Цвет текста содержащего положительную информацию (шестнадцатеричный код)"
 msgstr ""
 
-#: ../../../docstring 10ac0c1204ee47cf83e2a4de186c95a2
-#: 891edbe6a44048d28bf5fe0e59a59c05 oceanai.modules.core.settings.Settings:13
+#: ../../../docstring b9c70d8ffb4a41d4bc51c30e2fa775d5
+#: f8d5e7ebbde84bea84c66cfa3e759be7 oceanai.modules.core.settings.Settings:13
 #: oceanai.modules.core.settings.Settings.bold_text:1 of
 msgid "Жирное начертание текста"
 msgstr ""
 
-#: ../../../docstring 775f3674281d485aad20824fc33a8641
-#: c3dcb6baa45240bb8297aa6d01ea0366 oceanai.modules.core.settings.Settings:15
+#: ../../../docstring 5cf8af1e5c5d4d26b866d99b2ca58121
+#: be4569d78ddc42e4842eaa4412f6c73c oceanai.modules.core.settings.Settings:15
 #: oceanai.modules.core.settings.Settings.num_to_df_display:1 of
 msgid "Количество строк для отображения в таблицах"
 msgstr ""
 
-#: ../../../docstring 91368262219d45afbc4c5d99704550e5
-#: e982a3e8f7924b2fa30145ce2064515b oceanai.modules.core.settings.Settings:17
+#: ../../../docstring 3bc07e7498fa4477858e5a14a47dc3bd
+#: 8e0335a6048845a28c3c1ccc0bdb6cf1 oceanai.modules.core.settings.Settings:17
 #: oceanai.modules.core.settings.Settings.text_runtime:1 of
 msgid "Текст времени выполнения"
 msgstr ""
 
-#: ../../../docstring 0352ede292e34132a09fa82d685ac22f
-#: 06c3887719294756a0339be80e1abac3 0a5a220e43e2405f984508181df0d2c1
-#: 192e3a0ccf7e41a7a98ddb88fbb4ae0b 4024830bce324dba8947ddc09835b5b9
-#: 51110dd0a8a04552be0eaf0ebe51339b 57ec1d1123d34fb99068738561963758
-#: 721904e55573496282da0112aa568b8a 8b18a72f870b4a8ebe4859673dc6a677
-#: 930cabb993c1449eac1df279e6d248dd 9927e2e523e04504a41165a6087a9e02
-#: 9c9253002e404116ad5c3119768b49e4 ab7bab44913d4d17a4a92f5ce75742d4
-#: c3b66ce85c064a2fbf72e19b5711e89a cf8a2d023d7744e1b3fd8d43f67c98e6
-#: d12c2a28815b451f90e51132754c601b d7230ec4a9674eeb9cc4e21c2423cdd6
-#: e8e35b0b594d42e1b378ee7baa40285d ec1bb1da27aa41e8b18557805435db7e
-#: f77b5f65da794f44b77f28f3fde3ff76 faf5b663202749ad94a4f6b819050937
+#: ../../../docstring 0da5d52574bf4b0c8466cf454c875312
+#: 109be78711ae4069bcf56c15845cb444 22f573d55bf94f0f9103c2638faeb5d4
+#: 33cd70f8d2bf43ab933ee7b01e7dbf8e 394bba7f3e6d4c86970e843d6b729504
+#: 4a15b3d23f4a4c63b2b095b91ddcddc7 5d9b841d51324be5be2e6076e4590601
+#: 71784e90a93246d38975103911a2a744 77f5ed9bfa8c4e9b91ef9d228a6307ed
+#: 7802ec1f708e4ec8b01575ec62f596f4 808a2bf485e841658800fefc2df7b89d
+#: 82692b1a98be4beabda20ca9f493b82c ad8e539b0f854f8fa2dde8afebdaf1e1
+#: b54cb3de1119466b98d517e225c89f68 b58f09723110485a97ac94b94bb8c721
+#: b5f2bed0c9bf4ab5980ade97d07d2016 c57690fa581a4ac2905ebe912bb4bc74
+#: c8fb43d90a214960adaaf0bdc412d085 e7115254c198486ab6f5bc38b9cf7dec
+#: e9ddde9803904948ba60a5c49ec5429f f0cf96ad2e514e6db81cf9db971e4531
 #: oceanai.modules.core.settings.Settings.bold_text
 #: oceanai.modules.core.settings.Settings.bold_text_
 #: oceanai.modules.core.settings.Settings.chunk_size_
@@ -135,17 +135,17 @@ msgstr ""
 msgid "Примеры"
 msgstr ""
 
-#: ../../../docstring 22a9f378ac8646ccabed0e75b86d8f8f
-#: 3ceabfe67d1c4a59a760004b761371cc 3eeb3042609248208be908e95330d6b1
-#: 482bc0addd9e45288eb68c154383be2b 48516b05e8c44e1591f140bb0fa9b531
-#: 6300e26a26304dfe8fd4978f0a77d2ae 6352ab952e62479e86496b0c09c39298
-#: 6afa9beb75494faaa16a47435f27eca4 6ce8d16509834db999136214731317c4
-#: 6f306fa6ec6a443e9c6afa82ed7ea9b8 75eaa2c56c8747809b5e2a1db9b2fa0a
-#: 893501006bec44cc94c239f3ebf4d6b0 95da98528708454b860efb6e1a4b7a04
-#: 968f7b2513bb45b3baa25f269cff0e57 98e9edf2ed7e492d97c86dbae6a4095f
-#: a5eed29d98984c32a90e37c5eae76155 a7b9e9cd94724a9d9628f0742e1aebe8
-#: baec7f896405491aa09a5de96fda2f19 c5900ebded9040a891ca46be30d330fe
-#: e71057fe49264e3cae39a8434cec8964 ffba21fdd6dc4141a1688ed55136682b
+#: ../../../docstring 0349052ee18542db9b8228a0a4b7ff62
+#: 0a651d3e23a74451adf0be78140503c1 194917c5bd3b4ab9aff0a5c8878c4e46
+#: 2d00fb1f914a4aa483d9c7cc24b9b36b 3c9b1b15718d49c9ab319ee1619bcdbc
+#: 40459073c72540e58ce766831a402c43 49784b6ba5184ad6821b16145f27ddbc
+#: 4a4f3bc8ce63492894d6ce1f6bbd51f2 4e1e562c00dc4bc4aa455c86bd3af812
+#: 5b8d0fcd4b724ddcb4ae26b5a5bc3ffd 70b53b400be249778a8a1d0a11a4c56e
+#: 827ae68f3bcf40eeaee4be62d180f7dc 9294ebd9768748608fd414b5bdcf3c86
+#: 9aa0b94b1ce248b1b14b8c02a37862c2 b1868ac82c774b92b266be12667210b5
+#: cb23243f6cb94d78b146db2bede255b1 d92281ef285247bdbe60b2f9c669643c
+#: ea53c4a7f1b048b2b5fe6b49e09cb9fc f252aa46ec3a4dcf9c4e73a55a26a877
+#: f28682505ec9475985fecedc67051f90 f7438b227e08429a9111193af5a04a73
 #: oceanai.modules.core.settings.Settings.bold_text:5
 #: oceanai.modules.core.settings.Settings.bold_text_:10
 #: oceanai.modules.core.settings.Settings.chunk_size_:10
@@ -170,7 +170,7 @@ msgstr ""
 msgid ":bdg-success:`Верно` :bdg-light:`-- 1 --`"
 msgstr ""
 
-#: ../../../docstring 99bfb66ae07e40d0be0feb9900458e41
+#: ../../../docstring 400a7ab59fd9404fa68e5bfbd8964d23
 #: oceanai.modules.core.settings.Settings.bold_text:7 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -179,9 +179,9 @@ msgid ""
 "print(settings.bold_text, settings.bold_text_)"
 msgstr ""
 
-#: ../../../docstring 8047ff0ca5324f44ae46fb55bbf42bb4
-#: 86d6054bdf3c4082a49c3ad533169803 b39a4295d3ea452082c53a86a903c5ce
-#: f7ef641821c2442dac83303a095203b7
+#: ../../../docstring 5a2da92eac944301b3e0a2b38efae065
+#: 93fed5153fad45c98d2043e025ffd571 94ee356b70ec48f6bbc9e1620a0f3f1f
+#: a2f147602bc7441e8ae2cf9f9cacacec
 #: oceanai.modules.core.settings.Settings.bold_text:16
 #: oceanai.modules.core.settings.Settings.bold_text:33
 #: oceanai.modules.core.settings.Settings.bold_text:67
@@ -189,27 +189,27 @@ msgstr ""
 msgid "True True"
 msgstr ""
 
-#: ../../../docstring 07852e8c8c234435aaa0169ef112d732
-#: 0913bb76c3a94f7d86d0aa3c255be77d 14a6bcf8af294106a40cf558b6081311
-#: 178d03cedcaf4c92ac21210564fa8310 1a347a2d47d04ff79e784fad1f451f04
-#: 24ad7f5488264413be6138b2d2172bbd 2554a24f255e456cb5e994d91b58a2fb
-#: 25b1f50395b5451682a7097534a4b436 29fd5f6b29894fe386b602ae7f7723bc
-#: 403d01427cac48c7998542053279b260 457988cf0b5a45ca87414739dc19dd1f
-#: 47a54d24c4df4de6bd214b3541806bcc 4abf2362d12e4b0789967b47f55d1772
-#: 5c6409d9494a4eefaa744743abeea0a2 5dbd999a0db042488e2629a00109fc3d
-#: 6064585420b54fd0bb861ca351dfa9fa 66f8c9f9ca3540ab83178cb00080c85e
-#: 70a197211b4d4a7a954948af62fc0a16 731d1cf458f84c4da23048de20df9a50
-#: 7b4b3bed3d6b4c3e8e1b6d0e6da8b915 7c21777c4bd84d7b8659a099ec248ffd
-#: 8068a3a82235491d979e99bf92898bc5 8182cee73ca84a679ed36b8a06f6e22b
-#: 8a03851161aa4b2cae9095857468af24 8ae5ebc327aa4e4289109b3c93e60601
-#: 912923b5f9a1409486e90aa3a56f1c7e 949d1e64c8de4a918db3e8da3cd6b624
-#: 95e9f7c007e4445d90976aaeec9d693c 972dec9924cc4c319e7ff3517edb3c24
-#: 9aac40fbc82a4d6094639edf7d3f5ab6 a939ecfb234c4649ae3a8a14ed4a6dd8
-#: b1533b3539e2408a971a47d4d5daf10e c8361696b5ac4379b9e1bf1c4468600b
-#: ca9e739f3ae847f0a683a693df2a42c6 d0c0f74f208f4039ad15fcefc3bf08c5
-#: d7cfbbd313e146ec986f857f35e4a98c dacdbec2999a46e8a1adda831f126d13
-#: dd02adb3dcf34b83b94ecb7ffddf8aaf ee3844e912b54848a0c726d7343cbaab
-#: efc845fd25aa43f3b7cf023c90e292ca
+#: ../../../docstring 02de5b9f2e2e4eda8f2cb8d4968e5370
+#: 075b8f5b78794e69bc63925f61bb68a6 09733abd3ac746f399b4e4bc37b486a6
+#: 1d9703b3af654201a5f19ba6e453d8c1 246b83a19fcb40baa5ae51e13616f077
+#: 2e8eed3364b3460e93b2be727c22593f 337b753066cf4414b6ea0164af4ff71a
+#: 33dc8142abb7431f9832698d91a69519 3416967fb38642faa272f5a2179a723f
+#: 35e1c63b069e4c5084078a70a8dc5d23 3d67f211de7c45128ad31c8a892149cf
+#: 42bf9a2d90ac4cb98408d02f5f22db0d 46f925a56fc14023b09509c773662ee7
+#: 526f6c3852db4689ae88717b10b578b2 591d61bea7744c25b2546e34d5101360
+#: 5e1486fc5e5d4290a85e2ec547fc460c 6626918210ae4eafb44d4cdf7209525b
+#: 6e99f14dbd43418c929ded325796c3d3 758e06ae58da43d0b699343ec9c22790
+#: 7659a309387f4039a59469b162707821 7eb6be48b6f04d52b67348ae5507ef71
+#: 84d0518e3adb4733b9e508270883591f 87464320f25b4d5d88f31e8a6da8a49a
+#: 88445ae0ffcc4623a5ecd6d371ff464f 89ae6b1015e54c03ae3d9e7c38e1df53
+#: 9eed51002e6a45d1be5853ab015ba73c acfb617e8051476cbdc3ccfa9fb58743
+#: c25b9f714b4a44f1b64e507d932a6ae0 c849bdc200eb4e4a9914ba8ad51f7dd7
+#: cd539b5458874de2b3f094522199e2bb d785aed3e1ba40f998a361d97f156b3c
+#: df93077f6968439fabfb31a1c569ca13 e0301cbf3d9a4547a03b2c20e681f90a
+#: e1ee1acedf0147a89039e704860658bf e4bdf9c85ed24ee6b8a4f464cce3ac80
+#: e6e912ea486441cab8d9bd1c24e23815 e8e090090a4c4d9890c580fbc81bedf8
+#: ef85eda1bad843158897d91c751c7f9e efe0405de98142ca922bae7e31ed5a36
+#: facb926e3972435384b1aecceefb4d9f
 #: oceanai.modules.core.settings.Settings.bold_text:22
 #: oceanai.modules.core.settings.Settings.bold_text:73
 #: oceanai.modules.core.settings.Settings.bold_text_:27
@@ -253,7 +253,7 @@ msgstr ""
 msgid ":bdg-light:`-- 2 --`"
 msgstr ""
 
-#: ../../../docstring 2705d61c713441229efd6004a1c7ee74
+#: ../../../docstring ead5099ac7544c30965c1120590fd915
 #: oceanai.modules.core.settings.Settings.bold_text:24 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -262,14 +262,14 @@ msgid ""
 "print(settings.bold_text, settings.bold_text_)"
 msgstr ""
 
-#: ../../../docstring 3790442040554460be8073eacc7abbe1
-#: 53350c7c659f45ecaf58a97ce0a5beb0 5c2c9de103f74a9bbd3303519d4634d6
-#: 603ffc74004745529d64ffd2e540abda 72d2eb2d602149f68823c318f5e5ee9c
-#: 95a59a9cfa634a1cb211e4f2b24ca514 9bcbcbd242144f0e9fa2d2533bc5a0a7
-#: ac0ca5d34fad45e8ba8fabacf5869757 bb968a42575d4887ab0ae05d48a6a5e4
-#: c089f241e655496b9b5a357ad714c47b d48eb27251f1491b902144a465a03b96
-#: d858f534b4ba4f09b8357be6b94ca90e efee53b5f12a4733a25478405a535cb9
-#: fc94e02b2d4c409cb90e4a5639889253
+#: ../../../docstring 0d74146b878348c39f826adc9b4f3dd7
+#: 2e03a4b7df5a48cea8f79614c4af854e 3e21bda16be241a1a1a2ef7ed75514b8
+#: 4b3f2978d4a846f781e8f018974de4d2 5dd76dfa9ee1463986a4add5c4087976
+#: 64c1599f65434330a8f36462d21661d7 688f1361d4ee489db1d9579e03fefd1f
+#: 86d8ad475a974512b826cd5e0c4cb0b6 8bf31ebdd47048cfa130c30f08c18a99
+#: 9056f13e2a034be2adc2758ff387d921 a39f64aff0c84cbabae9bb31ab1ab094
+#: be66a2fcfb23464685441662844773cd c4159ac8484a45119279666559f58745
+#: dde5577cc6f242f9ac0fe3594ed2b62c
 #: oceanai.modules.core.settings.Settings.bold_text:39
 #: oceanai.modules.core.settings.Settings.chunk_size_:81
 #: oceanai.modules.core.settings.Settings.color_err:39
@@ -287,7 +287,7 @@ msgstr ""
 msgid ":bdg-light:`-- 3 --`"
 msgstr ""
 
-#: ../../../docstring aa31d12358ea4ef0afe3d858f80f804f
+#: ../../../docstring 54e02de733a149a89d63cfcba6eb5454
 #: oceanai.modules.core.settings.Settings.bold_text:41 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -296,22 +296,22 @@ msgid ""
 "print(settings.bold_text, settings.bold_text_)"
 msgstr ""
 
-#: ../../../docstring 3c83c32f715342ee9d77c9b616aa9d96
+#: ../../../docstring 284a29493d11410fb65c63ab359ea0e7
 #: oceanai.modules.core.settings.Settings.bold_text:50 of
 msgid "False False"
 msgstr ""
 
-#: ../../../docstring 15daf25265224f31a77732c3c1757d9a
-#: 19565e3a86ab49e294cf7bea5795c7d5 1f65520d5f284ee5a5705f4641bb9a99
-#: 360fa96ec3d14e9c95a19d8cb41e437b 39d3389c678f42599380020901ed3f1d
-#: 3a09a15c388042b4a812636f514e9a5a 565863dbf6014ba6bb3a17338dee615a
-#: 565a833c414d49b197f11b7588e0118c 5fa2661aec90413091e8da153a41bab5
-#: 6054cc5f529745e882ba8a6306daa8f4 72accbb2227447d0898764b97280fd78
-#: 7abcdf69dece4f92a441f88fe82b923f 9795d09df4aa4ac48853ae5c23d73620
-#: bb327e2a98414a09add5d83f15b25351 bc5af5eddb8544c291ab76f6d20f8dcb
-#: c0d13c4f650c43288c9de515adaa07dc cb3ecc63fbf34239ab57d779236e7ba5
-#: d96ac8febea447d6b796db3057268c5f dd436912db4b4693b4179eb40aa55397
-#: f79c9e2a5857404486110665e1025fc3 fc6cd7375d254464a1abade51f76bc5c
+#: ../../../docstring 031a9aa289be45749975acf9a686b780
+#: 03c9dad6df81431d9c5566aeed4c4a23 1593bf7b88d04201bc082975b43cf277
+#: 292200d164504cd3b22315b46e6c129e 2c937964bfe948c5a62e16a18471f7f8
+#: 3f41a7bdb00a4dd3a2e9f3249091d8ec 518b8ac4927f47cf802eeb8dcfa94004
+#: 646041819e4c43e4be3c3ae3b40b0d99 6e272283a36a4a7496345ac7fcee287d
+#: 7f6cf9e567a845b1989d8bf45f734455 8099d2c897484547a11d49e306f5a136
+#: 922bdadcd72541b084b7352354bc7b6e 94e24c1a24334af5ac5fd285229e282a
+#: 99d6e230d57f4168be46fae33b00f2ca a5b32325043d4c3fa16ea8ba92c0851a
+#: bfeadc01a66a4cd48ce1d3310533a617 c1472ce059194434bccff677c0e673b5
+#: c763798f64f74ad9b58dc4e6252ab599 da065155de764c9ab9c16cc303eca178
+#: eb9fbd57886840dc8961c580c7616f40 fa177b7ce70b4b27a0ad21a4c5e8b3f6
 #: oceanai.modules.core.settings.Settings.bold_text:56
 #: oceanai.modules.core.settings.Settings.bold_text_:45
 #: oceanai.modules.core.settings.Settings.chunk_size_:45
@@ -336,7 +336,7 @@ msgstr ""
 msgid ":bdg-warning:`Лучше так не делать` :bdg-light:`-- 1 --`"
 msgstr ""
 
-#: ../../../docstring 79031de01d59489aa3d68250238be16e
+#: ../../../docstring deb8f3df45d14673ab5896ca3f550a65
 #: oceanai.modules.core.settings.Settings.bold_text:58 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -345,7 +345,7 @@ msgid ""
 "print(settings.bold_text, settings.bold_text_)"
 msgstr ""
 
-#: ../../../docstring 0e3bbc97513d41a69b3a33a1154d61c7
+#: ../../../docstring b683bc6fbe8a48f08b94f8443ab0cd23
 #: oceanai.modules.core.settings.Settings.bold_text:75 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -354,10 +354,10 @@ msgid ""
 "print(settings.bold_text, settings.bold_text_)"
 msgstr ""
 
-#: ../../../docstring 1aace8dd7a524b9dab500e975cbbff47
-#: 33f0d536643d46bb881ab3fb9e0ee60f 594711777ed04d87aaf89ec24b5eb8f0
-#: 65fee9d297244414ae1d611ee66dedab 6d89fd52f8a04abaa1f37fd7fcfe9d24
-#: 8777acb2561a4f169fc44dcc5de7ee6b 90a4490b64c44236aaf3998cf9a71aa6
+#: ../../../docstring 21bbc97398374d79bee5f48de8377435
+#: 308ca110c8684710b2c4c3ef01903be5 4ed9571ae9f14fa6a66936097c5a6f38
+#: 6197150c90bc49ceaf89cd572f30a3c1 69fdda35530e4f8a9035d29b6d1852bc
+#: d91e7179a82342429c9439afef3a3baf f09fb998ba57437d958a4f87a7081f09
 #: oceanai.modules.core.settings.Settings.bold_text
 #: oceanai.modules.core.settings.Settings.color_err
 #: oceanai.modules.core.settings.Settings.color_info
@@ -368,29 +368,29 @@ msgstr ""
 msgid "type"
 msgstr ""
 
-#: ../../../docstring e0222f7bd9ae42f08879f3e631bead9f
+#: ../../../docstring 48bb4643b6124e9eb591f63bbf9ad739
 #: oceanai.modules.core.settings.Settings.bold_text:90 of
 msgid "bool"
 msgstr ""
 
-#: 28bb5de2b75f485b9b8f68239c896585
+#: 32b758a2c5f94962abab7b0fa060bbc0
 #: oceanai.modules.core.settings.Settings.bold_text_:1 of
 msgid "Получение/установка жирного начертания текста"
 msgstr ""
 
-#: 1d7300d14fbb4a8d99798830807a7880 61c13569cb204249b43a7de49f3874a8
+#: 479983448cc84aa7b727af9c23b6cc0e b722bd4e16014da891b63c9f96fd4096
 #: oceanai.modules.core.settings.Settings.bold_text_:3
 #: oceanai.modules.core.settings.Settings.bold_text_:5 of
 msgid "**True** или **False**"
 msgstr ""
 
-#: 0f9581bbe4fd4bcc9cb44bed4ab47a92 1cc20a02ba1f4854b5b359cf239cc4cc
-#: 5c689ccb26ac4c25928dfcf6ba9f9b0f 6a0fb53b213a464095a125cd8d622ba2
-#: 6f046e71cd1a40fdae16e5d912a71116 84b68143175746b1848082f2bf5e9c70
-#: 95ec7b902e0a44bfaf916e48bf1f19d3 a5e4e258e85d4fa3b0fc4d10cccfebe1
-#: ae5116e7a43049bf9c17ab5f219977d2 b9759d9e3e5f4d7ea1109978b2d168c5
-#: c2d7967ad9714f429fce3d1538b43a70 ca1fb22e0fa243a29c8da7ec40a81613
-#: cb3b35c176b24f568a35db5f6ae7075f e267fcfdfd4d4e009888b0da92b9c930
+#: 05d8074e77ff44c2861f330fc6afbf13 0c64f59c8563408296c9d15d438a4f93
+#: 121dceab4205499b8df8938dd41518be 177459fd4d4b4063aff13344229f785c
+#: 3d252a0d7b6f41d0b092aba462412282 5fffd3e31f9140f7b11f9e7c395b56d2
+#: 63ac2ea3c63a40d980b40d192af0a54e 665aec47473a4fd785c6ac2d36d7c4db
+#: 7e960b7c3559487bb4e2d669de0b26b7 d20db8d1697c47788ad23124f7d47e7d
+#: d4c9837661784685994874c7a0469fa3 d69b9f059c4c416895389bde69b3fdce
+#: d70149bde81f490cb129038dcf74f3ca d9a57606776244888837b482300db21c
 #: oceanai.modules.core.settings.Settings.bold_text_
 #: oceanai.modules.core.settings.Settings.chunk_size_
 #: oceanai.modules.core.settings.Settings.color_err_
@@ -408,13 +408,13 @@ msgstr ""
 msgid "Результат"
 msgstr ""
 
-#: 0c4515a92b824092b6d26a7254b19622 0e9fc97f94d74f878dd9cfe315a431dd
-#: 313395e1b8a8488995c622e86e5794be 3293ba2a2d4d4fcb931671a0688ce2b1
-#: 46221a451f2a45e7a04bc4ad8d407c72 5813c89da17a45a985caeb426bf03398
-#: 61fdbf3cd0c542f0be02d4cd1d87b9f1 6dba56fdf49f42c3962c16b9e0b29607
-#: 7dd95cb762ff4d219f828423d2885ec0 854f29e9088d445795a44b158608ca5e
-#: 85bd8734ff984433938f0be374ef4328 95623dda371a4e68b54545b96db14166
-#: c7f3327a2a594060ba7b01a81544dd6b daabd632cb984b0cbe480a8a92e79d0d
+#: 1608831646014b3ab828b129a82536cf 1aeef5ecac64408ea5799a6be8dcd766
+#: 58b0de7f769b4b269ffb4abb0480cf70 5c008feb71a34012ac67d1ec09ceaa0e
+#: 8672a65f3a504e69a0b14638973b26ba ab3aeed505984aa3944db14582ac1f89
+#: b11422f3f01543159ab6d9d472828515 b5ad08af090b4e13ad5c6013e4ad8b64
+#: caf3e6b4b319474999a559364f3c35d0 d1a9a19ae78f4374abb6258e0acbb0c4
+#: eb996ffbd51947938766d771632e4e91 ec29745da30942e7b9dfd992fda170e1
+#: f1beab57a1b144b491c64c9c025df1d0 f749f757fd1546d884a89011459fc1b3
 #: oceanai.modules.core.settings.Settings.bold_text_
 #: oceanai.modules.core.settings.Settings.chunk_size_
 #: oceanai.modules.core.settings.Settings.color_err_
@@ -432,7 +432,7 @@ msgstr ""
 msgid "Тип результата"
 msgstr ""
 
-#: cd023ba86615495fb10e561d68ad8ad0
+#: ab5a7b584dfb4ad78690f8a178d13d72
 #: oceanai.modules.core.settings.Settings.bold_text_:12 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -441,13 +441,13 @@ msgid ""
 "print(settings.bold_text_)"
 msgstr ""
 
-#: 509bf4b0a44448f98ceea47f243b301c f9343baefb5f41e89d37ba3aa0afc003
+#: 82754b358c2c4a7d9b6aea4e75ac75f3 c89e1240c2114a449e5d3d7f5da0012f
 #: oceanai.modules.core.settings.Settings.bold_text_:21
 #: oceanai.modules.core.settings.Settings.bold_text_:75 of
 msgid "True"
 msgstr ""
 
-#: d9871cd0af004eae9d366ad4f1f1fbac
+#: a504b1a9946f4f259b0fd741d8d175a4
 #: oceanai.modules.core.settings.Settings.bold_text_:29 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -457,13 +457,13 @@ msgid ""
 "print(settings.bold_text_)"
 msgstr ""
 
-#: d8f3d9763b424c7fb43348843685b09b f72f140218be4e7b91f0c5f7b2848e0e
+#: 0e0fc76e4aec4c3b8fe9fe32e14a24f3 1d756c22443d428f84fa70c0a1a25166
 #: oceanai.modules.core.settings.Settings.bold_text_:39
 #: oceanai.modules.core.settings.Settings.bold_text_:57 of
 msgid "False"
 msgstr ""
 
-#: 7bfa6e1ba4534a6f9620681bee8c72e6
+#: 47b920dae653496baead15f63386e711
 #: oceanai.modules.core.settings.Settings.bold_text_:47 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -473,7 +473,7 @@ msgid ""
 "print(settings.bold_text_)"
 msgstr ""
 
-#: 8081de8bc77449fea696e9e7528255d1
+#: 3bff3ebfb3674229a720b71a37122069
 #: oceanai.modules.core.settings.Settings.bold_text_:65 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -483,18 +483,18 @@ msgid ""
 "print(settings.bold_text_)"
 msgstr ""
 
-#: 293d21c9cb604467a438ecd0e3a72288
+#: 6d69d21d1701458c9d6b60f3c64e1d56
 #: oceanai.modules.core.settings.Settings.chunk_size_:1 of
 msgid "Получение/установка размера загрузки файла из сети за 1 шаг"
 msgstr ""
 
-#: ac0f1afe7a4d488aa97f9d49cd18432b f75432fae2034fc99b356f1ddf8260a1
+#: 34ff6d50e9804081a2b1a6ba85f283f4 f16c1d105d55486e9f1d0f6540b8d6a4
 #: oceanai.modules.core.settings.Settings.chunk_size_:3
 #: oceanai.modules.core.settings.Settings.chunk_size_:5 of
 msgid "Размер загрузки файла из сети за 1 шаг"
 msgstr ""
 
-#: 762763e361a14d48a7d122def1c5255e
+#: e2884cb6cb304db79b0d266660d6715c
 #: oceanai.modules.core.settings.Settings.chunk_size_:12 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -503,8 +503,8 @@ msgid ""
 "print(settings.chunk_size_)"
 msgstr ""
 
-#: 46bcea229aa94561aadbad5b5ce31ce0 4edc6d19b6984996980b648cf80c8900
-#: 9191956e5d244bc588ff392f492c1f14 c2782e5d192945c2a6826bd3d23b4fd3
+#: 3298f80a3236442e9321358ebe75a0fa 3bdaac55c0334b1ea3847e8361e80cf3
+#: 47e3081d566a4bbb9aac722379dbec47 9fd6fb75bd0947a39cc7032474867c3b
 #: oceanai.modules.core.settings.Settings.chunk_size_:21
 #: oceanai.modules.core.settings.Settings.chunk_size_:57
 #: oceanai.modules.core.settings.Settings.chunk_size_:75
@@ -512,7 +512,7 @@ msgstr ""
 msgid "1000000"
 msgstr ""
 
-#: 2139494e2d314914893ebc3c50cc2818
+#: 90e8eb34e4be4c5d8d401d356c5b26b1
 #: oceanai.modules.core.settings.Settings.chunk_size_:29 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -522,12 +522,12 @@ msgid ""
 "print(settings.chunk_size_)"
 msgstr ""
 
-#: 1888b1c5c8f14429a390ab599ea49cd7
+#: c60bec0460f5430d93c923229a0eb738
 #: oceanai.modules.core.settings.Settings.chunk_size_:39 of
 msgid "2000000"
 msgstr ""
 
-#: aa3038e8a5334574a2305893563f40a2
+#: 34b0e541d43d447bb6fcba5e85fec1e6
 #: oceanai.modules.core.settings.Settings.chunk_size_:47 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -537,7 +537,7 @@ msgid ""
 "print(settings.chunk_size_)"
 msgstr ""
 
-#: 6bfb533bc2be4708a74e944340c12542
+#: f948945e75b647fcbebd3f388807b7b7
 #: oceanai.modules.core.settings.Settings.chunk_size_:65 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -547,7 +547,7 @@ msgid ""
 "print(settings.chunk_size_)"
 msgstr ""
 
-#: 7356f850e8994e45ad0ab9f73d74d7f2
+#: 480b756c8e7c4730afb859fc91f54494
 #: oceanai.modules.core.settings.Settings.chunk_size_:83 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -557,7 +557,7 @@ msgid ""
 "print(settings.chunk_size_)"
 msgstr ""
 
-#: ../../../docstring 7cafcccdcb62427590e35955755eb484
+#: ../../../docstring 24da116df8bd43669c95bdb6ba6c8feb
 #: oceanai.modules.core.settings.Settings.color_err:7 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -566,9 +566,9 @@ msgid ""
 "print(settings.color_err, settings.color_err_)"
 msgstr ""
 
-#: ../../../docstring 64e3abcc1353449c969d6692be620148
-#: a35e13f6c9b44eb38e52e5c1492c3938 e652f5b45a5246ffb8dec28709e8738b
-#: ffa8914861964cd08abea75bd6e6987d
+#: ../../../docstring 0e6d838f398b4e7faaf758be911408db
+#: 3aacedec105444dba361a03eb9fc828c 7cb5b9f6fe264cefa2a7be9e61dc2a03
+#: a158dc28b08b48f1a99af741fd89911e
 #: oceanai.modules.core.settings.Settings.color_err:16
 #: oceanai.modules.core.settings.Settings.color_err:33
 #: oceanai.modules.core.settings.Settings.color_err:67
@@ -576,7 +576,7 @@ msgstr ""
 msgid "#FF0000 #FF0000"
 msgstr ""
 
-#: ../../../docstring 384c9423571547ee802cae9041834a08
+#: ../../../docstring 818cdde85d6b48e4a3c7201bab6d24af
 #: oceanai.modules.core.settings.Settings.color_err:24 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -585,7 +585,7 @@ msgid ""
 "print(settings.color_err, settings.color_err_)"
 msgstr ""
 
-#: ../../../docstring ffad936c31c546dd9cff8bfd41a1fc06
+#: ../../../docstring 833e9d820cf34fc1add6962f57716fd8
 #: oceanai.modules.core.settings.Settings.color_err:41 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -594,12 +594,12 @@ msgid ""
 "print(settings.color_err, settings.color_err_)"
 msgstr ""
 
-#: ../../../docstring 7e07cb6f29874078b6dd2dc84ac9aa09
+#: ../../../docstring 5dabd57180c24e089de093e94d0231b0
 #: oceanai.modules.core.settings.Settings.color_err:50 of
 msgid "#FF0 #FF0"
 msgstr ""
 
-#: ../../../docstring 93e6ad1d00c646668de5af875ef9115c
+#: ../../../docstring bc3224c7eb784769863a482adf52daab
 #: oceanai.modules.core.settings.Settings.color_err:58 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -608,7 +608,7 @@ msgid ""
 "print(settings.color_err, settings.color_err_)"
 msgstr ""
 
-#: ../../../docstring ed867e4987aa4ee196c3c3ed88560187
+#: ../../../docstring 006020f14d1041729673da63415ff5c8
 #: oceanai.modules.core.settings.Settings.color_err:75 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -617,9 +617,9 @@ msgid ""
 "print(settings.color_err, settings.color_err_)"
 msgstr ""
 
-#: ../../../docstring 423e7cd3a05448bfb8abf0d44601bea0
-#: 6e57330f4c10401e817d5b7919de3f18 7816f6ffbfec4de8afc141a1470d9399
-#: 9a2240ead6b2426db7cc78fce2625bc0 a8f8e5d59e9443e59ce98a24a52213e1
+#: ../../../docstring 3454774e2e9041368f4c1a51d2c40966
+#: 68b25c446d8849ad9e3b28b379ef6554 922ab5964e1f4b499a1fc7bfbf19e32c
+#: 94b60e4da0fb45f49841a5e15249cb07 b53abfc4ead74fb08c4f86635cc4deba
 #: oceanai.modules.core.settings.Settings.color_err:90
 #: oceanai.modules.core.settings.Settings.color_info:90
 #: oceanai.modules.core.settings.Settings.color_simple:90
@@ -628,15 +628,15 @@ msgstr ""
 msgid "str"
 msgstr ""
 
-#: 567631b4e2874724b351e2d11d1b6e63
+#: 8bcbd2614d2440eb83ede959cc7521eb
 #: oceanai.modules.core.settings.Settings.color_err_:1 of
 msgid "Получение/установка цвета текста содержащего ошибку"
 msgstr ""
 
-#: 16a9bd8e399440a2914044c7738d07ae 1ec649d38c984a8095260ac7bfa61091
-#: 3073ade7ac97476794246ec49b172872 92e5fc4f6e8244f1808097aa6c47e044
-#: a5e0e0d71d7a4afb9244118cc706a97c ad197cfb3d1949fbbc095edb7c3f7c75
-#: cfaa5ca1f15c4ca280acc78c6f0b6331 d339e8e0d9754cfd840689be38fc3bdb
+#: 3121e9cdf6b248ac976d8c93b0af3bdd 36f5c112f52349ffb7120ab8b1e36486
+#: 5621b843e6bf473dbc8529dfb4ca731b 63e2ed81ad3142c7af751880e21cd3b6
+#: a2ae85cbb4d74c58b6852c79c04ff7b3 ab26ee886ad946d2a9442dcc78cea2cb
+#: b0d85ea8d4514059b0557b8494f952af dc52716e7af649eebf446498c891521f
 #: oceanai.modules.core.settings.Settings.color_err_:3
 #: oceanai.modules.core.settings.Settings.color_err_:5
 #: oceanai.modules.core.settings.Settings.color_info_:3
@@ -648,7 +648,7 @@ msgstr ""
 msgid "Шестнадцатеричный код"
 msgstr ""
 
-#: efde5ab557504acca4de7c5ef3be7949
+#: 01181dab4e75426ca3c59bee62b8f61b
 #: oceanai.modules.core.settings.Settings.color_err_:12 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -657,12 +657,12 @@ msgid ""
 "print(settings.color_err_)"
 msgstr ""
 
-#: 29023486a86944eca4f764dee798a196
+#: dff286ee9dc847c78f1d1a8f429317a9
 #: oceanai.modules.core.settings.Settings.color_err_:21 of
 msgid "#C22931"
 msgstr ""
 
-#: 147fd5414e77434c845810778391b767
+#: 5128dbf7c38c4de5859824344310426d
 #: oceanai.modules.core.settings.Settings.color_err_:29 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -672,12 +672,12 @@ msgid ""
 "print(settings.color_err_)"
 msgstr ""
 
-#: d07daaf21cab4f3dafcde1a9b5086b24
+#: 37747483aba1423f907c05378e5a1a79
 #: oceanai.modules.core.settings.Settings.color_err_:39 of
 msgid "#FF0"
 msgstr ""
 
-#: 0c2e842772f0456ca8524afff0f52d04
+#: c9dff1bc01534c86bb128eea25ee7077
 #: oceanai.modules.core.settings.Settings.color_err_:47 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -687,13 +687,13 @@ msgid ""
 "print(settings.color_err_)"
 msgstr ""
 
-#: 296c0e01a85646bfafa08a3a4b1e202e 54a9e1c94a594c45840e557f2212cd74
+#: af57ed5fc2104212ac762269251294df bdc874fd50e04f37bb769ed5329bae16
 #: oceanai.modules.core.settings.Settings.color_err_:57
 #: oceanai.modules.core.settings.Settings.color_err_:75 of
 msgid "#FF0000"
 msgstr ""
 
-#: ca73636015fc4589b00eec1fd8d2c113
+#: c6fc33be00f941349477f7fe6f7597ca
 #: oceanai.modules.core.settings.Settings.color_err_:65 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -703,7 +703,7 @@ msgid ""
 "print(settings.color_err_)"
 msgstr ""
 
-#: ../../../docstring 562b4f45d2ed4af69a2de131a50b16a4
+#: ../../../docstring 73c92774a94340cba1bd3520a1112238
 #: oceanai.modules.core.settings.Settings.color_info:7 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -712,9 +712,9 @@ msgid ""
 "print(settings.color_info, settings.color_info_)"
 msgstr ""
 
-#: ../../../docstring 174d7678724a41a693b6b2bd558a831b
-#: 325ab0006dd8461185aa87b8cadfe8e2 5ba2ac52286841cc8cb60ea7ff9cd86b
-#: 9217f072731f4023aea24d87b3ac1666
+#: ../../../docstring a0edb94d891245ac96e34c04f6eeebfd
+#: c629286753c24102a4a847d4065ea95f d6ed4b9f9c2f4a5897b38b2c18de31c0
+#: e5f4a30eb330438892e996a8eb8bf94a
 #: oceanai.modules.core.settings.Settings.color_info:16
 #: oceanai.modules.core.settings.Settings.color_info:33
 #: oceanai.modules.core.settings.Settings.color_info:67
@@ -722,7 +722,7 @@ msgstr ""
 msgid "#1776D2 #1776D2"
 msgstr ""
 
-#: ../../../docstring 4ca2e99de15740218d4c1e6749451054
+#: ../../../docstring e799f6988bba43d3a2a910bc75e47be0
 #: oceanai.modules.core.settings.Settings.color_info:24 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -731,7 +731,7 @@ msgid ""
 "print(settings.color_info, settings.color_info_)"
 msgstr ""
 
-#: ../../../docstring 423c755c35e64be6b978b89111b776b1
+#: ../../../docstring 8d8a3a28554543f9a3ec6a1f28fbf02a
 #: oceanai.modules.core.settings.Settings.color_info:41 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -740,14 +740,14 @@ msgid ""
 "print(settings.color_info, settings.color_info_)"
 msgstr ""
 
-#: ../../../docstring 7119c6dc18a24bdc9fa28cdd1b23479a
-#: b23c87d2158d4921add762c528c87940
+#: ../../../docstring 46da02ba43064d80ab944d3817d0bbaa
+#: 64a8c409516747e1a8de42425d0a7aac
 #: oceanai.modules.core.settings.Settings.color_info:50
 #: oceanai.modules.core.settings.Settings.color_true:50 of
 msgid "#42F #42F"
 msgstr ""
 
-#: ../../../docstring d3915abe675643bcadb8c140ec91b785
+#: ../../../docstring 09fe2907f8c546ceb0621c8da68f1a05
 #: oceanai.modules.core.settings.Settings.color_info:58 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -756,7 +756,7 @@ msgid ""
 "print(settings.color_info, settings.color_info_)"
 msgstr ""
 
-#: ../../../docstring 322da53d297145209e435ff9144a0232
+#: ../../../docstring f04dcdb3514646f6a6b19e2e59bf451f
 #: oceanai.modules.core.settings.Settings.color_info:75 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -765,12 +765,12 @@ msgid ""
 "print(settings.color_info, settings.color_info_)"
 msgstr ""
 
-#: be1e95d439c64e75980aec0bd489d7ae
+#: d0623c5c2f5441c08694ce10e5d73506
 #: oceanai.modules.core.settings.Settings.color_info_:1 of
 msgid "Получение/установка цвета текста содержащего информацию"
 msgstr ""
 
-#: ef3c6caaa2a04658aa3817ec1b1a529d
+#: d267414fb7cf428c8bd5ad0ee6167be4
 #: oceanai.modules.core.settings.Settings.color_info_:12 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -779,15 +779,15 @@ msgid ""
 "print(settings.color_info_)"
 msgstr ""
 
-#: 0c716531600b436ea8d802f78df14552 434d3cff40f94521a2146a21e132c17a
-#: 8ade7f7477464280af116c18fb83559a
+#: 868bf82790b943f6bcb92ce9dabf93ed bf09269adbed45d88e6feabf98182312
+#: e452ac12ee85485ea0ee2826ca0d9922
 #: oceanai.modules.core.settings.Settings.color_info_:21
 #: oceanai.modules.core.settings.Settings.color_info_:57
 #: oceanai.modules.core.settings.Settings.color_info_:75 of
 msgid "#1776D2"
 msgstr ""
 
-#: b4447cc29c174a4fb4a95f496cc5e29c
+#: f96013f22b8e4f7a9846e494f4f03654
 #: oceanai.modules.core.settings.Settings.color_info_:29 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -797,13 +797,13 @@ msgid ""
 "print(settings.color_info_)"
 msgstr ""
 
-#: af8b400287f04f44b0738cfe1e3f052c b23288551a1846f69f4a93eac4108532
+#: b241b6de72b84981892416deb443e63b d8ca00220d174294855088c170d42878
 #: oceanai.modules.core.settings.Settings.color_info_:39
 #: oceanai.modules.core.settings.Settings.color_true_:39 of
 msgid "#42F"
 msgstr ""
 
-#: 9e230405a6b14098b9d04593bd67172d
+#: e3320f82ed184f4bb0ef824c8d523440
 #: oceanai.modules.core.settings.Settings.color_info_:47 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -813,7 +813,7 @@ msgid ""
 "print(settings.color_info_)"
 msgstr ""
 
-#: 8de631ebe85049188b215e71bfd345db
+#: 4323ac9a70644c418bad7d5af96a3798
 #: oceanai.modules.core.settings.Settings.color_info_:65 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -823,7 +823,7 @@ msgid ""
 "print(settings.color_info_)"
 msgstr ""
 
-#: ../../../docstring 86ca0395472b4c7698e8b55c20269faf
+#: ../../../docstring baa10798649044d2bca97e1f9ce7dd9c
 #: oceanai.modules.core.settings.Settings.color_simple:7 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -832,9 +832,9 @@ msgid ""
 "print(settings.color_simple, settings.color_simple_)"
 msgstr ""
 
-#: ../../../docstring 16de9355dbcd494489bc615578380cbf
-#: 333d1ff7c9504b53b3d81b99e0d71e3b 77b4f6e5ecb64bc6a46c60b5c2e79e93
-#: 79333151d44b41469bba619c2dbb49c9
+#: ../../../docstring 00af77cb4eda478f93039449c353d0b0
+#: 15a43209212d40ec9015bf9e97d52569 6ad2ac93907d4ab0890e51c6d8f63b6c
+#: b5e48937425641c18f40d85789528713
 #: oceanai.modules.core.settings.Settings.color_simple:16
 #: oceanai.modules.core.settings.Settings.color_simple:33
 #: oceanai.modules.core.settings.Settings.color_simple:67
@@ -842,7 +842,7 @@ msgstr ""
 msgid "#666 #666"
 msgstr ""
 
-#: ../../../docstring a66fdd9664944fec9079a0a31bfda051
+#: ../../../docstring 17ef9ee5bb5b405596346c867d68d9f7
 #: oceanai.modules.core.settings.Settings.color_simple:24 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -851,7 +851,7 @@ msgid ""
 "print(settings.color_simple, settings.color_simple_)"
 msgstr ""
 
-#: ../../../docstring 90b7a4d0e3704c119f6bd61b91418c76
+#: ../../../docstring beb992dd117c4afd99276f108d7e4f77
 #: oceanai.modules.core.settings.Settings.color_simple:41 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -860,12 +860,12 @@ msgid ""
 "print(settings.color_simple, settings.color_simple_)"
 msgstr ""
 
-#: ../../../docstring 929b79957e8042929fa86436ef31e88c
+#: ../../../docstring 23e71cd128854fd6b062bee54874b8e2
 #: oceanai.modules.core.settings.Settings.color_simple:50 of
 msgid "#222 #222"
 msgstr ""
 
-#: ../../../docstring eb31171f8ad94f42a6fcdfeea5ed3f11
+#: ../../../docstring e6f5651b82a44158b0110f9ff9900235
 #: oceanai.modules.core.settings.Settings.color_simple:58 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -874,7 +874,7 @@ msgid ""
 "print(settings.color_simple, settings.color_simple_)"
 msgstr ""
 
-#: ../../../docstring 1987f4182bb348e18b428e831b17f792
+#: ../../../docstring 66875cca253e46799ea8c7635000a02a
 #: oceanai.modules.core.settings.Settings.color_simple:75 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -883,12 +883,12 @@ msgid ""
 "print(settings.color_simple, settings.color_simple_)"
 msgstr ""
 
-#: e78810cfb6b048718bc9150207ef1abe
+#: e4429f8e9c1946468a237162150d3ffd
 #: oceanai.modules.core.settings.Settings.color_simple_:1 of
 msgid "Получение/установка цвета обычного текста"
 msgstr ""
 
-#: 175bbb6916bf440da5ae7375419cc314
+#: e030e4753873475f8f1c9fbc3572da07
 #: oceanai.modules.core.settings.Settings.color_simple_:12 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -897,12 +897,12 @@ msgid ""
 "print(settings.color_simple_)"
 msgstr ""
 
-#: 90d3bed6b22246a49db09e994b9bab3b
+#: d39e43a8c453408bb6dc6e314364c1ed
 #: oceanai.modules.core.settings.Settings.color_simple_:21 of
 msgid "#111"
 msgstr ""
 
-#: 3883338dc55d462da1dacd59be30ae3a
+#: 5c33985d52804a33a0e5d688816f9e61
 #: oceanai.modules.core.settings.Settings.color_simple_:29 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -912,12 +912,12 @@ msgid ""
 "print(settings.color_simple_)"
 msgstr ""
 
-#: 6e2d615cc4c646e0854b0224c1766e49
+#: 5cb13f69beb64936aa06fea441be1a87
 #: oceanai.modules.core.settings.Settings.color_simple_:39 of
 msgid "#444"
 msgstr ""
 
-#: 3177fa3fd2f547f787807c2a76f473c3
+#: 9c42db0053d9455a8683e5865c19ce51
 #: oceanai.modules.core.settings.Settings.color_simple_:47 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -927,13 +927,13 @@ msgid ""
 "print(settings.color_simple_)"
 msgstr ""
 
-#: 116d130cdec94f6088ff2e397a80638d c0e8bbf13669470db9ee7272af12b511
+#: 341d9119db74476591278449a7601880 a40060a0a274458ebe5dd524b3d896bd
 #: oceanai.modules.core.settings.Settings.color_simple_:57
 #: oceanai.modules.core.settings.Settings.color_simple_:75 of
 msgid "#666"
 msgstr ""
 
-#: 7a235fce3f194ddea36bf406ef38e567
+#: 71f22367ad1d4c7f83cef4a0eea4317e
 #: oceanai.modules.core.settings.Settings.color_simple_:65 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -943,7 +943,7 @@ msgid ""
 "print(settings.color_simple_)"
 msgstr ""
 
-#: ../../../docstring 3f47f96f55b1437ba44914ec6e258296
+#: ../../../docstring 3c53d3dc31374f14afce2a59d2ddea4c
 #: oceanai.modules.core.settings.Settings.color_true:7 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -952,15 +952,15 @@ msgid ""
 "print(settings.color_true, settings.color_true_)"
 msgstr ""
 
-#: ../../../docstring 4e72076af1b0465d82d157943d04876c
-#: 7131d23bf1f244958a0c009541e15fba ca5f0d837b9742d18183e6cdf4b35529
+#: ../../../docstring 00326c89fc26427886a046f26da0fbce
+#: 2031359da8e24a5488815e62fa67476a 5c439c13da5f4276ad0b866ad23999ea
 #: oceanai.modules.core.settings.Settings.color_true:16
 #: oceanai.modules.core.settings.Settings.color_true:67
 #: oceanai.modules.core.settings.Settings.color_true:84 of
 msgid "#008001 #008001"
 msgstr ""
 
-#: ../../../docstring 7ee924a1b7b341d5a99d677fffbd7437
+#: ../../../docstring b4e818c7513240b3828de61133f3514a
 #: oceanai.modules.core.settings.Settings.color_true:24 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -969,12 +969,12 @@ msgid ""
 "print(settings.color_true, settings.color_true_)"
 msgstr ""
 
-#: ../../../docstring d287e2f6101640b4bd0a2a98802302d4
+#: ../../../docstring 7da821a0e84748778461fa20729019e7
 #: oceanai.modules.core.settings.Settings.color_true:33 of
 msgid "#003332 #003332"
 msgstr ""
 
-#: ../../../docstring 765e8fa761394392848c301df9d7f5b1
+#: ../../../docstring 7562d237867340909fda35dadba288cf
 #: oceanai.modules.core.settings.Settings.color_true:41 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -983,7 +983,7 @@ msgid ""
 "print(settings.color_true, settings.color_true_)"
 msgstr ""
 
-#: ../../../docstring 2f44ae02186d4fbeb83f83b36d3f2de4
+#: ../../../docstring bcb48b17cf5a4411bd3d65af911aef51
 #: oceanai.modules.core.settings.Settings.color_true:58 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -992,7 +992,7 @@ msgid ""
 "print(settings.color_true, settings.color_true_)"
 msgstr ""
 
-#: ../../../docstring ea6866cef20a4460ba46a1d7abf0213c
+#: ../../../docstring 8310c1e4d169491aa2c20edb607b4db2
 #: oceanai.modules.core.settings.Settings.color_true:75 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1001,12 +1001,12 @@ msgid ""
 "print(settings.color_true, settings.color_true_)"
 msgstr ""
 
-#: aa6b1208f1c84956b5a896e06c60432c
+#: bae7d338e9c8469da0ff7fe2e0a053ab
 #: oceanai.modules.core.settings.Settings.color_true_:1 of
 msgid "Получение/установка цвета текста содержащего положительную информацию"
 msgstr ""
 
-#: 7de6ec552f2d4789a1cbcfef6440aef1
+#: b613778447a84711a102f9301b5e24a0
 #: oceanai.modules.core.settings.Settings.color_true_:12 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1015,15 +1015,15 @@ msgid ""
 "print(settings.color_true_)"
 msgstr ""
 
-#: 3c4be33e853747fbbf252040a5a9fb8f 60c8123d573f4375a48a68605dbe16c5
-#: d7a5bfc8f76d4396a8f69ea0575fc5e5
+#: 6732210b635c4a0fa7558552118151c1 71dbfc26f9ef44f49b8ae41b08d6d8ad
+#: 97e2bb808d1c412797bed21b0073838d
 #: oceanai.modules.core.settings.Settings.color_true_:21
 #: oceanai.modules.core.settings.Settings.color_true_:57
 #: oceanai.modules.core.settings.Settings.color_true_:75 of
 msgid "#008001"
 msgstr ""
 
-#: f51874f6015e4ec095845aca508fd8de
+#: d1b51aa0a91b4d6e83433c1a877d3ae4
 #: oceanai.modules.core.settings.Settings.color_true_:29 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1033,7 +1033,7 @@ msgid ""
 "print(settings.color_true_)"
 msgstr ""
 
-#: 51e542e8f4f8400f8605d0a046d36cac
+#: db9086515d614f60ba84d54eae29fb62
 #: oceanai.modules.core.settings.Settings.color_true_:47 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1043,7 +1043,7 @@ msgid ""
 "print(settings.color_true)"
 msgstr ""
 
-#: bc7d756d110d4014afacabf212881c0c
+#: f261b67492c8457bbc674008ea44b255
 #: oceanai.modules.core.settings.Settings.color_true_:65 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1053,18 +1053,18 @@ msgid ""
 "print(settings.color_true_)"
 msgstr ""
 
-#: ac7a79d6341940dbaefcb1ec7d0dd7e0
+#: 26d0f5b784a24ac583e90dbf0aabab49
 #: oceanai.modules.core.settings.Settings.ext_:1 of
 msgid "Получение/установка расширений искомых файлов"
 msgstr ""
 
-#: 11f3fb5265a0402a92f05f88d82973e2 56731202d7f249a880b019d10fb9824c
+#: 2c6e33ac160946b5841d46ea07882513 aef6ca0ceaa84b5981d39508a03686d4
 #: oceanai.modules.core.settings.Settings.ext_:3
 #: oceanai.modules.core.settings.Settings.ext_:5 of
 msgid "Список с расширениями искомых файлов"
 msgstr ""
 
-#: 0e9e6cd0be2d46fa87c79b67aa54b20f
+#: 9df4dc57ccdf46b19fe01205963729d3
 #: oceanai.modules.core.settings.Settings.ext_:12 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1073,9 +1073,9 @@ msgid ""
 "print(settings.ext_)"
 msgstr ""
 
-#: 2652f87f7a2440c28b5fb5475dcbdc80 576c167eabaa4ca19eac29111b540037
-#: 5ff0f503d2664b108c4a2a31ecd743c8 bae9f1106a0e4f848345db3d74103438
-#: bd1de7d227c54902bd9ff0b776bae926 e8a4298f39a14ff48729b505679ed378
+#: 49ee1d49d57841ef84276e779778120a 4ceb29820a1c4ebf85f90acc20cb4b45
+#: 8feeaedb810c4f81817c25276de38b97 cf3bee69eb1045d890efe67f39f85aac
+#: e44d6eb9e2794cf29b0e88cda42afd57 fe0c645ed86f460a92d7b6818aec5e7f
 #: oceanai.modules.core.settings.Settings.ext_:21
 #: oceanai.modules.core.settings.Settings.ext_:75
 #: oceanai.modules.core.settings.Settings.ext_:93
@@ -1085,7 +1085,7 @@ msgstr ""
 msgid "[]"
 msgstr ""
 
-#: 1d3f125ee84544f698f7933924264b50
+#: fda60e1c61f64280869b434d62ce77b8
 #: oceanai.modules.core.settings.Settings.ext_:29 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1095,12 +1095,12 @@ msgid ""
 "print(settings.ext_)"
 msgstr ""
 
-#: 53f20b00e39243e598ea034b2a5e0868
+#: aaea78dd20e34105b0fc59f85a1643ed
 #: oceanai.modules.core.settings.Settings.ext_:39 of
 msgid "['.mp4']"
 msgstr ""
 
-#: 7fdedcf9b68641b8877409b706027f8a
+#: fc8ab4e5d99042d9a118697be81a02e5
 #: oceanai.modules.core.settings.Settings.ext_:47 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1110,18 +1110,18 @@ msgid ""
 "print(settings.ext_)"
 msgstr ""
 
-#: 9c3ab8291d484f7593750c96e35a6d53
+#: 9af4e21160fc49abb0b929385566c7e8
 #: oceanai.modules.core.settings.Settings.ext_:57 of
 msgid "['.mp3', '.wav']"
 msgstr ""
 
-#: 0f4dda46e6e8496dac44f71b89204bb5 674c11f46311470ca73884b3822c9b76
+#: 7923d8ac888e45c2bfa34e11e20362aa b9dd7f5e7eef4bbf9b23ba73b4c85647
 #: oceanai.modules.core.settings.Settings.ext_:63
 #: oceanai.modules.core.settings.Settings.ignore_dirs_:63 of
 msgid ":bdg-light:`-- 4 --`"
 msgstr ""
 
-#: 96e86a6537ac4629b7b0b8e55249fd18
+#: 502144bfe4114c248da7fced934d673b
 #: oceanai.modules.core.settings.Settings.ext_:65 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1131,7 +1131,7 @@ msgid ""
 "print(settings.ext_)"
 msgstr ""
 
-#: a53352645da54bce8c83441db5dba17f
+#: 8ad6749e18bb470ab1ceb148f22a2550
 #: oceanai.modules.core.settings.Settings.ext_:83 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1141,18 +1141,18 @@ msgid ""
 "print(settings.ext_)"
 msgstr ""
 
-#: 929fa133dd754aeb94e8e01ce1d9a2fd
+#: 9e26fa1765694cf2a1e442e3dc1b2e92
 #: oceanai.modules.core.settings.Settings.ignore_dirs_:1 of
 msgid "Получение/установка списка с директориями не входящими в выборку"
 msgstr ""
 
-#: a8449c89ad364543bc1b09703b00141f cfac24e40e6947339885fd7f4e134ab6
+#: 0078a51808a14cadbd14b9c897ea7238 409a5dc3a421431aa4e2aea8898eebac
 #: oceanai.modules.core.settings.Settings.ignore_dirs_:3
 #: oceanai.modules.core.settings.Settings.ignore_dirs_:5 of
 msgid "Список с директориями"
 msgstr ""
 
-#: f7e569663bfa4426a8bf43204a377bf9
+#: 2a57c6a110fb44adac1401a6040cf71c
 #: oceanai.modules.core.settings.Settings.ignore_dirs_:12 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1161,7 +1161,7 @@ msgid ""
 "print(settings.ignore_dirs_)"
 msgstr ""
 
-#: 5455c21ad71a49eb93645930c5b492e6
+#: d655901bca4a4e08bcfd2f653a7ddffc
 #: oceanai.modules.core.settings.Settings.ignore_dirs_:29 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1171,12 +1171,12 @@ msgid ""
 "print(settings.ignore_dirs_)"
 msgstr ""
 
-#: 85999e70536b4190b00e551ecf2a7a49
+#: 240693a982984a3bbba8093ea4924827
 #: oceanai.modules.core.settings.Settings.ignore_dirs_:39 of
 msgid "['test', 'test_2']"
 msgstr ""
 
-#: d5cd1e3d15004a7786fc5431abccec24
+#: 447def424ada4d1e82d850f23ef48762
 #: oceanai.modules.core.settings.Settings.ignore_dirs_:47 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1186,7 +1186,7 @@ msgid ""
 "print(settings.ignore_dirs_)"
 msgstr ""
 
-#: 1651b8dac9934d72b4f4dd29620b9e4b
+#: 4e2aea6c08ce4298ba324984f39ee7ea
 #: oceanai.modules.core.settings.Settings.ignore_dirs_:65 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1196,12 +1196,12 @@ msgid ""
 "print(settings.ext_)"
 msgstr ""
 
-#: 880bd60747d0459cb64c73eb644af72a
+#: 6d06f7ad050948a886656ef88ce9912a
 #: oceanai.modules.core.settings.Settings.ignore_dirs_:75 of
 msgid "['1_a', '2_b']"
 msgstr ""
 
-#: 46a553fff3fc4cc690bfe9405b70d25c
+#: 99c910acd25d43d48f16d1e60606781d
 #: oceanai.modules.core.settings.Settings.ignore_dirs_:83 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1211,18 +1211,18 @@ msgid ""
 "print(settings.ignore_dirs_)"
 msgstr ""
 
-#: b6d085b7aa89499fa985c31961c73949
+#: c12a6e2deafc451a870a3f15b9377aa3
 #: oceanai.modules.core.settings.Settings.keys_dataset_:1 of
 msgid "Получение/установка названий ключей набора данных"
 msgstr ""
 
-#: 0cc5609736fe4f10b52e6766dc9c42b4 ce007b8e731d4824b827833b18556fc9
+#: 23765ecc5bc247ccaa8f8842cd88d21b 2b24b8fae957463388407a606a7fdced
 #: oceanai.modules.core.settings.Settings.keys_dataset_:3
 #: oceanai.modules.core.settings.Settings.keys_dataset_:5 of
 msgid "Список с названиями ключей набора данных"
 msgstr ""
 
-#: b11223d2bb6648d98ade2e48c79dcdf6
+#: f74bde11404f418fa1248befa95c7fe7
 #: oceanai.modules.core.settings.Settings.keys_dataset_:12 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1231,8 +1231,8 @@ msgid ""
 "print(settings.keys_dataset_)"
 msgstr ""
 
-#: 4a37e8f461e0463393c4fe3ca23055d1 4d14e89dec554e6e8e6cbf907fb75bb2
-#: 7bdac953b4cc4586a503ee28b84d5180 e00644ec8dcb41318bc10940dab6769b
+#: 4b80510e02604846a6f63e4f1f668a66 5eb889db82734704bd0a198621d424b3
+#: 7000b0628aa44846a4a01908ba996d18 a1178b4c4f444da1baead4861424bc59
 #: oceanai.modules.core.settings.Settings.keys_dataset_:21
 #: oceanai.modules.core.settings.Settings.keys_dataset_:64
 #: oceanai.modules.core.settings.Settings.keys_dataset_:89
@@ -1244,11 +1244,11 @@ msgid ""
 "    'Conscientiousness',\n"
 "    'Extraversion',\n"
 "    'Agreeableness',\n"
-"    'Neuroticism'\n"
+"    'Non-Neuroticism'\n"
 "]"
 msgstr ""
 
-#: 87b1bcd72de74077acbef0f3a2fe5ec4
+#: 56e5d6e18166460f825a92f445e95849
 #: oceanai.modules.core.settings.Settings.keys_dataset_:36 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1258,12 +1258,12 @@ msgid ""
 "print(settings.keys_dataset_)"
 msgstr ""
 
-#: 54e3325874ff42ffb14ef3899a4c3cf4
+#: fa16f8ba979e46fb8b22bfbb24c2e9ff
 #: oceanai.modules.core.settings.Settings.keys_dataset_:46 of
 msgid "['P', 'O', 'C', 'E', 'A', 'N']"
 msgstr ""
 
-#: 91570228de0d46a18d633e8bb1aec2b4
+#: 77ea2967ad26418e96aed7d89f761b9c
 #: oceanai.modules.core.settings.Settings.keys_dataset_:54 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1273,7 +1273,7 @@ msgid ""
 "print(settings.keys_dataset_)"
 msgstr ""
 
-#: a4d28ed886fb4741a0010481584cf01d
+#: 12e336e34413459b86e6d29983089748
 #: oceanai.modules.core.settings.Settings.keys_dataset_:79 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1283,7 +1283,7 @@ msgid ""
 "print(settings.keys_dataset_)"
 msgstr ""
 
-#: 426664f33479477b8dea2e33cc0fe975
+#: f0f1a4fad83749cb8a0be2b2ca18129d
 #: oceanai.modules.core.settings.Settings.keys_dataset_:104 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1293,7 +1293,7 @@ msgid ""
 "print(settings.keys_dataset_)"
 msgstr ""
 
-#: ../../../docstring 2a4ac933b0fb482c9dc8b39895e52476
+#: ../../../docstring 556c98f2294c4392a7271deae487e39d
 #: oceanai.modules.core.settings.Settings.num_to_df_display:7 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1302,9 +1302,9 @@ msgid ""
 "print(settings.num_to_df_display, settings.num_to_df_display_)"
 msgstr ""
 
-#: ../../../docstring 2ae9919300ab4a818ebbcf948ef54425
-#: 5022ae72d9c94f7a80397897d364b048 95845946b2e14c26b753ecf408e91bd3
-#: b6f1d2e6b0134587b97254227a70f1d8
+#: ../../../docstring 83e9a90c2f834de08de4a9a455feec68
+#: 936fc528fd4a43f9ad9c78267912c474 b156254d52994d7e9ef036e1640f4594
+#: fe9c9542ec3e4fb8a851c88cee929111
 #: oceanai.modules.core.settings.Settings.num_to_df_display:16
 #: oceanai.modules.core.settings.Settings.num_to_df_display:33
 #: oceanai.modules.core.settings.Settings.num_to_df_display:67
@@ -1312,7 +1312,7 @@ msgstr ""
 msgid "30 30"
 msgstr ""
 
-#: ../../../docstring a25966bc4d894d31afab259adbea650c
+#: ../../../docstring 6b9122c32b5c4ab2992f2d62930bc7fd
 #: oceanai.modules.core.settings.Settings.num_to_df_display:24 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1321,7 +1321,7 @@ msgid ""
 "print(settings.num_to_df_display, settings.num_to_df_display_)"
 msgstr ""
 
-#: ../../../docstring 8adbc5766d864cc39eb71631c8d2c73d
+#: ../../../docstring a74d71add58c48c1b469731e3aca73ba
 #: oceanai.modules.core.settings.Settings.num_to_df_display:41 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1330,12 +1330,12 @@ msgid ""
 "print(settings.num_to_df_display, settings.num_to_df_display_)"
 msgstr ""
 
-#: ../../../docstring ca3679ceb9ba41c49a34ff362b44f030
+#: ../../../docstring fb7b90fd6a074ef19ec1a3ac0b2e8db8
 #: oceanai.modules.core.settings.Settings.num_to_df_display:50 of
 msgid "50 50"
 msgstr ""
 
-#: ../../../docstring 62455cf74a2447a692c1b335fcc151f7
+#: ../../../docstring 0cef2431e73e4570a7094f619abbbb13
 #: oceanai.modules.core.settings.Settings.num_to_df_display:58 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1344,7 +1344,7 @@ msgid ""
 "print(settings.num_to_df_display, settings.num_to_df_display_)"
 msgstr ""
 
-#: ../../../docstring d2fc68021ad1434b9ea063466fa7a7c5
+#: ../../../docstring 64cb443bcdef40ebacf56d04314cc5f1
 #: oceanai.modules.core.settings.Settings.num_to_df_display:75 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1353,23 +1353,23 @@ msgid ""
 "print(settings.num_to_df_display, settings.num_to_df_display_)"
 msgstr ""
 
-#: ../../../docstring b83db9a1519743f89b21843786e4ad55
+#: ../../../docstring 9163d5df3a1546f08021cc1813b8b271
 #: oceanai.modules.core.settings.Settings.num_to_df_display:90 of
 msgid "int"
 msgstr ""
 
-#: 2de8d017f54d43598cbe18c717abc8bc
+#: 96352d42953c44c3b233f359b1aa0db1
 #: oceanai.modules.core.settings.Settings.num_to_df_display_:1 of
 msgid "Получение/установка количества строк для отображения в таблицах"
 msgstr ""
 
-#: 20407a65342843b79365169ad53e151c d948e08cf9c24529aec76539d3e26efb
+#: 8735667820224c5785593ba866e05216 9bb91deacf76479fa369455305fbc4c9
 #: oceanai.modules.core.settings.Settings.num_to_df_display_:3
 #: oceanai.modules.core.settings.Settings.num_to_df_display_:5 of
 msgid "Количество строк"
 msgstr ""
 
-#: faf4aa6ea7974da1b7ffc358722ef8c4
+#: e7d0520bd9cb473dad6ad7fc05682379
 #: oceanai.modules.core.settings.Settings.num_to_df_display_:12 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1378,15 +1378,15 @@ msgid ""
 "print(settings.num_to_df_display_)"
 msgstr ""
 
-#: 095cae64abe447d4af04ce71cf906d13 433f0c46ca414735b6f656abb6e1b4b7
-#: bfa21bf2fd8e42ee8f2dd4230667b18f
+#: 9718272a58c241b9be34d2a37fc7aeca ab582100aad7426b899412dac7e748af
+#: b25d8a12022d4f889625bbc8563c1491
 #: oceanai.modules.core.settings.Settings.num_to_df_display_:21
 #: oceanai.modules.core.settings.Settings.num_to_df_display_:57
 #: oceanai.modules.core.settings.Settings.num_to_df_display_:75 of
 msgid "30"
 msgstr ""
 
-#: 4569bd1d444b4578a481b4f89f73d10c
+#: 76983dd1863b4051a7b667bd4ef68248
 #: oceanai.modules.core.settings.Settings.num_to_df_display_:29 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1396,12 +1396,12 @@ msgid ""
 "print(settings.num_to_df_display_)"
 msgstr ""
 
-#: a88d437038554259a86252d5e1bed4bf
+#: f848ae4c37be44baaab4eb580a73536b
 #: oceanai.modules.core.settings.Settings.num_to_df_display_:39 of
 msgid "50"
 msgstr ""
 
-#: 899b48f498524d4290f9a98ddf59ed71
+#: d112cb0016244380a734d5f83c996351
 #: oceanai.modules.core.settings.Settings.num_to_df_display_:47 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1411,7 +1411,7 @@ msgid ""
 "print(settings.num_to_df_display_)"
 msgstr ""
 
-#: 3aebb87621174632828f5baf88ec0506
+#: 3d8f29909dbe4ea798383de1afca0a56
 #: oceanai.modules.core.settings.Settings.num_to_df_display_:65 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1421,18 +1421,18 @@ msgid ""
 "print(settings.num_to_df_display_)"
 msgstr ""
 
-#: 90027893a6634bb3a9f81c123c23ea13
+#: 32f6790ffa2346b6bd0d81e9660d6d3d
 #: oceanai.modules.core.settings.Settings.path_to_dataset_:1 of
 msgid "Получение/установка директории набора данных"
 msgstr ""
 
-#: 2b54890ae3cb456e9510ad5476b653a2 5961adf3645049d586c40d5353052a59
+#: 35c047f0ad9440a799f161326a5c118c 8f3b8b9655f946b2b59ec48168a0ed71
 #: oceanai.modules.core.settings.Settings.path_to_dataset_:3
 #: oceanai.modules.core.settings.Settings.path_to_dataset_:5 of
 msgid "Директория набора данных"
 msgstr ""
 
-#: 1b3376422e92455f9a26b90ddbf678fb
+#: 2a4b92aff46148a78a4b81ded58ac7b5
 #: oceanai.modules.core.settings.Settings.path_to_dataset_:12 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1441,9 +1441,9 @@ msgid ""
 "print(settings.path_to_dataset_)"
 msgstr ""
 
-#: 0d1923176e464c15af71e22157bb167a 14eb79ef90644d5682a343f9371db26c
-#: 32a7e29a3be34a8889773c9114ebfb89 58cb9b2a13154ce79a52c14e1c3ae202
-#: a1acc3a565094221abed015a875a68bf fd5d7962ae3a4ae8b8c2fb2a2c8f33c8
+#: 1e9fc2ffdb024b3ab8aa529857681ba9 5956f249638b437bbdafdb8016b3bfea
+#: 6ef5e523412a4824a6bc5d7615797074 ad6627e8c62d4fdb93b24e1224b8136b
+#: de382057cfeb459eb209b94ed26c7279 e4dd06b363004e7c87bb1a25ab580755
 #: oceanai.modules.core.settings.Settings.path_to_dataset_:21
 #: oceanai.modules.core.settings.Settings.path_to_dataset_:57
 #: oceanai.modules.core.settings.Settings.path_to_dataset_:75
@@ -1453,7 +1453,7 @@ msgstr ""
 msgid "."
 msgstr ""
 
-#: 0e1140c7ebc5446ba20827f8f5143415
+#: ca48e31d23a94af98ae8120e0c95ccd7
 #: oceanai.modules.core.settings.Settings.path_to_dataset_:29 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1463,12 +1463,12 @@ msgid ""
 "print(settings.path_to_dataset_)"
 msgstr ""
 
-#: faa2fd7373b5449e8ce615d013517c92
+#: d915c20a3ec240308c8c55b10ba44860
 #: oceanai.modules.core.settings.Settings.path_to_dataset_:39 of
 msgid "dataset"
 msgstr ""
 
-#: 6632f4aebdb34e8a8ed749ef3defe064
+#: 1e9358d76ede48ee8833a4c8f0afdd18
 #: oceanai.modules.core.settings.Settings.path_to_dataset_:47 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1478,7 +1478,7 @@ msgid ""
 "print(settings.path_to_dataset_)"
 msgstr ""
 
-#: 7e7da15178714d42b509fc1c64787bdd
+#: e0005444160249a5ae3a1cd899627d5d
 #: oceanai.modules.core.settings.Settings.path_to_dataset_:65 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1488,7 +1488,7 @@ msgid ""
 "print(settings.path_to_dataset_)"
 msgstr ""
 
-#: eafca3e8522b43348dbc9d1bc9424d6d
+#: cc13990069ca4b238f062aae622928bc
 #: oceanai.modules.core.settings.Settings.path_to_dataset_:83 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1498,18 +1498,18 @@ msgid ""
 "print(settings.path_to_dataset_)"
 msgstr ""
 
-#: 609f5d032b0c445daf1f4c7d1086087c
+#: cafe0ffafb8846cb9552226db2084956
 #: oceanai.modules.core.settings.Settings.path_to_logs_:1 of
 msgid "Получение/установка директории для сохранения LOG файлов"
 msgstr ""
 
-#: 120bf5f3f5bb42d5b971b451a9bad078 9b51da9da864427e9597ab290e5e218f
+#: 8ed723a8b02a48929347a924f0060e61 928b9b497df94110af3572065ea07004
 #: oceanai.modules.core.settings.Settings.path_to_logs_:3
 #: oceanai.modules.core.settings.Settings.path_to_logs_:5 of
 msgid "Директория для сохранения LOG файлов"
 msgstr ""
 
-#: 085761ed398149d9b6251cc533a23b51
+#: e0dd16d8189c4d54aa5c58fa2c98ff41
 #: oceanai.modules.core.settings.Settings.path_to_logs_:12 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1518,15 +1518,15 @@ msgid ""
 "print(settings.path_to_logs_)"
 msgstr ""
 
-#: 58c0d656f7d24cb38ebd3597cc2a4885 6dc4d272082a45548b49544d209bfc1f
-#: 923d525ad6e644eebc1f2921c0ae0ed7
+#: 5930fe7e13904758a8c34cb46db4f3be 8cdcf9e4408742f4848c39b57c9fc26c
+#: a0a80229180c415aadddbda4bbd994a1
 #: oceanai.modules.core.settings.Settings.path_to_logs_:21
 #: oceanai.modules.core.settings.Settings.path_to_logs_:75
 #: oceanai.modules.core.settings.Settings.path_to_logs_:93 of
 msgid "logs"
 msgstr ""
 
-#: d6be68ea858c429c8e38669d89e09de9
+#: 04467513b30b4f64a41238ad078db67e
 #: oceanai.modules.core.settings.Settings.path_to_logs_:29 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1536,12 +1536,12 @@ msgid ""
 "print(settings.path_to_logs_)"
 msgstr ""
 
-#: fa5c53ef35a6451e909832d9cbdee72f
+#: ec0a302751ce4713bec919110daebfcb
 #: oceanai.modules.core.settings.Settings.path_to_logs_:39 of
 msgid "logs/DF"
 msgstr ""
 
-#: 71a1816854e14da7939e33ba53584869
+#: 6d5587d85cf149f2b263c4fb17f6ed49
 #: oceanai.modules.core.settings.Settings.path_to_logs_:47 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1551,7 +1551,7 @@ msgid ""
 "print(settings.path_to_logs_)"
 msgstr ""
 
-#: cd3cf54f96a440bc82be47b611e75d08
+#: fe1c41d8b3c6414abea689c2979d070b
 #: oceanai.modules.core.settings.Settings.path_to_logs_:65 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1561,7 +1561,7 @@ msgid ""
 "print(settings.path_to_logs_)"
 msgstr ""
 
-#: 197b875cd1f349b98b72e41e943f85e9
+#: 388e265d050547b186a878413341de18
 #: oceanai.modules.core.settings.Settings.path_to_logs_:83 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1571,18 +1571,18 @@ msgid ""
 "print(settings.path_to_logs_)"
 msgstr ""
 
-#: 69d1f3057cb04fba8d8b837bcd1d40ef
+#: a56ffd5476784ee190a0e28a8ed6ebd9
 #: oceanai.modules.core.settings.Settings.path_to_save_:1 of
 msgid "Получение/установка директории для сохранения данных"
 msgstr ""
 
-#: ddfb054bcdd64a3a822557defcbb0c9f dee845a1eed14f83924be72d168d5bfe
+#: b61e15021c56434f833fdcc718fa66f5 e2bfdce553e24abf8126919c9d942d93
 #: oceanai.modules.core.settings.Settings.path_to_save_:3
 #: oceanai.modules.core.settings.Settings.path_to_save_:5 of
 msgid "Директория для сохранения данных"
 msgstr ""
 
-#: c6dbb10476884ebbadc654ab7a087e25
+#: c0f5a69365a34baba4c3e49310d47997
 #: oceanai.modules.core.settings.Settings.path_to_save_:12 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1591,15 +1591,15 @@ msgid ""
 "print(settings.path_to_save_)"
 msgstr ""
 
-#: 2ea3d891bd1b4079b92b1b803b44e53e b13c608b69f642b6b7fa0de476491a4d
-#: fad6e4c6fca947e88b84a2b82eb1f026
+#: 89588ba09e4041938c07373454910389 95c37e8209474e6692d7084009387abb
+#: cb5dcee0f82d40178a6e27bf52b6ea24
 #: oceanai.modules.core.settings.Settings.path_to_save_:21
 #: oceanai.modules.core.settings.Settings.path_to_save_:75
 #: oceanai.modules.core.settings.Settings.path_to_save_:93 of
 msgid "models"
 msgstr ""
 
-#: 30c93f6c380b4da3a76386deb32059db
+#: 35a5fb56f0d1448a83944fa8dd56f4f4
 #: oceanai.modules.core.settings.Settings.path_to_save_:29 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1609,12 +1609,12 @@ msgid ""
 "print(settings.path_to_save_)"
 msgstr ""
 
-#: 152d31e4e31e4d4cab2b7608e624bf22
+#: dc42ce5801a643aa9a704790fd70b026
 #: oceanai.modules.core.settings.Settings.path_to_save_:39 of
 msgid "models/Audio"
 msgstr ""
 
-#: 877d0f6ce29447c9a6c394728af8dcbd
+#: 907913b0b96647b5bebb6e45e78313a8
 #: oceanai.modules.core.settings.Settings.path_to_save_:47 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1624,7 +1624,7 @@ msgid ""
 "print(settings.path_to_save_)"
 msgstr ""
 
-#: 9c34fb299c9d4619a3fe63c4d2ce36ca
+#: 770cc46c323c444d8209526d17c3a2f4
 #: oceanai.modules.core.settings.Settings.path_to_save_:65 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1634,7 +1634,7 @@ msgid ""
 "print(settings.path_to_save_)"
 msgstr ""
 
-#: 696f904d2dc34b92a19e8e13136fa75a
+#: 0fdf78ea4e3749749680f54f08f93af7
 #: oceanai.modules.core.settings.Settings.path_to_save_:83 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1644,7 +1644,7 @@ msgid ""
 "print(settings.path_to_save_)"
 msgstr ""
 
-#: ../../../docstring 0a8cd5f5b7e540789772353b268acc35
+#: ../../../docstring a108680fc3634c0ba70c4cb33afd1355
 #: oceanai.modules.core.settings.Settings.text_runtime:7 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1653,9 +1653,9 @@ msgid ""
 "print(settings.text_runtime, settings.text_runtime_)"
 msgstr ""
 
-#: ../../../docstring 1a0d7a835d3a4a3894a8338ba80d45b5
-#: 2222d8bb1ba648a5ba63a0d9e9254eb3 caa3fdc78ac14dd7a454cf3c2d8a7ebb
-#: f2fbc56ff4524faa84111f0462a44f8a
+#: ../../../docstring 23383184c544435f8dee1669a23ce770
+#: 3353e61ce7784059837e3ed0df297580 8c0c4244ac694fa59667bc911e794d2b
+#: c2540dd4cb1c4d559018be6519b9aa7c
 #: oceanai.modules.core.settings.Settings.text_runtime:16
 #: oceanai.modules.core.settings.Settings.text_runtime:50
 #: oceanai.modules.core.settings.Settings.text_runtime:67
@@ -1663,7 +1663,7 @@ msgstr ""
 msgid "Время выполнения Время выполнения"
 msgstr ""
 
-#: ../../../docstring 49ff248f12c54fc580fd4236a00e08ac
+#: ../../../docstring de52d361fb114900bf1b3679e6141505
 #: oceanai.modules.core.settings.Settings.text_runtime:24 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1672,12 +1672,12 @@ msgid ""
 "print(settings.text_runtime, settings.text_runtime_)"
 msgstr ""
 
-#: ../../../docstring 36e4f2fdf54b428b91af811990309f85
+#: ../../../docstring 9f2de1b3138a4e33a85a3f06486df098
 #: oceanai.modules.core.settings.Settings.text_runtime:33 of
 msgid "Код выполнился за Код выполнился за"
 msgstr ""
 
-#: ../../../docstring f5f2534dbee34d609588df5e9634c98c
+#: ../../../docstring ee4e5c090f6d4c158f3d67fb10e54b8a
 #: oceanai.modules.core.settings.Settings.text_runtime:41 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1686,7 +1686,7 @@ msgid ""
 "print(settings.text_runtime, settings.text_runtime_)"
 msgstr ""
 
-#: ../../../docstring 2e740982cd0142ab9a95bbbfdeb1f0b4
+#: ../../../docstring 3e4b48bc22f741668be3b423a064f524
 #: oceanai.modules.core.settings.Settings.text_runtime:58 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1695,7 +1695,7 @@ msgid ""
 "print(settings.text_runtime, settings.text_runtime_)"
 msgstr ""
 
-#: ../../../docstring 3c2fc2efbcd14a1d8f69b03680762ed1
+#: ../../../docstring 28c9b7da972741f6972a04f5b05ff781
 #: oceanai.modules.core.settings.Settings.text_runtime:75 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1704,18 +1704,18 @@ msgid ""
 "print(settings.text_runtime, settings.text_runtime_)"
 msgstr ""
 
-#: b37c74de0b3e457d9424af5da9a10e26
+#: 4016ad1c198f4a51945488069092a0d2
 #: oceanai.modules.core.settings.Settings.text_runtime_:1 of
 msgid "Получение/установка текста времени выполнения"
 msgstr ""
 
-#: 208d5fe889f7443290548a1f0343686a 21fdd08658794789a20ece2847575ded
+#: 5cfe6a22a0e64915a9094f29d1e4a406 b989434ce93747fd98c779e7ca7721ac
 #: oceanai.modules.core.settings.Settings.text_runtime_:3
 #: oceanai.modules.core.settings.Settings.text_runtime_:5 of
 msgid "Текст"
 msgstr ""
 
-#: 92d8d6c1ca4247f3b71812db5d0908c1
+#: 894dc7613efd4943a9e819daf9822e81
 #: oceanai.modules.core.settings.Settings.text_runtime_:12 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1724,15 +1724,15 @@ msgid ""
 "print(settings.text_runtime_)"
 msgstr ""
 
-#: 554c6bc4a87e49dca403dcf97c30395f 6ff2e13c562d4bc49d0ad5852b610642
-#: d90b5ab46b8a4d28906f703faee3bbfa
+#: 363e9a5c96894a248a30126157e0ac58 4fdff84a0631430ea73ab8bd7c6f1f05
+#: 71d1f4ebe1824ed194e18fb6d26d9577
 #: oceanai.modules.core.settings.Settings.text_runtime_:21
 #: oceanai.modules.core.settings.Settings.text_runtime_:57
 #: oceanai.modules.core.settings.Settings.text_runtime_:75 of
 msgid "Время выполнения"
 msgstr ""
 
-#: c353ce9b761646c39b379543954a92de
+#: 4b07d0462c264ffba936dacedbaddf78
 #: oceanai.modules.core.settings.Settings.text_runtime_:29 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1742,12 +1742,12 @@ msgid ""
 "print(settings.text_runtime_)"
 msgstr ""
 
-#: bc0c1cc94651495c970c39a564315532
+#: 5453082cf7f54933b3667ff77dc29700
 #: oceanai.modules.core.settings.Settings.text_runtime_:39 of
 msgid "Код выполнился за"
 msgstr ""
 
-#: 1121d0d35bd8491692dcf1312d2a5c04
+#: 92273a5b82464f138f0eb8cc75b6b3d1
 #: oceanai.modules.core.settings.Settings.text_runtime_:47 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
@@ -1757,7 +1757,7 @@ msgid ""
 "print(settings.text_runtime_)"
 msgstr ""
 
-#: a6ae6aa219ed4de583c3c9b96c9a826d
+#: 97cd50ef638a4f709155be4e0caff6f7
 #: oceanai.modules.core.settings.Settings.text_runtime_:65 of
 msgid ""
 "from oceanai.modules.core.settings import Settings\n"
