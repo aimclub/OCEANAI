@@ -35,13 +35,14 @@
 
 1. Audio Information Analysis Algorithm (AIA).
 2. Video Information Analysis Algorithm (VIA).
-3. Multimodal Fusion Algorithm (MF).
+2. Text Information Analysis Algorithm (TIA).
+3. Multimodal Information Fusion Algorithm (MIF).
 
-The AIA and VIA algorithms implement the functions of strong artificial intelligence (AI) in terms of complexing acoustic and visual features built on different principles (expert and neural network), i.e. these algorithms implement the approaches of composite (hybrid) AI. The necessary pre-processing is carried out in the algorithms audio and video information, the calculation of visual and acoustic features and the issuance of prediction personality traits based on them.
+The AIA, VIA and TIA algorithms implement the functions of strong artificial intelligence (AI) in terms of complexing acoustic, visual and linguistic features built on different principles (hand-crafted and deep features), i.e. these algorithms implement the approaches of composite (hybrid) AI. The necessary pre-processing of audio, video and text information, the calculation of visual, acoustic and linguistic features and the output of predictions of personality traits based on them are carried out in the algorithms.
 
-The MF algorithm is a link between two information analysis algorithms (AIA and VIA). This algorithm performs a weighted neural network combination of prediction personality traits obtained using the AIA and VIA algorithms.
+The MIF algorithm is a combination of three information analysis algorithms (AIA, VIA and TIA). This algorithm performs feature-level fusion obtained by the AIA, VIA and TIA algorithms.
 
-In addition to the main task - unimodal and multimodal personality traits assessment, the features implemented in **[OCEANAI](https://oceanai.readthedocs.io/en/latest/)** will allow researchers to solve other problems of analyzing human behavior, for example, recognizing his affective states.
+In addition to the main task - unimodal and multimodal personality traits assessment, the features implemented in **[OCEANAI](https://oceanai.readthedocs.io/en/latest/)** will allow researchers to solve other problems of analyzing human behavior, for example, affective state recognition.
 
 To install the library, you should refer to the **[Installation and Update](https://oceanai.readthedocs.io/en/latest/user_guide/installation.html#id2)**.
 
@@ -51,7 +52,7 @@ To work with video information, you should refer to the **[Video information pro
 
 To work with text information, you should refer to the **[Text information processing](https://oceanai.readthedocs.io/en/latest/user_guide/samples/text.html)**.
 
-To work with audio-visual information, you should refer to the **[Multimodal information processing](https://oceanai.readthedocs.io/en/latest/user_guide/samples/multimodal.html)**.
+To work with multimodal information, you should refer to the **[Multimodal information processing](https://oceanai.readthedocs.io/en/latest/user_guide/samples/multimodal.html)**.
 
 The library solves practical tasks:
 
@@ -59,7 +60,7 @@ The library solves practical tasks:
 2. **[Predicting consumer preferences for industrial goods](https://oceanai.readthedocs.io/en/latest/user_guide/notebooks/Pipeline_practical_task_2.html)**.
 3. **[Forming effective work teams](https://oceanai.readthedocs.io/ru/latest/user_guide/notebooks/Pipeline_practical_task_3.html)**.
 
-**[OCEANAI](https://oceanai.readthedocs.io/en/latest/)** uses the latest open-source libraries for audio and video processing: **[librosa](https://librosa.org/)**, **[openSMILE](https://audeering.github.io/opensmile-python/)**, **[openCV](https://pypi.org/project/opencv-python/)**, **[mediapipe](https://google.github.io/mediapipe/getting_started/python)**, **[transformers](https://pypi.org/project/transformers)**.
+**[OCEANAI](https://oceanai.readthedocs.io/en/latest/)** uses the latest open-source libraries for audio, video and text processing: **[librosa](https://librosa.org/)**, **[openSMILE](https://audeering.github.io/opensmile-python/)**, **[openCV](https://pypi.org/project/opencv-python/)**, **[mediapipe](https://google.github.io/mediapipe/getting_started/python)**, **[transformers](https://pypi.org/project/transformers)**.
 
 **[OCEANAI](https://oceanai.readthedocs.io/en/latest/)** is written in the **[python programming language](https://www.python.org/)**. Neural network models are implemented and trained using an open-source library code **[TensorFlow](https://www.tensorflow.org/)**.
 
