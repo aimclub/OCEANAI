@@ -152,6 +152,10 @@ html_favicon = "_static/favicon.ico"
 # Логотип документации
 html_logo = "_static/logo.svg"
 
+# html_context = {
+#     "css_files": ["_static/custom.css"],
+# }
+
 # Отображение надписи "Собрано при помощи Sphinx ..."
 html_show_sphinx = True
 
