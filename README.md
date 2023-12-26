@@ -1,5 +1,11 @@
 # [OCEANAI](https://oceanai.readthedocs.io/en/latest/)
 
+<p align="center">
+    <img src="https://raw.githubusercontent.com/aimclub/OCEANAI/main/docs/source/_static/logo.svg" alt="Logo">
+<p>
+
+---
+
 [![SAI](./docs/source/_static/badges/SAI_badge_flat.svg)](https://sai.itmo.ru/)
 [![ITMO](./docs/source/_static/badges/ITMO_badge_flat.svg)](https://en.itmo.ru/en/)
 
