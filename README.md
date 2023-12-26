@@ -1,7 +1,7 @@
 # [OCEANAI](https://oceanai.readthedocs.io/en/latest/)
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/aimclub/OCEANAI/main/docs/source/_static/logo.svg" alt="Logo">
+    <img src="https://raw.githubusercontent.com/aimclub/OCEANAI/main/docs/source/_static/logo.svg" alt="Logo" width="40%">
 <p>
 
 ---
