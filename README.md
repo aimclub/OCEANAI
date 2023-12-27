@@ -1,4 +1,4 @@
-# [OCEANAI](https://oceanai.readthedocs.io/en/latest/)
+# [OCEAN-AI](https://oceanai.readthedocs.io/en/latest/)
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/aimclub/OCEANAI/main/docs/source/_static/logo.svg" alt="Logo" width="40%">
@@ -29,7 +29,7 @@
 
 ---
 
-> **[OCEANAI](https://oceanai.readthedocs.io/en/latest/)** is an open-source library consisting of a set of algorithms for intellectual analysis of human behavior based on multimodal data for automatic personality traits (PT) assessment. The library evaluates five PT: **O**penness to experience, **C**onscientiousness, **E**xtraversion, **A**greeableness, Non-**N**euroticism.
+> **[OCEAN-AI](https://oceanai.readthedocs.io/en/latest/)** is an open-source library consisting of a set of algorithms for intellectual analysis of human behavior based on multimodal data for automatic personality traits (PT) assessment. The library evaluates five PT: **O**penness to experience, **C**onscientiousness, **E**xtraversion, **A**greeableness, Non-**N**euroticism.
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/aimclub/OCEANAI/main/docs/source/_static/Pipeline_OCEANAI.en.svg" alt="Pipeline">
@@ -37,7 +37,7 @@
 
 ---
 
-**[OCEANAI](https://oceanai.readthedocs.io/en/latest/)** includes three main algorithms:
+**[OCEAN-AI](https://oceanai.readthedocs.io/en/latest/)** includes three main algorithms:
 
 1. Audio Information Analysis Algorithm (AIA).
 2. Video Information Analysis Algorithm (VIA).
@@ -48,7 +48,7 @@ The AIA, VIA and TIA algorithms implement the functions of strong artificial int
 
 The MIF algorithm is a combination of three information analysis algorithms (AIA, VIA and TIA). This algorithm performs feature-level fusion obtained by the AIA, VIA and TIA algorithms.
 
-In addition to the main task - unimodal and multimodal personality traits assessment, the features implemented in **[OCEANAI](https://oceanai.readthedocs.io/en/latest/)** will allow researchers to solve other problems of analyzing human behavior, for example, affective state recognition.
+In addition to the main task - unimodal and multimodal personality traits assessment, the features implemented in **[OCEAN-AI](https://oceanai.readthedocs.io/en/latest/)** will allow researchers to solve other problems of analyzing human behavior, for example, affective state recognition.
 
 To install the library, you should refer to the **[Installation and Update](https://oceanai.readthedocs.io/en/latest/user_guide/installation.html#id2)**.
 
@@ -66,15 +66,15 @@ The library solves practical tasks:
 2. **[Predicting consumer preferences for industrial goods](https://oceanai.readthedocs.io/en/latest/user_guide/notebooks/Pipeline_practical_task_2.html)**.
 3. **[Forming effective work teams](https://oceanai.readthedocs.io/ru/latest/user_guide/notebooks/Pipeline_practical_task_3.html)**.
 
-**[OCEANAI](https://oceanai.readthedocs.io/en/latest/)** uses the latest open-source libraries for audio, video and text processing: **[librosa](https://librosa.org/)**, **[openSMILE](https://audeering.github.io/opensmile-python/)**, **[openCV](https://pypi.org/project/opencv-python/)**, **[mediapipe](https://google.github.io/mediapipe/getting_started/python)**, **[transformers](https://pypi.org/project/transformers)**.
+**[OCEAN-AI](https://oceanai.readthedocs.io/en/latest/)** uses the latest open-source libraries for audio, video and text processing: **[librosa](https://librosa.org/)**, **[openSMILE](https://audeering.github.io/opensmile-python/)**, **[openCV](https://pypi.org/project/opencv-python/)**, **[mediapipe](https://google.github.io/mediapipe/getting_started/python)**, **[transformers](https://pypi.org/project/transformers)**.
 
-**[OCEANAI](https://oceanai.readthedocs.io/en/latest/)** is written in the **[python programming language](https://www.python.org/)**. Neural network models are implemented and trained using an open-source library code **[TensorFlow](https://www.tensorflow.org/)**.
+**[OCEAN-AI](https://oceanai.readthedocs.io/en/latest/)** is written in the **[python programming language](https://www.python.org/)**. Neural network models are implemented and trained using an open-source library code **[TensorFlow](https://www.tensorflow.org/)**.
 
 ---
 
 ## Research data
 
-The **[OCEANAI](https://oceanai.readthedocs.io/en/latest/)** library was tested on two corpora:
+The **[OCEAN-AI](https://oceanai.readthedocs.io/en/latest/)** library was tested on two corpora:
 
 1) The publicly available and large-scale **[First Empressions V2 corpus](https://chalearnlap.cvc.uab.cat/dataset/24/description/)**.
 2) On the first publicly available Russian-language **[Multimodal Personality Traits Assessment (MuPTA) corpus](https://hci.nw.ru/en/pages/mupta-corpus)**.

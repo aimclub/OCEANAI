@@ -1,4 +1,4 @@
-# [OCEANAI](https://oceanai.readthedocs.io/ru/latest/)
+# [OCEAN-AI](https://oceanai.readthedocs.io/ru/latest/)
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/aimclub/OCEANAI/main/docs/source/_static/logo.svg" alt="Logo" width="40%">
@@ -27,7 +27,7 @@
 
 <h4 align="center"><span style="color:#EC256F;">Описание</span></h4>
 
-> **[OCEANAI](https://oceanai.readthedocs.io/ru/latest/)** - библиотека с открытым исходным кодом, состоящая из набора алгоритмов интеллектуального анализа поведения человека на основе его мультимодальных данных для автоматического оценивания уровня отдельных персональных качеств личности человека (ПКЛЧ). Библиотека оценивает 5 ПКЛЧ: Открытость опыту (**O**penness), Добросовестность (**C**onscientiousness), Экстраверсия (**E**xtraversion), Доброжелательность (**A**greeableness), Эмоциональная стабильность (Non-**N**euroticism).
+> **[OCEAN-AI](https://oceanai.readthedocs.io/ru/latest/)** - библиотека с открытым исходным кодом, состоящая из набора алгоритмов интеллектуального анализа поведения человека на основе его мультимодальных данных для автоматического оценивания уровня отдельных персональных качеств личности человека (ПКЛЧ). Библиотека оценивает 5 ПКЛЧ: Открытость опыту (**O**penness), Добросовестность (**C**onscientiousness), Экстраверсия (**E**xtraversion), Доброжелательность (**A**greeableness), Эмоциональная стабильность (Non-**N**euroticism).
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/aimclub/OCEANAI/main/docs/source/_static/Pipeline_OCEANAI.ru.svg" alt="Pipeline">
@@ -35,7 +35,7 @@
 
 ---
 
-**[OCEANAI](https://oceanai.readthedocs.io/ru/latest/)** включает четыре основных алгоритма:
+**[OCEAN-AI](https://oceanai.readthedocs.io/ru/latest/)** включает четыре основных алгоритма:
 
 1. Алгоритм анализа аудиоинформации (ААИ).
 2. Алгоритм анализа видеоинформации (АВИ).
@@ -47,7 +47,7 @@
 Алгоритм МОИ является связующим звеном трех алгоритмов анализа информации (ААИ, АВИ и АТИ). Данный алгоритм выполняет
 нейросетевое объединение признаков полученных с помощью алгоритмов ААИ, АВИ и АТИ.
 
-Помимо основной задачи - мультимодального оценивания персональных качеств личности человека, реализованные в **[OCEANAI](https://oceanai.readthedocs.io/ru/latest/)** признаки позволят исследователям решать другие задачи анализа поведения человека, например распознавание его аффективных состояний.
+Помимо основной задачи - мультимодального оценивания персональных качеств личности человека, реализованные в **[OCEAN-AI](https://oceanai.readthedocs.io/ru/latest/)** признаки позволят исследователям решать другие задачи анализа поведения человека, например распознавание его аффективных состояний.
 
 Для установки библиотеки необходимо обратиться к **[Установка и обновление](https://oceanai.readthedocs.io/ru/latest/user_guide/installation.html)**.
 
@@ -65,13 +65,13 @@
 2. **[Прогнозирование потребительских предпочтений на промышленные товары](https://oceanai.readthedocs.io/ru/latest/user_guide/notebooks/Pipeline_practical_task_2.html)**.
 3. **[Формирование эффективных рабочих коллективов](https://oceanai.readthedocs.io/ru/latest/user_guide/notebooks/Pipeline_practical_task_3.html)**.
 
-**[OCEANAI](https://oceanai.readthedocs.io/ru/latest/)** использует самые актуальные библиотеки с открытым исходным кодом для обработки аудио-, видео- и текстовой информации: **[librosa](https://librosa.org/)**,
+**[OCEAN-AI](https://oceanai.readthedocs.io/ru/latest/)** использует самые актуальные библиотеки с открытым исходным кодом для обработки аудио-, видео- и текстовой информации: **[librosa](https://librosa.org/)**,
 **[openSMILE](https://audeering.github.io/opensmile-python/)**,
 **[openCV](https://pypi.org/project/opencv-python/)**,
 **[mediapipe](https://google.github.io/mediapipe/getting_started/python)**,
 **[transformers](https://pypi.org/project/transformers)**.
 
-**[OCEANAI](https://github.com/DmitryRyumin/oceanai)** написана на языке программирования
+**[OCEAN-AI](https://github.com/DmitryRyumin/oceanai)** написана на языке программирования
 **[python](https://www.python.org/)**. Нейросетевые модели
 реализованы и обучены с использованием библиотеки с открытым исходным кодом
 **[TensorFlow](https://www.tensorflow.org/)**.
@@ -80,7 +80,7 @@
 
 ## Исследовательские данные
 
-Библиотека **[OCEANAI](https://oceanai.readthedocs.io/ru/latest/)** была апробирована на двух корпусах:
+Библиотека **[OCEAN-AI](https://oceanai.readthedocs.io/ru/latest/)** была апробирована на двух корпусах:
 
 1. Общедоступном и крупномаштабном корпусе **[First Empressions V2](https://chalearnlap.cvc.uab.cat/dataset/24/description/)**.
 2. На первом общедоступном рускоязычном мультимодальном корпусе для оценки персональных качеств - **[Multimodal Personality Traits Assessment (MuPTA) Corpus](https://hci.nw.ru/ru/pages/mupta-corpus)**.
