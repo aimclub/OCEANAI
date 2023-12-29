@@ -34,13 +34,12 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:17
 #: 603fda676abb4cd9a20180751e3290a7
-#, fuzzy
 msgid ""
 "``_b5.audio_model_hc_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения признаков / оценок на базе экспертных признаков"
 msgstr ""
 "``_b5.audio_model_hc_`` - Neural network model **tf.keras.Model** for "
-"obtaining estimates by expert features"
+"obtaining features / scores based on hand-crafted features"
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:29
 #: 0ce1523a47834ed2ac6f2f248fe193ca
@@ -69,7 +68,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:-1
 #: c0b8120a8ad64ce981894ab412fc50e4
-#, fuzzy
 msgid ""
 "_b5 = Run(\n"
 "    lang = 'ru', # Язык\n"
@@ -89,8 +87,8 @@ msgid ""
 ")"
 msgstr ""
 "_b5 = Run(\n"
-"    lang = 'en', # Language\n"
-"    color_simple = '#FFF', # Plain text color (hexadecimal code)\n"
+"    lang = 'en', # Interface language\n"
+"    color_simple = '#333', # Plain text color (hexadecimal code)\n"
 "    color_info = '#1776D2', # The color of the text containing the "
 "information (hexadecimal code)\n"
 "    color_err = '#FF0000', # Error text color (hexadecimal code)\n"
@@ -104,7 +102,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:81
 #: ce57b827712b483b84a396eaf5b3949d
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 16:37:47] OCEANAI - персональные качества личности "
 "человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
@@ -113,7 +110,7 @@ msgid ""
 "[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
 "Версия: 1.0.0a5    Лицензия: BSD License"
 msgstr ""
-"\\ **[2022-12-11 12:20:54] OCEANAI - personal traits:**\\     Authors:"
+"\\ **[2023-12-10 16:37:47] OCEANAI - personal traits:**\\     Authors:"
 "        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry Ryumin "
 "[dl_03.03.1991@mail.ru]        Alexey Karpov [karpov@iias.spb.su]    "
 "Maintainers:        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry "
@@ -156,20 +153,18 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:123
 #: c66019b3370147629c4f282e5b31564d
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 16:37:50] Формирование нейросетевой архитектуры модели "
 "для получения оценок по экспертным признакам (аудио модальность) …**"
 msgstr ""
 "\\ **[2022-12-11 12:20:55] Formation of the neural network architecture "
-"of the model for obtaining estimates by expert features (audio modality) "
+"of the model for obtaining scores by hand-crafted features (audio modality) "
 "…**"
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:133
 #: 1cb93028ed354f34a8c96f3ae103cd7d
-#, fuzzy
 msgid "— Время выполнения: 3.03 сек. —"
-msgstr "— Runtime: 0.441 sec. —"
+msgstr "— Runtime: 3.03 sec. —"
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:145
 #: 6597a0e015c549e884e6e23e96db8bb5
@@ -183,7 +178,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:-1
 #: 4ca379dd10144106a7cf20155daf37ee
-#, fuzzy
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -204,7 +198,7 @@ msgstr ""
 "_b5.path_to_save_ = './models' # Directory to save the file\n"
 "_b5.chunk_size_ = 2000000 # File download size from network in 1 step\n"
 "\n"
-"url = _b5.weights_for_big5_['audio']['hc']['sberdisk']\n"
+"url = _b5.weights_for_big5_['audio']['fi']['hc']['sberdisk']\n"
 "\n"
 "res_load_audio_model_weights_hc = _b5.load_audio_model_weights_hc(\n"
 "    url = url, # Full path to the file with weights of the neural network"
@@ -218,29 +212,26 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:178
 #: c7aa96d0fb9845708e430056dd60af61
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 16:38:05] Загрузка весов нейросетевой модели для "
 "получения оценок по экспертным признакам (аудио модальность) …**"
 msgstr ""
-"\\ **[2022-12-11 12:20:57] Downloading the weights of the neural network "
-"model to obtain estimates by expert features (audio modality) …**"
+"\\ **[2023-12-10 16:38:05] Downloading the weights of the neural network "
+"model to obtain scores by hand-crafted features (audio modality) …**"
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:189
 #: ca95cd89d6de4a578b79619aa867b65a
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 16:38:05] Загрузка файла "
 "“weights_2022-05-05_11-27-55.h5” 100.0% …**"
 msgstr ""
-"\\ **[2022-12-11 12:20:57] File download “weights_2022-05-05_11-27-55.h5”"
+"\\ **[2023-12-10 16:38:05] File download “weights_2022-05-05_11-27-55.h5”"
 " (100.0%) …**"
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:199
 #: a59f4f25c2cc480c8669e74016c0013e
-#, fuzzy
 msgid "— Время выполнения: 0.458 сек. —"
-msgstr "— Runtime: 0.441 sec. —"
+msgstr "— Runtime: 0.458 sec. —"
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_hc.ipynb:211
 #: 69d22870dd43425fa21f06ee403dfea0

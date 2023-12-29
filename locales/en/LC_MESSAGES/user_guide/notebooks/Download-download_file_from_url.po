@@ -54,7 +54,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:-1
 #: cc71e7b2caa244f89a4323c51dd5d775
-#, fuzzy
 msgid ""
 "_b5 = Run(\n"
 "    lang = 'ru', # Язык\n"
@@ -74,8 +73,8 @@ msgid ""
 ")"
 msgstr ""
 "_b5 = Run(\n"
-"    lang = 'en', # Language\n"
-"    color_simple = '#FFF', # Plain text color (hexadecimal code)\n"
+"    lang = 'en', # Interface language\n"
+"    color_simple = '#333', # Plain text color (hexadecimal code)\n"
 "    color_info = '#1776D2', # The color of the text containing the "
 "information (hexadecimal code)\n"
 "    color_err = '#FF0000', # Error text color (hexadecimal code)\n"
@@ -89,7 +88,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:77
 #: 33a0c7efa50942e185ade55d7e5a4140
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 16:49:03] OCEANAI - персональные качества личности "
 "человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
@@ -98,7 +96,7 @@ msgid ""
 "[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
 "Версия: 1.0.0a5    Лицензия: BSD License"
 msgstr ""
-"\\ **[2022-12-11 13:31:54] OCEANAI - personal traits:**\\     Authors:"
+"\\ **[2023-12-10 16:49:03] OCEANAI - personal traits:**\\     Authors:"
 "        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry Ryumin "
 "[dl_03.03.1991@mail.ru]        Alexey Karpov [karpov@iias.spb.su]    "
 "Maintainers:        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry "
@@ -153,19 +151,17 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:124
 #: c5ccac436a414491816560c5a1df841a
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 16:49:04] Загрузка файла "
 "“weights_2022-05-05_11-27-55.h5” 100.0% …**"
 msgstr ""
-"\\ **[2022-12-11 13:31:56] File download “weights_2022-05-05_11-27-55.h5”"
+"\\ **[2023-12-10 16:49:04] File download “weights_2022-05-05_11-27-55.h5”"
 " (100.0%) …**"
 
 #: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:134
 #: 3f259bfb0d974eaf81d6dce36e310461
-#, fuzzy
 msgid "— Время выполнения: 0.214 сек. —"
-msgstr "— Runtime: 0.239 sec. —"
+msgstr "— Runtime: 0.214 sec. —"
 
 #: ../../source/user_guide/notebooks/Download-download_file_from_url.ipynb:-1
 #: 7598b1b9d33a47fe91793b8d50aa130b f02a4275f5074ed5b48059bba162130c
