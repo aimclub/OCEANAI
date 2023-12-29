@@ -22,7 +22,6 @@ msgid "Команда разработчиков"
 msgstr "Development Team"
 
 #: ../../source/about.rst:4 fd5cc9cd832044dcaa58b93b652acc30
-#, fuzzy
 msgid ""
 "Библиотека ``OCEAN-AI`` разработана и поддерживается исследовательской "
 "группой из `лаборатории речевых и многомодальных интерфейсов (ЛРМИ) "
@@ -32,7 +31,7 @@ msgid ""
 "интеллект в промышленности (Университет ИТМО) <https://sai.itmo.ru/>`_ а "
 "именно:"
 msgstr ""
-"The ``OCEANAI`` library is developed and maintained by a research group "
+"The ``OCEAN-AI`` library is developed and maintained by a research group "
 "from the `Speech and Multimodal Interfaces laboratory (SMIL) "
 "<https://hci.nw.ru/en/about>`_ `St. Petersburg Federal Research Center of"
 " the Russian Academy of Sciences (St. Petersburg FRC RAS) "

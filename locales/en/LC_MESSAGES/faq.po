@@ -22,13 +22,12 @@ msgid "Ответы на часто задаваемые вопросы"
 msgstr "FAQ"
 
 #: ../../source/faq.rst:4 b13e2b6af3594d90a08d89a94a74d418
-#, fuzzy
 msgid "Это список часто задаваемых вопросов о `OCEAN-AI` и ответов на них."
-msgstr "This is a list of FAQ about `OCEANAI` and the answers to them."
+msgstr "This is a list of FAQ about `OCEAN-AI` and the answers to them."
 
 #: ../../source/faq.rst:-1 cce10186d3474ef69321c228017ebfea
 msgid "`OCEAN-AI` это?"
-msgstr ""
+msgstr "What is `OCEAN-AI`?"
 
 #: ../../source/faq.rst:8 c11273c74fbf46b795ed1e5ced48a5cd
 msgid ""
@@ -46,9 +45,8 @@ msgstr ""
 "Non-Neuroticism.*"
 
 #: ../../source/faq.rst:-1 893b8fe57f344bc8b096484beed2d21e
-#, fuzzy
 msgid "Почему библиотека называется `OCEAN-AI`?"
-msgstr "Why it is named `OCEANAI`?"
+msgstr "Why it is named `OCEAN-AI`?"
 
 #: ../../source/faq.rst:12 bf6235cb61b94db984afa3ed751d2842
 msgid ""
@@ -61,16 +59,12 @@ msgstr ""
 "is Artificial Intelligence abbreviation.*"
 
 #: ../../source/faq.rst:-1 0231f9fc9dab4aecba7a184e43e7d881
-#, fuzzy
 msgid "Можно ли установить `OCEAN-AI` с помошью pip?"
-msgstr "Can I install `OCEANAI` using pip?"
+msgstr "Can I install `OCEAN-AI` using pip?"
 
 #: ../../source/faq.rst:16 5ccb8fadae574bd189585ab026c7a2ed
 msgid ""
 "*Да, для этого нужно перейти по* `ссылке "
 "<https://pypi.org/project/oceanai>`_."
 msgstr "*Yes, follow the* `link <https://pypi.org/project/oceanai>`_."
-
-#~ msgid "`OCEANAI` это?"
-#~ msgstr "What is `OCEANAI`?"
 
