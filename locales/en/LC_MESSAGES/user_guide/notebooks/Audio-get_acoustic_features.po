@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
 "POT-Creation-Date: 2023-12-17 14:43+0300\n"
-"PO-Revision-Date: 2022-12-11 13:17+0300\n"
+"PO-Revision-Date: 2022-12-11 12:55+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
 "Language-Team: English <ryumina_ev@mail.ru>\n"
@@ -54,7 +54,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:-1
 #: f1dfc969c6fa4b26bbdf4f1343ac545e
-#, fuzzy
 msgid ""
 "_b5 = Run(\n"
 "    lang = 'ru', # Язык\n"
@@ -74,8 +73,8 @@ msgid ""
 ")"
 msgstr ""
 "_b5 = Run(\n"
-"    lang = 'en', # Language\n"
-"    color_simple = '#FFF', # Plain text color (hexadecimal code)\n"
+"    lang = 'en', # Interface language\n"
+"    color_simple = '#333', # Plain text color (hexadecimal code)\n"
 "    color_info = '#1776D2', # The color of the text containing the "
 "information (hexadecimal code)\n"
 "    color_err = '#FF0000', # Error text color (hexadecimal code)\n"
@@ -89,7 +88,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:77
 #: 87ca1e481a1f4819ad0d25d982f349e2
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 16:35:36] OCEANAI - персональные качества личности "
 "человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
@@ -98,7 +96,7 @@ msgid ""
 "[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
 "Версия: 1.0.0a5    Лицензия: BSD License"
 msgstr ""
-"\\ **[2022-12-11 13:16:18] OCEANAI - personal traits:**\\     Authors:"
+"\\ **[2023-12-10 16:35:36] OCEANAI - personality traits:**\\     Authors:"
 "        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry Ryumin "
 "[dl_03.03.1991@mail.ru]        Alexey Karpov [karpov@iias.spb.su]    "
 "Maintainers:        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry "
@@ -122,7 +120,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:-1
 #: b196a31a2120474984b3d5ac5a833dfb
-#, fuzzy
 msgid ""
 "# Настройки ядра\n"
 "sr = 44100 # Частота дискретизации\n"
@@ -142,9 +139,7 @@ msgstr ""
 "# Core settings\n"
 "sr = 44100 # Sampling frequency\n"
 "# Path to the audio or video file\n"
-"path = "
-"'/Users/dl/GitHub/OCEANAI.private/oceanai/dataset/test80_01/glgfB3vFewc.004.mp4'"
-"\n"
+"path = 'video_FI/test/_plk5k7PBEg.003.mp4'\n"
 "\n"
 "hc_features, melspectrogram_features = _b5.get_acoustic_features(\n"
 "    path = path, # Path to the audio or video file\n"
@@ -158,17 +153,15 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:127
 #: 2936888e11424915b70ff2e1397f970e
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 16:36:06] Извлечение признаков (экспертных и лог "
 "мел-спектрограмм) из акустического сигнала …**"
 msgstr ""
-"\\ **[2022-12-11 13:16:52] Extraction of features (expert and mel-"
+"\\ **[2023-12-10 16:36:06] Extraction of features (hand-crafted and mel-"
 "spectrograms) from an acoustic signal …**"
 
 #: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:138
 #: 54ce9147de87414ab8baffd293ea5f6b
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 16:36:11] Статистика извлеченных признаков из "
 "акустического сигнала:**\\     Общее количество сегментов с:        1. "
@@ -177,14 +170,13 @@ msgid ""
 "Размерность тензора с лог мел-спектрограммами одного сегмента: 224 ✕ 224 "
 "✕ 3"
 msgstr ""
-"\\ **[2022-12-11 13:16:55] Statistics of the features extracted from the "
-"acoustic signal:**\\     Total number of segments with:        1. expert "
+"\\ **[2023-12-10 16:36:11] Statistics of the features extracted from the "
+"acoustic signal:**\\     Total number of segments with:        1. hand-crafted "
 "features: 12        2. mel-spectrogram log: 12    Dimension of the matrix"
-" of expert features of one segment: 196 ✕ 25    Dimension of the tensor "
+" of hand-crafted features of one segment: 196 ✕ 25    Dimension of the tensor "
 "with log mel-spectrograms of one segment: 224 ✕ 224 ✕ 3"
 
 #: ../../source/user_guide/notebooks/Audio-get_acoustic_features.ipynb:148
 #: b4ee2fb7b0634619943d33fdd3c41aad
-#, fuzzy
 msgid "— Время выполнения: 5.292 сек. —"
-msgstr "— Runtime: 2.161 sec. —"
+msgstr "— Runtime: 5.292 sec. —"

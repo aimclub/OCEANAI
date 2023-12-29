@@ -64,7 +64,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
 #: c817c7ae039442a88f7af56274e911eb
-#, fuzzy
 msgid ""
 "_b5 = Run(\n"
 "    lang = 'ru', # Язык\n"
@@ -84,8 +83,8 @@ msgid ""
 ")"
 msgstr ""
 "_b5 = Run(\n"
-"    lang = 'en', # Language\n"
-"    color_simple = '#FFF', # Plain text color (hexadecimal code)\n"
+"    lang = 'en', # Interface language\n"
+"    color_simple = '#333', # Plain text color (hexadecimal code)\n"
 "    color_info = '#1776D2', # The color of the text containing the "
 "information (hexadecimal code)\n"
 "    color_err = '#FF0000', # Error text color (hexadecimal code)\n"
@@ -99,7 +98,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:81
 #: e79af1da1fdd4e9b82b2cad8f14a9329
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 16:54:20] OCEANAI - персональные качества личности "
 "человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
@@ -108,7 +106,7 @@ msgid ""
 "[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
 "Версия: 1.0.0a16    Лицензия: BSD License"
 msgstr ""
-"\\ **[2022-12-11 13:29:26] OCEANAI - personal traits:**\\     Authors:"
+"\\ **[2023-12-14 16:54:20] OCEANAI - personal traits:**\\     Authors:"
 "        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry Ryumin "
 "[dl_03.03.1991@mail.ru]        Alexey Karpov [karpov@iias.spb.su]    "
 "Maintainers:        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry "
@@ -356,9 +354,8 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:342
 #: b452311083bc49c2bd3f280815dbc8e7
-#, fuzzy
 msgid "— Время выполнения: 0.005 сек. —"
-msgstr "— Runtime: 0.007 sec. —"
+msgstr "— Runtime: 0.005 sec. —"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:354
 #: b1db3b8dd87545be827dd22a4a44a96a
@@ -367,7 +364,7 @@ msgid ""
 "экспертным признакам"
 msgstr ""
 "Formation of the neural network architecture of the model for obtaining "
-"estimates by expert features"
+"scores by hand-crafted features"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:356
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:406
@@ -377,7 +374,7 @@ msgid ""
 "получения оценок по экспертным признакам"
 msgstr ""
 "``_b5.audio_model_hc_`` - Neural network model **tf.keras.Model** for "
-"obtaining estimates by expert features"
+"obtaining scores by hand-crafted features"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
 #: e02ead88310a43a2bf0ae3b09724f3a7
@@ -405,20 +402,18 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:382
 #: 2a4554edb8954d7e88cb93b9ace74692
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 16:54:20] Формирование нейросетевой архитектуры модели "
 "для получения оценок по экспертным признакам (аудио модальность) …**"
 msgstr ""
-"\\ **[2022-12-11 13:29:28] Formation of the neural network architecture "
-"of the model for obtaining estimates by expert features (audio modality) "
+"\\ **[2023-12-14 16:54:20] Formation of the neural network architecture "
+"of the model for obtaining scores by hand-crafted features (audio modality) "
 "…**"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:392
 #: 130cb8f8f41a47fb821f9f1db21bd20d
-#, fuzzy
 msgid "— Время выполнения: 0.335 сек. —"
-msgstr "— Runtime: 0.349 sec. —"
+msgstr "— Runtime: 0.335 sec. —"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:404
 #: eba934a234fc4021b9d3d945a84c0bfe
@@ -426,8 +421,8 @@ msgid ""
 "Загрузка весов нейросетевой модели для получения оценок по экспертным "
 "признакам"
 msgstr ""
-"Downloading the weights of the neural network model to obtain estimates "
-"by expert features"
+"Downloading the weights of the neural network model to obtain scores "
+"by hand-crafted features"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
 #: 6d4196176c704b8fa6edcbb67d321dad
@@ -436,7 +431,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
 #: b443d4dbeb2442a29c21740457a2185e
-#, fuzzy
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -457,7 +451,7 @@ msgstr ""
 "_b5.path_to_save_ = './models' # Directory to save the file\n"
 "_b5.chunk_size_ = 2000000 # File download size from network in 1 step\n"
 "\n"
-"url = _b5.weights_for_big5_['audio']['hc']['sberdisk']\n"
+"url = _b5.weights_for_big5_['audio']['fi']['hc']['sberdisk']\n"
 "\n"
 "res_load_audio_model_weights_hc = _b5.load_audio_model_weights_hc(\n"
 "    url = url, # Full path to the file with weights of the neural network"
@@ -471,29 +465,26 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:439
 #: 132dc433a5b14299bd3026089cb59b64
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 16:54:21] Загрузка весов нейросетевой модели для "
 "получения оценок по экспертным признакам (аудио модальность) …**"
 msgstr ""
-"\\ **[2022-12-11 13:29:29] Downloading the weights of the neural network "
-"model to obtain estimates by expert features (audio modality) …**"
+"\\ **[2023-12-14 16:54:21] Downloading the weights of the neural network "
+"model to obtain scores by hand-crafted features (audio modality) …**"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:450
 #: dfa895141be64b99900120e32ba09e7e
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 16:54:21] Загрузка файла "
 "“weights_2022-05-05_11-27-55.h5” 100.0% …**"
 msgstr ""
-"\\ **[2022-12-11 13:29:29] File download “weights_2022-05-05_11-27-55.h5”"
+"\\ **[2023-12-14 16:54:21] File download “weights_2022-05-05_11-27-55.h5”"
 " (100.0%) …**"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:460
 #: 0e84a51ef8294f29aa95437426557429
-#, fuzzy
 msgid "— Время выполнения: 0.323 сек. —"
-msgstr "— Runtime: 0.321 sec. —"
+msgstr "— Runtime: 0.323 sec. —"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:472
 #: c74ac6c4b48349f7a95c2eddfb0121eb
@@ -502,7 +493,7 @@ msgid ""
 "нейросетевым признакам"
 msgstr ""
 "Formation of the neural network architecture of the model for obtaining "
-"estimates by neural network features"
+"scores by deep features"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:474
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:524
@@ -512,7 +503,7 @@ msgid ""
 "получения оценок по нейросетевым признакам"
 msgstr ""
 "``_b5.audio_model_nn_`` - Neural network model **tf.keras.Model** for "
-"obtaining estimates by neural network features"
+"obtaining scores by deep features"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
 #: f3fafd38e205404093d08ba61fe28318
@@ -540,19 +531,17 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:500
 #: 3eb771ecd8e84466a0cdd106c8a90622
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 16:54:21] Формирование нейросетевой архитектуры для "
 "получения оценок по нейросетевым признакам (аудио модальность) …**"
 msgstr ""
-"\\ **[2022-12-11 13:29:30] Formation of a neural network architecture for"
-" obtaining estimates by neural network features (audio modality) …**"
+"\\ **[2023-12-14 16:54:21] Formation of a neural network architecture for"
+" obtaining scores by deep features (audio modality) …**"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:510
 #: fe14c37561df468d82176d8eb09f5142
-#, fuzzy
 msgid "— Время выполнения: 0.212 сек. —"
-msgstr "— Runtime: 0.321 sec. —"
+msgstr "— Runtime: 0.212 sec. —"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:522
 #: 79972ccf38bd45ef8daca9f79af6097f
@@ -560,8 +549,8 @@ msgid ""
 "Загрузка весов нейросетевой модели для получения оценок по нейросетевым "
 "признакам"
 msgstr ""
-"Downloading the weights of the neural network model to obtain estimates "
-"for neural network features"
+"Downloading the weights of the neural network model to obtain scores "
+"by deep features"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
 #: 3fdfd1612e104c7d8c5bbdd08859c51e
@@ -570,7 +559,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
 #: 111ee5ad9fe04b228588343f5784f8aa
-#, fuzzy
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -591,7 +579,7 @@ msgstr ""
 "_b5.path_to_save_ = './models' # Directory to save the file\n"
 "_b5.chunk_size_ = 2000000 # File download size from network in 1 step\n"
 "\n"
-"url = _b5.weights_for_big5_['audio']['nn']['sberdisk']\n"
+"url = _b5.weights_for_big5_['audio']['fi']['nn']['sberdisk']\n"
 "\n"
 "res_load_audio_model_weights_nn = _b5.load_audio_model_weights_nn(\n"
 "    url = url, # Full path to the file with weights of the neural network"
@@ -605,30 +593,27 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:557
 #: 4a389065ecee4472a855e5593748ee0f
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 16:54:21] Загрузка весов нейросетевой модели для "
 "получения оценок по нейросетевым признакам (аудио модальность) …**"
 msgstr ""
-"\\ **[2022-12-11 13:29:30] Downloading the weights of the neural network "
-"model to obtain estimates for neural network features (audio modality) "
+"\\ **[2023-12-14 16:54:21] Downloading the weights of the neural network "
+"model to obtain scores for deep features (audio modality) "
 "…**"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:568
 #: ce1bab41d9b546938fdf3867a036660a
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 16:54:22] Загрузка файла "
 "“weights_2022-05-03_07-46-14.h5”**"
 msgstr ""
-"\\ **[2022-12-11 13:29:31] File download "
+"\\ **[2023-12-14 16:54:22] File download "
 "“weights_2022-05-03_07-46-14.h5”**"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:578
 #: be63a19b2ef74914bffc4df3930180e8
-#, fuzzy
 msgid "— Время выполнения: 0.416 сек. —"
-msgstr "— Runtime: 0.241 sec. —"
+msgstr "— Runtime: 0.416 sec. —"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:590
 #: b2605cd9b050402fa701141dd2d86506
@@ -675,21 +660,19 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:618
 #: 55ad528cb0da41fcb2fd1b4333ba667f
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 16:54:22] Формирование нейросетевых архитектур моделей "
 "для получения результатов оценки персональных качеств (аудио модальность)"
 " …**"
 msgstr ""
 "\\ **[2022-12-11 13:29:31] Formation of neural network architectures of "
-"models for obtaining the results of assessing personal traits (audio "
+"models for obtaining personality traits scores (audio "
 "modality) …**"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:628
 #: 23fe5df48ef94b8a979049a3057ebb61
-#, fuzzy
 msgid "— Время выполнения: 0.067 сек. —"
-msgstr "— Runtime: 0.086 sec. —"
+msgstr "— Runtime: 0.067 sec. —"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:640
 #: 5bd2a3c5f1d74b0b8c1a1d54913885b3
@@ -697,8 +680,8 @@ msgid ""
 "Загрузка весов нейросетевых моделей для получения результатов оценки "
 "персональных качеств"
 msgstr ""
-"Downloading the weights of neural network models to obtain the results of"
-" assessing personal traits"
+"Downloading the weights of neural network models to obtain the"
+" personality traits scores"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
 #: afedd9f0f80840198a647802ecb813b3
@@ -707,7 +690,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
 #: e7e2c85ac1994728ab705e917dee2fd3
-#, fuzzy
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -745,15 +727,15 @@ msgstr ""
 "_b5.chunk_size_ = 2000000 # File download size from network in 1 step\n"
 "\n"
 "url_openness = "
-"_b5.weights_for_big5_['audio']['b5']['openness']['sberdisk']\n"
+"_b5.weights_for_big5_['audio']['fi']['b5']['openness']['sberdisk']\n"
 "url_conscientiousness = "
-"_b5.weights_for_big5_['audio']['b5']['conscientiousness']['sberdisk']\n"
+"_b5.weights_for_big5_['audio']['fi']['b5']['conscientiousness']['sberdisk']\n"
 "url_extraversion = "
-"_b5.weights_for_big5_['audio']['b5']['extraversion']['sberdisk']\n"
+"_b5.weights_for_big5_['audio']['fi']['b5']['extraversion']['sberdisk']\n"
 "url_agreeableness = "
-"_b5.weights_for_big5_['audio']['b5']['agreeableness']['sberdisk']\n"
-"url_neuroticism = "
-"_b5.weights_for_big5_['audio']['b5']['neuroticism']['sberdisk']\n"
+"_b5.weights_for_big5_['audio']['fi']['b5']['agreeableness']['sberdisk']\n"
+"url_non_neuroticism = "
+"_b5.weights_for_big5_['audio']['fi']['b5']['non_neuroticism']['sberdisk']\n"
 "\n"
 "res_load_audio_models_weights_b5 = "
 "_b5_audio.load_audio_models_weights_b5(\n"
@@ -761,7 +743,7 @@ msgstr ""
 "    url_conscientiousness = url_conscientiousness, # Conscientiousness\n"
 "    url_extraversion = url_extraversion, # Extraversion\n"
 "    url_agreeableness = url_agreeableness, # Agreeableness\n"
-"    url_neuroticism = url_neuroticism, # Neuroticism\n"
+"    url_non_neuroticism = url_non_neuroticism, # Non-Neuroticism\n"
 "    force_reload = True, # Forced download of a file with weights of a "
 "neural network model from the network\n"
 "    out = True, # Display\n"
@@ -771,75 +753,68 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:683
 #: 05f53635df39441884c09640bff2d568
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 16:54:22] Загрузка весов нейросетевых моделей для "
 "получения результатов оценки персональных качеств (аудио модальность) …**"
 msgstr ""
-"\\ **[2022-12-11 13:29:32] Downloading the weights of neural network "
-"models to obtain the results of assessing personal traits (audio "
+"\\ **[2023-12-14 16:54:22] Downloading the weights of neural network "
+"models to obtain the personality traits scores (audio "
 "modality) …**"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:694
 #: f8fcca31157849658843f03f3f88e4b8
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 16:54:22] Загрузка файла "
 "“weights_2022-06-15_16-16-20.h5”** Открытость опыту"
 msgstr ""
-"\\ **[2022-12-11 13:29:33] File download “weights_2022-06-15_16-16-20.h5”"
+"\\ **[2023-12-14 16:54:22] File download “weights_2022-06-15_16-16-20.h5”"
 " (100.0%) …** Openness"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:705
 #: 22d0a973ef9c4f64825fe5603a84ac3a
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 16:54:22] Загрузка файла "
 "“weights_2022-06-15_16-21-57.h5”** Добросовестность"
 msgstr ""
-"\\ **[2022-12-11 13:29:33] File download “weights_2022-06-15_16-21-57.h5”"
+"\\ **[2023-12-14 16:54:22] File download “weights_2022-06-15_16-21-57.h5”"
 " (100.0%) …** Conscientiousness"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:716
 #: c4d74274bf2943fbba15f9be1529047d
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 16:54:22] Загрузка файла "
 "“weights_2022-06-15_16-26-41.h5”** Экстраверсия"
 msgstr ""
-"\\ **[2022-12-11 13:29:33] File download “weights_2022-06-15_16-26-41.h5”"
+"\\ **[2023-12-14 16:54:22] File download “weights_2022-06-15_16-26-41.h5”"
 " (100.0%) …** Extraversion"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:727
 #: fbb171b7a147442f9c3521e6904f1134
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 16:54:22] Загрузка файла "
 "“weights_2022-06-15_16-32-51.h5”** Доброжелательность"
 msgstr ""
-"\\ **[2022-12-11 13:29:33] File download “weights_2022-06-15_16-32-51.h5”"
+"\\ **[2023-12-14 16:54:22] File download “weights_2022-06-15_16-32-51.h5”"
 " (100.0%) …** Agreeableness"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:738
 #: a21139c9adcd48adb2f8b8a27650bb89
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 16:54:22] Загрузка файла "
 "“weights_2022-06-15_16-37-46.h5”** Эмоциональная стабильность"
 msgstr ""
-"\\ **[2022-12-11 13:29:33] File download “weights_2022-06-15_16-37-46.h5”"
-" (100.0%) …** Neuroticism"
+"\\ **[2023-12-14 16:54:22] File download “weights_2022-06-15_16-37-46.h5”"
+" (100.0%) …** Non-Neuroticism"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:748
 #: 779fef3207eb4bcb84c0490f3eddfa4d
-#, fuzzy
 msgid "— Время выполнения: 0.807 сек. —"
-msgstr "— Runtime: 0.007 sec. —"
+msgstr "— Runtime: 0.807 sec. —"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:760
 #: 7d5ac5b866e34bf39debef2a9318b846
 msgid "Получение прогнозов (аудио модальность)"
-msgstr "Getting predictions (audio modality)"
+msgstr "Getting scores (audio modality)"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:762
 #: 113b6d5662344e839713121b048b0d85
@@ -858,7 +833,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
 #: 91ea7e0b52b943db9687422e5b21a9b1
-#, fuzzy
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_dataset_ = 'E:/Databases/FirstImpressionsV2/test' # "
@@ -890,19 +864,18 @@ msgid ""
 ")"
 msgstr ""
 "# Core settings\n"
-"_b5.path_to_dataset_ = "
-"'/Users/dl/GitHub/OCEANAI.private/oceanai/dataset/First_Impression' # "
+"_b5.path_to_dataset_ = 'E:/Databases/FirstImpressionsV2/test' # "
 "Dataset directory\n"
 "# Directories not included in the set\n"
 "_b5.ignore_dirs_ = []\n"
 "# Key names for DataFrame dataset\n"
 "_b5.keys_dataset_ = ['Path', 'Openness', 'Conscientiousness', "
-"'Extraversion', 'Agreeableness', 'Neuroticism']\n"
+"'Extraversion', 'Agreeableness', 'Non-Neuroticism']\n"
 "_b5.ext_ = ['.mp4'] # Search file extensions\n"
 "_b5.path_to_logs_ = './logs' # Directory for saving LOG files\n"
 "\n"
-"# Full path to the file with correct predictions for accuracy\n"
-"url_accuracy = _b5.true_traits_['sberdisk']\n"
+"# Full path to the file containing the ground truth scores for the accuracy calculation\n"
+"url_accuracy = _b5.true_traits_['fi']['sberdisk']\n"
 "\n"
 "res_get_audio_union_predictions = _b5.get_audio_union_predictions(\n"
 "    depth = 2,         # Hierarchy depth for receiving audio and video "
@@ -921,12 +894,11 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:808
 #: 5de31ee6292949ac946a9d9022f034a9
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 17:59:22] Получение прогнозов и вычисление точности "
 "(аудио модальность) …**"
 msgstr ""
-"\\ **[2022-12-11 16:38:24] Getting predictions and computing accuracy "
+"\\ **[2023-12-14 17:59:22] Getting scores and accuracy calculation "
 "(audio modality) …**"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:810
@@ -936,9 +908,8 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:814
 #: 28bcb208c9744a449b3c77d8298ac4d3
-#, fuzzy
 msgid "2000 из 2000 (100.0%) … test80_25_Q4wOgixh7E.004.mp4 …"
-msgstr "2000 from 2000 (100.0%) … test/test80_04/yw-2AGeAjFc.000.mp4 …"
+msgstr "2000 from 2000 (100.0%) … test80_25_Q4wOgixh7E.004.mp4 …"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:832
 #: 698886866c9a458abbba903a992d04e2
@@ -1531,11 +1502,10 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:1367
 #: d8fb91af9ca6469792b7648784671670
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 17:59:22] Точность по отдельным персональным качествам "
 "личности человека …**"
-msgstr "\\ **[2022-12-11 16:38:24] Accuracy on personal traits …**"
+msgstr "\\ **[2023-12-14 17:59:22] Trait-wise accuracy …**"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:1381
 #: b712a5d5e5f448e59f76d5c234f089a4
@@ -1648,12 +1618,11 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:1496
 #: 451d4c2af2a44158a35efd2e99d33125
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 17:59:22] Средняя средних абсолютных ошибок: 0.0926, "
 "средняя точность: 0.9074 …**"
 msgstr ""
-"\\ **[2022-12-11 16:38:24] Mean absolute error: 0.0927, Accuracy: 0.9073 "
+"\\ **[[2023-12-14 17:59:22] Mean absolute error: 0.0927, Accuracy: 0.9073 "
 "…**"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:1507
@@ -1663,9 +1632,8 @@ msgstr "Log files saved successfully …"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:1517
 #: 3e1e3fc499c749ba9c63fae592a84a87
-#, fuzzy
 msgid "— Время выполнения: 3899.26 сек. —"
-msgstr "— Runtime: 1.112 sec. —"
+msgstr "— Runtime: 3899.26 sec. —"
 
 #~ msgid "|1f8a6eb05f5041dcbdc518b068968a49|"
 #~ msgstr ""
