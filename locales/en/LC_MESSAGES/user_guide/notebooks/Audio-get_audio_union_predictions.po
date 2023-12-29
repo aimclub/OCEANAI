@@ -106,7 +106,7 @@ msgid ""
 "[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
 "Версия: 1.0.0a16    Лицензия: BSD License"
 msgstr ""
-"\\ **[2023-12-14 16:54:20] OCEANAI - personal traits:**\\     Authors:"
+"\\ **[2023-12-14 16:54:20] OCEANAI - personality traits:**\\     Authors:"
 "        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry Ryumin "
 "[dl_03.03.1991@mail.ru]        Alexey Karpov [karpov@iias.spb.su]    "
 "Maintainers:        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry "
@@ -621,7 +621,7 @@ msgid ""
 "оценки персональных качеств"
 msgstr ""
 "Formation of neural network architectures of models for obtaining the "
-"results of assessing personal traits"
+"personality traits scores"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:592
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:642
@@ -631,7 +631,7 @@ msgid ""
 "получения результатов оценки персональных качеств"
 msgstr ""
 "``_b5.audio_models_b5_`` - Neural network models **tf.keras.Model** for "
-"obtaining the results of assessing personal traits"
+"obtaining the personality traits scores"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
 #: fd945b20683a4cdbb821801698f7067c

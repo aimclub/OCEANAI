@@ -54,7 +54,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
 #: a5e12b9876fa470ebafefddeb46f0742
-#, fuzzy
 msgid ""
 "_b5 = Run(\n"
 "    lang = 'ru', # Язык\n"
@@ -74,8 +73,8 @@ msgid ""
 ")"
 msgstr ""
 "_b5 = Run(\n"
-"    lang = 'en', # Language\n"
-"    color_simple = '#FFF', # Plain text color (hexadecimal code)\n"
+"    lang = 'en', # Inference language\n"
+"    color_simple = '#333', # Plain text color (hexadecimal code)\n"
 "    color_info = '#1776D2', # The color of the text containing the "
 "information (hexadecimal code)\n"
 "    color_err = '#FF0000', # Error text color (hexadecimal code)\n"
@@ -89,7 +88,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:77
 #: 77e09b38f34d4fa6b86e622962951e6a
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 12:36:03] OCEANAI - персональные качества личности "
 "человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
@@ -98,11 +96,11 @@ msgid ""
 "[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
 "Версия: 1.0.0a5    Лицензия: BSD License"
 msgstr ""
-"\\ **[2022-12-11 15:02:02] OCEANAI - personal traits:**\\     Authors:"
+"\\ **[2023-12-10 12:36:03] OCEANAI - personality traits:**\\     Authors:"
 "        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry Ryumin "
 "[dl_03.03.1991@mail.ru]        Alexey Karpov [karpov@iias.spb.su]    "
 "Maintainers:        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry "
-"Ryumin [dl_03.03.1991@mail.ru]    Version: 1.0.0a2    License: BSD "
+"Ryumin [dl_03.03.1991@mail.ru]    Version: 1.0.0a5    License: BSD "
 "License"
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:79
@@ -141,19 +139,17 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:119
 #: 81facf78d3c847009c00e66ee4868de2
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 12:36:12] Формирование нейросетевой архитектуры для "
 "получения нейросетевых признаков (видео модальность) …**"
 msgstr ""
-"\\ **[2022-12-11 15:02:13] Formation of neural network architecture for "
-"obtaining neural network features (video modality) …**"
+"\\ **[2023-12-10 12:36:12] Formation of neural network architecture for "
+"obtaining deep features (video modality) …**"
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:129
 #: 79d65319fd3c46b9b9c9566d46737103
-#, fuzzy
 msgid "— Время выполнения: 1.36 сек. —"
-msgstr "— Runtime: 1.652 sec. —"
+msgstr "— Runtime: 1.36 sec. —"
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:141
 #: 66442de5a9354dc89660c1dd0d79fac1
@@ -167,7 +163,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
 #: e83e611749aa4918b6c3a23419e580ea
-#, fuzzy
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -189,7 +184,7 @@ msgstr ""
 "_b5.path_to_save_ = './models' # Directory to save the file\n"
 "_b5.chunk_size_ = 2000000 # File download size from network in 1 step\n"
 "\n"
-"url = _b5.weights_for_big5_['video']['fe']['sberdisk']\n"
+"url = _b5.weights_for_big5_['video']['fi']['fe']['sberdisk']\n"
 "\n"
 "res_load_video_model_weights_deep_fe = "
 "_b5.load_video_model_weights_deep_fe(\n"
@@ -204,35 +199,31 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:174
 #: 10ce8699ccdf4fd88241257784cec63a
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 12:36:22] Загрузка весов нейросетевой модели для "
 "получения нейросетевых признаков (видео модальность) …**"
 msgstr ""
-"\\ **[2022-12-11 15:02:35] Downloading weights of a neural network model "
-"to obtain neural network features (video modality) …**"
+"\\ **[2023-12-10 12:36:22] Downloading weights of a neural network model "
+"to obtain deep features (video modality) …**"
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:185
 #: dd4a0c8ccd3c4dff82cb5b9a8e61b927
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 12:36:26] Загрузка файла "
 "“weights_2022-11-01_12-27-07.h5” 100.0% …**"
 msgstr ""
-"\\ **[2022-12-11 15:02:41] File download “weights_2022-11-01_12-27-07.h5”"
+"\\ **[2023-12-10 12:36:26] File download “weights_2022-11-01_12-27-07.h5”"
 " (100.0%) …**"
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:195
 #: 0ad913757a31490da73491459de122ad
-#, fuzzy
 msgid "— Время выполнения: 4.74 сек. —"
-msgstr "— Runtime: 6.227 sec. —"
+msgstr "— Runtime: 4.74 sec. —"
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:207
 #: 39fad5be6a28461eb579baf85d27278b
-#, fuzzy
 msgid "Процесс извлечения визуальных признаков (``FI V2``)"
-msgstr "Process of extracting visual features"
+msgstr "Process of extracting visual features (``FI V2``)"
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
 #: 4006e9d30bfa45698cf9365c1cac615c
@@ -241,7 +232,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
 #: f7c1275fe33449e9816767e3212ff803
-#, fuzzy
 msgid ""
 "# Настройки ядра\n"
 "# Путь к видеофайлу\n"
@@ -260,15 +250,15 @@ msgid ""
 msgstr ""
 "# Core settings\n"
 "# Path to video file\n"
-"path = "
-"'/Users/dl/GitHub/OCEANAI.private/oceanai/dataset/test80_01/glgfB3vFewc.004.mp4'"
-"\n"
+"path = 'video_FI/test/_plk5k7PBEg.003.mp4'\n"
 "\n"
 "hc_features, nn_features = _b5.get_visual_features(\n"
 "    path = path, # Path to video file\n"
 "    reduction_fps = 5, # Frame rate reduction\n"
 "    window = 10, # Signal segment window size (in frames)\n"
 "    step = 5, # Signal segment window shift step (frames)\n"
+"    lang = 'en', # Language selection for models trained on First Impressions V2"
+"'en' and models trained on for MuPTA 'ru'\n"
 "    out = True, # Display\n"
 "    runtime = True, # Runtime count\n"
 "    run = True # Run blocking\n"
@@ -276,17 +266,15 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:241
 #: 9f9d46a915f0463eb78d168823ab493e
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 12:37:26] Извлечение признаков (экспертных и "
 "нейросетевых) из визуального сигнала …**"
 msgstr ""
-"\\ **[2022-12-11 15:02:57] Extraction of features (expert and neural "
-"network) from a visual signal …**"
+"\\ **[2023-12-10 12:37:26] Extraction of features (hand-crafted and "
+"deep) from a visual signal …**"
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:252
 #: eac624daea2d46609c19149722ae57cd
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 12:37:30] Статистика извлеченных признаков из "
 "визуального сигнала:**\\     Общее количество сегментов с:        1. "
@@ -295,24 +283,22 @@ msgid ""
 "Размерность матрицы с нейросетевыми признаками одного сегмента: 10 ✕ 512"
 "     Понижение кадровой частоты: с 30 до 5"
 msgstr ""
-"\\ **[2022-12-11 15:03:03] Statistics of extracted features from visual "
-"signal:**\\     Total number of segments since:        1. expert "
-"features: 12        2. neural network features: 12    Dimension of the "
-"matrix of expert features of one segment: 10 ✕ 115    Dimension of the "
-"tensor with neural network features of one segment: 10 ✕ 512     ПFPS "
+"\\ **[2023-12-10 12:37:30]  Statistics of extracted features from visual "
+"signal:**\\     Total number of segments since:        1. hand-crafted "
+"features: 16        2. deep features: 16    Dimension of the "
+"matrix of hand-crafted features of one segment: 10 ✕ 115    Dimension of the "
+"tensor with deep features of one segment: 10 ✕ 512     ПFPS "
 "down: with 30 to 5"
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:262
 #: d915adf389ca4e0ca06147950b2dc9a2
-#, fuzzy
 msgid "— Время выполнения: 3.682 сек. —"
-msgstr "— Runtime: 1.652 sec. —"
+msgstr "— Runtime: 3.682 sec. —"
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:274
 #: 4f9acfb88d8f4420b0384cd2e3774e30
-#, fuzzy
 msgid "Процесс извлечения визуальных признаков (``MuPTA``)"
-msgstr "Process of extracting visual features"
+msgstr "Process of extracting visual features (``MuPTA``)"
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
 #: 53c2e7b5a0a14d8c96db85551c574417
@@ -321,7 +307,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:-1
 #: 87d7611a9f254d89ad4c250708525d19
-#, fuzzy
 msgid ""
 "# Настройки ядра\n"
 "# Путь к видеофайлу\n"
@@ -340,15 +325,15 @@ msgid ""
 msgstr ""
 "# Core settings\n"
 "# Path to video file\n"
-"path = "
-"'/Users/dl/GitHub/OCEANAI.private/oceanai/dataset/test80_01/glgfB3vFewc.004.mp4'"
-"\n"
+"path = 'video_FI/test/_plk5k7PBEg.003.mp4'\n"
 "\n"
 "hc_features, nn_features = _b5.get_visual_features(\n"
 "    path = path, # Path to video file\n"
 "    reduction_fps = 5, # Frame rate reduction\n"
 "    window = 10, # Signal segment window size (in frames)\n"
 "    step = 5, # Signal segment window shift step (frames)\n"
+"    lang = 'ru', # Language selection for models trained on First Impressions V2"
+"'en' and models trained on for MuPTA 'ru'\n"
 "    out = True, # Display\n"
 "    runtime = True, # Runtime count\n"
 "    run = True # Run blocking\n"
@@ -356,17 +341,15 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:308
 #: b553465d24fd437f9c788ce025c1c0cf
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 12:37:40] Извлечение признаков (экспертных и "
 "нейросетевых) из визуального сигнала …**"
 msgstr ""
-"\\ **[2022-12-11 15:02:57] Extraction of features (expert and neural "
-"network) from a visual signal …**"
+"\\ **[2023-12-10 12:37:40] Extraction of features (hand-crafted and "
+"deep) from a visual signal …**"
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:319
 #: 5587f8ab8d0b4f96ac7d4acf5a12ea96
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 12:37:41] Статистика извлеченных признаков из "
 "визуального сигнала:**\\     Общее количество сегментов с:        1. "
@@ -375,15 +358,14 @@ msgid ""
 "Размерность матрицы с нейросетевыми признаками одного сегмента: 10 ✕ 512"
 "     Понижение кадровой частоты: с 30 до 5"
 msgstr ""
-"\\ **[2022-12-11 15:03:03] Statistics of extracted features from visual "
-"signal:**\\     Total number of segments since:        1. expert "
-"features: 12        2. neural network features: 12    Dimension of the "
-"matrix of expert features of one segment: 10 ✕ 115    Dimension of the "
-"tensor with neural network features of one segment: 10 ✕ 512     ПFPS "
+"\\ **[2023-12-10 12:37:41] Statistics of extracted features from visual "
+"signal:**\\     Total number of segments since:        1. hand-crafted "
+"features: 16        2. deep features: 16    Dimension of the "
+"matrix of hand-crafted features of one segment: 10 ✕ 109    Dimension of the "
+"tensor with deep features of one segment: 10 ✕ 512     ПFPS "
 "down: with 30 to 5"
 
 #: ../../source/user_guide/notebooks/Video-get_visual_features.ipynb:329
 #: 15d3d4af48f948f68e92fd631d27e4f1
-#, fuzzy
 msgid "— Время выполнения: 1.37 сек. —"
-msgstr "— Runtime: 6.227 sec. —"
+msgstr "— Runtime: 1.37 sec. —"

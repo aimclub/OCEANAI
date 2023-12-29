@@ -64,7 +64,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
 #: 343a3266fb334644a8a780df53b9abb0
-#, fuzzy
 msgid ""
 "_b5 = Run(\n"
 "    lang = 'ru', # Язык\n"
@@ -84,8 +83,8 @@ msgid ""
 ")"
 msgstr ""
 "_b5 = Run(\n"
-"    lang = 'en', # Language\n"
-"    color_simple = '#FFF', # Plain text color (hexadecimal code)\n"
+"    lang = 'en', # Interface language\n"
+"    color_simple = '#333', # Plain text color (hexadecimal code)\n"
 "    color_info = '#1776D2', # The color of the text containing the "
 "information (hexadecimal code)\n"
 "    color_err = '#FF0000', # Error text color (hexadecimal code)\n"
@@ -99,7 +98,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:81
 #: 9934daf1f2d54905a2ff309166e7dc5b
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 21:05:26] OCEANAI - персональные качества личности "
 "человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
@@ -108,11 +106,11 @@ msgid ""
 "[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
 "Версия: 1.0.0a16    Лицензия: BSD License"
 msgstr ""
-"\\ **[2022-12-11 16:46:22] OCEANAI - personal traits:**\\     Authors:"
+"\\ **[2023-12-14 21:05:26] OCEANAI - personality traits:**\\     Authors:"
 "        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry Ryumin "
 "[dl_03.03.1991@mail.ru]        Alexey Karpov [karpov@iias.spb.su]    "
 "Maintainers:        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry "
-"Ryumin [dl_03.03.1991@mail.ru]    Version: 1.0.0a2    License: BSD "
+"Ryumin [dl_03.03.1991@mail.ru]    Version: 1.0.0a16    License: BSD "
 "License"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:83
@@ -356,9 +354,8 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:342
 #: 68a76f76e88d4663bcb414b02a0a6611
-#, fuzzy
 msgid "— Время выполнения: 0.005 сек. —"
-msgstr "— Runtime: 0.007 sec. —"
+msgstr "— Runtime: 0.005 sec. —"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:354
 #: c2d85ac52ddf48cda9bcb2de6b22b1dd
@@ -367,7 +364,7 @@ msgid ""
 "экспертным признакам"
 msgstr ""
 "Formation of the neural network architecture of the model for obtaining "
-"estimates by expert features"
+"scores by hand-crafted features"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:356
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:407
@@ -377,7 +374,7 @@ msgid ""
 "получения оценок по экспертным признакам"
 msgstr ""
 "``_b5.video_model_hc_`` - Neural network model **tf.keras.Model** for "
-"obtaining estimates by expert features"
+"obtaining scores by hand-crafted features"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
 #: 9876ec953e5e4d89bd94615132970406
@@ -386,7 +383,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
 #: 49d725e7b3674395856292a7a3aa9ed9
-#, fuzzy
 msgid ""
 "res_load_video_model_hc = _b5.load_video_model_hc(\n"
 "    lang = 'en',\n"
@@ -398,6 +394,8 @@ msgid ""
 ")"
 msgstr ""
 "res_load_video_model_hc = _b5.load_video_model_hc(\n"
+"    lang = 'en', # Language selection for models trained on First Impressions V2"
+"'en' and models trained on for MuPTA 'ru'\n"
 "    show_summary = False, # Displaying the formed neural network "
 "architecture of the model\n"
 "    out = True, # Display\n"
@@ -407,20 +405,18 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:383
 #: 7bdf144f2ad44b68835ef92508755152
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 21:05:26] Формирование нейросетевой архитектуры модели "
 "для получения оценок по экспертным признакам (видео модальность) …**"
 msgstr ""
-"\\ **[2022-12-11 16:46:22] Formation of the neural network architecture "
-"of the model for obtaining estimates by expert features (video modality) "
+"\\ **[2023-12-14 21:05:26] Formation of the neural network architecture "
+"of the model for obtaining scores by hand-crafted features (video modality) "
 "…**"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:393
 #: 211ca3b9e9274bd8b21e2e439e4bec6b
-#, fuzzy
 msgid "— Время выполнения: 0.321 сек. —"
-msgstr "— Runtime: 0.221 sec. —"
+msgstr "— Runtime: 0.321 sec. —"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:405
 #: fc11f59caffa4d20a506e96d8643a824
@@ -428,8 +424,8 @@ msgid ""
 "Загрузка весов нейросетевой модели для получения оценок по экспертным "
 "признакам"
 msgstr ""
-"Downloading the weights of the neural network model to obtain estimates "
-"by expert features"
+"Downloading the weights of the neural network model to obtain scores "
+"by hand-crafted features"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
 #: 908527c9ea1f410b99c0f47da7c80603
@@ -438,7 +434,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
 #: 441fed7d5ae84551ac3351bd38cae2aa
-#, fuzzy
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -457,9 +452,9 @@ msgid ""
 msgstr ""
 "# Core settings\n"
 "_b5.path_to_save_ = './models' # Directory to save the file\n"
-"_b5.chunk_size_ = 2000000 # File download size from network in 1 step\n"
+"_b5.chunk_size_ = 2000000 # File download size from network in one step\n"
 "\n"
-"url = _b5.weights_for_big5_['video']['hc']['sberdisk']\n"
+"url = _b5.weights_for_big5_['video']['fi']['hc']['sberdisk']\n"
 "\n"
 "res_load_video_model_weights_hc = _b5.load_video_model_weights_hc(\n"
 "    url = url, # Full path to the file with weights of the neural network"
@@ -473,29 +468,26 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:440
 #: d7b44551bc7749b79647c0da2e3b74e7
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 21:05:27] Загрузка весов нейросетевой модели для "
 "получения оценок по экспертным признакам (видео модальность) …**"
 msgstr ""
-"\\ **[2022-12-11 16:46:23] Downloading the weights of the neural network "
-"model to obtain estimates by expert features (video modality) …**"
+"\\ **[2023-12-14 21:05:27] Downloading the weights of the neural network "
+"model to obtain scores by hand-crafted features (video modality) …**"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:451
 #: ea3fcddcf8e44eb785021d02cd0c4a3a
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 21:05:27] Загрузка файла "
 "“weights_2022-08-27_18-53-35.h5” 100.0% …**"
 msgstr ""
-"\\ **[2022-12-11 16:46:23] File download “weights_2022-08-27_18-53-35.h5”"
+"\\ **[2023-12-14 21:05:27] File download “weights_2022-08-27_18-53-35.h5”"
 " (100.0%) …**"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:461
 #: deedee55ba8545259e72fb479972dcf7
-#, fuzzy
 msgid "— Время выполнения: 0.249 сек. —"
-msgstr "— Runtime: 0.299 sec. —"
+msgstr "— Runtime: 0.249 sec. —"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:473
 #: 4b5cf7a8e45a4d82bb64aa69e25b6d91
@@ -512,7 +504,7 @@ msgid ""
 " получения нейросетевых признаков"
 msgstr ""
 "``_b5.video_model_deep_fe_`` - Neural network model **tf.keras.Model** "
-"for obtaining neural network features"
+"for obtaining deep features"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
 #: adb2cad11248456196d18676fffd567d
@@ -540,19 +532,17 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:501
 #: 65f069b169d8476dad224e5f505a88b0
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 21:05:27] Формирование нейросетевой архитектуры для "
 "получения нейросетевых признаков (видео модальность) …**"
 msgstr ""
-"\\ **[2022-12-11 16:46:23] Formation of neural network architecture for "
-"obtaining neural network features (video modality) …**"
+"\\ **[2023-12-14 21:05:27] Formation of neural network architecture for "
+"obtaining deep features (video modality) …**"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:511
 #: f5f5334f56a8476fb00e8f626c756178
-#, fuzzy
 msgid "— Время выполнения: 0.823 сек. —"
-msgstr "— Runtime: 0.636 sec. —"
+msgstr "— Runtime: 0.823 sec. —"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:523
 #: 80942df310554a6e930e019f2a5670e2
@@ -568,7 +558,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
 #: 349bae1d1974458cb523e75832ffab0f
-#, fuzzy
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -588,9 +577,9 @@ msgid ""
 msgstr ""
 "# Core settings\n"
 "_b5.path_to_save_ = './models' # Directory to save the file\n"
-"_b5.chunk_size_ = 2000000 # File download size from network in 1 step\n"
+"_b5.chunk_size_ = 2000000 # File download size from network in one step\n"
 "\n"
-"url = _b5.weights_for_big5_['video']['fe']['sberdisk']\n"
+"url = _b5.weights_for_big5_['video']['fi']['fe']['sberdisk']\n"
 "\n"
 "res_load_video_model_weights_deep_fe = "
 "_b5.load_video_model_weights_deep_fe(\n"
@@ -605,29 +594,26 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:558
 #: 3378b83100fa48b8b35031d88a21ea57
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 21:05:28] Загрузка весов нейросетевой модели для "
 "получения нейросетевых признаков (видео модальность) …**"
 msgstr ""
-"\\ **[2022-12-11 16:46:24] Downloading weights of a neural network model "
-"to obtain neural network features (video modality) …**"
+"\\ **[2023-12-14 21:05:28] Downloading weights of a neural network model "
+"to obtain deep features (video modality) …**"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:569
 #: 2ecb55fc0694480289e949d49c6c7045
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 21:05:31] Загрузка файла "
 "“weights_2022-11-01_12-27-07.h5” 100.0% …**"
 msgstr ""
-"\\ **[2022-12-11 16:46:29] File download “weights_2022-11-01_12-27-07.h5”"
+"\\ **[2023-12-14 21:05:31] File download “weights_2022-11-01_12-27-07.h5”"
 " (100.0%) …**"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:579
 #: 752187764b7d42d39e5653305733c78b
-#, fuzzy
 msgid "— Время выполнения: 3.342 сек. —"
-msgstr "— Runtime: 1.143 sec. —"
+msgstr "— Runtime: 3.342 sec. —"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:591
 #: a8716df4d44e4b1b86b40b98fccf5e15
@@ -636,7 +622,7 @@ msgid ""
 "нейросетевым признакам"
 msgstr ""
 "Formation of the neural network architecture of the model for obtaining "
-"estimates by neural network features"
+"scores by deep features"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:593
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:643
@@ -646,7 +632,7 @@ msgid ""
 "получения оценок по нейросетевым признакам"
 msgstr ""
 "``_b5.video_model_nn_`` - Neural network model **tf.keras.Model** for "
-"obtaining estimates by neural network features"
+"obtaining scores by deep features"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
 #: 41e8fa581b40494397a55ebced833943
@@ -674,19 +660,17 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:619
 #: 0da49506f3a246cfaf1d45ae10c30818
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 21:05:31] Формирование нейросетевой архитектуры для "
 "получения оценок по нейросетевым признакам (видео модальность) …**"
 msgstr ""
-"\\ **[2022-12-11 16:46:29] Formation of a neural network architecture for"
-" obtaining estimates on neural network features (video modality) …**"
+"\\ **[2023-12-14 21:05:31] Formation of a neural network architecture for"
+" obtaining scores by deep features (video modality) …**"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:629
 #: 0d612acbfa5346cc912f17e637d39270
-#, fuzzy
 msgid "— Время выполнения: 0.708 сек. —"
-msgstr "— Runtime: 0.104 sec. —"
+msgstr "— Runtime: 0.708 sec. —"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:641
 #: befe48a8bc584b2fa83d522ab495b296
@@ -694,8 +678,8 @@ msgid ""
 "Загрузка весов нейросетевой модели для получения оценок по нейросетевым "
 "признакам"
 msgstr ""
-"Downloading the weights of the neural network model to obtain estimates "
-"for neural network features"
+"Downloading the weights of the neural network model to obtain scores "
+"for deep features"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
 #: f345e9e0b4f843bba460df9439aededa
@@ -704,7 +688,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
 #: 7d747475873a4c6999b5600254857e16
-#, fuzzy
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -723,9 +706,9 @@ msgid ""
 msgstr ""
 "# Core settings\n"
 "_b5.path_to_save_ = './models' # Directory to save the file\n"
-"_b5.chunk_size_ = 2000000 # File download size from network in 1 step\n"
+"_b5.chunk_size_ = 2000000 # File download size from network in one step\n"
 "\n"
-"url = _b5.weights_for_big5_['video']['nn']['sberdisk']\n"
+"url = _b5.weights_for_big5_['video']['fi']['nn']['sberdisk']\n"
 "\n"
 "res_load_video_model_weights_nn = _b5.load_video_model_weights_nn(\n"
 "    url = url, # Full path to the file with weights of the neural network"
@@ -739,30 +722,27 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:676
 #: ec62a422889d406daf66ee268c1770ca
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 21:05:32] Загрузка весов нейросетевой модели для "
 "получения оценок по нейросетевым признакам (видео модальность) …**"
 msgstr ""
-"\\ **[2022-12-11 16:46:31] Downloading the weights of the neural network "
-"model to obtain estimates for neural network features (video modality) "
+"\\ **[2023-12-14 21:05:32] Downloading the weights of the neural network "
+"model to obtain scores for deep features (video modality) "
 "…**"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:687
 #: 2f54038f42304d9da65198dd51db0d24
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 21:05:32] Загрузка файла "
 "“weights_2022-03-22_16-31-48.h5”**"
 msgstr ""
-"\\ **[2022-12-11 16:46:31] File downloading "
+"\\ **[2023-12-14 21:05:32] File downloading "
 "“weights_2022-03-22_16-31-48.h5”**"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:697
 #: b8e40064093e4e9a8bae55e6b875842a
-#, fuzzy
 msgid "— Время выполнения: 0.209 сек. —"
-msgstr "— Runtime: 0.299 sec. —"
+msgstr "— Runtime: 0.209 sec. —"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:709
 #: 80231c938a7b47868f9975d4d8016f0a
@@ -771,7 +751,7 @@ msgid ""
 "оценки персональных качеств"
 msgstr ""
 "Formation of neural network architectures of models for obtaining the "
-"results of assessing personal traits"
+"personality traits scores"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:711
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:761
@@ -781,7 +761,7 @@ msgid ""
 "получения результатов оценки персональных качеств"
 msgstr ""
 "``_b5.video_models_b5_`` - Neural network models **tf.keras.Model** for "
-"obtaining the results of assessing personal traits"
+"obtaining the personality traits scores"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
 #: d56bbea0bd414a9bb12141665cb5d5c1
@@ -809,21 +789,19 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:737
 #: 5361c58ca3154aa28ac7a85ed22037e7
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 21:05:32] Формирование нейросетевых архитектур моделей "
 "для получения результатов оценки персональных качеств (видео модальность)"
 " …**"
 msgstr ""
-"\\ **[2022-12-11 16:46:31] Formation of neural network architectures of "
-"models for obtaining the results of assessing personal traits (video "
+"\\ **[2023-12-14 21:05:32] Formation of neural network architectures of "
+"models for obtaining the personality traits acores (video "
 "modality) …**"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:747
 #: 91de5be5c5214929bcfceeeca8ac66d5
-#, fuzzy
 msgid "— Время выполнения: 0.046 сек. —"
-msgstr "— Runtime: 0.104 sec. —"
+msgstr "— Runtime: 0.046 sec. —"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:759
 #: f4f43a0af80644a7ba9763b30a1786ab
@@ -831,8 +809,8 @@ msgid ""
 "Загрузка весов нейросетевых моделей для получения результатов оценки "
 "персональных качеств"
 msgstr ""
-"Downloading the weights of neural network models to obtain the results of"
-" assessing personal traits"
+"Downloading the weights of neural network models to obtain the "
+" personality traits scores"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
 #: 2d3aa82721204a96a9f0c2f92a701046
@@ -841,7 +819,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
 #: 6d1a6810c0194cf8ad3d2eb2cba818df
-#, fuzzy
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -875,18 +852,18 @@ msgid ""
 msgstr ""
 "# Core settings\n"
 "_b5.path_to_save_ = './models' # Directory to save the file\n"
-"_b5.chunk_size_ = 2000000 # File download size from network in 1 step\n"
+"_b5.chunk_size_ = 2000000 # File download size from network in one step\n"
 "\n"
 "url_openness = "
-"_b5.weights_for_big5_['video']['b5']['openness']['sberdisk']\n"
+"_b5.weights_for_big5_['video']['fi']['b5']['openness']['sberdisk']\n"
 "url_conscientiousness = "
-"_b5.weights_for_big5_['video']['b5']['conscientiousness']['sberdisk']\n"
+"_b5.weights_for_big5_['video']['fi']['b5']['conscientiousness']['sberdisk']\n"
 "url_extraversion = "
-"_b5.weights_for_big5_['video']['b5']['extraversion']['sberdisk']\n"
+"_b5.weights_for_big5_['video']['fi']['b5']['extraversion']['sberdisk']\n"
 "url_agreeableness = "
-"_b5.weights_for_big5_['video']['b5']['agreeableness']['sberdisk']\n"
-"url_neuroticism = "
-"_b5.weights_for_big5_['video']['b5']['neuroticism']['sberdisk']\n"
+"_b5.weights_for_big5_['video']['fi']['b5']['agreeableness']['sberdisk']\n"
+"url_non_neuroticism = "
+"_b5.weights_for_big5_['video']['fi']['b5']['non_neuroticism']['sberdisk']\n"
 "\n"
 "res_load_video_models_weights_b5 = "
 "_b5_video.load_video_models_weights_b5(\n"
@@ -894,7 +871,7 @@ msgstr ""
 "    url_conscientiousness = url_conscientiousness, # Conscientiousness\n"
 "    url_extraversion = url_extraversion, # Extraversion\n"
 "    url_agreeableness = url_agreeableness, # Agreeableness\n"
-"    url_neuroticism = url_neuroticism, # Neuroticism\n"
+"    url_non_neuroticism = url_non_neuroticism, # Non-Neuroticism\n"
 "    force_reload = False, # Forced download of a file with weights of a "
 "neural network model from the network\n"
 "    out = True, # Display\n"
@@ -904,76 +881,68 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:802
 #: 2355c3c9b13d4d529506cabe98f27f72
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 21:05:32] Загрузка весов нейросетевых моделей для "
 "получения результатов оценки персональных качеств (видео модальность) …**"
 msgstr ""
-"\\ **[2022-12-11 16:46:31] Downloading the weights of neural network "
-"models to obtain the results of assessing personal traits (video "
+"\\ **[2023-12-14 21:05:32] Downloading the weights of neural network "
+"models to obtain the personality traits scores (video "
 "modality) …**"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:813
 #: 865f712be4f54567955386bf287157fc
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 21:05:32] Загрузка файла "
 "“weights_2022-06-15_16-46-30.h5”** Открытость опыту"
 msgstr ""
-"\\ **[2022-12-11 16:46:31] File download "
+"\\ **[2023-12-14 21:05:32] File download "
 "“weights_2022-06-15_16-46-30.h5”** Openness"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:824
 #: 206172f892344fa0aba92ef9a187cd2c
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 21:05:32] Загрузка файла "
 "“weights_2022-06-15_16-48-50.h5”** Добросовестность"
 msgstr ""
-"\\ **[2022-12-11 16:46:32] File download "
+"\\ **[2023-12-14 21:05:32] File download "
 "“weights_2022-06-15_16-48-50.h5”** Conscientiousness"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:835
 #: c08c647af67b47b7800dc3cd3127c1e9
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 21:05:33] Загрузка файла "
 "“weights_2022-06-15_16-54-06.h5”** Экстраверсия"
 msgstr ""
-"\\ **[2022-12-11 16:46:32] File download "
+"\\ **[2023-12-14 21:05:33] File download "
 "“weights_2022-06-15_16-54-06.h5”** Extraversion"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:846
 #: 3f33d977da8944e5ba933b65254c619b
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 21:05:33] Загрузка файла "
 "“weights_2022-06-15_17-02-03.h5”** Доброжелательность"
 msgstr ""
-"\\ **[2022-12-11 16:46:32] File download "
+"\\ **[2023-12-14 21:05:33] File download "
 "“weights_2022-06-15_17-02-03.h5”** Agreeableness"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:857
 #: 4f684c3abd614b18996216e07d3b75f7
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 21:05:33] Загрузка файла "
 "“weights_2022-06-15_17-06-15.h5”** Эмоциональная стабильность"
 msgstr ""
-"\\ **[2022-12-11 16:46:32] File download "
-"“weights_2022-06-15_17-06-15.h5”** Neuroticism"
+"\\ **[2023-12-14 21:05:33] File download "
+"“weights_2022-06-15_17-06-15.h5”** Non-Neuroticism"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:867
 #: 30653f4a9d1e494a8239dbf44d5f6101
-#, fuzzy
 msgid "— Время выполнения: 1.013 сек. —"
-msgstr "— Runtime: 1.143 sec. —"
+msgstr "— Runtime: 1.013 sec. —"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:879
 #: 0675c91f454b493f99f3a643a12953ac
-#, fuzzy
 msgid "Получение прогнозов (видео модальность)"
-msgstr "Getting predictions (audio modality)"
+msgstr "Getting scores (video modality)"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:881
 #: 16d96ae4b03546ffb3da2a53fd354256
@@ -983,7 +952,7 @@ msgstr "``_b5.df_files_`` - DataFrame with data"
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:882
 #: 706fe8881d214512b61ad7bda8631fcb
 msgid "``_b5.df_accuracy_`` - DataFrame с результатами вычисления точности"
-msgstr "``_b5.df_accuracy_`` - DataFrame with precision calculation results"
+msgstr "``_b5.df_accuracy_`` - DataFrame with accuracy"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
 #: 6bf38b0f890345f988f48a1e062b3efa
@@ -992,7 +961,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
 #: 0a3b02693ab94cff905415b1dae97e7d
-#, fuzzy
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_dataset_ = 'E:/Databases/FirstImpressionsV2/test' # "
@@ -1032,13 +1000,14 @@ msgstr ""
 "_b5.ignore_dirs_ = []\n"
 "# Key names for DataFrame dataset\n"
 "_b5.keys_dataset_ = ['Path', 'Openness', 'Conscientiousness', "
-"'Extraversion', 'Agreeableness', 'Neuroticism']\n"
+"'Extraversion', 'Agreeableness', 'Non-Neuroticism']\n"
 "_b5.ext_ = ['.mp4'] # Search file extensions\n"
 "_b5.path_to_logs_ = './logs' # Directory for saving LOG files\n"
 "\n"
-"# Full path to the file with correct predictions for calculating accuracy"
+"# Full path to the file containing the ground truth scores for the "
+"accuracy calculation\n"
 "\n"
-"url_accuracy = _b5_video.true_traits_['sberdisk']\n"
+"url_accuracy = _b5_video.true_traits_['fi']['sberdisk']\n"
 "\n"
 "res_get_video_union_predictions = _b5.get_video_union_predictions(\n"
 "    depth = 2,         # Hierarchy depth for receiving audio and video "
@@ -1047,6 +1016,8 @@ msgstr ""
 "    reduction_fps = 5, # Frame rate reduction\n"
 "    window = 10,       # РSignal segment window size (in seconds)\n"
 "    step = 5,          # Signal segment window shift step (in seconds)\n"
+"    lang = 'en', # Language selection for models trained on First Impressions V2"
+"'en' and models trained on for MuPTA 'ru'\n"
 "    accuracy = True,   # Accuracy calculation\n"
 "    url_accuracy = url_accuracy,\n"
 "    logs = True,       # If necessary, generate a LOG file\n"
@@ -1057,12 +1028,11 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:928
 #: 17ce1bdf3623492f94750dbf0d91e94d
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 22:24:55] Получение прогнозов и вычисление точности "
 "(видео модальность) …**"
 msgstr ""
-"\\ **[2022-12-11 21:03:52] Getting predictions and calculating accuracy "
+"\\ **[2023-12-14 22:24:55] Getting scores and accuracy calculation "
 "(video modality) …**"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:930
@@ -1072,9 +1042,8 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:934
 #: 428e96987dcb48d0b7881bb21da3341b
-#, fuzzy
 msgid "2000 из 2000 (100.0%) … test80_25_Q4wOgixh7E.004.mp4 …"
-msgstr "2000 from 2000 (100.0%) … test/test80_04/yw-2AGeAjFc.000.mp4 …"
+msgstr "2000 from 2000 (100.0%) … test80_25_Q4wOgixh7E.004.mp4 …"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:952
 #: 9d38066764104f2281bcd3fdd3a81030
@@ -1667,11 +1636,10 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1487
 #: edc97e9223d74546879699452e2e4883
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 22:24:55] Точность по отдельным персональным качествам "
 "личности человека …**"
-msgstr "\\ **[2022-12-11 21:03:52] Accuracy on personal traits …**"
+msgstr "\\ **[2023-12-14 22:24:55] Trait-wise accuracy …**"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1501
 #: c0bea6eb3aad430883ee9c4573c9b1e0
@@ -1784,12 +1752,11 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1616
 #: 9319d74094f14c0293ba4e225f34a553
-#, fuzzy
 msgid ""
 "\\ **[2023-12-14 22:24:55] Средняя средних абсолютных ошибок: 0.0848, "
 "средняя точность: 0.9152 …**"
 msgstr ""
-"\\ **[2022-12-11 21:03:52] Mean absolute error: 0.0848, Accuracy: 0.9152 "
+"\\ **[2023-12-14 22:24:55] Mean absolute error: 0.0848, Accuracy: 0.9152 "
 "…**"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1627
@@ -1799,9 +1766,8 @@ msgstr "Log files saved successfully …"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1637
 #: b027280b0edf47d2a58c8ee026f13d95
-#, fuzzy
 msgid "— Время выполнения: 4762.254 сек. —"
-msgstr "— Runtime: 4.649 sec. —"
+msgstr "— Runtime: 4762.254 sec. —"
 
 #~ msgid "|a97dec82e5e34382bbc8994214e0c356|"
 #~ msgstr ""

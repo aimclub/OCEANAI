@@ -34,13 +34,12 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:17
 #: 5f4e5dfaa83d4027acd2b4579edf0c73
-#, fuzzy
 msgid ""
 "``_b5.video_model_hc_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения признаков / оценок на базе экспертных признаков"
 msgstr ""
 "``_b5.video_model_hc_`` - Neural network model **tf.keras.Model** for "
-"obtaining estimates by expert features"
+"obtaining features / scores by hand-crafted features"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:29
 #: 33512eaf7d9f4e9c8b713cd303241480
@@ -69,7 +68,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:-1
 #: 80a13c858ce646928a62fc2f9d2af4d3
-#, fuzzy
 msgid ""
 "_b5 = Run(\n"
 "    lang = 'ru', # Язык\n"
@@ -89,8 +87,8 @@ msgid ""
 ")"
 msgstr ""
 "_b5 = Run(\n"
-"    lang = 'en', # Language\n"
-"    color_simple = '#FFF', # Plain text color (hexadecimal code)\n"
+"    lang = 'en', # Inference language\n"
+"    color_simple = '#333', # Plain text color (hexadecimal code)\n"
 "    color_info = '#1776D2', # The color of the text containing the "
 "information (hexadecimal code)\n"
 "    color_err = '#FF0000', # Error text color (hexadecimal code)\n"
@@ -104,7 +102,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:81
 #: debcc3d2f3c747b081adcee10c6b3bad
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 17:11:13] OCEANAI - персональные качества личности "
 "человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
@@ -113,11 +110,11 @@ msgid ""
 "[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
 "Версия: 1.0.0a5    Лицензия: BSD License"
 msgstr ""
-"\\ **[2022-12-11 14:17:28] OCEANAI - personal traits:**\\     Authors:"
+"\\ **[2023-12-10 17:11:13] OCEANAI - personality traits:**\\     Authors:"
 "        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry Ryumin "
 "[dl_03.03.1991@mail.ru]        Alexey Karpov [karpov@iias.spb.su]    "
 "Maintainers:        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry "
-"Ryumin [dl_03.03.1991@mail.ru]    Version: 1.0.0a2    License: BSD "
+"Ryumin [dl_03.03.1991@mail.ru]    Version: 1.0.0a5    License: BSD "
 "License"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:83
@@ -127,9 +124,8 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:97
 #: a5bf25938fa84c849f2f1a634e2603da
-#, fuzzy
 msgid "Формирование нейросетевой архитектуры модели (``FI V2``)"
-msgstr "Formation of the neural network architecture of the model"
+msgstr "Formation of the neural network architecture of the model (``FI V2``)"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:-1
 #: 3d1cbeb7e19e4539a7cfddb98d68d086
@@ -138,7 +134,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:-1
 #: dacfab2778784d478edc837e29a78d60
-#, fuzzy
 msgid ""
 "res_load_video_model_hc = _b5.load_video_model_hc(\n"
 "    lang = 'en',\n"
@@ -150,6 +145,8 @@ msgid ""
 ")"
 msgstr ""
 "res_load_video_model_hc = _b5.load_video_model_hc(\n"
+"    lang = 'en', # Language selection for models trained on First Impressions V2"
+"'en' and models trained on for MuPTA 'ru'\n"
 "    show_summary = False, # Displaying the formed neural network "
 "architecture of the model\n"
 "    out = True, # Display\n"
@@ -159,20 +156,18 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:124
 #: 3011f680e5dd4bcbacaf3af179fee638
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 17:11:13] Формирование нейросетевой архитектуры модели "
 "для получения оценок по экспертным признакам (видео модальность) …**"
 msgstr ""
-"\\ **[2022-12-11 14:17:39] Formation of the neural network architecture "
-"of the model for obtaining estimates by expert features (video modality) "
+"\\ **[2023-12-10 17:11:13] Formation of the neural network architecture "
+"of the model for obtaining scores by hand-crafted features (video modality) "
 "…**"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:134
 #: 852eb1870ac048d0835b1caaf645ca3b
-#, fuzzy
 msgid "— Время выполнения: 0.789 сек. —"
-msgstr "— Runtime: 0.309 sec. —"
+msgstr "— Runtime: 0.789 sec. —"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:146
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:367
@@ -187,7 +182,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:-1
 #: 4fee8a3eb82b41bca3c7e0d3adaa03a0
-#, fuzzy
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -208,7 +202,7 @@ msgstr ""
 "_b5.path_to_save_ = './models' # Directory to save the file\n"
 "_b5.chunk_size_ = 2000000 # File download size from network in 1 step\n"
 "\n"
-"url = _b5.weights_for_big5_['video']['hc']['sberdisk']\n"
+"url = _b5.weights_for_big5_['video']['fi']['hc']['sberdisk']\n"
 "\n"
 "res_load_video_model_weights_hc = _b5_video.load_video_model_weights_hc(\n"
 "    url = url, # Full path to the file with weights of the neural network"
@@ -223,29 +217,26 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:179
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:400
 #: 355ad677ea734cd0ab90823ee6c13ff4 6b2dceedff7643ab9cd2f99ef99cec99
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 17:11:14] Загрузка весов нейросетевой модели для "
 "получения оценок по экспертным признакам (видео модальность) …**"
 msgstr ""
-"\\ **[2022-12-11 14:18:05] Downloading the weights of the neural network "
-"model to obtain estimates by expert features (video modality) …**"
+"\\ **[2023-12-10 17:11:14] Downloading the weights of the neural network "
+"model to obtain scores by hand-crafted features (video modality) …**"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:190
 #: 9a10f8bdc5fd4f6b87fee2f9afe2e599
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 17:11:14] Загрузка файла "
 "“weights_2022-08-27_18-53-35.h5” 100.0% …**"
 msgstr ""
-"\\ **[2022-12-11 14:18:05] File download “weights_2022-08-27_18-53-35.h5”"
+"\\ **[2023-12-10 17:11:14] File download “weights_2022-08-27_18-53-35.h5”"
 " (100.0%) …**"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:200
 #: 5aa902aa659e45d3bb55a7e35b18e92c
-#, fuzzy
 msgid "— Время выполнения: 0.226 сек. —"
-msgstr "— Runtime: 0.661 sec. —"
+msgstr "— Runtime: 0.226 sec. —"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:212
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:433
@@ -349,9 +340,8 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:318
 #: fc1d758b57d8402996fe34d78c96433b
-#, fuzzy
 msgid "Формирование нейросетевой архитектуры модели (``MuPTA``)"
-msgstr "Formation of the neural network architecture of the model"
+msgstr "Formation of the neural network architecture of the model (``MuPTA``)"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:-1
 #: 257eea3c710d42caad4df75b47c3caa8
@@ -360,7 +350,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:-1
 #: 8c3341a3d7e346f9b573b0aa15447706
-#, fuzzy
 msgid ""
 "res_load_video_model_hc = _b5.load_video_model_hc(\n"
 "    lang = 'ru',\n"
@@ -372,6 +361,8 @@ msgid ""
 ")"
 msgstr ""
 "res_load_video_model_hc = _b5.load_video_model_hc(\n"
+"    lang = 'ru', # Language selection for models trained on First Impressions V2"
+"'en' and models trained on for MuPTA 'ru'\n"
 "    show_summary = False, # Displaying the formed neural network "
 "architecture of the model\n"
 "    out = True, # Display\n"
@@ -381,20 +372,18 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:345
 #: bf229e0c06a049878e59a77d99339e4d
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 17:11:14] Формирование нейросетевой архитектуры модели "
 "для получения оценок по экспертным признакам (видео модальность) …**"
 msgstr ""
-"\\ **[2022-12-11 14:17:39] Formation of the neural network architecture "
-"of the model for obtaining estimates by expert features (video modality) "
+"\\ **[2023-12-10 17:11:14] Formation of the neural network architecture "
+"of the model for obtaining scores by hand-crafted features (video modality) "
 "…**"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:355
 #: f2acc9f587f24dd38f731ddc99eed6d3
-#, fuzzy
 msgid "— Время выполнения: 0.25 сек. —"
-msgstr "— Runtime: 0.661 sec. —"
+msgstr "— Runtime: 0.25 sec. —"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:-1
 #: 36ea5d43a1614d6fa69a7cd23f80a6a9
@@ -403,7 +392,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:-1
 #: 364afcbbdc584f88a35a1359c77e82d2
-#, fuzzy
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -424,7 +412,7 @@ msgstr ""
 "_b5.path_to_save_ = './models' # Directory to save the file\n"
 "_b5.chunk_size_ = 2000000 # File download size from network in 1 step\n"
 "\n"
-"url = _b5.weights_for_big5_['video']['hc']['sberdisk']\n"
+"url = _b5.weights_for_big5_['video']['mupta']['hc']['sberdisk']\n"
 "\n"
 "res_load_video_model_weights_hc = _b5_video.load_video_model_weights_hc(\n"
 "    url = url, # Full path to the file with weights of the neural network"
@@ -438,19 +426,17 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:411
 #: 483992c0a5304135b25768dbbe41bae1
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 17:11:15] Загрузка файла "
 "“vhc_mupta_2022-07-22_10-02-37.h5” 100.0% …**"
 msgstr ""
-"\\ **[2022-12-11 14:18:05] File download “weights_2022-08-27_18-53-35.h5”"
+"\\ **[2023-12-10 17:11:15] File download “weights_2022-08-27_18-53-35.h5”"
 " (100.0%) …**"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:421
 #: b01570e3da214807a499cd3f47136813
-#, fuzzy
 msgid "— Время выполнения: 0.307 сек. —"
-msgstr "— Runtime: 0.309 sec. —"
+msgstr "— Runtime: 0.307 sec. —"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_hc.ipynb:-1
 #: fe5d1c352459472eb1827b2fc3de4ff6
