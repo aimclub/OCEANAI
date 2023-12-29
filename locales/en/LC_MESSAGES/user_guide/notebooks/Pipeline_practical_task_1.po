@@ -58,16 +58,16 @@ msgid ""
 "помочь в принятии более объективных и систематизированных решений при "
 "ранжировании кандидатов."
 msgstr ""
+"Thus, the OCEAN-AI library provides tools to analyze the personality traits"
+" of candidates and their suitability for the position, which "
+"can significantly improve the recruitment process and help to make more "
+objective and systematic decisions when ranking candidates."
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:20
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:30
 #: 1af5f20797304a2eba920e271e37b9ae 2d02638b19e548be89463c971dbb2a02
 msgid "<center>"
 msgstr ""
-"Thus, the OCEAN-AI library provides tools to analyze the personality traits"
-" of candidates and their suitability for the position, which "
-"can significantly improve the recruitment process and help to make more "
-objective and systematic decisions when ranking candidates."
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:24
 #: d55e877a72314f768adf98cc8ce3a5fb
