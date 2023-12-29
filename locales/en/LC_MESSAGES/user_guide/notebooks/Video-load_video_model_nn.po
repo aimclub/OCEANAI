@@ -38,7 +38,7 @@ msgid ""
 "получения оценок по нейросетевым признакам"
 msgstr ""
 "``_b5s.video_model_nn_`` - Neural network model **tf.keras.Model** for "
-"obtaining estimates by neural network features"
+"obtaining features / scores by deep features"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:29
 #: 80e3d275a78e4441a0ec2a9b2044dc00
@@ -67,7 +67,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:-1
 #: 0d3d4dd64ff24fe99010c407c2dc93ec
-#, fuzzy
 msgid ""
 "_b5 = Run(\n"
 "    lang = 'ru', # Язык\n"
@@ -87,8 +86,8 @@ msgid ""
 ")"
 msgstr ""
 "_b5 = Run(\n"
-"    lang = 'en', # Language\n"
-"    color_simple = '#FFF', # Plain text color (hexadecimal code)\n"
+"    lang = 'en', # Inference language \n"
+"    color_simple = '#333', # Plain text color (hexadecimal code)\n"
 "    color_info = '#1776D2', # The color of the text containing the "
 "information (hexadecimal code)\n"
 "    color_err = '#FF0000', # Error text color (hexadecimal code)\n"
@@ -102,7 +101,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:81
 #: ceeb6c6a4f8a4b8fa2619964e9f078d3
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 17:12:11] OCEANAI - персональные качества личности "
 "человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
@@ -111,11 +109,11 @@ msgid ""
 "[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
 "Версия: 1.0.0a5    Лицензия: BSD License"
 msgstr ""
-"\\ **[2022-12-11 14:41:05] OCEANAI - personal traits:**\\     Authors:"
+"\\ **[2023-12-10 17:12:11] OCEANAI - personality traits:**\\     Authors:"
 "        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry Ryumin "
 "[dl_03.03.1991@mail.ru]        Alexey Karpov [karpov@iias.spb.su]    "
 "Maintainers:        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry "
-"Ryumin [dl_03.03.1991@mail.ru]    Version: 1.0.0a2    License: BSD "
+"Ryumin [dl_03.03.1991@mail.ru]    Version: 1.0.0a5    License: BSD "
 "License"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:83
@@ -125,9 +123,8 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:97
 #: 132b5bd4009141a5b9feca0fe5270c08
-#, fuzzy
 msgid "Формирование нейросетевой архитектуры модели (``FI V2``)"
-msgstr "Formation of the neural network architecture of the model"
+msgstr "Formation of the neural network architecture of the model (``FI V2``)"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:-1
 #: 5887f8f174de46d782fe4b2661e5e84a
@@ -155,19 +152,17 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:123
 #: cf8bc6b03ca14bb788e960a5ef132f12
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 17:12:11] Формирование нейросетевой архитектуры для "
 "получения оценок по нейросетевым признакам (видео модальность) …**"
 msgstr ""
 "\\ **[2022-12-11 14:41:16] Formation of a neural network architecture for"
-" obtaining estimates by neural network features (video modality) …**"
+" obtaining scores by deep features (video modality) …**"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:133
 #: ec719e1c379f43c29489ff5c6efa3f1f
-#, fuzzy
 msgid "— Время выполнения: 1.559 сек. —"
-msgstr "— Runtime: 1.479 sec. —"
+msgstr "— Runtime: 1.559 sec. —"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:145
 #: 19707bbf26e44b128a5afea41d4f0d21
@@ -181,7 +176,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:-1
 #: c87c476aabd740e38d25b452a67684f6
-#, fuzzy
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -202,7 +196,7 @@ msgstr ""
 "_b5.path_to_save_ = './models' # Directory to save the file\n"
 "_b5.chunk_size_ = 2000000 # File download size from network in 1 step\n"
 "\n"
-"url = _b5.weights_for_big5_['video']['nn']['sberdisk']\n"
+"url = _b5.weights_for_big5_['video']['fi']['nn']['sberdisk']\n"
 "\n"
 "res_load_video_model_weights_nn = _b5_video.load_video_model_weights_nn(\n"
 "    url = url, # Full path to the file with weights of the neural network"
@@ -216,30 +210,27 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:178
 #: 24611131e781425f98d76d303b81cc04
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 17:12:13] Загрузка весов нейросетевой модели для "
 "получения оценок по нейросетевым признакам (видео модальность) …**"
 msgstr ""
-"\\ **[2022-12-11 14:41:42] Downloading the weights of the neural network "
-"model to obtain estimates for neural network features (video modality) "
+"\\ **[2023-12-10 17:12:13] Downloading the weights of the neural network "
+"model to obtain scores by deep features (video modality) "
 "…**"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:189
 #: dbc09759e82f41cc870fae90b9cfd3c7
-#, fuzzy
 msgid ""
 "\\ **[2023-12-10 17:12:14] Загрузка файла "
 "“weights_2022-03-22_16-31-48.h5” 100.0% …**"
 msgstr ""
-"\\ **[2022-12-11 14:41:44] File download “weights_2022-03-22_16-31-48.h5”"
+"\\ **[2023-12-10 17:12:14] File download “weights_2022-03-22_16-31-48.h5”"
 " (100.0%) …**"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:199
 #: 55bc61a9d5e9450d95c98c7fe664194f
-#, fuzzy
 msgid "— Время выполнения: 1.053 сек. —"
-msgstr "— Runtime: 1.479 sec. —"
+msgstr "— Runtime: 1.053 sec. —"
 
 #: ../../source/user_guide/notebooks/Video-load_video_model_nn.ipynb:211
 #: 7eee9d7678a74b58af28e45d286a3da9
