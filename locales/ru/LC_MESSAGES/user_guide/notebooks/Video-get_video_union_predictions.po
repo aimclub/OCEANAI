@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2023-12-25 20:35+0300\n"
+"POT-Creation-Date: 2023-12-29 16:42+0300\n"
 "PO-Revision-Date: 2022-12-11 21:21+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -23,13 +23,13 @@ msgid "Получение прогнозов по видео"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:11
-#: bfe55845c78d47b1a174023debeebb27
-msgid "|52ac24923ea042bb9d69a3283d94adbf|"
+#: 434adcbc129646519550f4cddc634ae9
+msgid "|47fe455281c34c7981fb49749b0b127a|"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:17
 #: 2c81a4887c794281be71bf8ae18b8ecb 82424a42246247b8bba5d3297e3539b0
-msgid "52ac24923ea042bb9d69a3283d94adbf"
+msgid "47fe455281c34c7981fb49749b0b127a"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:13
@@ -1553,5 +1553,11 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "a97dec82e5e34382bbc8994214e0c356"
+#~ msgstr ""
+
+#~ msgid "|52ac24923ea042bb9d69a3283d94adbf|"
+#~ msgstr ""
+
+#~ msgid "52ac24923ea042bb9d69a3283d94adbf"
 #~ msgstr ""
 

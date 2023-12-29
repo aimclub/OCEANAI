@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2023-12-23 15:27+0300\n"
+"POT-Creation-Date: 2023-12-29 16:42+0300\n"
 "PO-Revision-Date: 2022-12-01 09:13+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -22,11 +22,11 @@ msgid "Ответы на часто задаваемые вопросы"
 msgstr ""
 
 #: ../../source/faq.rst:4 b13e2b6af3594d90a08d89a94a74d418
-msgid "Это список часто задаваемых вопросов о `OCEANAI` и ответов на них."
+msgid "Это список часто задаваемых вопросов о `OCEAN-AI` и ответов на них."
 msgstr ""
 
 #: ../../source/faq.rst:-1 cce10186d3474ef69321c228017ebfea
-msgid "`OCEANAI` это?"
+msgid "`OCEAN-AI` это?"
 msgstr ""
 
 #: ../../source/faq.rst:8 c11273c74fbf46b795ed1e5ced48a5cd
@@ -40,7 +40,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/faq.rst:-1 893b8fe57f344bc8b096484beed2d21e
-msgid "Почему библиотека называется `OCEANAI`?"
+msgid "Почему библиотека называется `OCEAN-AI`?"
 msgstr ""
 
 #: ../../source/faq.rst:12 bf6235cb61b94db984afa3ed751d2842
@@ -51,7 +51,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/faq.rst:-1 0231f9fc9dab4aecba7a184e43e7d881
-msgid "Можно ли установить `OCEANAI` с помошью pip?"
+msgid "Можно ли установить `OCEAN-AI` с помошью pip?"
 msgstr ""
 
 #: ../../source/faq.rst:16 5ccb8fadae574bd189585ab026c7a2ed
@@ -59,3 +59,16 @@ msgid ""
 "*Да, для этого нужно перейти по* `ссылке "
 "<https://pypi.org/project/oceanai>`_."
 msgstr ""
+
+#~ msgid "Это список часто задаваемых вопросов о `OCEANAI` и ответов на них."
+#~ msgstr ""
+
+#~ msgid "`OCEANAI` это?"
+#~ msgstr ""
+
+#~ msgid "Почему библиотека называется `OCEANAI`?"
+#~ msgstr ""
+
+#~ msgid "Можно ли установить `OCEANAI` с помошью pip?"
+#~ msgstr ""
+

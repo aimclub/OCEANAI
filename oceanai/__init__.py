@@ -13,8 +13,8 @@ __all__ = (
     "__maintainer_email__",
 )
 
-__title__ = "OCEANAI"
-__summary__ = "OCEANAI"
+__title__ = "OCEAN-AI"
+__summary__ = "OCEAN-AI"
 __uri__ = "https://github.com/DmitryRyumin/oceanai"
 
 __version__ = "1.0"

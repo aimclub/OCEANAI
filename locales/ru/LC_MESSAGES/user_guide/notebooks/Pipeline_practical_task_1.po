@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2023-12-25 20:35+0300\n"
+"POT-Creation-Date: 2023-12-29 16:42+0300\n"
 "PO-Revision-Date: 2023-01-03 18:30+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -58,13 +58,13 @@ msgid "<center>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:24
-#: 5495e0c0d74446beb6c83c07fcdda770
-msgid "|37ed82bd484643cc844817ac86722067|"
+#: d55e877a72314f768adf98cc8ce3a5fb
+msgid "|156d290c4d7e4d42a4c04ca1071a05c4|"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:44
 #: 320f5f7d84f74c71acd7f5d20faf92a6 d7b24e0f5bd84a2cadf73c761139bdbf
-msgid "37ed82bd484643cc844817ac86722067"
+msgid "156d290c4d7e4d42a4c04ca1071a05c4"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:26
@@ -74,13 +74,13 @@ msgid "</center>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:34
-#: d5d8972b3d20451394700ef780ef7908
-msgid "|977a2566ca484ac08c54fb32341c1230|"
+#: 97698632b14444acb1c98b85da23d53d
+msgid "|a3d8f51c08fe4a8dbb7973fb3c691f7b|"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:47
 #: 90fb6ac705014c56a34b6fdfd8f6f859 d72967e157944ce5aaa249f5a934d49f
-msgid "977a2566ca484ac08c54fb32341c1230"
+msgid "a3d8f51c08fe4a8dbb7973fb3c691f7b"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:40
@@ -5040,5 +5040,17 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "334b672557ca4c0ba131a97e285e8bee"
+#~ msgstr ""
+
+#~ msgid "|37ed82bd484643cc844817ac86722067|"
+#~ msgstr ""
+
+#~ msgid "37ed82bd484643cc844817ac86722067"
+#~ msgstr ""
+
+#~ msgid "|977a2566ca484ac08c54fb32341c1230|"
+#~ msgstr ""
+
+#~ msgid "977a2566ca484ac08c54fb32341c1230"
 #~ msgstr ""
 

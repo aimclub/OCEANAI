@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCEANAI 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-25 20:35+0300\n"
+"POT-Creation-Date: 2023-12-29 16:42+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,13 +55,13 @@ msgid "<center>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_3.ipynb:24
-#: 0191a5e568b548bf90df54c360d2629e
-msgid "|88f86d7a8931435e844a33e1aadc79c7|"
+#: a9c499a58f0543acb77a1650d8004e0d
+msgid "|84763e217c9a4ab2aa9bad1280a5afab|"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_3.ipynb:44
 #: bda39977e58f40cda7cf92b09be3e080 fe06982d6b964924947c0ca426a72c15
-msgid "88f86d7a8931435e844a33e1aadc79c7"
+msgid "84763e217c9a4ab2aa9bad1280a5afab"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_3.ipynb:26
@@ -71,13 +71,13 @@ msgid "</center>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_3.ipynb:34
-#: b46a553ff88f4647abb73e1e8bffa28d
-msgid "|cba0f11462a342cbb7b4c328f9f96978|"
+#: 870c7129b24b43328f105ce09d4baaac
+msgid "|1db004a0136c4f889f31313475677a5a|"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_3.ipynb:47
 #: 39d32e2d4ecf4a96a675ac6129ec7f55 a68ca60efcf34262a5e91864260c8919
-msgid "cba0f11462a342cbb7b4c328f9f96978"
+msgid "1db004a0136c4f889f31313475677a5a"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_3.ipynb:40
@@ -3519,5 +3519,17 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "f89e9a46f82548878d573e1d3a46d09f"
+#~ msgstr ""
+
+#~ msgid "|88f86d7a8931435e844a33e1aadc79c7|"
+#~ msgstr ""
+
+#~ msgid "88f86d7a8931435e844a33e1aadc79c7"
+#~ msgstr ""
+
+#~ msgid "|cba0f11462a342cbb7b4c328f9f96978|"
+#~ msgstr ""
+
+#~ msgid "cba0f11462a342cbb7b4c328f9f96978"
 #~ msgstr ""
 

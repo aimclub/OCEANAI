@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2023-12-23 15:27+0300\n"
+"POT-Creation-Date: 2023-12-29 16:46+0300\n"
 "PO-Revision-Date: 2022-12-11 11:33+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.11.0\n"
 
-#: ../../source/index.rst:154 424f687458ef487b8888665611add0fe
+#: ../../source/index.rst:154 485a323f43dd4badab29049d7a07bdad
 msgid "Содержание:"
 msgstr ""
 
-#: ../../source/index.rst:-1 7e8174201708414a84e199bd5279ff00
+#: ../../source/index.rst:-1 60dc23bb81644f2691d54e6e19443a82
 msgid "Персональные качества личности человека"
 msgstr ""
 
-#: ../../source/index.rst:-1 28d30867465a4117b0290c022f74ab46
+#: ../../source/index.rst:-1 ac4dd6c65c7145dc99d74e5d379403b3
 msgid ""
 "oceanai, machine learning, statistics, computer vision, artificial "
 "intelligence, preprocessing"
@@ -34,12 +34,12 @@ msgstr ""
 #: ../../source/index.rst:6 607dc7d4dd994ed3a6c50e69c246a39a
 msgid ""
 "Документация библиотеки алгоритмов сильного искусственного интеллекта - "
-"``OCEANAI``"
+"``OCEAN-AI``"
 msgstr ""
 
 #: ../../source/index.rst:8 1b6c8e475f2a4f74907666c63a9feaa6
 msgid ""
-"`OCEANAI <https://oceanai.readthedocs.io/ru/latest/>`_ - библиотека с "
+"`OCEAN-AI <https://oceanai.readthedocs.io/ru/latest/>`_ - библиотека с "
 "открытым исходным кодом, состоящая из набора алгоритмов интеллектуального"
 " анализа поведения человека на основе его мультимодальных данных для "
 "автоматического оценивания уровня отдельных персональных качеств личности"
@@ -83,7 +83,7 @@ msgstr ""
 
 #: ../../source/index.rst:34 fe90e9f8c25f4d3aa87b0b0df9a53d7c
 msgid ""
-"`OCEANAI <https://oceanai.readthedocs.io/ru/latest/>`_ включает четыре "
+"`OCEAN-AI <https://oceanai.readthedocs.io/ru/latest/>`_ включает четыре "
 "основных алгоритма:"
 msgstr ""
 
@@ -123,7 +123,7 @@ msgstr ""
 
 #: ../../source/index.rst:46 a410d1c23d3242ec9df853b13637470d
 msgid ""
-"`OCEANAI <https://oceanai.readthedocs.io/ru/latest/>`_ предоставляет "
+"`OCEAN-AI <https://oceanai.readthedocs.io/ru/latest/>`_ предоставляет "
 "примеры решения прикладных задач на основе полученных гипотез "
 "предсказаний оценок ПКЛЧ:"
 msgstr ""
@@ -171,7 +171,7 @@ msgstr ""
 #: ../../source/index.rst:58 a20e20458f0a445b8d95f124dabedbf6
 msgid ""
 "Помимо основной задачи - мультимодального оценивания персональных качеств"
-" личности человека, реализованные в `OCEANAI "
+" личности человека, реализованные в `OCEAN-AI "
 "<https://oceanai.readthedocs.io/ru/latest/>`_ признаки позволят "
 "исследователям решать другие задачи анализа поведения человека, например "
 "распознавание его аффективных состояний."
@@ -179,7 +179,7 @@ msgstr ""
 
 #: ../../source/index.rst:62 caee8d98992540c783e774300d708a45
 msgid ""
-"`OCEANAI <https://oceanai.readthedocs.io/ru/latest/>`_ использует самые "
+"`OCEAN-AI <https://oceanai.readthedocs.io/ru/latest/>`_ использует самые "
 "актуальные библиотеки с открытым исходным кодом для обработки аудио-, "
 "видео- и текстовой информации: `librosa <https://librosa.org/>`_, "
 "`openSMILE <https://audeering.github.io/opensmile-python/>`_, `openCV "
@@ -190,10 +190,10 @@ msgstr ""
 
 #: ../../source/index.rst:68 ba8a078c25c9447bb4d23933ff078960
 msgid ""
-"`OCEANAI <https://oceanai.readthedocs.io/ru/latest/>`_ написана на языке "
-"программирования `python <https://www.python.org/>`_. Нейросетевые модели"
-" реализованы и обучены с использованием библиотеки с открытым исходным "
-"кодом `TensorFlow <https://www.tensorflow.org/>`_."
+"`OCEAN-AI <https://oceanai.readthedocs.io/ru/latest/>`_ написана на языке"
+" программирования `python <https://www.python.org/>`_. Нейросетевые "
+"модели реализованы и обучены с использованием библиотеки с открытым "
+"исходным кодом `TensorFlow <https://www.tensorflow.org/>`_."
 msgstr ""
 
 #: ../../source/index.rst:76 a6515611d8664b25a29b2fcd35694209
@@ -202,7 +202,7 @@ msgstr ""
 
 #: ../../source/index.rst:78 9d249b51e83c467f9786086d417099be
 msgid ""
-"Библиотека `OCEANAI <https://oceanai.readthedocs.io/ru/latest/>`_ была "
+"Библиотека `OCEAN-AI <https://oceanai.readthedocs.io/ru/latest/>`_ была "
 "апробирована на двух корпусах:"
 msgstr ""
 
@@ -325,3 +325,76 @@ msgstr ""
 #: ../../source/index.rst:175 c0777904e33f4850999501b70db57f06
 msgid ":ref:`search`"
 msgstr ""
+
+#~ msgid ""
+#~ "Документация библиотеки алгоритмов сильного "
+#~ "искусственного интеллекта - ``OCEANAI``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`OCEANAI <https://oceanai.readthedocs.io/ru/latest/>`_ -"
+#~ " библиотека с открытым исходным кодом, "
+#~ "состоящая из набора алгоритмов "
+#~ "интеллектуального анализа поведения человека "
+#~ "на основе его мультимодальных данных для"
+#~ " автоматического оценивания уровня отдельных "
+#~ "персональных качеств личности человека (ПКЛЧ)."
+#~ " Библиотека оценивает 5 ПКЛЧ: Открытость"
+#~ " опыту (**O**\\ p\\ enness), "
+#~ "Добросовестность (**C**\\ o\\ nscientiousness), "
+#~ "Экстраверсия (**E**\\ x\\ traversion), "
+#~ "Доброжелательность (**A**\\ g\\ reeableness), "
+#~ "Эмоциональная стабильность (Non-**N**\\ e\\ "
+#~ "uroticism)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`OCEANAI <https://oceanai.readthedocs.io/ru/latest/>`_ "
+#~ "включает четыре основных алгоритма:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`OCEANAI <https://oceanai.readthedocs.io/ru/latest/>`_ "
+#~ "предоставляет примеры решения прикладных задач"
+#~ " на основе полученных гипотез предсказаний"
+#~ " оценок ПКЛЧ:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Помимо основной задачи - мультимодального "
+#~ "оценивания персональных качеств личности "
+#~ "человека, реализованные в `OCEANAI "
+#~ "<https://oceanai.readthedocs.io/ru/latest/>`_ признаки "
+#~ "позволят исследователям решать другие задачи"
+#~ " анализа поведения человека, например "
+#~ "распознавание его аффективных состояний."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`OCEANAI <https://oceanai.readthedocs.io/ru/latest/>`_ "
+#~ "использует самые актуальные библиотеки с "
+#~ "открытым исходным кодом для обработки "
+#~ "аудио-, видео- и текстовой информации: "
+#~ "`librosa <https://librosa.org/>`_, `openSMILE "
+#~ "<https://audeering.github.io/opensmile-python/>`_, `openCV"
+#~ " <https://pypi.org/project/opencv-python/>`_, "
+#~ "`mediapipe "
+#~ "<https://google.github.io/mediapipe/getting_started/python>`_, "
+#~ "`transformers <https://pypi.org/project/transformers/>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`OCEANAI <https://oceanai.readthedocs.io/ru/latest/>`_ "
+#~ "написана на языке программирования `python "
+#~ "<https://www.python.org/>`_. Нейросетевые модели "
+#~ "реализованы и обучены с использованием "
+#~ "библиотеки с открытым исходным кодом "
+#~ "`TensorFlow <https://www.tensorflow.org/>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Библиотека `OCEANAI "
+#~ "<https://oceanai.readthedocs.io/ru/latest/>`_ была "
+#~ "апробирована на двух корпусах:"
+#~ msgstr ""
+

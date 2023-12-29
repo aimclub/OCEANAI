@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2023-12-25 20:35+0300\n"
+"POT-Creation-Date: 2023-12-29 16:42+0300\n"
 "PO-Revision-Date: 2022-12-01 09:13+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -23,13 +23,13 @@ msgid "Получение прогнозов по аудио"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:11
-#: 673d22190f7c49309ac819ad0c5a7a58
-msgid "|5eae4962a03a4ed3a58bc76f94eb18da|"
+#: c032b10f11b64696a8aac950136b9843
+msgid "|e04ee70c42574ebbad4568f6f22ccf63|"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:17
 #: 6077d8329077447f8342703274e05bbc 6ee541e5a21d41c7a7b8d44cc3c6d17f
-msgid "5eae4962a03a4ed3a58bc76f94eb18da"
+msgid "e04ee70c42574ebbad4568f6f22ccf63"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:13
@@ -1461,5 +1461,11 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "1f8a6eb05f5041dcbdc518b068968a49"
+#~ msgstr ""
+
+#~ msgid "|5eae4962a03a4ed3a58bc76f94eb18da|"
+#~ msgstr ""
+
+#~ msgid "5eae4962a03a4ed3a58bc76f94eb18da"
 #~ msgstr ""
 
