@@ -39,7 +39,7 @@ msgid ""
 "получения признаков / оценок на базе нейросетевых признаков"
 msgstr ""
 "``_b5.audio_model_nn_`` - Neural network model **tf.keras.Model** for "
-"obtaining features / scpres based on deep features"
+"obtaining features / scores based on deep features"
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:29
 #: eb2f9603a0374541b03479d1b21072f5
@@ -114,7 +114,7 @@ msgstr ""
 "        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry Ryumin "
 "[dl_03.03.1991@mail.ru]        Alexey Karpov [karpov@iias.spb.su]    "
 "Maintainers:        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry "
-"Ryumin [dl_03.03.1991@mail.ru]    Version: 1.0.0a2    License: BSD "
+"Ryumin [dl_03.03.1991@mail.ru]    Version: 1.0.0a5    License: BSD "
 "License"
 
 #: ../../source/user_guide/notebooks/Audio-load_audio_model_nn.ipynb:83
