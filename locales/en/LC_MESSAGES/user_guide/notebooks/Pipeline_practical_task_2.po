@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2023-12-29 16:42+0300\n"
+"POT-Creation-Date: 2024-01-01 20:27+0300\n"
 "PO-Revision-Date: 2023-01-03 18:30+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -18,19 +18,19 @@ msgstr ""
 "Generated-By: Babel 2.11.0\n"
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:9
-#: 265fee914ddb45feb0b70593292431eb
+#: 9e923b96f3d3462aa12c2d1823d677c5
 msgid "Решение практической задачи 2"
 msgstr "Solution of practical task 2"
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:12
-#: f892cd3f93934902b9a567c78244e110
+#: db491e6fc4174ed2b237602efa8aa378
 msgid ""
 "Задача: прогнозирование потребительских предпочтений на промышленные "
 "товары"
 msgstr "Task: Predicting consumer preferences for industrial goods"
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:14
-#: 395ddae1618b4e11b03ccf522eda4029
+#: 6c0c5263ea9d4597bd5eec0600113c12
 msgid ""
 "Решение практической задачи выполняется в два этапа. На первом этапе "
 "необходимо использовать библиотеку OCEAN-AI для получения гипотез "
@@ -39,17 +39,15 @@ msgid ""
 "OCEAN-AI для решения представленной практической задачи. Примеры "
 "результатов работы и реализации представлены ниже."
 msgstr ""
-"The solution of the practical task is performed in two stages. "
-"At the first stage it is necessary to use the OCEAN-AI library "
-"to obtain predictions (personality traits scores)."
-" The second step is to use the"
-" \\_priority_calculation method from the"
-" OCEAN-AI library to solve the presented practical task." 
-" Examples of the results of the"
-" work and implementation are presented below."
+"The solution of the practical task is performed in two stages. At the "
+"first stage it is necessary to use the OCEAN-AI library to obtain "
+"predictions (personality traits scores). The second step is to use the "
+"\\_priority_calculation method from the OCEAN-AI library to solve the "
+"presented practical task. Examples of the results of the work and "
+"implementation are presented below."
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:18
-#: 3f6b1feb7822430d875dd4f6d3bc086b
+#: f0ac4f70c4c24c259637938a2db539f3
 msgid ""
 "Таким образом, библиотека OCEAN-AI предоставляет инструмент для анализа "
 "персональных качеств личности потребителей, что полезно для предсказания "
@@ -57,64 +55,64 @@ msgid ""
 "адаптировать свои товары и услуги к предпочтениям потребителей, делая их "
 "более уникальными и персонализированными."
 msgstr ""
-"Thus, the OCEAN-AI library provides tools to analyze the personality traits"
-" of consumers, aiding in predicting their interests. This enables companies"
-" to tailor products and services more accurately to consumer preferences,"
-" enhancing uniqueness and personalization."
+"Thus, the OCEAN-AI library provides tools to analyze the personality "
+"traits of consumers, aiding in predicting their interests. This enables "
+"companies to tailor products and services more accurately to consumer "
+"preferences, enhancing uniqueness and personalization."
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:20
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:30
-#: 05443bc51acf4464ae2552c06865c572 9556641e292e47779c4200973be0c187
+#: 142abc61a2154a3fbd9246260a22c9ef ea14915197ab4089905c8861df10029b
 msgid "<center>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:24
-#: a2aa6c6a8042452288b97334d0d54349
-msgid "|605c14d5ef004886bb4633634c84b2e0|"
+#: e9e30279f10a4697b438ae9f2c9c86e3
+msgid "|1b30dbef6dbb45a0b3e0a9ecdd8313cc|"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:44
-#: 75ee3bd3a17340f1b65f87cc8a3f00e1 ca1ce1f5ab8f43148aeb9d6f3394c320
-msgid "605c14d5ef004886bb4633634c84b2e0"
+#: a7d61b6edfb4473d8e40c95e451334df d2451dfcbd56480598c1a433438824e7
+msgid "1b30dbef6dbb45a0b3e0a9ecdd8313cc"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:26
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:36
-#: 2400a648a82b493ab5b3c0fc2b9d169d fd2a02e775404083a732ba969babba4c
+#: 6a65b044a33c42c690d7c3b619ab6f11 ab5b650708b24870a29941079c856298
 msgid "</center>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:34
-#: 2c25bac1b7c446d1ba4e264ea8ef7da0
-msgid "|a3445d4391944ab3aa63e7b20b67e399|"
+#: 437b0cec9e8144dca6398eb083bacbfb
+msgid "|afe04401435b4d6a836cd9d59cf13515|"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:47
-#: 4cf538672acc47d8af063562264030b5 7a02fab674a24b748ed2383e1ebec33a
-msgid "a3445d4391944ab3aa63e7b20b67e399"
+#: 1f3c70559cae498ea4f8718f2ca76721 771a7a10aa98417fb860209ea5df90c3
+msgid "afe04401435b4d6a836cd9d59cf13515"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:40
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:633
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2621
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4572
-#: 158b2be9a13b49eeb5aac47c5e7926f4 683e8785f29344bda288e4dcbd1023bb
-#: d28d187313ee49aab9582a8c19b0c5a3 fdd6bd46248c4a6c8d17081f35775915
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2623
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4574
+#: 315376861ff24295947e76e73012cfbc 4e35b73492fa4175b3e43c462ef8ef02
+#: 5e7c7f2de4774726ba38772309cc1e4a 6faedc6a0936461183d77c175a484f0d
 msgid "<hr>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:59
-#: 3d6ec8f9ea654ed8b0fa75720913cb30
+#: 5eb82d79ad4748c89a21ac251d574a43
 msgid "``FI V2``"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 1f16b570c486461bbd629424875a8e21 feffd1eca03541a6bfe52fbcecc599c6
+#: 19fb288041e242ceaa349d3ca7d326c3 e57f0128fcdb4543b0457046bceb3b0f
 msgid "[2]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 8308e9f0750748b993b694040c5807fd
+#: 4d8c25e81191492482d9c282f42a5cd6
 msgid ""
 "# Импорт необходимых инструментов\n"
 "import os\n"
@@ -231,7 +229,8 @@ msgstr ""
 "\n"
 "# Core setup\n"
 "_b5.path_to_save_ = './models' # Directory to save the models\n"
-"_b5.chunk_size_ = 2000000      # File download size from network in one step\n"
+"_b5.chunk_size_ = 2000000      # File download size from network in one "
+"step\n"
 "\n"
 "corpus = 'fi'\n"
 "\n"
@@ -315,22 +314,23 @@ msgstr ""
 "_b5.path_to_dataset_ = PATH_TO_DIR # Dataset directory\n"
 "_b5.ext_ = ['.mp4'] # Search file extensions\n"
 "\n"
-"# Full path to the file with ground truth scores for accuracy calculation\n"
+"# Full path to the file with ground truth scores for accuracy calculation"
+"\n"
 "url_accuracy = _b5.true_traits_[corpus]['sberdisk']\n"
 "\n"
 "_b5.get_avt_predictions(url_accuracy = url_accuracy, lang = 'en')"
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:176
-#: d5adb39a2bda4fd2a0bf31fbc6d14eca
+#: 3679342960264267bf7291a7d3485783
 msgid ""
 "\\ **[2023-12-16 19:05:15] Извлечение признаков (экспертных и "
 "нейросетевых) из текста …**"
 msgstr ""
-"\\ **[2023-12-16 19:05:15] Feature extraction (hand-crafted "
-"and deep) from text …**"
+"\\ **[2023-12-16 19:05:15] Feature extraction (hand-crafted and deep) "
+"from text …**"
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:187
-#: f7c74d844ba246ababa2aa16e83ee6bb
+#: 641cfdc978384e11837cdcb3bad52862
 msgid ""
 "\\ **[2023-12-16 19:05:17] Получение прогнозов и вычисление точности "
 "(мультимодальное объединение) …**"
@@ -339,15 +339,15 @@ msgstr ""
 "(multimodal fusion) …**"
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:189
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2177
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4128
-#: 443c0b0b28084133bd8d4b3d6a726995 609decb03c3c461a9cc00aab6d6ac283
-#: e57395b4f9474507af55d93c2d77964a
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2179
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4130
+#: 0ec3052a855d414ab2d0763ef0a65af5 16cc117c141d4ebca2b3cd210438a6f8
+#: 208e9ae307b84e06b57e367ba6a2f33a
 msgid "<p>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:193
-#: a03f628c4643404989986ab72dd78911
+#: a6292560efa34b649432b49393409e1c
 msgid ""
 "10 из 10 (100.0%) … GitHub:nbsphinx-math:`\\OCEANAI`:nbsphinx-"
 "math:`\\docs`:nbsphinx-math:`\\source`:nbsphinx-math:`\\user`\\_guide"
@@ -360,15 +360,15 @@ msgstr ""
 "math:`\\test`\\_plk5k7PBEg.003.mp4 …"
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:195
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2183
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4134
-#: 0b48174688e842698d14e1ffb4aeed02 1565a44f271545deb2d2c8e1a8fed676
-#: 777cb27151554a45b0a9c0245a183226
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2185
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4136
+#: 0a5a16a021eb48e4ad563283d3ed6e29 55ed48d31000459482b0fdbdbf461303
+#: 56c731ee7d18488db6ab761dadcbd9b5
 msgid "</p>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:211
-#: 25312aac008b4f359a93587aa270c1a0
+#: 5ce4584b6d5a48c8ab751f1760a02a5b
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -502,7 +502,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:350
-#: 265a00b57e46486797faa8ee061d0ce4
+#: a3ab73b1148446d6aa7c395927ad6d21
 msgid ""
 "<pre>\n"
 "                          Path  Openness Conscientiousness Extraversion  "
@@ -535,7 +535,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:380
-#: b8c0e25322d74aa0b47c7db8a032d11d
+#: bd166e5e5eec4575afdcc201e85332a6
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                          Path  Openness Conscientiousness Extraversion  "
@@ -570,7 +570,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:411
-#: 435c4113960d4e2cbabfdd55084fdd24
+#: 5d6ef640d88d48f8baa6c11a1ae3cfdb
 msgid ""
 "                          Path  Openness Conscientiousness Extraversion  "
 "\\\n"
@@ -601,14 +601,14 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:446
-#: 432badef41f144279d285b6e50e37bfd
+#: 24cb9a2ed7a74bdcaae42caba136f61d
 msgid ""
 "\\ **[2023-12-16 19:05:17] Точность по отдельным персональным качествам "
 "личности человека …**"
 msgstr "\\ **[2023-12-16 19:05:17] Trait-wise accuracy …**"
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:460
-#: 952ded0129f445e78ced087563af2d1c
+#: 8a1863ef64af43aeb1fca0210240645e
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -670,7 +670,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:527
-#: ff57150eb7234a57aa959166bb25a364
+#: 03e785b8237d4802b8c8b204d9710f81
 msgid ""
 "<pre>\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
@@ -686,7 +686,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:541
-#: fa901f9e184c4ffba61affac62c705d4
+#: 9c6a44446d3c45e683765552534be22f
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  "
@@ -703,7 +703,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:556
-#: 6836b3af7d3f4bfcb447f7ab0d0c9ab3
+#: aed7b89cf94f4b8f8d5eb2d782f0754b
 msgid ""
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
 "Metrics\n"
@@ -717,7 +717,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:575
-#: 518081b6e14c42d28bb4ab5c43527011
+#: d630af1d1b594154825f97ea14c35ece
 msgid ""
 "\\ **[2023-12-16 19:05:17] Средняя средних абсолютных ошибок: 0.0669, "
 "средняя точность: 0.9331 …**"
@@ -726,23 +726,23 @@ msgstr ""
 "accuracy: 0.9331 …**"
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:586
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2574
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4525
-#: 4ecadf905b8c49a2b60d7808dba78e9e 56840a99e91b4c71b011cf6b4eca4f98
-#: fd260ea37a17438aa16d20f4a93bc777
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2576
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4527
+#: a4c3b77322324487b530317cf5442ffc ca15210da6194618a846fb8659d5e7a5
+#: d9f4606951ee47dd879861cacfb6ed92
 msgid "Лог файлы успешно сохранены …"
 msgstr "Log files saved successfully …"
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:597
-#: beb49e19d4994867936c54fc128444ab
+#: c6e670afb5704a90a9cead3b7aa0985f
 msgid "— Время выполнения: 64.147 сек. —"
 msgstr "— Runtime: 64.147 sec. —"
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:609
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2597
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4548
-#: 2b7ddb2c7e084501beb964c2e233e388 b91839084e6149bdb871a9a789e1f7b9
-#: ceb20df05bf14021a7890b092207c244
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2599
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4550
+#: 20a6ee7d5368483b98b4101477972be7 3a5ef8fa044240eb902b8583303e28e8
+#: ff2e111a41ae437d9972b09a8dda18c5
 msgid ""
 "<pre>\n"
 "True\n"
@@ -750,10 +750,10 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:615
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2603
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4554
-#: 73a08d98afd14cc38b38a1bc695709fb d1c2f26d8406482dafe7ca6e2a3f5ab0
-#: f5d04bab6ffb41c8aa4c5c97c8ac93fb
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2605
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4556
+#: 0e554ef3137849cdb6d5070f1eb5ce97 8d7931f9792c4fd8ab1fd74f00681cc6
+#: b8a2d63183394a30be2ca8a516319fc9
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "True\n"
@@ -761,18 +761,18 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:622
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2610
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4561
-#: 8458f561ee8e4dd9a28e1a7993c17c63 9cc86cc2b9474d54b6fef898cb7c0f60
-#: e84f8a4e649046248352d86ba8bb7a7f
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2612
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4563
+#: 18815df5aaae48a79702bbe729a56cee 42dea05175384765b65aace2cc291959
+#: ea354e6a1d8b4490b557ac66afb1a072
 msgid "True"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:637
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2625
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4576
-#: 31418b44d4fd4c3fa4834f0de46ed9cd 64ce738578bc47cc9f674bef76bfe7bc
-#: 6a90201bda6b48668602078ca3438d5c
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2627
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4578
+#: 50af82dc9c7f4f43a472e9eff5d75e5f b21eebf518ce4dd586b44af3b83a3cf8
+#: e0758d6c74874ffcbe634e9eef819d1d
 msgid ""
 "Для прогнозирования потребительских предпочтений в промышленных товарах "
 "необходимо знать коэффициенты корреляции, определяющие взаимосвязь между "
@@ -784,47 +784,56 @@ msgstr ""
 " personality traits and preferences in goods or services."
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:639
-#: 62495f54b04046119a3491c49bfdc6e1
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2629
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4580
+#: 46e7b1150b864076a793a2dfcbe6af68 8e704281a35842eca69b38daad7dd009
+#: d0631edcf5584ae79287dc5827b6cf7f
 msgid ""
 "В качестве примера предлагается использование коэффициентов корреляции "
 "между персональными качествами человека и характеристиками автомобилей, "
-"представленными в статье:1)"
+"представленными в статье:"
 msgstr ""
 "As an example, it is proposed to use the correlation coefficients between"
 " the personality traits and the characteristics of the cars presented in "
-"the article: 1)"
+"the article:"
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:641
-#: abb11adf03b049d6a11540dadd72f68f
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2631
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4582
+#: 0a4659ecdcf14b4c88ccc5c39af1c142 9dd31508ff4a4608a147ad87a7aaf84e
+#: e1eabee47bd84374b58f7e40c708506c
 msgid ""
 "O’Connor P. J. et al. What Drives Consumer Automobile Choice? "
 "Investigating Personality Trait Predictors of Vehicle Preference Factors "
-"// Personality and Individual Differences. – 2022. – Vol. 184. – pp. 111 "
-"220. Пользователь может установить свои коэффициенты корреляции."
+"// Personality and Individual Differences. – 2022. – Vol. 184. – pp. "
+"111220."
 msgstr ""
-"O’Connor P. J. et al. What Drives Consumer Automobile Choice? "
-"Investigating Personality Trait Predictors of Vehicle Preference Factors "
-"// Personality and Individual Differences. – 2022. – Vol. 184. – pp. 111 "
-"220. The user can set their own correlation coefficients."
 
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:643
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2633
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4584
+#: 6913758f08eb4163bc215c1fde28ea00 6ab4d21de40747d8ab4832e6f265fa17
+#: b76c593f2a624f95bc0bb59e216275d8
+msgid "Пользователь может установить свои коэффициенты корреляции."
+msgstr "The user can set their own correlation coefficients."
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:653
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2643
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4594
-#: 1d9ad628ff6f40a888b05ce446279390 58b91dc82c8244a2a4dc90265b29f8ad
-#: d2488143870d4c3daf5b86ccb3816cdf
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:655
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2645
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4596
+#: 6afb1a94c7d44c50a9994026f2ef2d67 df72e363ae3946e3ac6b0c503ac47bee
+#: eae63b39523648bc962f0daed30bfd8e
 msgid "Прогнозирование потребительских предпочтений на характеристики атомобиля"
 msgstr "Predicting consumer preferences for industrial goods"
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 36e34b5764a14ce9bcd3f25d3280da41 6151297549fe4227b363404424b1b6e6
-#: eddc97161e124b4287132d16fadc3269
+#: 88831fea54284e49bfdb68cb97989f4a a9f2457a6ade4dd99c2163ac6d2ac93e
+#: ae570ee291ae4f14b3d256ac742c49f0
 msgid "[3]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 053362fc7fc7483b9357d52e62b3eacd 16ff61e533e047e9a2d02e44ccc1362b
-#: a58e1921bc7a4957880d81a92f56bc79
+#: 0409f62cfbe34f27b2c7c2fdecf8ab9d 7986d0217ec3457796f929d36c3a25b2
+#: e06a610170af48e0ad073666b8c486cb
 msgid ""
 "# Загрузка датафрейма с коэффициентами корреляции\n"
 "url = "
@@ -858,11 +867,11 @@ msgstr ""
 "\n"
 "df_correlation_coefficients"
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:687
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2677
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4628
-#: 3d712eee39e243379c27cf4bf8906022 a742ead145c34555acf22a2ec6bb3ab5
-#: e06cd49e648a450bb56e7c4e80e656f5
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:689
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2679
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4630
+#: 65d366ee2a3442a284ade20f6f8b4559 80e3ed11790e42bb85d0ea0e3ea0514c
+#: e9aa29fb57c6491ea4bb8cd9e2ec0261
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -992,11 +1001,11 @@ msgid ""
 "</div>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:823
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2813
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4764
-#: 15158b4b31b44447955ffda9bed466fd 591cab6989cc44439d5a6da1cc640347
-#: b1b0756f4e2d4e51a9a780dc5e2d8efe
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:825
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2815
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4766
+#: 28dd9d686b1b45089bbcbbeab42d061a 91492ca7c2a64926b6964e0f808fe8e6
+#: 931249ef199a482091e823ec992c004a
 msgid ""
 "<pre>\n"
 "                Trait  Performance  Classic car features  Luxury "
@@ -1040,11 +1049,11 @@ msgid ""
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:859
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2849
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4800
-#: 39491b7af2d34bdaa07ffa6d93c5ca97 9b1b5eda09d94895baa7865f2d05c9e1
-#: 9dd3f2041406418bbde8a8a8ff947eca
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:861
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2851
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4802
+#: 08ee615edf4e489da8d51dfe8e098ad4 327238c0d45f4df6bda3d69858d7094f
+#: f612cfafe38c400d826facbf82e16421
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                Trait  Performance  Classic car features  Luxury "
@@ -1089,11 +1098,11 @@ msgid ""
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:896
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2886
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4837
-#: 37db77ec80814b44884ce62835271565 39922ba4088543df8c00f6c5a3199d1e
-#: 5e8d7124bb3a43b598d9dd27a40f127e
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:898
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2888
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4839
+#: 4e0cd28262f448ab8c35faf0bc6dd264 6da91f33cdf948a9921b7c398058f961
+#: e55c14d3416543b8a7bdfad312af3f5e
 msgid ""
 "                Trait  Performance  Classic car features  Luxury "
 "additions  \\\n"
@@ -1136,13 +1145,13 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 682630bbbd164b089c2f425f9e71145e 7d230168b3f249aa8bcb590ef511057f
-#: e6d51f7ed7e046b692cc86505750175f
+#: 18ec63da63bb45bc9d50790a54b4b455 288dc30df055441b92f699073958e62a
+#: 937d2d198a03434fbb4e184d0b757887
 msgid "[4]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 554b576b689a47fe9613beeec957532d
+#: 60dbe3a4576743d88aaa3b3bc91d1a6d
 msgid ""
 "_b5._priority_calculation(\n"
 "    correlation_coefficients = df_correlation_coefficients,\n"
@@ -1186,8 +1195,8 @@ msgstr ""
 "for i in x])\n"
 "df"
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:965
-#: 11531efa6ba24183a4844ff6ff3f1c03
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:967
+#: 26b5f527c8154f5093625d9cc579c820
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -1392,8 +1401,8 @@ msgid ""
 "</div>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1176
-#: e911a81da31747338f043104bc47765e
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1178
+#: 29e480ebb8274435b52a99763228979d
 msgid ""
 "<pre>\n"
 "                          Path    OPE    CON    EXT    AGR   NNEU  \\\n"
@@ -1461,8 +1470,8 @@ msgid ""
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1232
-#: 28002ea829f0404985a2196b0a201057
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1234
+#: d0168b87f5be4c3fa7b62aac3f4b8c75
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                          Path    OPE    CON    EXT    AGR   NNEU  "
@@ -1532,8 +1541,8 @@ msgid ""
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1289
-#: 4a31f7870f03441194aa3ac710807ea5
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1291
+#: 6945aef3631e4b3d80b429e2d93931a6
 msgid ""
 "                          Path    OPE    CON    EXT    AGR   NNEU  \\\n"
 "Person ID\n"
@@ -1599,35 +1608,35 @@ msgid ""
 "10                  Openness"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1351
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3302
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5292
-#: 67a50946a01e4d279254f2d70370377b f135ae2678334f65be7f6864a9634566
-#: f47a6d14fe5540d2899f3e535562107d
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1353
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3304
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5294
+#: 0bdb89edaa9847fda703767e55aa90c9 5a66a75215c94c97a366d6df006dca65
+#: c3cebf952f274f49b2280a61b4eb619e
 msgid ""
 "Прогнозирование потребительских предпочтений на характеристики мобильного"
 " устройства"
 msgstr "Predicting consumer preferences for industrial goods"
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1353
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3304
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5294
-#: 5eb723395a6a43439aea3827030c37b1 934f03cfe57d4898a4a59af228a87bfe
-#: d9f86b30fa984b66a1a9ce3578b17f63
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1355
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3306
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5296
+#: 764c327544f643daa84e753533335dc1 8e6f7023195f4b30876aabbbd417dcdb
+#: cea277bd3bbd4a9ba7087e9a0afa8267
 msgid ""
 "В качестве примера предлагается использование коэффициентов корреляции "
 "между персональными качествами человека и характеристиками мобильного "
 "устройства, представленными в статье:"
 msgstr ""
 "As an example, it is proposed to use the correlation coefficients between"
-" the personality traits and the mobile device application categories"
-" presented in the article:"
+" the personality traits and the mobile device application categories "
+"presented in the article:"
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1355
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3306
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5296
-#: aca8fe29a480404f80ad15d5aefe3bee ce5eae9423304bc5ae67ea8b9abacf07
-#: e9ee6a58d1cc4fd2a4a8aff526e03c46
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1357
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3308
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5298
+#: 10c28dcda9544ba3bfb34c5da86885c4 80460b91fe9247bc85f33f24fe841e68
+#: cb7243a328b7489990ebcb3d454db62c
 msgid ""
 "Peltonen E., Sharmila P., Asare K. O., Visuri A., Lagerspetz E., Ferreira"
 " D. (2020). When phones get personal: Predicting Big Five personality "
@@ -1636,14 +1645,14 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 1a91f0bcbfc843c8b3340d0feb385854 3880c43686bb4e57ac034babb17ac1bd
-#: a417f99a0d804ed1bba4a15ca6862539
+#: 47924eb828f4464dbc791df3faf91de2 57690393939e4148b8c2eada436b1adb
+#: d21d381dc7fd4da995fc98d18c52d70e
 msgid "[5]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 331444a75ff247c4865332960d608ae9 a06b0ec6c6a9463988b55dc23fa1c784
-#: f8641c57248643d4ac96d5481fac6582
+#: 50b05a263a744a6b9040d6b53fdae7d9 64d97784d4594dc8b30724272d2aac2c
+#: 66ca3b70ebc9425fbb1985cc21d2a196
 msgid ""
 "# Загрузка датафрейма с коэффициентами корреляции\n"
 "url = "
@@ -1671,11 +1680,11 @@ msgstr ""
 "\n"
 "df_divice_characteristics"
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1387
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3338
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5328
-#: 776e9c161fc5414687cf8f2a39e3afbe d465d8bfeabb4d49bf86b398c9f88bfa
-#: fec8f99bdc9c40579b7402b5ac9e97d8
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1389
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3340
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5330
+#: 0dc9290b394a43efb8b7c5baa9dfb380 a2ab5f93924f4544833b297048044d06
+#: bf25af30ab20414487bf926026f26ba0
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -1840,11 +1849,11 @@ msgid ""
 "</div>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1558
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3509
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5499
-#: 1b8e6843f0f54add99ff01888336f009 3a5a448f05064ac2aaa15728e3780ca7
-#: 995018d7ff474c48871572cf28ed6ee4
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1560
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3511
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5501
+#: 22186fa8a901423787f3c111d2c92136 3c4b34cb71354b11bcb2df7aeaefac79
+#: 57c7fbad7dc54d05a7acd614f1da3e1a
 msgid ""
 "<pre>\n"
 "                Trait  Communication  Game Action  Game Board  Game "
@@ -1899,11 +1908,11 @@ msgid ""
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1594
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3545
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5535
-#: 66afaffe70004132864c6aac691eb4bb ba561c511c5b43a48490dae658d89e3e
-#: c01cf4b47cb44f36982e169cb675e427
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1596
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3547
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5537
+#: 59dc773dda2349649d0c6f3b7220fe55 70a7213bbdf844afbb4f770f742195d9
+#: ef9dd458c53e4c038a8f160074e39589
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                Trait  Communication  Game Action  Game Board  Game "
@@ -1958,11 +1967,11 @@ msgid ""
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1631
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3582
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5572
-#: 39a302b0253b4b7d8bc64ec7e076766f 9f97164f20da4397b1bbebeba910e6cd
-#: b77c07ee36604d789db656c49db0298e
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1633
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3584
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5574
+#: 417d4878b0c64545b45e9354621174c1 e52434ea254b4b709bf5dd63779629b5
+#: f1da61b031c74ed096b2e59b8a909bd4
 msgid ""
 "                Trait  Communication  Game Action  Game Board  Game "
 "Casino  \\\n"
@@ -2016,13 +2025,13 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 5e9403577a0b49f480ba762a1ca111ff c5e752dffff0444d861fac4c25e1cfb8
-#: f148085721d2427abffda34bdac6bac4
+#: 373aab4235564742a88701fb02b3f706 ca70c04860304c60a0b0379ce3982265
+#: d4c6737b73034db0ac767d7a0b15b8a2
 msgid "[6]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: e6d0f866c5584751a70f4eb57c469eae
+#: c9a0dc0bad2f44d7b57ccdf63b94f8d5
 msgid ""
 "_b5._priority_calculation(\n"
 "    correlation_coefficients = df_divice_characteristics,\n"
@@ -2066,8 +2075,8 @@ msgstr ""
 "for i in x])\n"
 "df"
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1700
-#: d36aefba3bbc43098a2f5232f60756d5
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1702
+#: 42e58f9c67bf43d29d978f461d112708
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -2272,8 +2281,8 @@ msgid ""
 "</div>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1911
-#: 0b0e698af1dc40b9b30b53bb63b48482
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1913
+#: ce2115a23d0948e0b256b775a427f4ad
 msgid ""
 "<pre>\n"
 "                          Path    OPE    CON    EXT    AGR   NNEU  \\\n"
@@ -2317,8 +2326,8 @@ msgid ""
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1954
-#: 62f12408cd7f42c4bc2c279afe007fad
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1956
+#: 15914525994b4256b4cdf1d766be58d0
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                          Path    OPE    CON    EXT    AGR   NNEU  "
@@ -2364,8 +2373,8 @@ msgid ""
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1998
-#: 8f4b2148e2ed4028bf8dc7a0212254dc
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2000
+#: 703fff670f1240d9a8c86e5a96996fab
 msgid ""
 "                          Path    OPE    CON    EXT    AGR   NNEU  \\\n"
 "Person ID\n"
@@ -2407,18 +2416,18 @@ msgid ""
 "10           Non-Neuroticism      Agreeableness  Conscientiousness"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2047
-#: 3207769abb6f43b0bfb9e8a3c9a12ff2
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2049
+#: 91ab37243bc54fd092b2532e050debf5
 msgid "``MuPTA`` (ru)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 10f1f67cbb6f4f59a5cbb52f4b35d3cf b13bd9434bac45cb836f449aa378d05c
+#: dd6b7c393b834289bd66bdc1433ed29d f546604a6eb748e4bdde7cb8bc54b70f
 msgid "[7]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 84a2b25d2c5b431b905131264b182afa
+#: 70d3089ea4ef4038b620cd7a4aad5caa
 msgid ""
 "import os\n"
 "import pandas as pd\n"
@@ -2537,7 +2546,8 @@ msgstr ""
 "\n"
 "# Core setup\n"
 "_b5.path_to_save_ = './models' # Directory to save the models\n"
-"_b5.chunk_size_ = 2000000      # File download size from network in one step\n"
+"_b5.chunk_size_ = 2000000      # File download size from network in one "
+"step\n"
 "\n"
 "# Building audio models\n"
 "res_load_model_hc = _b5.load_audio_model_hc()\n"
@@ -2619,22 +2629,23 @@ msgstr ""
 "_b5.path_to_dataset_ = PATH_TO_DIR # Dataset directory\n"
 "_b5.ext_ = ['.mov'] # Search file extensions\n"
 "\n"
-"# Full path to the file with ground truth scores for accuracy calculation\n"
+"# Full path to the file with ground truth scores for accuracy calculation"
+"\n"
 "url_accuracy = _b5.true_traits_['mupta']['sberdisk']\n"
 "\n"
 "_b5.get_avt_predictions(url_accuracy = url_accuracy, lang = lang)"
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2164
-#: 5c1a0f0cd21d4220b26202386a1ebb38
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2166
+#: 5708d1dcb34b4cc5bedcc60a0ee779d4
 msgid ""
 "\\ **[2023-12-16 19:13:25] Извлечение признаков (экспертных и "
 "нейросетевых) из текста …**"
 msgstr ""
-"\\ **[2023-12-16 19:13:25] Feature extraction (hand-crafted "
-"and deep) from text …**"
+"\\ **[2023-12-16 19:13:25] Feature extraction (hand-crafted and deep) "
+"from text …**"
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2175
-#: c2713f16ed5c48f7b825739fafeebfdb
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2177
+#: 72257ea21d444e22848d07eaa1e539af
 msgid ""
 "\\ **[2023-12-16 19:13:30] Получение прогнозов и вычисление точности "
 "(мультимодальное объединение) …**"
@@ -2642,9 +2653,9 @@ msgstr ""
 "\\ **[2023-12-16 19:13:30] Getting scores and accuracy calculation "
 "(multimodal fusion) …**"
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2181
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4132
-#: 68cf61572cb84eadafe546658b59788e 8afbc23b4254419c95db30ed9c27a4dd
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2183
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4134
+#: a394c415b59d498d8515bda754b34d87 dfee139a698c4af79b6fe789aa314a80
 msgid ""
 "10 из 10 (100.0%) … GitHub:nbsphinx-math:`\\OCEANAI`:nbsphinx-"
 "math:`\\docs`:nbsphinx-math:`\\source`:nbsphinx-math:`\\user`\\_guide"
@@ -2656,8 +2667,8 @@ msgstr ""
 ":nbsphinx-math:`\\notebooks`:nbsphinx-math:`\\video`\\_MuPTA:nbsphinx-"
 "math:`\\test`:nbsphinx-math:`\\speaker`\\_27_center_83.mov …"
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2199
-#: 4632624d0fa546fa973df5992c776e6a
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2201
+#: 979024bdf0c14d30be7481ba04336b7a
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -2790,8 +2801,8 @@ msgid ""
 "</div>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2338
-#: bd49f6f42cb74902851a114fc322a742
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2340
+#: 1b3d47dfdd24418197f0f7bbeffe8920
 msgid ""
 "<pre>\n"
 "                               Path  Openness Conscientiousness "
@@ -2833,8 +2844,8 @@ msgid ""
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2368
-#: 5559a38ef174458f99d73f6111e01270
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2370
+#: 808493385e20493bb1e33717e7f7a048
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                               Path  Openness Conscientiousness "
@@ -2876,8 +2887,8 @@ msgid ""
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2399
-#: c2252ba8ad1e45d2a9a117b9389c0954
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2401
+#: bcc33bcdfec44a49940f91d13741ba21
 msgid ""
 "                               Path  Openness Conscientiousness "
 "Extraversion  \\\n"
@@ -2917,15 +2928,15 @@ msgid ""
 "10             0.816416        0.504743"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2434
-#: c08a236fc5e44ccaa826e34cb98b3b89
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2436
+#: 6ebff413260c4af4a29ec84ba2ef80fc
 msgid ""
 "\\ **[2023-12-16 19:13:30] Точность по отдельным персональным качествам "
 "личности человека …**"
 msgstr "\\ **[2023-12-16 19:13:30] Trait-wise accuracy …**"
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2448
-#: 8b3f5d41847b429da7e9968684ce40a9
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2450
+#: 950f6fe43d2c4ab1af128ac457236301
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -2986,8 +2997,8 @@ msgid ""
 "</div>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2515
-#: 277c7638146944428aa48af4fb72d2a2
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2517
+#: dac430f2a29e46518d8d322a4388720b
 msgid ""
 "<pre>\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
@@ -3002,8 +3013,8 @@ msgid ""
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2529
-#: 44cf129601964630b9ee0c51c5003f05
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2531
+#: af5d0d379f7b4d89a72624152757e8c4
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  "
@@ -3019,8 +3030,8 @@ msgid ""
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2544
-#: 86b93734e5234e069103edde0132c9af
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2546
+#: 348be7d3385c4fbdbe5c336b7831e8f6
 msgid ""
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
 "Metrics\n"
@@ -3033,8 +3044,8 @@ msgid ""
 "Accuracy           0.8998  0.9038"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2563
-#: 70d1e3178ef74298a74b118ff2b9dad3
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2565
+#: cb00a5f97248411995e8eff2564229d8
 msgid ""
 "\\ **[2023-12-16 19:13:30] Средняя средних абсолютных ошибок: 0.0962, "
 "средняя точность: 0.9038 …**"
@@ -3042,53 +3053,25 @@ msgstr ""
 "\\ **[2023-12-16 19:13:30] Mean absolute errors: 0.0962, average "
 "accuracy: 0.9038 …**"
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2585
-#: 345022add41146339d2411d5f488eb44
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2587
+#: 0d7d831c9bab48d285b0e1531a268308
 msgid "— Время выполнения: 416.453 сек. —"
 msgstr "— Runtime: 416.453 sec. —"
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2627
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4578
-#: a0b6591ad0874e3c9d6ba9936fb5d2f9 aba24b4c6bbc4e5b94759706e8813784
-msgid ""
-"В качестве примера предлагается использование коэффициентов корреляции "
-"между персональными качествами человека и характеристиками автомобилей, "
-"представленными в статье:"
-msgstr ""
-"As an example, it is proposed to use the correlation coefficients between"
-" the personality traits and the characteristics of the cars presented in "
-"the article:"
-
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2629
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4580
-#: 246211e7b73f47ea84e6003c27781e0f d3af1ca9037841e582fd4eb5c4951f1b
-msgid ""
-"O’Connor P. J. et al. What Drives Consumer Automobile Choice? "
-"Investigating Personality Trait Predictors of Vehicle Preference Factors "
-"// Personality and Individual Differences. – 2022. – Vol. 184. – pp. "
-"111220."
-msgstr ""
-
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2631
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4582
-#: cd49ff87a7824216869bafd834a158b8 e03b2b384a78472db0faaab30cf49bd7
-msgid "Пользователь может установить свои коэффициенты корреляции."
-msgstr "The user can set their own correlation coefficients."
-
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 1e260b1c2db4476aaa569b243222d71f b2da204bdb0a4ff08b6fa74df02ffb0e
-#: cf09c63b022f46b0a5d86a572e302832
+#: 9b7fa10f8ba1475fb3860acc295acb7c cec9ffd4ec5945c99d7de4364577d797
+#: d9d757aebf5440a7bc56fd2faa8a3410
 msgid "[8]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 49b246db206d47c48cdf658e31657e10 6f5d2ea2310b47e1b3a6a7c9c39f0477
-#: 80db6eca2845472e92480bcc8c3cfdb1
+#: 37de9a17920f441382c71c56386f09eb 755745a5eb504e40bd73d169d64e45f7
+#: d416aea7884548d39dfff01445b0cd94
 msgid "[9]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 3d8a547f3a344a53bb464c0b9778a98a
+#: 32fd46822bb84ea8805f65abc7c357dc
 msgid ""
 "_b5._priority_calculation(\n"
 "    correlation_coefficients = df_correlation_coefficients,\n"
@@ -3132,8 +3115,8 @@ msgstr ""
 "for i in x])\n"
 "df"
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2955
-#: 2acda7ba3a2447ec8a38116147867967
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2957
+#: 3d070fcdab0e4b0d83381cd08fdf105e
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -3338,8 +3321,8 @@ msgid ""
 "</div>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3166
-#: ce1a968a26074cd0a899dad288200238
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3168
+#: 6138b8e8b52642f09fcfbd1609e5a52d
 msgid ""
 "<pre>\n"
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
@@ -3395,8 +3378,8 @@ msgid ""
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3209
-#: 9359d44b131545ea8853ce9eeb56d44f
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3211
+#: 1c55e9f7ed1b4fcab16f54f16b44aa34
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
@@ -3462,8 +3445,8 @@ msgid ""
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3253
-#: 9ea5efc87d7b425cb5e531c3946b45eb
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3255
+#: 313edc2471544777a25927746458937f
 msgid ""
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
 "\\\n"
@@ -3518,19 +3501,19 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: a083a9a4147e473cbc228554aa9909c9 dce3ebceab63463fbee6062d10e7e507
-#: ffa471f4308246bf9c803a2743ec9160
+#: 0ccebe0d4d7d4bd1bb4f9bfd21f47776 d9a0c8a5c46b4f6ea3c95a6eac589e3c
+#: dec8267e05c242f5910306cf5f0f39a4
 msgid "[10]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 17c26a359efd4560bdde9fac8740ab33 361d4e4898274a1b89ddf533916d465a
-#: c161742f4c354f76b91e0b4cbb76b9e1
+#: 2fcf06f6dc0840f3a796e2cbd118bfde 6f191c02dabd41fca452ebf7f1b77b3d
+#: a842081c7b0849c0bfd30ccff76d8e59
 msgid "[11]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: bdc647cc7e4c486e8a461512519ffeb3
+#: ff14c810a6174339964fa692a6511710
 msgid ""
 "_b5._priority_calculation(\n"
 "    correlation_coefficients = df_divice_characteristics,\n"
@@ -3574,8 +3557,8 @@ msgstr ""
 "for i in x])\n"
 "df"
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3651
-#: 24e9bb2a55704399ade29e6ac550cb2c
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3653
+#: 21661c37502a48e683853d8bde1cf807
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -3780,8 +3763,8 @@ msgid ""
 "</div>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3862
-#: 0500351830ac45549198c33b6ebee592
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3864
+#: e45e5433bd2740afb0336dd9007fcdec
 msgid ""
 "<pre>\n"
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
@@ -3826,8 +3809,8 @@ msgid ""
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3905
-#: 1796a4caf6884135a9794f6962d76749
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3907
+#: 2dbd0b1ebcec455eb832b9ef416cc38f
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
@@ -3883,8 +3866,8 @@ msgid ""
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3949
-#: 8c3d13515c74487a888dc9e4999e0c88
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3951
+#: 51fbc73205144698a940fdd3382e5076
 msgid ""
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
 "\\\n"
@@ -3927,18 +3910,18 @@ msgid ""
 "10              Extraversion  Conscientiousness"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3998
-#: 0bb820b9b76e4cceb021eb855e86e9ba
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4000
+#: 3359a96dc7344df5a3a52e72eae65d96
 msgid "``MuPTA`` (en)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 11169e7dff644d0dbb207eb4c0805ae9 1f7435962b8e48668210230a5458028b
+#: aba3ceeeb2f14fc7976745e26c795f28 fab90d11187d4a97a0adc4aad2be7c49
 msgid "[12]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 7c22d3594cda47e5b8b7198b03c00df3
+#: 59fa35106a7b45a7978963dc70553cce
 msgid ""
 "import os\n"
 "import pandas as pd\n"
@@ -4057,7 +4040,8 @@ msgstr ""
 "\n"
 "# Core setup\n"
 "_b5.path_to_save_ = './models' # Directory to save the models\n"
-"_b5.chunk_size_ = 2000000      # File download size from network in one step\n"
+"_b5.chunk_size_ = 2000000      # File download size from network in one "
+"step\n"
 "\n"
 "# Building audio models\n"
 "res_load_model_hc = _b5.load_audio_model_hc()\n"
@@ -4139,22 +4123,23 @@ msgstr ""
 "_b5.path_to_dataset_ = PATH_TO_DIR # Dataset directory\n"
 "_b5.ext_ = ['.mov'] # Search file extensions\n"
 "\n"
-"# Full path to the file with ground truth scores for accuracy calculation\n"
+"# Full path to the file with ground truth scores for accuracy calculation"
+"\n"
 "url_accuracy = _b5.true_traits_['mupta']['sberdisk']\n"
 "\n"
 "_b5.get_avt_predictions(url_accuracy = url_accuracy, lang = lang)"
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4115
-#: bd166dc7a2044ca7a120e264a208f144
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4117
+#: 919739c1cdd94b21a1f2cd706426aca7
 msgid ""
 "\\ **[2023-12-16 19:20:55] Извлечение признаков (экспертных и "
 "нейросетевых) из текста …**"
 msgstr ""
-"\\ **[2023-12-16 19:20:55] Feature extraction (hand-crafted "
-"and deep) from text …**"
+"\\ **[2023-12-16 19:20:55] Feature extraction (hand-crafted and deep) "
+"from text …**"
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4126
-#: c0815c669c5248ae80f3687c81786a4c
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4128
+#: bb78fda56fe04d319f80b3706810b6a4
 msgid ""
 "\\ **[2023-12-16 19:20:57] Получение прогнозов и вычисление точности "
 "(мультимодальное объединение) …**"
@@ -4162,8 +4147,8 @@ msgstr ""
 "\\ **[2023-12-16 19:20:57] Getting scores and accuracy calculation "
 "(multimodal fusion) …**"
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4150
-#: 7770506bf4034ed39df468f06d9e5da9
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4152
+#: 32eb6286df744166bf94108761201d27
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -4296,8 +4281,8 @@ msgid ""
 "</div>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4289
-#: c0be3dce1f944a5dbf19f6e481275197
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4291
+#: 87d45b2a44504347a8f0c5f54e18466b
 msgid ""
 "<pre>\n"
 "                               Path  Openness Conscientiousness "
@@ -4339,8 +4324,8 @@ msgid ""
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4319
-#: 1264c980ab0c48d8a85fa2985c328570
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4321
+#: 1e548592d8e443b0a0a3fc22b8f973cd
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                               Path  Openness Conscientiousness "
@@ -4382,8 +4367,8 @@ msgid ""
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4350
-#: b1ba13f499eb4a7c8ecf13a1063a45bd
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4352
+#: 6bd6349a096147c0a13f221f1f3b271e
 msgid ""
 "                               Path  Openness Conscientiousness "
 "Extraversion  \\\n"
@@ -4423,15 +4408,15 @@ msgid ""
 "10             0.558965        0.554224"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4385
-#: 1aa08208b7374afbaf92eb7171249df0
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4387
+#: 70a5a621e5da416e9208077c8c668329
 msgid ""
 "\\ **[2023-12-16 19:20:57] Точность по отдельным персональным качествам "
 "личности человека …**"
 msgstr "\\ **[2023-12-16 19:20:57] Trait-wise accuracy …**"
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4399
-#: f943026de2404e95a5fcec7694f783fd
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4401
+#: e8254133bc4542d8866057a38c1998b3
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -4492,8 +4477,8 @@ msgid ""
 "</div>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4466
-#: 1bc9381bdfe84e0abf292f08bd1f5894
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4468
+#: 634153b438d241999e81ec99cf7b3e95
 msgid ""
 "<pre>\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
@@ -4508,8 +4493,8 @@ msgid ""
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4480
-#: a6f3555742f647dc86e665ac984afd74
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4482
+#: 234ca6d5d6934f4abbdcdfb5da5dc4cd
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  "
@@ -4525,8 +4510,8 @@ msgid ""
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4495
-#: ab8c183952924ebba37625aea2d03ddc
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4497
+#: 024a3b527f034be296c892c2a07334a9
 msgid ""
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
 "Metrics\n"
@@ -4539,8 +4524,8 @@ msgid ""
 "Accuracy            0.893  0.8258"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4514
-#: d6f1ca802ad14a3d9e7bca69b268b2f3
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4516
+#: 32f5d99668e144afb90c18a3feb84b2c
 msgid ""
 "\\ **[2023-12-16 19:20:57] Средняя средних абсолютных ошибок: 0.1742, "
 "средняя точность: 0.8258 …**"
@@ -4548,25 +4533,25 @@ msgstr ""
 "\\ **[2023-12-16 19:20:57] Mean absolute errors: 0.1742, average "
 "accuracy: 0.8258 …**"
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4536
-#: b9f3c40cf0754a9da380d29d8623b4d8
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4538
+#: b3702d30bb8e45c7ab5b721e9d1b77d5
 msgid "— Время выполнения: 379.936 сек. —"
 msgstr "— Runtime: 379.936 sec. —"
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 03f2e51feabc488189f0aa7124afd14e 3c7c5d5358cb4dab993144756e941ad6
-#: 8913adc243904a75903d922c90f21349
+#: 0476d4728abc4bd1844f852846d7b6b7 510024e024e24cd58113c24cb5895dda
+#: ec08298e6df14a048be6e0bc5a69fb1a
 msgid "[13]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 8e51aa9665f2478cb7bed633048bf394 96a959de914c45938669096a1cb97722
-#: ca7dc60dfac24c13a13cb967c0094866
+#: 13b00701b04e446d8e1e1c694447608f 4de5db5eee4345f3b8b601be8c9beccf
+#: 97370198fba04d938a57e18fa14a933d
 msgid "[14]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: c9bdc60c8388472185f6354ff0c78d20
+#: 23fbdd7fff0c41e49a923dfe77762b97
 msgid ""
 "_b5._priority_calculation(\n"
 "    correlation_coefficients = df_correlation_coefficients,\n"
@@ -4610,8 +4595,8 @@ msgstr ""
 "for i in x])\n"
 "df"
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4906
-#: 5dac8b9094cf4975a7116f67e4c52f74
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4908
+#: fc50b1fef72b413da3d85001bf3d5ef4
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -4816,8 +4801,8 @@ msgid ""
 "</div>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5117
-#: fa043f2a559c4487b85db0c01fa404cb
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5119
+#: 6da7d10111fc4a228dbc410223040c45
 msgid ""
 "<pre>\n"
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
@@ -4875,8 +4860,8 @@ msgid ""
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5173
-#: c6fe2c8a121d40ffa77478cc95cfbb0d
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5175
+#: 7d1b8b57b6aa4aa9be535227c760f43c
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
@@ -4946,8 +4931,8 @@ msgid ""
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5230
-#: 6a99a4ad700c4d189e6458ac614c9490
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5232
+#: f24936a5e11b43748d2a4d1b382ca649
 msgid ""
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
 "\\\n"
@@ -5004,19 +4989,19 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 5fd1783f62414ca1ad64f168b3c13a44 7551ba4d3b1042d7a60aacd4928b5c7f
-#: ed43bf2f479c426da55692786ab36bdd
+#: 0f8873d750a8469a824cb1ecc2ed61cd a6fa572c6e8645deaf4bab38475c9a4b
+#: ec3acce1924a4984bbacf60549ded587
 msgid "[15]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 396d99f220b241349107554a1bb1f436 8a495c976d254ae0b36121a503c60d76
-#: 926bbba7387e49db9c1d3af0446c1178
+#: 11ac3aff03cc44f4bd51e14148aa50df 33fc035b7f184c329958f5376c721aa2
+#: 9c41f157881644e3a8cacac9e284b9dd
 msgid "[16]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 863fd7542cb44dadad9e7720c1f97400
+#: cfa9c6369b884a14b46fd18551dc35fd
 msgid ""
 "_b5._priority_calculation(\n"
 "    correlation_coefficients = df_divice_characteristics,\n"
@@ -5060,8 +5045,8 @@ msgstr ""
 "for i in x])\n"
 "df"
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5641
-#: 058fb147cff34c029f1f1834319aef98
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5643
+#: 903b94123fd7463298ea6a8cd7ea2aec
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -5266,8 +5251,8 @@ msgid ""
 "</div>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5852
-#: cb1b09ca417f4a7292a42d650074c8ec
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5854
+#: 30f46595f50e4b13ac0121a45fdd6a1c
 msgid ""
 "<pre>\n"
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
@@ -5313,8 +5298,8 @@ msgid ""
 "</pre>"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5895
-#: aecafa1ee1114aab98b7e6497a3c138a
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5897
+#: 0cd20f5614a94c0d9b29d4ff031adc11
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
@@ -5370,8 +5355,8 @@ msgid ""
 "\\end{sphinxVerbatim}"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5939
-#: 9aaf4b687896442582c488bba9331cc3
+#: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5941
+#: 265c48e43c214a80a6dae77c7d5a024f
 msgid ""
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
 "\\\n"
@@ -5414,4 +5399,46 @@ msgid ""
 "9              Agreeableness  Conscientiousness       Extraversion\n"
 "10           Non-Neuroticism  Conscientiousness      Agreeableness"
 msgstr ""
+
+#~ msgid "|605c14d5ef004886bb4633634c84b2e0|"
+#~ msgstr ""
+
+#~ msgid "605c14d5ef004886bb4633634c84b2e0"
+#~ msgstr ""
+
+#~ msgid "|a3445d4391944ab3aa63e7b20b67e399|"
+#~ msgstr ""
+
+#~ msgid "a3445d4391944ab3aa63e7b20b67e399"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "В качестве примера предлагается использование"
+#~ " коэффициентов корреляции между персональными "
+#~ "качествами человека и характеристиками "
+#~ "автомобилей, представленными в статье:1)"
+#~ msgstr ""
+#~ "As an example, it is proposed to"
+#~ " use the correlation coefficients between"
+#~ " the personality traits and the "
+#~ "characteristics of the cars presented in"
+#~ " the article: 1)"
+
+#~ msgid ""
+#~ "O’Connor P. J. et al. What Drives"
+#~ " Consumer Automobile Choice? Investigating "
+#~ "Personality Trait Predictors of Vehicle "
+#~ "Preference Factors // Personality and "
+#~ "Individual Differences. – 2022. – Vol."
+#~ " 184. – pp. 111 220. Пользователь "
+#~ "может установить свои коэффициенты корреляции."
+#~ msgstr ""
+#~ "O’Connor P. J. et al. What Drives"
+#~ " Consumer Automobile Choice? Investigating "
+#~ "Personality Trait Predictors of Vehicle "
+#~ "Preference Factors // Personality and "
+#~ "Individual Differences. – 2022. – Vol."
+#~ " 184. – pp. 111 220. The user"
+#~ " can set their own correlation "
+#~ "coefficients."
 
