@@ -1,17 +1,17 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2022-23. Speech and Multimodal Interfaces Laboratory Team
-# This file is distributed under the same license as the OCEANAI package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# English translation.
+# Copyright (C) 2022. Speech and Multimodal Interfaces Laboratory Team
+# This file is distributed under the same license as the big5 package.
+# Elena Ryumina <ryumina_ev@mail.ru>, 2022.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OCEANAI 1.0\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version:  1.0\n"
+"Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
 "POT-Creation-Date: 2023-12-17 14:43+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2022-12-11 14:42+0300\n"
+"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
+"<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
+"Language-Team: English <ryumina_ev@mail.ru>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -37,11 +37,13 @@ msgid ""
 "``_b5.audio_models_b5_`` - Нейросетевые модели **tf.keras.Model** для "
 "получения оценок персональных качеств"
 msgstr ""
+"``_b5.text_models_b5_`` - Neural network models **tf.keras.Model** for "
+"obtaining the personality traits scores"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:29
 #: fe86a15c7f0c47e08ac0f61d3df30abe
 msgid "Импорт необходимых инструментов"
-msgstr ""
+msgstr "Import required packages"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
 #: b0afe3952ea74c47a129c498ca755fca
@@ -56,7 +58,7 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:51
 #: 839e2391a8074480aac981c3d8867342
 msgid "Сборка"
-msgstr ""
+msgstr "Build"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
 #: e5bff5da7f4345979ebe8c38b2ba7108
@@ -83,6 +85,19 @@ msgid ""
 "    metadata = True # Отображение информации о библиотеке\n"
 ")"
 msgstr ""
+"_b5 = Run(\n"
+"    lang = 'en', # Inference language\n"
+"    color_simple = '#333', # Plain text color (hexadecimal code)\n"
+"    color_info = '#1776D2', # The color of the text containing the "
+"information (hexadecimal code)\n"
+"    color_err = '#FF0000', # Error text color (hexadecimal code)\n"
+"    color_true = '#008001', # Text color containing positive information "
+"(hexadecimal code)\n"
+"    bold_text = True, # Bold text\n"
+"    num_to_df_display = 30, # Number of rows to display in tables\n"
+"    text_runtime = 'Runtime', # Runtime text\n"
+"    metadata = True # Displaying information about library\n"
+")"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:81
 #: 036dbe4f103542a69523171a46cd0ce7
@@ -94,6 +109,12 @@ msgid ""
 "[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
 "Версия: 1.0.0a5    Лицензия: BSD License"
 msgstr ""
+"\\ **[2023-12-10 17:03:46] OCEANAI - personaly traits:**\\     Authors:"
+"        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry Ryumin "
+"[dl_03.03.1991@mail.ru]        Alexey Karpov [karpov@iias.spb.su]    "
+"Maintainers:        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry "
+"Ryumin [dl_03.03.1991@mail.ru]    Version: 1.0.0a16    License: BSD "
+"License"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:83
 #: 07e7c55541b54b4e9813114b60b16dac
@@ -103,7 +124,7 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:97
 #: dd1e27dd8d9a43a9814723934d40a9d5
 msgid "Формирование нейросетевых архитектур моделей"
-msgstr ""
+msgstr "Formation of neural network architectures of models"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
 #: a7518d3efa744ba888f5866a67370e95
@@ -121,6 +142,13 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"res_load_text_model_b5 = _b5.load_text_model_b5(\n"
+"    show_summary = False, # Displaying the formed neural network "
+"architecture of the model\n"
+"    out = True, # Display\n"
+"    runtime = True, # Runtime count\n"
+"    run = True # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:123
 #: 7903c6d062ab43e9bd4ee068eaea859e
@@ -128,16 +156,19 @@ msgid ""
 "\\ **[2023-12-10 17:03:46] Формирование нейросетевой архитектуры модели "
 "для получения оценок персональных качеств (текстовая модальность) …**"
 msgstr ""
+"\\ **[2023-12-10 17:03:46] Formation of neural network architectures of "
+"models for obtaining the personality traits scores (text "
+"modality) …**"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:133
 #: b80bc352aaa940d5a6da7363cd829166
 msgid "— Время выполнения: 0.539 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.539 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:145
 #: f11d68fb96d24f7db4846e2640551d07
 msgid "Загрузка весов нейросетевых моделей"
-msgstr ""
+msgstr "Downloading weights of neural network models"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:157
 #: 4e83e06c50d745db9734995adc183674
@@ -167,6 +198,20 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"# Core settings\n"
+"_b5.path_to_save_ = './models' # Directory to save the file\n"
+"_b5.chunk_size_ = 2000000 # File download size from network in 1 step\n"
+"\n"
+"url = _b5.weights_for_big5_['text']['fi']['b5']['sberdisk']\n"
+"\n"
+"res_load_text_model_weights_b5 = _b5.load_text_model_weights_b5(\n"
+"    url = url,\n"
+"    force_reload = False, # Forced download of a file with weights of a "
+"neural network model from the network\n"
+"    out = True, # Display\n"
+"    runtime = True, # Runtime count\n"
+"    run = True # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:190
 #: 3f087ae3ce7c4ddd88e016b682474e8d
@@ -174,16 +219,20 @@ msgid ""
 "\\ **[2023-12-10 17:03:46] Загрузка весов нейросетевой модели для "
 "получения оценок персональных качеств (текстовая модальность) …**"
 msgstr ""
+"\\ **[2023-12-10 17:03:46] Downloading the weights of neural network "
+"models to obtain the personality traits scores (text "
+"modality) …**"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:201
 #: 3301c25f9e5941a690a181ce5929049d
 msgid "\\ **[2023-12-10 17:03:47] Загрузка файла “ft_fi_2023-12-09_14-25-13.h5”**"
 msgstr ""
+"\\ **[2023-12-14 21:04:19] File download “ft_fi_2023-12-09_14-25-13.h5”**"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:211
 #: 704b7f5732a648a292f5fea49eec1791
 msgid "— Время выполнения: 0.144 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.144 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:223
 #: d149730a98604b14b094ba259fd26c94
@@ -213,6 +262,20 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"# Core settings\n"
+"_b5.path_to_save_ = './models' # Directory to save the file\n"
+"_b5.chunk_size_ = 2000000 # Размер загрузки файла из сети за 1 шаг\n"
+"\n"
+"url = _b5.weights_for_big5_['text']['mupta']['b5']['sberdisk']\n"
+"\n"
+"res_load_text_model_weights_b5 = _b5.load_text_model_weights_b5(\n"
+"    url = url,\n"
+"    force_reload = False, # Forced download of a file with weights of a "
+"neural network model from the network\n"
+"    out = True, # Display\n"
+"    runtime = True, # Runtime count\n"
+"    run = True # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:256
 #: 6dafb603276a4cc6b9a764d0da364603
@@ -220,6 +283,9 @@ msgid ""
 "\\ **[2023-12-10 17:03:47] Загрузка весов нейросетевой модели для "
 "получения оценок персональных качеств (текстовая модальность) …**"
 msgstr ""
+"\\ **[2023-12-10 17:03:47] Downloading the weights of neural network "
+"models to obtain the personality traits scores (text "
+"modality) …**"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:267
 #: fc35903d98a946d1b27587215c06964d
@@ -227,16 +293,17 @@ msgid ""
 "\\ **[2023-12-10 17:03:47] Загрузка файла "
 "“ft_mupta_2023-12-09_14-25-13.h5”**"
 msgstr ""
+"\\ **[2023-12-10 17:03:47] File download “ft_mupta_2023-12-09_14-25-13.h5”**"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:277
 #: 3e04514ef33f49e2bfb18f2b15ab3d65
 msgid "— Время выполнения: 0.137 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.137 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:289
 #: adbaad8f13074351a9eb8e4f2eca3c1d
 msgid "Отображение сформированной нейросетевой архитектуры модели"
-msgstr ""
+msgstr "Displaying the formed neural network architecture of the model"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
 #: 7739fbdd5bd64faf9955f2de55c7c950

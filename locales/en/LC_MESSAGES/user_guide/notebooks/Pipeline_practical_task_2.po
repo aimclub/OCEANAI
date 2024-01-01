@@ -1619,7 +1619,7 @@ msgid ""
 "Прогнозирование потребительских предпочтений на характеристики мобильного"
 " устройства"
 msgstr ""
-"Predicting consumer preferences for industrial goodson the example of "
+"Predicting consumer preferences for industrial goods on the example of "
 "mobile device application categories"
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1355
@@ -5404,15 +5404,4 @@ msgid ""
 "10           Non-Neuroticism  Conscientiousness      Agreeableness"
 msgstr ""
 
-#~ msgid "|eebc26e66beb414fa18bbbefce656426|"
-#~ msgstr ""
-
-#~ msgid "eebc26e66beb414fa18bbbefce656426"
-#~ msgstr ""
-
-#~ msgid "|c6dc495247d544439075085b9b531d75|"
-#~ msgstr ""
-
-#~ msgid "c6dc495247d544439075085b9b531d75"
-#~ msgstr ""
 

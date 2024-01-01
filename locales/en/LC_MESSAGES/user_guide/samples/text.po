@@ -23,4 +23,4 @@ msgstr "Contents:"
 
 #: ../../source/user_guide/samples/text.rst:2 1557de7408e44414926123c116f4c7e9
 msgid "Обработка текстовой информации"
-msgstr "Processing text information"
+msgstr "Text information processing"
