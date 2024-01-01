@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2024-01-01 20:27+0300\n"
+"POT-Creation-Date: 2023-12-29 16:42+0300\n"
 "PO-Revision-Date: 2023-01-03 18:30+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -18,93 +18,86 @@ msgstr ""
 "Generated-By: Babel 2.11.0\n"
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:9
-#: 9e923b96f3d3462aa12c2d1823d677c5
+#: bc0f350002b8401e8f8cebe24238384b
 msgid "Решение практической задачи 2"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:12
-#: db491e6fc4174ed2b237602efa8aa378
-msgid ""
-"Задача: прогнозирование потребительских предпочтений на промышленные "
-"товары"
+#: 9b8b7953f5bc46fab986536f1a0cdfa2
+msgid "Задача: прогнозирование потребительских предпочтений на промышленные товары"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:14
-#: 6c0c5263ea9d4597bd5eec0600113c12
-msgid ""
-"Решение практической задачи выполняется в два этапа. На первом этапе "
-"необходимо использовать библиотеку OCEAN-AI для получения гипотез "
-"предсказаний (оценок персональных качеств личности человека). На втором "
-"этапе следует использовать метод \\_priority_calculation из библиотеки "
-"OCEAN-AI для решения представленной практической задачи. Примеры "
-"результатов работы и реализации представлены ниже."
+#: 223dd44d2db24bd39f0606c90198830d
+msgid "Решение практической задачи выполняется в два этапа. На первом этапе необходимо использовать библиотеку OCEAN-AI для получения гипотез предсказаний (оценок персональных качеств личности человека). На втором этапе следует использовать метод \\_priority_calculation из библиотеки OCEAN-AI для решения представленной практической задачи. Примеры результатов работы и реализации представлены ниже."
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:18
-#: f0ac4f70c4c24c259637938a2db539f3
-msgid ""
-"Таким образом, библиотека OCEAN-AI предоставляет инструмент для анализа "
-"персональных качеств личности потребителей, что полезно для предсказания "
-"того, что их заинтересует. Это позволит компаниям более точно "
-"адаптировать свои товары и услуги к предпочтениям потребителей, делая их "
-"более уникальными и персонализированными."
+#: 274e44510a784f5cb93ec099fc106460
+msgid "Таким образом, библиотека OCEAN-AI предоставляет инструмент для анализа персональных качеств личности потребителей, что полезно для предсказания того, что их заинтересует. Это позволит компаниям более точно адаптировать свои товары и услуги к предпочтениям потребителей, делая их более уникальными и персонализированными."
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:20
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:30
-#: 142abc61a2154a3fbd9246260a22c9ef ea14915197ab4089905c8861df10029b
+#: a2993f5915274b53b3eb70034c911185
+#: 8048397e7bd943ffb33f7ce0180c6fa4
 msgid "<center>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:24
-#: e9e30279f10a4697b438ae9f2c9c86e3
-msgid "|1b30dbef6dbb45a0b3e0a9ecdd8313cc|"
+#: 484cb9a43b8f407698b132e4920b9d27
+msgid "|eebc26e66beb414fa18bbbefce656426|"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:44
-#: a7d61b6edfb4473d8e40c95e451334df d2451dfcbd56480598c1a433438824e7
-msgid "1b30dbef6dbb45a0b3e0a9ecdd8313cc"
+#: f56a843ab40245eba02d803625dcefde
+#: 7defe17c542946ff909e12d0fe95161f
+msgid "eebc26e66beb414fa18bbbefce656426"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:26
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:36
-#: 6a65b044a33c42c690d7c3b619ab6f11 ab5b650708b24870a29941079c856298
+#: a9a32589d6494d8987dc499f7f66e982
+#: f015e37ba9cf441ebe8663ddc9c2d92b
 msgid "</center>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:34
-#: 437b0cec9e8144dca6398eb083bacbfb
-msgid "|afe04401435b4d6a836cd9d59cf13515|"
+#: 38ca6e4af1f54a4d8960f197ea7faacb
+msgid "|c6dc495247d544439075085b9b531d75|"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:47
-#: 1f3c70559cae498ea4f8718f2ca76721 771a7a10aa98417fb860209ea5df90c3
-msgid "afe04401435b4d6a836cd9d59cf13515"
+#: 1f8d37ded0f54a6895525adda35e6aa0
+#: 4381b01c20a842adb4b7aa58a0244ef2
+msgid "c6dc495247d544439075085b9b531d75"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:40
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:633
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2623
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4574
-#: 315376861ff24295947e76e73012cfbc 4e35b73492fa4175b3e43c462ef8ef02
-#: 5e7c7f2de4774726ba38772309cc1e4a 6faedc6a0936461183d77c175a484f0d
+#: 81fdbcab52b9476ea0767d7019934e12
+#: 4c246309091d4700b977a5354499ab59
+#: 2d8f4681f8814f4f8c0380eba43bcc16
+#: a27e82448d45479fac3600b0ba678913
 msgid "<hr>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:59
-#: 5eb82d79ad4748c89a21ac251d574a43
+#: 3b0e760e53f84d52b8cb57dc42ef29a0
 msgid "``FI V2``"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 19fb288041e242ceaa349d3ca7d326c3 e57f0128fcdb4543b0457046bceb3b0f
+#: 0703a464efce404c83225be2d7ab6b80
+#: 680093f2d6ed4e6490093906e54372a8
 msgid "[2]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 4d8c25e81191492482d9c282f42a5cd6
-msgid ""
-"# Импорт необходимых инструментов\n"
+#: d932e6b707b1491390b94d45584bc0cb
+msgid "# Импорт необходимых инструментов\n"
 "import os\n"
 "import pandas as pd\n"
 "\n"
@@ -141,8 +134,7 @@ msgid ""
 "res_load_model_weights_hc = _b5.load_video_model_weights_hc(url = url)\n"
 "\n"
 "url = _b5.weights_for_big5_['video'][corpus]['fe']['sberdisk']\n"
-"res_load_model_weights_deep_fe = _b5.load_video_model_weights_deep_fe(url"
-" = url)\n"
+"res_load_model_weights_deep_fe = _b5.load_video_model_weights_deep_fe(url = url)\n"
 "\n"
 "url = _b5.weights_for_big5_['video'][corpus]['nn']['sberdisk']\n"
 "res_load_model_weights_nn = _b5.load_video_model_weights_nn(url = url)\n"
@@ -151,21 +143,17 @@ msgid ""
 "res_load_text_features = _b5.load_text_features()\n"
 "\n"
 "# Формирование текстовых моделей\n"
-"res_setup_translation_model = _b5.setup_translation_model() # только для "
-"русского языка\n"
-"res_setup_translation_model = _b5.setup_bert_encoder(force_reload = "
-"False)\n"
+"res_setup_translation_model = _b5.setup_translation_model() # только для русского языка\n"
+"res_setup_translation_model = _b5.setup_bert_encoder(force_reload = False)\n"
 "res_load_text_model_hc_fi = _b5.load_text_model_hc(corpus=corpus)\n"
 "res_load_text_model_nn_fi = _b5.load_text_model_nn(corpus=corpus)\n"
 "\n"
 "# Загрузка весов текстовых моделей\n"
 "url = _b5.weights_for_big5_['text'][corpus]['hc']['sberdisk']\n"
-"res_load_text_model_weights_hc_fi = _b5.load_text_model_weights_hc(url = "
-"url)\n"
+"res_load_text_model_weights_hc_fi = _b5.load_text_model_weights_hc(url = url)\n"
 "\n"
 "url = _b5.weights_for_big5_['text'][corpus]['nn']['sberdisk']\n"
-"res_load_text_model_weights_nn_fi = _b5.load_text_model_weights_nn(url = "
-"url)\n"
+"res_load_text_model_weights_nn_fi = _b5.load_text_model_weights_nn(url = url)\n"
 "\n"
 "# Формирование модели для мультимодального объединения информации\n"
 "res_load_avt_model_b5 = _b5.load_avt_model_b5()\n"
@@ -209,48 +197,41 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:176
-#: 3679342960264267bf7291a7d3485783
-msgid ""
-"\\ **[2023-12-16 19:05:15] Извлечение признаков (экспертных и "
-"нейросетевых) из текста …**"
+#: a3482b55e5034e3b94afef0c7d8f9493
+msgid "\\ **[2023-12-16 19:05:15] Извлечение признаков (экспертных и нейросетевых) из текста …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:187
-#: 641cfdc978384e11837cdcb3bad52862
-msgid ""
-"\\ **[2023-12-16 19:05:17] Получение прогнозов и вычисление точности "
-"(мультимодальное объединение) …**"
+#: 282f9ae6833c4927b274eaf2b038bc3e
+msgid "\\ **[2023-12-16 19:05:17] Получение прогнозов и вычисление точности (мультимодальное объединение) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:189
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2179
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4130
-#: 0ec3052a855d414ab2d0763ef0a65af5 16cc117c141d4ebca2b3cd210438a6f8
-#: 208e9ae307b84e06b57e367ba6a2f33a
+#: 814a3dcde8c1424582bdc4bdc86adbc6
+#: d5d20c9516584b84aa15d89deb009c26
+#: 40aad540dbec46628955ea6536e7882a
 msgid "<p>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:193
-#: a6292560efa34b649432b49393409e1c
-msgid ""
-"10 из 10 (100.0%) … GitHub:nbsphinx-math:`\\OCEANAI`:nbsphinx-"
-"math:`\\docs`:nbsphinx-math:`\\source`:nbsphinx-math:`\\user`\\_guide"
-":nbsphinx-math:`\\notebooks`:nbsphinx-math:`\\video`\\_FI:nbsphinx-"
-"math:`\\test`\\_plk5k7PBEg.003.mp4 …"
+#: 0819075a28ea45a2b16fce99a359a2ce
+msgid "10 из 10 (100.0%) … GitHub:nbsphinx-math:`\\OCEANAI`:nbsphinx-math:`\\docs`:nbsphinx-math:`\\source`:nbsphinx-math:`\\user`\\_guide:nbsphinx-math:`\\notebooks`:nbsphinx-math:`\\video`\\_FI:nbsphinx-math:`\\test`\\_plk5k7PBEg.003.mp4 …"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:195
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2185
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4136
-#: 0a5a16a021eb48e4ad563283d3ed6e29 55ed48d31000459482b0fdbdbf461303
-#: 56c731ee7d18488db6ab761dadcbd9b5
+#: 4dec8e3f15ee404b9680357539f506f6
+#: e120b1c5b05143c4a53ab226bfd86065
+#: 9124381e9e264d76bdb03ebe339e5b9f
 msgid "</p>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:211
-#: 5ce4584b6d5a48c8ab751f1760a02a5b
-msgid ""
-"<div>\n"
+#: 8c452371094e44ce846392e208401ccc
+msgid "<div>\n"
 "<style scoped>\n"
 "    .dataframe tbody tr th:only-of-type {\n"
 "        vertical-align: middle;\n"
@@ -382,11 +363,9 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:350
-#: a3ab73b1148446d6aa7c395927ad6d21
-msgid ""
-"<pre>\n"
-"                          Path  Openness Conscientiousness Extraversion  "
-"\\\n"
+#: 10fe30d771084de09eb7d6f2cf2a67fe
+msgid "<pre>\n"
+"                          Path  Openness Conscientiousness Extraversion  \\\n"
 "Person ID\n"
 "1          2d6btbaNdfo.000.mp4  0.581159          0.628822     0.466609\n"
 "2          300gK3CnzW0.001.mp4  0.463991          0.418851      0.41301\n"
@@ -415,11 +394,9 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:380
-#: bd166e5e5eec4575afdcc201e85332a6
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"                          Path  Openness Conscientiousness Extraversion  "
-"\\textbackslash{}\n"
+#: 4e7ab5fe614e44888c795b171d1700f1
+msgid "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
+"                          Path  Openness Conscientiousness Extraversion  \\textbackslash{}\n"
 "Person ID\n"
 "1          2d6btbaNdfo.000.mp4  0.581159          0.628822     0.466609\n"
 "2          300gK3CnzW0.001.mp4  0.463991          0.418851      0.41301\n"
@@ -429,10 +406,8 @@ msgid ""
 "6          cLaZxEf1nE4.004.mp4  0.636944          0.542386     0.558461\n"
 "7          g24JGYuT74A.004.mp4  0.531518          0.376987     0.393309\n"
 "8          JZNMxa3OKHY.000.mp4  0.610342          0.541418     0.563163\n"
-"9          nvlqJbHk\\_Lc.003.mp4  0.495809          0.458526     0.414436"
-"\n"
-"10         \\_plk5k7PBEg.003.mp4   0.60707          0.591893     0.520662"
-"\n"
+"9          nvlqJbHk\\_Lc.003.mp4  0.495809          0.458526     0.414436\n"
+"10         \\_plk5k7PBEg.003.mp4   0.60707          0.591893     0.520662\n"
 "\n"
 "          Agreeableness Non-Neuroticism\n"
 "Person ID\n"
@@ -450,10 +425,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:411
-#: 5d6ef640d88d48f8baa6c11a1ae3cfdb
-msgid ""
-"                          Path  Openness Conscientiousness Extraversion  "
-"\\\n"
+#: 62f751d6ca8f4c71843ff6febcc1c3c1
+msgid "                          Path  Openness Conscientiousness Extraversion  \\\n"
 "Person ID\n"
 "1          2d6btbaNdfo.000.mp4  0.581159          0.628822     0.466609\n"
 "2          300gK3CnzW0.001.mp4  0.463991          0.418851      0.41301\n"
@@ -481,16 +454,13 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:446
-#: 24cb9a2ed7a74bdcaae42caba136f61d
-msgid ""
-"\\ **[2023-12-16 19:05:17] Точность по отдельным персональным качествам "
-"личности человека …**"
+#: fb9d3194b58248e3ae571d7340ea4f68
+msgid "\\ **[2023-12-16 19:05:17] Точность по отдельным персональным качествам личности человека …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:460
-#: 8a1863ef64af43aeb1fca0210240645e
-msgid ""
-"<div>\n"
+#: fbf73aedf78c4c8b83f7e20f01b4e935
+msgid "<div>\n"
 "<style scoped>\n"
 "    .dataframe tbody tr th:only-of-type {\n"
 "        vertical-align: middle;\n"
@@ -550,9 +520,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:527
-#: 03e785b8237d4802b8c8b204d9710f81
-msgid ""
-"<pre>\n"
+#: 5129102580ea499aa4963937a64f3596
+msgid "<pre>\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
 "Metrics\n"
 "MAE         0.0589             0.0612        0.0864         0.0697\n"
@@ -566,11 +535,9 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:541
-#: 9c6a44446d3c45e683765552534be22f
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"          Openness  Conscientiousness  Extraversion  Agreeableness  "
-"\\textbackslash{}\n"
+#: c7689e332a494de783938edd136b4cf5
+msgid "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
+"          Openness  Conscientiousness  Extraversion  Agreeableness  \\textbackslash{}\n"
 "Metrics\n"
 "MAE         0.0589             0.0612        0.0864         0.0697\n"
 "Accuracy    0.9411             0.9388        0.9136         0.9303\n"
@@ -583,9 +550,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:556
-#: aed7b89cf94f4b8f8d5eb2d782f0754b
-msgid ""
-"          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
+#: d2664fd8a6a54a86b0fbde884345889d
+msgid "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
 "Metrics\n"
 "MAE         0.0589             0.0612        0.0864         0.0697\n"
 "Accuracy    0.9411             0.9388        0.9136         0.9303\n"
@@ -597,32 +563,31 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:575
-#: d630af1d1b594154825f97ea14c35ece
-msgid ""
-"\\ **[2023-12-16 19:05:17] Средняя средних абсолютных ошибок: 0.0669, "
-"средняя точность: 0.9331 …**"
+#: f24577efbbfa406db22e1fe314b21f25
+msgid "\\ **[2023-12-16 19:05:17] Средняя средних абсолютных ошибок: 0.0669, средняя точность: 0.9331 …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:586
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2576
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4527
-#: a4c3b77322324487b530317cf5442ffc ca15210da6194618a846fb8659d5e7a5
-#: d9f4606951ee47dd879861cacfb6ed92
+#: 448a114d948c4362b1e44dedce07eb4d
+#: 9e6a26e0232d4ca78db18ea66546bb58
+#: 62b892595414444a9a2bc1a38e5f0afe
 msgid "Лог файлы успешно сохранены …"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:597
-#: c6e670afb5704a90a9cead3b7aa0985f
+#: 75bd23952b604625a9e0d29cffe17c7c
 msgid "— Время выполнения: 64.147 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:609
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2599
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4550
-#: 20a6ee7d5368483b98b4101477972be7 3a5ef8fa044240eb902b8583303e28e8
-#: ff2e111a41ae437d9972b09a8dda18c5
-msgid ""
-"<pre>\n"
+#: 8677be630b8b44b09aa51cf56f8b8270
+#: 5c4a5e70ffba46648795ea6f7e325125
+#: af0f51f68ca2489aa7e0b33ffa1a28b8
+msgid "<pre>\n"
 "True\n"
 "</pre>"
 msgstr ""
@@ -630,10 +595,10 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:615
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2605
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4556
-#: 0e554ef3137849cdb6d5070f1eb5ce97 8d7931f9792c4fd8ab1fd74f00681cc6
-#: b8a2d63183394a30be2ca8a516319fc9
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
+#: b6f7a72f1c5a46c19d602dd6883195be
+#: 674ae7208bc54c47b7747e14828c8ca5
+#: a45f1eca9db047f7a4639d18f7980c9a
+msgid "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "True\n"
 "\\end{sphinxVerbatim}"
 msgstr ""
@@ -641,85 +606,77 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:622
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2612
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4563
-#: 18815df5aaae48a79702bbe729a56cee 42dea05175384765b65aace2cc291959
-#: ea354e6a1d8b4490b557ac66afb1a072
+#: 689b80cdc7314570a4e3bb032b29aa37
+#: 8c51fdfa4e3c45ceaf6ba2dd4b9ad3a9
+#: 6071abbc6647429da9e5fb9622256f3e
 msgid "True"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:637
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2627
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4578
-#: 50af82dc9c7f4f43a472e9eff5d75e5f b21eebf518ce4dd586b44af3b83a3cf8
-#: e0758d6c74874ffcbe634e9eef819d1d
-msgid ""
-"Для прогнозирования потребительских предпочтений в промышленных товарах "
-"необходимо знать коэффициенты корреляции, определяющие взаимосвязь между "
-"персональными качествами личности человека и предпочтениями в товарах или"
-" услугах."
+#: 7d0403914e31432d8da2ea0995db4e37
+#: 867bb1ddec6349e6bf96b66cf4659fbc
+#: 60fd6bf25d954ea6bed8fa16d33fdde0
+msgid "Для прогнозирования потребительских предпочтений в промышленных товарах необходимо знать коэффициенты корреляции, определяющие взаимосвязь между персональными качествами личности человека и предпочтениями в товарах или услугах."
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:639
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2629
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4580
-#: 46e7b1150b864076a793a2dfcbe6af68 8e704281a35842eca69b38daad7dd009
-#: d0631edcf5584ae79287dc5827b6cf7f
-msgid ""
-"В качестве примера предлагается использование коэффициентов корреляции "
-"между персональными качествами человека и характеристиками автомобилей, "
-"представленными в статье:"
+#: e4df0b0552ca4edd87a02e749602a0da
+#: 36dad16ab1324e6e983a7431837ec67d
+#: 8ccbc5d528fd4f27b6b0305b04d5490e
+msgid "В качестве примера предлагается использование коэффициентов корреляции между персональными качествами человека и характеристиками автомобилей, представленными в статье:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:641
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2631
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4582
-#: 0a4659ecdcf14b4c88ccc5c39af1c142 9dd31508ff4a4608a147ad87a7aaf84e
-#: e1eabee47bd84374b58f7e40c708506c
-msgid ""
-"O’Connor P. J. et al. What Drives Consumer Automobile Choice? "
-"Investigating Personality Trait Predictors of Vehicle Preference Factors "
-"// Personality and Individual Differences. – 2022. – Vol. 184. – pp. "
-"111220."
+#: 596d0ed374644a01815f4e01ac35c61b
+#: a8fd7c528c5741fe849516163d197dac
+#: db9370f2a9f34a98b40bb619de3e8aeb
+msgid "O’Connor P. J. et al. What Drives Consumer Automobile Choice? Investigating Personality Trait Predictors of Vehicle Preference Factors // Personality and Individual Differences. – 2022. – Vol. 184. – pp. 111220."
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:643
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2633
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4584
-#: 6913758f08eb4163bc215c1fde28ea00 6ab4d21de40747d8ab4832e6f265fa17
-#: b76c593f2a624f95bc0bb59e216275d8
+#: 8076cdc5aa93408d8b82db530590a61a
+#: 80f743c225d54383b7a8dd7bcf59231e
+#: b4a05f32171f45fd93d26fde1cc104e6
 msgid "Пользователь может установить свои коэффициенты корреляции."
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:655
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2645
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4596
-#: 6afb1a94c7d44c50a9994026f2ef2d67 df72e363ae3946e3ac6b0c503ac47bee
-#: eae63b39523648bc962f0daed30bfd8e
+#: 6551c544a45242c98f962b15261df66e
+#: 175cd5c13893437a9d5894bcc18f58f7
+#: a6c6eaf9d8504581aace3bbbbce0db3d
 msgid "Прогнозирование потребительских предпочтений на характеристики атомобиля"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 88831fea54284e49bfdb68cb97989f4a a9f2457a6ade4dd99c2163ac6d2ac93e
-#: ae570ee291ae4f14b3d256ac742c49f0
+#: 5df26f52093a4c49841b3b2e18a2b396
+#: 994f6fc3512340ef870b9ecc8dc834bb
+#: 83716da58e5344ce85b5ecf5203cb575
 msgid "[3]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 0409f62cfbe34f27b2c7c2fdecf8ab9d 7986d0217ec3457796f929d36c3a25b2
-#: e06a610170af48e0ad073666b8c486cb
-msgid ""
-"# Загрузка датафрейма с коэффициентами корреляции\n"
-"url = "
-"'https://download.sberdisk.ru/download/file/478675818?token=EjfLMqOeK8cfnOu&filename=auto_characteristics.csv'"
-"\n"
+#: 6209e70437a4437995ddf1c746b9e663
+#: aa4de12dd5ac46eb9b2bd99a6f50358d
+#: ffc5db58d12d45789c65305e9a3752a8
+msgid "# Загрузка датафрейма с коэффициентами корреляции\n"
+"url = 'https://download.sberdisk.ru/download/file/478675818?token=EjfLMqOeK8cfnOu&filename=auto_characteristics.csv'\n"
 "df_correlation_coefficients = pd.read_csv(url)\n"
 "df_correlation_coefficients = pd.DataFrame(\n"
-"    df_correlation_coefficients.drop(['Style and performance', 'Safety "
-"and practicality'], axis = 1)\n"
+"    df_correlation_coefficients.drop(['Style and performance', 'Safety and practicality'], axis = 1)\n"
 ")\n"
 "df_correlation_coefficients.index.name = 'ID'\n"
 "df_correlation_coefficients.index += 1\n"
-"df_correlation_coefficients.index = "
-"df_correlation_coefficients.index.map(str)\n"
+"df_correlation_coefficients.index = df_correlation_coefficients.index.map(str)\n"
 "\n"
 "df_correlation_coefficients"
 msgstr ""
@@ -727,10 +684,10 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:689
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2679
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4630
-#: 65d366ee2a3442a284ade20f6f8b4559 80e3ed11790e42bb85d0ea0e3ea0514c
-#: e9aa29fb57c6491ea4bb8cd9e2ec0261
-msgid ""
-"<div>\n"
+#: 916bd872b44540238eb2bf9f0f41f7e5
+#: eac9f3b36829415694b7801a5120408e
+#: b7e2f3ff1b6245389c9e68a3a0477920
+msgid "<div>\n"
 "<style scoped>\n"
 "    .dataframe tbody tr th:only-of-type {\n"
 "        vertical-align: middle;\n"
@@ -861,23 +818,17 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:825
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2815
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4766
-#: 28dd9d686b1b45089bbcbbeab42d061a 91492ca7c2a64926b6964e0f808fe8e6
-#: 931249ef199a482091e823ec992c004a
-msgid ""
-"<pre>\n"
-"                Trait  Performance  Classic car features  Luxury "
-"additions  \\\n"
+#: d1a789fa4dea4b5aa208084f40a763ae
+#: fa02d6f677f444bba004df283ebbad86
+#: f5bf1d401a264af09c624a436b2cb07c
+msgid "<pre>\n"
+"                Trait  Performance  Classic car features  Luxury additions  \\\n"
 "ID\n"
-"1            Openness     0.020000             -0.033333         "
-"-0.030000\n"
-"2   Conscientiousness     0.013333             -0.193333         "
-"-0.063333\n"
-"3        Extraversion     0.133333              0.060000          "
-"0.106667\n"
-"4       Agreeableness    -0.036667             -0.193333         "
-"-0.133333\n"
-"5     Non-Neuroticism     0.016667             -0.006667         "
-"-0.010000\n"
+"1            Openness     0.020000             -0.033333         -0.030000\n"
+"2   Conscientiousness     0.013333             -0.193333         -0.063333\n"
+"3        Extraversion     0.133333              0.060000          0.106667\n"
+"4       Agreeableness    -0.036667             -0.193333         -0.133333\n"
+"5     Non-Neuroticism     0.016667             -0.006667         -0.010000\n"
 "\n"
 "    Fashion and attention  Recreation  Technology  Family friendly  \\\n"
 "ID\n"
@@ -887,8 +838,7 @@ msgid ""
 "4               -0.133333   -0.090000    0.046667        -0.016667\n"
 "5               -0.006667   -0.033333    0.046667        -0.023333\n"
 "\n"
-"    Safe and reliable  Practical and easy to use  Economical/low cost  \\"
-"\n"
+"    Safe and reliable  Practical and easy to use  Economical/low cost  \\\n"
 "ID\n"
 "1            0.136667                   0.106667             0.093333\n"
 "2            0.280000                   0.180000             0.130000\n"
@@ -909,26 +859,19 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:861
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2851
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4802
-#: 08ee615edf4e489da8d51dfe8e098ad4 327238c0d45f4df6bda3d69858d7094f
-#: f612cfafe38c400d826facbf82e16421
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"                Trait  Performance  Classic car features  Luxury "
-"additions  \\textbackslash{}\n"
+#: e297229d1c974557890c0ab5462e60a6
+#: 4b2f6bbbe7284d5aa8f4a0495da8f421
+#: c3be953c0a0c4534a8a64dccf2dd771b
+msgid "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
+"                Trait  Performance  Classic car features  Luxury additions  \\textbackslash{}\n"
 "ID\n"
-"1            Openness     0.020000             -0.033333         "
-"-0.030000\n"
-"2   Conscientiousness     0.013333             -0.193333         "
-"-0.063333\n"
-"3        Extraversion     0.133333              0.060000          "
-"0.106667\n"
-"4       Agreeableness    -0.036667             -0.193333         "
-"-0.133333\n"
-"5     Non-Neuroticism     0.016667             -0.006667         "
-"-0.010000\n"
+"1            Openness     0.020000             -0.033333         -0.030000\n"
+"2   Conscientiousness     0.013333             -0.193333         -0.063333\n"
+"3        Extraversion     0.133333              0.060000          0.106667\n"
+"4       Agreeableness    -0.036667             -0.193333         -0.133333\n"
+"5     Non-Neuroticism     0.016667             -0.006667         -0.010000\n"
 "\n"
-"    Fashion and attention  Recreation  Technology  Family friendly  "
-"\\textbackslash{}\n"
+"    Fashion and attention  Recreation  Technology  Family friendly  \\textbackslash{}\n"
 "ID\n"
 "1               -0.050000    0.033333    0.013333        -0.030000\n"
 "2               -0.096667   -0.096667    0.086667        -0.063333\n"
@@ -936,8 +879,7 @@ msgid ""
 "4               -0.133333   -0.090000    0.046667        -0.016667\n"
 "5               -0.006667   -0.033333    0.046667        -0.023333\n"
 "\n"
-"    Safe and reliable  Practical and easy to use  Economical/low cost  "
-"\\textbackslash{}\n"
+"    Safe and reliable  Practical and easy to use  Economical/low cost  \\textbackslash{}\n"
 "ID\n"
 "1            0.136667                   0.106667             0.093333\n"
 "2            0.280000                   0.180000             0.130000\n"
@@ -958,22 +900,16 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:898
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2888
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4839
-#: 4e0cd28262f448ab8c35faf0bc6dd264 6da91f33cdf948a9921b7c398058f961
-#: e55c14d3416543b8a7bdfad312af3f5e
-msgid ""
-"                Trait  Performance  Classic car features  Luxury "
-"additions  \\\n"
+#: 646992a0c6ab48b9bd2d9d6c8c0e4ead
+#: 3031e9194a3a448a81056cbd4b64c6c2
+#: 50c8d00851ad44a08bd704c8d7309dba
+msgid "                Trait  Performance  Classic car features  Luxury additions  \\\n"
 "ID\n"
-"1            Openness     0.020000             -0.033333         "
-"-0.030000\n"
-"2   Conscientiousness     0.013333             -0.193333         "
-"-0.063333\n"
-"3        Extraversion     0.133333              0.060000          "
-"0.106667\n"
-"4       Agreeableness    -0.036667             -0.193333         "
-"-0.133333\n"
-"5     Non-Neuroticism     0.016667             -0.006667         "
-"-0.010000\n"
+"1            Openness     0.020000             -0.033333         -0.030000\n"
+"2   Conscientiousness     0.013333             -0.193333         -0.063333\n"
+"3        Extraversion     0.133333              0.060000          0.106667\n"
+"4       Agreeableness    -0.036667             -0.193333         -0.133333\n"
+"5     Non-Neuroticism     0.016667             -0.006667         -0.010000\n"
 "\n"
 "    Fashion and attention  Recreation  Technology  Family friendly  \\\n"
 "ID\n"
@@ -983,8 +919,7 @@ msgid ""
 "4               -0.133333   -0.090000    0.046667        -0.016667\n"
 "5               -0.006667   -0.033333    0.046667        -0.023333\n"
 "\n"
-"    Safe and reliable  Practical and easy to use  Economical/low cost  \\"
-"\n"
+"    Safe and reliable  Practical and easy to use  Economical/low cost  \\\n"
 "ID\n"
 "1            0.136667                   0.106667             0.093333\n"
 "2            0.280000                   0.180000             0.130000\n"
@@ -1002,15 +937,15 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 18ec63da63bb45bc9d50790a54b4b455 288dc30df055441b92f699073958e62a
-#: 937d2d198a03434fbb4e184d0b757887
+#: 58f02cc2b6864843b3ecd39df8413a4e
+#: 244e8382bdd845729a4314ad670d4bdf
+#: 6a1771cbd691437d9859e5abe04d04e2
 msgid "[4]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 60dbe3a4576743d88aaa3b3bc91d1a6d
-msgid ""
-"_b5._priority_calculation(\n"
+#: c6367c4abc304770924fbcde92da30a3
+msgid "_b5._priority_calculation(\n"
 "    correlation_coefficients = df_correlation_coefficients,\n"
 "    col_name_ocean = 'Trait',\n"
 "    threshold = 0.55,\n"
@@ -1019,23 +954,18 @@ msgid ""
 "    out = False\n"
 ")\n"
 "\n"
-"_b5._save_logs(df = _b5.df_files_priority_, name = "
-"'auto_characteristics_priorities_fi_en', out = True)\n"
+"_b5._save_logs(df = _b5.df_files_priority_, name = 'auto_characteristics_priorities_fi_en', out = True)\n"
 "\n"
 "# Опционно\n"
-"df = _b5.df_files_priority_.rename(columns = {'Openness':'OPE', "
-"'Conscientiousness':'CON', 'Extraversion': 'EXT', 'Agreeableness': 'AGR',"
-" 'Non-Neuroticism': 'NNEU'})\n"
+"df = _b5.df_files_priority_.rename(columns = {'Openness':'OPE', 'Conscientiousness':'CON', 'Extraversion': 'EXT', 'Agreeableness': 'AGR', 'Non-Neuroticism': 'NNEU'})\n"
 "columns_to_round = ['OPE', 'CON', 'EXT', 'AGR', 'NNEU']\n"
-"df[columns_to_round] = df[columns_to_round].apply(lambda x: [round(i, 3) "
-"for i in x])\n"
+"df[columns_to_round] = df[columns_to_round].apply(lambda x: [round(i, 3) for i in x])\n"
 "df"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:967
-#: 26b5f527c8154f5093625d9cc579c820
-msgid ""
-"<div>\n"
+#: b3e0a3c35c5a49e89d8c17c57426fef2
+msgid "<div>\n"
 "<style scoped>\n"
 "    .dataframe tbody tr th:only-of-type {\n"
 "        vertical-align: middle;\n"
@@ -1239,9 +1169,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1178
-#: 29e480ebb8274435b52a99763228979d
-msgid ""
-"<pre>\n"
+#: e7255e2a189e4f17ae5b115534bfdfc4
+msgid "<pre>\n"
 "                          Path    OPE    CON    EXT    AGR   NNEU  \\\n"
 "Person ID\n"
 "1          2d6btbaNdfo.000.mp4  0.581  0.629  0.467  0.622  0.554\n"
@@ -1268,29 +1197,18 @@ msgid ""
 "9               Classic car features      Fashion and attention\n"
 "10                 Safe and reliable  Practical and easy to use\n"
 "\n"
-"                          Priority 3 Trait importance 1 Trait importance "
-"2  \\\n"
+"                          Priority 3 Trait importance 1 Trait importance 2  \\\n"
 "Person ID\n"
-"1                Economical/low cost  Conscientiousness      "
-"Agreeableness\n"
-"2                   Luxury additions      Agreeableness  "
-"Conscientiousness\n"
-"3                   Luxury additions      Agreeableness  "
-"Conscientiousness\n"
-"4                Economical/low cost  Conscientiousness      "
-"Agreeableness\n"
-"5                Economical/low cost      Agreeableness           "
-"Openness\n"
-"6          Practical and easy to use      Agreeableness           "
-"Openness\n"
-"7                   Luxury additions      Agreeableness  "
-"Conscientiousness\n"
-"8          Practical and easy to use      Agreeableness           "
-"Openness\n"
-"9                   Luxury additions      Agreeableness  "
-"Conscientiousness\n"
-"10               Economical/low cost  Conscientiousness      "
-"Agreeableness\n"
+"1                Economical/low cost  Conscientiousness      Agreeableness\n"
+"2                   Luxury additions      Agreeableness  Conscientiousness\n"
+"3                   Luxury additions      Agreeableness  Conscientiousness\n"
+"4                Economical/low cost  Conscientiousness      Agreeableness\n"
+"5                Economical/low cost      Agreeableness           Openness\n"
+"6          Practical and easy to use      Agreeableness           Openness\n"
+"7                   Luxury additions      Agreeableness  Conscientiousness\n"
+"8          Practical and easy to use      Agreeableness           Openness\n"
+"9                   Luxury additions      Agreeableness  Conscientiousness\n"
+"10               Economical/low cost  Conscientiousness      Agreeableness\n"
 "\n"
 "          Trait importance 3\n"
 "Person ID\n"
@@ -1308,11 +1226,9 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1234
-#: d0168b87f5be4c3fa7b62aac3f4b8c75
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"                          Path    OPE    CON    EXT    AGR   NNEU  "
-"\\textbackslash{}\n"
+#: 208ba2b4b38e43958deb8f7b38411612
+msgid "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
+"                          Path    OPE    CON    EXT    AGR   NNEU  \\textbackslash{}\n"
 "Person ID\n"
 "1          2d6btbaNdfo.000.mp4  0.581  0.629  0.467  0.622  0.554\n"
 "2          300gK3CnzW0.001.mp4  0.464  0.419  0.413  0.493  0.423\n"
@@ -1325,8 +1241,7 @@ msgid ""
 "9          nvlqJbHk\\_Lc.003.mp4  0.496  0.459  0.414  0.469  0.435\n"
 "10         \\_plk5k7PBEg.003.mp4  0.607  0.592  0.521  0.604  0.566\n"
 "\n"
-"                          Priority 1                 Priority 2  "
-"\\textbackslash{}\n"
+"                          Priority 1                 Priority 2  \\textbackslash{}\n"
 "Person ID\n"
 "1                  Safe and reliable  Practical and easy to use\n"
 "2               Classic car features      Fashion and attention\n"
@@ -1339,29 +1254,18 @@ msgid ""
 "9               Classic car features      Fashion and attention\n"
 "10                 Safe and reliable  Practical and easy to use\n"
 "\n"
-"                          Priority 3 Trait importance 1 Trait importance "
-"2  \\textbackslash{}\n"
+"                          Priority 3 Trait importance 1 Trait importance 2  \\textbackslash{}\n"
 "Person ID\n"
-"1                Economical/low cost  Conscientiousness      "
-"Agreeableness\n"
-"2                   Luxury additions      Agreeableness  "
-"Conscientiousness\n"
-"3                   Luxury additions      Agreeableness  "
-"Conscientiousness\n"
-"4                Economical/low cost  Conscientiousness      "
-"Agreeableness\n"
-"5                Economical/low cost      Agreeableness           "
-"Openness\n"
-"6          Practical and easy to use      Agreeableness           "
-"Openness\n"
-"7                   Luxury additions      Agreeableness  "
-"Conscientiousness\n"
-"8          Practical and easy to use      Agreeableness           "
-"Openness\n"
-"9                   Luxury additions      Agreeableness  "
-"Conscientiousness\n"
-"10               Economical/low cost  Conscientiousness      "
-"Agreeableness\n"
+"1                Economical/low cost  Conscientiousness      Agreeableness\n"
+"2                   Luxury additions      Agreeableness  Conscientiousness\n"
+"3                   Luxury additions      Agreeableness  Conscientiousness\n"
+"4                Economical/low cost  Conscientiousness      Agreeableness\n"
+"5                Economical/low cost      Agreeableness           Openness\n"
+"6          Practical and easy to use      Agreeableness           Openness\n"
+"7                   Luxury additions      Agreeableness  Conscientiousness\n"
+"8          Practical and easy to use      Agreeableness           Openness\n"
+"9                   Luxury additions      Agreeableness  Conscientiousness\n"
+"10               Economical/low cost  Conscientiousness      Agreeableness\n"
 "\n"
 "          Trait importance 3\n"
 "Person ID\n"
@@ -1379,9 +1283,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1291
-#: 6945aef3631e4b3d80b429e2d93931a6
-msgid ""
-"                          Path    OPE    CON    EXT    AGR   NNEU  \\\n"
+#: 33d5f3c3473f4a5cbaafad68a00e4e90
+msgid "                          Path    OPE    CON    EXT    AGR   NNEU  \\\n"
 "Person ID\n"
 "1          2d6btbaNdfo.000.mp4  0.581  0.629  0.467  0.622  0.554\n"
 "2          300gK3CnzW0.001.mp4  0.464  0.419  0.413  0.493  0.423\n"
@@ -1407,29 +1310,18 @@ msgid ""
 "9               Classic car features      Fashion and attention\n"
 "10                 Safe and reliable  Practical and easy to use\n"
 "\n"
-"                          Priority 3 Trait importance 1 Trait importance "
-"2  \\\n"
+"                          Priority 3 Trait importance 1 Trait importance 2  \\\n"
 "Person ID\n"
-"1                Economical/low cost  Conscientiousness      "
-"Agreeableness\n"
-"2                   Luxury additions      Agreeableness  "
-"Conscientiousness\n"
-"3                   Luxury additions      Agreeableness  "
-"Conscientiousness\n"
-"4                Economical/low cost  Conscientiousness      "
-"Agreeableness\n"
-"5                Economical/low cost      Agreeableness           "
-"Openness\n"
-"6          Practical and easy to use      Agreeableness           "
-"Openness\n"
-"7                   Luxury additions      Agreeableness  "
-"Conscientiousness\n"
-"8          Practical and easy to use      Agreeableness           "
-"Openness\n"
-"9                   Luxury additions      Agreeableness  "
-"Conscientiousness\n"
-"10               Economical/low cost  Conscientiousness      "
-"Agreeableness\n"
+"1                Economical/low cost  Conscientiousness      Agreeableness\n"
+"2                   Luxury additions      Agreeableness  Conscientiousness\n"
+"3                   Luxury additions      Agreeableness  Conscientiousness\n"
+"4                Economical/low cost  Conscientiousness      Agreeableness\n"
+"5                Economical/low cost      Agreeableness           Openness\n"
+"6          Practical and easy to use      Agreeableness           Openness\n"
+"7                   Luxury additions      Agreeableness  Conscientiousness\n"
+"8          Practical and easy to use      Agreeableness           Openness\n"
+"9                   Luxury additions      Agreeableness  Conscientiousness\n"
+"10               Economical/low cost  Conscientiousness      Agreeableness\n"
 "\n"
 "          Trait importance 3\n"
 "Person ID\n"
@@ -1448,56 +1340,48 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1353
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3304
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5294
-#: 0bdb89edaa9847fda703767e55aa90c9 5a66a75215c94c97a366d6df006dca65
-#: c3cebf952f274f49b2280a61b4eb619e
-msgid ""
-"Прогнозирование потребительских предпочтений на характеристики мобильного"
-" устройства"
+#: 8531136444e944e4afacc278b3def835
+#: ae22976905c2455ba60f25eadb83c7b9
+#: c3046b6fbe134a4ba940ddb990c2449f
+msgid "Прогнозирование потребительских предпочтений на характеристики мобильного устройства"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1355
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3306
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5296
-#: 764c327544f643daa84e753533335dc1 8e6f7023195f4b30876aabbbd417dcdb
-#: cea277bd3bbd4a9ba7087e9a0afa8267
-msgid ""
-"В качестве примера предлагается использование коэффициентов корреляции "
-"между персональными качествами человека и характеристиками мобильного "
-"устройства, представленными в статье:"
+#: 30da47d6e04e40d79edfe5d5d93fa2ff
+#: cfd9295724bf4ba89db18ea1c928bb43
+#: 6d1bfd3384ae478c96a8f697ee823674
+msgid "В качестве примера предлагается использование коэффициентов корреляции между персональными качествами человека и характеристиками мобильного устройства, представленными в статье:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1357
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3308
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5298
-#: 10c28dcda9544ba3bfb34c5da86885c4 80460b91fe9247bc85f33f24fe841e68
-#: cb7243a328b7489990ebcb3d454db62c
-msgid ""
-"Peltonen E., Sharmila P., Asare K. O., Visuri A., Lagerspetz E., Ferreira"
-" D. (2020). When phones get personal: Predicting Big Five personality "
-"traits from application usage // Pervasive and Mobile Computing. – 2020. "
-"– Vol. 69. – 101269."
+#: 726e35fdc8fb41388885e06dd6b0a711
+#: 054369d2eed64886848c28f8524e524c
+#: 779875b9d591432ea13719f8dac4b5f9
+msgid "Peltonen E., Sharmila P., Asare K. O., Visuri A., Lagerspetz E., Ferreira D. (2020). When phones get personal: Predicting Big Five personality traits from application usage // Pervasive and Mobile Computing. – 2020. – Vol. 69. – 101269."
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 47924eb828f4464dbc791df3faf91de2 57690393939e4148b8c2eada436b1adb
-#: d21d381dc7fd4da995fc98d18c52d70e
+#: c185b98f4d2d408d8e0c488805358b4c
+#: e93f19c7ddfc4404bef3d83460a142f9
+#: 99d7661e1301473e8812524bbcbb7641
 msgid "[5]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 50b05a263a744a6b9040d6b53fdae7d9 64d97784d4594dc8b30724272d2aac2c
-#: 66ca3b70ebc9425fbb1985cc21d2a196
-msgid ""
-"# Загрузка датафрейма с коэффициентами корреляции\n"
-"url = "
-"'https://download.sberdisk.ru/download/file/478676690?token=7KcAxPqMpWiYQnx&filename=divice_characteristics.csv'"
-"\n"
+#: e8b5c5f105f245569075c3ca38295484
+#: 206f9b83774344d6afc057b967410b05
+#: bb1115455f8e4469985deeadaf560bb4
+msgid "# Загрузка датафрейма с коэффициентами корреляции\n"
+"url = 'https://download.sberdisk.ru/download/file/478676690?token=7KcAxPqMpWiYQnx&filename=divice_characteristics.csv'\n"
 "df_divice_characteristics = pd.read_csv(url)\n"
 "\n"
 "df_divice_characteristics.index.name = 'ID'\n"
 "df_divice_characteristics.index += 1\n"
-"df_divice_characteristics.index = "
-"df_divice_characteristics.index.map(str)\n"
+"df_divice_characteristics.index = df_divice_characteristics.index.map(str)\n"
 "\n"
 "df_divice_characteristics"
 msgstr ""
@@ -1505,10 +1389,10 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1389
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3340
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5330
-#: 0dc9290b394a43efb8b7c5baa9dfb380 a2ab5f93924f4544833b297048044d06
-#: bf25af30ab20414487bf926026f26ba0
-msgid ""
-"<div>\n"
+#: 9b3a06c27a284a88819f342d00f58129
+#: 9ef07d1eb85c40c78766620f89cf2950
+#: f82755f30f504001af9119c3e84578ae
+msgid "<div>\n"
 "<style scoped>\n"
 "    .dataframe tbody tr th:only-of-type {\n"
 "        vertical-align: middle;\n"
@@ -1674,51 +1558,33 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1560
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3511
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5501
-#: 22186fa8a901423787f3c111d2c92136 3c4b34cb71354b11bcb2df7aeaefac79
-#: 57c7fbad7dc54d05a7acd614f1da3e1a
-msgid ""
-"<pre>\n"
-"                Trait  Communication  Game Action  Game Board  Game "
-"Casino  \\\n"
+#: 866c7116b3f54d02bf21cf3d2c56e33a
+#: 2bb2e3f7d452419db0083458c3cc71e3
+#: 8f6656563dd44c01a265297decd895fa
+msgid "<pre>\n"
+"                Trait  Communication  Game Action  Game Board  Game Casino  \\\n"
 "ID\n"
-"1            Openness          0.118        0.056       0.079        "
-"0.342\n"
-"2   Conscientiousness          0.119        0.043       0.107        "
-"0.448\n"
-"3        Extraversion          0.246        0.182       0.211        "
-"0.311\n"
-"4       Agreeableness          0.218        0.104       0.164        "
-"0.284\n"
-"5     Non-Neuroticism          0.046        0.047       0.125        "
-"0.515\n"
+"1            Openness          0.118        0.056       0.079        0.342\n"
+"2   Conscientiousness          0.119        0.043       0.107        0.448\n"
+"3        Extraversion          0.246        0.182       0.211        0.311\n"
+"4       Agreeableness          0.218        0.104       0.164        0.284\n"
+"5     Non-Neuroticism          0.046        0.047       0.125        0.515\n"
 "\n"
-"    Game Educational  Game Simulation  Game Trivia  Entertainment  "
-"Finance  \\\n"
+"    Game Educational  Game Simulation  Game Trivia  Entertainment  Finance  \\\n"
 "ID\n"
-"1              0.027            0.104        0.026          0.000    "
-"0.006\n"
-"2              0.039            0.012        0.119          0.000    "
-"0.005\n"
-"3              0.102            0.165        0.223          0.001    "
-"0.003\n"
-"4              0.165            0.122        0.162          0.000    "
-"0.003\n"
-"5              0.272            0.179        0.214          0.002    "
-"0.030\n"
+"1              0.027            0.104        0.026          0.000    0.006\n"
+"2              0.039            0.012        0.119          0.000    0.005\n"
+"3              0.102            0.165        0.223          0.001    0.003\n"
+"4              0.165            0.122        0.162          0.000    0.003\n"
+"5              0.272            0.179        0.214          0.002    0.030\n"
 "\n"
-"    Health and Fitness  Media and Video  Music and Audio  News and "
-"Magazines  \\\n"
+"    Health and Fitness  Media and Video  Music and Audio  News and Magazines  \\\n"
 "ID\n"
-"1                0.002            0.000            0.000               "
-"0.001\n"
-"2                0.001            0.000            0.002               "
-"0.002\n"
-"3                0.000            0.001            0.001               "
-"0.001\n"
-"4                0.001            0.000            0.002               "
-"0.002\n"
-"5                0.001            0.000            0.005               "
-"0.003\n"
+"1                0.002            0.000            0.000               0.001\n"
+"2                0.001            0.000            0.002               0.002\n"
+"3                0.000            0.001            0.001               0.001\n"
+"4                0.001            0.000            0.002               0.002\n"
+"5                0.001            0.000            0.005               0.003\n"
 "\n"
 "    Personalisation  Travel and Local  Weather\n"
 "ID\n"
@@ -1733,51 +1599,33 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1596
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3547
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5537
-#: 59dc773dda2349649d0c6f3b7220fe55 70a7213bbdf844afbb4f770f742195d9
-#: ef9dd458c53e4c038a8f160074e39589
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"                Trait  Communication  Game Action  Game Board  Game "
-"Casino  \\textbackslash{}\n"
+#: 8008f7270e2343cb917c2ef0e1a97eff
+#: 33205fe106de4efc8638fe838e22c052
+#: 5d37ad6a5cc24795894013bc7eda930e
+msgid "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
+"                Trait  Communication  Game Action  Game Board  Game Casino  \\textbackslash{}\n"
 "ID\n"
-"1            Openness          0.118        0.056       0.079        "
-"0.342\n"
-"2   Conscientiousness          0.119        0.043       0.107        "
-"0.448\n"
-"3        Extraversion          0.246        0.182       0.211        "
-"0.311\n"
-"4       Agreeableness          0.218        0.104       0.164        "
-"0.284\n"
-"5     Non-Neuroticism          0.046        0.047       0.125        "
-"0.515\n"
+"1            Openness          0.118        0.056       0.079        0.342\n"
+"2   Conscientiousness          0.119        0.043       0.107        0.448\n"
+"3        Extraversion          0.246        0.182       0.211        0.311\n"
+"4       Agreeableness          0.218        0.104       0.164        0.284\n"
+"5     Non-Neuroticism          0.046        0.047       0.125        0.515\n"
 "\n"
-"    Game Educational  Game Simulation  Game Trivia  Entertainment  "
-"Finance  \\textbackslash{}\n"
+"    Game Educational  Game Simulation  Game Trivia  Entertainment  Finance  \\textbackslash{}\n"
 "ID\n"
-"1              0.027            0.104        0.026          0.000    "
-"0.006\n"
-"2              0.039            0.012        0.119          0.000    "
-"0.005\n"
-"3              0.102            0.165        0.223          0.001    "
-"0.003\n"
-"4              0.165            0.122        0.162          0.000    "
-"0.003\n"
-"5              0.272            0.179        0.214          0.002    "
-"0.030\n"
+"1              0.027            0.104        0.026          0.000    0.006\n"
+"2              0.039            0.012        0.119          0.000    0.005\n"
+"3              0.102            0.165        0.223          0.001    0.003\n"
+"4              0.165            0.122        0.162          0.000    0.003\n"
+"5              0.272            0.179        0.214          0.002    0.030\n"
 "\n"
-"    Health and Fitness  Media and Video  Music and Audio  News and "
-"Magazines  \\textbackslash{}\n"
+"    Health and Fitness  Media and Video  Music and Audio  News and Magazines  \\textbackslash{}\n"
 "ID\n"
-"1                0.002            0.000            0.000               "
-"0.001\n"
-"2                0.001            0.000            0.002               "
-"0.002\n"
-"3                0.000            0.001            0.001               "
-"0.001\n"
-"4                0.001            0.000            0.002               "
-"0.002\n"
-"5                0.001            0.000            0.005               "
-"0.003\n"
+"1                0.002            0.000            0.000               0.001\n"
+"2                0.001            0.000            0.002               0.002\n"
+"3                0.000            0.001            0.001               0.001\n"
+"4                0.001            0.000            0.002               0.002\n"
+"5                0.001            0.000            0.005               0.003\n"
 "\n"
 "    Personalisation  Travel and Local  Weather\n"
 "ID\n"
@@ -1792,50 +1640,32 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1633
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3584
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5574
-#: 417d4878b0c64545b45e9354621174c1 e52434ea254b4b709bf5dd63779629b5
-#: f1da61b031c74ed096b2e59b8a909bd4
-msgid ""
-"                Trait  Communication  Game Action  Game Board  Game "
-"Casino  \\\n"
+#: dbe32206d955409db7a3d7b24ff485da
+#: cd450be2a56444dc8b61a39edde52d7a
+#: 6cde35f4e83148e7bf1be6b908054a18
+msgid "                Trait  Communication  Game Action  Game Board  Game Casino  \\\n"
 "ID\n"
-"1            Openness          0.118        0.056       0.079        "
-"0.342\n"
-"2   Conscientiousness          0.119        0.043       0.107        "
-"0.448\n"
-"3        Extraversion          0.246        0.182       0.211        "
-"0.311\n"
-"4       Agreeableness          0.218        0.104       0.164        "
-"0.284\n"
-"5     Non-Neuroticism          0.046        0.047       0.125        "
-"0.515\n"
+"1            Openness          0.118        0.056       0.079        0.342\n"
+"2   Conscientiousness          0.119        0.043       0.107        0.448\n"
+"3        Extraversion          0.246        0.182       0.211        0.311\n"
+"4       Agreeableness          0.218        0.104       0.164        0.284\n"
+"5     Non-Neuroticism          0.046        0.047       0.125        0.515\n"
 "\n"
-"    Game Educational  Game Simulation  Game Trivia  Entertainment  "
-"Finance  \\\n"
+"    Game Educational  Game Simulation  Game Trivia  Entertainment  Finance  \\\n"
 "ID\n"
-"1              0.027            0.104        0.026          0.000    "
-"0.006\n"
-"2              0.039            0.012        0.119          0.000    "
-"0.005\n"
-"3              0.102            0.165        0.223          0.001    "
-"0.003\n"
-"4              0.165            0.122        0.162          0.000    "
-"0.003\n"
-"5              0.272            0.179        0.214          0.002    "
-"0.030\n"
+"1              0.027            0.104        0.026          0.000    0.006\n"
+"2              0.039            0.012        0.119          0.000    0.005\n"
+"3              0.102            0.165        0.223          0.001    0.003\n"
+"4              0.165            0.122        0.162          0.000    0.003\n"
+"5              0.272            0.179        0.214          0.002    0.030\n"
 "\n"
-"    Health and Fitness  Media and Video  Music and Audio  News and "
-"Magazines  \\\n"
+"    Health and Fitness  Media and Video  Music and Audio  News and Magazines  \\\n"
 "ID\n"
-"1                0.002            0.000            0.000               "
-"0.001\n"
-"2                0.001            0.000            0.002               "
-"0.002\n"
-"3                0.000            0.001            0.001               "
-"0.001\n"
-"4                0.001            0.000            0.002               "
-"0.002\n"
-"5                0.001            0.000            0.005               "
-"0.003\n"
+"1                0.002            0.000            0.000               0.001\n"
+"2                0.001            0.000            0.002               0.002\n"
+"3                0.000            0.001            0.001               0.001\n"
+"4                0.001            0.000            0.002               0.002\n"
+"5                0.001            0.000            0.005               0.003\n"
 "\n"
 "    Personalisation  Travel and Local  Weather\n"
 "ID\n"
@@ -1847,15 +1677,15 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 373aab4235564742a88701fb02b3f706 ca70c04860304c60a0b0379ce3982265
-#: d4c6737b73034db0ac767d7a0b15b8a2
+#: 27a887427e3f441396cba21840eea30c
+#: 6229c791dab24e6aad56ed2f581f1f2a
+#: 28001d62f8154a1a9cdd1e48036c650b
 msgid "[6]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: c9a0dc0bad2f44d7b57ccdf63b94f8d5
-msgid ""
-"_b5._priority_calculation(\n"
+#: a0b0a765ec1b4fd6b0a9901d319b9d2d
+msgid "_b5._priority_calculation(\n"
 "    correlation_coefficients = df_divice_characteristics,\n"
 "    col_name_ocean = 'Trait',\n"
 "    threshold = 0.55,\n"
@@ -1864,23 +1694,18 @@ msgid ""
 "    out = True\n"
 ")\n"
 "\n"
-"_b5._save_logs(df = _b5.df_files_priority_, name = "
-"'divice_characteristics_priorities_fi_en', out = True)\n"
+"_b5._save_logs(df = _b5.df_files_priority_, name = 'divice_characteristics_priorities_fi_en', out = True)\n"
 "\n"
 "# Опционно\n"
-"df = _b5.df_files_priority_.rename(columns = {'Openness':'OPE', "
-"'Conscientiousness':'CON', 'Extraversion': 'EXT', 'Agreeableness': 'AGR',"
-" 'Non-Neuroticism': 'NNEU'})\n"
+"df = _b5.df_files_priority_.rename(columns = {'Openness':'OPE', 'Conscientiousness':'CON', 'Extraversion': 'EXT', 'Agreeableness': 'AGR', 'Non-Neuroticism': 'NNEU'})\n"
 "columns_to_round = ['OPE', 'CON', 'EXT', 'AGR', 'NNEU']\n"
-"df[columns_to_round] = df[columns_to_round].apply(lambda x: [round(i, 3) "
-"for i in x])\n"
+"df[columns_to_round] = df[columns_to_round].apply(lambda x: [round(i, 3) for i in x])\n"
 "df"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1702
-#: 42e58f9c67bf43d29d978f461d112708
-msgid ""
-"<div>\n"
+#: 6bed79c994f441b79c5cd81621b83b92
+msgid "<div>\n"
 "<style scoped>\n"
 "    .dataframe tbody tr th:only-of-type {\n"
 "        vertical-align: middle;\n"
@@ -2084,9 +1909,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1913
-#: ce2115a23d0948e0b256b775a427f4ad
-msgid ""
-"<pre>\n"
+#: afc55b7e3dbc47efaf1da7043a15a05f
+msgid "<pre>\n"
 "                          Path    OPE    CON    EXT    AGR   NNEU  \\\n"
 "Person ID\n"
 "1          2d6btbaNdfo.000.mp4  0.581  0.629  0.467  0.622  0.554\n"
@@ -2129,11 +1953,9 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:1956
-#: 15914525994b4256b4cdf1d766be58d0
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"                          Path    OPE    CON    EXT    AGR   NNEU  "
-"\\textbackslash{}\n"
+#: 7de6ee65068a427f87f46dfc15097d1c
+msgid "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
+"                          Path    OPE    CON    EXT    AGR   NNEU  \\textbackslash{}\n"
 "Person ID\n"
 "1          2d6btbaNdfo.000.mp4  0.581  0.629  0.467  0.622  0.554\n"
 "2          300gK3CnzW0.001.mp4  0.464  0.419  0.413  0.493  0.423\n"
@@ -2146,8 +1968,7 @@ msgid ""
 "9          nvlqJbHk\\_Lc.003.mp4  0.496  0.459  0.414  0.469  0.435\n"
 "10         \\_plk5k7PBEg.003.mp4  0.607  0.592  0.521  0.604  0.566\n"
 "\n"
-"                Priority 1        Priority 2          Priority 3  "
-"\\textbackslash{}\n"
+"                Priority 1        Priority 2          Priority 3  \\textbackslash{}\n"
 "Person ID\n"
 "1              Game Casino  Game Educational         Game Trivia\n"
 "2          Media and Video     Entertainment  Health and Fitness\n"
@@ -2176,9 +1997,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2000
-#: 703fff670f1240d9a8c86e5a96996fab
-msgid ""
-"                          Path    OPE    CON    EXT    AGR   NNEU  \\\n"
+#: 64633d7a9ce04814a324e01483b76e6a
+msgid "                          Path    OPE    CON    EXT    AGR   NNEU  \\\n"
 "Person ID\n"
 "1          2d6btbaNdfo.000.mp4  0.581  0.629  0.467  0.622  0.554\n"
 "2          300gK3CnzW0.001.mp4  0.464  0.419  0.413  0.493  0.423\n"
@@ -2219,19 +2039,19 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2049
-#: 91ab37243bc54fd092b2532e050debf5
+#: ea6b2bae3678403cb1cca73803cbc9d9
 msgid "``MuPTA`` (ru)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: dd6b7c393b834289bd66bdc1433ed29d f546604a6eb748e4bdde7cb8bc54b70f
+#: 86b0100aefc34648ae10a8fc6fa11219
+#: 0ff2467ee3ee4ce4990648d93da86af4
 msgid "[7]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 70d3089ea4ef4038b620cd7a4aad5caa
-msgid ""
-"import os\n"
+#: 9e7275e4cd534992abf031c8d92a0a89
+msgid "import os\n"
 "import pandas as pd\n"
 "\n"
 "# Импорт модуля\n"
@@ -2268,8 +2088,7 @@ msgid ""
 "res_load_model_weights_hc = _b5.load_video_model_weights_hc(url = url)\n"
 "\n"
 "url = _b5.weights_for_big5_['video'][corpus]['fe']['sberdisk']\n"
-"res_load_model_weights_deep_fe = _b5.load_video_model_weights_deep_fe(url"
-" = url)\n"
+"res_load_model_weights_deep_fe = _b5.load_video_model_weights_deep_fe(url = url)\n"
 "\n"
 "url = _b5.weights_for_big5_['video'][corpus]['nn']['sberdisk']\n"
 "res_load_model_weights_nn = _b5.load_video_model_weights_nn(url = url)\n"
@@ -2278,21 +2097,17 @@ msgid ""
 "res_load_text_features = _b5.load_text_features()\n"
 "\n"
 "# Формирование текстовых моделей\n"
-"res_setup_translation_model = _b5.setup_translation_model() # только для "
-"русского языка\n"
-"res_setup_translation_model = _b5.setup_bert_encoder(force_reload = "
-"False)\n"
+"res_setup_translation_model = _b5.setup_translation_model() # только для русского языка\n"
+"res_setup_translation_model = _b5.setup_bert_encoder(force_reload = False)\n"
 "res_load_text_model_hc_fi = _b5.load_text_model_hc(corpus=corpus)\n"
 "res_load_text_model_nn_fi = _b5.load_text_model_nn(corpus=corpus)\n"
 "\n"
 "# Загрузка весов текстовых моделей\n"
 "url = _b5.weights_for_big5_['text'][corpus]['hc']['sberdisk']\n"
-"res_load_text_model_weights_hc_fi = _b5.load_text_model_weights_hc(url = "
-"url)\n"
+"res_load_text_model_weights_hc_fi = _b5.load_text_model_weights_hc(url = url)\n"
 "\n"
 "url = _b5.weights_for_big5_['text'][corpus]['nn']['sberdisk']\n"
-"res_load_text_model_weights_nn_fi = _b5.load_text_model_weights_nn(url = "
-"url)\n"
+"res_load_text_model_weights_nn_fi = _b5.load_text_model_weights_nn(url = url)\n"
 "\n"
 "# Формирование модели для мультимодального объединения информации\n"
 "res_load_avt_model_b5 = _b5.load_avt_model_b5()\n"
@@ -2336,33 +2151,25 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2166
-#: 5708d1dcb34b4cc5bedcc60a0ee779d4
-msgid ""
-"\\ **[2023-12-16 19:13:25] Извлечение признаков (экспертных и "
-"нейросетевых) из текста …**"
+#: 589927044b4f499cbace4321c94f4edf
+msgid "\\ **[2023-12-16 19:13:25] Извлечение признаков (экспертных и нейросетевых) из текста …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2177
-#: 72257ea21d444e22848d07eaa1e539af
-msgid ""
-"\\ **[2023-12-16 19:13:30] Получение прогнозов и вычисление точности "
-"(мультимодальное объединение) …**"
+#: 86a98142f9bc44e2994ad41bd10c7675
+msgid "\\ **[2023-12-16 19:13:30] Получение прогнозов и вычисление точности (мультимодальное объединение) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2183
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4134
-#: a394c415b59d498d8515bda754b34d87 dfee139a698c4af79b6fe789aa314a80
-msgid ""
-"10 из 10 (100.0%) … GitHub:nbsphinx-math:`\\OCEANAI`:nbsphinx-"
-"math:`\\docs`:nbsphinx-math:`\\source`:nbsphinx-math:`\\user`\\_guide"
-":nbsphinx-math:`\\notebooks`:nbsphinx-math:`\\video`\\_MuPTA:nbsphinx-"
-"math:`\\test`:nbsphinx-math:`\\speaker`\\_27_center_83.mov …"
+#: a7be717e40bc4516b7d4030a5442f5da
+#: ec61346fc29446e3af9742be222007c2
+msgid "10 из 10 (100.0%) … GitHub:nbsphinx-math:`\\OCEANAI`:nbsphinx-math:`\\docs`:nbsphinx-math:`\\source`:nbsphinx-math:`\\user`\\_guide:nbsphinx-math:`\\notebooks`:nbsphinx-math:`\\video`\\_MuPTA:nbsphinx-math:`\\test`:nbsphinx-math:`\\speaker`\\_27_center_83.mov …"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2201
-#: 979024bdf0c14d30be7481ba04336b7a
-msgid ""
-"<div>\n"
+#: 0cb4570c8e394594910ad995db6c2ee4
+msgid "<div>\n"
 "<style scoped>\n"
 "    .dataframe tbody tr th:only-of-type {\n"
 "        vertical-align: middle;\n"
@@ -2494,32 +2301,20 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2340
-#: 1b3d47dfdd24418197f0f7bbeffe8920
-msgid ""
-"<pre>\n"
-"                               Path  Openness Conscientiousness "
-"Extraversion  \\\n"
+#: 40e7377a2f414e6aa1ce3df2f5389a4c
+msgid "<pre>\n"
+"                               Path  Openness Conscientiousness Extraversion  \\\n"
 "Person ID\n"
-"1          speaker_01_center_83.mov  0.758137          0.693356     "
-"0.650108\n"
-"2          speaker_06_center_83.mov  0.681602          0.654339     "
-"0.607156\n"
-"3          speaker_07_center_83.mov  0.666104          0.656836     "
-"0.567863\n"
-"4          speaker_10_center_83.mov  0.694171          0.596195     "
-"0.571414\n"
-"5          speaker_11_center_83.mov  0.712885          0.594764     "
-"0.571709\n"
-"6          speaker_15_center_83.mov  0.664158          0.670411      "
-"0.60421\n"
-"7          speaker_19_center_83.mov  0.761213          0.652635     "
-"0.651028\n"
-"8          speaker_23_center_83.mov  0.692788           0.68324     "
-"0.616737\n"
-"9          speaker_24_center_83.mov  0.705923          0.658382     "
-"0.610645\n"
-"10         speaker_27_center_83.mov  0.753417          0.708372     "
-"0.654608\n"
+"1          speaker_01_center_83.mov  0.758137          0.693356     0.650108\n"
+"2          speaker_06_center_83.mov  0.681602          0.654339     0.607156\n"
+"3          speaker_07_center_83.mov  0.666104          0.656836     0.567863\n"
+"4          speaker_10_center_83.mov  0.694171          0.596195     0.571414\n"
+"5          speaker_11_center_83.mov  0.712885          0.594764     0.571709\n"
+"6          speaker_15_center_83.mov  0.664158          0.670411      0.60421\n"
+"7          speaker_19_center_83.mov  0.761213          0.652635     0.651028\n"
+"8          speaker_23_center_83.mov  0.692788           0.68324     0.616737\n"
+"9          speaker_24_center_83.mov  0.705923          0.658382     0.610645\n"
+"10         speaker_27_center_83.mov  0.753417          0.708372     0.654608\n"
 "\n"
 "          Agreeableness Non-Neuroticism\n"
 "Person ID\n"
@@ -2537,32 +2332,20 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2370
-#: 808493385e20493bb1e33717e7f7a048
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"                               Path  Openness Conscientiousness "
-"Extraversion  \\textbackslash{}\n"
+#: d0332491c4c742128a994f975fcf1737
+msgid "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
+"                               Path  Openness Conscientiousness Extraversion  \\textbackslash{}\n"
 "Person ID\n"
-"1          speaker\\_01\\_center\\_83.mov  0.758137          0.693356"
-"     0.650108\n"
-"2          speaker\\_06\\_center\\_83.mov  0.681602          0.654339"
-"     0.607156\n"
-"3          speaker\\_07\\_center\\_83.mov  0.666104          0.656836"
-"     0.567863\n"
-"4          speaker\\_10\\_center\\_83.mov  0.694171          0.596195"
-"     0.571414\n"
-"5          speaker\\_11\\_center\\_83.mov  0.712885          0.594764"
-"     0.571709\n"
-"6          speaker\\_15\\_center\\_83.mov  0.664158          0.670411"
-"      0.60421\n"
-"7          speaker\\_19\\_center\\_83.mov  0.761213          0.652635"
-"     0.651028\n"
-"8          speaker\\_23\\_center\\_83.mov  0.692788           0.68324"
-"     0.616737\n"
-"9          speaker\\_24\\_center\\_83.mov  0.705923          0.658382"
-"     0.610645\n"
-"10         speaker\\_27\\_center\\_83.mov  0.753417          0.708372"
-"     0.654608\n"
+"1          speaker\\_01\\_center\\_83.mov  0.758137          0.693356     0.650108\n"
+"2          speaker\\_06\\_center\\_83.mov  0.681602          0.654339     0.607156\n"
+"3          speaker\\_07\\_center\\_83.mov  0.666104          0.656836     0.567863\n"
+"4          speaker\\_10\\_center\\_83.mov  0.694171          0.596195     0.571414\n"
+"5          speaker\\_11\\_center\\_83.mov  0.712885          0.594764     0.571709\n"
+"6          speaker\\_15\\_center\\_83.mov  0.664158          0.670411      0.60421\n"
+"7          speaker\\_19\\_center\\_83.mov  0.761213          0.652635     0.651028\n"
+"8          speaker\\_23\\_center\\_83.mov  0.692788           0.68324     0.616737\n"
+"9          speaker\\_24\\_center\\_83.mov  0.705923          0.658382     0.610645\n"
+"10         speaker\\_27\\_center\\_83.mov  0.753417          0.708372     0.654608\n"
 "\n"
 "          Agreeableness Non-Neuroticism\n"
 "Person ID\n"
@@ -2580,31 +2363,19 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2401
-#: bcc33bcdfec44a49940f91d13741ba21
-msgid ""
-"                               Path  Openness Conscientiousness "
-"Extraversion  \\\n"
+#: cffe8d26eedf4892bfa4ced61d91346c
+msgid "                               Path  Openness Conscientiousness Extraversion  \\\n"
 "Person ID\n"
-"1          speaker_01_center_83.mov  0.758137          0.693356     "
-"0.650108\n"
-"2          speaker_06_center_83.mov  0.681602          0.654339     "
-"0.607156\n"
-"3          speaker_07_center_83.mov  0.666104          0.656836     "
-"0.567863\n"
-"4          speaker_10_center_83.mov  0.694171          0.596195     "
-"0.571414\n"
-"5          speaker_11_center_83.mov  0.712885          0.594764     "
-"0.571709\n"
-"6          speaker_15_center_83.mov  0.664158          0.670411      "
-"0.60421\n"
-"7          speaker_19_center_83.mov  0.761213          0.652635     "
-"0.651028\n"
-"8          speaker_23_center_83.mov  0.692788           0.68324     "
-"0.616737\n"
-"9          speaker_24_center_83.mov  0.705923          0.658382     "
-"0.610645\n"
-"10         speaker_27_center_83.mov  0.753417          0.708372     "
-"0.654608\n"
+"1          speaker_01_center_83.mov  0.758137          0.693356     0.650108\n"
+"2          speaker_06_center_83.mov  0.681602          0.654339     0.607156\n"
+"3          speaker_07_center_83.mov  0.666104          0.656836     0.567863\n"
+"4          speaker_10_center_83.mov  0.694171          0.596195     0.571414\n"
+"5          speaker_11_center_83.mov  0.712885          0.594764     0.571709\n"
+"6          speaker_15_center_83.mov  0.664158          0.670411      0.60421\n"
+"7          speaker_19_center_83.mov  0.761213          0.652635     0.651028\n"
+"8          speaker_23_center_83.mov  0.692788           0.68324     0.616737\n"
+"9          speaker_24_center_83.mov  0.705923          0.658382     0.610645\n"
+"10         speaker_27_center_83.mov  0.753417          0.708372     0.654608\n"
 "\n"
 "          Agreeableness Non-Neuroticism\n"
 "Person ID\n"
@@ -2621,16 +2392,13 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2436
-#: 6ebff413260c4af4a29ec84ba2ef80fc
-msgid ""
-"\\ **[2023-12-16 19:13:30] Точность по отдельным персональным качествам "
-"личности человека …**"
+#: 855b9c3b2aed4ebdabef4a28b18f049a
+msgid "\\ **[2023-12-16 19:13:30] Точность по отдельным персональным качествам личности человека …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2450
-#: 950f6fe43d2c4ab1af128ac457236301
-msgid ""
-"<div>\n"
+#: b65587cecad44e13b9cc31e999218a42
+msgid "<div>\n"
 "<style scoped>\n"
 "    .dataframe tbody tr th:only-of-type {\n"
 "        vertical-align: middle;\n"
@@ -2690,9 +2458,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2517
-#: dac430f2a29e46518d8d322a4388720b
-msgid ""
-"<pre>\n"
+#: 206790223899493fb7ec3b6e9991fdd8
+msgid "<pre>\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
 "Metrics\n"
 "MAE         0.0673             0.0789        0.1325          0.102\n"
@@ -2706,11 +2473,9 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2531
-#: af5d0d379f7b4d89a72624152757e8c4
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"          Openness  Conscientiousness  Extraversion  Agreeableness  "
-"\\textbackslash{}\n"
+#: 90188b9bb74b43bb929eccf7b45c0fc9
+msgid "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
+"          Openness  Conscientiousness  Extraversion  Agreeableness  \\textbackslash{}\n"
 "Metrics\n"
 "MAE         0.0673             0.0789        0.1325          0.102\n"
 "Accuracy    0.9327             0.9211        0.8675          0.898\n"
@@ -2723,9 +2488,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2546
-#: 348be7d3385c4fbdbe5c336b7831e8f6
-msgid ""
-"          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
+#: 1082fc89c19848498f3be282e37fa843
+msgid "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
 "Metrics\n"
 "MAE         0.0673             0.0789        0.1325          0.102\n"
 "Accuracy    0.9327             0.9211        0.8675          0.898\n"
@@ -2737,33 +2501,32 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2565
-#: cb00a5f97248411995e8eff2564229d8
-msgid ""
-"\\ **[2023-12-16 19:13:30] Средняя средних абсолютных ошибок: 0.0962, "
-"средняя точность: 0.9038 …**"
+#: 431e40ddc25747caaac23c99bcf802ed
+msgid "\\ **[2023-12-16 19:13:30] Средняя средних абсолютных ошибок: 0.0962, средняя точность: 0.9038 …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2587
-#: 0d7d831c9bab48d285b0e1531a268308
+#: 2513542871a54614a51f9164030305fb
 msgid "— Время выполнения: 416.453 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 9b7fa10f8ba1475fb3860acc295acb7c cec9ffd4ec5945c99d7de4364577d797
-#: d9d757aebf5440a7bc56fd2faa8a3410
+#: 725bc3493302441887fd48329a596bc6
+#: 7581db3c9cf64dc48b9398d7b9a8d5be
+#: 32067117ca4c453d90cf82fa1c200ee7
 msgid "[8]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 37de9a17920f441382c71c56386f09eb 755745a5eb504e40bd73d169d64e45f7
-#: d416aea7884548d39dfff01445b0cd94
+#: 01715160348c44edbf035cebc01027c5
+#: 6632db9e8618486c91ed546d007431f3
+#: 4b51bb982ca742d7bddb117587d1f375
 msgid "[9]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 32fd46822bb84ea8805f65abc7c357dc
-msgid ""
-"_b5._priority_calculation(\n"
+#: 5fa4a4483c87484e8cfffb1ac2d1a1e5
+msgid "_b5._priority_calculation(\n"
 "    correlation_coefficients = df_correlation_coefficients,\n"
 "    col_name_ocean = 'Trait',\n"
 "    threshold = 0.55,\n"
@@ -2772,23 +2535,18 @@ msgid ""
 "    out = False\n"
 ")\n"
 "\n"
-"_b5._save_logs(df = _b5.df_files_priority_, name = "
-"'auto_characteristics_priorities_mupta_ru', out = True)\n"
+"_b5._save_logs(df = _b5.df_files_priority_, name = 'auto_characteristics_priorities_mupta_ru', out = True)\n"
 "\n"
 "# Опционно\n"
-"df = _b5.df_files_priority_.rename(columns = {'Openness':'OPE', "
-"'Conscientiousness':'CON', 'Extraversion': 'EXT', 'Agreeableness': 'AGR',"
-" 'Non-Neuroticism': 'NNEU'})\n"
+"df = _b5.df_files_priority_.rename(columns = {'Openness':'OPE', 'Conscientiousness':'CON', 'Extraversion': 'EXT', 'Agreeableness': 'AGR', 'Non-Neuroticism': 'NNEU'})\n"
 "columns_to_round = ['OPE', 'CON', 'EXT', 'AGR', 'NNEU']\n"
-"df[columns_to_round] = df[columns_to_round].apply(lambda x: [round(i, 3) "
-"for i in x])\n"
+"df[columns_to_round] = df[columns_to_round].apply(lambda x: [round(i, 3) for i in x])\n"
 "df"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:2957
-#: 3d070fcdab0e4b0d83381cd08fdf105e
-msgid ""
-"<div>\n"
+#: c7e2f3db9b264c26963ab8791b6047c4
+msgid "<div>\n"
 "<style scoped>\n"
 "    .dataframe tbody tr th:only-of-type {\n"
 "        vertical-align: middle;\n"
@@ -2992,11 +2750,9 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3168
-#: 6138b8e8b52642f09fcfbd1609e5a52d
-msgid ""
-"<pre>\n"
-"                               Path    OPE    CON    EXT    AGR   NNEU  "
-"\\\n"
+#: 10690e50d48f418eb2504e970a8ea972
+msgid "<pre>\n"
+"                               Path    OPE    CON    EXT    AGR   NNEU  \\\n"
 "Person ID\n"
 "1          speaker_01_center_83.mov  0.758  0.693  0.650  0.745  0.489\n"
 "2          speaker_06_center_83.mov  0.682  0.654  0.607  0.731  0.418\n"
@@ -3009,29 +2765,18 @@ msgid ""
 "9          speaker_24_center_83.mov  0.706  0.658  0.611  0.697  0.412\n"
 "10         speaker_27_center_83.mov  0.753  0.708  0.655  0.816  0.505\n"
 "\n"
-"                  Priority 1                 Priority 2           "
-"Priority 3  \\\n"
+"                  Priority 1                 Priority 2           Priority 3  \\\n"
 "Person ID\n"
-"1          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"2          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"3          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"4          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"5          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"6          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"7          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"8          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"9          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"10         Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
+"1          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"2          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"3          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"4          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"5          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"6          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"7          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"8          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"9          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"10         Safe and reliable  Practical and easy to use  Economical/low cost\n"
 "\n"
 "          Trait importance 1 Trait importance 2 Trait importance 3\n"
 "Person ID\n"
@@ -3049,56 +2794,33 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3211
-#: 1c55e9f7ed1b4fcab16f54f16b44aa34
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"                               Path    OPE    CON    EXT    AGR   NNEU  "
-"\\textbackslash{}\n"
+#: 05d71038f2514879a2baa7cc34349a96
+msgid "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
+"                               Path    OPE    CON    EXT    AGR   NNEU  \\textbackslash{}\n"
 "Person ID\n"
-"1          speaker\\_01\\_center\\_83.mov  0.758  0.693  0.650  0.745  "
-"0.489\n"
-"2          speaker\\_06\\_center\\_83.mov  0.682  0.654  0.607  0.731  "
-"0.418\n"
-"3          speaker\\_07\\_center\\_83.mov  0.666  0.657  0.568  0.685  "
-"0.378\n"
-"4          speaker\\_10\\_center\\_83.mov  0.694  0.596  0.571  0.662  "
-"0.349\n"
-"5          speaker\\_11\\_center\\_83.mov  0.713  0.595  0.572  0.717  "
-"0.378\n"
-"6          speaker\\_15\\_center\\_83.mov  0.664  0.670  0.604  0.696  "
-"0.400\n"
-"7          speaker\\_19\\_center\\_83.mov  0.761  0.653  0.651  0.789  "
-"0.460\n"
-"8          speaker\\_23\\_center\\_83.mov  0.693  0.683  0.617  0.795  "
-"0.447\n"
-"9          speaker\\_24\\_center\\_83.mov  0.706  0.658  0.611  0.697  "
-"0.412\n"
-"10         speaker\\_27\\_center\\_83.mov  0.753  0.708  0.655  0.816  "
-"0.505\n"
+"1          speaker\\_01\\_center\\_83.mov  0.758  0.693  0.650  0.745  0.489\n"
+"2          speaker\\_06\\_center\\_83.mov  0.682  0.654  0.607  0.731  0.418\n"
+"3          speaker\\_07\\_center\\_83.mov  0.666  0.657  0.568  0.685  0.378\n"
+"4          speaker\\_10\\_center\\_83.mov  0.694  0.596  0.571  0.662  0.349\n"
+"5          speaker\\_11\\_center\\_83.mov  0.713  0.595  0.572  0.717  0.378\n"
+"6          speaker\\_15\\_center\\_83.mov  0.664  0.670  0.604  0.696  0.400\n"
+"7          speaker\\_19\\_center\\_83.mov  0.761  0.653  0.651  0.789  0.460\n"
+"8          speaker\\_23\\_center\\_83.mov  0.693  0.683  0.617  0.795  0.447\n"
+"9          speaker\\_24\\_center\\_83.mov  0.706  0.658  0.611  0.697  0.412\n"
+"10         speaker\\_27\\_center\\_83.mov  0.753  0.708  0.655  0.816  0.505\n"
 "\n"
-"                  Priority 1                 Priority 2           "
-"Priority 3  \\textbackslash{}\n"
+"                  Priority 1                 Priority 2           Priority 3  \\textbackslash{}\n"
 "Person ID\n"
-"1          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"2          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"3          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"4          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"5          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"6          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"7          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"8          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"9          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"10         Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
+"1          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"2          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"3          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"4          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"5          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"6          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"7          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"8          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"9          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"10         Safe and reliable  Practical and easy to use  Economical/low cost\n"
 "\n"
 "          Trait importance 1 Trait importance 2 Trait importance 3\n"
 "Person ID\n"
@@ -3116,10 +2838,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3255
-#: 313edc2471544777a25927746458937f
-msgid ""
-"                               Path    OPE    CON    EXT    AGR   NNEU  "
-"\\\n"
+#: af844b0e4cfd4faca7e9f942de4abccb
+msgid "                               Path    OPE    CON    EXT    AGR   NNEU  \\\n"
 "Person ID\n"
 "1          speaker_01_center_83.mov  0.758  0.693  0.650  0.745  0.489\n"
 "2          speaker_06_center_83.mov  0.682  0.654  0.607  0.731  0.418\n"
@@ -3132,29 +2852,18 @@ msgid ""
 "9          speaker_24_center_83.mov  0.706  0.658  0.611  0.697  0.412\n"
 "10         speaker_27_center_83.mov  0.753  0.708  0.655  0.816  0.505\n"
 "\n"
-"                  Priority 1                 Priority 2           "
-"Priority 3  \\\n"
+"                  Priority 1                 Priority 2           Priority 3  \\\n"
 "Person ID\n"
-"1          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"2          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"3          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"4          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"5          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"6          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"7          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"8          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"9          Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
-"10         Safe and reliable  Practical and easy to use  Economical/low "
-"cost\n"
+"1          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"2          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"3          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"4          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"5          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"6          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"7          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"8          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"9          Safe and reliable  Practical and easy to use  Economical/low cost\n"
+"10         Safe and reliable  Practical and easy to use  Economical/low cost\n"
 "\n"
 "          Trait importance 1 Trait importance 2 Trait importance 3\n"
 "Person ID\n"
@@ -3171,21 +2880,22 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 0ccebe0d4d7d4bd1bb4f9bfd21f47776 d9a0c8a5c46b4f6ea3c95a6eac589e3c
-#: dec8267e05c242f5910306cf5f0f39a4
+#: 3353d74535524d11afab41685e866de6
+#: d3d717d0f4704591a65724644a02f608
+#: b9f8cd3b5fc646ab98ccca4e071780e1
 msgid "[10]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 2fcf06f6dc0840f3a796e2cbd118bfde 6f191c02dabd41fca452ebf7f1b77b3d
-#: a842081c7b0849c0bfd30ccff76d8e59
+#: d92959838d224ef49f765aa6dbf01e0c
+#: f4ff248f72414936934b1a176ce9d2f1
+#: d782550084f8498e83eb706185e66e15
 msgid "[11]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: ff14c810a6174339964fa692a6511710
-msgid ""
-"_b5._priority_calculation(\n"
+#: 88fcc2c7a3fc4e9986c25ba01b4d639c
+msgid "_b5._priority_calculation(\n"
 "    correlation_coefficients = df_divice_characteristics,\n"
 "    col_name_ocean = 'Trait',\n"
 "    threshold = 0.55,\n"
@@ -3194,23 +2904,18 @@ msgid ""
 "    out = True\n"
 ")\n"
 "\n"
-"_b5._save_logs(df = _b5.df_files_priority_, name = "
-"'divice_characteristics_priorities_mupta_ru', out = True)\n"
+"_b5._save_logs(df = _b5.df_files_priority_, name = 'divice_characteristics_priorities_mupta_ru', out = True)\n"
 "\n"
 "# Опционно\n"
-"df = _b5.df_files_priority_.rename(columns = {'Openness':'OPE', "
-"'Conscientiousness':'CON', 'Extraversion': 'EXT', 'Agreeableness': 'AGR',"
-" 'Non-Neuroticism': 'NNEU'})\n"
+"df = _b5.df_files_priority_.rename(columns = {'Openness':'OPE', 'Conscientiousness':'CON', 'Extraversion': 'EXT', 'Agreeableness': 'AGR', 'Non-Neuroticism': 'NNEU'})\n"
 "columns_to_round = ['OPE', 'CON', 'EXT', 'AGR', 'NNEU']\n"
-"df[columns_to_round] = df[columns_to_round].apply(lambda x: [round(i, 3) "
-"for i in x])\n"
+"df[columns_to_round] = df[columns_to_round].apply(lambda x: [round(i, 3) for i in x])\n"
 "df"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3653
-#: 21661c37502a48e683853d8bde1cf807
-msgid ""
-"<div>\n"
+#: a44fb4acc3c44153903f14de02950a8e
+msgid "<div>\n"
 "<style scoped>\n"
 "    .dataframe tbody tr th:only-of-type {\n"
 "        vertical-align: middle;\n"
@@ -3414,11 +3119,9 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3864
-#: e45e5433bd2740afb0336dd9007fcdec
-msgid ""
-"<pre>\n"
-"                               Path    OPE    CON    EXT    AGR   NNEU  "
-"\\\n"
+#: 8fe97c315dd14065a2d83941ba2c7795
+msgid "<pre>\n"
+"                               Path    OPE    CON    EXT    AGR   NNEU  \\\n"
 "Person ID\n"
 "1          speaker_01_center_83.mov  0.758  0.693  0.650  0.745  0.489\n"
 "2          speaker_06_center_83.mov  0.682  0.654  0.607  0.731  0.418\n"
@@ -3460,35 +3163,22 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3907
-#: 2dbd0b1ebcec455eb832b9ef416cc38f
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"                               Path    OPE    CON    EXT    AGR   NNEU  "
-"\\textbackslash{}\n"
+#: 61469fa7d7f649dea9740bb52a05f529
+msgid "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
+"                               Path    OPE    CON    EXT    AGR   NNEU  \\textbackslash{}\n"
 "Person ID\n"
-"1          speaker\\_01\\_center\\_83.mov  0.758  0.693  0.650  0.745  "
-"0.489\n"
-"2          speaker\\_06\\_center\\_83.mov  0.682  0.654  0.607  0.731  "
-"0.418\n"
-"3          speaker\\_07\\_center\\_83.mov  0.666  0.657  0.568  0.685  "
-"0.378\n"
-"4          speaker\\_10\\_center\\_83.mov  0.694  0.596  0.571  0.662  "
-"0.349\n"
-"5          speaker\\_11\\_center\\_83.mov  0.713  0.595  0.572  0.717  "
-"0.378\n"
-"6          speaker\\_15\\_center\\_83.mov  0.664  0.670  0.604  0.696  "
-"0.400\n"
-"7          speaker\\_19\\_center\\_83.mov  0.761  0.653  0.651  0.789  "
-"0.460\n"
-"8          speaker\\_23\\_center\\_83.mov  0.693  0.683  0.617  0.795  "
-"0.447\n"
-"9          speaker\\_24\\_center\\_83.mov  0.706  0.658  0.611  0.697  "
-"0.412\n"
-"10         speaker\\_27\\_center\\_83.mov  0.753  0.708  0.655  0.816  "
-"0.505\n"
+"1          speaker\\_01\\_center\\_83.mov  0.758  0.693  0.650  0.745  0.489\n"
+"2          speaker\\_06\\_center\\_83.mov  0.682  0.654  0.607  0.731  0.418\n"
+"3          speaker\\_07\\_center\\_83.mov  0.666  0.657  0.568  0.685  0.378\n"
+"4          speaker\\_10\\_center\\_83.mov  0.694  0.596  0.571  0.662  0.349\n"
+"5          speaker\\_11\\_center\\_83.mov  0.713  0.595  0.572  0.717  0.378\n"
+"6          speaker\\_15\\_center\\_83.mov  0.664  0.670  0.604  0.696  0.400\n"
+"7          speaker\\_19\\_center\\_83.mov  0.761  0.653  0.651  0.789  0.460\n"
+"8          speaker\\_23\\_center\\_83.mov  0.693  0.683  0.617  0.795  0.447\n"
+"9          speaker\\_24\\_center\\_83.mov  0.706  0.658  0.611  0.697  0.412\n"
+"10         speaker\\_27\\_center\\_83.mov  0.753  0.708  0.655  0.816  0.505\n"
 "\n"
-"            Priority 1     Priority 2  Priority 3 Trait importance 1  "
-"\\textbackslash{}\n"
+"            Priority 1     Priority 2  Priority 3 Trait importance 1  \\textbackslash{}\n"
 "Person ID\n"
 "1          Game Casino  Communication  Game Board       Extraversion\n"
 "2          Game Casino  Communication  Game Board      Agreeableness\n"
@@ -3517,10 +3207,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:3951
-#: 51fbc73205144698a940fdd3382e5076
-msgid ""
-"                               Path    OPE    CON    EXT    AGR   NNEU  "
-"\\\n"
+#: 9c83e3edd9fb411191227ee40295546f
+msgid "                               Path    OPE    CON    EXT    AGR   NNEU  \\\n"
 "Person ID\n"
 "1          speaker_01_center_83.mov  0.758  0.693  0.650  0.745  0.489\n"
 "2          speaker_06_center_83.mov  0.682  0.654  0.607  0.731  0.418\n"
@@ -3561,19 +3249,19 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4000
-#: 3359a96dc7344df5a3a52e72eae65d96
+#: 29c1ca5ff3aa48b6a3e872874bc327d5
 msgid "``MuPTA`` (en)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: aba3ceeeb2f14fc7976745e26c795f28 fab90d11187d4a97a0adc4aad2be7c49
+#: b4781d6646164bc58b75ddc5a8d93fa6
+#: acf545e265314ea4a7c09f291195ace5
 msgid "[12]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 59fa35106a7b45a7978963dc70553cce
-msgid ""
-"import os\n"
+#: 9db440fb6d884835b277971fdfbc24bb
+msgid "import os\n"
 "import pandas as pd\n"
 "\n"
 "# Импорт модуля\n"
@@ -3610,8 +3298,7 @@ msgid ""
 "res_load_model_weights_hc = _b5.load_video_model_weights_hc(url = url)\n"
 "\n"
 "url = _b5.weights_for_big5_['video'][corpus]['fe']['sberdisk']\n"
-"res_load_model_weights_deep_fe = _b5.load_video_model_weights_deep_fe(url"
-" = url)\n"
+"res_load_model_weights_deep_fe = _b5.load_video_model_weights_deep_fe(url = url)\n"
 "\n"
 "url = _b5.weights_for_big5_['video'][corpus]['nn']['sberdisk']\n"
 "res_load_model_weights_nn = _b5.load_video_model_weights_nn(url = url)\n"
@@ -3620,21 +3307,17 @@ msgid ""
 "res_load_text_features = _b5.load_text_features()\n"
 "\n"
 "# Формирование текстовых моделей\n"
-"res_setup_translation_model = _b5.setup_translation_model() # только для "
-"русского языка\n"
-"res_setup_translation_model = _b5.setup_bert_encoder(force_reload = "
-"False)\n"
+"res_setup_translation_model = _b5.setup_translation_model() # только для русского языка\n"
+"res_setup_translation_model = _b5.setup_bert_encoder(force_reload = False)\n"
 "res_load_text_model_hc_fi = _b5.load_text_model_hc(corpus=corpus)\n"
 "res_load_text_model_nn_fi = _b5.load_text_model_nn(corpus=corpus)\n"
 "\n"
 "# Загрузка весов текстовых моделей\n"
 "url = _b5.weights_for_big5_['text'][corpus]['hc']['sberdisk']\n"
-"res_load_text_model_weights_hc_fi = _b5.load_text_model_weights_hc(url = "
-"url)\n"
+"res_load_text_model_weights_hc_fi = _b5.load_text_model_weights_hc(url = url)\n"
 "\n"
 "url = _b5.weights_for_big5_['text'][corpus]['nn']['sberdisk']\n"
-"res_load_text_model_weights_nn_fi = _b5.load_text_model_weights_nn(url = "
-"url)\n"
+"res_load_text_model_weights_nn_fi = _b5.load_text_model_weights_nn(url = url)\n"
 "\n"
 "# Формирование модели для мультимодального объединения информации\n"
 "res_load_avt_model_b5 = _b5.load_avt_model_b5()\n"
@@ -3678,23 +3361,18 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4117
-#: 919739c1cdd94b21a1f2cd706426aca7
-msgid ""
-"\\ **[2023-12-16 19:20:55] Извлечение признаков (экспертных и "
-"нейросетевых) из текста …**"
+#: 3f012c61f4a843ecaff3d958eae7c079
+msgid "\\ **[2023-12-16 19:20:55] Извлечение признаков (экспертных и нейросетевых) из текста …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4128
-#: bb78fda56fe04d319f80b3706810b6a4
-msgid ""
-"\\ **[2023-12-16 19:20:57] Получение прогнозов и вычисление точности "
-"(мультимодальное объединение) …**"
+#: 58dbdf1babd44e1ba6d1dcac845ff43c
+msgid "\\ **[2023-12-16 19:20:57] Получение прогнозов и вычисление точности (мультимодальное объединение) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4152
-#: 32eb6286df744166bf94108761201d27
-msgid ""
-"<div>\n"
+#: 398c4d2bfdfe4ac8afc1c09c64f4048d
+msgid "<div>\n"
 "<style scoped>\n"
 "    .dataframe tbody tr th:only-of-type {\n"
 "        vertical-align: middle;\n"
@@ -3826,32 +3504,20 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4291
-#: 87d45b2a44504347a8f0c5f54e18466b
-msgid ""
-"<pre>\n"
-"                               Path  Openness Conscientiousness "
-"Extraversion  \\\n"
+#: 71ac164551444fc789969e530d61110c
+msgid "<pre>\n"
+"                               Path  Openness Conscientiousness Extraversion  \\\n"
 "Person ID\n"
-"1          speaker_01_center_83.mov  0.564985          0.539052     "
-"0.440615\n"
-"2          speaker_06_center_83.mov  0.650774          0.663849     "
-"0.607308\n"
-"3          speaker_07_center_83.mov  0.435976          0.486683     "
-"0.313828\n"
-"4          speaker_10_center_83.mov  0.498542          0.511243     "
-"0.412592\n"
-"5          speaker_11_center_83.mov  0.394776          0.341608     "
-"0.327082\n"
-"6          speaker_15_center_83.mov  0.566107          0.543811     "
-"0.492766\n"
-"7          speaker_19_center_83.mov  0.506271          0.438215     "
-"0.430894\n"
-"8          speaker_23_center_83.mov  0.486463          0.521755     "
-"0.309894\n"
-"9          speaker_24_center_83.mov  0.417404          0.473339     "
-"0.320714\n"
-"10         speaker_27_center_83.mov  0.526112          0.661107     "
-"0.443167\n"
+"1          speaker_01_center_83.mov  0.564985          0.539052     0.440615\n"
+"2          speaker_06_center_83.mov  0.650774          0.663849     0.607308\n"
+"3          speaker_07_center_83.mov  0.435976          0.486683     0.313828\n"
+"4          speaker_10_center_83.mov  0.498542          0.511243     0.412592\n"
+"5          speaker_11_center_83.mov  0.394776          0.341608     0.327082\n"
+"6          speaker_15_center_83.mov  0.566107          0.543811     0.492766\n"
+"7          speaker_19_center_83.mov  0.506271          0.438215     0.430894\n"
+"8          speaker_23_center_83.mov  0.486463          0.521755     0.309894\n"
+"9          speaker_24_center_83.mov  0.417404          0.473339     0.320714\n"
+"10         speaker_27_center_83.mov  0.526112          0.661107     0.443167\n"
 "\n"
 "          Agreeableness Non-Neuroticism\n"
 "Person ID\n"
@@ -3869,32 +3535,20 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4321
-#: 1e548592d8e443b0a0a3fc22b8f973cd
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"                               Path  Openness Conscientiousness "
-"Extraversion  \\textbackslash{}\n"
+#: f6a0d30732974c1f81df73af36bd883b
+msgid "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
+"                               Path  Openness Conscientiousness Extraversion  \\textbackslash{}\n"
 "Person ID\n"
-"1          speaker\\_01\\_center\\_83.mov  0.564985          0.539052"
-"     0.440615\n"
-"2          speaker\\_06\\_center\\_83.mov  0.650774          0.663849"
-"     0.607308\n"
-"3          speaker\\_07\\_center\\_83.mov  0.435976          0.486683"
-"     0.313828\n"
-"4          speaker\\_10\\_center\\_83.mov  0.498542          0.511243"
-"     0.412592\n"
-"5          speaker\\_11\\_center\\_83.mov  0.394776          0.341608"
-"     0.327082\n"
-"6          speaker\\_15\\_center\\_83.mov  0.566107          0.543811"
-"     0.492766\n"
-"7          speaker\\_19\\_center\\_83.mov  0.506271          0.438215"
-"     0.430894\n"
-"8          speaker\\_23\\_center\\_83.mov  0.486463          0.521755"
-"     0.309894\n"
-"9          speaker\\_24\\_center\\_83.mov  0.417404          0.473339"
-"     0.320714\n"
-"10         speaker\\_27\\_center\\_83.mov  0.526112          0.661107"
-"     0.443167\n"
+"1          speaker\\_01\\_center\\_83.mov  0.564985          0.539052     0.440615\n"
+"2          speaker\\_06\\_center\\_83.mov  0.650774          0.663849     0.607308\n"
+"3          speaker\\_07\\_center\\_83.mov  0.435976          0.486683     0.313828\n"
+"4          speaker\\_10\\_center\\_83.mov  0.498542          0.511243     0.412592\n"
+"5          speaker\\_11\\_center\\_83.mov  0.394776          0.341608     0.327082\n"
+"6          speaker\\_15\\_center\\_83.mov  0.566107          0.543811     0.492766\n"
+"7          speaker\\_19\\_center\\_83.mov  0.506271          0.438215     0.430894\n"
+"8          speaker\\_23\\_center\\_83.mov  0.486463          0.521755     0.309894\n"
+"9          speaker\\_24\\_center\\_83.mov  0.417404          0.473339     0.320714\n"
+"10         speaker\\_27\\_center\\_83.mov  0.526112          0.661107     0.443167\n"
 "\n"
 "          Agreeableness Non-Neuroticism\n"
 "Person ID\n"
@@ -3912,31 +3566,19 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4352
-#: 6bd6349a096147c0a13f221f1f3b271e
-msgid ""
-"                               Path  Openness Conscientiousness "
-"Extraversion  \\\n"
+#: e42aaf9b3dfe4d14b0a2502e0111117e
+msgid "                               Path  Openness Conscientiousness Extraversion  \\\n"
 "Person ID\n"
-"1          speaker_01_center_83.mov  0.564985          0.539052     "
-"0.440615\n"
-"2          speaker_06_center_83.mov  0.650774          0.663849     "
-"0.607308\n"
-"3          speaker_07_center_83.mov  0.435976          0.486683     "
-"0.313828\n"
-"4          speaker_10_center_83.mov  0.498542          0.511243     "
-"0.412592\n"
-"5          speaker_11_center_83.mov  0.394776          0.341608     "
-"0.327082\n"
-"6          speaker_15_center_83.mov  0.566107          0.543811     "
-"0.492766\n"
-"7          speaker_19_center_83.mov  0.506271          0.438215     "
-"0.430894\n"
-"8          speaker_23_center_83.mov  0.486463          0.521755     "
-"0.309894\n"
-"9          speaker_24_center_83.mov  0.417404          0.473339     "
-"0.320714\n"
-"10         speaker_27_center_83.mov  0.526112          0.661107     "
-"0.443167\n"
+"1          speaker_01_center_83.mov  0.564985          0.539052     0.440615\n"
+"2          speaker_06_center_83.mov  0.650774          0.663849     0.607308\n"
+"3          speaker_07_center_83.mov  0.435976          0.486683     0.313828\n"
+"4          speaker_10_center_83.mov  0.498542          0.511243     0.412592\n"
+"5          speaker_11_center_83.mov  0.394776          0.341608     0.327082\n"
+"6          speaker_15_center_83.mov  0.566107          0.543811     0.492766\n"
+"7          speaker_19_center_83.mov  0.506271          0.438215     0.430894\n"
+"8          speaker_23_center_83.mov  0.486463          0.521755     0.309894\n"
+"9          speaker_24_center_83.mov  0.417404          0.473339     0.320714\n"
+"10         speaker_27_center_83.mov  0.526112          0.661107     0.443167\n"
 "\n"
 "          Agreeableness Non-Neuroticism\n"
 "Person ID\n"
@@ -3953,16 +3595,13 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4387
-#: 70a5a621e5da416e9208077c8c668329
-msgid ""
-"\\ **[2023-12-16 19:20:57] Точность по отдельным персональным качествам "
-"личности человека …**"
+#: 432cd6f2b7aa4a9a9c1c6b5449e16c79
+msgid "\\ **[2023-12-16 19:20:57] Точность по отдельным персональным качествам личности человека …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4401
-#: e8254133bc4542d8866057a38c1998b3
-msgid ""
-"<div>\n"
+#: 1be7250718c7440bbc563157792b3757
+msgid "<div>\n"
 "<style scoped>\n"
 "    .dataframe tbody tr th:only-of-type {\n"
 "        vertical-align: middle;\n"
@@ -4022,9 +3661,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4468
-#: 634153b438d241999e81ec99cf7b3e95
-msgid ""
-"<pre>\n"
+#: b83a081c0576424299d0b7d56e8fdfef
+msgid "<pre>\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
 "Metrics\n"
 "MAE         0.1727             0.1672        0.1661         0.2579\n"
@@ -4038,11 +3676,9 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4482
-#: 234ca6d5d6934f4abbdcdfb5da5dc4cd
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"          Openness  Conscientiousness  Extraversion  Agreeableness  "
-"\\textbackslash{}\n"
+#: aedb1514e64a488187378be38f06d70c
+msgid "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
+"          Openness  Conscientiousness  Extraversion  Agreeableness  \\textbackslash{}\n"
 "Metrics\n"
 "MAE         0.1727             0.1672        0.1661         0.2579\n"
 "Accuracy    0.8273             0.8328        0.8339         0.7421\n"
@@ -4055,9 +3691,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4497
-#: 024a3b527f034be296c892c2a07334a9
-msgid ""
-"          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
+#: 4dbf4562a75c4546abee88637c5e7acf
+msgid "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
 "Metrics\n"
 "MAE         0.1727             0.1672        0.1661         0.2579\n"
 "Accuracy    0.8273             0.8328        0.8339         0.7421\n"
@@ -4069,33 +3704,32 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4516
-#: 32f5d99668e144afb90c18a3feb84b2c
-msgid ""
-"\\ **[2023-12-16 19:20:57] Средняя средних абсолютных ошибок: 0.1742, "
-"средняя точность: 0.8258 …**"
+#: 4d7b9b5d3422444aae5c1e9ccb03eb7a
+msgid "\\ **[2023-12-16 19:20:57] Средняя средних абсолютных ошибок: 0.1742, средняя точность: 0.8258 …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4538
-#: b3702d30bb8e45c7ab5b721e9d1b77d5
+#: 58fad83a9fb04765b8a7d0d39c265a4b
 msgid "— Время выполнения: 379.936 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 0476d4728abc4bd1844f852846d7b6b7 510024e024e24cd58113c24cb5895dda
-#: ec08298e6df14a048be6e0bc5a69fb1a
+#: 77a614ff5cb34f7baf3d6c12bb84eca9
+#: 9b904d918316401890b1cb069d2a07eb
+#: e7a7a2d3916546e3bf85ee4c13953c10
 msgid "[13]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 13b00701b04e446d8e1e1c694447608f 4de5db5eee4345f3b8b601be8c9beccf
-#: 97370198fba04d938a57e18fa14a933d
+#: 97f9dbf411804f2aa64215381d956e6b
+#: b6004893233747cba823af5cdae2e39e
+#: dca8d4c0ce1949f488534e4540c0f324
 msgid "[14]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 23fbdd7fff0c41e49a923dfe77762b97
-msgid ""
-"_b5._priority_calculation(\n"
+#: a435e761a2ff4c53b23fa7c0c3c56ced
+msgid "_b5._priority_calculation(\n"
 "    correlation_coefficients = df_correlation_coefficients,\n"
 "    col_name_ocean = 'Trait',\n"
 "    threshold = 0.55,\n"
@@ -4104,23 +3738,18 @@ msgid ""
 "    out = False\n"
 ")\n"
 "\n"
-"_b5._save_logs(df = _b5.df_files_priority_, name = "
-"'auto_characteristics_priorities_mupta_en', out = True)\n"
+"_b5._save_logs(df = _b5.df_files_priority_, name = 'auto_characteristics_priorities_mupta_en', out = True)\n"
 "\n"
 "# Опционно\n"
-"df = _b5.df_files_priority_.rename(columns = {'Openness':'OPE', "
-"'Conscientiousness':'CON', 'Extraversion': 'EXT', 'Agreeableness': 'AGR',"
-" 'Non-Neuroticism': 'NNEU'})\n"
+"df = _b5.df_files_priority_.rename(columns = {'Openness':'OPE', 'Conscientiousness':'CON', 'Extraversion': 'EXT', 'Agreeableness': 'AGR', 'Non-Neuroticism': 'NNEU'})\n"
 "columns_to_round = ['OPE', 'CON', 'EXT', 'AGR', 'NNEU']\n"
-"df[columns_to_round] = df[columns_to_round].apply(lambda x: [round(i, 3) "
-"for i in x])\n"
+"df[columns_to_round] = df[columns_to_round].apply(lambda x: [round(i, 3) for i in x])\n"
 "df"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:4908
-#: fc50b1fef72b413da3d85001bf3d5ef4
-msgid ""
-"<div>\n"
+#: 68a1bb3752ec47a380cf11ac1cbc6bf1
+msgid "<div>\n"
 "<style scoped>\n"
 "    .dataframe tbody tr th:only-of-type {\n"
 "        vertical-align: middle;\n"
@@ -4324,11 +3953,9 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5119
-#: 6da7d10111fc4a228dbc410223040c45
-msgid ""
-"<pre>\n"
-"                               Path    OPE    CON    EXT    AGR   NNEU  "
-"\\\n"
+#: 7f692eb2961c49888af707dbd474704b
+msgid "<pre>\n"
+"                               Path    OPE    CON    EXT    AGR   NNEU  \\\n"
 "Person ID\n"
 "1          speaker_01_center_83.mov  0.565  0.539  0.441  0.593  0.489\n"
 "2          speaker_06_center_83.mov  0.651  0.664  0.607  0.644  0.621\n"
@@ -4383,35 +4010,22 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5175
-#: 7d1b8b57b6aa4aa9be535227c760f43c
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"                               Path    OPE    CON    EXT    AGR   NNEU  "
-"\\textbackslash{}\n"
+#: ff1617be335144189779b0832da2a7c4
+msgid "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
+"                               Path    OPE    CON    EXT    AGR   NNEU  \\textbackslash{}\n"
 "Person ID\n"
-"1          speaker\\_01\\_center\\_83.mov  0.565  0.539  0.441  0.593  "
-"0.489\n"
-"2          speaker\\_06\\_center\\_83.mov  0.651  0.664  0.607  0.644  "
-"0.621\n"
-"3          speaker\\_07\\_center\\_83.mov  0.436  0.487  0.314  0.415  "
-"0.397\n"
-"4          speaker\\_10\\_center\\_83.mov  0.499  0.511  0.413  0.469  "
-"0.444\n"
-"5          speaker\\_11\\_center\\_83.mov  0.395  0.342  0.327  0.427  "
-"0.355\n"
-"6          speaker\\_15\\_center\\_83.mov  0.566  0.544  0.493  0.587  "
-"0.499\n"
-"7          speaker\\_19\\_center\\_83.mov  0.506  0.438  0.431  0.456  "
-"0.441\n"
-"8          speaker\\_23\\_center\\_83.mov  0.486  0.522  0.310  0.432  "
-"0.434\n"
-"9          speaker\\_24\\_center\\_83.mov  0.417  0.473  0.321  0.445  "
-"0.415\n"
-"10         speaker\\_27\\_center\\_83.mov  0.526  0.661  0.443  0.559  "
-"0.554\n"
+"1          speaker\\_01\\_center\\_83.mov  0.565  0.539  0.441  0.593  0.489\n"
+"2          speaker\\_06\\_center\\_83.mov  0.651  0.664  0.607  0.644  0.621\n"
+"3          speaker\\_07\\_center\\_83.mov  0.436  0.487  0.314  0.415  0.397\n"
+"4          speaker\\_10\\_center\\_83.mov  0.499  0.511  0.413  0.469  0.444\n"
+"5          speaker\\_11\\_center\\_83.mov  0.395  0.342  0.327  0.427  0.355\n"
+"6          speaker\\_15\\_center\\_83.mov  0.566  0.544  0.493  0.587  0.499\n"
+"7          speaker\\_19\\_center\\_83.mov  0.506  0.438  0.431  0.456  0.441\n"
+"8          speaker\\_23\\_center\\_83.mov  0.486  0.522  0.310  0.432  0.434\n"
+"9          speaker\\_24\\_center\\_83.mov  0.417  0.473  0.321  0.445  0.415\n"
+"10         speaker\\_27\\_center\\_83.mov  0.526  0.661  0.443  0.559  0.554\n"
 "\n"
-"                          Priority 1                 Priority 2  "
-"\\textbackslash{}\n"
+"                          Priority 1                 Priority 2  \\textbackslash{}\n"
 "Person ID\n"
 "1          Practical and easy to use        Economical/low cost\n"
 "2                  Safe and reliable  Practical and easy to use\n"
@@ -4424,8 +4038,7 @@ msgid ""
 "9               Classic car features      Fashion and attention\n"
 "10                 Safe and reliable  Practical and easy to use\n"
 "\n"
-"                    Priority 3 Trait importance 1 Trait importance 2  "
-"\\textbackslash{}\n"
+"                    Priority 3 Trait importance 1 Trait importance 2  \\textbackslash{}\n"
 "Person ID\n"
 "1              Family friendly      Agreeableness           Openness\n"
 "2          Economical/low cost  Conscientiousness      Agreeableness\n"
@@ -4454,10 +4067,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5232
-#: f24936a5e11b43748d2a4d1b382ca649
-msgid ""
-"                               Path    OPE    CON    EXT    AGR   NNEU  "
-"\\\n"
+#: 80fe8405620d4c60ba20e3ff4079d154
+msgid "                               Path    OPE    CON    EXT    AGR   NNEU  \\\n"
 "Person ID\n"
 "1          speaker_01_center_83.mov  0.565  0.539  0.441  0.593  0.489\n"
 "2          speaker_06_center_83.mov  0.651  0.664  0.607  0.644  0.621\n"
@@ -4511,21 +4122,22 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 0f8873d750a8469a824cb1ecc2ed61cd a6fa572c6e8645deaf4bab38475c9a4b
-#: ec3acce1924a4984bbacf60549ded587
+#: 49c9ea3ff43241ae9efab2cdbf9e7a40
+#: 60231f9292894f6890616300189f67ae
+#: 24c36a84fb5847c5b32c3c3b377f495e
 msgid "[15]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: 11ac3aff03cc44f4bd51e14148aa50df 33fc035b7f184c329958f5376c721aa2
-#: 9c41f157881644e3a8cacac9e284b9dd
+#: 4125c3f57475436f8c10eda87c862fc6
+#: 99cb8beea91b415286f69591fc57689b
+#: 6d997265d95448a8938c2760d006111f
 msgid "[16]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:-1
-#: cfa9c6369b884a14b46fd18551dc35fd
-msgid ""
-"_b5._priority_calculation(\n"
+#: b8360b6417614b28a8cbcda6ec50e919
+msgid "_b5._priority_calculation(\n"
 "    correlation_coefficients = df_divice_characteristics,\n"
 "    col_name_ocean = 'Trait',\n"
 "    threshold = 0.55,\n"
@@ -4534,23 +4146,18 @@ msgid ""
 "    out = True\n"
 ")\n"
 "\n"
-"_b5._save_logs(df = _b5.df_files_priority_, name = "
-"'divice_characteristics_priorities_mupta_en', out = True)\n"
+"_b5._save_logs(df = _b5.df_files_priority_, name = 'divice_characteristics_priorities_mupta_en', out = True)\n"
 "\n"
 "# Опционно\n"
-"df = _b5.df_files_priority_.rename(columns = {'Openness':'OPE', "
-"'Conscientiousness':'CON', 'Extraversion': 'EXT', 'Agreeableness': 'AGR',"
-" 'Non-Neuroticism': 'NNEU'})\n"
+"df = _b5.df_files_priority_.rename(columns = {'Openness':'OPE', 'Conscientiousness':'CON', 'Extraversion': 'EXT', 'Agreeableness': 'AGR', 'Non-Neuroticism': 'NNEU'})\n"
 "columns_to_round = ['OPE', 'CON', 'EXT', 'AGR', 'NNEU']\n"
-"df[columns_to_round] = df[columns_to_round].apply(lambda x: [round(i, 3) "
-"for i in x])\n"
+"df[columns_to_round] = df[columns_to_round].apply(lambda x: [round(i, 3) for i in x])\n"
 "df"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5643
-#: 903b94123fd7463298ea6a8cd7ea2aec
-msgid ""
-"<div>\n"
+#: 8386e3c5e5254a6985c1e4f12088a100
+msgid "<div>\n"
 "<style scoped>\n"
 "    .dataframe tbody tr th:only-of-type {\n"
 "        vertical-align: middle;\n"
@@ -4754,11 +4361,9 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5854
-#: 30f46595f50e4b13ac0121a45fdd6a1c
-msgid ""
-"<pre>\n"
-"                               Path    OPE    CON    EXT    AGR   NNEU  "
-"\\\n"
+#: ed757d696c8e4d71a79a22b0d94a608d
+msgid "<pre>\n"
+"                               Path    OPE    CON    EXT    AGR   NNEU  \\\n"
 "Person ID\n"
 "1          speaker_01_center_83.mov  0.565  0.539  0.441  0.593  0.489\n"
 "2          speaker_06_center_83.mov  0.651  0.664  0.607  0.644  0.621\n"
@@ -4771,8 +4376,7 @@ msgid ""
 "9          speaker_24_center_83.mov  0.417  0.473  0.321  0.445  0.415\n"
 "10         speaker_27_center_83.mov  0.526  0.661  0.443  0.559  0.554\n"
 "\n"
-"                   Priority 1          Priority 2          Priority 3  \\"
-"\n"
+"                   Priority 1          Priority 2          Priority 3  \\\n"
 "Person ID\n"
 "1               Communication  Health and Fitness     Media and Video\n"
 "2                 Game Casino       Communication         Game Trivia\n"
@@ -4801,35 +4405,22 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5897
-#: 0cd20f5614a94c0d9b29d4ff031adc11
-msgid ""
-"\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
-"                               Path    OPE    CON    EXT    AGR   NNEU  "
-"\\textbackslash{}\n"
+#: daf6ec58ec8a43729eb0c726f95b294f
+msgid "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
+"                               Path    OPE    CON    EXT    AGR   NNEU  \\textbackslash{}\n"
 "Person ID\n"
-"1          speaker\\_01\\_center\\_83.mov  0.565  0.539  0.441  0.593  "
-"0.489\n"
-"2          speaker\\_06\\_center\\_83.mov  0.651  0.664  0.607  0.644  "
-"0.621\n"
-"3          speaker\\_07\\_center\\_83.mov  0.436  0.487  0.314  0.415  "
-"0.397\n"
-"4          speaker\\_10\\_center\\_83.mov  0.499  0.511  0.413  0.469  "
-"0.444\n"
-"5          speaker\\_11\\_center\\_83.mov  0.395  0.342  0.327  0.427  "
-"0.355\n"
-"6          speaker\\_15\\_center\\_83.mov  0.566  0.544  0.493  0.587  "
-"0.499\n"
-"7          speaker\\_19\\_center\\_83.mov  0.506  0.438  0.431  0.456  "
-"0.441\n"
-"8          speaker\\_23\\_center\\_83.mov  0.486  0.522  0.310  0.432  "
-"0.434\n"
-"9          speaker\\_24\\_center\\_83.mov  0.417  0.473  0.321  0.445  "
-"0.415\n"
-"10         speaker\\_27\\_center\\_83.mov  0.526  0.661  0.443  0.559  "
-"0.554\n"
+"1          speaker\\_01\\_center\\_83.mov  0.565  0.539  0.441  0.593  0.489\n"
+"2          speaker\\_06\\_center\\_83.mov  0.651  0.664  0.607  0.644  0.621\n"
+"3          speaker\\_07\\_center\\_83.mov  0.436  0.487  0.314  0.415  0.397\n"
+"4          speaker\\_10\\_center\\_83.mov  0.499  0.511  0.413  0.469  0.444\n"
+"5          speaker\\_11\\_center\\_83.mov  0.395  0.342  0.327  0.427  0.355\n"
+"6          speaker\\_15\\_center\\_83.mov  0.566  0.544  0.493  0.587  0.499\n"
+"7          speaker\\_19\\_center\\_83.mov  0.506  0.438  0.431  0.456  0.441\n"
+"8          speaker\\_23\\_center\\_83.mov  0.486  0.522  0.310  0.432  0.434\n"
+"9          speaker\\_24\\_center\\_83.mov  0.417  0.473  0.321  0.445  0.415\n"
+"10         speaker\\_27\\_center\\_83.mov  0.526  0.661  0.443  0.559  0.554\n"
 "\n"
-"                   Priority 1          Priority 2          Priority 3  "
-"\\textbackslash{}\n"
+"                   Priority 1          Priority 2          Priority 3  \\textbackslash{}\n"
 "Person ID\n"
 "1               Communication  Health and Fitness     Media and Video\n"
 "2                 Game Casino       Communication         Game Trivia\n"
@@ -4858,10 +4449,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_2.ipynb:5941
-#: 265c48e43c214a80a6dae77c7d5a024f
-msgid ""
-"                               Path    OPE    CON    EXT    AGR   NNEU  "
-"\\\n"
+#: 2f0d9325666a4f2d99453c01aed10127
+msgid "                               Path    OPE    CON    EXT    AGR   NNEU  \\\n"
 "Person ID\n"
 "1          speaker_01_center_83.mov  0.565  0.539  0.441  0.593  0.489\n"
 "2          speaker_06_center_83.mov  0.651  0.664  0.607  0.644  0.621\n"
@@ -4874,8 +4463,7 @@ msgid ""
 "9          speaker_24_center_83.mov  0.417  0.473  0.321  0.445  0.415\n"
 "10         speaker_27_center_83.mov  0.526  0.661  0.443  0.559  0.554\n"
 "\n"
-"                   Priority 1          Priority 2          Priority 3  \\"
-"\n"
+"                   Priority 1          Priority 2          Priority 3  \\\n"
 "Person ID\n"
 "1               Communication  Health and Fitness     Media and Video\n"
 "2                 Game Casino       Communication         Game Trivia\n"
@@ -4901,57 +4489,3 @@ msgid ""
 "9              Agreeableness  Conscientiousness       Extraversion\n"
 "10           Non-Neuroticism  Conscientiousness      Agreeableness"
 msgstr ""
-
-#~ msgid "|4dae13271f2e44e38fffd8d65e1982e7|"
-#~ msgstr ""
-
-#~ msgid "4dae13271f2e44e38fffd8d65e1982e7"
-#~ msgstr ""
-
-#~ msgid "|0b1647941a854d528f222b8487189f4f|"
-#~ msgstr ""
-
-#~ msgid "0b1647941a854d528f222b8487189f4f"
-#~ msgstr ""
-
-#~ msgid "|9ddc43366c6b412bb86388bfacf24640|"
-#~ msgstr ""
-
-#~ msgid "9ddc43366c6b412bb86388bfacf24640"
-#~ msgstr ""
-
-#~ msgid "|403e77cfe6d74686934393e191fb31f2|"
-#~ msgstr ""
-
-#~ msgid "403e77cfe6d74686934393e191fb31f2"
-#~ msgstr ""
-
-#~ msgid "|605c14d5ef004886bb4633634c84b2e0|"
-#~ msgstr ""
-
-#~ msgid "605c14d5ef004886bb4633634c84b2e0"
-#~ msgstr ""
-
-#~ msgid "|a3445d4391944ab3aa63e7b20b67e399|"
-#~ msgstr ""
-
-#~ msgid "a3445d4391944ab3aa63e7b20b67e399"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "В качестве примера предлагается использование"
-#~ " коэффициентов корреляции между персональными "
-#~ "качествами человека и характеристиками "
-#~ "автомобилей, представленными в статье:1)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "O’Connor P. J. et al. What Drives"
-#~ " Consumer Automobile Choice? Investigating "
-#~ "Personality Trait Predictors of Vehicle "
-#~ "Preference Factors // Personality and "
-#~ "Individual Differences. – 2022. – Vol."
-#~ " 184. – pp. 111 220. Пользователь "
-#~ "может установить свои коэффициенты корреляции."
-#~ msgstr ""
-
