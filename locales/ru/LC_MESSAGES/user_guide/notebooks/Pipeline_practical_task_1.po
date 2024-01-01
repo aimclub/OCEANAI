@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2023-12-29 16:42+0300\n"
+"POT-Creation-Date: 2024-01-01 20:33+0300\n"
 "PO-Revision-Date: 2023-01-03 18:30+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -18,19 +18,19 @@ msgstr ""
 "Generated-By: Babel 2.11.0\n"
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:9
-#: 71025a6b76bd4eff8cb832295d9aa428
+#: 6d9296ba4a434462b27d641ffb8f19f7
 msgid "Решение практической задачи 1"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:12
-#: 721a9ed1b4a54d8cbb55115e26340bc8
+#: f95189c69b3c4c4c8952d2c13095f28a
 msgid ""
 "Задача: ранжирование потенциальных кандидатов по профессиональным "
 "обязанностям"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:14
-#: b4dafafa8ed84634ac864a4b01f1b3af
+#: 3820e4da0c2a4ebd888d9a25a3ee9cdd
 msgid ""
 "Решение практической задачи выполняется в два этапа. На первом этапе "
 "необходимо использовать библиотеку OCEAN-AI для получения гипотез "
@@ -42,7 +42,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:18
-#: c3686ed9a8ae49cca0fc1a1d8112f1da
+#: 5cc0dd2296904aeca2bfb450925e8b0c
 msgid ""
 "Таким образом, библиотека OCEAN-AI предоставляет инструменты для анализа "
 "персональных качеств личности кандидатов и их соответствия требованиям "
@@ -53,34 +53,34 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:20
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:30
-#: 1af5f20797304a2eba920e271e37b9ae 2d02638b19e548be89463c971dbb2a02
+#: 104a3e474bcd4d1a8dd6493c0258f196 172d4f137f864a5ab99532188093a995
 msgid "<center>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:24
-#: d55e877a72314f768adf98cc8ce3a5fb
-msgid "|156d290c4d7e4d42a4c04ca1071a05c4|"
+#: 4df363d615194c18a38539d0b59def8c
+msgid "|dd84ac6daf5d4b9e9de4a04d76d8532b|"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:44
-#: 320f5f7d84f74c71acd7f5d20faf92a6 d7b24e0f5bd84a2cadf73c761139bdbf
-msgid "156d290c4d7e4d42a4c04ca1071a05c4"
+#: 4bfa9d5696064cfb8ddc8a8f303e2e1b 5f198dfbd94c41bebba276772133c53a
+msgid "dd84ac6daf5d4b9e9de4a04d76d8532b"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:26
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:36
-#: 18b7eaf58d57459a9f02c069dfbcee48 ecd0a9811c024ef4b2f791bb30099073
+#: 3fdfcbc66ffb448d925645edee5a18b0 f68938f1b7ad4a08a6569e85f4c7fbd6
 msgid "</center>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:34
-#: 97698632b14444acb1c98b85da23d53d
-msgid "|a3d8f51c08fe4a8dbb7973fb3c691f7b|"
+#: a1a174f3e67b47c29ab3d9c931c8ef20
+msgid "|68d1b704790d498a8ff4f0899e2429e8|"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:47
-#: 90fb6ac705014c56a34b6fdfd8f6f859 d72967e157944ce5aaa249f5a934d49f
-msgid "a3d8f51c08fe4a8dbb7973fb3c691f7b"
+#: 21ee7a15fe6f4f6c8f2fac1d9c930517 91b8e95e631042ca9f8857d8bfc12522
+msgid "68d1b704790d498a8ff4f0899e2429e8"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:40
@@ -90,25 +90,25 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3380
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4559
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5343
-#: 27ce745a852a4135a6ed29272e9327d2 b8b9db9dc69c45f587125eae07a6304e
-#: c73e94375301452890a034df24dbbe78 c75e7557a9d84c9a846e613f1302f3c5
-#: f0e1f454949447c89e60a999bebaa9aa f26458fbf21446e093724b532008f83c
-#: f71c408ab690472d8b006b0072280639
+#: 1d07841cae734945a7bcd52820f6e586 1dac858da0f84250b6696ac152559462
+#: 5f3f93cbb5f64295867d834c8ac2dae7 7d1dd0c5a0b449329e622ccd10845717
+#: 864ad5e91609490c9e4c141caf6a2435 f3574fdee1ee4207aba62772cdef2416
+#: f7522a383dcb4b66a00c85df418383f6
 msgid "<hr>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:59
-#: 4a3de7e5d6a64e1b9d7ddabb2aa68151
+#: 25f0993c94594539824d0d707a3a3ac6
 msgid "``FI V2``"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: a852bb5e026446579b8de6dd205ff8ec eccb10b1369648b6805635d94970b416
+#: 7b3578805c6447a4bb6d6df890124af6 cdd1fdc1bb51429f834fa51c3a9202f8
 msgid "[2]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 6423ae6a68de4289bbb6677e98fd088a
+#: be31331555b04fa5982a278a2b9f4934
 msgid ""
 "# Импорт необходимых инструментов\n"
 "import os\n"
@@ -214,14 +214,14 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:176
-#: 17bdb629e9694469ac4987357375b764
+#: dd2ef5cb154f48e4878cadc440db2c9e
 msgid ""
 "\\ **[2023-12-16 18:42:02] Извлечение признаков (экспертных и "
 "нейросетевых) из текста …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:187
-#: 88e1f4e3c7354b7fbde8e5cdff5e773c
+#: 21a95faa67f64cd198d3bac466057e5c
 msgid ""
 "\\ **[2023-12-16 18:42:05] Получение прогнозов и вычисление точности "
 "(мультимодальное объединение) …**"
@@ -230,13 +230,13 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:189
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2152
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4115
-#: 141d992d2d0d49c9a0cab6a4c1e108ff 3412dba1b43a4290bd5dd621a92bbfac
-#: f26aab7fdc3e43389f4e13b9b5adcaa9
+#: 551db2eb26864dafa02bda1bba538ebe 804f292475fa491c8cc9d2add071e6e2
+#: d8773ade14954ec2b7ca8cfa7622ad29
 msgid "<p>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:193
-#: 0ebb35f2006042188175a1a30dc8725d
+#: 7c98c2ed3dca46c5a56e1597f0290bc7
 msgid ""
 "10 из 10 (100.0%) … GitHub:nbsphinx-math:`\\OCEANAI`:nbsphinx-"
 "math:`\\docs`:nbsphinx-math:`\\source`:nbsphinx-math:`\\user`\\_guide"
@@ -247,13 +247,13 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:195
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2158
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4121
-#: 8e2e9ac1441d46cf910ec40e738ae8cc 9342665e481f4eb6ad0a8ba4e987818c
-#: db5721168fe5488287e0aba42fb173df
+#: 581e1a3e54f84ce5a65ddf5168047005 688e3b10007f4b6bb9d7c541e43fb7e0
+#: da7fee75ad464264a89dae0ae6fe855e
 msgid "</p>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:211
-#: 32e089abc4d24a099f23f108632f8330
+#: 11f1672538d54291af79bc2044fbee37
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -387,7 +387,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:350
-#: 21c423fd6ff3430db1690de527c6bef1
+#: a85ce74572be44d9bfc9210157b46a4f
 msgid ""
 "<pre>\n"
 "                          Path  Openness Conscientiousness Extraversion  "
@@ -420,7 +420,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:380
-#: e0c740af57684183849d84e488cebd86
+#: 9e1372d19a464271aa22131bb0caf53d
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                          Path  Openness Conscientiousness Extraversion  "
@@ -455,7 +455,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:411
-#: c602c4498af9424fbfaa631a0ab60973
+#: 786b945519324ca5a9a65c078a05f4a6
 msgid ""
 "                          Path  Openness Conscientiousness Extraversion  "
 "\\\n"
@@ -486,14 +486,14 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:446
-#: 3967fed48fca4881b2f622ba327ab50a
+#: 2826e182dbd24fbfbff870590e26fb27
 msgid ""
 "\\ **[2023-12-16 18:42:05] Точность по отдельным персональным качествам "
 "личности человека …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:460
-#: 9c788af79ac441aea1571e40a5d0f0d8
+#: db20469666524a9cb9d6df681b6e07cf
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -555,7 +555,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:527
-#: 8c72748af9494507b1c792ee2ef0d983
+#: af061a7cf2b24303aa89d89388ddd60c
 msgid ""
 "<pre>\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
@@ -571,7 +571,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:541
-#: 97c51f2f5faf479b87d985e1386f0315
+#: 02ff757be0ba49cb890cc0091d8ca987
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  "
@@ -588,7 +588,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:556
-#: e47094b390284f6db10cd85c026c316c
+#: 8604e35425ef438eb2fe7dec6935baa0
 msgid ""
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
 "Metrics\n"
@@ -602,7 +602,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:575
-#: 7642782fa3b94c46a55746a887621aff
+#: 5dbefbd2e709472bb84b843884268220
 msgid ""
 "\\ **[2023-12-16 18:42:05] Средняя средних абсолютных ошибок: 0.0669, "
 "средняя точность: 0.9331 …**"
@@ -611,21 +611,21 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:586
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2549
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4512
-#: 4d8118c35b5847cd896bc7484cea421a 9c1f6b3195a04097947616a6257a85a0
-#: ed11e7970eb34754904698d85d42fb42
+#: 13d1816a7f89487388208ac11f7e47f2 88984084f408474aac9bda3fbf7b6191
+#: f1b71dc6fb1d42e092e476d28b125fd5
 msgid "Лог файлы успешно сохранены …"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:597
-#: 9fabd5a864874f59bf6fb893561fa3c7
+#: 1b0943e9ab7c4672aba44e0833846c0e
 msgid "— Время выполнения: 64.481 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:609
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2572
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4535
-#: 39d56b261e7f47bcaf386a299a00a6b5 8567ab3959964665960a90411e6f5af8
-#: d39c7e82243d418287e08b6bbd56b40d
+#: 2032f8ea65594599931f579e0882ff58 5f23a616e0034119845d24522033f8d1
+#: a9df94af5914404799ca624ecdddb5c5
 msgid ""
 "<pre>\n"
 "True\n"
@@ -635,8 +635,8 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:615
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2578
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4541
-#: 349c5011a2854aaba4fed519498e76f3 89d4092cd34c48bf983b43af3cbc4f1c
-#: dd491b701eaa4052a2bcefb60ed1870a
+#: 517943043514433d924a21e339d346db 8d435373897c4665bd47098cadf6bf11
+#: e9e8e4cb464d45f4916edbba362f1fda
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "True\n"
@@ -646,16 +646,16 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:622
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2585
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4548
-#: 18ae0b7951e947178a84d4320720efe5 3420bddb6d91499d88688e9eefc6aa92
-#: bcbd7a5a0de54b1b8119188226f28087
+#: 29ff469a383c466fbb24732e7cc450f0 cf24dda0f67f4bb3ab2881b59fcb3edc
+#: f68aa718adcc41caa0e827f531a33e29
 msgid "True"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:637
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2600
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4563
-#: 4da92429ed514b5b9872e839373eb610 5f8277f01be44c46a25afc425bc0e3e2
-#: 8994b895aa2d4c70aae0c62b675776dc
+#: a8357d0d9ad146e5a6f124a7f9ead19c aea4a9e38ea6484da8a39d1610297cd3
+#: af62c7341e524d88b5d2b6841691245b
 msgid ""
 "Для выполнения ранжирования кандидатов необходимо знать весовые "
 "коэффициенты, определяющие приоритетность персональных качеств личности в"
@@ -665,8 +665,8 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:639
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2602
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4565
-#: 439154e4e337401ebbe54d98d495c690 d299d084d940415cb7ff68ced6e5de2a
-#: e46a8e1224154cb6b39acb6f73adeb52
+#: 21fef9dbe4c247dabc243a149a63d858 a2b3369f07984a62ac03e7bafeb42527
+#: c337ac671208460b95bb6c00a64bb07a
 msgid ""
 "Предлагаются весовые коэффициенты для 5 профессий, вычисленные на основе "
 "научных статей:"
@@ -675,8 +675,8 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:641
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2604
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4567
-#: 48d6c67653224fa982ce520afb444e38 9853eb38f4c843ba9cf9d4c97bf43101
-#: f096a287318543ea9744dd3345267e37
+#: 2c92cc943ee5442e86a98ccbcb18dce9 b1883ad554934a09b03d9fd429560a93
+#: b4632e34da7042cc90f9be7982d2990a
 msgid ""
 "Sajjad H. et al. Personality and Career Choices // African Journal of "
 "Business Management. - 2012. – Vol. 6 (6) – pp. 2255-2260."
@@ -685,8 +685,8 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:642
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2605
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4568
-#: 546184cf744846b7b5ae429d3071a733 7b8bf413ea1d405f9e6377e6137cde71
-#: 8610eadd01c847d2b91c6cf50cbbd8bc
+#: 18102f9f71664003af52eb57a4178ea3 1b5a46920737436cbf3f5ce412c1d573
+#: d33c237e9ca043d3b98a474b0d7cde09
 msgid ""
 "Alkhelil A. H. The Relationship between Personality Traits and Career "
 "Choice: A Case Study of Secondary School Students // International "
@@ -697,8 +697,8 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:643
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2606
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4569
-#: 341069cbcdb4478498a436c060199dea 6f77e551b02e49daa97922a96cd1ee70
-#: a7e28a7845b44b5b8ec10f1f781f57e1
+#: a1a047eda5dc4deb8881a6369ae15a93 d0cf8c3f451447a6a10fc6014d7313da
+#: fcf4097e8b9f446ba19224376169e416
 msgid ""
 "De Jong N. et al. Personality Traits and Career Role Enactment: Career "
 "Role Preferences as a Mediator // Frontiers in Psychology. – 2019. – Vol."
@@ -708,22 +708,22 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:645
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2608
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4571
-#: 042c0d6bbc8d4fb18937b0458e76d5eb a4e73293a3314fabae6913334b346382
-#: af89ae153f30453bacf656e62affd36c
+#: 004216151bc34a9b893ff8124ceece5b 2a10cc0f46814f9fb3c5fb96e3d85142
+#: 6c4ec684f1d343abb33d6c1f4757b314
 msgid ""
 "Пользователь может установить свои весовые коэффициенты; сумма весов "
 "должна быть равна 100."
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 04406a483cd549cabf55eb449f848934 19fb7516dba646d098c98a2765c31aba
-#: 9dd26a127fa2448d8b98c0cb215e5c55
+#: 1e894611cad441fcbeaa43dfaa49c422 a87bf9cde9e446e79f2c5eaec9a526a7
+#: d6eedff5af7248ffa38ed598c38ea305
 msgid "[3]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 19b856cad9ee47f487d785e51289b741 28f52d6b6ec94b9ea921e63fe5bdb925
-#: 933e125a595c459a9cb1e350e7114dbf
+#: 068d0e3d42454218ad81f8d99b3246f4 7da5b00936e84085b5d0189469d86a85
+#: f073c4f720c6414dbd235ebe227ce5a3
 msgid ""
 "# Загрузка датафрейма с весовыми коэффициентами\n"
 "url = "
@@ -742,8 +742,8 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:677
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2640
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4603
-#: 0aa01e627875412fb0721ae53fff1ed8 4cc7521e260643b88d56f338471b586b
-#: 88b707fc49bd4154b4acc152b3ab25ef
+#: 11d92924ea844fa6a4fb2dd4ae78f8fb 4529fd91846f4ed49f939a590bc2828c
+#: 9fb25d3c9d364fe19d59366d4930c741
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -834,8 +834,8 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:771
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2734
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4697
-#: 180140a65cb5428888c9549c87456195 95fe50f2cc764b019869a7a40075bb53
-#: ac35c00cff8e48a69706ca633b564aa9
+#: 09f22d884b164372819d6001fd2103be 1e146eda8a664de3aca348268bc1a107
+#: b5e1509bfd1c4c87b9f628f4b89795a1
 msgid ""
 "<pre>\n"
 "                               Profession  Openness  Conscientiousness  "
@@ -860,8 +860,8 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:791
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2754
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4717
-#: 5d99486c798f4daa8d706e24c73beb45 9b06fc5dbb454889bf314d1dd62ec068
-#: a49425164d41464eb7fb27c571aaa08f
+#: 5d72de6dd4e74942a528ebde9b3cedcb b2ec18dd4dc3444fb0dfde1a3127adb9
+#: fe5820ca32c14b6e938eb83918ccf3ad
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                               Profession  Openness  Conscientiousness  "
@@ -886,8 +886,8 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:812
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2775
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4738
-#: 7f60c5fadb6a4b3aba5acfc0230d7651 a405675926264e3e9a6d07c752c58e2d
-#: f0fb02a4d8f64a44a17584564730a0fe
+#: 7adf0c383a7c44ee971e38934f5ce62d 9e5875524d994abc992e40351f248d93
+#: de3a48f3aa27481ca25f738f6938def3
 msgid ""
 "                               Profession  Openness  Conscientiousness  "
 "\\\n"
@@ -910,19 +910,19 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:838
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2801
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4764
-#: 1bee82d7c4ed453396a535bb38a9b9d5 50f27911ff144a58ad6db6d9044d8c79
-#: 94f2eee595b64077b7c4a3bed8de4356
+#: 0fcd6ffa5f474ddfac03bf5e3bda97a4 60b6f5357b844c32835bb4d6711e0b56
+#: c9db2f14009d487783e75f17b3d795b6
 msgid "Ранжирование кандидатов на должность инженера-проектировщика"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 9fb80259691d4a13b5204b1c2b071325 e5d75a9b1a5c4836a605a55b44b7b062
-#: fba9c5eae92946bcbfc0a8e966aa39c0
+#: 12e2cab8c0fd43b1856bae04d2914685 367b481cd2304166a9a9046139dbdc52
+#: 8cee9be119e342bd9c0ecce924cad5ac
 msgid "[4]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 09b3c5138a0a47ab90a959ce108a82b5
+#: bec766c4c37149c89a32978a14f16e22
 msgid ""
 "weights = traits_priority_for_professions.iloc[4].values[1:]\n"
 "weights = list(map(int, weights))\n"
@@ -950,7 +950,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:880
-#: 853df97de45e44299a813ff9763c6592
+#: 4455bb6a6fde459c95461987f0a501bf
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -1096,7 +1096,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1031
-#: 832d38a43ed04780aecdffb3d922f51f
+#: 7ef0a97f4af74a94a43833fb49dccf97
 msgid ""
 "<pre>\n"
 "                          Path    OPE    CON    EXT    AGR   NNEU  \\\n"
@@ -1128,7 +1128,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1061
-#: 656f309d72b1424c9814611f0ca80982
+#: f198bb9bd7c240f383c6242287480a39
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                          Path    OPE    CON    EXT    AGR   NNEU  "
@@ -1161,7 +1161,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1092
-#: 559ae3577561450e9d2f33bbf850688d
+#: b344c9114ff44aa4b1bfa2f4beb98d22
 msgid ""
 "                          Path    OPE    CON    EXT    AGR   NNEU  \\\n"
 "Person ID\n"
@@ -1193,19 +1193,19 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1128
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3091
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5054
-#: 5246a94a01b548a59fd4f9c41d063901 80e394bffa074080ba0c1f84168133cb
-#: ae95f4dfdb9d407e8a5bb2df9687c2a4
+#: 2b101e240d5e45e0b7eb4a56af0eaa73 800ebf40d1cc43f4b2c9de5cdd7e65b6
+#: dc9b64c33ebe4874a0c606f6d193b39b
 msgid "Ранжирование кандидатов на должность менеджера"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 139da88c2a034b1cad7b99d88a63c36f 26ffe2785f7e4fc485c11327a17aa2c3
-#: f208fa81fedb491a8325ce3a91d07302
+#: 7508cbad63bd4fa399739395e35b3a46 e1115a7610734b43a519119b4fea7ec3
+#: f635dd8a2f2345238b74c333af79f454
 msgid "[5]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: d883818e48a2438c97d15a8124d1637a
+#: 10aa5aa989b24716a04407df7da57eca
 msgid ""
 "weights = traits_priority_for_professions.iloc[0].values[1:]\n"
 "weights = list(map(int, weights))\n"
@@ -1233,7 +1233,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1170
-#: 07429403c47447f9972082e2d5523344
+#: 1c083249a8f14e5b8eed08b4c0a98f63
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -1379,7 +1379,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1321
-#: 719687a68e34430ebd88f00d429044cc
+#: 89430afc6f3540eab77e3b879323979c
 msgid ""
 "<pre>\n"
 "                          Path    OPE    CON    EXT    AGR   NNEU  \\\n"
@@ -1411,7 +1411,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1351
-#: 63cdb4f88c2a4785a4dadd48229e2ab1
+#: 8873a370748e4f8db0e295c5a7f88e7b
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                          Path    OPE    CON    EXT    AGR   NNEU  "
@@ -1444,7 +1444,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1382
-#: 7fb6d85954594ba5b87dfe97aa0b906c
+#: 86f22b85fb324c47a3f918989bf72c33
 msgid ""
 "                          Path    OPE    CON    EXT    AGR   NNEU  \\\n"
 "Person ID\n"
@@ -1476,8 +1476,8 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1421
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3384
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5347
-#: 4e4327b33c7946388ddec830eb49f300 5f9121b531aa4d3c9811c7ec0c29b362
-#: 9e825106d50844c5a64e96bf9c26ad8e
+#: 33c3dbb9ee6d45e181e5e2daa5f2e96b 78de5242de6f430e9a627ca5f77ac897
+#: c70d9deb36cd4ce7b1ebb72975f0fd56
 msgid ""
 "Для ранжирования кандидатов по профессиональным навыкам необходимо задать"
 " по два коэффициента корреляции для каждого персонального качества "
@@ -1489,8 +1489,8 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1423
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3386
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5349
-#: 5c05dd39121f4d59b9c6f536a5de26d1 69ff69c7e7ef42ea888e898173ac075e
-#: a17548ffc5854f82a8099e45916cafbc
+#: 0976f107248f4d2692b669d2905f7c2f 8d3c5a71474444ee8410025a35fefbca
+#: b9c2e54fd220467691b64f5f616db4a6
 msgid ""
 "В качестве примера предлагается использование коэффициентов корреляции "
 "между двумя людьми в четырьмя профессиональными навыками, представленных "
@@ -1500,8 +1500,8 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1425
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3388
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5351
-#: 20d124d649bc442795b9870132866221 b28dddd2a2794df79018aa0461b99644
-#: ed5d24336c63472b86964ffac7112da7
+#: 10febff154704819b05ca79676791bb3 c29b3a0349a84f40b00a53bf3429735c
+#: ec6cef8bc004419694bdcb5b04a375e6
 msgid ""
 "Wehner C., de Grip A., Pfeifer H. Do recruiters select workers with "
 "different personality traits for different tasks? A discrete choice "
@@ -1511,16 +1511,16 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1427
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3390
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5353
-#: 3448969621f841e9a8431696aae82684 351946c9bb274b46a54b5125cea31b97
-#: 4a65a6b872f14f41afdb5a92f87925dd
+#: 706a460b20a347349ac2b6d4ec94f223 b2bf38ddb09c45c38c1286c0ffcea79c
+#: c58dd1ce521342968fc5c0d1113fbef7
 msgid "Представлены 4 профессиональных навыка:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1429
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3392
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5355
-#: 203ec45f750f4c8dae1e425fdd5d083d bae6851bf2ee48eb825956895cdf18f7
-#: be0c605cc5cd4952aea18de4cd6da96f
+#: 2cea269859794c0ca68016a6551f629b 4a3b8d4dce9542ff990806a076a8f9c3
+#: 4fa21dc656bd468db7d33ad054a8fcbf
 msgid ""
 "Analytical (Аналитические навыки). Умение эффективно решать новые задачи,"
 " требующие глубокого анализа."
@@ -1529,8 +1529,8 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1430
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3393
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5356
-#: 248601075cf14845b6a18dad76a4ce77 9d1aea039cb644e683cba796ba347f09
-#: ed2dfe3a3274426690146edea73c55a2
+#: 34b97f8e1e1648f3b8540ea5c79e513b 3b8313d4528c46b3925f48d93270eaf3
+#: 4654d41eb8c24b2b8aca00f0677ea96b
 msgid ""
 "Interactive (Навыки межличностного общения). Умение убеждать и достигать "
 "компромиссов с заказчиками и коллегами."
@@ -1539,8 +1539,8 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1431
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3394
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5357
-#: 064ebce8b5474839864b3c44955d196d 56c17992442343a5a3a6fa96d852d947
-#: d61b471b43494c30bb3de6a0dd1ac89b
+#: 2d903d5fb60b48acb282845f56c837ad 5425e42c52f54212960d175823289d3a
+#: d75c7a91a46f4bb1a4dfde739e1a65df
 msgid ""
 "Routine (Способность выполнять рутинную работу). Умение эффективно "
 "управлять рутинными задачами, соблюдая точность и внимание к деталям."
@@ -1549,8 +1549,8 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1432
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3395
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5358
-#: 1cd206fa43494f4e93cafeca3e7af7f4 4429fb617fd74a3783441b668f37a85c
-#: 47bd540cffed4174a9ce59d488a2ec37
+#: 351ff1d06f0748d3870a5bb6d3883dd6 713232f4b0a74bb09be0896ccd2bb24e
+#: fb393b834d5e47c0ba111611b0e644ea
 msgid ""
 "Non-Routine (Способность выполнять нестандартную работу). Умение "
 "реагировать и решать проблемы, не имеющие установленного порядка, "
@@ -1560,8 +1560,8 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1434
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3397
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5360
-#: 7a79a276e02746059816fb4a8e8ac8b3 c8060d12b3384006bd0e36fd9ad5cfd9
-#: fd3b67edec6643109ea0d5e5372b18f5
+#: 4b14cc250a44486a8cb4760443c9bde5 b37d211008b346fe99130db0773d594b
+#: c78ff24c2ddc46949e7febfe176c6d8b
 msgid ""
 "Пользователь может установить свои коэффициенты корреляции и ранжировать "
 "кандидатов по другим профессиональным навыкам."
@@ -1570,20 +1570,20 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1446
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3409
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5372
-#: 04ecaffc9f33487cabe7ee99e54d3f92 8817c6b412b2456a93735c8924295b4f
-#: e7a36df883bd42dd88ca564c7445861b
+#: 527a53ab4a7a4df5b407b34ce49ed23f 55a8836015624da0b182fb13232e81de
+#: 72bad0cc10684b1893a3907285fc7338
 msgid "Ранжирование кандидатов по профессиональным навыкам"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 10a1de84ac2743a6beeaf2cd682f3505 120592efccd441048ff7c0e6a8b5d986
-#: 5689027c9fef4193bc0f0b53e7296ea1
+#: 57eab67dd45d4169b3d048347a10278b 7f48eccb449c4c7888dbd679734999ed
+#: abf0fb51a36748bbbc2cee6bb532c78d
 msgid "[6]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: bac8842d0145479da75478827afa02ed bbfe62633b524f1399fb9b4c428d801e
-#: e55064e2231b43c594548b89847a7077
+#: 1c22ab911b414e1ebf6ac407b652a2c5 9c1dae702474492a8cd1e484d73cb4e2
+#: efa1425ccdb740e3b36bfb804b36ebc6
 msgid ""
 "# Загрузка датафрейма с коэффициентами корреляции\n"
 "url = "
@@ -1601,8 +1601,8 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1478
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3441
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5404
-#: 7e3c2046e51c43e0a538b623bc6eb435 8984e96a4e1f4581a73654927de31d1f
-#: d879a2ee6471405c93eb826e3c038b02
+#: 0f2d8cfcc97c4ce49fbd186467c0c0a2 9bfa9952d5d14b06b01a5a8f304a4455
+#: ec50bf4fa94b42bf8723f28c0fcac45d
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -1738,8 +1738,8 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1617
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3580
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5543
-#: 748d6de7c2e0410da1d278fac7eb06c9 b649871c20e04d24bb29bda23d5fff15
-#: ce3ad57861774d078683d106859d4615
+#: 3a3d67a7ae2a4c35b4772aa63f77c4d6 3af4f0c232284980ad74dde002d4dd6b
+#: 960e1e1117a44087863be3f250d248bf
 msgid ""
 "<pre>\n"
 "                Trait Score_level  Analytical  Interactive  Routine  \\\n"
@@ -1773,8 +1773,8 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1647
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3610
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5573
-#: 73d56f9711e049038fcff6c025e19bc8 8b5d6d50d6b24d728747286351e09c7a
-#: a059693c511549d0840f81e59e86d08d
+#: 205b2612aebd424b95a72f52ba67a8d1 41ed3e5eb6174a37a9ad7f99c8a33eac
+#: e42509310b284fbaa2552db3bf1e537b
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                Trait Score\\_level  Analytical  Interactive  Routine  "
@@ -1809,8 +1809,8 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1678
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3641
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5604
-#: b74f53e1eb98452fbd0f1f23ffb82103 d42034729c2649c5b5f17c647b7e7d4c
-#: f33e6e9f86064d7b976d1810629ba99f
+#: 88429d895d1546fa98c994c2b7c73cdc 9f38b5056e534c6d9b16f4dcb41b88a3
+#: eeb39d32c3654efb81af42f42e6829d6
 msgid ""
 "                Trait Score_level  Analytical  Interactive  Routine  \\\n"
 "ID\n"
@@ -1840,13 +1840,13 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 576809b2c09f4c8fa83be602232fb5e0 ca819f0c46024b6db9d7f5e96ba62a14
-#: eaf7d0c0816e415cb680d2e209b2e310
+#: 53d40b03b0b24ac8bf9a5a15ccd8ee5c 5cc159d182194db589f930c691c1620e
+#: de5ef53d3d994673ab15b295b5f77804
 msgid "[7]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 5c92be0c88fb45e8ae7d0b35327117a2
+#: cb681a96ce6645af937f4e9da57c7d24
 msgid ""
 "_b5._priority_skill_calculation(\n"
 "    correlation_coefficients = df_professional_skills,\n"
@@ -1868,7 +1868,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1738
-#: ee524c51eefa43498d1def5cfdb96853
+#: c17d312a105f46958c0b15f53dee4da7
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -2050,7 +2050,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1925
-#: 3fe70d00ee394f9091fdbb59db5ae5ba
+#: d405c73d422841c799f2da27e3e384b8
 msgid ""
 "<pre>\n"
 "                          Path    OPE    CON    EXT    AGR   NNEU  "
@@ -2093,7 +2093,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1955
-#: e699c4a803794f95b50b9e4a5ab28a88
+#: d3d01cfafa06451f982a3e96916499a8
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                          Path    OPE    CON    EXT    AGR   NNEU  "
@@ -2136,7 +2136,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:1986
-#: 36629b52c69e44f09de05f28d4543ef3
+#: b5669da5334d47fb9969e85b6e49f670
 msgid ""
 "                          Path    OPE    CON    EXT    AGR   NNEU  "
 "Analytical  \\\n"
@@ -2177,17 +2177,17 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2022
-#: 36da90a083534856acb6ec94300b3c48
+#: 7c5ad4daae8c40cc8e4604abb9962f46
 msgid "``MuPTA`` (ru)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 53eb363b840b4241b18150d111441793 55c844ca07e74b309fd8fa76341e2154
+#: 0d9bfc1f8e5f4671b3ece40c0e2f609e 1c877a3233af4af7ad9f1b3cd5f53175
 msgid "[9]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: db35b887f3074737960a0c84f5e4a665
+#: 29e911bdb8a44338b2c9838552b3bd98
 msgid ""
 "import os\n"
 "import pandas as pd\n"
@@ -2293,14 +2293,14 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2139
-#: 2afe2400f2aa4dd59e4e870e6422e406
+#: 67917c47780c4f2c86f27be006b367cb
 msgid ""
 "\\ **[2023-12-16 18:51:57] Извлечение признаков (экспертных и "
 "нейросетевых) из текста …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2150
-#: f490a070464c456bb17c6a5d3c5d33fd
+#: 02882f1491044c7e9b1883cea9e250fb
 msgid ""
 "\\ **[2023-12-16 18:52:01] Получение прогнозов и вычисление точности "
 "(мультимодальное объединение) …**"
@@ -2308,7 +2308,7 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2156
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4119
-#: 081a7b6e0a4b465ab142a75000fd607c 74e0e8e4706540cc8dc066cfd181645d
+#: 983061155f964ec5b45fd4ef56ecba27 f78c07a7680f4360b6fba9530ab783f6
 msgid ""
 "10 из 10 (100.0%) … GitHub:nbsphinx-math:`\\OCEANAI`:nbsphinx-"
 "math:`\\docs`:nbsphinx-math:`\\source`:nbsphinx-math:`\\user`\\_guide"
@@ -2317,7 +2317,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2174
-#: 5f0cca74b7c7497488741828c6c0a94d
+#: d7e87dafcb0741ea82be9c62603fc2a7
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -2451,7 +2451,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2313
-#: 5bd77de85dd9443fa3c6e5b1336158d2
+#: e5576b5d0f8b4a118b753f1027e47c2a
 msgid ""
 "<pre>\n"
 "                               Path  Openness Conscientiousness "
@@ -2494,7 +2494,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2343
-#: 3b8e4d5fd1864fdfaaa182f1b4ff3aa7
+#: 168580476b9141df84a7054ae7411db0
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                               Path  Openness Conscientiousness "
@@ -2537,7 +2537,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2374
-#: ade76018584c4933a35e096114b82971
+#: d1e845da755d453fb51fc02d82a3ce38
 msgid ""
 "                               Path  Openness Conscientiousness "
 "Extraversion  \\\n"
@@ -2578,14 +2578,14 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2409
-#: ee0e092bb48c4b5aa66262355f6f366a
+#: 67ecf27fbebc423fab2187a7ffce39ce
 msgid ""
 "\\ **[2023-12-16 18:52:01] Точность по отдельным персональным качествам "
 "личности человека …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2423
-#: f61f3f454a3548439c3cf651bc06c6e1
+#: 11398a7d79474dee9f569d71b6b0d06a
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -2647,7 +2647,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2490
-#: e92ffeb742ce4b15aefefb21079ea7b3
+#: 0d110427d9824b75b11d04f6140ee813
 msgid ""
 "<pre>\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
@@ -2663,7 +2663,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2504
-#: 9a746235cf4449ebae6ae38534c2f38a
+#: bac1dbffe5fe4fd498818a7cfcf8cf64
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  "
@@ -2680,7 +2680,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2519
-#: 86d706511d4741768d611fc9df5d0134
+#: 4258f1010a994beebceebfd04daeedf4
 msgid ""
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
 "Metrics\n"
@@ -2694,31 +2694,31 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2538
-#: 227c32856e74467b970ef9389a2253c4
+#: 462c05304b7142a09fb5c92cf330a74e
 msgid ""
 "\\ **[2023-12-16 18:52:01] Средняя средних абсолютных ошибок: 0.0962, "
 "средняя точность: 0.9038 …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2560
-#: a0e43c32eaa744638a2b1ee47075c317
+#: df420a9efe6e4dcfb5beeff5ed0efc5a
 msgid "— Время выполнения: 415.41 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 1111874202fc43d2838ba937086fa1dd 5e454b6c3e634415b1ca7455a3da3325
-#: 9a0057a6dfd04aa6b298baba4d01b9fe
+#: 2e4f109814df47a193e1b624baf4d819 7b8df3926fb4429b91328ceb8d008b31
+#: e81c5940c45544bea4f22ea3fc115ffc
 msgid "[10]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 5375f1cbffe24c0c95e09c2df99ef2c4 cb1e4e04a4b04c18b4fc17052c6b2b46
-#: e5fd9a13d2dd47efa375714bc1b66548
+#: 1365d35826734f35af477d689adbdce7 b86cce2040b5476198fc2f18192755d4
+#: d83db1cb0ec9436f83c46d2e48176cd6
 msgid "[11]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 938769cc5a154259b04658f3a5142ba1
+#: c3999d392e5c47c4b164dc0acffe6402
 msgid ""
 "weights = traits_priority_for_professions.iloc[4].values[1:]\n"
 "weights = list(map(int, weights))\n"
@@ -2746,7 +2746,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2843
-#: 923c2d481f9143cfa57428706d1715d4
+#: 0a7eb1a1b9004d03ad034a37f70e3d75
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -2892,7 +2892,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:2994
-#: 97f5b2a17814449b98b5658ada93c87a
+#: 52495f6c4830431c931aa1e747229ede
 msgid ""
 "<pre>\n"
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
@@ -2925,7 +2925,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3024
-#: 1636c10f89054612b723b51774a12ed9
+#: d082411093cb4d029b26c104c9262210
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
@@ -2968,7 +2968,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3055
-#: ed9afec55cdb405d8231c583ddaba725
+#: 4a50efe3eace4615936ceae8eaa7eb6e
 msgid ""
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
 "\\\n"
@@ -2999,13 +2999,13 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: aab25d1a28ab463faabbc55ee03186bf bfe96078223d43d6bb07038796747a35
-#: f2309c8087fb4541963779b242b1c35c
+#: 18429d609b9c4c299701aaafb54b3f18 4b420d9377924654a8fe8879c3d520e2
+#: a17623fc485b4ab584b585fbc4e8455a
 msgid "[12]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 9da8cf55df2c44728d40fe75a3889b43
+#: ebd427aaa38f4339bcd67a831d85f48d
 msgid ""
 "weights = traits_priority_for_professions.iloc[0].values[1:]\n"
 "weights = list(map(int, weights))\n"
@@ -3033,7 +3033,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3133
-#: db5356e7cba34529b6de4f273e79faa3
+#: 016418eafb034a46b1ce4b98b7848a75
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -3179,7 +3179,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3284
-#: 17bbcf447080419cab2e35ec116353ca
+#: c087fa5cb144405e9bdf7338767b9506
 msgid ""
 "<pre>\n"
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
@@ -3212,7 +3212,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3314
-#: 92589344a2014287b92904baf2200a15
+#: 5b55aad5a71b46b59a6cb426a2598e2c
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
@@ -3255,7 +3255,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3345
-#: 9fb98893235b468ab6fe478ed75b3414
+#: 1db95f35f0294de3a4f5e39d61df4058
 msgid ""
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
 "\\\n"
@@ -3286,19 +3286,19 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 2e1d725ded0e4d4099a236bc9fb6239d f5eac03e78a74908b65d6ad6f1627965
-#: f92f5c5cb003414495c369220bb34f6f
+#: 0b7d631873fc4f2b940132fa481677b6 88821768013f48abbe7dc87e870c4b19
+#: b144cccc0a404d638532af017d723616
 msgid "[13]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 4ddc223535384df08c5e196ef0f078e6 afc5ece2f9c3446191bdc5bf45bb8944
-#: b15d5e4b413448659f7b8bd649a7f0f0
+#: 6a3cc1cdf42d4efda5860d9a3bc14add 7641b2ac1d204ed8bb1e007011877c07
+#: ca47a0757ff142d4bdaf38fb587e391d
 msgid "[14]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: c52aa42c27d94a9081a2df12af2abd79
+#: 1e7862a06a464071979f64c4829cb45b
 msgid ""
 "_b5._priority_skill_calculation(\n"
 "    correlation_coefficients = df_professional_skills,\n"
@@ -3320,7 +3320,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3701
-#: 3dc6d369e2784a5c8ce8458441fa8782
+#: d3526ec1c9b84bb8be617cfd67d65d9d
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -3502,7 +3502,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3888
-#: 7011d3ce787c4b7290be7e219136a80b
+#: 32e8501b93944042b44a0229fe47fffc
 msgid ""
 "<pre>\n"
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
@@ -3535,7 +3535,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3918
-#: cb8a1ac2e2214c659972ec4ef199eaec
+#: 8221efa27e714d34894bfc4bad2a56a4
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
@@ -3578,7 +3578,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3949
-#: 8fbb16bc413f49bebc2617719628310f
+#: 5c68f51e1be344a5a5a4e181c9e61925
 msgid ""
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
 "\\\n"
@@ -3609,17 +3609,17 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:3985
-#: 417e1dd187e749f88c0551385da3469f
+#: 5e3ed3f4ff6c465f935b78772eb4dc18
 msgid "``MuPTA`` (en)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 1576a059dbf44f458e22ce97a6030209 249287307166497d94a9972170b221c0
+#: 2258d8b4679c468e992e759b21e963ef f27e0c2141164c4a8ff3f0dc9f1d9d8d
 msgid "[15]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: f3fcd87df31d40f689464c93a0c8e4c7
+#: 94f049bc038646f69a24c4b04de6459f
 msgid ""
 "import os\n"
 "import pandas as pd\n"
@@ -3725,21 +3725,21 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4102
-#: 0f731b7dfb5f4473af7704f67c033883
+#: fb78e6d83ffe4d2988e6b31ea79f377a
 msgid ""
 "\\ **[2023-12-16 19:00:49] Извлечение признаков (экспертных и "
 "нейросетевых) из текста …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4113
-#: b8f2e730b3c542b29d6def00d3128567
+#: e211bef7f5d54284a3a17600d2367802
 msgid ""
 "\\ **[2023-12-16 19:00:52] Получение прогнозов и вычисление точности "
 "(мультимодальное объединение) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4137
-#: df7fa954575e43cfbad222e24270339e
+#: c32cbe46a34744ec8ca2b5a67d1f7e4c
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -3873,7 +3873,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4276
-#: a7297af920ad457985a4889c3f6b30f3
+#: 8ae6bebc50234899a75dd6abfb769284
 msgid ""
 "<pre>\n"
 "                               Path  Openness Conscientiousness "
@@ -3916,7 +3916,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4306
-#: ed5abbba0b20468e95f9dcc9bd276e25
+#: 7ae732ee9c4c4231af36bf3d4797bce1
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                               Path  Openness Conscientiousness "
@@ -3959,7 +3959,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4337
-#: 5c1da2d35929466d92ebf8367c19600a
+#: 8fc25f7a0e894da79eeb46dba83a186c
 msgid ""
 "                               Path  Openness Conscientiousness "
 "Extraversion  \\\n"
@@ -4000,14 +4000,14 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4372
-#: 76df8bcc2f564a5d9482f1face7f822a
+#: 0335b6d8ee1a458f95cb7b153ee04dbd
 msgid ""
 "\\ **[2023-12-16 19:00:52] Точность по отдельным персональным качествам "
 "личности человека …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4386
-#: f3963e82628d470393143078ced9145b
+#: 4b9d99b9d0e6482a86f4e685a076a941
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -4069,7 +4069,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4453
-#: 358076ce2d474c6fbb8e7b6e8fbb8b9a
+#: d69435cea121448692eb75125b490112
 msgid ""
 "<pre>\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
@@ -4085,7 +4085,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4467
-#: 007addf3d8834d519ed087e0a75da706
+#: 93e8b93cde1e46ef9e0d7e9932c0c1d3
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  "
@@ -4102,7 +4102,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4482
-#: 2008b79c47ca4e6393906661c8403d12
+#: ef1bd35dfc6b4a8eb75373b1b126a702
 msgid ""
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
 "Metrics\n"
@@ -4116,31 +4116,31 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4501
-#: 67850318f25c4d8e9970486e1b251e60
+#: 4f1fde6f4ccb4a66b93e385cbf639e83
 msgid ""
 "\\ **[2023-12-16 19:00:52] Средняя средних абсолютных ошибок: 0.1742, "
 "средняя точность: 0.8258 …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4523
-#: ca15236925344aa3ba0b7ed416285755
+#: 4dad6a3d3b594095b426303c68f39109
 msgid "— Время выполнения: 372.823 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 884a204cf3f14404a3adacf0390515d4 9a4a73d6f55e4a018df9b100ffda9072
-#: efcb2a667e694e1795865b6627cba45b
+#: 7f248a889b9f40f988653cebab28879d 84cfbd23fe4649e38316bd8e3a947ed1
+#: b9488795cde0435296b2bf2ba8e3fd38
 msgid "[16]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 44c8df41686047948630a971d88c8805 8f7f0cb69a73447695b0276ccccc65e3
-#: d0fa874d319747a89fe48ed750808a19
+#: 61295375cf0d4932bde1d0350c8aa2e2 8161f641cd3b40559da7941b1f55451d
+#: ea55a0bb120e4f8ab601793611d120c9
 msgid "[17]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 072f33510da04d2d96c239bf79ac37e4
+#: 4d03c8bd50174da4b9057c7e4a9aff03
 msgid ""
 "weights = traits_priority_for_professions.iloc[4].values[1:]\n"
 "weights = list(map(int, weights))\n"
@@ -4168,7 +4168,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4806
-#: c3e1f36b83574631bde968b35a2697ec
+#: 86d669e7c5f84e768ae03bed1e7d7aac
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -4314,7 +4314,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4957
-#: 89e074bdd4d44f9799ee916ce25ed666
+#: 1ccadb1155f5485199b12c2e87b9e3d7
 msgid ""
 "<pre>\n"
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
@@ -4347,7 +4347,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:4987
-#: 5fc15f6dd75549d5b60778d3f918f8ef
+#: 1842105a2e9d41babbdf18cefa1e71eb
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
@@ -4390,7 +4390,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5018
-#: ac9dcbfbf32e4642a5aa68982b8f5cf0
+#: cf0a9b23975744249b21446ed681c319
 msgid ""
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
 "\\\n"
@@ -4421,13 +4421,13 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 0bf265986b4e49518606efc11e3e77aa 93798390ac1346e1b1594dc0a28bca20
-#: aaba1f53aa724132aee0a5d3fd4ee85e
+#: 67f71dd5cd2d400c8eebc0d7c50f1ad1 72432475f50642c7b2871466c3a0bb79
+#: d60d2706188947bf868c485478c9e2d4
 msgid "[18]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: b9f17e2cbfce44f7a38ed6a653714585
+#: 351758878039465d94e107503e8f525f
 msgid ""
 "weights = traits_priority_for_professions.iloc[0].values[1:]\n"
 "weights = list(map(int, weights))\n"
@@ -4455,7 +4455,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5096
-#: 4985789f21be4df3900d3613c67e7531
+#: fd04706d4e734e54852d2e3bdeb0a7a3
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -4601,7 +4601,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5247
-#: d8bef2cbdfbb4f5b874445ab4a460e91
+#: c70704e0858841798e4bc2d781b1913d
 msgid ""
 "<pre>\n"
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
@@ -4634,7 +4634,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5277
-#: 4a01010aed6c44c2bc9123f0b1344103
+#: f7fd521d2ebd48ddac5e201abe030a16
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
@@ -4677,7 +4677,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5308
-#: 7d61e9d293a14e858ec9c04360af5e0e
+#: 4f1c6e67f99941d686e639422c031b53
 msgid ""
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
 "\\\n"
@@ -4708,19 +4708,19 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 15ba7ccd2711463e992fac6689727f01 951dfbffc52a4b6599c728429247d552
-#: dbc513eacb3b4de6bc3e721253e3634d
+#: 0a445f44a08b480aad231d6069574088 53baae0d4bec4d7e993188a261e35679
+#: bc609fbadfcf47fd9bc9aba7bd644e80
 msgid "[19]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 20106cd5ad9f43b3919304bb1c861f5a 83c1624f1d964e3683ab8a3d4220cb24
-#: 9ed58c44b20a4d55a3aee1126de21135
+#: 446cd8a629ac4a66a7dec7b089728dd4 7e6c1a43929d4797aa5a3ec3df02ae4f
+#: 9d95ecf260504bfabf6397c7f0da98f5
 msgid "[20]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:-1
-#: 2ba23e981e57499db332136517c371d9
+#: bacc3cdbfad14f7daa49a250974ba6c4
 msgid ""
 "_b5._priority_skill_calculation(\n"
 "    correlation_coefficients = df_professional_skills,\n"
@@ -4742,7 +4742,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5664
-#: 0df81890407740b9a66f24fe4f7d4906
+#: 13883739027e4147873ecb9ea9abaf57
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -4924,7 +4924,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5851
-#: 9a51ad515e2e48e3a6762adbb17bf415
+#: 9b194a6aaf374a34889a876d6d5f989f
 msgid ""
 "<pre>\n"
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
@@ -4957,7 +4957,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5881
-#: 7acd62fb29ac4bab868a516e54444b48
+#: 1a7617c38a6e4098ae4b906e3c8c47a0
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
@@ -5000,7 +5000,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:5912
-#: eacd5817443f4077a1fcb0c06c9ba78c
+#: 07b75ff1550a4af983f554c071ed8328
 msgid ""
 "                               Path    OPE    CON    EXT    AGR   NNEU  "
 "\\\n"
@@ -5052,5 +5052,65 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "977a2566ca484ac08c54fb32341c1230"
+#~ msgstr ""
+
+#~ msgid "|156d290c4d7e4d42a4c04ca1071a05c4|"
+#~ msgstr ""
+
+#~ msgid "156d290c4d7e4d42a4c04ca1071a05c4"
+#~ msgstr ""
+
+#~ msgid "|a3d8f51c08fe4a8dbb7973fb3c691f7b|"
+#~ msgstr ""
+
+#~ msgid "a3d8f51c08fe4a8dbb7973fb3c691f7b"
+#~ msgstr ""
+
+#~ msgid "|49037aa27ea74016ac2f8f8f814c822e|"
+#~ msgstr ""
+
+#~ msgid "49037aa27ea74016ac2f8f8f814c822e"
+#~ msgstr ""
+
+#~ msgid "|b3f5aec10d31423296d9600fcc0cc7e0|"
+#~ msgstr ""
+
+#~ msgid "b3f5aec10d31423296d9600fcc0cc7e0"
+#~ msgstr ""
+
+#~ msgid "|66da4118235b41a1a24eb2d15828dacf|"
+#~ msgstr ""
+
+#~ msgid "66da4118235b41a1a24eb2d15828dacf"
+#~ msgstr ""
+
+#~ msgid "|afc3f884d9d54861a59b5b692eeda7bc|"
+#~ msgstr ""
+
+#~ msgid "afc3f884d9d54861a59b5b692eeda7bc"
+#~ msgstr ""
+
+#~ msgid "|6704ed908b32474bab295d4a8acefea8|"
+#~ msgstr ""
+
+#~ msgid "6704ed908b32474bab295d4a8acefea8"
+#~ msgstr ""
+
+#~ msgid "|fd4659922f1d40689222fbee273b8aa1|"
+#~ msgstr ""
+
+#~ msgid "fd4659922f1d40689222fbee273b8aa1"
+#~ msgstr ""
+
+#~ msgid "|c2afccf171d848fea4005e5868570b5c|"
+#~ msgstr ""
+
+#~ msgid "c2afccf171d848fea4005e5868570b5c"
+#~ msgstr ""
+
+#~ msgid "|4f7710e1dde740fbbfdbf041fea11d19|"
+#~ msgstr ""
+
+#~ msgid "4f7710e1dde740fbbfdbf041fea11d19"
 #~ msgstr ""
 
