@@ -1,17 +1,17 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2022-23. Speech and Multimodal Interfaces Laboratory Team
-# This file is distributed under the same license as the OCEANAI package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# English translation.
+# Copyright (C) 2022. Speech and Multimodal Interfaces Laboratory Team
+# This file is distributed under the same license as the big5 package.
+# Elena Ryumina <ryumina_ev@mail.ru>, 2022.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OCEANAI 1.0\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version:  1.0\n"
+"Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
 "POT-Creation-Date: 2023-12-17 14:43+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2022-12-11 14:42+0300\n"
+"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
+"<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
+"Language-Team: English <ryumina_ev@mail.ru>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -38,11 +38,13 @@ msgid ""
 "``_b5.text_model_nn_`` - Нейросетевая модель **tf.keras.Model** для "
 "признаков / оценок на базе нейросетевых признаков"
 msgstr ""
+"``_b5s.text_model_nn_`` - Neural network model **tf.keras.Model** for "
+"obtaining features / scores by deep features"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:29
 #: 7c86b69a47ab403dba33a8bc7457a7b3
 msgid "Импорт необходимых инструментов"
-msgstr ""
+msgstr "Import required packages"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:-1
 #: 7b147518d93142cbb7fd8ef34c821121
@@ -57,7 +59,7 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:51
 #: eaab15dd5de540728a0623e8f7926872
 msgid "Сборка"
-msgstr ""
+msgstr "Build"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:-1
 #: 356fcc19614d42299fb624e165535ef5
@@ -84,6 +86,19 @@ msgid ""
 "    metadata = True # Отображение информации о библиотеке\n"
 ")"
 msgstr ""
+"_b5 = Run(\n"
+"    lang = 'en', # Inference language \n"
+"    color_simple = '#333', # Plain text color (hexadecimal code)\n"
+"    color_info = '#1776D2', # The color of the text containing the "
+"information (hexadecimal code)\n"
+"    color_err = '#FF0000', # Error text color (hexadecimal code)\n"
+"    color_true = '#008001', # Text color containing positive information "
+"(hexadecimal code)\n"
+"    bold_text = True, # Bold text\n"
+"    num_to_df_display = 30, # Number of rows to display in tables\n"
+"    text_runtime = 'Runtime', # Runtime text\n"
+"    metadata = True # Displaying information about library\n"
+")"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:81
 #: 0b217e4c06f14fa495d647a837559b38
@@ -95,6 +110,12 @@ msgid ""
 "[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
 "Версия: 1.0.0a5    Лицензия: BSD License"
 msgstr ""
+"\\ **[2023-12-10 17:12:11] OCEANAI - personality traits:**\\     Authors:"
+"        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry Ryumin "
+"[dl_03.03.1991@mail.ru]        Alexey Karpov [karpov@iias.spb.su]    "
+"Maintainers:        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry "
+"Ryumin [dl_03.03.1991@mail.ru]    Version: 1.0.0a5    License: BSD "
+"License"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:83
 #: f1a6b70fdf274ddda2d2bbe949a94714
@@ -104,7 +125,7 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:97
 #: fd659759e4c4475b900d0a7fef5072e3
 msgid "Формирование нейросетевой архитектуры модели (``FI V2``)"
-msgstr ""
+msgstr "Formation of the neural network architecture of the model (``FI V2``)"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:-1
 #: c3e9031d7479434fba2c730594c60dc1
@@ -123,6 +144,15 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"res_load_text_model_nn_fi = _b5.load_text_model_nn(\n"
+"    corpus = \"fi\", # Corpus selection for models trained on First Impressions V2"
+" 'fi' and models trained on for MuPTA 'mupta'\n"
+"    show_summary = False, # Displaying the formed neural network "
+"architecture of the model\n"
+"    out = True, # Display\n"
+"    runtime = True, # Runtime count\n"
+"    run = True # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:124
 #: 65cab70fe72f4a7b9cfb90f14cacc8d5
@@ -130,17 +160,19 @@ msgid ""
 "\\ **[2023-12-10 16:55:40] Формирование нейросетевой архитектуры для "
 "получения оценок по нейросетевым признакам (текстовая модальность) …**"
 msgstr ""
+"\\ **[2023-12-10 16:55:40] Formation of a neural network architecture for"
+" obtaining scores by deep features (text modality) …**"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:134
 #: 4c3060b98e0f434888ac13402e24f33a
 msgid "— Время выполнения: 1.03 сек. —"
-msgstr ""
+msgstr "— Runtime: 1.03 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:146
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:379
 #: 5a8e460197e644f48d3fae0a1f676fb9 9798f8a3635e4a82be8cbcf9f2e00b6c
 msgid "Загрузка весов нейросетевой модели"
-msgstr ""
+msgstr "Downloading the weights of the neural network model"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:-1
 #: d6e9ae270bdb45ea995581ac580e7db7
@@ -165,13 +197,29 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"# Core settings\n"
+"_b5.path_to_save_ = './models' # Directory to save the file\n"
+"_b5.chunk_size_ = 2000000      # File download size from network in 1 step\n"
+"\n"
+"url = _b5.weights_for_big5_['text']['fi']['nn']['sberdisk']\n"
+"\n"
+"res_load_text_model_weights_nn_fi = _b5.load_text_model_weights_nn(\n"
+"    url = url, # Full path to the file with weights of the neural network"
+" model\n"
+"    force_reload = True, # Forced download of a file with weights of a "
+"neural network model from the network\n"
+"    out = True,     # Display\n"
+"    runtime = True, # Runtime count\n"
+"    run = True      # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:179
 #: cf73e9672c2b4319a38eec06ed42d62f
 msgid ""
 "\\ **[2023-12-10 16:55:45] Загрузка весов нейросетевой модели для "
 "получения оценок по нейросетевым признакам (текстовая модальность) …**"
-msgstr ""
+msgstr "\\ **[2023-12-10 16:55:45] Downloading the weights of a neural"
+" network model to obtain deep features (text modality) ...**"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:190
 #: 6135d21442244767836b687e3b039bef
@@ -179,17 +227,19 @@ msgid ""
 "\\ **[2023-12-10 16:55:45] Загрузка файла "
 "“weights_2023-07-03_15-01-08.h5” 100.0% …**"
 msgstr ""
+"\\ **[2023-12-10 16:55:45] File download “weights_2023-07-03_15-01-08.h5”"
+" 100.0% …**"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:200
 #: 0b0cfdc1aec64d23976a8e49f639ef81
 msgid "— Время выполнения: 0.393 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.393 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:212
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:445
 #: 0fb974b2cf944842ac7fc78ed732cecf 9536899489ab4afdb6a26dac8a8eaf18
 msgid "Отображение сформированной нейросетевой архитектуры модели"
-msgstr ""
+msgstr "Displaying the formed neural network architecture of the model"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:-1
 #: b2d610bb124c4795bbd35000ba00b83e
@@ -333,7 +383,7 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:330
 #: 512e812466e1498d9b6a2a9fe08599df
 msgid "Формирование нейросетевой архитектуры модели (``MuPTA``)"
-msgstr ""
+msgstr "Formation of the neural network architecture of the model (``MuPTA``)"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:-1
 #: 86ed6034357947daa1a1c659e6d1263f
@@ -352,6 +402,15 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"res_load_text_model_nn_mupta = _b5.load_text_model_nn(\n"
+"    corpus = \"mupta\", # Corpus selection for models trained on First Impressions V2"
+" 'fi' and models trained on for MuPTA 'mupta'\n"
+"    show_summary = False, # Displaying the formed neural network "
+"architecture of the model\n"
+"    out = True, # Display\n"
+"    runtime = True, # Runtime count\n"
+"    run = True # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:357
 #: da364ff499f844189aea04ea47440d65
@@ -359,11 +418,14 @@ msgid ""
 "\\ **[2023-12-10 16:55:49] Формирование нейросетевой архитектуры для "
 "получения оценок по нейросетевым признакам (текстовая модальность) …**"
 msgstr ""
+"\\ **[2023-12-10 16:55:49] Formation of the neural network architecture "
+"of the model for obtaining scores by deep features (text modality) "
+"…**"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:367
 #: d01435b0f3dc460cab236c7235ed2af3
 msgid "— Время выполнения: 0.264 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.264 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:-1
 #: 83ce48df14324b86b1c2655ab6ac10ed
@@ -388,13 +450,29 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"# Core settings\n"
+"_b5.path_to_save_ = './models' # Directory to save the file\n"
+"_b5.chunk_size_ = 2000000 # File download size from network in 1 step\n"
+"\n"
+"url = _b5.weights_for_big5_['text']['mupta']['nn']['sberdisk']\n"
+"\n"
+"res_load_text_model_weights_nn_mupta = _b5.load_text_model_weights_nn(\n"
+"    url = url, # Full path to the file with weights of the neural network"
+" model\n"
+"    force_reload = True, # Forced download of a file with weights of a "
+"neural network model from the network\n"
+"    out = True, # Display\n"
+"    runtime = True, # Runtime count\n"
+"    run = True # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:412
 #: 7eb567f161754d40a266ba6cce55756f
 msgid ""
 "\\ **[2023-12-10 16:55:51] Загрузка весов нейросетевой модели для "
 "получения оценок по нейросетевым признакам (текстовая модальность) …**"
-msgstr ""
+msgstr "\\ **[2023-12-10 16:55:51] Downloading the weights of a neural"
+" network model to obtain deep features (text modality) ...**"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:423
 #: cf634b5f6e794a67bae9d73bac5952d8
@@ -402,11 +480,13 @@ msgid ""
 "\\ **[2023-12-10 16:55:52] Загрузка файла "
 "“weights_2023-07-16_18-12-01.h5” 100.0% …**"
 msgstr ""
+"\\ **[2023-12-10 16:55:52] File download “weights_2023-07-16_18-12-01.h5”"
+" 100.0% …**"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:433
 #: a3895412690946c2b5b99ef02821caa6
 msgid "— Время выполнения: 0.373 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.373 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_nn.ipynb:-1
 #: f9103fc060be4a6882b31923985a8afe
