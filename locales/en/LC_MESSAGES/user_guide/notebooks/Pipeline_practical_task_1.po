@@ -43,7 +43,7 @@ msgstr ""
 "The solution of the practical task is performed in two stages. "
 "At the first stage it is necessary to use the OCEAN-AI library "
 "to obtain predictions (personality traits scores)."
-" The second step is to use the methods"
+" The second stage is to use the methods"
 " \\_candidate_ranking and \\_priority_skill_calculation from the"
 " OCEAN-AI library to solve the presented practical task." 
 " Examples of the results of the"
@@ -61,7 +61,7 @@ msgstr ""
 "Thus, the OCEAN-AI library provides tools to analyze the personality traits"
 " of candidates and their suitability for the position, which "
 "can significantly improve the recruitment process and help to make more "
-objective and systematic decisions when ranking candidates."
+"objective and systematic decisions when ranking candidates."
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:20
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_1.ipynb:30
