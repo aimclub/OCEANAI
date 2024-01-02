@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCEANAI 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-02 12:54+0300\n"
+"POT-Creation-Date: 2024-01-02 14:05+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,7 +32,7 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:17
 #: 921a6e8c3a344c5db61e55849ef8464e
 msgid ""
-"``_b5.text_models_b5_`` - Нейросетевые модели **tf.keras.Model** для "
+"``_b5.text_model_b5_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения оценок персональных качеств"
 msgstr ""
 
@@ -342,4 +342,9 @@ msgid ""
 "__________________________________________________________________________________________________"
 msgstr ""
 
+#~ msgid ""
+#~ "``_b5.text_models_b5_`` - Нейросетевые модели "
+#~ "**tf.keras.Model** для получения оценок "
+#~ "персональных качеств"
+#~ msgstr ""
 

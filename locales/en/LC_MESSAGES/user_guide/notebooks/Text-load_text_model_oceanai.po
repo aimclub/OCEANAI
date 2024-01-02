@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2024-01-02 12:54+0300\n"
+"POT-Creation-Date: 2024-01-02 14:05+0300\n"
 "PO-Revision-Date: 2022-12-11 14:42+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -33,8 +33,9 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:17
 #: 921a6e8c3a344c5db61e55849ef8464e
+#, fuzzy
 msgid ""
-"``_b5.text_models_b5_`` - Нейросетевые модели **tf.keras.Model** для "
+"``_b5.text_model_b5_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения оценок персональных качеств"
 msgstr ""
 "``_b5.text_model_b5_`` - Neural network model **tf.keras.Model** for "
