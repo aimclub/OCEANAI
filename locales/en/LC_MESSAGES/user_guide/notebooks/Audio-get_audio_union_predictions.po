@@ -1622,7 +1622,7 @@ msgid ""
 "\\ **[2023-12-14 17:59:22] Средняя средних абсолютных ошибок: 0.0926, "
 "средняя точность: 0.9074 …**"
 msgstr ""
-"\\ **[2023-12-14 17:59:22] Mean absolute error: 0.0927, Accuracy: 0.9073"
+"\\ **[2023-12-14 17:59:22] Mean absolute error: 0.0926, Accuracy: 0.9074"
 " …**"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:1507

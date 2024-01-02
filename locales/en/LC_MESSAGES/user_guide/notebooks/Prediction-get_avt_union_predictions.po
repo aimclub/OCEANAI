@@ -1,17 +1,17 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2022-23. Speech and Multimodal Interfaces Laboratory Team
-# This file is distributed under the same license as the OCEANAI package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# English translation.
+# Copyright (C) 2022. Speech and Multimodal Interfaces Laboratory Team
+# This file is distributed under the same license as the big5 package.
+# Elena Ryumina <ryumina_ev@mail.ru>, 2022.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OCEANAI 1.0\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version:  1.0\n"
+"Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
 "POT-Creation-Date: 2023-12-29 16:42+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2022-12-11 13:33+0300\n"
+"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
+"<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
+"Language-Team: English <ryumina_ev@mail.ru>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -52,7 +52,7 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:37
 #: 5fdcbc8acdb8489dadf61fac9616affc
 msgid "Импорт необходимых инструментов"
-msgstr ""
+msgstr "Import required packages"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
 #: eea39c9d623e4fada220a09f86b06ac3
@@ -67,7 +67,7 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:59
 #: 971c316c2a5642b79d224e35986061e7
 msgid "Сборка"
-msgstr ""
+msgstr "Build"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
 #: 663539f420ba40d192ba391de5d7d557
@@ -94,6 +94,19 @@ msgid ""
 "    metadata = True # Отображение информации о библиотеке\n"
 ")"
 msgstr ""
+"_b5 = Run(\n"
+"    lang = 'en',              # Inference language\n"
+"    color_simple = '#333',    # Plain text color (hexadecimal code)\n"
+"    color_info = '#1776D2',   # The color of the text containing the "
+"information (hexadecimal code)\n"
+"    color_err = '#FF0000',    # Error text color (hexadecimal code)\n"
+"    color_true = '#008001',   # Text color containing positive information "
+"(hexadecimal code)\n"
+"    bold_text = True,         # Bold text\n"
+"    num_to_df_display = 30,   # Number of rows to display in tables\n"
+"    text_runtime = 'Runtime', # Runtime text\n"
+"    metadata = True           # Displaying information about library\n"
+")"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:89
 #: d1af3ef4076f4873a1c5c9b64ac9a7bf
@@ -105,6 +118,12 @@ msgid ""
 "[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
 "Версия: 1.0.0a16    Лицензия: BSD License"
 msgstr ""
+"\\ **[2023-12-15 07:01:44] OCEANAI - personal traits:**\\     Authors:"
+"        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry Ryumin "
+"[dl_03.03.1991@mail.ru]        Alexey Karpov [karpov@iias.spb.su]    "
+"Maintainers:        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry "
+"Ryumin [dl_03.03.1991@mail.ru]    Version: 1.0.0a16    License: BSD "
+"License"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:91
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1637
@@ -115,12 +134,12 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:105
 #: aa77759b2a1146cf82ef153e86bdc676
 msgid "Получение и отображение версий установленных библиотек"
-msgstr ""
+msgstr "Getting and displaying versions of installed libraries"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:107
 #: 5871b0a5a04b4b8195118d1430875334
 msgid "``_b5.df_pkgs_`` - DataFrame c версиями установленных библиотек"
-msgstr ""
+msgstr "``_b5.df_pkgs_`` - DataFrame with versions of installed libraries"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
 #: b0ac9c1daa444351aeb17eafe525bdbc
@@ -348,12 +367,12 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:350
 #: 9bb434b33d6d4539b7b3183677351f55
 msgid "— Время выполнения: 0.004 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.004 sec. —"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:362
 #: 876585e14fa34d60823507947c6afe16
 msgid "Анализ аудио информации (формированияе и загрузка весов моделей)"
-msgstr ""
+msgstr "Analysing audio information (forming model and loading model weights)"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:374
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:625
@@ -364,6 +383,8 @@ msgid ""
 "Формирование нейросетевой архитектуры модели для получения признаков / "
 "оценок на базе экспертных признаков"
 msgstr ""
+"Formation of the neural network architecture of the model for obtaining "
+"features / scores by hand-crafted features (audio modality)"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:376
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:426
@@ -372,6 +393,8 @@ msgid ""
 "``_b5.audio_model_hc_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения признаков / оценок на базе экспертных признаков"
 msgstr ""
+"``_b5.audio_model_hc_`` - Neural network model **tf.keras.Model** for "
+"obtaining features / scores by hand-crafted features"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
 #: 8add137b94e14076aeee091ff95e7146
@@ -389,6 +412,13 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"res_load_audio_model_hc = _b5.load_audio_model_hc(\n"
+"    show_summary = False, # Displaying the formed neural network "
+"architecture of the model\n"
+"    out = True,           # Display\n"
+"    runtime = True,       # Runtime count\n"
+"    run = True            # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:402
 #: ad2cc93396ad49c095eebfd95f4b40cb
@@ -396,11 +426,14 @@ msgid ""
 "\\ **[2023-12-15 07:01:44] Формирование нейросетевой архитектуры модели "
 "для получения оценок по экспертным признакам (аудио модальность) …**"
 msgstr ""
+"\\ **[2023-12-15 07:01:44] Formation of the neural network architecture "
+"of the model for obtaining scores by hand-crafted features (audio modality) "
+"…**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:412
 #: 0d0d8bc7fc144de39d099c434b6fdc62
 msgid "— Время выполнения: 0.326 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.326 sec. —"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:424
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:676
@@ -411,6 +444,8 @@ msgid ""
 "Загрузка весов нейросетевой модели для получения признаков / оценок на "
 "базе экспертных признаков"
 msgstr ""
+"Downloading the weights of the neural network model to obtain features / scores "
+"by hand-crafted features (audio modality)"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
 #: 04ab66979cca42b299f9eea0d0e63134
@@ -438,6 +473,23 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"# Core settings\n"
+"_b5.path_to_save_ = './models' # Directory to save the file\n"
+"_b5.chunk_size_ = 2000000      # File download size from network in 1 step\n"
+"corpus = 'fi'\n"
+"lang = 'en'\n"
+"\n"
+"url = _b5.weights_for_big5_['audio'][corpus]['hc']['sberdisk']\n"
+"\n"
+"res_load_audio_model_weights_hc = _b5.load_audio_model_weights_hc(\n"
+"    url = url, # Full path to the file with weights of the neural network"
+" model\n"
+"    force_reload = True, # Forced download of a file with weights of a "
+"neural network model from the network\n"
+"    out = True,          # Display\n"
+"    runtime = True,      # Runtime count\n"
+"    run = True           # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:462
 #: 451058ae58354012b08bf910a485b493
@@ -445,6 +497,8 @@ msgid ""
 "\\ **[2023-12-15 07:01:45] Загрузка весов нейросетевой модели для "
 "получения оценок по экспертным признакам (аудио модальность) …**"
 msgstr ""
+"\\ **[[2023-12-15 07:01:45] Downloading the weights of the neural network "
+"model to obtain scores by hand-crafted features (audio modality) …**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:473
 #: cb5be25f16b24eb58bff9414c677866a
@@ -452,11 +506,13 @@ msgid ""
 "\\ **[2023-12-15 07:01:45] Загрузка файла "
 "“weights_2022-05-05_11-27-55.h5” 100.0% …**"
 msgstr ""
+"\\ **[2023-12-15 07:01:45] File download “weights_2022-05-05_11-27-55.h5”"
+" (100.0%) …**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:483
 #: 09e9493d97dd467e89cba3fa7a3c2780
 msgid "— Время выполнения: 0.226 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.226 sec. —"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:495
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:862
@@ -467,6 +523,8 @@ msgid ""
 "Формирование нейросетевой архитектуры модели для получения признаков / "
 "оценок на базе нейросетевых признаков"
 msgstr ""
+"Formation of the neural network architecture of the model for obtaining "
+"features / scores by deep features (audio modality)"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:497
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:547
@@ -475,6 +533,8 @@ msgid ""
 "``_b5.audio_model_nn_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения признаков / оценок на базе нейросетевых признаков"
 msgstr ""
+"``_b5.audio_model_nn_`` - Neural network model **tf.keras.Model** for "
+"obtaining features / scores by deep features"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
 #: 665cb1e21000450297d64f190b06a785
@@ -492,6 +552,13 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"res_load_audio_model_nn = _b5.load_audio_model_nn(\n"
+"    show_summary = False, # Displaying the formed neural network "
+"architecture of the model\n"
+"    out = True,           # Display\n"
+"    runtime = True,       # Runtime count\n"
+"    run = True            # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:523
 #: 0115e52bedde44dea483e5e6a7612ca9
@@ -499,11 +566,13 @@ msgid ""
 "\\ **[2023-12-15 07:01:45] Формирование нейросетевой архитектуры для "
 "получения оценок по нейросетевым признакам (аудио модальность) …**"
 msgstr ""
+"\\ **[2023-12-15 07:01:45] Formation of a neural network architecture for"
+" obtaining scores by deep features (audio modality) …**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:533
 #: 4fdbb978eeb948b9af1b67ca130db6c1
 msgid "— Время выполнения: 0.219 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.219 sec. —"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:545
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:912
@@ -514,6 +583,8 @@ msgid ""
 "Загрузка весов нейросетевой модели для получения признаков / оценок на "
 "базе нейросетевых признаков"
 msgstr ""
+"Downloading the weights of the neural network model to obtain features / "
+"scores for deep features"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
 #: 46ad65b8f52c4ed2ac8d48123d52abb0
@@ -538,6 +609,21 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"# Core settings\n"
+"_b5.path_to_save_ = './models' # Directory to save the file\n"
+"_b5.chunk_size_ = 2000000      # File download size from network in 1 step\n"
+"\n"
+"url = _b5.weights_for_big5_['audio'][corpus]['nn']['sberdisk']\n"
+"\n"
+"res_load_audio_model_weights_nn = _b5.load_audio_model_weights_nn(\n"
+"    url = url, # Full path to the file with weights of the neural network"
+" model\n"
+"    force_reload = False, # Forced download of a file with weights of a "
+"neural network model from the network\n"
+"    out = True,           # Display\n"
+"    runtime = True,       # Runtime count\n"
+"    run = True            # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:580
 #: 923da5ff2e4e46bb8080d33e808a542a
@@ -545,6 +631,9 @@ msgid ""
 "\\ **[2023-12-15 07:01:45] Загрузка весов нейросетевой модели для "
 "получения оценок по нейросетевым признакам (аудио модальность) …**"
 msgstr ""
+"\\ **[2023-12-15 07:01:45] Downloading the weights of the neural network "
+"model to obtain scores for deep features (audio modality) "
+"…**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:591
 #: 3ba71b73eb4245a6a153bde85dbe3f87
@@ -552,16 +641,18 @@ msgid ""
 "\\ **[2023-12-15 07:01:45] Загрузка файла "
 "“weights_2022-05-03_07-46-14.h5”**"
 msgstr ""
+"\\ **[2023-12-15 07:01:45] File download "
+"“weights_2022-05-03_07-46-14.h5”**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:601
 #: 8528c44ae6f04859bc2ac2735f6dec17
 msgid "— Время выполнения: 0.328 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.328 sec. —"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:613
 #: 33737036d73a4f9f87471fdac65ca28d
 msgid "Анализ видео информации (формирование и загрузка весов моделей)"
-msgstr ""
+msgstr "Analysing video information (forming model and loading model weights)"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:627
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:678
@@ -570,6 +661,8 @@ msgid ""
 "``_b5.video_model_hc_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения признаков / оценок на базе экспертных признаков"
 msgstr ""
+"``_b5.video_model_hc_`` - Neural network model **tf.keras.Model** for "
+"obtaining features / scores by hand-crafted features"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
 #: 5f1e35cd96de466ea03733ff8b844ad2
@@ -588,6 +681,15 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"res_load_video_model_hc = _b5.load_video_model_hc(\n"
+"    lang = lang, # Language selection for models trained on First Impressions V2"
+"'en' and models trained on for MuPTA 'ru'\n"
+"    show_summary = False, # Displaying the formed neural network "
+"architecture of the model\n"
+"    out = True,           # Display\n"
+"    runtime = True,       # Runtime count\n"
+"    run = True            # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:654
 #: 3753d90b11f240c3851e68b8d44fa323
@@ -595,11 +697,14 @@ msgid ""
 "\\ **[2023-12-15 07:01:45] Формирование нейросетевой архитектуры модели "
 "для получения оценок по экспертным признакам (видео модальность) …**"
 msgstr ""
+"\\ **[2023-12-15 07:01:45] Formation of the neural network architecture "
+"of the model for obtaining scores by hand-crafted features (video modality) "
+"…**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:664
 #: 48a1f6338ce142aaab0d3e9bf8072055
 msgid "— Время выполнения: 0.252 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.252 sec. —"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
 #: 08db27792f1d431db3010564041eb95e
@@ -624,6 +729,21 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"# Core settings\n"
+"_b5.path_to_save_ = './models' # Directory to save the file\n"
+"_b5.chunk_size_ = 2000000 # File download size from network in 1 step\n"
+"\n"
+"url = _b5.weights_for_big5_['video'][corpus]['hc']['sberdisk']\n"
+"\n"
+"res_load_video_model_weights_hc = _b5.load_video_model_weights_hc(\n"
+"    url = url, # Full path to the file with weights of the neural network"
+" model\n"
+"    force_reload = True, # Forced download of a file with weights of a "
+"neural network model from the network\n"
+"    out = True,          # Display\n"
+"    runtime = True,      # Runtime count\n"
+"    run = True           # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:711
 #: 047f1e199d104b638d71e3a93ef9001a
@@ -631,6 +751,8 @@ msgid ""
 "\\ **[2023-12-15 07:01:46] Загрузка весов нейросетевой модели для "
 "получения оценок по экспертным признакам (видео модальность) …**"
 msgstr ""
+"\\ **[2023-12-15 07:01:46] Downloading the weights of the neural network "
+"model to obtain scores by hand-crafted features (video modality) …**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:722
 #: 02add9bda03547509da4cf190a466695
@@ -638,16 +760,20 @@ msgid ""
 "\\ **[2023-12-15 07:01:46] Загрузка файла "
 "“weights_2022-08-27_18-53-35.h5” 100.0% …**"
 msgstr ""
+"\\ **[2023-12-15 07:01:46] File download “weights_2022-08-27_18-53-35.h5”"
+" (100.0%) …**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:732
 #: ad150a7e9a374df8a216beb88ddc9123
 msgid "— Время выполнения: 0.24 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.24 sec. —"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:744
 #: 43f5b00141ef4f7ab2d6cb13df89e914
 msgid "Формирование нейросетевой архитектуры для получения нейросетевых признаков"
 msgstr ""
+"Formation of neural network architecture for obtaining deep "
+"features"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:746
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:796
@@ -656,6 +782,8 @@ msgid ""
 "``_b5.video_model_deep_fe_`` - Нейросетевая модель **tf.keras.Model** для"
 " получения нейросетевых признаков"
 msgstr ""
+"``_b5.video_model_deep_fe_`` - Neural network model **tf.keras.Model** "
+"for obtaining deep features"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
 #: 98c1aaa7b2a4484ca08957919c474640
@@ -673,6 +801,13 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"res_load_video_model_deep_fe = _b5.load_video_model_deep_fe(\n"
+"    show_summary = False, # Displaying the formed neural network "
+"architecture of the model\n"
+"    out = True,           # Display\n"
+"    runtime = True,       # Runtime count\n"
+"    run = True            # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:772
 #: f7a79d89f79e4eafb6bc7a72ea7f1463
@@ -680,11 +815,13 @@ msgid ""
 "\\ **[2023-12-15 07:01:46] Формирование нейросетевой архитектуры для "
 "получения нейросетевых признаков (видео модальность) …**"
 msgstr ""
+"\\ **[2023-12-15 07:01:46] Formation of neural network architecture for "
+"obtaining deep features (video modality) …**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:782
 #: 70f63b0c412c4ae98dc4bb4d22770b13
 msgid "— Время выполнения: 0.794 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.794 sec. —"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:794
 #: f2a5d4d5a02d4097b2fcdde80ce88ded
@@ -692,6 +829,8 @@ msgid ""
 "Загрузка весов нейросетевой модели для получения нейросетевых признаков "
 "(видео модальность)"
 msgstr ""
+"Downloading weights of a neural network model to obtain deep "
+"features (video modality)"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
 #: b2825b6534e34ea8bffbf3b8c22bf969
@@ -717,6 +856,22 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"# Core settings\n"
+"_b5.path_to_save_ = './models' # Directory to save the file\n"
+"_b5.chunk_size_ = 2000000 # File download size from network in 1 step\n"
+"\n"
+"url = _b5.weights_for_big5_['video'][corpus]['fe']['sberdisk']\n"
+"\n"
+"res_load_video_model_weights_deep_fe = "
+"_b5.load_video_model_weights_deep_fe(\n"
+"    url = url, # Full path to the file with weights of the neural network"
+" model\n"
+"    force_reload = True, # Forced download of a file with weights of a "
+"neural network model from the network\n"
+"    out = True,          # Display\n"
+"    runtime = True,      # Runtime count\n"
+"    run = True           # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:829
 #: 5b204808455f4b32a2603520ce496421
@@ -724,6 +879,8 @@ msgid ""
 "\\ **[2023-12-15 07:01:47] Загрузка весов нейросетевой модели для "
 "получения нейросетевых признаков (видео модальность) …**"
 msgstr ""
+"\\ **[2023-12-15 07:01:47] Downloading weights of a neural network model "
+"to obtain deep features (video modality) …**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:840
 #: 75d5b3e64e9d48e69f5074edd170aa58
@@ -731,11 +888,13 @@ msgid ""
 "\\ **[2023-12-15 07:01:50] Загрузка файла "
 "“weights_2022-11-01_12-27-07.h5” 100.0% …**"
 msgstr ""
+"\\ **[2023-12-15 07:01:50] File download “weights_2022-11-01_12-27-07.h5”"
+" (100.0%) …**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:850
 #: e0d46dda60794df68c0d9cc375991452
 msgid "— Время выполнения: 3.937 сек. —"
-msgstr ""
+msgstr "— Runtime: 3.937 sec. —"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:864
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:914
@@ -744,6 +903,8 @@ msgid ""
 "``_b5.video_model_nn_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения признаков / оценок на базе нейросетевых признаков"
 msgstr ""
+"``_b5.video_model_nn_`` - Neural network model **tf.keras.Model** for "
+"obtaining features / scores by deep features"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
 #: 43c4b04638f44d2abf05388f090a2290
@@ -761,6 +922,13 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"res_load_video_model_nn = _b5.load_video_model_nn(\n"
+"    show_summary = False, # Displaying the formed neural network "
+"architecture of the model\n"
+"    out = True,           # Display\n"
+"    runtime = True,       # Runtime count\n"
+"    run = True            # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:890
 #: 157f6204cc914477aacadeb136342093
@@ -768,11 +936,13 @@ msgid ""
 "\\ **[2023-12-15 07:01:51] Формирование нейросетевой архитектуры для "
 "получения оценок по нейросетевым признакам (видео модальность) …**"
 msgstr ""
+"\\ **[2023-12-15 07:01:51] Formation of a neural network architecture for"
+" obtaining scores by deep features (video modality) …**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:900
 #: 6ad62e673a2a4195b9ea76a3c87ecce1
 msgid "— Время выполнения: 0.707 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.707 sec. —"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
 #: df36b63e5afc4f3d809cb1edfff6af38
@@ -797,6 +967,21 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"# Core settings\n"
+"_b5.path_to_save_ = './models' # Directory to save the file\n"
+"_b5.chunk_size_ = 2000000      # File download size from network in 1 step\n"
+"\n"
+"url = _b5.weights_for_big5_['video'][corpus]['nn']['sberdisk']\n"
+"\n"
+"res_load_video_model_weights_nn = _b5.load_video_model_weights_nn(\n"
+"    url = url, # Full path to the file with weights of the neural network"
+" model\n"
+"    force_reload = False, # Forced download of a file with weights of a "
+"neural network model from the network\n"
+"    out = True,           # Display\n"
+"    runtime = True,       # Runtime count\n"
+"    run = True            # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:947
 #: 7e02ef66f4f44cd1b19834e41e34a1c7
@@ -804,6 +989,9 @@ msgid ""
 "\\ **[2023-12-15 07:01:51] Загрузка весов нейросетевой модели для "
 "получения оценок по нейросетевым признакам (видео модальность) …**"
 msgstr ""
+"\\ **[2023-12-15 07:01:51] Downloading the weights of the neural network "
+"model to obtain scores by deep features (video modality) "
+"…**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:958
 #: 8d509497ea63441a9027f8557313b785
@@ -811,22 +999,24 @@ msgid ""
 "\\ **[2023-12-15 07:01:51] Загрузка файла "
 "“weights_2022-03-22_16-31-48.h5”**"
 msgstr ""
+"\\ **[2023-12-15 07:01:51] File downloading "
+"“weights_2022-03-22_16-31-48.h5”**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:968
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1043
 #: 19b7444400fa436d884040266971603b 1d154ecc707e49b087cb359fcc299fde
 msgid "— Время выполнения: 0.166 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.166 sec. —"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:980
 #: 60f32ecb3edf4bc3bf24b32b906b773a
 msgid "Анализ текстовой информации (формирование и загрузка весов моделей)"
-msgstr ""
+msgstr "Analysing text information (forming model and loading model weights)"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:992
 #: 9faf75b39c5b4bc9a25c8f3d401fb5ec
 msgid "Загрузка словаря с экспертными признаками"
-msgstr ""
+msgstr "Loading a dictionary with hand-crafted features"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
 #: 77a7f92c4f064efab588156706286eb9
@@ -847,16 +1037,27 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"# Core setup\n"
+"_b5.path_to_save_ = './models' # Directory to save the models\n"
+"_b5.chunk_size_ = 2000000      # File download size from network in one step\n"
+"\n"
+"res_load_text_features = _b5.load_text_features(\n"
+"    force_reload = True,       # Forced download file\n"
+"    out = True,                # Display\n"
+"    runtime = True,            # Runtime calculation\n"
+"    run = True                 # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1022
 #: 767fb670a17c4623ad52cb95364a1415
 msgid "\\ **[2023-12-15 07:01:51] Загрузка словаря с экспертными признаками …**"
-msgstr ""
+msgstr "\\ **[2023-12-15 07:01:51] Loading a dictionary"
+" with hand-crafted features …**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1033
 #: 42a6e5a0caca4965ae1e18d2b22eaacc
 msgid "\\ **[2023-12-15 07:01:52] Загрузка файла “LIWC2007.txt” 100.0% …**"
-msgstr ""
+msgstr "\\ **[2023-12-15 07:01:52] Loading the “LIWC2007.txt” file 100.0% …**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1055
 #: c58e41edd6a74a518cf210b793a1fa39
@@ -864,6 +1065,7 @@ msgid ""
 "Формирование токенизатора и нейросетевой модели машинного перевода (``RU "
 "-> EN``)"
 msgstr ""
+"Building tokenizer and translation model (``RU -> EN``)"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
 #: c5382a5099e14895805fef1cc0169452
@@ -879,6 +1081,11 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"res_setup_translation_model = _b5.setup_translation_model(\n"
+"    out = True,     # Display\n"
+"    runtime = True, # Runtime calculation\n"
+"    run = True      # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1080
 #: c2bcfe3549f6402fbe71d84afb549543
@@ -886,11 +1093,13 @@ msgid ""
 "\\ **[2023-12-15 07:01:52] Формирование токенизатора и нейросетевой "
 "модели машинного перевода …**"
 msgstr ""
+msgstr "\\ **[2023-12-15 07:01:52] Building tokenizer and translation"
+" model …**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1090
 #: 08ef747784d64e40ac4b5a45f07d941b
 msgid "— Время выполнения: 1.763 сек. —"
-msgstr ""
+msgstr "— Runtime: 1.763 sec. —"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1102
 #: 4e2a4e6ee12a4cd291e44951a86490ae
@@ -898,6 +1107,7 @@ msgid ""
 "Формирование токенизатора и нейросетевой модели BERT (``для кодирования "
 "слов``)"
 msgstr ""
+"Building tokenizer and BERT model (``for word encoding``)"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
 #: 4dd6a222111e4b24b5593d1dfac6a4d6
@@ -918,6 +1128,16 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"# Core setup\n"
+"_b5.path_to_save_ = './models' # Directory to save the models\n"
+"_b5.chunk_size_ = 2000000      # File download size from network in one step\n"
+"\n"
+"res_setup_translation_model = _b5.setup_bert_encoder(\n"
+"    force_reload = True,       # Forced download file\n"
+"    out = True,                # Display\n"
+"    runtime = True,            # Runtime calculation\n"
+"    run = True                 # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1132
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1154
@@ -926,6 +1146,7 @@ msgid ""
 "\\ **[2023-12-15 07:01:53] Формирование токенизатора и нейросетевой "
 "модели BERT …**"
 msgstr ""
+"\\ **[2023-12-15 07:01:53] Building tokenizer and BERT model …**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1143
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1165
@@ -933,19 +1154,21 @@ msgstr ""
 msgid ""
 "\\ **[2023-12-15 07:01:55] Загрузка файла “bert-base-multilingual-"
 "cased.zip”**"
-msgstr ""
+msgstr "\\ **[2023-12-15 07:01:55] Loading the “bert-base-multilingual-"
+"cased.zip” file**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1176
 #: a6e17ee64afd4e3b84a941b2a7663cac
 msgid ""
 "\\ **[2023-12-15 07:01:55] Разархивирование архива “bert-base-"
 "multilingual-cased.zip” …**"
-msgstr ""
+msgstr "\\ **[2023-12-15 07:01:55] Unzipping an archive “bert-base-"
+"multilingual-cased.zip” …**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1186
 #: 40756abc92014a92ab64302d693a3000
 msgid "— Время выполнения: 5.269 сек. —"
-msgstr ""
+msgstr "— Runtime: 5.269 sec. —"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1200
 #: 9ee0d019a50e40a68254a61de72f09af
@@ -953,6 +1176,8 @@ msgid ""
 "``_b5.text_model_hc_`` - Нейросетевая модель **tf.keras.Model** для "
 "признаков / оценок на базе экспертных признаков"
 msgstr ""
+"``_b5.text_model_hc_`` - Neural network model **tf.keras.Model** for "
+"obtaining features / scores by hand-crafted features"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
 #: b76d69c4869f487f9f7f6e3e4d5c1a8d
@@ -971,6 +1196,15 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"res_load_text_model_hc_mupta = _b5.load_text_model_hc(\n"
+"    corpus = corpus, # Corpus selection for models trained on First Impressions V2"
+" 'fi' and models trained on for MuPTA 'mupta'\n"
+"    show_summary = False, # Displaying the formed neural network "
+"architecture of the model\n"
+"    out = True, # Display\n"
+"    runtime = True, # Runtime count\n"
+"    run = True # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1227
 #: 1b9aafd06a1c48d9accfaf2ccc403e42
@@ -978,11 +1212,14 @@ msgid ""
 "\\ **[2023-12-15 07:01:59] Формирование нейросетевой архитектуры модели "
 "для получения оценок по экспертным признакам (текстовая модальность) …**"
 msgstr ""
+"\\ **[22023-12-15 07:01:59] Formation of the neural network architecture "
+"of the model for obtaining scores by hand-crafted features (text modality) "
+"…**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1237
 #: 3a1ab26cb6b34c2a884e82bf33eac0bd
 msgid "— Время выполнения: 0.701 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.701 sec. —"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1251
 #: db94e480d8c641a5a5756d6fe99617b7
@@ -990,6 +1227,8 @@ msgid ""
 "``_b5.text_model_hc_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения признаков / оценок на базе экспертных признаков"
 msgstr ""
+"``_b5.text_model_hc_`` - Neural network model **tf.keras.Model** for "
+"obtaining features / scores by hand-crafted features"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
 #: 86f25723c7ff4e6d8493b75e475e3cb9
@@ -1014,6 +1253,21 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"# Core settings\n"
+"_b5.path_to_save_ = './models' # Directory to save the file\n"
+"_b5.chunk_size_ = 2000000      # File download size from network in 1 step\n"
+"\n"
+"url = _b5.weights_for_big5_['text'][corpus]['hc']['sberdisk']\n"
+"\n"
+"res_load_text_model_weights_hc_fi = _b5.load_text_model_weights_hc(\n"
+"    url = url, # Full path to the file with weights of the neural network"
+" model\n"
+"    force_reload = True, # Forced download of a file with weights of a "
+"neural network model from the network\n"
+"    out = True,     # Display\n"
+"    runtime = True, # Runtime count\n"
+"    run = True      # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1284
 #: 860a2e9349844456ad05fce8bbb8d6df
@@ -1021,6 +1275,8 @@ msgid ""
 "\\ **[2023-12-15 07:01:59] Загрузка весов нейросетевой модели для "
 "получения оценок по экспертным признакам (текстовая модальность) …**"
 msgstr ""
+msgstr "\\ **[2023-12-15 07:01:59] Downloading the weights of a neural"
+" network model to obtain hand-crafted features (text modality) ...**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1295
 #: 7fb1468f855f4133bc3f989d61977d17
@@ -1028,11 +1284,13 @@ msgid ""
 "\\ **[2023-12-15 07:02:00] Загрузка файла "
 "“weights_2023-07-15_10-52-15.h5” 100.0% …**"
 msgstr ""
+"\\ **[2023-12-15 07:02:00] File download “weights_2023-07-15_10-52-15.h5”"
+" 100.0% …**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1305
 #: e4bad40c7cf5498cbcee0354287cdcb6
 msgid "— Время выполнения: 0.278 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.278 sec. —"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1319
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1370
@@ -1041,6 +1299,8 @@ msgid ""
 "``_b5.text_model_nn_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения признаков / оценок на базе нейросетевых признаков"
 msgstr ""
+"``_b5s.text_model_nn_`` - Neural network model **tf.keras.Model** for "
+"obtaining features / scores by deep features"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
 #: 1f63f5bc78d44637b438fa5bc5d65f57
@@ -1059,6 +1319,15 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"res_load_text_model_nn_fi = _b5.load_text_model_nn(\n"
+"    corpus = corpus, # Corpus selection for models trained on First Impressions V2"
+" 'fi' and models trained on for MuPTA 'mupta'\n"
+"    show_summary = False, # Displaying the formed neural network "
+"architecture of the model\n"
+"    out = True, # Display\n"
+"    runtime = True, # Runtime count\n"
+"    run = True # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1346
 #: 655aef446e434abea2ba189378870e9c
@@ -1066,11 +1335,13 @@ msgid ""
 "\\ **[2023-12-15 07:02:00] Формирование нейросетевой архитектуры для "
 "получения оценок по нейросетевым признакам (текстовая модальность) …**"
 msgstr ""
+"\\ **[2023-12-15 07:02:00] Formation of a neural network architecture for"
+" obtaining scores by deep features (text modality) …**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1356
 #: dbc9084f95014d948235e46f502e52fe
 msgid "— Время выполнения: 0.286 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.286 sec. —"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
 #: 2c82b06fe789475aaee35c7f518ff5eb
@@ -1095,13 +1366,29 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"# Core settings\n"
+"_b5.path_to_save_ = './models' # Directory to save the file\n"
+"_b5.chunk_size_ = 2000000      # File download size from network in 1 step\n"
+"\n"
+"url = _b5.weights_for_big5_['text'][corpus]['nn']['sberdisk']\n"
+"\n"
+"res_load_text_model_weights_nn_fi = _b5.load_text_model_weights_nn(\n"
+"    url = url, # Full path to the file with weights of the neural network"
+" model\n"
+"    force_reload = True, # Forced download of a file with weights of a "
+"neural network model from the network\n"
+"    out = True,     # Display\n"
+"    runtime = True, # Runtime count\n"
+"    run = True      # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1403
 #: d3357afc2b9448a5a64e0bfd00987dc0
 msgid ""
 "\\ **[2023-12-15 07:02:00] Загрузка весов нейросетевой модели для "
 "получения оценок по нейросетевым признакам (текстовая модальность) …**"
-msgstr ""
+msgstr "\\ **[2023-12-15 07:02:00] Downloading the weights of a neural"
+" network model to obtain deep features (text modality) ...**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1414
 #: 3d1b735b49884f2cb71be3bbd4b319bd
@@ -1109,11 +1396,13 @@ msgid ""
 "\\ **[2023-12-15 07:02:00] Загрузка файла "
 "“weights_2023-07-03_15-01-08.h5” 100.0% …**"
 msgstr ""
+"\\ **[2023-12-15 07:02:00] File download “weights_2023-07-03_15-01-08.h5”"
+" 100.0% …**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1424
 #: 4af1864bbf0e4fa9af687da8c8013e55
 msgid "— Время выполнения: 0.42 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.42 sec. —"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1436
 #: df9d425da4a44048867ecceed8154525
@@ -1121,6 +1410,8 @@ msgid ""
 "Анализ мультимодальной информации (формирование, загрузка весов моделей, "
 "получение оценок персональных качеств)"
 msgstr ""
+"Analysing multimodal information (forming model, loading model weights,"
+" obtaining personality traits scores)"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1448
 #: 8043e86faf0b44169decda503064438e
@@ -1128,6 +1419,8 @@ msgid ""
 "Формирование нейросетевой архитектуры модели для получения оценок "
 "персональных качеств"
 msgstr ""
+"Formation of neural network architectures of models for obtaining the "
+"personality traits scores"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1450
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1500
@@ -1136,6 +1429,8 @@ msgid ""
 "``_b5.avt_model_b5_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения оценок персональных качеств"
 msgstr ""
+"``_b5.avt_model_b5_`` - Neural network model **tf.keras.Model** for "
+"obtaining the personality traits scores"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
 #: c7de9cb217f94235afdb781ec92b4ee9
@@ -1153,6 +1448,13 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"res_load_avt_model_b5 = _b5.load_avt_model_b5(\n"
+"    show_summary = False, # Displaying the formed neural network "
+"architecture of the model\n"
+"    out = True,           # Display\n"
+"    runtime = True,       # Runtime count\n"
+"    run = True            # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1476
 #: 5ad8552408b84076996ee34dcdf70f3e
@@ -1161,11 +1463,14 @@ msgid ""
 "для получения оценок персональных качеств (мультимодальное объединение) "
 "…**"
 msgstr ""
+"\\ **[2023-12-15 07:02:00] Formation of neural network architectures of "
+"models for obtaining the personality traits scores (multimodal"
+" fusion) …**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1486
 #: ea6153bee62c434e8c6d4e7a3b7f51d0
 msgid "— Время выполнения: 0.212 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.212 sec. —"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1498
 #: 25e01cf7dba24a6f88272df6756ac7f4
@@ -1173,6 +1478,8 @@ msgid ""
 "Загрузка весов нейросетевой модели для получения оценок персональных "
 "качеств"
 msgstr ""
+"ЗDownloading the weights of neural network models to obtain the "
+"personality traits scores (multimodal fusion)"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
 #: 6e42efd9fd0243258ae73b05a9743588
@@ -1197,6 +1504,20 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"# Core settings\n"
+"_b5.path_to_save_ = './models' # Directory to save the file\n"
+"_b5.chunk_size_ = 2000000      # File download size from network in 1 step\n"
+"\n"
+"url = _b5.weights_for_big5_['avt'][corpus]['b5']['sberdisk']\n"
+"\n"
+"res_load_avt_model_weights_b5 = _b5.load_avt_model_weights_b5(\n"
+"    url = url,\n"
+"    force_reload = True, # Forced download of a file with weights of a "
+"neural network model from the network\n"
+"    out = True,          # Display\n"
+"    runtime = True,      # Runtime count\n"
+"    run = True           # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1533
 #: 8e694c0d62b44f97936a9dc3deab5f43
@@ -1204,6 +1525,9 @@ msgid ""
 "\\ **[2023-12-15 07:02:01] Загрузка весов нейросетевой модели для "
 "получения оценок персональных качеств (мультимодальное объединение) …**"
 msgstr ""
+"\\ **[2023-12-15 07:02:01] Downloading the weights of neural network "
+"models to obtain the personality traits scores (multimodal "
+"fusion) …**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1544
 #: aa455f3c638543c188df83e575a306e6
@@ -1211,26 +1535,28 @@ msgid ""
 "\\ **[2023-12-15 07:02:01] Загрузка файла "
 "“avt_fi_2023-12-03_11-36-51.h5”**"
 msgstr ""
+"\\ **[2023-12-15 07:02:01] File download "
+"“avt_fi_2023-12-03_11-36-51.h5”**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1554
 #: 2582ad6db599494fa716eac6e32af27a
 msgid "— Время выполнения: 0.295 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.295 sec. —"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1566
 #: 90027ec01c774278876a4197d99cf567
 msgid "Получение прогнозов (мультимодальное объединение)"
-msgstr ""
+msgstr "Getting scores (multimodal fusion)"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1568
 #: 49ac20852cdf4bff98a9c7b3c4cbb8eb
 msgid "``_b5.df_files_`` - DataFrame с данными"
-msgstr ""
+msgstr "``_b5.df_files_`` - DataFrame with data"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1569
 #: a6b21fbb28a0460480ede6401df08fea
 msgid "``_b5.df_accuracy_`` - DataFrame с результатами вычисления точности"
-msgstr ""
+msgstr "``_b5.df_accuracy_`` - DataFrame with accuracy"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
 #: 680352dac14b4ae8a03a29242b38d6a3 bf86a5cf20604ac3b8f3d7519daea6ec
@@ -1275,6 +1601,40 @@ msgid ""
 "    run = True         # Блокировка выполнения\n"
 ")"
 msgstr ""
+"# Core settings\n"
+"_b5.path_to_dataset_ = 'E:/Databases/FirstImpressionsV2/test' # "
+"Dataset directory\n"
+"# Directories not included in the selection\n"
+"_b5.ignore_dirs_ = []\n"
+"# Key names for DataFrame dataset\n"
+"_b5.keys_dataset_ = ['Path', 'Openness', 'Conscientiousness', "
+"'Extraversion', 'Agreeableness', 'Non-Neuroticism']\n"
+"_b5.ext_ = ['.mp4'] # Search file extensions\n"
+"\n"
+"# Full path to the file containing the ground truth scores for the "
+"accuracy calculation\n"
+"url_accuracy = _b5.true_traits_[corpus]['sberdisk']\n"
+"\n"
+"_b5.get_avt_predictions(\n"
+"    depth = 1,         # ГHierarchy depth for receiving audio and video "
+"data\n"
+"    recursive = False, # Recursive data search\n"
+"    sr = 44100,        # Sampling frequency\n"
+"    window_audio = 2,  # Audio segment window size (in seconds)\n"
+"    step_audio = 1,    # Audio segment window shift step (in seconds)\n"
+"    reduction_fps = 5, # Frame rate reduction\n"
+"    window_video = 10, # Video segment window size (in seconds)\n"
+"    step_video = 5,    # Video segment window shift step (in seconds)\n"
+"    asr = False,       # Using a model for ASR\n"
+"    lang = lang,       # Language selection for models trained on First Impressions V2"
+"'en' and models trained on for MuPTA 'ru'\n"
+"    accuracy = True,   # Accuracy\n"
+"    url_accuracy = url_accuracy,\n"
+"    logs = True,       # If necessary, generate a LOG file\n"
+"    out = True,        # Display\n"
+"    runtime = True,    # Runtime count\n"
+"    run = True         # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1618
 #: 2825ebca5ac94df694cef2ed5ea4adeb
@@ -1282,6 +1642,8 @@ msgid ""
 "\\ **[2023-12-15 10:22:11] Извлечение признаков (экспертных и "
 "нейросетевых) из текста …**"
 msgstr ""
+"\\ **[2023-12-15 10:22:11] Feature extraction (hand-crafted and deep) "
+"from text …**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1629
 #: 23ea0f48a58744878f726c250423d33d
@@ -1289,6 +1651,8 @@ msgid ""
 "\\ **[2023-12-15 10:22:14] Получение прогнозов и вычисление точности "
 "(мультимодальное объединение) …**"
 msgstr ""
+"\\ **[2023-12-15 10:22:14] Getting scores and accuracy calculation "
+"(multimodal fusion) …**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1631
 #: 82ef59bda4b840b891b2ef68b6cae58a
@@ -1298,7 +1662,7 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1635
 #: 12c3b01f397a412583c93c0c506eb6df
 msgid "2000 из 2000 (100.0%) … test80_25_Q4wOgixh7E.004.mp4 …"
-msgstr ""
+msgstr "2000 from 2000 (100.0%) … test80_25_Q4wOgixh7E.004.mp4 …"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1653
 #: 711fccf3bc7e49dfb996031048c55063
@@ -1894,7 +2258,7 @@ msgstr ""
 msgid ""
 "\\ **[2023-12-15 10:22:14] Точность по отдельным персональным качествам "
 "личности человека …**"
-msgstr ""
+msgstr "\\ **[2023-12-15 10:22:14] Trait-wise accuracy …**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:2202
 #: 85042d99d6464f6185b75377613ac052
@@ -2010,17 +2374,17 @@ msgstr ""
 msgid ""
 "\\ **[2023-12-15 10:22:14] Средняя средних абсолютных ошибок: 0.0729, "
 "средняя точность: 0.9271 …**"
-msgstr ""
+msgstr "\\ **[2023-12-15 10:22:14] Mean absolute error: 0.0729, Accuracy: 0.9271 …**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:2328
 #: e50b3cdaf8de4c049566306da35e31e9
 msgid "Лог файлы успешно сохранены …"
-msgstr ""
+msgstr "Log files saved successfully …"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:2339
 #: 88874f970036418f94f7e805f7a9aab6
 msgid "— Время выполнения: 12013.03 сек. —"
-msgstr ""
+msgstr "— Runtime: 12013.03 sec. —"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:2351
 #: 2b9cb8c82b98443baf2d499a6ef87c4d
@@ -2042,16 +2406,3 @@ msgstr ""
 #: 29058f9026654f22adfa657cdb75feea
 msgid "True"
 msgstr ""
-
-#~ msgid "|a346e08147454dc697079a6694da81d0|"
-#~ msgstr ""
-
-#~ msgid "a346e08147454dc697079a6694da81d0"
-#~ msgstr ""
-
-#~ msgid "|9a7dc24180f746a1b15093074e124a63|"
-#~ msgstr ""
-
-#~ msgid "9a7dc24180f746a1b15093074e124a63"
-#~ msgstr ""
-
