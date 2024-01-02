@@ -1,17 +1,17 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2022-23. Speech and Multimodal Interfaces Laboratory Team
-# This file is distributed under the same license as the OCEANAI package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# English translation.
+# Copyright (C) 2022. Speech and Multimodal Interfaces Laboratory Team
+# This file is distributed under the same license as the big5 package.
+# Elena Ryumina <ryumina_ev@mail.ru>, 2022.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OCEANAI 1.0\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version:  1.0\n"
+"Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
 "POT-Creation-Date: 2023-12-17 14:43+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2022-12-11 14:42+0300\n"
+"Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
+"<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
+"Language-Team: English <ryumina_ev@mail.ru>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,7 +30,7 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:25
 #: 4143addc657b421090a7bb798461ffbe
 msgid "Импорт необходимых инструментов"
-msgstr ""
+msgstr "Import required packages"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
 #: 1361c1fbee8343e28f4d7ec2fe49bd69
@@ -88,7 +88,7 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:78
 #: 1ca819f346394049a4ad2068164da787
 msgid "Сборка"
-msgstr ""
+msgstr "Build"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
 #: 54ffdc4f26a24cf0a6970d9026585155
@@ -115,6 +115,19 @@ msgid ""
 "    metadata = True # Отображение информации о библиотеке\n"
 ")"
 msgstr ""
+"_b5 = Run(\n"
+"    lang = 'en', # Inference language\n"
+"    color_simple = '#FFF', # Plain text color (hexadecimal code)\n"
+"    color_info = '#1776D2', # The color of the text containing the "
+"information (hexadecimal code)\n"
+"    color_err = '#FF0000', # Error text color (hexadecimal code)\n"
+"    color_true = '#008001', # Text color containing positive information "
+"(hexadecimal code)\n"
+"    bold_text = True, # Bold text\n"
+"    num_to_df_display = 30, # Number of rows to display in tables\n"
+"    text_runtime = 'Runtime', # Runtime text\n"
+"    metadata = True # Displaying information about library\n"
+")"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:108
 #: eba78dd3d51b434abedee119616ae319
@@ -126,6 +139,12 @@ msgid ""
 "[ryumina_ev@mail.ru]        Рюмин Дмитрий [dl_03.03.1991@mail.ru]    "
 "Версия: 1.0.0a5    Лицензия: BSD License"
 msgstr ""
+"\\ **[2023-12-03 00:29:57] OCEANAI - personality traits:**\\     Authors:"
+"        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry Ryumin "
+"[dl_03.03.1991@mail.ru]        Alexey Karpov [karpov@iias.spb.su]    "
+"Maintainers:        Elena Ryumina [ryumina_ev@mail.ru]        Dmitry "
+"Ryumin [dl_03.03.1991@mail.ru]    Version: 1.0.0a5    License: BSD "
+"License"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:110
 #: 40e69ffd86a94bd89daf8bc6a3e4d535
@@ -135,7 +154,7 @@ msgstr ""
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:124
 #: 749cfe4c203b40f3a875dbb7275e91f6
 msgid "Загрузка словаря с экспертными признаками"
-msgstr ""
+msgstr "Loading a dictionary with hand-crafted features"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
 #: 0ed2d82c227b47b1873ef25da1d9ae1d
@@ -156,21 +175,32 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"# Core setup\n"
+"_b5.path_to_save_ = './models' # Directory to save the models\n"
+"_b5.chunk_size_ = 2000000      # File download size from network in one step\n"
+"\n"
+"res_load_text_features = _b5.load_text_features(\n"
+"    force_reload = True,       # Forced download file\n"
+"    out = True,                # Display\n"
+"    runtime = True,            # Runtime calculation\n"
+"    run = True                 # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:154
 #: 30a85d7c696c4c2f802a8f671a995938
 msgid "\\ **[2023-12-03 00:29:57] Загрузка словаря с экспертными признаками …**"
-msgstr ""
+msgstr "\\ **[2023-12-03 00:29:57] Loading a dictionary"
+" with hand-crafted features …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:165
 #: 5a6b9d01983c4e34aaf6058011050be8
 msgid "\\ **[2023-12-03 00:30:00] Загрузка файла “LIWC2007.txt” 100.0% …**"
-msgstr ""
+msgstr "\\ **[2023-12-03 00:30:00] Loading the “LIWC2007.txt” file 100.0% …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:175
 #: 3f4925473733405ead2563777e9cd3ad
 msgid "— Время выполнения: 3.073 сек. —"
-msgstr ""
+msgstr "— Runtime: 3.073 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:187
 #: 31970793766a4ec3adecffbe14448655
@@ -178,6 +208,7 @@ msgid ""
 "Формирование токенизатора и нейросетевой модели машинного перевода (``RU "
 "-> EN``)"
 msgstr ""
+"Building tokenizer and translation model (``RU -> EN``)"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
 #: 9dcb54e9598e45ca88a8b78f828fb3bf
@@ -193,18 +224,24 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"res_setup_translation_model = _b5.setup_translation_model(\n"
+"    out = True,     # Display\n"
+"    runtime = True, # Runtime calculation\n"
+"    run = True      # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:212
 #: 1764dfb9a8b64526b24668111a9dd01e
 msgid ""
 "\\ **[2023-12-03 00:30:00] Формирование токенизатора и нейросетевой "
 "модели машинного перевода …**"
-msgstr ""
+msgstr "\\ **[2023-12-03 00:30:00] Building tokenizer and translation"
+" model …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:222
 #: f49a87ccf187410990014b744048be4f
 msgid "— Время выполнения: 3.098 сек. —"
-msgstr ""
+msgstr "— Runtime: 3.098 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:234
 #: d30c77cdef354d289792c079c763aaf2
@@ -212,6 +249,7 @@ msgid ""
 "Формирование токенизатора и нейросетевой модели BERT (``для кодирования "
 "слов``)"
 msgstr ""
+"Building tokenizer and BERT model (``for word encoding``)"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
 #: 7afb38863e7b4e549657699ed5dac305
@@ -232,6 +270,16 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"# Core setup\n"
+"_b5.path_to_save_ = './models' # Directory to save the models\n"
+"_b5.chunk_size_ = 2000000      # File download size from network in one step\n"
+"\n"
+"res_setup_translation_model = _b5.setup_bert_encoder(\n"
+"    force_reload = True,       # Forced download file\n"
+"    out = True,                # Display\n"
+"    runtime = True,            # Runtime calculation\n"
+"    run = True                 # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:264
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:286
@@ -240,6 +288,7 @@ msgid ""
 "\\ **[2023-12-03 00:30:04] Формирование токенизатора и нейросетевой "
 "модели BERT …**"
 msgstr ""
+"\\ **[2023-12-03 00:30:04] Building tokenizer and BERT model …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:275
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:297
@@ -247,29 +296,31 @@ msgstr ""
 msgid ""
 "\\ **[2023-12-03 00:30:07] Загрузка файла “bert-base-multilingual-"
 "cased.zip”**"
-msgstr ""
+msgstr "[2023-12-03 00:30:07] Loading the “bert-base-multilingual-"
+"cased.zip” file**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:308
 #: 76dd07617dad4840a2836d5b04293146
 msgid ""
 "\\ **[2023-12-03 00:30:07] Разархивирование архива “bert-base-"
 "multilingual-cased.zip” …**"
-msgstr ""
+msgstr "\\ **[2023-12-03 00:30:07] Unzipping an archive “bert-base-"
+"multilingual-cased.zip” …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:318
 #: 212d2f03362148c58ac25a4baef16dfd
 msgid "— Время выполнения: 14.752 сек. —"
-msgstr ""
+msgstr "— Runtime: 14.752 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:330
 #: 331db0f59d9a4f0f9867de1ff49b554f
 msgid "Процесс извлечения признаков из текста"
-msgstr ""
+msgstr "Process of extracting text features"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:342
 #: 8278bdd658604b5192953fcf1543f16b
 msgid "Пример 1 (Анализ видефайла (``EN``) с учетом ручной транскрипции)"
-msgstr ""
+msgstr "Example 1 (Analyzing a video file (``EN``) with manual transcription)"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
 #: 6007a46edcb24e92ba87c8afe0581a74
@@ -294,6 +345,21 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"# Video file path\n"
+"path = "
+"'/Users/dl/GitHub/OCEANAI/docs/source/user_guide/notebooks/glgfB3vFewc.004.mp4'"
+"\n"
+"\n"
+"hc_features, nn_features = _b5.get_text_features(\n"
+"    path = path, # Video file path\n"
+"    asr = False, # Using a model for ASR\n"
+"    lang = 'en', # Language selection for models trained on First Impressions V2"
+" 'en' and models trained on for MuPTA 'ru'\n"
+"    show_text = True, # Text display\n"
+"    out = True,       # Display\n"
+"    runtime = True,   # Runtime calculation\n"
+"    run = True        # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:374
 #: 65db6778ad414bbeac45495ae357fefb
@@ -301,6 +367,8 @@ msgid ""
 "\\ **[2023-12-03 00:30:18] Извлечение признаков (экспертных и "
 "нейросетевых) из текста …**"
 msgstr ""
+"\\ **[2023-12-03 00:30:18] Extraction of features (hand-crafted and "
+"deep) from a text …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:385
 #: 215aa7dd6f2d45beaa53ea27bbe5aca5
@@ -310,16 +378,21 @@ msgid ""
 "Размерность матрицы с нейросетевыми признаками: 104 ✕ 768     Текст:"
 "        during those times i feel sad i feel confused and"
 msgstr ""
+"\\ **[2023-12-03 00:30:19] Statistics of extracted features from the text: "
+"**\\     Dimension of the "
+"matrix of hand-crafted features: 89 ✕ 64    Dimension of the "
+"matrix of deep features: 104 ✕ 768 Text:"
+"        during those times i feel sad i feel confused and"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:395
 #: 1fc10d9be5ba4675a29531ed45b46400
 msgid "— Время выполнения: 0.343 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.343 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:407
 #: 88baae7e3cae41ab91e30d4bd6c73ead
 msgid "Пример 2 (Анализ видефайла (``EN``) без учета ручной транскрипции)"
-msgstr ""
+msgstr "Example 2 (Analyzing a video file (``EN``) without manual transcription)"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
 #: 9a844c8b8c3b404dab62b2cac00a9860
@@ -344,6 +417,21 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"# Video file path\n"
+"path = "
+"'/Users/dl/GitHub/OCEANAI/docs/source/user_guide/notebooks/glgfB3vFewc.004.mp4'"
+"\n"
+"\n"
+"hc_features, nn_features = _b5.get_text_features(\n"
+"    path = path, # Video file path\n"
+"    asr = True, # Using a model for ASR\n"
+"    lang = 'en', # Language selection for models trained on First Impressions V2"
+" 'en' and models trained on for MuPTA 'ru'\n"
+"    show_text = True, # Text display\n"
+"    out = True,       # Display\n"
+"    runtime = True,   # Runtime calculation\n"
+"    run = True        # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:439
 #: a8653156fbd04fe8be22be2708a24fc0
@@ -351,6 +439,8 @@ msgid ""
 "\\ **[2023-12-03 00:30:19] Извлечение признаков (экспертных и "
 "нейросетевых) из текста …**"
 msgstr ""
+"\\ **[2023-12-03 00:30:19] Extraction of features (hand-crafted and "
+"deep) from a text …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:450
 #: 5d074ce0b3ed4ecaba0cb0a7f36126e4
@@ -363,16 +453,24 @@ msgid ""
 " throughout the school and the library and the gym and so on and then "
 "they can get comfortable if theyre in a new school as well"
 msgstr ""
+"\\ **[2023-12-03 00:30:25] Statistics of extracted features from the text: "
+"**\\     Dimension of the "
+"matrix of hand-crafted features: 89 ✕ 64    Dimension of the "
+"matrix of deep features: 104 ✕ 768 Text:"
+"        during those times i feel sad i feel confused and- the school and"
+" introduce them to our administrators and the different faculty that work"
+" throughout the school and the library and the gym and so on and then "
+"they can get comfortable if theyre in a new school as well"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:460
 #: ee7d10802c504040ac90ad9cd4462bfb
 msgid "— Время выполнения: 6.398 сек. —"
-msgstr ""
+msgstr "— Runtime: 6.398 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:472
 #: c7eec15fea6f417f85d02fd7768ec33f
 msgid "Пример 3 (Анализ видефайла (``RU``) без учета ручной транскрипции)"
-msgstr ""
+msgstr "Example 3 (Analyzing a video file (``RU``) without manual transcription)"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
 #: 95f5e1337f454fa5b9de8c21b0443234
@@ -397,6 +495,21 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"# Video file path\n"
+"path = "
+"'/Users/dl/GitHub/OCEANAI/docs/source/user_guide/notebooks/center_42.mov'"
+"\n"
+"\n"
+"hc_features, nn_features = _b5.get_text_features(\n"
+"    path = path, # Video file path\n"
+"    asr = False, # Using a model for ASR\n"
+"    lang = 'ru', # Language selection for models trained on First Impressions V2"
+" 'en' and models trained on for MuPTA 'ru'\n"
+"    show_text = True, # Text display\n"
+"    out = True,       # Display\n"
+"    runtime = True,   # Runtime calculation\n"
+"    run = True        # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:504
 #: a72724a2381b40a182c4e314df042060
@@ -404,6 +517,8 @@ msgid ""
 "\\ **[2023-12-03 00:30:25] Извлечение признаков (экспертных и "
 "нейросетевых) из текста …**"
 msgstr ""
+"\\ **[2023-12-03 00:30:25] Extraction of features (hand-crafted and "
+"deep) from a text …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:515
 #: ab4cec5b4faa4a52b1d96df7478062da
@@ -420,16 +535,28 @@ msgid ""
 "защитные очки он также в шортах и в майке в близи не видно головы "
 "человека он одет в темные шорты и в серую фортболку"
 msgstr ""
+"\\ **[2023-12-03 00:30:43] Statistics of extracted features from the text: "
+"**\\     Dimension of the "
+"matrix of hand-crafted features: 365 ✕ 64    Dimension of the "
+"matrix of deep features: 414 ✕ 768 Text:"
+"        на картинке изображены скорее всего друзья которые играют в груз "
+"мечом это скорее всего происходит где-то в америке возможно в калифорнии "
+"на пляже девушка в топе и в шортах пытается словить мяч также двое парней"
+" смотрят одинаково думает как перехватить следующую подачу меча на заднем"
+" фоне видны высокие пальмы стоят дома неба голубое песок чистой чётко "
+"написки отображаются силой этой людей у парня в дали одеты солнце "
+"защитные очки он также в шортах и в майке в близи не видно головы "
+"человека он одет в темные шорты и в серую фортболку"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:526
 #: 803dd018d5904d97b31b2bf50fb7ac32
 msgid "— Время выполнения: 18.045 сек. —"
-msgstr ""
+msgstr "— Runtime: 18.045 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:538
 #: cec1a1c00d424b34b640e7d4e6a60ffe
 msgid "Пример 4 (Анализ текста - ``RU``)"
-msgstr ""
+msgstr "Example 4 (Text Analysis - ``RU'')"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
 #: 20011bb5c8224dc7b03ad12cac918943
@@ -465,6 +592,32 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"# Text\n"
+"path = '''\n"
+"На картинке изображены скорее всего друзья, которые играют в игру с "
+"мячом.\n"
+"Это скорее всего происходит где-то в Америке, возможно, в Калифорнии на "
+"пляже.\n"
+"Девушка в топе и в шортах пытается словить мяч. Также двое парней "
+"смотрят, один активно думает,\n"
+"как перехватить следующую подачу мяча. На заднем фоне видны высокие "
+"пальмы. Стоят дома.\n"
+"Небо голубое. Песок чистый. Чётко на песке отображаются силуэты людей. У "
+"парня вдали одеты солнцезащитные очки,\n"
+"он также в шортах и в майке. Вблизи не видно головы человека. Он одет в "
+"тёмные шорты и в серую футболку.\n"
+"'''\n"
+"\n"
+"hc_features, nn_features = _b5.get_text_features(\n"
+"    path = path, # Text\n"
+"    asr = False, # Using a model for ASR\n"
+"    lang = 'ru', # Language selection for models trained on First Impressions V2"
+" 'en' and models trained on for MuPTA 'ru'\n"
+"    show_text = True, # Text display\n"
+"    out = True,       # Display\n"
+"    runtime = True,   # Runtime calculation\n"
+"    run = True        # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:577
 #: 62fbbfe9fd674acca7304b0d98a07421
@@ -472,6 +625,8 @@ msgid ""
 "\\ **[2023-12-03 00:30:43] Извлечение признаков (экспертных и "
 "нейросетевых) из текста …**"
 msgstr ""
+"\\ **[2023-12-03 00:30:43] Extraction of features (hand-crafted and "
+"deep) from a text …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:588
 #: f7ab16f251384b9e9afd621d5e43b482
@@ -488,16 +643,28 @@ msgid ""
 "солнцезащитные очки он также в шортах и в майке вблизи не видно головы "
 "человека он одет в тёмные шорты и в серую футболку"
 msgstr ""
+"\\ **[2023-12-03 00:30:52] Statistics of extracted features from the text: "
+"**\\     Dimension of the "
+"matrix of hand-crafted features: 365 ✕ 64    Dimension of the "
+"matrix of deep features: 414 ✕ 768 Text:"
+"        на картинке изображены скорее всего друзья которые играют в игру "
+"с мячом это скорее всего происходит где-то в америке возможно в "
+"калифорнии на пляже девушка в топе и в шортах пытается словить мяч также "
+"двое парней смотрят один активно думает как перехватить следующую подачу "
+"мяча на заднем фоне видны высокие пальмы стоят дома небо голубое песок "
+"чистый чётко на песке отображаются силуэты людей у парня вдали одеты "
+"солнцезащитные очки он также в шортах и в майке вблизи не видно головы "
+"человека он одет в тёмные шорты и в серую футболку"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:599
 #: eb0435d44aa742a8b4db4968b9e66d61
 msgid "— Время выполнения: 9.227 сек. —"
-msgstr ""
+msgstr "— Runtime: 9.227 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:611
 #: 3a61bd2510be4bb8a6f2030280988354
 msgid "Пример 5 (Анализ текста - ``EN``)"
-msgstr ""
+msgstr "Example 5 (Text Analysis - ``EN'')"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
 #: 1466c734924c4cf19fe64198f6c26d5f
@@ -524,6 +691,23 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"# Text\n"
+"path = '''\n"
+"today says they to for that but right now i am just watching super girl a"
+" new images be catching up\n"
+"and some shows a good say you guys\n"
+"'''\n"
+"\n"
+"hc_features, nn_features = _b5.get_text_features(\n"
+"    path = path, # Text\n"
+"    asr = False, # Using a model for ASR\n"
+"    lang = 'en', # Language selection for models trained on First Impressions V2"
+" 'en' and models trained on for MuPTA 'ru'\n"
+"    show_text = True, # Text display\n"
+"    out = True,       # Display\n"
+"    runtime = True,   # Runtime calculation\n"
+"    run = True        # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:646
 #: 4e837aa2f82541b59847cc810c93df24
@@ -531,6 +715,8 @@ msgid ""
 "\\ **[2023-12-03 00:30:52] Извлечение признаков (экспертных и "
 "нейросетевых) из текста …**"
 msgstr ""
+"\\ **[2023-12-03 00:30:52] Extraction of features (hand-crafted and "
+"deep) from a text …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:657
 #: 9af0bca15373422eb77194d667925c32
@@ -541,16 +727,22 @@ msgid ""
 "        today says they to for that but right now i am just watching "
 "super girl a new images be catching up and some shows a good say you guys"
 msgstr ""
+"\\ **[2023-12-03 00:30:53] Statistics of extracted features from the text: "
+"**\\     Dimension of the "
+"matrix of hand-crafted features: 89 ✕ 64    Dimension of the "
+"matrix of deep features: 104 ✕ 768 Text:"
+"        today says they to for that but right now i am just watching "
+"super girl a new images be catching up and some shows a good say you guys"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:667
 #: c8545d93aa324afdb2953c78c325b6be
 msgid "— Время выполнения: 0.247 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.247 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:679
 #: ae7863f0916b438ab072d29749ef2e1a
 msgid "Пример 6 (Анализ текстового файла - ``EN``)"
-msgstr ""
+msgstr "Example 5 (Analysing a text file - ``EN'')"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:-1
 #: db90eb6da4ed4b6389afe41bfd73aa2b
@@ -575,6 +767,21 @@ msgid ""
 "    run = True # Блокировка выполнения\n"
 ")"
 msgstr ""
+"# Text\n"
+"path = "
+"'/Users/dl/GitHub/OCEANAI/docs/source/user_guide/notebooks/glgfB3vFewc.004.txt'"
+"\n"
+"\n"
+"hc_features, nn_features = _b5.get_text_features(\n"
+"    path = path, # Text\n"
+"    asr = False, # Using a model for ASR\n"
+"    lang = 'en', # Language selection for models trained on First Impressions V2"
+" 'en' and models trained on for MuPTA 'ru'\n"
+"    show_text = True, # Text display\n"
+"    out = True,       # Display\n"
+"    runtime = True,   # Runtime calculation\n"
+"    run = True        # Run blocking\n"
+")"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:711
 #: b778b36a73af412480973ab4c5ce4b70
@@ -582,6 +789,8 @@ msgid ""
 "\\ **[2023-12-03 00:30:53] Извлечение признаков (экспертных и "
 "нейросетевых) из текста …**"
 msgstr ""
+"\\ **[2023-12-03 00:30:53] Extraction of features (hand-crafted and "
+"deep) from a text …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:722
 #: a1e1267956004854be5b123706dcdacd
@@ -591,9 +800,14 @@ msgid ""
 "Размерность матрицы с нейросетевыми признаками: 104 ✕ 768     Текст:"
 "        during those times i feel sad i feel confused and"
 msgstr ""
+"\\ **[2023-12-03 00:30:53] Statistics of extracted features from the text: "
+"**\\     Dimension of the "
+"matrix of hand-crafted features: 89 ✕ 64    Dimension of the "
+"matrix of deep features: 104 ✕ 768 Text:"
+"        during those times i feel sad i feel confused and"
 
 #: ../../source/user_guide/notebooks/Text-get_text_features.ipynb:732
 #: c6a7f0317ee24cbeb26d9d5914a23924
 msgid "— Время выполнения: 0.204 сек. —"
-msgstr ""
+msgstr "— Runtime: 0.204 sec. —"
 

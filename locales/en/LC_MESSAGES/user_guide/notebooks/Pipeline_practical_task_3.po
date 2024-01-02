@@ -603,7 +603,7 @@ msgstr ""
 msgid ""
 "\\ **[2023-12-16 19:24:19] Точность по отдельным персональным качествам "
 "личности человека …**"
-msgstr ""
+msgstr "\\ **[2023-12-16 19:24:19] Trait-wise accuracy …**"
 
 #: ../../source/user_guide/notebooks/Pipeline_practical_task_3.ipynb:460
 #: 38dc02b93b43410d9e512f2af812f125
