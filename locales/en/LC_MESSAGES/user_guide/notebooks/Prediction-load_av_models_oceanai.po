@@ -179,7 +179,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:-1
 #: fbf2f0d3a7ea4ad89dd630ffa42a752a
-#, fuzzy
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -327,7 +326,6 @@ msgstr "``Agreeableness``"
 
 #: ../../source/user_guide/notebooks/Prediction-load_av_models_oceanai.ipynb:269
 #: 0e8dffe0a8c4407e821c371f8af7bd8c
-#, fuzzy
 msgid "``non_neuroticism`` - Эмоциональная стабильность"
 msgstr "Non-Neuroticism"
 

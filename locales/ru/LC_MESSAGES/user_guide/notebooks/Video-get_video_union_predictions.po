@@ -1549,21 +1549,4 @@ msgstr ""
 msgid "— Время выполнения: 4762.254 сек. —"
 msgstr ""
 
-#~ msgid "|a97dec82e5e34382bbc8994214e0c356|"
-#~ msgstr ""
-
-#~ msgid "a97dec82e5e34382bbc8994214e0c356"
-#~ msgstr ""
-
-#~ msgid "|52ac24923ea042bb9d69a3283d94adbf|"
-#~ msgstr ""
-
-#~ msgid "52ac24923ea042bb9d69a3283d94adbf"
-#~ msgstr ""
-
-#~ msgid "|47fe455281c34c7981fb49749b0b127a|"
-#~ msgstr ""
-
-#~ msgid "47fe455281c34c7981fb49749b0b127a"
-#~ msgstr ""
 

@@ -1092,7 +1092,7 @@ msgstr ""
 msgid ""
 "\\ **[2023-12-15 07:01:52] Формирование токенизатора и нейросетевой "
 "модели машинного перевода …**"
-msgstr ""
+msgstr "\\ **[2023-12-15 07:01:52] Building tokenizer and translation model …**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1090
 #: 30c1bc815b9a4fc5b08ffa07287987c1
@@ -1267,6 +1267,8 @@ msgid ""
 "\\ **[2023-12-15 07:01:59] Загрузка весов нейросетевой модели для "
 "получения оценок по экспертным признакам (текстовая модальность) …**"
 msgstr ""
+"\\ **[2023-12-15 07:01:59] Downloading the weights of a neural network "
+"model to obtain scores by hand-crafted features (text modality) ...**"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1295
 #: b6d28e2dcafd47f8987c1512f2f35d06
@@ -2398,19 +2400,3 @@ msgstr ""
 #: 0179f6c583704dbdbe73f45ef90ae477
 msgid "True"
 msgstr ""
-
-#~ msgid "|b977763bb1cd450d84d6544d3ff9737f|"
-#~ msgstr ""
-
-#~ msgid "b977763bb1cd450d84d6544d3ff9737f"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "``_b5.text_model_hc_`` - Нейросетевая модель "
-#~ "**tf.keras.Model** для признаков / оценок "
-#~ "на базе экспертных признаков"
-#~ msgstr ""
-#~ "``_b5.text_model_hc_`` - Neural network model"
-#~ " **tf.keras.Model** for obtaining features "
-#~ "/ scores by hand-crafted features"
-
