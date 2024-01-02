@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2023-12-17 14:43+0300\n"
+"POT-Creation-Date: 2024-01-01 20:33+0300\n"
 "PO-Revision-Date: 2022-12-11 14:42+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -18,52 +18,52 @@ msgstr ""
 "Generated-By: Babel 2.11.0\n"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:9
-#: 1f14995dba4143408e359095cf7b453f
+#: 6bbe24907de54aad910d4240df534089
 msgid "Получение прогнозов по тексту"
 msgstr "Getting text scores"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:11
-#: 6f161ed2b0454544b4f70bfe1bf3e5ef
-msgid "|d4a6c3be090d4f9bbda1c3dbc7d05438|"
+#: 5522a2656ae54e259cb2042077769fbd
+msgid "|e6c4e3f7e6f84faf921c70b4fb5fe04b|"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:17
-#: 1fa615bf926844af8f9a8f28b331410e 96fd85ac0bcb4bcea6d3e35e8135814c
-msgid "d4a6c3be090d4f9bbda1c3dbc7d05438"
+#: 118066586fa44fd78ce9902916286861 4d536caf328c46ee9f4dbdd42c3ec2fb
+msgid "e6c4e3f7e6f84faf921c70b4fb5fe04b"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:13
-#: dfccb2f4962c40acb8234ccc2c69ea05
+#: 3cb34ea637b54097ae1348af0d0b5ac3
 msgid "<hr>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:29
-#: 0f5b74d7fd024bc6b92cb87e96e83c28
+#: a58c3468437f4f6196d0dabdaf943f90
 msgid "Импорт необходимых инструментов"
 msgstr "Import required packages"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: 239aa45efa304f5bbff1c2c0d366ba04
+#: 754b78ef3ad344b7ba548a7172897975
 msgid "[2]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: 7fc566720a82485285615e0e8947719f
+#: af100d66de754bcb8baed8bd461bada3
 msgid "from oceanai.modules.lab.build import Run"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:51
-#: b916727bb1a144dd8b82b48fc38dbffa
+#: 43145239f3fb436289dfe39719834fe0
 msgid "Сборка"
 msgstr "Build"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: ce66085399d940a08f4471baaefab4d9
+#: 74ca52220e5e4bf391b7948456a0dbd1
 msgid "[3]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: b4fdc85345eb4de6a4ed229e37166f71
+#: d1ec9143494748c0b46de74b6415cb1b
 msgid ""
 "_b5 = Run(\n"
 "    lang = 'ru', # Язык\n"
@@ -97,7 +97,7 @@ msgstr ""
 ")"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:81
-#: 06e723d01cb04023b137ecb37e30d194
+#: 9d36e5811c93467b993f11fffc709837
 msgid ""
 "\\ **[2023-12-14 18:07:43] OCEANAI - персональные качества личности "
 "человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
@@ -115,32 +115,32 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:83
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:985
-#: 37bf3ab721fa46a49343ba9044e1359f
+#: 8ff7152bc8104db4aa771fe108d00b01 f1f7b19106f64df9a26594b15773ee35
 msgid "</p>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:97
-#: 64d3f16243b94ea39cb285001acb99f0
+#: a157cafd71604623a275919c4c837877
 msgid "Получение и отображение версий установленных библиотек"
 msgstr "Getting and displaying versions of installed libraries"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:99
-#: b32f07fbc88549308dd6c2c102f894d7
+#: 65156119a75d4f3281cd6bc0b188a2dc
 msgid "``_b5.df_pkgs_`` - DataFrame c версиями установленных библиотек"
 msgstr "``_b5.df_pkgs_`` - DataFrame with versions of installed libraries"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: 14a7b873be464fd7973af53de602af5a
+#: 46ef215cdcd740c68ecc7f95454b7c15
 msgid "[4]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: c1b9af9dfdeb446ab03062337543b8c4
+#: 843cbcf338e549c0867642173e344026
 msgid "_b5.libs_vers(runtime = True, run = True)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:123
-#: 44f11f019adf4cbe928c28fb762e98c4
+#: 24ba68a79df2441eb664d1da42aee5b1
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -271,7 +271,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:259
-#: 5d7bf3730ea64b8f9efc1c3979965fbd
+#: d6638b676f624a529b0b00f66455d12f
 msgid ""
 "<pre>\n"
 "          Package    Version\n"
@@ -299,7 +299,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:285
-#: fdea9a66389c4f4aa281210a33f68ce7
+#: eb161083e51045c081f132dc1edd93cb
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "          Package    Version\n"
@@ -327,7 +327,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:312
-#: 4d6fac77974047a7b6c8f9e49487a3ef
+#: 75ce72ac9de148f4b61b429c507a4e39
 msgid ""
 "          Package    Version\n"
 "1      TensorFlow     2.15.0\n"
@@ -353,22 +353,22 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:342
-#: cee75fc355234124aeb9d8885779bf2e
+#: 68c63cadfe2a4fd4bbea99752508c694
 msgid "— Время выполнения: 0.006 сек. —"
 msgstr "— Runtime: 0.006 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:354
-#: 0cc9cceade80466f8165f70d1b53b680
+#: c9d3f547ca7144f6847a33138d9d07ea
 msgid "Загрузка словаря с экспертными признаками"
 msgstr "Loading a dictionary with hand-crafted features"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: 7330cc1cf0754e07b77529f8a09c6455
+#: b25bdbe2810846e09853347214139330
 msgid "[5]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: bdbc8c24ffaf4585bad33d50fa10a17d
+#: 5a80ecbfac0d41e5a008258e43400d24
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -383,7 +383,8 @@ msgid ""
 msgstr ""
 "# Core setup\n"
 "_b5.path_to_save_ = './models' # Directory to save the models\n"
-"_b5.chunk_size_ = 2000000      # File download size from network in one step\n"
+"_b5.chunk_size_ = 2000000      # File download size from network in one "
+"step\n"
 "\n"
 "res_load_text_features = _b5.load_text_features(\n"
 "    force_reload = True,       # Forced download file\n"
@@ -393,36 +394,36 @@ msgstr ""
 ")"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:384
-#: 2c1f2dac7b7943208be6a9c277fae150
+#: 50362acc33944bbea567d7f3926e3291
 msgid "\\ **[2023-12-14 18:07:43] Загрузка словаря с экспертными признаками …**"
-msgstr "\\ **[2023-12-14 18:07:43] Loading a dictionary"
-" with hand-crafted features …**"
+msgstr ""
+"\\ **[2023-12-14 18:07:43] Loading a dictionary with hand-crafted "
+"features …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:395
-#: 711f4a6a5bf44063a4bb74bd1e4e47fb
+#: 3a26c8583b534c07b918c98df580a8af
 msgid "\\ **[2023-12-14 18:07:43] Загрузка файла “LIWC2007.txt” 100.0% …**"
 msgstr "\\ **[2023-12-03 00:30:00] Loading the “LIWC2007.txt” file 100.0% …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:405
-#: e466750d41cc4defab30c7af2dbca7c9
+#: 3ecccfbee28347a8933132eec6aac455
 msgid "— Время выполнения: 0.232 сек. —"
 msgstr "— Runtime: 0.232 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:417
-#: 74f093f11dad4e128b83d614de64d9bf
+#: 92dbb753565a454ca75a9c888d959cb1
 msgid ""
 "Формирование токенизатора и нейросетевой модели машинного перевода (``RU "
 "-> EN``)"
-msgstr ""
-"Building tokenizer and translation model (``RU -> EN``)"
+msgstr "Building tokenizer and translation model (``RU -> EN``)"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: ad6d7dd8e0fd405298c19464bda55996
+#: 48ca0a7a35f14cd5802d9453d3c06b98
 msgid "[6]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: b6592e007d95453bb7d414bf8846a643
+#: 884f9a2888b04701b852c55b6c9b863c
 msgid ""
 "res_setup_translation_model = _b5.setup_translation_model(\n"
 "    out = True, # Отображение\n"
@@ -437,33 +438,31 @@ msgstr ""
 ")"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:442
-#: 0bbd5173e51249de9e255dd090241668
+#: bb5ad47d642543c99104baa130a9999b
 msgid ""
 "\\ **[2023-12-14 18:07:43] Формирование токенизатора и нейросетевой "
 "модели машинного перевода …**"
-msgstr "\\ **[2023-12-14 18:07:43] Building tokenizer and translation"
-" model …**"
+msgstr "\\ **[2023-12-14 18:07:43] Building tokenizer and translation model …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:452
-#: 2df47661a74543bfb185d62de2dfa72e
+#: a12cb414ccb14326a609c39c11f94466
 msgid "— Время выполнения: 1.71 сек. —"
 msgstr "— Runtime: 1.71 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:464
-#: 93c11c930a344c84840e9643c3e566f7
+#: 9bedddb4a1054755862d84c6a216af77
 msgid ""
 "Формирование токенизатора и нейросетевой модели BERT (``для кодирования "
 "слов``)"
-msgstr ""
-"Building tokenizer and BERT model (``for word encoding``)"
+msgstr "Building tokenizer and BERT model (``for word encoding``)"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: 7820f978aacd428190c7496e18fad3a3
+#: cd92aadccfac4cf5b1f500aee2cd6e8b
 msgid "[7]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: 57ebeaec6742493fabe4d85a4e85c2e0
+#: a23fffbb6c604615a76a82628317280d
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -478,7 +477,8 @@ msgid ""
 msgstr ""
 "# Core setup\n"
 "_b5.path_to_save_ = './models' # Directory to save the models\n"
-"_b5.chunk_size_ = 2000000      # File download size from network in one step\n"
+"_b5.chunk_size_ = 2000000      # File download size from network in one "
+"step\n"
 "\n"
 "res_setup_translation_model = _b5.setup_bert_encoder(\n"
 "    force_reload = True,       # Forced download file\n"
@@ -489,52 +489,53 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:494
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:516
-#: f64a8d0fdd09414a90dd3f58b4d49fd5
+#: 71014e625636485ba88d098bd688ee38 b30065ddb91644099fb0cec913e7c6b4
 msgid ""
 "\\ **[2023-12-14 18:07:45] Формирование токенизатора и нейросетевой "
 "модели BERT …**"
-msgstr ""
-"\\ **[2023-12-14 18:07:45] Building tokenizer and BERT model …**"
+msgstr "\\ **[2023-12-14 18:07:45] Building tokenizer and BERT model …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:505
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:527
-#: 1c2c7f5bf11b4079a767411368d4506a
+#: 237b8588ee2c4093b7878925e8871fea e4bd0a906e0648bba8257e59e3325c32
 msgid ""
 "\\ **[2023-12-14 18:07:47] Загрузка файла “bert-base-multilingual-"
 "cased.zip”**"
-msgstr "\\ **[2023-12-14 18:07:47] Loading the “bert-base-multilingual-"
-"cased.zip” file**"
+msgstr ""
+"\\ **[2023-12-14 18:07:47] Loading the “bert-base-multilingual-cased.zip”"
+" file**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:538
-#: 6ab0dde4a2494e1e95795e9a639c2e2c
+#: d0f635a9544440d989e67f4b12c4a975
 msgid ""
 "\\ **[2023-12-14 18:07:47] Разархивирование архива “bert-base-"
 "multilingual-cased.zip” …**"
-msgstr "\\ **[2023-12-14 18:07:47] Unzipping an archive “bert-base-"
-"multilingual-cased.zip” …**"
+msgstr ""
+"\\ **[2023-12-14 18:07:47] Unzipping an archive “bert-base-multilingual-"
+"cased.zip” …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:548
-#: 91725acf18e04a44a7621fc0910f3360
+#: b52b7eac17f64874b8393f5433adfd06
 msgid "— Время выполнения: 4.188 сек. —"
 msgstr "— Runtime: 4.188 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:560
-#: 5c276037da294c7eb3ee6655a5a58fff
+#: 6b137ca7c8f2439eaabf7e38b6b62515
 msgid "``FI V2``"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:563
-#: 3cb26d303e39416aab983ada1cf6c3ed
+#: 1cea7bc10f0f4933b60344c3ff81617b
 msgid ""
 "Формирование нейросетевой архитектуры модели для получения оценок по "
 "экспертным признакам"
 msgstr ""
-"Formation of neural network architectures of "
-"models for obtaining scores by hand-crafted features"
+"Formation of neural network architectures of models for obtaining scores "
+"by hand-crafted features"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:565
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:616
-#: 43da69bac5494219af244ee355edb929
+#: 7bfe794103564c1dbdbac0227bdb6b96 c481fd3abc5246f1a3004ff8897cde27
 msgid ""
 "``_b5.text_model_hc_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения оценок по экспертным признакам"
@@ -543,12 +544,12 @@ msgstr ""
 "obtaining scores by hand-crafted features"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: d5f28a60ca27456ba1e09a6a1bf36ed3
+#: d4f7389c4da142bdb056ba7caa1ab838
 msgid "[8]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: 40d0492b1cf245cfba78f9450224d623
+#: dac42fa0f6cc4d6c9b56916808b283d2
 msgid ""
 "res_load_text_model_hc_fi = _b5.load_text_model_hc(\n"
 "    corpus = \"fi\", # Корпус для тестирования нейросетевой модели\n"
@@ -560,8 +561,8 @@ msgid ""
 ")"
 msgstr ""
 "res_load_text_model_hc_mupta = _b5.load_text_model_hc(\n"
-"    corpus = \"fi\", # Corpus selection for models trained on First Impressions V2"
-" 'fi' and models trained on for MuPTA 'mupta'\n"
+"    corpus = \"fi\", # Corpus selection for models trained on First "
+"Impressions V2 'fi' and models trained on for MuPTA 'mupta'\n"
 "    show_summary = False, # Displaying the formed neural network "
 "architecture of the model\n"
 "    out = True, # Display\n"
@@ -570,35 +571,36 @@ msgstr ""
 ")"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:592
-#: 77d4b76b5cb248049a5eab62704f0d03
+#: 342ff0eafbbb4d3ebb2d299bfe374b46
 msgid ""
 "\\ **[2023-12-14 18:07:49] Формирование нейросетевой архитектуры модели "
 "для получения оценок по экспертным признакам (текстовая модальность) …**"
 msgstr ""
 "\\ **[2023-12-14 18:07:49] Formation of the neural network architecture "
-"of the model for obtaining scores by hand-crafted features (text modality) "
-"…**"
+"of the model for obtaining scores by hand-crafted features (text "
+"modality) …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:602
-#: 937f5965fafa430e8024db51ce8fda55
+#: f7c40013c844455fbdad5a534d7ac20f
 msgid "— Время выполнения: 0.647 сек. —"
 msgstr "— Runtime: 0.647 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:614
-#: bb9c20b7462144e684d03cfe0fef7345
+#: ea8316d018a64c25bb8a734653b79c0a
 msgid ""
 "Загрузка весов нейросетевой модели для получения оценок по экспертным "
 "признакам"
-msgstr "Downloading the weights of the neural network model"
-" for obtaining scores by hand-crafted features"
+msgstr ""
+"Downloading the weights of the neural network model for obtaining scores "
+"by hand-crafted features"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: 34ae341577eb4444a62f19274980fac3
+#: 7e34504f0b5849d79fbdd40f7c72ff59
 msgid "[9]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: f3f7eeffaa00483c92bf9f4e3576321d
+#: 9419f8dd63ab4d0886293abf7f03110a
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -617,7 +619,8 @@ msgid ""
 msgstr ""
 "# Core settings\n"
 "_b5.path_to_save_ = './models' # Directory to save the file\n"
-"_b5.chunk_size_ = 2000000      # File download size from network in 1 step\n"
+"_b5.chunk_size_ = 2000000      # File download size from network in 1 "
+"step\n"
 "\n"
 "url = _b5.weights_for_big5_['text']['fi']['hc']['sberdisk']\n"
 "\n"
@@ -632,15 +635,16 @@ msgstr ""
 ")"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:649
-#: 95753f5f409249eb98ab6a36dd39d956
+#: 24f7cc1460544af9ac2ff8d3777b5249
 msgid ""
 "\\ **[2023-12-14 18:07:50] Загрузка весов нейросетевой модели для "
 "получения оценок по экспертным признакам (текстовая модальность) …**"
-msgstr "\\ **[2023-12-14 18:07:50] Downloading the weights of a neural"
-" network model to obtain hand-crafted features (text modality) ...**"
+msgstr ""
+"\\ **[2023-12-14 18:07:50] Downloading the weights of a neural network "
+"model to obtain hand-crafted features (text modality) ...**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:660
-#: 6a79ff52d7684fbfb3fd47f8e4c9748d
+#: 8d35d039a46c433e9a3f9f12008e47ce
 msgid ""
 "\\ **[2023-12-14 18:07:50] Загрузка файла "
 "“weights_2023-07-15_10-52-15.h5” 100.0% …**"
@@ -649,22 +653,22 @@ msgstr ""
 " 100.0% …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:670
-#: 541594a6f6034ac9b785fe517ef2a95c
+#: 1be53594878a4a4ca7b737c673d60876
 msgid "— Время выполнения: 0.289 сек. —"
 msgstr "— Runtime: 0.289 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:682
-#: 02025e8c56db41c4a62f0a6bbf3dceca
+#: 3fbbf2a588594310b3b38f92b7a4d3ca
 msgid ""
 "Формирование нейросетевой архитектуры модели для получения оценок по "
 "нейросетевым признакам"
 msgstr ""
-"Formation of the neural network architecture of the model to obtain"
-" scores by deep features"
+"Formation of the neural network architecture of the model to obtain "
+"scores by deep features"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:684
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:735
-#: 280a5daf7ee64771b3ce5a3ac130434f
+#: 5540ae5a3b144acbb8fa8ce7b1bbbaf4 5ba30bec0edc4dbdbe8f1812fb2682bd
 msgid ""
 "``_b5.text_model_nn_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения оценок по нейросетевым признакам"
@@ -673,12 +677,12 @@ msgstr ""
 "obtaining scores by deep features"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: ea859cffbd784a689d6bc8d462ccf711
+#: 0009a81e5c53447d9b742ba1a6a985c7
 msgid "[10]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: 94b6926e2d404f5d8888f260a9128299
+#: 660d644efe4a4576ab63812b70eace1e
 msgid ""
 "res_load_text_model_nn_fi = _b5.load_text_model_nn(\n"
 "    corpus = \"fi\", # Корпус для тестирования нейросетевой модели\n"
@@ -690,8 +694,8 @@ msgid ""
 ")"
 msgstr ""
 "res_load_text_model_nn_fi = _b5.load_text_model_nn(\n"
-"    corpus = \"fi\", # Corpus selection for models trained on First Impressions V2"
-" 'fi' and models trained on for MuPTA 'mupta'\n"
+"    corpus = \"fi\", # Corpus selection for models trained on First "
+"Impressions V2 'fi' and models trained on for MuPTA 'mupta'\n"
 "    show_summary = False, # Displaying the formed neural network "
 "architecture of the model\n"
 "    out = True, # Display\n"
@@ -700,7 +704,7 @@ msgstr ""
 ")"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:711
-#: aea61e0c4cbb4e3ab897eb0008c0f9b5
+#: ca6f4e3c3f444545bb6c8478cd4b270b
 msgid ""
 "\\ **[2023-12-14 18:07:50] Формирование нейросетевой архитектуры для "
 "получения оценок по нейросетевым признакам (текстовая модальность) …**"
@@ -709,25 +713,26 @@ msgstr ""
 " obtaining scores by deep features (text modality) …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:721
-#: 5234c7a3f73040618a05c0058ac81549
+#: 7cbda7798175423ab6ccb8f847fb86ba
 msgid "— Время выполнения: 0.279 сек. —"
 msgstr "— Runtime: 0.279 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:733
-#: 18c8f07e98ef4977b3f0b154e9a98ead
+#: 0fee0b5029814b7b928ace324af7dcbc
 msgid ""
 "Загрузка весов нейросетевой модели для получения оценок по нейросетевым "
 "признакам"
-msgstr "Downloading the weights of the neural network model for"
-" obtaining scores by deep features"
+msgstr ""
+"Downloading the weights of the neural network model for obtaining scores "
+"by deep features"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: 27469063f63847be9f6a8d6b68e27c6c
+#: d0f2aeed264f4ef989c818d8c6447342
 msgid "[11]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: 7799c3d37d564802b018a9cb5ed70fb4
+#: c1c9560e29bf4ee78041e51a8192f753
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -746,7 +751,8 @@ msgid ""
 msgstr ""
 "# Core settings\n"
 "_b5.path_to_save_ = './models' # Directory to save the file\n"
-"_b5.chunk_size_ = 2000000      # File download size from network in 1 step\n"
+"_b5.chunk_size_ = 2000000      # File download size from network in 1 "
+"step\n"
 "\n"
 "url = _b5.weights_for_big5_['text']['fi']['nn']['sberdisk']\n"
 "\n"
@@ -761,15 +767,16 @@ msgstr ""
 ")"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:768
-#: 0ce7701a153441f2a014b0026a19a711
+#: ea47292c6468474bbe826091a9447eef
 msgid ""
 "\\ **[2023-12-14 18:07:50] Загрузка весов нейросетевой модели для "
 "получения оценок по нейросетевым признакам (текстовая модальность) …**"
-msgstr "\\ **[2023-12-14 18:07:50] Downloading the weights of a neural"
-" network model to obtain deep features (text modality) ...**"
+msgstr ""
+"\\ **[2023-12-14 18:07:50] Downloading the weights of a neural network "
+"model to obtain deep features (text modality) ...**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:779
-#: 495ec0192870452da07884e420992e47
+#: b9fa12852ff74142bdfd7fd991522381
 msgid ""
 "\\ **[2023-12-14 18:07:51] Загрузка файла "
 "“weights_2023-07-03_15-01-08.h5” 100.0% …**"
@@ -778,22 +785,22 @@ msgstr ""
 " 100.0% …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:789
-#: 77d0e673bc3741f8bafb6f64f97c7f8b
+#: 234bc7971ab94047be4c9eb519086e60
 msgid "— Время выполнения: 0.337 сек. —"
 msgstr "— Runtime: 0.337 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:801
-#: 6d78e734b2cf4df88f01365cb7552fe3
+#: 2f5a702e9f9c4f85bc30fa4170f19c66
 msgid ""
 "Формирование нейросетевой архитектуры модели для получения оценок "
 "персональных качеств"
 msgstr ""
-"Formation of the neural network architecture of the model "
-"to obtain personality traits scores"
+"Formation of the neural network architecture of the model to obtain "
+"personality traits scores"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:803
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:853
-#: 40fbac7f7a9a4f4a9f57573d853cd1a7
+#: 3ddd6d561de843319bc3ec4e7a96c38d 4c4caefc19954be5a3ca9fb372ee2c5c
 msgid ""
 "``_b5.text_model_b5_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения оценок персональных качеств"
@@ -802,12 +809,12 @@ msgstr ""
 "obtaining the personality traits scores"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: 82dbb1b56a494131adf9e938a78a96c1
+#: 7a87120bbcf947299259b47da689fd5a
 msgid "[12]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: 3db29ad698fc410f939fa21f2adbd3f5
+#: d916fe8b5f9e40298fd8296d35fe435c
 msgid ""
 "res_load_text_model_b5 = _b5.load_text_model_b5(\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
@@ -826,35 +833,35 @@ msgstr ""
 ")"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:829
-#: a328cf3b76f24a9f8a021aa0bc238b6f
+#: 5d6322b0fbd5421c969eb000ce31d996
 msgid ""
 "\\ **[2023-12-14 18:07:51] Формирование нейросетевой архитектуры модели "
 "для получения оценок персональных качеств (текстовая модальность) …**"
 msgstr ""
 "\\ **[2023-12-14 18:07:51] Formation of neural network architectures of "
-"models for obtaining the personality traits scores (text "
-"modality) …**"
+"models for obtaining the personality traits scores (text modality) …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:839
-#: 401ebbccaab74ee48a9425e63609fad6
+#: 4fd382c60800490c846bab854d1dcd03
 msgid "— Время выполнения: 0.015 сек. —"
 msgstr "— Runtime: 0.015 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:851
-#: b130276cb5e64e5bbfa8eff324dab07c
+#: cedf1d2643dd4c31b4866b5d86056d79
 msgid ""
 "Загрузка весов нейросетевой модели для получения оценок персональных "
 "качеств"
-msgstr "Downloading weights of neural network models"
-" for obtaining the personality traits scores"
+msgstr ""
+"Downloading weights of neural network models for obtaining the "
+"personality traits scores"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: a16890fb7192403a8790c7620cca13f3
+#: 4d0991ca48f64468aa1df0b1e53fda53
 msgid "[13]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: 563d47d8322b41a9888168df1b9f45c2
+#: 18278b98f6c84f339d0adab1b7f98fe7
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -887,48 +894,46 @@ msgstr ""
 ")"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:886
-#: d29139ba98f74c84b2a80579c9aeec78
+#: 1d49b15de0374264a47ebabd807ca1ea
 msgid ""
 "\\ **[2023-12-14 18:07:51] Загрузка весов нейросетевой модели для "
 "получения оценок персональных качеств (текстовая модальность) …**"
 msgstr ""
 "\\ **[2023-12-14 18:07:51] Downloading the weights of neural network "
-"models to obtain the personality traits scores (text "
-"modality) …**"
+"models to obtain the personality traits scores (text modality) …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:897
-#: b0cf6e72581342c5892c4e1901a0e5a0
+#: 0d85090f2a3f48fd934028c218cbcb64
 msgid "\\ **[2023-12-14 18:07:51] Загрузка файла “ft_fi_2023-12-09_14-25-13.h5”**"
-msgstr ""
-"\\ **[2023-12-14 18:07:51] File download “ft_fi_2023-12-09_14-25-13.h5”**"
+msgstr "\\ **[2023-12-14 18:07:51] File download “ft_fi_2023-12-09_14-25-13.h5”**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:907
-#: 6c664872c9ae454da91697b6c37a018a
+#: 1a8afe23dff34d5c8ff72bd91a5210c4
 msgid "— Время выполнения: 0.163 сек. —"
 msgstr "— Runtime: 0.163 sec. —"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:919
-#: 2132ef73585842b29c36ce3a3e2e11af
+#: ed74ca8e24c74315a0545531edf872c8
 msgid "Получение прогнозов (текстовая модальность)"
 msgstr "Getting scores (text modality)"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:921
-#: 5ae310fd275c417b8e9f65036b144f03
+#: d02b28d289454996b55516ffa62f726b
 msgid "``_b5.df_files_`` - DataFrame с данными"
 msgstr "``_b5.df_files_`` - DataFrame with data"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:922
-#: 1935b3481d484671b421e824e6b19a6c
+#: 2391142e6b864b54954529493912d22a
 msgid "``_b5.df_accuracy_`` - DataFrame с результатами вычисления точности"
 msgstr "``_b5.df_accuracy_`` - DataFrame with accuracy"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: d50c594e344340a4a4eb9799bff262db
+#: 2b7e5f6ee5aa4210bf5fc49d1b20d6e9
 msgid "[14]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:-1
-#: ce310c13504343749ec2e2bf45f6c5bd
+#: ba13823d66724e2eb7191ec2615b08fc
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_dataset_ = 'E:/Databases/FirstImpressionsV2/test' # "
@@ -958,8 +963,8 @@ msgid ""
 ")"
 msgstr ""
 "# Core settings\n"
-"_b5.path_to_dataset_ = 'E:/Databases/FirstImpressionsV2/test' # "
-"Dataset directory\n"
+"_b5.path_to_dataset_ = 'E:/Databases/FirstImpressionsV2/test' # Dataset "
+"directory\n"
 "# Directories not included in the selection\n"
 "_b5.ignore_dirs_ = []\n"
 "# НKey names for DataFrame dataset\n"
@@ -976,8 +981,8 @@ msgstr ""
 "    depth = 1,         # Hierarchy depth for receiving video\n"
 "    recursive = False, # Recursive data search\n"
 "    asr = True,        # Using a model for ASR\n"
-"    lang = 'en', # Language selection for models trained on First Impressions V2"
-" 'en' and models trained on for MuPTA 'ru'\n"
+"    lang = 'en', # Language selection for models trained on First "
+"Impressions V2 'en' and models trained on for MuPTA 'ru'\n"
 "    accuracy = True,   # Accuracy calculation\n"
 "    url_accuracy = url_accuracy,\n"
 "    logs = True,       # If necessary, generate a LOG file\n"
@@ -987,7 +992,7 @@ msgstr ""
 ")"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:966
-#: 6374c09c59cb46519f158f9e25393b81
+#: 9174900d685b43f49811d82f704f0dfe
 msgid ""
 "\\ **[2023-12-14 19:00:14] Извлечение признаков (экспертных и "
 "нейросетевых) из текста …**"
@@ -996,26 +1001,26 @@ msgstr ""
 "from text …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:977
-#: be898398cabd4d2384b703c08a436d3f
+#: 6c5c44425a1b4544934f95f654a0147d
 msgid ""
 "\\ **[2023-12-14 19:00:15] Получение прогнозов и вычисление точности "
 "(текстовая модальность) …**"
 msgstr ""
-"\\ **[2023-12-14 19:00:15] Getting scores and accuracy calculation "
-"(text modality) …**"
+"\\ **[2023-12-14 19:00:15] Getting scores and accuracy calculation (text "
+"modality) …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:979
-#: 5cd4eea60ab24b7dbba10b936f2727ed
+#: 7e2c1563609241758036a28345b5b350
 msgid "<p>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:983
-#: 3edca6fd464f4bd6bafcddf62a8555c1
+#: ec7a0357e45b47bcb60e5c361728a808
 msgid "2000 из 2000 (100.0%) … test80_25_Q4wOgixh7E.004.mp4 …"
 msgstr "2000 from 2000 (100.0%) … test80_25_Q4wOgixh7E.004.mp4 …"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:1001
-#: 93a98b02e12349ef9b153cf85b6c419a
+#: f82cc6f6c64f433bb92dd9694e79be75
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -1329,7 +1334,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:1320
-#: 684a67e050944def8f99abc85aedc173
+#: 106cd9fc8e6b4dd68ba907f425be4ad1
 msgid ""
 "<pre>\n"
 "                                                 Path  Openness  \\\n"
@@ -1401,7 +1406,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:1390
-#: 9b96cd3d34794fc58f5e82ab3c69d16a
+#: c79d25fc99ef429ab1eefa794c16d438
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                                                 Path  Openness  "
@@ -1534,7 +1539,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:1461
-#: fcb14300d9ad47e382e1d9d4f88d1ffa
+#: 54b8fdc63a644092a6d8ee0c1f8b0bd0
 msgid ""
 "                                                 Path  Openness  \\\n"
 "ID\n"
@@ -1604,14 +1609,14 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:1536
-#: 08851ea0536f4172be1c03bb7cd2907c
+#: ae49305e19e64e1eab43c46ba100556b
 msgid ""
 "\\ **[2023-12-14 19:00:16] Точность по отдельным персональным качествам "
 "личности человека …**"
 msgstr "\\ **[2023-12-14 19:00:16] Trait-wise accuracy …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:1550
-#: 1445ef039186427f925a8a7f75c2799f
+#: 6a3577b76f144a0d879a2708829f1bb1
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -1673,7 +1678,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:1617
-#: 5a0c68c482774a569f93e5494d83d448
+#: dda6f8d70916458eb26cb18a86ccb4be
 msgid ""
 "<pre>\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
@@ -1689,7 +1694,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:1631
-#: 44dc238754f54ebd85d34470b38737ff
+#: fafb085f34114db3ae4fc7c4c2b08201
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  "
@@ -1706,7 +1711,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:1646
-#: e103628bd67949b7b372b6e55f45d486
+#: edf544b4db8c4a96a5dcccbd3de11138
 msgid ""
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
 "Metrics\n"
@@ -1720,7 +1725,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:1665
-#: ad91cbbbc1ae415a866a9b0262112e8a
+#: c04cad400b294014962131452c4bc4c2
 msgid ""
 "\\ **[2023-12-14 19:00:16] Средняя средних абсолютных ошибок: 0.1112, "
 "средняя точность: 0.8888 …**"
@@ -1729,13 +1734,18 @@ msgstr ""
 "accuracy: 0.8888 …**"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:1676
-#: cf9aaefbc277400bbb7e41762d10a348
+#: 932a13081285413da04e5bb67f2d2000
 msgid "Лог файлы успешно сохранены …"
 msgstr "Log files saved successfully …"
 
 #: ../../source/user_guide/notebooks/Text-get_text_union_predictions.ipynb:1686
-#: 1b800fd9d0b6484491c9b705fcc1608e
+#: 5500c1e8a6524c4ca6b82a468c69e8ff
 msgid "— Время выполнения: 3131.846 сек. —"
 msgstr "— Runtime: 3131.846 sec. —"
 
+#~ msgid "|d4a6c3be090d4f9bbda1c3dbc7d05438|"
+#~ msgstr ""
+
+#~ msgid "d4a6c3be090d4f9bbda1c3dbc7d05438"
+#~ msgstr ""
 

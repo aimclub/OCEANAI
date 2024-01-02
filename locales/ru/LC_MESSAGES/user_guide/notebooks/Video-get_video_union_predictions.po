@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2023-12-29 16:42+0300\n"
+"POT-Creation-Date: 2024-01-01 20:33+0300\n"
 "PO-Revision-Date: 2022-12-11 21:21+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -18,52 +18,52 @@ msgstr ""
 "Generated-By: Babel 2.11.0\n"
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:9
-#: 1acb4b39692d430cb7664703e6b63b42
+#: 9e4bc75019de44af9a435d5bdfc6135a
 msgid "Получение прогнозов по видео"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:11
-#: 434adcbc129646519550f4cddc634ae9
-msgid "|47fe455281c34c7981fb49749b0b127a|"
+#: 562e13fa487741789ab0f5f99d71a228
+msgid "|024d358e51f943b9840dcb1f4c1b8fb4|"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:17
-#: 2c81a4887c794281be71bf8ae18b8ecb 82424a42246247b8bba5d3297e3539b0
-msgid "47fe455281c34c7981fb49749b0b127a"
+#: 782fece5205b4dd4bc1688858b0772f5 c61a973741b948a78683998eb4786e59
+msgid "024d358e51f943b9840dcb1f4c1b8fb4"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:13
-#: 0caff9f675434add9d03272fcbad2e2b
+#: 5abbec0373814077882c4278d31376ac
 msgid "<hr>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:29
-#: f2cdece56ecc41dc968d14a00cfabe7b
+#: a8110c53802d4d0993c343980556c3f6
 msgid "Импорт необходимых инструментов"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 867488f7898d432aa046fd1106cd8d12
+#: ad801722160544c8a6697cb16392994b
 msgid "[2]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: cd559b0e1bd34b57b9942701ddaabf4e
+#: 7c41d466c2e242e7bf48d3462095fa5d
 msgid "from oceanai.modules.lab.build import Run"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:51
-#: b463b111783348e7ba181fe30b8bd436
+#: 4038277a57254b4aa4b162d225c30201
 msgid "Сборка"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 2fbcd16b7c4541a997709e7115cde654
+#: d46f21ad22834ccaa31a36ebd4860c68
 msgid "[3]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 343a3266fb334644a8a780df53b9abb0
+#: 759e3a16417e4d99bf9eaaea9d9e1f87
 msgid ""
 "_b5 = Run(\n"
 "    lang = 'ru', # Язык\n"
@@ -84,7 +84,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:81
-#: 9934daf1f2d54905a2ff309166e7dc5b
+#: 7c93351159264fe0b37f1ba176640b4d
 msgid ""
 "\\ **[2023-12-14 21:05:26] OCEANAI - персональные качества личности "
 "человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
@@ -96,32 +96,32 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:83
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:936
-#: 7c4888c57eaa4f8192f5f6b086cae72a 86d20d19115f4242b2f6d3a7a435b180
+#: 4553db69a0c445b8bb41450cfbc57aa6 b2c43d55cc104f0289a4f62a6fa37a7e
 msgid "</p>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:97
-#: aab20f6113ec449eaa8b5e9f13f4328c
+#: 0e7fdf74177e4cbeaaea9497f3f4e0e8
 msgid "Получение и отображение версий установленных библиотек"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:99
-#: ea10c8856575409da987ed9c2f63bfa4
+#: a0a5997afa7043c9b2a5a34bb78239de
 msgid "``_b5.df_pkgs_`` - DataFrame c версиями установленных библиотек"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 8b5e2c842c2e4d21a1eb2302c15150c7
+#: 7dbf3b32685b4af1916cddbad52468c2
 msgid "[4]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 234a60d163f7423599b27032ef176b2b
+#: 72e61a4718b948eabc8c9201b0f2f9ed
 msgid "_b5.libs_vers(runtime = True, run = True)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:123
-#: 3fb67d7d5b5d4f34bc53a1de1e0e518d
+#: 9e7dee4cb9044546a0e2bd773de51c18
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -252,7 +252,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:259
-#: 6bd0f0e8899f4a98bd279b7a087f4f64
+#: e95778f7e2ac4e4dad09f2cbe5f4b296
 msgid ""
 "<pre>\n"
 "          Package    Version\n"
@@ -280,7 +280,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:285
-#: c9ed9c6f5a72460ab3f503a03b735de6
+#: e71a2a30aa0d4fd4a1dc6bcee2e472a8
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "          Package    Version\n"
@@ -308,7 +308,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:312
-#: 36f2725f65c9478798731c77a0ff6f07
+#: 30d7bed03c654064803b1f779c715fba
 msgid ""
 "          Package    Version\n"
 "1      TensorFlow     2.15.0\n"
@@ -334,12 +334,12 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:342
-#: 68a76f76e88d4663bcb414b02a0a6611
+#: eff2273d00d3463eb2e8cbf570d2f3dc
 msgid "— Время выполнения: 0.005 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:354
-#: c2d85ac52ddf48cda9bcb2de6b22b1dd
+#: 6d0f13463a0e4ed388b15efc7674de28
 msgid ""
 "Формирование нейросетевой архитектуры модели для получения оценок по "
 "экспертным признакам"
@@ -347,19 +347,19 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:356
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:407
-#: 0615ad5e70fd4482a8f90bd5a173dd74 8cfcf35420a54aae8b6a4899639597b7
+#: 689b05b98b3c454492e70d77a02869d1 ba2ff06db14c44f4a59f14c043b687f7
 msgid ""
 "``_b5.video_model_hc_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения оценок по экспертным признакам"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 9876ec953e5e4d89bd94615132970406
+#: b48fdc5290ce4b1ba23e849e255ec330
 msgid "[5]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 49d725e7b3674395856292a7a3aa9ed9
+#: cfaa2ceaecf34cd49e1296cb35ca30e6
 msgid ""
 "res_load_video_model_hc = _b5.load_video_model_hc(\n"
 "    lang = 'en',\n"
@@ -372,31 +372,31 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:383
-#: 7bdf144f2ad44b68835ef92508755152
+#: 7f59664a732c4d07a441fdf948708246
 msgid ""
 "\\ **[2023-12-14 21:05:26] Формирование нейросетевой архитектуры модели "
 "для получения оценок по экспертным признакам (видео модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:393
-#: 211ca3b9e9274bd8b21e2e439e4bec6b
+#: 8861b7e781044c849959ce14a6f17b3d
 msgid "— Время выполнения: 0.321 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:405
-#: fc11f59caffa4d20a506e96d8643a824
+#: 7dd37b58c2d1480d9c95a5ed0896a002
 msgid ""
 "Загрузка весов нейросетевой модели для получения оценок по экспертным "
 "признакам"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 908527c9ea1f410b99c0f47da7c80603
+#: 3c2bb6e74e1f4605adc3f7cbad464399
 msgid "[6]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 441fed7d5ae84551ac3351bd38cae2aa
+#: 53143b241fd1413fb0502d2a24f9b121
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -415,44 +415,44 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:440
-#: d7b44551bc7749b79647c0da2e3b74e7
+#: 4e158f785ab243be8508e6c57d3e01f3
 msgid ""
 "\\ **[2023-12-14 21:05:27] Загрузка весов нейросетевой модели для "
 "получения оценок по экспертным признакам (видео модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:451
-#: ea3fcddcf8e44eb785021d02cd0c4a3a
+#: c554fd8e78d04e3baee751405ac5ec7b
 msgid ""
 "\\ **[2023-12-14 21:05:27] Загрузка файла "
 "“weights_2022-08-27_18-53-35.h5” 100.0% …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:461
-#: deedee55ba8545259e72fb479972dcf7
+#: af0279319a0e4edcb3e4266b7687526a
 msgid "— Время выполнения: 0.249 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:473
-#: 4b5cf7a8e45a4d82bb64aa69e25b6d91
+#: 07582ee317e2428db3ae5307f450c5ba
 msgid "Формирование нейросетевой архитектуры для получения нейросетевых признаков"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:475
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:525
-#: 5021df7bd97249429979cc80bc79f375 bf22d22276624eac9473d29bccc412ee
+#: dc2541c425d24202b74a4e795ec50052 ede1fb1dc940486c8472893e2dc157c7
 msgid ""
 "``_b5.video_model_deep_fe_`` - Нейросетевая модель **tf.keras.Model** для"
 " получения нейросетевых признаков"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: adb2cad11248456196d18676fffd567d
+#: 5e30245483a84dcc816da0ff5d36b5d6
 msgid "[7]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: c33f24d7d0ed421d9b5467e1e50a14d2
+#: c601f4dc63454c7fb4f5e4fa850ae909
 msgid ""
 "res_load_video_model_deep_fe = _b5.load_video_model_deep_fe(\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
@@ -464,29 +464,29 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:501
-#: 65f069b169d8476dad224e5f505a88b0
+#: e7e485d33ab449768c05058c11ae75fa
 msgid ""
 "\\ **[2023-12-14 21:05:27] Формирование нейросетевой архитектуры для "
 "получения нейросетевых признаков (видео модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:511
-#: f5f5334f56a8476fb00e8f626c756178
+#: 230f6936265243548ff9bc58fdaf8d22
 msgid "— Время выполнения: 0.823 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:523
-#: 80942df310554a6e930e019f2a5670e2
+#: 62a95c39e5484a33a53bf8e4fe0f45d7
 msgid "Загрузка весов нейросетевой модели для получения нейросетевых признаков"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 06142ba33bda4450af12617bec40e112
+#: c8051eef806941849882b6860decd757
 msgid "[8]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 349bae1d1974458cb523e75832ffab0f
+#: acf9e87186644424811d1b4d20b41a42
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -506,26 +506,26 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:558
-#: 3378b83100fa48b8b35031d88a21ea57
+#: cbe9635e4f494060876ac0228ca8b32d
 msgid ""
 "\\ **[2023-12-14 21:05:28] Загрузка весов нейросетевой модели для "
 "получения нейросетевых признаков (видео модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:569
-#: 2ecb55fc0694480289e949d49c6c7045
+#: f3b4215828fd46cb89fde897667dde23
 msgid ""
 "\\ **[2023-12-14 21:05:31] Загрузка файла "
 "“weights_2022-11-01_12-27-07.h5” 100.0% …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:579
-#: 752187764b7d42d39e5653305733c78b
+#: 3493e768d54443c99a5a9d08888b6f58
 msgid "— Время выполнения: 3.342 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:591
-#: a8716df4d44e4b1b86b40b98fccf5e15
+#: 30ea10ef9ab649748cf3ae4a6a47d9a8
 msgid ""
 "Формирование нейросетевой архитектуры модели для получения оценок по "
 "нейросетевым признакам"
@@ -533,19 +533,19 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:593
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:643
-#: 23c0ccfe0be444b289580a3430f409c6 b8745993571c4c47916bef5e11249066
+#: 2c10de2563c74d10931e4fd806813157 a9e20e1366f545228e0b64ea087428f0
 msgid ""
 "``_b5.video_model_nn_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения оценок по нейросетевым признакам"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 41e8fa581b40494397a55ebced833943
+#: 08dbea8404374a31b76eaa8d79a29e47
 msgid "[9]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: af74dd87bb494cc9a9e03f61e29524fb
+#: ab9f4c053ef94398abb92269599ae8c6
 msgid ""
 "res_load_video_model_nn = _b5.load_video_model_nn(\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
@@ -557,31 +557,31 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:619
-#: 0da49506f3a246cfaf1d45ae10c30818
+#: ef4274f6eed948f49378f319aab63824
 msgid ""
 "\\ **[2023-12-14 21:05:31] Формирование нейросетевой архитектуры для "
 "получения оценок по нейросетевым признакам (видео модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:629
-#: 0d612acbfa5346cc912f17e637d39270
+#: 46602b5d7baf444d95e7c2256a06c7fb
 msgid "— Время выполнения: 0.708 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:641
-#: befe48a8bc584b2fa83d522ab495b296
+#: 34925aac208840a5aeb65d98767cacb0
 msgid ""
 "Загрузка весов нейросетевой модели для получения оценок по нейросетевым "
 "признакам"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: f345e9e0b4f843bba460df9439aededa
+#: fd94c206436640539567f349748d704e
 msgid "[10]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 7d747475873a4c6999b5600254857e16
+#: f5598adfe2164c6a874b3b95efc891da
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -600,26 +600,26 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:676
-#: ec62a422889d406daf66ee268c1770ca
+#: f06492d0a1ac499a8abc09210dfa61a6
 msgid ""
 "\\ **[2023-12-14 21:05:32] Загрузка весов нейросетевой модели для "
 "получения оценок по нейросетевым признакам (видео модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:687
-#: 2f54038f42304d9da65198dd51db0d24
+#: 6eaf442ef8144e55a43d6457f89d3a8b
 msgid ""
 "\\ **[2023-12-14 21:05:32] Загрузка файла "
 "“weights_2022-03-22_16-31-48.h5”**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:697
-#: b8e40064093e4e9a8bae55e6b875842a
+#: b18b7c2b4252409287b78762df1cf081
 msgid "— Время выполнения: 0.209 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:709
-#: 80231c938a7b47868f9975d4d8016f0a
+#: c150f75a53e148e3a4f9e4a548a47666
 msgid ""
 "Формирование нейросетевых архитектур моделей для получения результатов "
 "оценки персональных качеств"
@@ -627,19 +627,19 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:711
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:761
-#: c94b59736c5d4b4e811286781725b8ed c969c867022b4e63bf4ed77eca502718
+#: 34344c4c61d5475d9b81456073d2af0c 48d8df5ac6884bd69c582a192d36f74f
 msgid ""
 "``_b5.video_models_b5_`` - Нейросетевые модели **tf.keras.Model** для "
 "получения результатов оценки персональных качеств"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: d56bbea0bd414a9bb12141665cb5d5c1
+#: 6ee6448636504ef3a7d7adbbff8b8613
 msgid "[11]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 39d47fe1e62f44cf8c2b434e9d770eed
+#: 23cf1cb80524477fa320ca2f053dde17
 msgid ""
 "res_load_video_models_b5 = _b5.load_video_models_b5(\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
@@ -651,7 +651,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:737
-#: 5361c58ca3154aa28ac7a85ed22037e7
+#: bef5d5132f7042dc894f40352aff9638
 msgid ""
 "\\ **[2023-12-14 21:05:32] Формирование нейросетевых архитектур моделей "
 "для получения результатов оценки персональных качеств (видео модальность)"
@@ -659,24 +659,24 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:747
-#: 91de5be5c5214929bcfceeeca8ac66d5
+#: 6ab4b3550ce9475fb55b2d545c8d2364
 msgid "— Время выполнения: 0.046 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:759
-#: f4f43a0af80644a7ba9763b30a1786ab
+#: e759c075eb4849a2b367c3f24ff49512
 msgid ""
 "Загрузка весов нейросетевых моделей для получения результатов оценки "
 "персональных качеств"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 2d3aa82721204a96a9f0c2f92a701046
+#: 7190562bd96744608c312ac6d97605ec
 msgid "[12]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 6d1a6810c0194cf8ad3d2eb2cba818df
+#: 4af52e6ac50b487a9eb9b5bdc0989953
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -710,74 +710,74 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:802
-#: 2355c3c9b13d4d529506cabe98f27f72
+#: cf5cb14f9bf94b9bacb67b2a0bb6b7a4
 msgid ""
 "\\ **[2023-12-14 21:05:32] Загрузка весов нейросетевых моделей для "
 "получения результатов оценки персональных качеств (видео модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:813
-#: 865f712be4f54567955386bf287157fc
+#: ff2fc2f099334a82b474f9968bd73f9c
 msgid ""
 "\\ **[2023-12-14 21:05:32] Загрузка файла "
 "“weights_2022-06-15_16-46-30.h5”** Открытость опыту"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:824
-#: 206172f892344fa0aba92ef9a187cd2c
+#: bf36dce5703a4a14aaa6850e98f2727e
 msgid ""
 "\\ **[2023-12-14 21:05:32] Загрузка файла "
 "“weights_2022-06-15_16-48-50.h5”** Добросовестность"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:835
-#: c08c647af67b47b7800dc3cd3127c1e9
+#: a6dc45f551b14b719b461db9fdeea273
 msgid ""
 "\\ **[2023-12-14 21:05:33] Загрузка файла "
 "“weights_2022-06-15_16-54-06.h5”** Экстраверсия"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:846
-#: 3f33d977da8944e5ba933b65254c619b
+#: f851396f82ba41c598056c6a7208f50e
 msgid ""
 "\\ **[2023-12-14 21:05:33] Загрузка файла "
 "“weights_2022-06-15_17-02-03.h5”** Доброжелательность"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:857
-#: 4f684c3abd614b18996216e07d3b75f7
+#: 075cbe267d8b4f5999e2770736abdde7
 msgid ""
 "\\ **[2023-12-14 21:05:33] Загрузка файла "
 "“weights_2022-06-15_17-06-15.h5”** Эмоциональная стабильность"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:867
-#: 30653f4a9d1e494a8239dbf44d5f6101
+#: 652410a743e54ea28f5c6d10660f99f8
 msgid "— Время выполнения: 1.013 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:879
-#: 0675c91f454b493f99f3a643a12953ac
+#: ab1f69d42ac641fab7c27afae0264930
 msgid "Получение прогнозов (видео модальность)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:881
-#: 16d96ae4b03546ffb3da2a53fd354256
+#: 58b0005438ee436a89edcf65c1d23b33
 msgid "``_b5.df_files_`` - DataFrame с данными"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:882
-#: 706fe8881d214512b61ad7bda8631fcb
+#: b5e3463446474fff84395365f62d76ab
 msgid "``_b5.df_accuracy_`` - DataFrame с результатами вычисления точности"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 6bf38b0f890345f988f48a1e062b3efa
+#: 73f17e530e2843678414dde4de6789d5
 msgid "[13]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:-1
-#: 0a3b02693ab94cff905415b1dae97e7d
+#: 6c6262e94c224321b0f574e64f055555
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_dataset_ = 'E:/Databases/FirstImpressionsV2/test' # "
@@ -811,24 +811,24 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:928
-#: 17ce1bdf3623492f94750dbf0d91e94d
+#: de164e4314e243a2aec655a65608c506
 msgid ""
 "\\ **[2023-12-14 22:24:55] Получение прогнозов и вычисление точности "
 "(видео модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:930
-#: af4d4a24b7fa4438911f5dd23e4db5f5
+#: b340b664986f49f68eb9b486fbca0d3f
 msgid "<p>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:934
-#: 428e96987dcb48d0b7881bb21da3341b
+#: 309ef75d238449b1be364417661e021e
 msgid "2000 из 2000 (100.0%) … test80_25_Q4wOgixh7E.004.mp4 …"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:952
-#: 9d38066764104f2281bcd3fdd3a81030
+#: 8278b841492146d699ff6ad2dfc6fa5a
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -1142,7 +1142,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1271
-#: bb6016964f6c43978b0616ab3872d7c0
+#: d40c879720214a63be8b2501368f401d
 msgid ""
 "<pre>\n"
 "                                                 Path  Openness  \\\n"
@@ -1214,7 +1214,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1341
-#: 2059911ae5b8489abd0315e81b9e63a1
+#: a2050fff970e4d4e99a0ac8ddbc94b77
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                                                 Path  Openness  "
@@ -1347,7 +1347,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1412
-#: 135bb5558b5d437ab2c575d1d51e473a
+#: bdd04c2bda97435f830251a442303c64
 msgid ""
 "                                                 Path  Openness  \\\n"
 "ID\n"
@@ -1417,14 +1417,14 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1487
-#: edc97e9223d74546879699452e2e4883
+#: e4950a95354d49fa9afc2cd25400042c
 msgid ""
 "\\ **[2023-12-14 22:24:55] Точность по отдельным персональным качествам "
 "личности человека …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1501
-#: c0bea6eb3aad430883ee9c4573c9b1e0
+#: 4362d5721bc8449a9dc11e45446ac06d
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -1486,7 +1486,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1568
-#: daf8a6e87c3f4d10933153d0cb4e52a3
+#: 2611272e1d504e168baa7e4deaefb204
 msgid ""
 "<pre>\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
@@ -1502,7 +1502,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1582
-#: 087d95d95f2341658ad6da4a6ffa6541
+#: ba34c00c79874466a16c47e7ced62ff8
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  "
@@ -1519,7 +1519,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1597
-#: 1fdb0133503f45549c2fd50d63ffa9dd
+#: 86d024dcfa41469590c8ba23c1975b78
 msgid ""
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
 "Metrics\n"
@@ -1533,19 +1533,19 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1616
-#: 9319d74094f14c0293ba4e225f34a553
+#: 49ee4b0848dd4a2ebfdd4fd96bac6648
 msgid ""
 "\\ **[2023-12-14 22:24:55] Средняя средних абсолютных ошибок: 0.0848, "
 "средняя точность: 0.9152 …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1627
-#: 412c5b64d9694a8bb7f8c2ba7067a857
+#: 9967588474a747e0afd950268b83b85a
 msgid "Лог файлы успешно сохранены …"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Video-get_video_union_predictions.ipynb:1637
-#: b027280b0edf47d2a58c8ee026f13d95
+#: cc4af5523fcd464aa0d035f2e13be9bc
 msgid "— Время выполнения: 4762.254 сек. —"
 msgstr ""
 
@@ -1559,5 +1559,11 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "52ac24923ea042bb9d69a3283d94adbf"
+#~ msgstr ""
+
+#~ msgid "|47fe455281c34c7981fb49749b0b127a|"
+#~ msgstr ""
+
+#~ msgid "47fe455281c34c7981fb49749b0b127a"
 #~ msgstr ""
 

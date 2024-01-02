@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCEANAI 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-17 14:43+0300\n"
+"POT-Creation-Date: 2024-01-02 12:54+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Generated-By: Babel 2.11.0\n"
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:9
-#: 71ba85a02ea44897a0a28a35dc310d91
+#: f59a6764f57f40949b4132d11de1fb86
 msgid ""
 "Формирование нейросетевой архитектуры модели и загрузка ее весов для "
 "получения результатов оценки персональных качеств (аудио, видео и текст "
@@ -26,44 +26,44 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:11
-#: 12ec23b1b1b14abc8e82c680326ae4d9
+#: c681dd4870f748a39385b35bbc37d4ab
 msgid "<hr>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:17
-#: 1cf29d95f6ac4bab857d14be6c97283c
+#: b58caee3edfc4c4fbff2fb41fcc49f9c
 msgid ""
-"``_b5.av_models_b5_`` - Нейросетевые модели **tf.keras.Model** для "
+"``_b5.avt_model_b5_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения результатов оценки персональных качеств"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:29
-#: 22f89e2dcbdd46e581fe3ab493d5b3ca
+#: 82321a0e88f94106a367863ca58c4514
 msgid "Импорт необходимых инструментов"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:-1
-#: fa9b74a8ba7f44b28e75e03d3b0498bd
+#: 57f4ffe3ca5b43e999906d87b98b3374
 msgid "[2]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:-1
-#: b340984644254fc5a17e83e2ab2611bb
+#: 46938596a0cc4d1c9c8e3582aefc1be0
 msgid "from oceanai.modules.lab.build import Run"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:51
-#: a705b8721da04f7097c90faa1736216f
+#: f3133895c43c42e78484fa189c86b1a5
 msgid "Сборка"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:-1
-#: 38fc917bd13a4804a64de2bfc7f3b8e3
+#: aec20e5e018a46c3a30611aed57109f0
 msgid "[3]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:-1
-#: eff6b277fdb444f59afca3407a694089
+#: 849307b4122249088a679edae97c187d
 msgid ""
 "_b5 = Run(\n"
 "    lang = 'ru', # Язык\n"
@@ -84,7 +84,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:81
-#: a64576c690d6472eaaa71518966a5db2
+#: 29f5630a311144ae9df765df86676eb2
 msgid ""
 "\\ **[2023-12-11 09:46:45] OCEANAI - персональные качества личности "
 "человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
@@ -95,24 +95,24 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:83
-#: c15c9d00030046c6aaf9b93580fca6bd
+#: 1b0ad744e8c948279e5279c623c877f7
 msgid "</p>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:97
-#: d00bc3f10cc0476990e2d830548716ad
+#: bcefa92073cd4db7896097c60fe18d46
 msgid "Формирование нейросетевой архитектуры модели"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:-1
-#: 3612d985e1484c9eaf4be0cec68d128c
+#: 0d5b5477f69f4ed1aee326850ba64fa5
 msgid "[4]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:-1
-#: 9b5f450255f64c6cb5f86ce799d26f0d
+#: 27ba1755a4504cc789da5afa3b6ebac1
 msgid ""
-"res_load_av_models_b5 = _b5.load_avt_model_b5(\n"
+"res_load_avt_model_b5 = _b5.load_avt_model_b5(\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
 "архитектуры модели\n"
 "    out = True, # Отображение\n"
@@ -122,7 +122,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:123
-#: 4dffce958a61478c914d66dff567c164
+#: cec179c4c147481a961497213a63fd49
 msgid ""
 "\\ **[2023-12-11 09:46:45] Формирование нейросетевой архитектуры модели "
 "для получения оценок персональных качеств (мультимодальное объединение) "
@@ -130,22 +130,22 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:133
-#: 7d508751fc3d4eef89f5254699443ed7
+#: 384356610a9a484fa223b3a3ded29dfb
 msgid "— Время выполнения: 0.814 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:145
-#: 829b426e45e64b959f5dbb6ab58ce719
+#: 1a36203eb06e4ffba125ffec6933d45e
 msgid "Загрузка весов нейросетевой модели"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:-1
-#: d4e46d6e3bde470e941e319d233b19a7
+#: f2bc84f64b184e8bb5fb23a8c6299cdf
 msgid "[5]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:-1
-#: 10a1b2b6503f4e51ad4eac4ca4615278
+#: 912296344a5b4870ad5bfea856368048
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -164,41 +164,41 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:178
-#: 8964b4bde4a64f1aa25456d1377db5ba
+#: 2061da5d5e6e4052987b6f9fae80ed31
 msgid ""
 "\\ **[2023-12-11 09:46:46] Загрузка весов нейросетевой модели для "
 "получения оценок персональных качеств (мультимодальное объединение) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:189
-#: 70da033575a844a38ceae9b2593330d2
+#: abdc6f88809d46e6937f8d30ce880055
 msgid ""
 "\\ **[2023-12-11 09:46:46] Загрузка файла "
 "“avt_fi_2023-12-03_11-36-51.h5”**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:199
-#: 088503644a8549a3b79b6f1518c74838
+#: 2dc2f5e67cfc41b1adcef64b26d2502a
 msgid "— Время выполнения: 0.218 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:211
-#: f879e525b8c94ba9a726cb0999c4ded1
+#: ea919edbdf5c42a098e2ccfdf95a30b3
 msgid "Отображение сформированной нейросетевой архитектуры модели"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:-1
-#: 5ef9ee0d64484694b2ca9db76bed767e
+#: ac20ac30790f4c0baa7265e08ee14ce9
 msgid "[6]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:-1
-#: 315b4cab0c3f4d10a3bbaf7c81c7c455
+#: fcb29128e2c644e4b61fb13f8e0c7e02
 msgid "_b5.avt_model_b5_.summary()"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:232
-#: f81ade04db4d4cec97090f5f190a6575
+#: 9a3d932255b1469ea7da961ce51511c5
 msgid ""
 "<pre>\n"
 "Model: &#34;model&#34;\n"
@@ -289,7 +289,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:293
-#: ea92170feb894906b26aaa20af0e218a
+#: 30dc613eb11444cab1c2311ce7843073
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "Model: \"model\"\n"
@@ -380,7 +380,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:355
-#: 15f451d1297c447d92b19da5fdea8a45
+#: c21ef56d141749a39f42de6638cd5471
 msgid ""
 "Model: \"model\"\n"
 "__________________________________________________________________________________________________"
@@ -466,4 +466,21 @@ msgid ""
 "Non-trainable params: 0\n"
 "__________________________________________________________________________________________________"
 msgstr ""
+
+#~ msgid ""
+#~ "``_b5.av_models_b5_`` - Нейросетевые модели "
+#~ "**tf.keras.Model** для получения результатов "
+#~ "оценки персональных качеств"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "res_load_av_models_b5 = _b5.load_avt_model_b5(\n"
+#~ "    show_summary = False, # Отображение"
+#~ " сформированной нейросетевой архитектуры модели"
+#~ "\n"
+#~ "    out = True, # Отображение\n"
+#~ "    runtime = True, # Подсчет времени выполнения\n"
+#~ "    run = True # Блокировка выполнения\n"
+#~ ")"
+#~ msgstr ""
 

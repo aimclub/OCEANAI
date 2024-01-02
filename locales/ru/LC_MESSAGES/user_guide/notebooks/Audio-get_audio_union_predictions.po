@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: ryumina_ev@mail.ru\n"
-"POT-Creation-Date: 2023-12-29 16:42+0300\n"
+"POT-Creation-Date: 2024-01-01 20:33+0300\n"
 "PO-Revision-Date: 2022-12-01 09:13+0300\n"
 "Last-Translator: Elena Ryumina <ryumina_ev@mail.ru>, Dmitry Ryumin "
 "<dl_03.03.1991@mail.ru><dl_03.03.1991@mail.ru>\n"
@@ -18,52 +18,52 @@ msgstr ""
 "Generated-By: Babel 2.11.0\n"
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:9
-#: ecd65c7f7d164e4092d558d2fda2899d
+#: ba11740be1014ee58c531ebea1c0e6f3
 msgid "Получение прогнозов по аудио"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:11
-#: c032b10f11b64696a8aac950136b9843
-msgid "|e04ee70c42574ebbad4568f6f22ccf63|"
+#: be2b2c716aba43ae877bf93e79c73bf8
+msgid "|ab50dc052f5c433695299653b3b6dd9e|"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:17
-#: 6077d8329077447f8342703274e05bbc 6ee541e5a21d41c7a7b8d44cc3c6d17f
-msgid "e04ee70c42574ebbad4568f6f22ccf63"
+#: 55fbd316b92f44c69e8ff8a20ccf11c2 e22d6e6f833445c1a6f61aa674d10eb6
+msgid "ab50dc052f5c433695299653b3b6dd9e"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:13
-#: ab69c7ff92674a1caa5abf7bdcb4456e
+#: 6844ded393e24819aa06e09ab521e0d5
 msgid "<hr>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:29
-#: 1fbde8d533234494a0ea174015734564
+#: c8d6b524f22340e78f670146de7f43df
 msgid "Импорт необходимых инструментов"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
-#: 5ea9b9f590fe44d5a464a0ecc25a0e16
+#: b5412bc2e71b470fbe47448a9ae767bd
 msgid "[2]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
-#: 42716fe549c645fb8472e9a3a2965631
+#: 70397f152ebd4193bed3e8da74398df1
 msgid "from oceanai.modules.lab.build import Run"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:51
-#: 3e76f20419f848bd9aac0b065c90a2d2
+#: 3442d1d5792646bdbd26fe2ddbf67697
 msgid "Сборка"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
-#: 22ac69a92347428ba40ba876a59065b0
+#: c0ab5620b3264fd08b4042e0c4d35fad
 msgid "[3]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
-#: c817c7ae039442a88f7af56274e911eb
+#: f54cd509c46c4178afd651f94cfeb321
 msgid ""
 "_b5 = Run(\n"
 "    lang = 'ru', # Язык\n"
@@ -84,7 +84,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:81
-#: e79af1da1fdd4e9b82b2cad8f14a9329
+#: f09a5978b02249baa681a3ac0412594f
 msgid ""
 "\\ **[2023-12-14 16:54:20] OCEANAI - персональные качества личности "
 "человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
@@ -96,32 +96,32 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:83
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:816
-#: 2b919b6e1ab94a91a806d5e862e4c3ee bea51b5c17f149f6ba3584eb0eb8516d
+#: 9a1e07f68a4843b381d1ef6dc6258632 a5fca0846c5f4c64a605344b5e91f6fa
 msgid "</p>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:97
-#: f01e287e8343438692df491025906ad2
+#: a8325a1b1769484fa0ac754c318011fd
 msgid "Получение и отображение версий установленных библиотек"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:99
-#: 421678c4fb3d45fe9325196435dc46bf
+#: 703a5e31e2dc43cebd5ec0f8bb243505
 msgid "``_b5.df_pkgs_`` - DataFrame c версиями установленных библиотек"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
-#: 7fb9e74d640f4a8590173c3c095cf87d
+#: e3beaf0c8e01485f871bf478ca335fec
 msgid "[4]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
-#: 41e5e49b485e436e93cda2f93865ad4e
+#: a7444d0a692f4a21bb86312641e1ede2
 msgid "_b5.libs_vers(runtime = True, run = True)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:123
-#: 27b2e868c9b3493093f2e5fb95d47123
+#: 33bcbc2fd3c9487a958c4250278f50d0
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -252,7 +252,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:259
-#: 7c485abd034a4dcea392ae7d260577d1
+#: f62f744ef14a46e28eae16ee465bad98
 msgid ""
 "<pre>\n"
 "          Package    Version\n"
@@ -280,7 +280,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:285
-#: 763002dd72e3417495277c38b86da0ae
+#: 36d47a46f4fb4566a5ffe8e6c6335a21
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "          Package    Version\n"
@@ -308,7 +308,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:312
-#: 5b97413367644d9d87b0248da65dcf94
+#: f510d666c5264e5abd7ee2f139a50ba4
 msgid ""
 "          Package    Version\n"
 "1      TensorFlow     2.15.0\n"
@@ -334,12 +334,12 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:342
-#: b452311083bc49c2bd3f280815dbc8e7
+#: fa012e94f84243169cea350a24f3a375
 msgid "— Время выполнения: 0.005 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:354
-#: b1db3b8dd87545be827dd22a4a44a96a
+#: 7f66e9514f4e4032873d7aa7b9a966b4
 msgid ""
 "Формирование нейросетевой архитектуры модели для получения оценок по "
 "экспертным признакам"
@@ -347,19 +347,19 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:356
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:406
-#: 811931accf7c459e928f35e26f17123f ea65a3db76684b82a43935d5959293ef
+#: 1668beff2c204ae4a65edae0ffb3af09 69c2d08f3a744ab291a1d51a3808ef31
 msgid ""
 "``_b5.audio_model_hc_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения оценок по экспертным признакам"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
-#: e02ead88310a43a2bf0ae3b09724f3a7
+#: d99ad97850ca49c3ac03d7774f4a3c58
 msgid "[5]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
-#: 1e28f5fcb00745f2a228b22a80912d14
+#: d76b76b8f0f148a89a78b013eb7887f2
 msgid ""
 "res_load_audio_model_hc = _b5.load_audio_model_hc(\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
@@ -371,31 +371,31 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:382
-#: 2a4554edb8954d7e88cb93b9ace74692
+#: f886258cde504e71b6bf9b20911b2cc6
 msgid ""
 "\\ **[2023-12-14 16:54:20] Формирование нейросетевой архитектуры модели "
 "для получения оценок по экспертным признакам (аудио модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:392
-#: 130cb8f8f41a47fb821f9f1db21bd20d
+#: b204dabbaa1a47f5afa2209248230a17
 msgid "— Время выполнения: 0.335 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:404
-#: eba934a234fc4021b9d3d945a84c0bfe
+#: 14130d2c1f7f4c528b3657648889fb6a
 msgid ""
 "Загрузка весов нейросетевой модели для получения оценок по экспертным "
 "признакам"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
-#: 6d4196176c704b8fa6edcbb67d321dad
+#: 0126486ab6814f20965214f92025ab55
 msgid "[6]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
-#: b443d4dbeb2442a29c21740457a2185e
+#: 1930d8481dc2487295207fc43360f199
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -414,26 +414,26 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:439
-#: 132dc433a5b14299bd3026089cb59b64
+#: ac7b204894db47398b3adc96601ead77
 msgid ""
 "\\ **[2023-12-14 16:54:21] Загрузка весов нейросетевой модели для "
 "получения оценок по экспертным признакам (аудио модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:450
-#: dfa895141be64b99900120e32ba09e7e
+#: 0533b852880749e984359872e4c1ed33
 msgid ""
 "\\ **[2023-12-14 16:54:21] Загрузка файла "
 "“weights_2022-05-05_11-27-55.h5” 100.0% …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:460
-#: 0e84a51ef8294f29aa95437426557429
+#: 8a088d83ee7449f98c85c9c6c47b3caa
 msgid "— Время выполнения: 0.323 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:472
-#: c74ac6c4b48349f7a95c2eddfb0121eb
+#: 0afe863727c34e3cb285392fc1764f2b
 msgid ""
 "Формирование нейросетевой архитектуры модели для получения оценок по "
 "нейросетевым признакам"
@@ -441,19 +441,19 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:474
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:524
-#: 120081aefccd4be2aad7e749c230c828 c6e0866e1e5846818f840d1077b0339b
+#: cb78f91b85ea4bf88e84e43becc2c349 ce350950d44f4f2297de24d65e1210a7
 msgid ""
 "``_b5.audio_model_nn_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения оценок по нейросетевым признакам"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
-#: f3fafd38e205404093d08ba61fe28318
+#: ab4d16dcc2ac47ab9dc2c72122108153
 msgid "[7]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
-#: 651b69fe1bc7485f821a64291b843acd
+#: 4c265fdf304049fda3e1799bc0682545
 msgid ""
 "res_load_audio_model_nn = _b5.load_audio_model_nn(\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
@@ -465,31 +465,31 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:500
-#: 3eb771ecd8e84466a0cdd106c8a90622
+#: d9b29d459d5d4235b334af754bc66000
 msgid ""
 "\\ **[2023-12-14 16:54:21] Формирование нейросетевой архитектуры для "
 "получения оценок по нейросетевым признакам (аудио модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:510
-#: fe14c37561df468d82176d8eb09f5142
+#: 3f78b680d0844f7e93ab88562af7d9f1
 msgid "— Время выполнения: 0.212 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:522
-#: 79972ccf38bd45ef8daca9f79af6097f
+#: e1c03fc85f7b485388568a6b9256dbc4
 msgid ""
 "Загрузка весов нейросетевой модели для получения оценок по нейросетевым "
 "признакам"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
-#: 3fdfd1612e104c7d8c5bbdd08859c51e
+#: 8e6fd134c08246559988c46eb2ddf723
 msgid "[8]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
-#: 111ee5ad9fe04b228588343f5784f8aa
+#: 5c9d6cb577254a9cbaadc21973c39fde
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -508,26 +508,26 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:557
-#: 4a389065ecee4472a855e5593748ee0f
+#: 628bfb005eae4d94b0f803496317b043
 msgid ""
 "\\ **[2023-12-14 16:54:21] Загрузка весов нейросетевой модели для "
 "получения оценок по нейросетевым признакам (аудио модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:568
-#: ce1bab41d9b546938fdf3867a036660a
+#: 7667c7f07ba944b9afb054461c9523fc
 msgid ""
 "\\ **[2023-12-14 16:54:22] Загрузка файла "
 "“weights_2022-05-03_07-46-14.h5”**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:578
-#: be63a19b2ef74914bffc4df3930180e8
+#: 43aa4ce3907146868ea73766e45f672e
 msgid "— Время выполнения: 0.416 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:590
-#: b2605cd9b050402fa701141dd2d86506
+#: 3441e90b39c04c5381fc4c91e925e862
 msgid ""
 "Формирование нейросетевых архитектур моделей для получения результатов "
 "оценки персональных качеств"
@@ -535,19 +535,19 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:592
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:642
-#: 6f4b400a32634f0b84f64a561ead4f79 966d5d7f2f4c4a1a81a16c0ba3b8279b
+#: 5f534ddd6b454b10b996cbc53401c7f6 9de43e428869463d9a4e9193aee80b47
 msgid ""
 "``_b5.audio_models_b5_`` - Нейросетевые модели **tf.keras.Model** для "
 "получения результатов оценки персональных качеств"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
-#: fd945b20683a4cdbb821801698f7067c
+#: 2267bce3e72047e8a42e67a2e63bf1e9
 msgid "[9]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
-#: f490f01d03dd444f8d05a365f2d14c35
+#: ae99411146b24c8cb9c6a9c1f17095e1
 msgid ""
 "res_load_audio_models_b5 = _b5.load_audio_models_b5(\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
@@ -559,7 +559,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:618
-#: 55ad528cb0da41fcb2fd1b4333ba667f
+#: d59b506d219d45b99ccfe5773cad23d9
 msgid ""
 "\\ **[2023-12-14 16:54:22] Формирование нейросетевых архитектур моделей "
 "для получения результатов оценки персональных качеств (аудио модальность)"
@@ -567,24 +567,24 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:628
-#: 23fe5df48ef94b8a979049a3057ebb61
+#: 349435a83e62437e81767f179d4548b0
 msgid "— Время выполнения: 0.067 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:640
-#: 5bd2a3c5f1d74b0b8c1a1d54913885b3
+#: 9e79eda85dfe44809bd593cabd32c909
 msgid ""
 "Загрузка весов нейросетевых моделей для получения результатов оценки "
 "персональных качеств"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
-#: afedd9f0f80840198a647802ecb813b3
+#: 6ba6eb357ad54e66b49c6d45ef94f65b
 msgid "[10]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
-#: e7e2c85ac1994728ab705e917dee2fd3
+#: 9d54121414fc41778b604a7277549210
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -619,74 +619,74 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:683
-#: 05f53635df39441884c09640bff2d568
+#: 65f5f08bb89e4d1f98c1a148182ee8b0
 msgid ""
 "\\ **[2023-12-14 16:54:22] Загрузка весов нейросетевых моделей для "
 "получения результатов оценки персональных качеств (аудио модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:694
-#: f8fcca31157849658843f03f3f88e4b8
+#: c1f9b6ceec0740de980fa9a3cf65c45c
 msgid ""
 "\\ **[2023-12-14 16:54:22] Загрузка файла "
 "“weights_2022-06-15_16-16-20.h5”** Открытость опыту"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:705
-#: 22d0a973ef9c4f64825fe5603a84ac3a
+#: 67415f74c334480f85521963a4948874
 msgid ""
 "\\ **[2023-12-14 16:54:22] Загрузка файла "
 "“weights_2022-06-15_16-21-57.h5”** Добросовестность"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:716
-#: c4d74274bf2943fbba15f9be1529047d
+#: 898b46b828ff4668ba364aca2dae9896
 msgid ""
 "\\ **[2023-12-14 16:54:22] Загрузка файла "
 "“weights_2022-06-15_16-26-41.h5”** Экстраверсия"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:727
-#: fbb171b7a147442f9c3521e6904f1134
+#: 586157182c4f476e9070364146f27e1a
 msgid ""
 "\\ **[2023-12-14 16:54:22] Загрузка файла "
 "“weights_2022-06-15_16-32-51.h5”** Доброжелательность"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:738
-#: a21139c9adcd48adb2f8b8a27650bb89
+#: 0357561f7b1542efafed0432ab13af80
 msgid ""
 "\\ **[2023-12-14 16:54:22] Загрузка файла "
 "“weights_2022-06-15_16-37-46.h5”** Эмоциональная стабильность"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:748
-#: 779fef3207eb4bcb84c0490f3eddfa4d
+#: 29d726cb8c264ce4920e0426ffb6a310
 msgid "— Время выполнения: 0.807 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:760
-#: 7d5ac5b866e34bf39debef2a9318b846
+#: 94c1b32ab5144dd1a4aaf7e62566f106
 msgid "Получение прогнозов (аудио модальность)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:762
-#: 113b6d5662344e839713121b048b0d85
+#: 2f99be55c9ef44eaaebd165be8e167ad
 msgid "``_b5.df_files_`` - DataFrame с данными"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:763
-#: 93e9220d5e504dd89439cd12133a2af2
+#: 94d2bbb5908048d0822c295b252cd32a
 msgid "``_b5.df_accuracy_`` - DataFrame с результатами вычисления точности"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
-#: 753ca2ea36b1471c87585925a728581e
+#: 65469b6fe3f940989f4daa92956efb2b
 msgid "[11]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:-1
-#: 91ea7e0b52b943db9687422e5b21a9b1
+#: 25862432412c4a91b5d12a756b9f039d
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_dataset_ = 'E:/Databases/FirstImpressionsV2/test' # "
@@ -719,24 +719,24 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:808
-#: 5de31ee6292949ac946a9d9022f034a9
+#: 56f43c59398a42de8f5da98f5538d4f2
 msgid ""
 "\\ **[2023-12-14 17:59:22] Получение прогнозов и вычисление точности "
 "(аудио модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:810
-#: 053c64c907ec4873a5933ac739eaf170
+#: 5e1590f6eafd4e2c9ab2b1047ca15441
 msgid "<p>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:814
-#: 28bcb208c9744a449b3c77d8298ac4d3
+#: 76aa7482bc3d4dbbbeaee622e6f58fd9
 msgid "2000 из 2000 (100.0%) … test80_25_Q4wOgixh7E.004.mp4 …"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:832
-#: 698886866c9a458abbba903a992d04e2
+#: 69cb2b82b5e146609c37cb9ac7a337f9
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -1050,7 +1050,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:1151
-#: ead6a774a5114183a8fa35bf5f5afc47
+#: 38344ebbdc8e42539bc4ac71f4d89368
 msgid ""
 "<pre>\n"
 "                                                 Path  Openness  \\\n"
@@ -1122,7 +1122,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:1221
-#: b0090f22ee5641389c23ad0eeddccdbf
+#: 2cc3a6f6d69541c0aaf73fc4090689cd
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                                                 Path  Openness  "
@@ -1255,7 +1255,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:1292
-#: 6d45dd2ff89b4e8e8ecf099e6bfff061
+#: 61681545c400430ea9d3e1037251f30e
 msgid ""
 "                                                 Path  Openness  \\\n"
 "ID\n"
@@ -1325,14 +1325,14 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:1367
-#: d8fb91af9ca6469792b7648784671670
+#: 6262307ce7bb45c2ac72388419f16bb1
 msgid ""
 "\\ **[2023-12-14 17:59:22] Точность по отдельным персональным качествам "
 "личности человека …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:1381
-#: b712a5d5e5f448e59f76d5c234f089a4
+#: 08f563ab240a4ebaad3700f94fa9882f
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -1394,7 +1394,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:1448
-#: 5e7022796be74522b8f239345ca87446
+#: afd06671868540fb816fc39542fb8b0c
 msgid ""
 "<pre>\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
@@ -1410,7 +1410,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:1462
-#: 25599476b619408b9d06ff6af3dd35f5
+#: f7651f32422e47d1950a94075eff5fdb
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  "
@@ -1427,7 +1427,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:1477
-#: 26c6a5c5a5984e60bdc281104b722fea
+#: 8dd1e61aed064ff58c4125bfbd719a56
 msgid ""
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
 "Metrics\n"
@@ -1441,19 +1441,19 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:1496
-#: 451d4c2af2a44158a35efd2e99d33125
+#: 5e14e40967b5456f859900eb7283a5f7
 msgid ""
 "\\ **[2023-12-14 17:59:22] Средняя средних абсолютных ошибок: 0.0926, "
 "средняя точность: 0.9074 …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:1507
-#: 48412f1446624ab39c169ccdc90f3f1a
+#: 7bc140446c714f9085343b7f5789fb20
 msgid "Лог файлы успешно сохранены …"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Audio-get_audio_union_predictions.ipynb:1517
-#: 3e1e3fc499c749ba9c63fae592a84a87
+#: 9dbd3fba49e8400c969054b8e12bfa70
 msgid "— Время выполнения: 3899.26 сек. —"
 msgstr ""
 
@@ -1467,5 +1467,11 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "5eae4962a03a4ed3a58bc76f94eb18da"
+#~ msgstr ""
+
+#~ msgid "|e04ee70c42574ebbad4568f6f22ccf63|"
+#~ msgstr ""
+
+#~ msgid "e04ee70c42574ebbad4568f6f22ccf63"
 #~ msgstr ""
 

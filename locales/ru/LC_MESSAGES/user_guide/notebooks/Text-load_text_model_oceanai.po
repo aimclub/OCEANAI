@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCEANAI 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-17 14:43+0300\n"
+"POT-Creation-Date: 2024-01-02 12:54+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,51 +18,51 @@ msgstr ""
 "Generated-By: Babel 2.11.0\n"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:9
-#: 2a6ade73c44a48c4aad05a0f789f54a2
+#: 9428dc41c4ac41ddbaa19909913df028
 msgid ""
 "Формирование нейросетевых архитектур моделей и загрузка их весов для "
 "получения оценок персональных качеств (текстовая модальность)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:11
-#: 743311fb539a46edbe94437c08a28704
+#: 483a1038397b40b6bc491ffb0843fa16
 msgid "<hr>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:17
-#: 8f3fa18db81e4b76a4b7428878c1d5ad
+#: 921a6e8c3a344c5db61e55849ef8464e
 msgid ""
-"``_b5.audio_models_b5_`` - Нейросетевые модели **tf.keras.Model** для "
+"``_b5.text_models_b5_`` - Нейросетевые модели **tf.keras.Model** для "
 "получения оценок персональных качеств"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:29
-#: fe86a15c7f0c47e08ac0f61d3df30abe
+#: 60bd4206f10643a28076749d1f1b9d73
 msgid "Импорт необходимых инструментов"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
-#: b0afe3952ea74c47a129c498ca755fca
+#: dfecb833e005477db83141b02c0f7ac0
 msgid "[2]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
-#: 679898fae0ec41b79a5cd8f751b7f22c
+#: 282cad93ea964748931da93c8e54e5ee
 msgid "from oceanai.modules.lab.build import Run"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:51
-#: 839e2391a8074480aac981c3d8867342
+#: 3434a5480f054b59aec2468b0739e179
 msgid "Сборка"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
-#: e5bff5da7f4345979ebe8c38b2ba7108
+#: ce2e5b256ce443579d7d27e89961d772
 msgid "[3]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
-#: f5a2cdcb9f5e43b7b01fc39837512f8f
+#: 07c4148251f64edb87e14628f36ee0dd
 msgid ""
 "_b5 = Run(\n"
 "    lang = 'ru', # Язык\n"
@@ -83,7 +83,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:81
-#: 036dbe4f103542a69523171a46cd0ce7
+#: 8f51f3e46a12494bb017c0b3d71c8d6a
 msgid ""
 "\\ **[2023-12-10 17:03:46] OCEANAI - персональные качества личности "
 "человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
@@ -94,22 +94,22 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:83
-#: 07e7c55541b54b4e9813114b60b16dac
+#: edf657198f4440a1bd8f0f656c42f725
 msgid "</p>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:97
-#: dd1e27dd8d9a43a9814723934d40a9d5
+#: 6e4cbd0a1cab4a9395971d69859bc592
 msgid "Формирование нейросетевых архитектур моделей"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
-#: a7518d3efa744ba888f5866a67370e95
+#: f4a9a71ed32646798c8faa33920443a6
 msgid "[4]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
-#: aed5b2c53e144d889abaf562508627e4
+#: 3744197651214d0eb8d5c515b87aff14
 msgid ""
 "res_load_text_model_b5 = _b5.load_text_model_b5(\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
@@ -121,34 +121,34 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:123
-#: 7903c6d062ab43e9bd4ee068eaea859e
+#: 2bc45a23468544e9a98a8dc80ed46ac0
 msgid ""
 "\\ **[2023-12-10 17:03:46] Формирование нейросетевой архитектуры модели "
 "для получения оценок персональных качеств (текстовая модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:133
-#: b80bc352aaa940d5a6da7363cd829166
+#: dfe6fe78e78d4dc3800beb2beebea812
 msgid "— Время выполнения: 0.539 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:145
-#: f11d68fb96d24f7db4846e2640551d07
+#: bea8e25ec0844ccba0b5e00b60931624
 msgid "Загрузка весов нейросетевых моделей"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:157
-#: 4e83e06c50d745db9734995adc183674
+#: f0b14f83ada64b098f0e94e66e98eeac
 msgid "``FI V2``"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
-#: 3efa29a069b541349812146d9f07b85e
+#: d322ad0043244a18a80ffbcb8dac5a6a
 msgid "[5]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
-#: d7bce8dc43514e6e8ed5a3a584db667f
+#: 3874a17b53b847c0be53cf6ea2e18268
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -167,34 +167,34 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:190
-#: 3f087ae3ce7c4ddd88e016b682474e8d
+#: 04e3a802a4ff477c8384617848ee320a
 msgid ""
 "\\ **[2023-12-10 17:03:46] Загрузка весов нейросетевой модели для "
 "получения оценок персональных качеств (текстовая модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:201
-#: 3301c25f9e5941a690a181ce5929049d
+#: dc0e9384bf9c4c78930fb96ee42f3fe1
 msgid "\\ **[2023-12-10 17:03:47] Загрузка файла “ft_fi_2023-12-09_14-25-13.h5”**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:211
-#: 704b7f5732a648a292f5fea49eec1791
+#: 379bd55a24ab47cdbf3f411aaf552113
 msgid "— Время выполнения: 0.144 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:223
-#: d149730a98604b14b094ba259fd26c94
+#: b5767d5c16504722b0afc299012c3e23
 msgid "``MuPTA``"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
-#: cf1e0e806f67418ea0a480800c80f86a
+#: 56174de52a984473ae57559767613da9
 msgid "[6]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
-#: 3601ad8283014515b73f334722e84b48
+#: 19de279e60374e688db27d0cb2480aba
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -213,41 +213,41 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:256
-#: 6dafb603276a4cc6b9a764d0da364603
+#: f1d760fd323948a58e031490506b41c3
 msgid ""
 "\\ **[2023-12-10 17:03:47] Загрузка весов нейросетевой модели для "
 "получения оценок персональных качеств (текстовая модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:267
-#: fc35903d98a946d1b27587215c06964d
+#: 438c1c8965c5482daaa2aa0c94d41896
 msgid ""
 "\\ **[2023-12-10 17:03:47] Загрузка файла "
 "“ft_mupta_2023-12-09_14-25-13.h5”**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:277
-#: 3e04514ef33f49e2bfb18f2b15ab3d65
+#: b3524290e1904306b1213f423b63e814
 msgid "— Время выполнения: 0.137 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:289
-#: adbaad8f13074351a9eb8e4f2eca3c1d
+#: 7922e6ae224a4dccb00ac5662bd2696a
 msgid "Отображение сформированной нейросетевой архитектуры модели"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
-#: 7739fbdd5bd64faf9955f2de55c7c950
+#: 5f2ae2ba4e7b48d280ae70700bf044a8
 msgid "[7]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:-1
-#: 55347f7d9ded47faac612594fe91a623
+#: 61515f20f0ab4a7995d28b84e67b7f58
 msgid "_b5.text_model_b5_.summary()"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:310
-#: 28cf715fd54741fdb2fa2ce98d5312b0
+#: 6d6907b217b7488b9393bc3a39fba249
 msgid ""
 "<pre>\n"
 "Model: &#34;model&#34;\n"
@@ -280,7 +280,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:333
-#: 3e33621018264cccba208528aa13c5a1
+#: d9295c2196824659ad4dbd98746ee96e
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "Model: \"model\"\n"
@@ -313,7 +313,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:357
-#: be7a56600c6540508627e87c2f6c4c86
+#: 55cb39796970423698d6b49f1294fb98
 msgid ""
 "Model: \"model\"\n"
 "__________________________________________________________________________________________________"
@@ -341,4 +341,10 @@ msgid ""
 "Non-trainable params: 0\n"
 "__________________________________________________________________________________________________"
 msgstr ""
+
+#~ msgid ""
+#~ "``_b5.audio_models_b5_`` - Нейросетевые модели "
+#~ "**tf.keras.Model** для получения оценок "
+#~ "персональных качеств"
+#~ msgstr ""
 

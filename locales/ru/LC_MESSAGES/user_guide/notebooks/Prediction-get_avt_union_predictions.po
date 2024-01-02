@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OCEANAI 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-29 16:42+0300\n"
+"POT-Creation-Date: 2024-01-02 12:54+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,64 +18,64 @@ msgstr ""
 "Generated-By: Babel 2.11.0\n"
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:9
-#: fbccd7727dd2422fa2d2d56966de94de
+#: c97dbbe9d8a44deb8208d865ec32ea74
 msgid ""
 "Мультимодальное объединение для получения прогнозов по аудио, видео и "
 "тексту ``FI V2``"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:11
-#: d2d7736f675c4535ae1d2ef6cc18e68d
+#: e4a09c0ff5ba42ff83589a143a59d300
 msgid "<center>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:15
-#: ca10b3703e9944f1932a0625c667fbc3
-msgid "|b977763bb1cd450d84d6544d3ff9737f|"
+#: 47311efc37154c05ac9096aa5a260347
+msgid "|72d51d0cfb3942db8f8b1efa554e74ed|"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:25
-#: 7b4eb9a696a54ee6b6a85cdd3ce2d5f8 b0c67d65763a4bb69c2f0bee2588d25e
-msgid "b977763bb1cd450d84d6544d3ff9737f"
+#: 748f087cc8f048538d12655006f8450b 85009c6e987147b49cd42f981fe13e3b
+msgid "72d51d0cfb3942db8f8b1efa554e74ed"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:17
-#: 7f8448a6011d4ef99f6dd7e105dae481
+#: e38799f7aa664784b047b8614669c516
 msgid "</center>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:21
-#: 0b4e19790cbd4b99a5f7673ed530f307
+#: 37e70db6e7d046a6b807fcf74583b772
 msgid "<hr>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:37
-#: 5fdcbc8acdb8489dadf61fac9616affc
+#: 07c657b161cd482882d2cd5a9095c89b
 msgid "Импорт необходимых инструментов"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: eea39c9d623e4fada220a09f86b06ac3
+#: 37f13a5bd0ce494fb1b76b433304dde0
 msgid "[2]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: f948ee3f603f4a0f8fea32198866446d
+#: f80f9965f9f24f158fc190aafcf1ea86
 msgid "from oceanai.modules.lab.build import Run"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:59
-#: 971c316c2a5642b79d224e35986061e7
+#: ebb9cc34d0414d1c8a7de4247a356ec3
 msgid "Сборка"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 663539f420ba40d192ba391de5d7d557
+#: b7717d003f8946a59fda50fe8c00dd32
 msgid "[3]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: b7cb05f575a749fb8a597cc339e1bbc3
+#: 4a96e19bd7614ee081e01e1c09fdd1c0
 msgid ""
 "_b5 = Run(\n"
 "    lang = 'ru', # Язык\n"
@@ -96,7 +96,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:89
-#: d1af3ef4076f4873a1c5c9b64ac9a7bf
+#: d57c81067cfa4036bf1ff7c369130899
 msgid ""
 "\\ **[2023-12-15 07:01:44] OCEANAI - персональные качества личности "
 "человека:**\\     Авторы:        Рюмина Елена [ryumina_ev@mail.ru]"
@@ -108,32 +108,32 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:91
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1637
-#: 12809742c16e448b80720bd49b9359bd ff2e6ba28b4c48f7918a6dabb8f0a599
+#: 3f13b8488d19460ab8735fd7d8aaeeb1 4773c58ed6814395ae4ecf14d182c18f
 msgid "</p>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:105
-#: aa77759b2a1146cf82ef153e86bdc676
+#: 28ea8bf86e334708bfbfc4c7ab81e226
 msgid "Получение и отображение версий установленных библиотек"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:107
-#: 5871b0a5a04b4b8195118d1430875334
+#: 974d8c05e0a946f3a26ce547c0cc3a5b
 msgid "``_b5.df_pkgs_`` - DataFrame c версиями установленных библиотек"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: b0ac9c1daa444351aeb17eafe525bdbc
+#: 18a088212e794c42aaa5d61bd0115b2b
 msgid "[4]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 6620bab6cdee44298078b46545a6a4d0
+#: 543e777f4dc4493d821ae31f8ae0adfe
 msgid "_b5.libs_vers(runtime = True, run = True)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:131
-#: 57b5343649404015bd50faf98e9f1421
+#: de4af39dea7246ee809aecb7aaf070ee
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -264,7 +264,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:267
-#: 1b3456cc94a94c9e9e880e3b42db9449
+#: 4f35c69339c343a080b07e341b148474
 msgid ""
 "<pre>\n"
 "          Package    Version\n"
@@ -292,7 +292,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:293
-#: f091177bcb4c4125b8ae9d700592457b
+#: 9867754cca0a41d780e583bc0ae2863a
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "          Package    Version\n"
@@ -320,7 +320,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:320
-#: 3de7799c462b48f999b9f3b92f0351ad
+#: 12efdb0549dc449a96997130e5f34016
 msgid ""
 "          Package    Version\n"
 "1      TensorFlow     2.15.0\n"
@@ -346,20 +346,20 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:350
-#: 9bb434b33d6d4539b7b3183677351f55
+#: 1992b4e4dbf741afa62b7ce1219d4a41
 msgid "— Время выполнения: 0.004 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:362
-#: 876585e14fa34d60823507947c6afe16
+#: cbf10bc198da4850a35b3ccaf1ea2bc2
 msgid "Анализ аудио информации (формированияе и загрузка весов моделей)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:374
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:625
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1198
-#: 71d788064b7f4ae6837232ed0477b396 91de6e2d94ff4025969fd49eaa967654
-#: a64de0f9cd07485783cb7904c4019f69
+#: 43fdaaddcdbd40269dda9ebd2e074feb 4985842890c245e88dbb4a0b810204bc
+#: ef663431e26a4201b3d55b7c04bae202
 msgid ""
 "Формирование нейросетевой архитектуры модели для получения признаков / "
 "оценок на базе экспертных признаков"
@@ -367,19 +367,19 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:376
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:426
-#: 28aab2e59121496aabda9df7836af563 6d84378ad2794b268e04c278b7d0f370
+#: 01d7cfd309714df6a13d263d551957aa d997f7433e9f4d85a70ee7d797e125c9
 msgid ""
 "``_b5.audio_model_hc_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения признаков / оценок на базе экспертных признаков"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 8add137b94e14076aeee091ff95e7146
+#: 4da86b9319154ef3872447979e220e1c
 msgid "[5]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 4396af1d40d642429d348bf66792b9b0
+#: b70fd56046454c048bf5f4d2b3c8ca27
 msgid ""
 "res_load_audio_model_hc = _b5.load_audio_model_hc(\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
@@ -391,34 +391,34 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:402
-#: ad2cc93396ad49c095eebfd95f4b40cb
+#: ac2a4ca8698f40f188f5199840b32471
 msgid ""
 "\\ **[2023-12-15 07:01:44] Формирование нейросетевой архитектуры модели "
 "для получения оценок по экспертным признакам (аудио модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:412
-#: 0d0d8bc7fc144de39d099c434b6fdc62
+#: 933c77b5fdfc4e39b60184f288183016
 msgid "— Время выполнения: 0.326 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:424
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:676
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1249
-#: 42c154d8fd4049c4b9d9b26abd005166 dff203cfd3164b5b9a22b638a0c8b5d8
-#: e2b41c4ca717489eb6686486a202ea41
+#: 1c23b6fc7e884623b9ad84349d4a5acc 87186151d4224883a641acb2e7ad5cac
+#: a2b57c1a20a9470a9467233d7bf813f6
 msgid ""
 "Загрузка весов нейросетевой модели для получения признаков / оценок на "
 "базе экспертных признаков"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 04ab66979cca42b299f9eea0d0e63134
+#: 18f86b6d25424b31a250a8b917658cbb
 msgid "[6]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: cec5a4de8c3a4dd0947b0b1268f8c4e0
+#: 9e75df70f2e7432f97c302eaf54caac1
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -440,29 +440,29 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:462
-#: 451058ae58354012b08bf910a485b493
+#: 2af57073dac54c2e9b48988823259cb2
 msgid ""
 "\\ **[2023-12-15 07:01:45] Загрузка весов нейросетевой модели для "
 "получения оценок по экспертным признакам (аудио модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:473
-#: cb5be25f16b24eb58bff9414c677866a
+#: 6c73255a561d4e6ba1c4fe8f6521710e
 msgid ""
 "\\ **[2023-12-15 07:01:45] Загрузка файла "
 "“weights_2022-05-05_11-27-55.h5” 100.0% …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:483
-#: 09e9493d97dd467e89cba3fa7a3c2780
+#: 1a901d758559491c987a5c456a99a3cf
 msgid "— Время выполнения: 0.226 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:495
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:862
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1317
-#: 2bf64e5912bf4494b1e37283ac79b421 2ca0dd43d53b471e8a668d33de050b1a
-#: e66cba9dd2b7467189f68589b05c282e
+#: 7180eb671efd427a8e4c3e2f85e51dc6 8db458588cc14e5aa60e6712a4175aa5
+#: b42e8b7afd6248f79a1d08bb5f06b91e
 msgid ""
 "Формирование нейросетевой архитектуры модели для получения признаков / "
 "оценок на базе нейросетевых признаков"
@@ -470,19 +470,19 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:497
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:547
-#: 8ca4603f240a463f947e41719354adb3 97d9feff8fee473099d3b9469911dfba
+#: 2c30da9c8e694779accf8c7d64ab3708 90799edfd0e44eb295661811a50d7a2a
 msgid ""
 "``_b5.audio_model_nn_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения признаков / оценок на базе нейросетевых признаков"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 665cb1e21000450297d64f190b06a785
+#: 7e9352c050b0428f8998dc0989c9a647
 msgid "[7]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 29f786e3013a4138aaab4a7aae63f08b
+#: 538663c7886840259cc04bb7927774d8
 msgid ""
 "res_load_audio_model_nn = _b5.load_audio_model_nn(\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
@@ -494,34 +494,34 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:523
-#: 0115e52bedde44dea483e5e6a7612ca9
+#: edb94ec150d94b099b664c6a48207b86
 msgid ""
 "\\ **[2023-12-15 07:01:45] Формирование нейросетевой архитектуры для "
 "получения оценок по нейросетевым признакам (аудио модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:533
-#: 4fdbb978eeb948b9af1b67ca130db6c1
+#: 0eadb925ce644075a9bd28df37584200
 msgid "— Время выполнения: 0.219 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:545
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:912
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1368
-#: 09054656df664a14a21f007fc870d735 7693ba6c44af4257a4b1eafb1315ff86
-#: dac2c5d0ef7548bb9ef5b5b5ea08f7c7
+#: 4cac0dd96ac84e43ba695b1f9f89a4f7 8fd1776dd9174058a04a0de002a4088c
+#: c1e75bcb3fda4675a470084ebdd40b46
 msgid ""
 "Загрузка весов нейросетевой модели для получения признаков / оценок на "
 "базе нейросетевых признаков"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 46ad65b8f52c4ed2ac8d48123d52abb0
+#: 280d60e5731a4d9892c58b69e29041af
 msgid "[8]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 9d04e113789440049549abb6ee449b80
+#: 08cf9d064b4a4a7189ebdf188e47adb6
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -540,44 +540,44 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:580
-#: 923da5ff2e4e46bb8080d33e808a542a
+#: 9e3b6fcf0f3649ae8226f2c4798241d4
 msgid ""
 "\\ **[2023-12-15 07:01:45] Загрузка весов нейросетевой модели для "
 "получения оценок по нейросетевым признакам (аудио модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:591
-#: 3ba71b73eb4245a6a153bde85dbe3f87
+#: 5d3a3afa89d34cda840b05cd51d1eb5a
 msgid ""
 "\\ **[2023-12-15 07:01:45] Загрузка файла "
 "“weights_2022-05-03_07-46-14.h5”**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:601
-#: 8528c44ae6f04859bc2ac2735f6dec17
+#: efbe58fdf1f64816ac3a8d214f2d83c9
 msgid "— Время выполнения: 0.328 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:613
-#: 33737036d73a4f9f87471fdac65ca28d
+#: 785f1578fe1e449ebc034e0a6df96814
 msgid "Анализ видео информации (формирование и загрузка весов моделей)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:627
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:678
-#: 943641d216724418858481a5180add95 e2f60d5e89b744cabbb37e8acf98c0b8
+#: cf3455e41a444185ad27ed19624ab98f e654a1abe3d34011bbe250cd45fddb61
 msgid ""
 "``_b5.video_model_hc_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения признаков / оценок на базе экспертных признаков"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 5f1e35cd96de466ea03733ff8b844ad2
+#: cb067bd042884922be93c1cac928051c
 msgid "[9]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: ceb1b0ced7cf423e8cc35eda821e759a
+#: e17a1a07b33747848d21dfb520ca5d2d
 msgid ""
 "res_load_video_model_hc = _b5.load_video_model_hc(\n"
 "    lang = lang,\n"
@@ -590,24 +590,24 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:654
-#: 3753d90b11f240c3851e68b8d44fa323
+#: bae0615c654949869d5076f620cfe316
 msgid ""
 "\\ **[2023-12-15 07:01:45] Формирование нейросетевой архитектуры модели "
 "для получения оценок по экспертным признакам (видео модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:664
-#: 48a1f6338ce142aaab0d3e9bf8072055
+#: 3583a75a60164f1bb1951090d5543654
 msgid "— Время выполнения: 0.252 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 08db27792f1d431db3010564041eb95e
+#: 51fd92a424c74245b84a5dd37dfb4c60
 msgid "[10]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 633d18bc0f374cbf93dc78da55944744
+#: ff8a3bc92f014b6ead3ad9649b81d438
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -626,44 +626,44 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:711
-#: 047f1e199d104b638d71e3a93ef9001a
+#: 35427ea2065348d8b32a5029569eea50
 msgid ""
 "\\ **[2023-12-15 07:01:46] Загрузка весов нейросетевой модели для "
 "получения оценок по экспертным признакам (видео модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:722
-#: 02add9bda03547509da4cf190a466695
+#: dd1b70223554441cb56bb4bccfc2ffa4
 msgid ""
 "\\ **[2023-12-15 07:01:46] Загрузка файла "
 "“weights_2022-08-27_18-53-35.h5” 100.0% …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:732
-#: ad150a7e9a374df8a216beb88ddc9123
+#: ac9edb80cf83440589a981b38070f34b
 msgid "— Время выполнения: 0.24 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:744
-#: 43f5b00141ef4f7ab2d6cb13df89e914
+#: de5aec2a8e9d4044a06f8343e6f186b3
 msgid "Формирование нейросетевой архитектуры для получения нейросетевых признаков"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:746
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:796
-#: 5a96f7458edd403eb3490af758ef1acb dbec3a3e732e4e80995ca5df5ba6841a
+#: 70dc1c543a3741a0847601ebb3904317 c1d8459661f34ea798b9e6808a02aab8
 msgid ""
 "``_b5.video_model_deep_fe_`` - Нейросетевая модель **tf.keras.Model** для"
 " получения нейросетевых признаков"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 98c1aaa7b2a4484ca08957919c474640
+#: 4df0d197f4f14eb48ef149a0ecf7d98f
 msgid "[11]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 7e7ed639f8ba47e8b9061f108e147c5c
+#: 8c831a6188a24f0480c135451fc26457
 msgid ""
 "res_load_video_model_deep_fe = _b5.load_video_model_deep_fe(\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
@@ -675,31 +675,31 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:772
-#: f7a79d89f79e4eafb6bc7a72ea7f1463
+#: f2f13e1596864bf9a39f67d4270076cc
 msgid ""
 "\\ **[2023-12-15 07:01:46] Формирование нейросетевой архитектуры для "
 "получения нейросетевых признаков (видео модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:782
-#: 70f63b0c412c4ae98dc4bb4d22770b13
+#: a4b45a6519254d58ab8e7255b2eff81f
 msgid "— Время выполнения: 0.794 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:794
-#: f2a5d4d5a02d4097b2fcdde80ce88ded
+#: 0e7f4c2afbb34853b14896a93150930f
 msgid ""
 "Загрузка весов нейросетевой модели для получения нейросетевых признаков "
 "(видео модальность)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: b2825b6534e34ea8bffbf3b8c22bf969
+#: 17d1ad2cdf204358ad922aaf600b5311
 msgid "[12]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 429ab496d21f4b9687d8b0d900c24c99
+#: adb54912f7dd45d99393995c488ae51c
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -719,39 +719,39 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:829
-#: 5b204808455f4b32a2603520ce496421
+#: fc04c6e635f640d7a71a003c8235aefa
 msgid ""
 "\\ **[2023-12-15 07:01:47] Загрузка весов нейросетевой модели для "
 "получения нейросетевых признаков (видео модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:840
-#: 75d5b3e64e9d48e69f5074edd170aa58
+#: c72cefc862a44bfe88371d53f36192cd
 msgid ""
 "\\ **[2023-12-15 07:01:50] Загрузка файла "
 "“weights_2022-11-01_12-27-07.h5” 100.0% …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:850
-#: e0d46dda60794df68c0d9cc375991452
+#: 83e1187b0e8b41f3bc395d92b12b0bb8
 msgid "— Время выполнения: 3.937 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:864
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:914
-#: 71c20655590847a0bb9b360d71a256d2 e8f8183735d04c5fac6a99110146a443
+#: b6296846399c4573b2d5d8a89b8c57d7 fba9c4e65ed7426f85180ce8dd898f47
 msgid ""
 "``_b5.video_model_nn_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения признаков / оценок на базе нейросетевых признаков"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 43c4b04638f44d2abf05388f090a2290
+#: 56e381b8d84644ceb80c0bed95685dde
 msgid "[13]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 2a9f3253ce3b4b039fe094654b839511
+#: a66df852e72248cc85e3cf35d92475aa
 msgid ""
 "res_load_video_model_nn = _b5.load_video_model_nn(\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
@@ -763,24 +763,24 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:890
-#: 157f6204cc914477aacadeb136342093
+#: 1a429ceeffa54c29b842578cb4be77d1
 msgid ""
 "\\ **[2023-12-15 07:01:51] Формирование нейросетевой архитектуры для "
 "получения оценок по нейросетевым признакам (видео модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:900
-#: 6ad62e673a2a4195b9ea76a3c87ecce1
+#: d9c5fc48a14c4ce78cbf57ea4e6f436d
 msgid "— Время выполнения: 0.707 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: df36b63e5afc4f3d809cb1edfff6af38
+#: a7685332b89644b1a27b4c3e9f5bfe7e
 msgid "[14]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 36cfc150418045c9915dbb7b260c7677
+#: 1ed5b3f0b5e84721848b23b0bec65616
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -799,14 +799,14 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:947
-#: 7e02ef66f4f44cd1b19834e41e34a1c7
+#: 30679749e3464fb4a0ced87cebb8d804
 msgid ""
 "\\ **[2023-12-15 07:01:51] Загрузка весов нейросетевой модели для "
 "получения оценок по нейросетевым признакам (видео модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:958
-#: 8d509497ea63441a9027f8557313b785
+#: b1622390d574467eabefc7f72d44a941
 msgid ""
 "\\ **[2023-12-15 07:01:51] Загрузка файла "
 "“weights_2022-03-22_16-31-48.h5”**"
@@ -814,27 +814,27 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:968
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1043
-#: 19b7444400fa436d884040266971603b 1d154ecc707e49b087cb359fcc299fde
+#: 4597bebe07fd428ab0b711fa344fd207 86696ab4ce9642a59cae9fb198d38cb0
 msgid "— Время выполнения: 0.166 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:980
-#: 60f32ecb3edf4bc3bf24b32b906b773a
+#: 754a62cd7e37443d8be1fcb7ad4fed3d
 msgid "Анализ текстовой информации (формирование и загрузка весов моделей)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:992
-#: 9faf75b39c5b4bc9a25c8f3d401fb5ec
+#: 855f7ed0c5b34f1cad4749b00f037381
 msgid "Загрузка словаря с экспертными признаками"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 77a7f92c4f064efab588156706286eb9
+#: da1ef77ecddc4156a903a1e451ce6429
 msgid "[15]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: d94c2e4c632b47abadb82cf5d6bc1a81
+#: 59bb0618419b4339a8820dee7d84174b
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -849,29 +849,29 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1022
-#: 767fb670a17c4623ad52cb95364a1415
+#: e4e9bec7f02a4c30bbe92cb74f2533a8
 msgid "\\ **[2023-12-15 07:01:51] Загрузка словаря с экспертными признаками …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1033
-#: 42a6e5a0caca4965ae1e18d2b22eaacc
+#: b9c7b777f2e1448697ce48e68ce9f103
 msgid "\\ **[2023-12-15 07:01:52] Загрузка файла “LIWC2007.txt” 100.0% …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1055
-#: c58e41edd6a74a518cf210b793a1fa39
+#: 7c4441dbb7ee422e97086284cd490dde
 msgid ""
 "Формирование токенизатора и нейросетевой модели машинного перевода (``RU "
 "-> EN``)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: c5382a5099e14895805fef1cc0169452
+#: 428f58673bc54a149e4817e528881a3e
 msgid "[16]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 6dafa74c219347e888a59cf5713762e8
+#: 9669eaad0d5f463c95d43b815e4ccfff
 msgid ""
 "res_setup_translation_model = _b5.setup_translation_model(\n"
 "    out = True, # Отображение\n"
@@ -881,31 +881,31 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1080
-#: c2bcfe3549f6402fbe71d84afb549543
+#: 23cbe278c12143a29f158b5de462698d
 msgid ""
 "\\ **[2023-12-15 07:01:52] Формирование токенизатора и нейросетевой "
 "модели машинного перевода …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1090
-#: 08ef747784d64e40ac4b5a45f07d941b
+#: 30c1bc815b9a4fc5b08ffa07287987c1
 msgid "— Время выполнения: 1.763 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1102
-#: 4e2a4e6ee12a4cd291e44951a86490ae
+#: 140ba249143c4d87abe5bd0366f2291c
 msgid ""
 "Формирование токенизатора и нейросетевой модели BERT (``для кодирования "
 "слов``)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 4dd6a222111e4b24b5593d1dfac6a4d6
+#: e91940fcaefd4da89c4c4086163814eb
 msgid "[17]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 2d948ba4079a4082b138398403d7cb5c
+#: 9a615cc5531c4551abd13c265f70de17
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -921,7 +921,7 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1132
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1154
-#: 0082903413ab414996c751ce33cbe6ec dd7831d7014046189a544731c709570b
+#: 297ece6d93814c168419d3c8b676e8ab f2c2f558d0fa4735936bf3bba1304d7f
 msgid ""
 "\\ **[2023-12-15 07:01:53] Формирование токенизатора и нейросетевой "
 "модели BERT …**"
@@ -929,38 +929,39 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1143
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1165
-#: 4768ba048af94762a72afb5ba7934ff7 6b9aa52988614e00aa3b317a8ac8bbef
+#: 10695cf6da1741f38bdf1071ec005afa 6f6ba287db234d258dbee125bec8f706
 msgid ""
 "\\ **[2023-12-15 07:01:55] Загрузка файла “bert-base-multilingual-"
 "cased.zip”**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1176
-#: a6e17ee64afd4e3b84a941b2a7663cac
+#: 5b22076775294cd898622b4436b65bd5
 msgid ""
 "\\ **[2023-12-15 07:01:55] Разархивирование архива “bert-base-"
 "multilingual-cased.zip” …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1186
-#: 40756abc92014a92ab64302d693a3000
+#: 54d0b842949a4f609149fe0ab9122d62
 msgid "— Время выполнения: 5.269 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1200
-#: 9ee0d019a50e40a68254a61de72f09af
+#: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1251
+#: 69e85e034ebf44cdb94bcba736dbba7a 9ea2207016c44a77986f09d38cb1863f
 msgid ""
 "``_b5.text_model_hc_`` - Нейросетевая модель **tf.keras.Model** для "
-"признаков / оценок на базе экспертных признаков"
+"получения признаков / оценок на базе экспертных признаков"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: b76d69c4869f487f9f7f6e3e4d5c1a8d
+#: c0a77d7ebd6244169f670c334c520ccd
 msgid "[18]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 8386dc7f3da847a6a0b446fa9f37a7d6
+#: 830d34b3073a4c0aa62753178e963309
 msgid ""
 "res_load_text_model_hc_fi = _b5.load_text_model_hc(\n"
 "    corpus = corpus, # Корпус для тестирования нейросетевой модели\n"
@@ -973,31 +974,24 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1227
-#: 1b9aafd06a1c48d9accfaf2ccc403e42
+#: b195627cf9a04b6eb0479e3bc4f7bf0d
 msgid ""
 "\\ **[2023-12-15 07:01:59] Формирование нейросетевой архитектуры модели "
 "для получения оценок по экспертным признакам (текстовая модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1237
-#: 3a1ab26cb6b34c2a884e82bf33eac0bd
+#: c251a5c28776461181409f99ba35d9e5
 msgid "— Время выполнения: 0.701 сек. —"
 msgstr ""
 
-#: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1251
-#: db94e480d8c641a5a5756d6fe99617b7
-msgid ""
-"``_b5.text_model_hc_`` - Нейросетевая модель **tf.keras.Model** для "
-"получения признаков / оценок на базе экспертных признаков"
-msgstr ""
-
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 86f25723c7ff4e6d8493b75e475e3cb9
+#: 2874acdf6ff24e668473c6a6650c5cac
 msgid "[19]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 177cbcc384714cebad098dac36cc06be
+#: f9bfb463a53f414aaa5f9ae3778d6b3c
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -1016,39 +1010,39 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1284
-#: 860a2e9349844456ad05fce8bbb8d6df
+#: edb1505e1e82419bb5ed4351d3a76052
 msgid ""
 "\\ **[2023-12-15 07:01:59] Загрузка весов нейросетевой модели для "
 "получения оценок по экспертным признакам (текстовая модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1295
-#: 7fb1468f855f4133bc3f989d61977d17
+#: b6d28e2dcafd47f8987c1512f2f35d06
 msgid ""
 "\\ **[2023-12-15 07:02:00] Загрузка файла "
 "“weights_2023-07-15_10-52-15.h5” 100.0% …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1305
-#: e4bad40c7cf5498cbcee0354287cdcb6
+#: cf96109a995b4f25a5ded6f01516d44a
 msgid "— Время выполнения: 0.278 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1319
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1370
-#: 3c5d111e123e42848abdba093793584e 56479b0f96ba4a8da245e260f8b8a00b
+#: 5241eaf840de4433a2739bb1e6c0d20a a54f68facabb44da81ab9979af17fd47
 msgid ""
 "``_b5.text_model_nn_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения признаков / оценок на базе нейросетевых признаков"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 1f63f5bc78d44637b438fa5bc5d65f57
+#: 1cd0eff494914b8eb230a6e781120a03
 msgid "[20]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 7b1f7fcc51ef4c24bbd5c4356c7f49bb
+#: 6b1fa81cfed54ab3a224e41b97045a04
 msgid ""
 "res_load_text_model_nn_fi = _b5.load_text_model_nn(\n"
 "    corpus = corpus, # Корпус для тестирования нейросетевой модели\n"
@@ -1061,24 +1055,24 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1346
-#: 655aef446e434abea2ba189378870e9c
+#: 45df52c1fdc84d62a12034bea3d02837
 msgid ""
 "\\ **[2023-12-15 07:02:00] Формирование нейросетевой архитектуры для "
 "получения оценок по нейросетевым признакам (текстовая модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1356
-#: dbc9084f95014d948235e46f502e52fe
+#: f903695378474030bc9ff8ddc8a920eb
 msgid "— Время выполнения: 0.286 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 2c82b06fe789475aaee35c7f518ff5eb
+#: ea553186f9e640598f5322432663a5d8
 msgid "[21]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: f0f35b8e528c419da5e4250e03f573e9
+#: 3370d7f2ce04401d9092db51f80ededd
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -1097,33 +1091,33 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1403
-#: d3357afc2b9448a5a64e0bfd00987dc0
+#: d6882bbfc2344a98b73323748b073ad9
 msgid ""
 "\\ **[2023-12-15 07:02:00] Загрузка весов нейросетевой модели для "
 "получения оценок по нейросетевым признакам (текстовая модальность) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1414
-#: 3d1b735b49884f2cb71be3bbd4b319bd
+#: c0ff7c03312e4416a00bc9de9a43a92d
 msgid ""
 "\\ **[2023-12-15 07:02:00] Загрузка файла "
 "“weights_2023-07-03_15-01-08.h5” 100.0% …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1424
-#: 4af1864bbf0e4fa9af687da8c8013e55
+#: 94498e2793e4455e99961c3745339223
 msgid "— Время выполнения: 0.42 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1436
-#: df9d425da4a44048867ecceed8154525
+#: fcd6bffefb764e88acec58b249ca8a95
 msgid ""
 "Анализ мультимодальной информации (формирование, загрузка весов моделей, "
 "получение оценок персональных качеств)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1448
-#: 8043e86faf0b44169decda503064438e
+#: b075e1e38a8d4f1ea4d86269f4fa01d0
 msgid ""
 "Формирование нейросетевой архитектуры модели для получения оценок "
 "персональных качеств"
@@ -1131,19 +1125,19 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1450
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1500
-#: 6bba44c60fe44f9385e964b80b3bd534 c831680125e04d8fb3da6ee7c77a0df0
+#: 35df17f038484f459ddb07239b1623e2 7d7165b3877642238e764d426b5a1537
 msgid ""
 "``_b5.avt_model_b5_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения оценок персональных качеств"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: c7de9cb217f94235afdb781ec92b4ee9
+#: 06bf5fa245d94423976015250bce7812
 msgid "[22]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 3a303d12bfa14052876e962eb463e24b
+#: 114b451291bd4862888a2b549f505d2e
 msgid ""
 "res_load_avt_model_b5 = _b5.load_avt_model_b5(\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "
@@ -1155,7 +1149,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1476
-#: 5ad8552408b84076996ee34dcdf70f3e
+#: 80057019ae9042e089cc95d423b90cbc
 msgid ""
 "\\ **[2023-12-15 07:02:00] Формирование нейросетевой архитектуры модели "
 "для получения оценок персональных качеств (мультимодальное объединение) "
@@ -1163,24 +1157,24 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1486
-#: ea6153bee62c434e8c6d4e7a3b7f51d0
+#: f2d6e3e3d3974247964ce6a7cbb03bbf
 msgid "— Время выполнения: 0.212 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1498
-#: 25e01cf7dba24a6f88272df6756ac7f4
+#: e59d075e6f7843199520e2322efde67d
 msgid ""
 "Загрузка весов нейросетевой модели для получения оценок персональных "
 "качеств"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 6e42efd9fd0243258ae73b05a9743588
+#: d3110d28626847d2846d2a247efb5eef
 msgid "[23]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 76d858d1eff34499b3ff09b01adc587c
+#: 09c89c1d9e8a416aa2241c677e2029cd
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -1199,46 +1193,46 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1533
-#: 8e694c0d62b44f97936a9dc3deab5f43
+#: 829e04564c234d6c8333596953e9f03f
 msgid ""
 "\\ **[2023-12-15 07:02:01] Загрузка весов нейросетевой модели для "
 "получения оценок персональных качеств (мультимодальное объединение) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1544
-#: aa455f3c638543c188df83e575a306e6
+#: dc66114934b64b7a9804498100cc7719
 msgid ""
 "\\ **[2023-12-15 07:02:01] Загрузка файла "
 "“avt_fi_2023-12-03_11-36-51.h5”**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1554
-#: 2582ad6db599494fa716eac6e32af27a
+#: a4411f979b3444e6a407cd816f5b9f53
 msgid "— Время выполнения: 0.295 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1566
-#: 90027ec01c774278876a4197d99cf567
+#: 0f8a6947219446f89cdf6b9dc74e3008
 msgid "Получение прогнозов (мультимодальное объединение)"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1568
-#: 49ac20852cdf4bff98a9c7b3c4cbb8eb
+#: c1b9e33f8dbd47f7814bcfa6c56d6032
 msgid "``_b5.df_files_`` - DataFrame с данными"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1569
-#: a6b21fbb28a0460480ede6401df08fea
+#: 91c38be828654a4892ed76e383fe8cfe
 msgid "``_b5.df_accuracy_`` - DataFrame с результатами вычисления точности"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 680352dac14b4ae8a03a29242b38d6a3 bf86a5cf20604ac3b8f3d7519daea6ec
+#: 81d99fd3b3d445f29f1d4267c3624ca9 e423ca50338c4806b8fa5bf065bff9c7
 msgid "[24]:"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:-1
-#: 203991f3ddc04db3b75d0069a5b493ad
+#: 9c548b5589ec4e49aff603b8083d4c0a
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_dataset_ = 'E:/Databases/FirstImpressionsV2/test' # "
@@ -1277,31 +1271,31 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1618
-#: 2825ebca5ac94df694cef2ed5ea4adeb
+#: 7f1b8a9e51c94f67866b067b95c247ba
 msgid ""
 "\\ **[2023-12-15 10:22:11] Извлечение признаков (экспертных и "
 "нейросетевых) из текста …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1629
-#: 23ea0f48a58744878f726c250423d33d
+#: f3df7c45a49a45f9892b99d0f3420fdf
 msgid ""
 "\\ **[2023-12-15 10:22:14] Получение прогнозов и вычисление точности "
 "(мультимодальное объединение) …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1631
-#: 82ef59bda4b840b891b2ef68b6cae58a
+#: 08e94b0537f8438eaa769f666a4591c0
 msgid "<p>"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1635
-#: 12c3b01f397a412583c93c0c506eb6df
+#: 89e18d7fb757470895ca036b4922c8c2
 msgid "2000 из 2000 (100.0%) … test80_25_Q4wOgixh7E.004.mp4 …"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1653
-#: 711fccf3bc7e49dfb996031048c55063
+#: 8ed2ee9963e64788a6fedc2c236cbff4
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -1615,7 +1609,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:1972
-#: 0b66aad69bda43d19437569a2b62223a
+#: 7d63db9a16d2433591cecb4872b09bb7
 msgid ""
 "<pre>\n"
 "                                                 Path  Openness  \\\n"
@@ -1687,7 +1681,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:2042
-#: 225922e613554f9489cd853ef3917b59
+#: 4fc762bc500e4b0b9a354f66c1918581
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "                                                 Path  Openness  "
@@ -1820,7 +1814,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:2113
-#: 05090eac8acd42ff86cc7e601cd29b61
+#: 0c7c763c760d42a7852c319b64a8adca
 msgid ""
 "                                                 Path  Openness  \\\n"
 "ID\n"
@@ -1890,14 +1884,14 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:2188
-#: 74c2a79cb3b34dd993490259e92cc17b
+#: 6a546049a55c47429006c05df566b9f8
 msgid ""
 "\\ **[2023-12-15 10:22:14] Точность по отдельным персональным качествам "
 "личности человека …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:2202
-#: 85042d99d6464f6185b75377613ac052
+#: b83a1ec0c8854f3f825b0f8bf87658ae
 msgid ""
 "<div>\n"
 "<style scoped>\n"
@@ -1959,7 +1953,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:2269
-#: f707a192ff1a4a41a2ff9fe9f69d3a8a
+#: 2f8d10bec4ec4d1c8fab97dfe7a1b3de
 msgid ""
 "<pre>\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
@@ -1975,7 +1969,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:2283
-#: e761188b149748d49213b5b8b5d07b91
+#: 0c86c845a67e427285ae8bc2c9db5322
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "          Openness  Conscientiousness  Extraversion  Agreeableness  "
@@ -1992,7 +1986,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:2298
-#: 64d5349201644ba49c5d0c2596d93bbe
+#: 26cf01f5ca33475e947cdf434b7f0a04
 msgid ""
 "          Openness  Conscientiousness  Extraversion  Agreeableness  \\\n"
 "Metrics\n"
@@ -2006,24 +2000,24 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:2317
-#: 97096dcfc6d540dab43097812fea6f43
+#: 279eb0ef7a684f1797065706f07207fa
 msgid ""
 "\\ **[2023-12-15 10:22:14] Средняя средних абсолютных ошибок: 0.0729, "
 "средняя точность: 0.9271 …**"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:2328
-#: e50b3cdaf8de4c049566306da35e31e9
+#: e1a67b396a584834b14bdebe092e9d0a
 msgid "Лог файлы успешно сохранены …"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:2339
-#: 88874f970036418f94f7e805f7a9aab6
+#: 5fc11b806c944015b78edf134953ba15
 msgid "— Время выполнения: 12013.03 сек. —"
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:2351
-#: 2b9cb8c82b98443baf2d499a6ef87c4d
+#: 0bc4338efef5451bb09d378f821581a7
 msgid ""
 "<pre>\n"
 "True\n"
@@ -2031,7 +2025,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:2357
-#: 0b9c21db7c554242b51b83c440f80d3f
+#: d7f853f6088e4f4bb7378e159bbc5428
 msgid ""
 "\\begin{sphinxVerbatim}[commandchars=\\\\\\{\\}]\n"
 "True\n"
@@ -2039,7 +2033,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_avt_union_predictions.ipynb:2364
-#: 29058f9026654f22adfa657cdb75feea
+#: 0179f6c583704dbdbe73f45ef90ae477
 msgid "True"
 msgstr ""
 
@@ -2053,5 +2047,17 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "9a7dc24180f746a1b15093074e124a63"
+#~ msgstr ""
+
+#~ msgid "|b977763bb1cd450d84d6544d3ff9737f|"
+#~ msgstr ""
+
+#~ msgid "b977763bb1cd450d84d6544d3ff9737f"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``_b5.text_model_hc_`` - Нейросетевая модель "
+#~ "**tf.keras.Model** для признаков / оценок "
+#~ "на базе экспертных признаков"
 #~ msgstr ""
 
