@@ -2037,27 +2037,3 @@ msgstr ""
 msgid "True"
 msgstr ""
 
-#~ msgid "|a346e08147454dc697079a6694da81d0|"
-#~ msgstr ""
-
-#~ msgid "a346e08147454dc697079a6694da81d0"
-#~ msgstr ""
-
-#~ msgid "|9a7dc24180f746a1b15093074e124a63|"
-#~ msgstr ""
-
-#~ msgid "9a7dc24180f746a1b15093074e124a63"
-#~ msgstr ""
-
-#~ msgid "|b977763bb1cd450d84d6544d3ff9737f|"
-#~ msgstr ""
-
-#~ msgid "b977763bb1cd450d84d6544d3ff9737f"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "``_b5.text_model_hc_`` - Нейросетевая модель "
-#~ "**tf.keras.Model** для признаков / оценок "
-#~ "на базе экспертных признаков"
-#~ msgstr ""
-

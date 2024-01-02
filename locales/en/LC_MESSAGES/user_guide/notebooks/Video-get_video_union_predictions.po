@@ -1767,9 +1767,4 @@ msgstr "Log files saved successfully …"
 msgid "— Время выполнения: 4762.254 сек. —"
 msgstr "— Runtime: 4762.254 sec. —"
 
-#~ msgid "|47fe455281c34c7981fb49749b0b127a|"
-#~ msgstr ""
-
-#~ msgid "47fe455281c34c7981fb49749b0b127a"
-#~ msgstr ""
 

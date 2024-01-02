@@ -35,7 +35,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:17
 #: b58caee3edfc4c4fbff2fb41fcc49f9c
-#, fuzzy
 msgid ""
 "``_b5.avt_model_b5_`` - Нейросетевая модель **tf.keras.Model** для "
 "получения результатов оценки персональных качеств"
@@ -136,7 +135,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-load_avt_model_oceanai.ipynb:-1
 #: 27ba1755a4504cc789da5afa3b6ebac1
-#, fuzzy
 msgid ""
 "res_load_avt_model_b5 = _b5.load_avt_model_b5(\n"
 "    show_summary = False, # Отображение сформированной нейросетевой "

@@ -371,7 +371,6 @@ msgstr "— Runtime: 0.006 sec. —"
 
 #: ../../source/user_guide/notebooks/Prediction-get_av_union_predictions.ipynb:362
 #: a8f251c606154501bf0e62bb04498135
-#, fuzzy
 msgid "Анализ аудио информации (формирование и загрузка весов моделей)"
 msgstr "Analysing audio information (forming model and loading model weights)"
 
@@ -1110,7 +1109,6 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Prediction-get_av_union_predictions.ipynb:-1
 #: ca5db10ac07845e5bcc47465d77e0289
-#, fuzzy
 msgid ""
 "# Настройки ядра\n"
 "_b5.path_to_save_ = './models' # Директория для сохранения файла\n"
@@ -2087,9 +2085,4 @@ msgstr ""
 msgid "True"
 msgstr ""
 
-#~ msgid "|9a0515ab715f4bb88b22f66c0cf37780|"
-#~ msgstr ""
-
-#~ msgid "9a0515ab715f4bb88b22f66c0cf37780"
-#~ msgstr ""
 

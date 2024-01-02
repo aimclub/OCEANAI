@@ -33,12 +33,11 @@ msgstr ""
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:17
 #: 921a6e8c3a344c5db61e55849ef8464e
-#, fuzzy
 msgid ""
 "``_b5.text_models_b5_`` - Нейросетевые модели **tf.keras.Model** для "
 "получения оценок персональных качеств"
 msgstr ""
-"``_b5.text_models_b5_`` - Neural network models **tf.keras.Model** for "
+"``_b5.text_model_b5_`` - Neural network model **tf.keras.Model** for "
 "obtaining the personality traits scores"
 
 #: ../../source/user_guide/notebooks/Text-load_text_model_oceanai.ipynb:29
