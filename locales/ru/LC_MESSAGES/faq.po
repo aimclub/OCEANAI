@@ -59,16 +59,3 @@ msgid ""
 "*Да, для этого нужно перейти по* `ссылке "
 "<https://pypi.org/project/oceanai>`_."
 msgstr ""
-
-#~ msgid "Это список часто задаваемых вопросов о `OCEANAI` и ответов на них."
-#~ msgstr ""
-
-#~ msgid "`OCEANAI` это?"
-#~ msgstr ""
-
-#~ msgid "Почему библиотека называется `OCEANAI`?"
-#~ msgstr ""
-
-#~ msgid "Можно ли установить `OCEANAI` с помошью pip?"
-#~ msgstr ""
-
