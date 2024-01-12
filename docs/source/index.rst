@@ -77,7 +77,7 @@
 
 Библиотека `OCEAN-AI <https://oceanai.readthedocs.io/ru/latest/>`_ была апробирована на двух корпусах:
 
-#. Общедоступном и крупномаштабном корпусе `First Empressions V2 <https://chalearnlap.cvc.uab.cat/dataset/24/description/>`_.
+#. Общедоступном и крупномаштабном корпусе `First Impressions V2 <https://chalearnlap.cvc.uab.cat/dataset/24/description/>`_.
 #. На первом общедоступном рускоязычном мультимодальном корпусе для оценки персональных качеств - `Multimodal Personality Traits Assessment (MuPTA) Corpus <https://hci.nw.ru/ru/pages/mupta-corpus>`_.
 
 -----
