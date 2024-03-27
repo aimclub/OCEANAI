@@ -29,3 +29,4 @@ torch == 2.0.1
 torchaudio == 2.0.2
 oceanai>=1.0.0a20
 sacremoses>=0.0.1
+gradio>=4.23.0
