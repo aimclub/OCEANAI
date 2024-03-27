@@ -86,7 +86,7 @@ class GFL(tf.keras.layers.Layer):
 
     def compute_output_shape(self, input_shape):
         assert isinstance(input_shape, list)
-        return (int(input_shape[0][0]), self.output_dim)
+        return [input_shape[0][0], self.output_dim]
 
     def get_config(self):
         config = {

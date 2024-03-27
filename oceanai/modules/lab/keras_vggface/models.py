@@ -38,15 +38,15 @@ def resnet_identity_block(input_tensor, kernel_size, filters, stage, block, bias
     conv3_name = "conv" + str(stage) + "_" + str(block) + "_3x3"
 
     x = Conv2D(filters1, (1, 1), use_bias=bias, name=conv1_reduce_name)(input_tensor)
-    x = BatchNormalization(axis=bn_axis, name=conv1_reduce_name + "/bn")(x)
+    x = BatchNormalization(axis=bn_axis, name=conv1_reduce_name + "_bn")(x)
     x = Activation("relu")(x)
 
     x = Conv2D(filters2, kernel_size, use_bias=bias, padding="same", name=conv3_name)(x)
-    x = BatchNormalization(axis=bn_axis, name=conv3_name + "/bn")(x)
+    x = BatchNormalization(axis=bn_axis, name=conv3_name + "_bn")(x)
     x = Activation("relu")(x)
 
     x = Conv2D(filters3, (1, 1), use_bias=bias, name=conv1_increase_name)(x)
-    x = BatchNormalization(axis=bn_axis, name=conv1_increase_name + "/bn")(x)
+    x = BatchNormalization(axis=bn_axis, name=conv1_increase_name + "_bn")(x)
 
     x = layers.add([x, input_tensor])
     x = Activation("relu")(x)
@@ -65,18 +65,18 @@ def resnet_conv_block(input_tensor, kernel_size, filters, stage, block, strides=
     conv3_name = "conv" + str(stage) + "_" + str(block) + "_3x3"
 
     x = Conv2D(filters1, (1, 1), strides=strides, use_bias=bias, name=conv1_reduce_name)(input_tensor)
-    x = BatchNormalization(axis=bn_axis, name=conv1_reduce_name + "/bn")(x)
+    x = BatchNormalization(axis=bn_axis, name=conv1_reduce_name + "_bn")(x)
     x = Activation("relu")(x)
 
     x = Conv2D(filters2, kernel_size, padding="same", use_bias=bias, name=conv3_name)(x)
-    x = BatchNormalization(axis=bn_axis, name=conv3_name + "/bn")(x)
+    x = BatchNormalization(axis=bn_axis, name=conv3_name + "_bn")(x)
     x = Activation("relu")(x)
 
     x = Conv2D(filters3, (1, 1), name=conv1_increase_name, use_bias=bias)(x)
-    x = BatchNormalization(axis=bn_axis, name=conv1_increase_name + "/bn")(x)
+    x = BatchNormalization(axis=bn_axis, name=conv1_increase_name + "_bn")(x)
 
     shortcut = Conv2D(filters3, (1, 1), strides=strides, use_bias=bias, name=conv1_proj_name)(input_tensor)
-    shortcut = BatchNormalization(axis=bn_axis, name=conv1_proj_name + "/bn")(shortcut)
+    shortcut = BatchNormalization(axis=bn_axis, name=conv1_proj_name + "_bn")(shortcut)
 
     x = layers.add([x, shortcut])
     x = Activation("relu")(x)
@@ -100,8 +100,8 @@ def RESNET50(include_top=True, weights="vggface", input_shape=None, pooling=None
     else:
         bn_axis = 1
 
-    x = Conv2D(64, (7, 7), use_bias=False, strides=(2, 2), padding="same", name="conv1/7x7_s2")(img_input)
-    x = BatchNormalization(axis=bn_axis, name="conv1/7x7_s2/bn")(x)
+    x = Conv2D(64, (7, 7), use_bias=False, strides=(2, 2), padding="same", name="conv1_7x7_s2")(img_input)
+    x = BatchNormalization(axis=bn_axis, name="conv1_7x7_s2_bn")(x)
     x = Activation("relu")(x)
     x = MaxPooling2D((3, 3), strides=(2, 2))(x)
 

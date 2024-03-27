@@ -23,6 +23,7 @@ import requests  # Отправка HTTP запросов
 import numpy as np  # Научные вычисления
 import pandas as pd  # Обработка и анализ данных
 import math
+import gradio
 
 from urllib.parse import urlparse
 from urllib.error import URLError
@@ -163,7 +164,7 @@ class Video(VideoMessages):
         # ----------------------- Только для внутреннего использования внутри класса
 
         # Поддерживаемые видео форматы
-        self.__supported_video_formats: List[str] = ["mp4", "mov"]
+        self.__supported_video_formats: List[str] = ["mp4", "mov", "avi"]
 
         self.__mp_face_mesh: ModuleType = mp.solutions.face_mesh  # 468 3D-ориентиров лица
         self.__mp_drawing: ModuleType = mp.solutions.drawing_utils  # Утилиты MediaPipe
@@ -1442,8 +1443,7 @@ class Video(VideoMessages):
         try:
             # Проверка аргументов
             if (
-                type(path) is not str
-                or not path
+                (type(path) is not str or not path) and (type(path) is not gradio.utils.NamedString)
                 or type(reduction_fps) is not int
                 or reduction_fps < 1
                 or type(window) is not int

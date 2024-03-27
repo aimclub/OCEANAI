@@ -26,6 +26,7 @@ import opensmile  # Анализ, обработка и классификаци
 import librosa  # Обработка аудио
 import audioread  # Декодирование звука
 import math
+import gradio
 
 from urllib.parse import urlparse
 from urllib.error import URLError
@@ -1181,8 +1182,7 @@ class Audio(AudioMessages):
         try:
             # Проверка аргументов
             if (
-                type(path) is not str
-                or not path
+                (type(path) is not str or not path) and (type(path) is not gradio.utils.NamedString)
                 or type(sr) is not int
                 or sr < 1
                 or ((type(window) is not int or window < 1) and (type(window) is not float or window <= 0))

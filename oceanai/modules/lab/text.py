@@ -26,6 +26,7 @@ import pandas as pd  # Обработка и анализ данных
 import subprocess
 import torchaudio  # Работа с аудио от Facebook
 import re
+import gradio
 
 from urllib.error import URLError
 from sklearn.metrics import mean_absolute_error
@@ -40,6 +41,8 @@ from transformers import (
     BertTokenizer,
     TFBertModel,
 )
+
+from keras import backend as K
 
 from urllib.parse import urlparse
 from pathlib import Path  # Работа с путями в файловой системе
@@ -934,8 +937,7 @@ class Text(TextMessages):
         try:
             # Проверка аргументов
             if (
-                type(path) is not str
-                or not path
+                (type(path) is not str or not path) and (type(path) is not gradio.utils.NamedString)
                 or type(asr) is not bool
                 or not isinstance(lang, str)
                 or lang not in self.__lang_traslate
@@ -1111,21 +1113,31 @@ class Text(TextMessages):
             else:
                 input_shape = (89, 64)
 
-            input_lstm = tf.keras.Input(shape=input_shape, name="model_hc/input")
+            input_lstm = tf.keras.Input(shape=input_shape, name="model_hc_input")
 
             x_lstm = tf.keras.layers.Bidirectional(
-                tf.keras.layers.LSTM(32, return_sequences=True), name="model_hc/bilstm_1"
+                tf.keras.layers.LSTM(32, return_sequences=True), name="model_hc_bilstm_1"
             )(input_lstm)
 
-            x_attention = Attention(use_scale=False, score_mode="dot", name="model_hc/attention")(x_lstm, x_lstm)
+            x_attention = Attention(use_scale=False, score_mode="dot", name="model_hc_attention")(x_lstm, x_lstm)
 
-            x_dence = tf.keras.layers.Dense(32 * 2, name="model_hc/dence_2", activation="relu")(input_lstm)
+            x_dence = tf.keras.layers.Dense(32 * 2, name="model_hc_dence_2", activation="relu")(input_lstm)
             x_dence = tf.keras.layers.Bidirectional(
-                tf.keras.layers.LSTM(32, return_sequences=True), name="model_hc/bilstm_2"
+                tf.keras.layers.LSTM(32, return_sequences=True), name="model_hc_bilstm_2"
             )(x_dence)
 
             x = tf.keras.layers.Add()([x_lstm, x_attention, x_dence])
-            x = Addition(name="model_hc/add")(x)
+
+            # m = tf.reduce_mean(x, axis=1)
+            # s = tf.reduce_std(x, axis=1)
+            # m = tf.keras.backend.mean(x, axis=1)
+            # s = tf.keras.backend.std(x, axis=1)
+        # print('add', K.concatenate((m, s), axis=1).shape)
+            # x = tf.concate((m, s), axis=1)
+
+            # print(x.shape)
+
+            x = Addition(name="model_hc_add")(x)
 
             x = tf.keras.layers.Dense(5, activation="sigmoid")(x)
             self._text_model_hc = tf.keras.Model(input_lstm, outputs=x, name="model_hc")
@@ -1194,17 +1206,17 @@ class Text(TextMessages):
             else:
                 input_shape = (104, 768)
 
-            input_lstm = tf.keras.Input(shape=input_shape, name="model_nn/input")
+            input_lstm = tf.keras.Input(shape=input_shape, name="model_nn_input")
 
             x = tf.keras.layers.Bidirectional(
-                tf.keras.layers.LSTM(32, return_sequences=True), name="model_nn/bilstm_1"
+                tf.keras.layers.LSTM(32, return_sequences=True), name="model_nn_bilstm_1"
             )(input_lstm)
 
-            x = Attention(use_scale=False, score_mode="dot", name="model_nn/attention")(x, x)
+            x = Attention(use_scale=False, score_mode="dot", name="model_nn_attention")(x, x)
 
-            x = tf.keras.layers.Dense(128, name="model_nn/dence_2")(x)
-            x = Addition(name="model_nn/add")(x)
-            x = tf.keras.layers.Dense(128, name="model_nn/dence_3")(x)
+            x = tf.keras.layers.Dense(128, name="model_nn_dence_2")(x)
+            x = Addition(name="model_nn_add")(x)
+            x = tf.keras.layers.Dense(128, name="model_nn_dence_3")(x)
 
             x = tf.keras.layers.Dense(5, activation="sigmoid")(x)
             self._text_model_nn = tf.keras.Model(input_lstm, outputs=x, name="model_nn")
@@ -1294,7 +1306,7 @@ class Text(TextMessages):
                 self._text_model_hc.load_weights(self._url_last_filename)
                 self._text_model_hc = tf.keras.models.Model(
                     inputs=self._text_model_hc.input,
-                    outputs=[self._text_model_hc.output, self._text_model_hc.get_layer("model_hc/add").output],
+                    outputs=[self._text_model_hc.output, self._text_model_hc.get_layer("model_hc_add").output],
                 )
 
             except Exception:
@@ -1332,7 +1344,7 @@ class Text(TextMessages):
                 self._text_model_nn.load_weights(self._url_last_filename)
                 self._text_model_nn = tf.keras.models.Model(
                     inputs=self._text_model_nn.input,
-                    outputs=[self._text_model_nn.output, self._text_model_nn.get_layer("model_nn/dence_3").output],
+                    outputs=[self._text_model_nn.output, self._text_model_nn.get_layer("model_nn_dence_3").output],
                 )
             except Exception:
                 self._error(self._model_text_nn_not_formation, out=out)
