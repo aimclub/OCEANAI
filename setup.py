@@ -24,7 +24,6 @@ REQUIRED_PACKAGES = [
     "audioread >= 3.0.0",
     "scikit-learn >= 1.1.3",
     "opencv-contrib-python >= 4.6.0.66",
-    "pymediainfo >= 6.0.1",
     "mediapipe >= 0.9.0",
     "liwc >= 0.5.0",
     "transformers >= 4.36.0",
@@ -32,6 +31,7 @@ REQUIRED_PACKAGES = [
     "torch == 2.0.1",
     "torchaudio == 2.0.2",
     "sacremoses >= 0.0.1",
+    "gradio >= 4.24.0",
 ]
 
 CLASSIFIERS = """\

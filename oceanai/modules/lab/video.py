@@ -30,7 +30,8 @@ from urllib.error import URLError
 from pathlib import Path  # Работа с путями в файловой системе
 from scipy.spatial import distance
 from scipy import stats
-from pymediainfo import MediaInfo  # Получение meta данных из медиафайлов
+
+# from pymediainfo import MediaInfo  # Получение meta данных из медиафайлов
 from datetime import datetime  # Работа со временем
 from sklearn.metrics import mean_absolute_error
 
@@ -215,38 +216,38 @@ class Video(VideoMessages):
         ]
 
         self.__coords_face_mesh_mupta: List[int] = [
-            0, 
-            1, 
-            386, 
-            133, 
-            6, 
-            8, 
-            267, 
-            13, 
-            14, 
-            17, 
-            274, 
-            145, 
-            276, 
-            152, 
-            282, 
-            411, 
-            285, 
-            159, 
-            291, 
-            37, 
-            299, 
-            46, 
-            52, 
-            55, 
-            187, 
-            61, 
-            69, 
-            331, 
-            334, 
-            336, 
-            102, 
-            105, 
+            0,
+            1,
+            386,
+            133,
+            6,
+            8,
+            267,
+            13,
+            14,
+            17,
+            274,
+            145,
+            276,
+            152,
+            282,
+            411,
+            285,
+            159,
+            291,
+            37,
+            299,
+            46,
+            52,
+            55,
+            187,
+            61,
+            69,
+            331,
+            334,
+            336,
+            102,
+            105,
             362,
         ]
 
@@ -276,7 +277,7 @@ class Video(VideoMessages):
             [61, 133],
             [386, 374],
             [159, 145],
-            [69, 105], 
+            [69, 105],
             [69, 107],
             [299, 336],
             [299, 334],
@@ -310,7 +311,7 @@ class Video(VideoMessages):
             [61, 133],
             [386, 274],
             [159, 145],
-            [69, 105], 
+            [69, 105],
             [69, 145],
             [299, 336],
             [299, 334],
@@ -1191,9 +1192,7 @@ class Video(VideoMessages):
 
             return concat
 
-    def __load_video_model_b5(
-        self, show_summary: bool = False, out: bool = True
-    ) -> Optional[tf.keras.Model]:
+    def __load_video_model_b5(self, show_summary: bool = False, out: bool = True) -> Optional[tf.keras.Model]:
         """Формирование нейросетевой архитектуры модели для получения результата оценки персонального качества
 
         .. note::
@@ -1443,7 +1442,8 @@ class Video(VideoMessages):
         try:
             # Проверка аргументов
             if (
-                (type(path) is not str or not path) and (type(path) is not gradio.utils.NamedString)
+                (type(path) is not str or not path)
+                and (type(path) is not gradio.utils.NamedString)
                 or type(reduction_fps) is not int
                 or reduction_fps < 1
                 or type(window) is not int
@@ -1502,383 +1502,373 @@ class Video(VideoMessages):
                     self._other_error(self._unknown_err, out=out)
                     return np.empty([]), np.empty([])
                 else:
-                    metadata = MediaInfo.parse(path).to_data()  # Meta данные
+                    # metadata = MediaInfo.parse(path).to_data()  # Meta данные
 
-                    media_info = {}  # Словарь для meta данных
+                    # media_info = {}  # Словарь для meta данных
 
-                    # Проход по всем meta словарям
-                    for track in metadata["tracks"]:
-                        # Извлечение meta данных
-                        if track["track_type"] in [*self._type_meta_info]:
-                            media_info[track["track_type"]] = {}  # Словарь для meta данных определенного формата
+                    # # Проход по всем meta словарям
+                    # for track in metadata["tracks"]:
+                    #     # Извлечение meta данных
+                    #     if track["track_type"] in [*self._type_meta_info]:
+                    #         media_info[track["track_type"]] = {}  # Словарь для meta данных определенного формата
 
-                            # Проход по всем необходимым meta данным
-                            for i, curr_necessary in enumerate(self._type_meta_info[track["track_type"]]):
-                                try:
-                                    val = track[curr_necessary]  # Текущее значение
-                                except Exception:
-                                    continue
-                                else:
-                                    try:
-                                        if curr_necessary == "encoded_date":
-                                            val = datetime.strptime(val.replace("UTC ", ""), "%Y-%m-%d %H:%M:%S")
-                                        if (
-                                            curr_necessary == "frame_rate"
-                                            or curr_necessary == "minimum_frame_rate"
-                                            or curr_necessary == "maximum_frame_rate"
-                                        ):
-                                            val = float(val)
-                                    except Exception:
-                                        continue
+                    #         # Проход по всем необходимым meta данным
+                    #         for i, curr_necessary in enumerate(self._type_meta_info[track["track_type"]]):
+                    #             try:
+                    #                 val = track[curr_necessary]  # Текущее значение
+                    #             except Exception:
+                    #                 continue
+                    #             else:
+                    #                 try:
+                    #                     if curr_necessary == "encoded_date":
+                    #                         val = datetime.strptime(val.replace("UTC ", ""), "%Y-%m-%d %H:%M:%S")
+                    #                     if (
+                    #                         curr_necessary == "frame_rate"
+                    #                         or curr_necessary == "minimum_frame_rate"
+                    #                         or curr_necessary == "maximum_frame_rate"
+                    #                     ):
+                    #                         val = float(val)
+                    #                 except Exception:
+                    #                     continue
 
-                                    # Список в строку
-                                    if type(val) is list:
-                                        if len(val) < 2:
-                                            val = val[0]
-                                        else:
-                                            val = ", ".join([str(elem) for elem in val])
+                    #                 # Список в строку
+                    #                 if type(val) is list:
+                    #                     if len(val) < 2:
+                    #                         val = val[0]
+                    #                     else:
+                    #                         val = ", ".join([str(elem) for elem in val])
 
-                                    media_info[track["track_type"]][curr_necessary] = val
+                    #                 media_info[track["track_type"]][curr_necessary] = val
+
+                    # try:
+                    #     # Всего кадров в видеопотоке
+                    #     all_frames = int(media_info["Video"]["duration"] / 1000 * media_info["Video"]["frame_rate"])
+                    # except Exception:
+                    #     all_frames = 0
+
+                    # try:
+                    #     if all_frames == 0:
+                    #         raise ValueError
+                    # except ValueError:
+                    #     self._other_error(self._all_frames_is_zero.format(self._info_wrapper(str(all_frames))), out=out)
+                    #     return np.empty([]), np.empty([])
+                    # except Exception:
+                    #     self._other_error(self._unknown_err, out=out)
+                    #     return np.empty([]), np.empty([])
+                    # else:
+                    cap = cv2.VideoCapture(path)  # Захват видеофайла для чтения
+                    width_video = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))  # Ширина кадров в видеопотоке
+                    height_video = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))  # Высота кадров в видеопотоке
+                    all_frames_cv2 = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))  # # Всего кадров в видеопотоке
+
+                    fps_cv2 = np.round(cap.get(cv2.CAP_PROP_FPS))  # Частота кадров (FPS)
+
+                    # Вычисление коэффициента изменения размера изображения
+                    reshape_img_coef = self.__calc_reshape_img_coef(
+                        shape=[width_video, height_video], new_shape=self.__bndbox_face_size, out=False
+                    )
 
                     try:
-                        # Всего кадров в видеопотоке
-                        all_frames = int(media_info["Video"]["duration"] / 1000 * media_info["Video"]["frame_rate"])
-                    except Exception:
-                        all_frames = 0
-
-                    try:
-                        if all_frames == 0:
+                        if reshape_img_coef == -1:
                             raise ValueError
                     except ValueError:
-                        self._other_error(self._all_frames_is_zero.format(self._info_wrapper(str(all_frames))), out=out)
-                        return np.empty([]), np.empty([])
-                    except Exception:
-                        self._other_error(self._unknown_err, out=out)
+                        self._other_error(self._calc_reshape_img_coef_error, out=out)
                         return np.empty([]), np.empty([])
                     else:
-                        cap = cv2.VideoCapture(path)  # Захват видеофайла для чтения
-                        width_video = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))  # Ширина кадров в видеопотоке
-                        height_video = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))  # Высота кадров в видеопотоке
-                        all_frames_cv2 = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))  # # Всего кадров в видеопотоке
+                        # Прореживание кадров
+                        if reduction_fps > fps_cv2:
+                            reduction_fps = fps_cv2
+                        # Всего кадров после прореживания
+                        all_frms_reduct = all_frames_cv2 / (fps_cv2 / reduction_fps)
 
-                        fps_cv2 = np.round(cap.get(cv2.CAP_PROP_FPS))  # Частота кадров (FPS)
-
-                        # Вычисление коэффициента изменения размера изображения
-                        reshape_img_coef = self.__calc_reshape_img_coef(
-                            shape=[width_video, height_video], new_shape=self.__bndbox_face_size, out=False
+                        # Индексы кадров, которые останутся после прореживания
+                        idx_reduction_frames = list(
+                            map(
+                                self._round_math,
+                                np.arange(0, all_frames_cv2, all_frames_cv2 / all_frms_reduct, dtype=float),
+                            )
                         )
 
-                        try:
-                            if reshape_img_coef == -1:
-                                raise ValueError
-                        except ValueError:
-                            self._other_error(self._calc_reshape_img_coef_error, out=out)
-                            return np.empty([]), np.empty([])
-                        else:
-                            # Прореживание кадров
-                            if reduction_fps > fps_cv2:
-                                reduction_fps = fps_cv2
-                            # Всего кадров после прореживания
-                            all_frms_reduct = all_frames_cv2 / (fps_cv2 / reduction_fps)
+                        def alignment_procedure(left_eye: List[int], right_eye: List[int]) -> float:
+                            """Выравнивание угла наклона головы относительно центров глаз
 
-                            # Индексы кадров, которые останутся после прореживания
-                            idx_reduction_frames = list(
-                                map(
-                                    self._round_math,
-                                    np.arange(0, all_frames_cv2, all_frames_cv2 / all_frms_reduct, dtype=float),
-                                )
+                            .. note::
+                                внутренняя функция
+
+                            Args:
+                                left_eye (List[int]): Координаты центра левого глаза
+                                right_eye (List[int]): Координаты центра правого глаза
+
+                            Returns:
+                                float: Градус расхождения центров глаз
+                            """
+
+                            left_eye_x, left_eye_y = left_eye
+                            right_eye_x, right_eye_y = right_eye
+
+                            if left_eye_y > right_eye_y:
+                                point_3rd = (right_eye_x, left_eye_y)
+                                direction = -1
+                            else:
+                                point_3rd = (left_eye_x, right_eye_y)
+                                direction = 1
+
+                            a = distance.euclidean(np.array(left_eye), np.array(point_3rd))
+                            b = distance.euclidean(np.array(right_eye), np.array(point_3rd))
+                            c = distance.euclidean(np.array(right_eye), np.array(left_eye))
+
+                            if b != 0 and c != 0:
+                                cos_a = (b * b + c * c - a * a) / (2 * b * c)
+                                angle = np.arccos(cos_a)
+                                angle = (angle * 180) / math.pi
+
+                                if direction == -1:
+                                    angle = 90 - angle
+                            else:
+                                angle = 0
+
+                            return angle
+
+                        cnt_frame = 0  # Счетчик кадров
+                        vt, pt = self.__mp_drawing._VISIBILITY_THRESHOLD, self.__mp_drawing._PRESENCE_THRESHOLD
+
+                        hcs = []  # Набор экспертных признаков
+                        bndbox_faces = []  # Области с лицами
+
+                        # Получение 468 3D-ориентиров лица
+                        with self.__mp_face_mesh.FaceMesh(
+                            max_num_faces=1,  # Максимальное количество лиц для обнаружения
+                            # Необходимо ли дополнительно уточнять координаты ориентиров вокруг глаз и губ
+                            # и выводить дополнительные ориентиры вокруг радужной оболочки
+                            refine_landmarks=True,
+                            # Минимальное значение достоверности из модели обнаружения лиц,
+                            # при котором обнаружение считается успешным
+                            min_detection_confidence=0.5,
+                            # Минимальное значение достоверности из модели отслеживания ориентиров для того,
+                            # чтобы ориентиры лиц считались успешно отслеженными
+                            min_tracking_confidence=0.5,
+                        ) as face_mesh:
+                            # Проход по всем кадрам видеопотока
+                            while cap.isOpened():
+                                _, frame = cap.read()  # Захват, декодирование и возврат кадра
+
+                                if frame is None:
+                                    break  # Кадр не найден
+
+                                if cnt_frame in idx_reduction_frames:
+                                    # Запись недоступна (увеличение производительности)
+                                    frame.flags.writeable = False
+                                    frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+                                    results = face_mesh.process(frame)
+                                    # Запись доступна
+                                    frame.flags.writeable = True
+
+                                    # Найдены 468 3D-ориентиров лица
+                                    if results.multi_face_landmarks:
+                                        # Проход по всем лицам
+                                        for idx_face, face_landmarks in enumerate(results.multi_face_landmarks):
+                                            idx_to_coors = {}  # Координаты всех ориентиров лица
+
+                                            # Проход по всем ориентирам лица
+                                            for idx_landmark, lmk in enumerate(face_landmarks.landmark):
+                                                if (lmk.HasField("visibility") and lmk.visibility < vt) or (
+                                                    lmk.HasField("presence") and lmk.presence < pt
+                                                ):
+                                                    continue
+
+                                                # Нормализация координат
+                                                norm_x = min(math.floor(lmk.x * width_video), width_video - 1)
+                                                norm_y = min(math.floor(lmk.y * height_video), height_video - 1)
+
+                                                norm_x = int(norm_x * reshape_img_coef)
+                                                norm_y = int(norm_y * reshape_img_coef)
+
+                                                # Добавление нормализованных координат ориентиров лица в словарь
+                                                idx_to_coors[idx_landmark] = (norm_x, norm_y)
+
+                                            # Вычисление ограничивающей рамки из ориентиров лица
+                                            x_min = np.min(np.asarray(list(idx_to_coors.values()))[:, 0])
+                                            y_min = np.min(np.asarray(list(idx_to_coors.values()))[:, 1])
+                                            x_max = np.max(np.asarray(list(idx_to_coors.values()))[:, 0])
+                                            y_max = np.max(np.asarray(list(idx_to_coors.values()))[:, 1])
+
+                                            # Коррекция ограничивающей рамки
+                                            start_x, start_y = (max(0, x_min), max(0, y_min))
+                                            end_x, end_y = (
+                                                min(width_video - 1, x_max),
+                                                min(height_video - 1, y_max),
+                                            )
+
+                                            # Область с лицом
+                                            bndbox_face = frame[
+                                                int(start_y / reshape_img_coef) : int(end_y / reshape_img_coef),
+                                                int(start_x / reshape_img_coef) : int(end_x / reshape_img_coef),
+                                            ]
+                                            # Приведение изображения с лицом в нужному размеру
+                                            bndbox_face = cv2.resize(
+                                                bndbox_face, self.__bndbox_face_size, interpolation=cv2.INTER_AREA
+                                            )
+
+                                            bndbox_face = tf.keras.preprocessing.image.img_to_array(bndbox_face)
+                                            bndbox_face = utils.preprocess_input(bndbox_face)
+
+                                            bndbox_face = bndbox_face.reshape(
+                                                -1, self.__bndbox_face_size[0], self.__bndbox_face_size[1], 3
+                                            )
+
+                                            # 1) Координаты центра глаз
+                                            # 2) Текущие экспертные признаки
+                                            point_eyes, curr_seq_hc = [], []
+
+                                            # Вычисление центра глаз
+                                            for i in [[474, 476], [469, 471]]:
+                                                eye_x_min = min(idx_to_coors[i[0]][0], idx_to_coors[i[1]][0])
+                                                eye_y_min = min(idx_to_coors[i[0]][1], idx_to_coors[i[1]][1])
+                                                # Разница между yголками глаза
+                                                eye_x_diff = int(abs(idx_to_coors[i[0]][0] - idx_to_coors[i[1]][0]) / 2)
+                                                eye_y_diff = int(abs(idx_to_coors[i[0]][1] - idx_to_coors[i[1]][1]) / 2)
+
+                                                point_eyes.append(
+                                                    [eye_x_min + eye_x_diff - x_min, eye_y_min + eye_y_diff - y_min]
+                                                )
+                                                curr_seq_hc.extend(
+                                                    [eye_x_min + eye_x_diff - x_min, eye_y_min + eye_y_diff - y_min]
+                                                )
+
+                                            coords_left_eye = point_eyes[0]  # Координата центра левого глаза
+                                            coords_right_eye = point_eyes[1]  # Координата центра правого глаза
+
+                                            # Вычисление расстояния между центрами глаз
+                                            curr_seq_hc.append(distance.euclidean(coords_left_eye, coords_right_eye))
+                                            # Вычисление угла наклона головы
+                                            curr_seq_hc.append(alignment_procedure(coords_left_eye, coords_right_eye))
+                                            # Вычисление расстояния между центром левого глаза и его левым углом
+                                            curr_seq_hc.append(
+                                                distance.euclidean(
+                                                    coords_left_eye,
+                                                    np.asarray(idx_to_coors[263]) - np.asarray([x_min, y_min]),
+                                                )
+                                            )
+                                            # Вычисление расстояния между центром левого глаза и его правым углом
+                                            curr_seq_hc.append(
+                                                distance.euclidean(
+                                                    coords_left_eye,
+                                                    np.asarray(idx_to_coors[362]) - np.asarray([x_min, y_min]),
+                                                )
+                                            )
+                                            # Вычисление расстояния между центром правого глаза и его левым углом
+                                            curr_seq_hc.append(
+                                                distance.euclidean(
+                                                    coords_right_eye,
+                                                    np.asarray(idx_to_coors[133]) - np.asarray([x_min, y_min]),
+                                                )
+                                            )
+                                            # Вычисление расстояния между центром правого глаза и его правым углом
+                                            curr_seq_hc.append(
+                                                distance.euclidean(
+                                                    coords_right_eye,
+                                                    np.asarray(idx_to_coors[33]) - np.asarray([x_min, y_min]),
+                                                )
+                                            )
+                                            # Вычисление угла наклона уголков рта
+                                            curr_seq_hc.append(
+                                                alignment_procedure(
+                                                    np.asarray(idx_to_coors[105]) - np.asarray([x_min, y_min]),
+                                                    np.asarray(idx_to_coors[334]) - np.asarray([x_min, y_min]),
+                                                )
+                                            )
+                                            # Вычисление угла наклона бровей
+                                            curr_seq_hc.append(
+                                                alignment_procedure(
+                                                    np.asarray(idx_to_coors[61]) - np.asarray([x_min, y_min]),
+                                                    np.asarray(idx_to_coors[291]) - np.asarray([x_min, y_min]),
+                                                )
+                                            )
+
+                                            if lang == self.__lang_traslate[0]:
+                                                coords_face_mesh = self.__coords_face_mesh_mupta
+                                                couples_face_mesh = self.__couples_face_mesh_mupta
+                                            else:
+                                                coords_face_mesh = self.__coords_face_mesh_fi
+                                                couples_face_mesh = self.__couples_face_mesh_fi
+
+                                            for coord in coords_face_mesh:
+                                                curr_seq_hc.extend(
+                                                    (
+                                                        np.asarray(idx_to_coors[coord]) - np.asarray([x_min, y_min])
+                                                    ).tolist()
+                                                )
+
+                                            for cpl in couples_face_mesh:
+                                                curr_seq_hc.append(
+                                                    distance.euclidean(
+                                                        np.asarray(idx_to_coors[cpl[0]]) - np.asarray([x_min, y_min]),
+                                                        np.asarray(idx_to_coors[cpl[1]]) - np.asarray([x_min, y_min]),
+                                                    )
+                                                )
+
+                                        bndbox_faces.append(bndbox_face)
+                                        hcs.append(curr_seq_hc)
+                                cnt_frame += 1
+
+                            cap.release()
+
+                        # Лицо не найдено не на одном кадре
+                        if len(bndbox_faces) == 0:
+                            self._error(self._faces_not_found, out=out)
+                            return np.empty([]), np.empty([])
+
+                        hcs = np.asarray(hcs)
+
+                        # Коды ошибок нейросетевой модели
+                        code_error_pred_deep_fe = -1
+
+                        try:
+                            # Отправка областей с лицами в нейросетевую модель для получения нейросетевых признаков
+                            extract_deep_fe = self._video_model_deep_fe(np.vstack(bndbox_faces))
+                        except TypeError:
+                            code_error_pred_deep_fe = 1
+                        except Exception:
+                            code_error_pred_deep_fe = 2
+
+                        if code_error_pred_deep_fe != -1:
+                            self._error(self._model_video_deep_fe_not_formation, out=out)
+                            return np.empty([]), np.empty([])
+
+                        # 1. Список с экспертными признаками
+                        # 2. Список с нейросетевыми признаками
+                        hc_features, nn_features = [], []
+
+                        # Проход по всему набору экспертных и нейросетевых признаков
+                        for idx_hc_nn in range(0, len(hcs) + 1, step):
+                            last_idx__hc_nn = idx_hc_nn + window  # ID последнего элемента в подвыборке
+
+                            # Текущие подвыборки
+                            curr_seq_nn = extract_deep_fe[idx_hc_nn:last_idx__hc_nn].numpy().tolist()
+                            curr_seq_hc = hcs[idx_hc_nn:last_idx__hc_nn].tolist()
+                            if len(curr_seq_nn) < window and len(curr_seq_nn) != 0:
+                                curr_seq_hc.extend([curr_seq_hc[-1]] * (window - len(curr_seq_hc)))
+                                curr_seq_nn.extend([curr_seq_nn[-1]] * (window - len(curr_seq_nn)))
+                            if len(curr_seq_nn) != 0:
+                                hc_features.append(curr_seq_hc)
+                                nn_features.append(curr_seq_nn)
+
+                        hc_features = stats.zscore(hc_features, axis=-1)
+
+                        if last is False:
+                            # Статистика извлеченных признаков из визуального сигнала
+                            self._stat_visual_features(
+                                last=last,
+                                out=out,
+                                len_hc_features=len(hc_features),
+                                len_nn_features=len(nn_features),
+                                shape_hc_features=np.array(hc_features[0]).shape,
+                                shape_nn_features=np.array(nn_features[0]).shape,
+                                fps_before=self._round_math(fps_cv2, out),
+                                fps_after=self._round_math(reduction_fps, out),
                             )
 
-                            def alignment_procedure(left_eye: List[int], right_eye: List[int]) -> float:
-                                """Выравнивание угла наклона головы относительно центров глаз
-
-                                .. note::
-                                    внутренняя функция
-
-                                Args:
-                                    left_eye (List[int]): Координаты центра левого глаза
-                                    right_eye (List[int]): Координаты центра правого глаза
-
-                                Returns:
-                                    float: Градус расхождения центров глаз
-                                """
-
-                                left_eye_x, left_eye_y = left_eye
-                                right_eye_x, right_eye_y = right_eye
-
-                                if left_eye_y > right_eye_y:
-                                    point_3rd = (right_eye_x, left_eye_y)
-                                    direction = -1
-                                else:
-                                    point_3rd = (left_eye_x, right_eye_y)
-                                    direction = 1
-
-                                a = distance.euclidean(np.array(left_eye), np.array(point_3rd))
-                                b = distance.euclidean(np.array(right_eye), np.array(point_3rd))
-                                c = distance.euclidean(np.array(right_eye), np.array(left_eye))
-
-                                if b != 0 and c != 0:
-                                    cos_a = (b * b + c * c - a * a) / (2 * b * c)
-                                    angle = np.arccos(cos_a)
-                                    angle = (angle * 180) / math.pi
-
-                                    if direction == -1:
-                                        angle = 90 - angle
-                                else:
-                                    angle = 0
-
-                                return angle
-
-                            cnt_frame = 0  # Счетчик кадров
-                            vt, pt = self.__mp_drawing._VISIBILITY_THRESHOLD, self.__mp_drawing._PRESENCE_THRESHOLD
-
-                            hcs = []  # Набор экспертных признаков
-                            bndbox_faces = []  # Области с лицами
-
-                            # Получение 468 3D-ориентиров лица
-                            with self.__mp_face_mesh.FaceMesh(
-                                max_num_faces=1,  # Максимальное количество лиц для обнаружения
-                                # Необходимо ли дополнительно уточнять координаты ориентиров вокруг глаз и губ
-                                # и выводить дополнительные ориентиры вокруг радужной оболочки
-                                refine_landmarks=True,
-                                # Минимальное значение достоверности из модели обнаружения лиц,
-                                # при котором обнаружение считается успешным
-                                min_detection_confidence=0.5,
-                                # Минимальное значение достоверности из модели отслеживания ориентиров для того,
-                                # чтобы ориентиры лиц считались успешно отслеженными
-                                min_tracking_confidence=0.5,
-                            ) as face_mesh:
-                                # Проход по всем кадрам видеопотока
-                                while cap.isOpened():
-                                    _, frame = cap.read()  # Захват, декодирование и возврат кадра
-
-                                    if frame is None:
-                                        break  # Кадр не найден
-
-                                    if cnt_frame in idx_reduction_frames:
-                                        # Запись недоступна (увеличение производительности)
-                                        frame.flags.writeable = False
-                                        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-                                        results = face_mesh.process(frame)
-                                        # Запись доступна
-                                        frame.flags.writeable = True
-
-                                        # Найдены 468 3D-ориентиров лица
-                                        if results.multi_face_landmarks:
-                                            # Проход по всем лицам
-                                            for idx_face, face_landmarks in enumerate(results.multi_face_landmarks):
-                                                idx_to_coors = {}  # Координаты всех ориентиров лица
-
-                                                # Проход по всем ориентирам лица
-                                                for idx_landmark, lmk in enumerate(face_landmarks.landmark):
-                                                    if (lmk.HasField("visibility") and lmk.visibility < vt) or (
-                                                        lmk.HasField("presence") and lmk.presence < pt
-                                                    ):
-                                                        continue
-
-                                                    # Нормализация координат
-                                                    norm_x = min(math.floor(lmk.x * width_video), width_video - 1)
-                                                    norm_y = min(math.floor(lmk.y * height_video), height_video - 1)
-
-                                                    norm_x = int(norm_x * reshape_img_coef)
-                                                    norm_y = int(norm_y * reshape_img_coef)
-
-                                                    # Добавление нормализованных координат ориентиров лица в словарь
-                                                    idx_to_coors[idx_landmark] = (norm_x, norm_y)
-
-                                                # Вычисление ограничивающей рамки из ориентиров лица
-                                                x_min = np.min(np.asarray(list(idx_to_coors.values()))[:, 0])
-                                                y_min = np.min(np.asarray(list(idx_to_coors.values()))[:, 1])
-                                                x_max = np.max(np.asarray(list(idx_to_coors.values()))[:, 0])
-                                                y_max = np.max(np.asarray(list(idx_to_coors.values()))[:, 1])
-
-                                                # Коррекция ограничивающей рамки
-                                                start_x, start_y = (max(0, x_min), max(0, y_min))
-                                                end_x, end_y = (
-                                                    min(width_video - 1, x_max),
-                                                    min(height_video - 1, y_max),
-                                                )
-
-                                                # Область с лицом
-                                                bndbox_face = frame[
-                                                    int(start_y / reshape_img_coef) : int(end_y / reshape_img_coef),
-                                                    int(start_x / reshape_img_coef) : int(end_x / reshape_img_coef),
-                                                ]
-                                                # Приведение изображения с лицом в нужному размеру
-                                                bndbox_face = cv2.resize(
-                                                    bndbox_face, self.__bndbox_face_size, interpolation=cv2.INTER_AREA
-                                                )
-
-                                                bndbox_face = tf.keras.preprocessing.image.img_to_array(bndbox_face)
-                                                bndbox_face = utils.preprocess_input(bndbox_face)
-
-                                                bndbox_face = bndbox_face.reshape(
-                                                    -1, self.__bndbox_face_size[0], self.__bndbox_face_size[1], 3
-                                                )
-
-                                                # 1) Координаты центра глаз
-                                                # 2) Текущие экспертные признаки
-                                                point_eyes, curr_seq_hc = [], []
-
-                                                # Вычисление центра глаз
-                                                for i in [[474, 476], [469, 471]]:
-                                                    eye_x_min = min(idx_to_coors[i[0]][0], idx_to_coors[i[1]][0])
-                                                    eye_y_min = min(idx_to_coors[i[0]][1], idx_to_coors[i[1]][1])
-                                                    # Разница между yголками глаза
-                                                    eye_x_diff = int(
-                                                        abs(idx_to_coors[i[0]][0] - idx_to_coors[i[1]][0]) / 2
-                                                    )
-                                                    eye_y_diff = int(
-                                                        abs(idx_to_coors[i[0]][1] - idx_to_coors[i[1]][1]) / 2
-                                                    )
-
-                                                    point_eyes.append(
-                                                        [eye_x_min + eye_x_diff - x_min, eye_y_min + eye_y_diff - y_min]
-                                                    )
-                                                    curr_seq_hc.extend(
-                                                        [eye_x_min + eye_x_diff - x_min, eye_y_min + eye_y_diff - y_min]
-                                                    )
-
-                                                coords_left_eye = point_eyes[0]  # Координата центра левого глаза
-                                                coords_right_eye = point_eyes[1]  # Координата центра правого глаза
-
-                                                # Вычисление расстояния между центрами глаз
-                                                curr_seq_hc.append(
-                                                    distance.euclidean(coords_left_eye, coords_right_eye)
-                                                )
-                                                # Вычисление угла наклона головы
-                                                curr_seq_hc.append(
-                                                    alignment_procedure(coords_left_eye, coords_right_eye)
-                                                )
-                                                # Вычисление расстояния между центром левого глаза и его левым углом
-                                                curr_seq_hc.append(
-                                                    distance.euclidean(
-                                                        coords_left_eye,
-                                                        np.asarray(idx_to_coors[263]) - np.asarray([x_min, y_min]),
-                                                    )
-                                                )
-                                                # Вычисление расстояния между центром левого глаза и его правым углом
-                                                curr_seq_hc.append(
-                                                    distance.euclidean(
-                                                        coords_left_eye,
-                                                        np.asarray(idx_to_coors[362]) - np.asarray([x_min, y_min]),
-                                                    )
-                                                )
-                                                # Вычисление расстояния между центром правого глаза и его левым углом
-                                                curr_seq_hc.append(
-                                                    distance.euclidean(
-                                                        coords_right_eye,
-                                                        np.asarray(idx_to_coors[133]) - np.asarray([x_min, y_min]),
-                                                    )
-                                                )
-                                                # Вычисление расстояния между центром правого глаза и его правым углом
-                                                curr_seq_hc.append(
-                                                    distance.euclidean(
-                                                        coords_right_eye,
-                                                        np.asarray(idx_to_coors[33]) - np.asarray([x_min, y_min]),
-                                                    )
-                                                )
-                                                # Вычисление угла наклона уголков рта
-                                                curr_seq_hc.append(
-                                                    alignment_procedure(
-                                                        np.asarray(idx_to_coors[105]) - np.asarray([x_min, y_min]),
-                                                        np.asarray(idx_to_coors[334]) - np.asarray([x_min, y_min]),
-                                                    )
-                                                )
-                                                # Вычисление угла наклона бровей
-                                                curr_seq_hc.append(
-                                                    alignment_procedure(
-                                                        np.asarray(idx_to_coors[61]) - np.asarray([x_min, y_min]),
-                                                        np.asarray(idx_to_coors[291]) - np.asarray([x_min, y_min]),
-                                                    )
-                                                )
-
-                                                if lang == self.__lang_traslate[0]:
-                                                    coords_face_mesh = self.__coords_face_mesh_mupta
-                                                    couples_face_mesh = self.__couples_face_mesh_mupta
-                                                else:
-                                                    coords_face_mesh = self.__coords_face_mesh_fi
-                                                    couples_face_mesh = self.__couples_face_mesh_fi
-
-                                                for coord in coords_face_mesh:
-                                                    curr_seq_hc.extend(
-                                                        (
-                                                            np.asarray(idx_to_coors[coord]) - np.asarray([x_min, y_min])
-                                                        ).tolist()
-                                                    )
-
-                                                for cpl in couples_face_mesh:
-                                                    curr_seq_hc.append(
-                                                        distance.euclidean(
-                                                            np.asarray(idx_to_coors[cpl[0]])
-                                                            - np.asarray([x_min, y_min]),
-                                                            np.asarray(idx_to_coors[cpl[1]])
-                                                            - np.asarray([x_min, y_min]),
-                                                        )
-                                                    )
-
-                                            bndbox_faces.append(bndbox_face)
-                                            hcs.append(curr_seq_hc)
-                                    cnt_frame += 1
-
-                                cap.release()
-
-                            # Лицо не найдено не на одном кадре
-                            if len(bndbox_faces) == 0:
-                                self._error(self._faces_not_found, out=out)
-                                return np.empty([]), np.empty([])
-
-                            hcs = np.asarray(hcs)
-
-                            # Коды ошибок нейросетевой модели
-                            code_error_pred_deep_fe = -1
-
-                            try:
-                                # Отправка областей с лицами в нейросетевую модель для получения нейросетевых признаков
-                                extract_deep_fe = self._video_model_deep_fe(np.vstack(bndbox_faces))
-                            except TypeError:
-                                code_error_pred_deep_fe = 1
-                            except Exception:
-                                code_error_pred_deep_fe = 2
-
-                            if code_error_pred_deep_fe != -1:
-                                self._error(self._model_video_deep_fe_not_formation, out=out)
-                                return np.empty([]), np.empty([])
-
-                            # 1. Список с экспертными признаками
-                            # 2. Список с нейросетевыми признаками
-                            hc_features, nn_features = [], []
-
-                            # Проход по всему набору экспертных и нейросетевых признаков
-                            for idx_hc_nn in range(0, len(hcs) + 1, step):
-                                last_idx__hc_nn = idx_hc_nn + window  # ID последнего элемента в подвыборке
-
-                                # Текущие подвыборки
-                                curr_seq_nn = extract_deep_fe[idx_hc_nn:last_idx__hc_nn].numpy().tolist()
-                                curr_seq_hc = hcs[idx_hc_nn:last_idx__hc_nn].tolist()
-                                if len(curr_seq_nn) < window and len(curr_seq_nn) != 0:
-                                    curr_seq_hc.extend([curr_seq_hc[-1]] * (window - len(curr_seq_hc)))
-                                    curr_seq_nn.extend([curr_seq_nn[-1]] * (window - len(curr_seq_nn)))
-                                if len(curr_seq_nn) != 0:
-                                    hc_features.append(curr_seq_hc)
-                                    nn_features.append(curr_seq_nn)
-
-                            hc_features = stats.zscore(hc_features, axis=-1)
-
-                            if last is False:
-                                # Статистика извлеченных признаков из визуального сигнала
-                                self._stat_visual_features(
-                                    last=last,
-                                    out=out,
-                                    len_hc_features=len(hc_features),
-                                    len_nn_features=len(nn_features),
-                                    shape_hc_features=np.array(hc_features[0]).shape,
-                                    shape_nn_features=np.array(nn_features[0]).shape,
-                                    fps_before=self._round_math(fps_cv2, out),
-                                    fps_after=self._round_math(reduction_fps, out),
-                                )
-
-                            return hc_features, np.asarray(nn_features)
+                        return hc_features, np.asarray(nn_features)
             finally:
                 if runtime:
                     self._r_end(out=out)

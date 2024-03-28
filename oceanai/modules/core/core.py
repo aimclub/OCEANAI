@@ -34,7 +34,6 @@ import cv2  # Алгоритмы компьютерного зрения
 import mediapipe as mp  # Набор нейросетевых моделей и решений для компьютерного зрения
 import IPython
 import logging
-import pymediainfo  # Получение meta данных из медиафайлов
 import urllib.error  # Обработка ошибок URL
 import math
 import liwc  # Анализатор лингвистических запросов и подсчета слов
@@ -353,8 +352,12 @@ class Core(CoreMessages):
 
         # Верные предсказания для подсчета точности
         self._true_traits: Dict[str, str] = {
-            "fi": {"sberdisk": "https://download.sberdisk.ru/download/file/478675810?token=anU8umMha1GiWPQ&filename=data_true_traits_fi.csv"},
-            "mupta": {"sberdisk": "https://download.sberdisk.ru/download/file/478675811?token=hUMsrUSKjSRrV5e&filename=data_true_traits_mupta.csv"}
+            "fi": {
+                "sberdisk": "https://download.sberdisk.ru/download/file/478675810?token=anU8umMha1GiWPQ&filename=data_true_traits_fi.csv"
+            },
+            "mupta": {
+                "sberdisk": "https://download.sberdisk.ru/download/file/478675811?token=hUMsrUSKjSRrV5e&filename=data_true_traits_mupta.csv"
+            },
         }
 
         self._df_files: pd.DataFrame = pd.DataFrame()  # DataFrame с данными
@@ -612,7 +615,6 @@ class Core(CoreMessages):
                 | 10 | Librosa      | 0.9.2   |
                 | 11 | AudioRead    | 3.0.0   |
                 | 12 | IPython      | 8.7.0   |
-                | 13 | PyMediaInfo  | 6.0.1   |
                 | 14 | Requests     | 2.28.1  |
                 | 15 | JupyterLab   | 3.5.0   |
                 |----|--------------|---------|
@@ -3572,7 +3574,7 @@ class Core(CoreMessages):
                     return self._df_files_priority
                 else:
                     try:
-                        
+
                         self._df_files_priority = self._df_files.copy()
                         df_files_priority = self._df_files.copy()
 
@@ -3711,7 +3713,7 @@ class Core(CoreMessages):
                     return self._df_files_colleague
                 else:
                     return self._df_files_colleague
-                
+
     def _priority_skill_calculation(
         self,
         correlation_coefficients: Optional[pd.DataFrame] = None,
@@ -3761,24 +3763,32 @@ class Core(CoreMessages):
                 try:
                     self._df_files_priority_skill = self._df_files.copy()
                     skills_name = correlation_coefficients.columns[2:].tolist()
-                    score_level=['high', 'low']
+                    score_level = ["high", "low"]
                     traits = self.keys_dataset_[1:]
                     pred_list = self._df_files_priority_skill[traits].values.tolist()
                     new_list = []
 
                     for index_person, curr_scores in enumerate(pred_list):
-                        result = np.zeros((len(traits),len(skills_name)))
+                        result = np.zeros((len(traits), len(skills_name)))
 
                         for index_traits, score in enumerate(curr_scores):
                             trait = traits[index_traits]
                             category = score_level[0] if score >= threshold else score_level[1]
-                            coefficient = correlation_coefficients[correlation_coefficients.Trait==trait].values[score_level.index(category)][2:]
-                            result[index_traits] = score*coefficient
+                            coefficient = correlation_coefficients[correlation_coefficients.Trait == trait].values[
+                                score_level.index(category)
+                            ][2:]
+                            result[index_traits] = score * coefficient
 
-                        new_list.append(np.hstack((self._df_files_priority_skill.iloc[index_person], np.mean(result, axis=0))))
+                        new_list.append(
+                            np.hstack((self._df_files_priority_skill.iloc[index_person], np.mean(result, axis=0)))
+                        )
 
-                    self._df_files_priority_skill = pd.DataFrame(data=new_list,columns=self.keys_dataset_+skills_name)
-                    self._df_files_priority_skill = self._df_files_priority_skill.sort_values(by=skills_name, ascending=False)
+                    self._df_files_priority_skill = pd.DataFrame(
+                        data=new_list, columns=self.keys_dataset_ + skills_name
+                    )
+                    self._df_files_priority_skill = self._df_files_priority_skill.sort_values(
+                        by=skills_name, ascending=False
+                    )
                     self._df_files_priority_skill.index.name = self._keys_id
                     self._df_files_priority_skill.index += 1
                     self._df_files_priority_skill.index = self._df_files_priority_skill.index.map(str)
@@ -3873,7 +3883,6 @@ class Core(CoreMessages):
                 | 10 | Librosa       | 0.9.2   |
                 | 11 | AudioRead     | 3.0.0   |
                 | 12 | IPython       | 8.7.0   |
-                | 13 | PyMediaInfo   | 6.0.1   |
                 | 14 | Requests      | 2.28.1  |
                 | 15 | JupyterLab    | 3.5.0   |
                 | 16 | LIWC          | 0.5.0   |
@@ -3956,7 +3965,6 @@ class Core(CoreMessages):
                     "Librosa",
                     "AudioRead",
                     "IPython",
-                    "PyMediaInfo",
                     "Requests",
                     "JupyterLab",
                     "LIWC",
@@ -3980,7 +3988,6 @@ class Core(CoreMessages):
                         librosa,
                         audioread,
                         IPython,
-                        pymediainfo,
                         requests,
                         jlab,
                         liwc,
