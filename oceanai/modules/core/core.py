@@ -200,7 +200,13 @@ class Core(CoreMessages):
 
         # Персональные качества личности человека (Порядок только такой)
         self._b5: Dict[str, Tuple[str, ...]] = {
-            "en": ("openness", "conscientiousness", "extraversion", "agreeableness", "non-neuroticism"),
+            "en": (
+                "openness",
+                "conscientiousness",
+                "extraversion",
+                "agreeableness",
+                "non-neuroticism",
+            ),
             "ru": (
                 self._("открытость опыту"),
                 self._("добросовестность"),
@@ -208,6 +214,24 @@ class Core(CoreMessages):
                 self._("доброжелательность"),
                 self._("эмоциональная стабильность"),
             ),
+        }
+        self.dict_mbti: Dict[str, str] = {
+            "The Inspector: Accountant, Auditor, Budget Analyst, Financial Manager, Developer, Systems Analyst, Librarian etc.": "ISTJ",
+            "The Protector: Nurse, Doctor, Veterinarian or Veterinary Nurse/Assistant, Social Worker, Agricultural or Food Scientist, Secretary, Driver, etc.": "ISFJ",
+            "The Counselor: Psychologist, Human Resources Professional, Office Manager, Training Specialist, Graphic Designer, etc.": "INFJ",
+            "The Mastermind: Animator, Architect, Content Writer, Photographer, TV Journalist, Video Editor, Business Development, Executive, Professor, etc.": "INTJ",
+            "The Crafter: Engineer, Technician, Construction Worker, Inspector, Forensic Scientist, Software Engineer, Computer Programmer, etc.": "ISTP",
+            "The Composer: Marketing Assistant, Dancer, Chef, Office Administrator, Artist, Interior Designer, Legal Secretary, Nurse, etc.": "ISFP",
+            "The Healer: Writer, Multimedia Designer, Customer Relations Manager, Special Education Teacher, Coach, Editor, Fashion Designer, etc.": "INFP",
+            "The Architect: Technical Writer, Web Developer, Information Security Analyst, Researcher, Scientist, Lawyer, etc.": "INTP",
+            "The Promoter: Customer Care Specialist, Actor, Personal Trainer, Brand Ambassador, Manager, Entrepreneur, Creative Director, Police Officer, Marketing Officer, Manufacturer, etc.": "ESTP",
+            "The Performer: Flight Attendant, Entertainer, Teacher, Public Relations Manager, Sales Representative, Event Planner, etc.": "ESFP",
+            "The Champion: Healthcare Professional, Producer, Retail Sales Associate, Customer Service; Screenwriter; TV/Radio Host, etc.": "ENFP",
+            "The Visionary: Engineer, Market Researcher, Social Media Manager, Management Analyst, Digital Marketing Executive, Business Consultant, Game Designer/Developer, Sales Manager, etc.": "ENTP",
+            "The Supervisor: Managing Director, Hotel Manager, Finance Officer, Judge, Real Estate Agent, Chief Executive Officer, Chef, Business Development Manager, Telemarketer, etc.": "ESTJ",
+            "The Provider: Technical Support Specialist, Account Manager, College Professor, Medical Researcher, Bookkeeper, Photojournalist, etc.": "ESFJ",
+            "The Teacher: Public Relations Manager, Sales Manager, Human Resource Director, Art Director, Counselor, etc.": "ENFJ",
+            "The Commander: Construction Supervisor, Health Services Administrator, Financial Accountant, Auditor, Lawyer, School Principal, Chemical Engineer, Database Manager, etc.": "ENTJ",
         }
 
         # Веса для нейросетевых архитектур
@@ -367,6 +391,9 @@ class Core(CoreMessages):
         # DataFrame с ранжированными коллегами на основе данных
         self._df_files_colleague: pd.DataFrame = pd.DataFrame()
         self._df_files_priority_skill: pd.DataFrame = pd.DataFrame()
+        self._df_files_MBTI_job_match: pd.DataFrame = pd.DataFrame()
+        self._df_files_MBTI_colleague_match: pd.DataFrame = pd.DataFrame()
+        self._df_files_MBTI_disorders: pd.DataFrame = pd.DataFrame()
         self._dict_of_files: Dict[str, List[Union[int, str, float]]] = {}  # Словарь для DataFrame с данными
 
         self._df_accuracy: pd.DataFrame = pd.DataFrame()  # DataFrame с результатами вычисления точности
@@ -730,6 +757,36 @@ class Core(CoreMessages):
         return self._df_files_priority_skill
 
     @property
+    def df_files_MBTI_job_match_(self) -> pd.DataFrame:
+        """Получение DataFrame c ранжированными кандидатами на основе MBTI
+
+        Returns:
+            pd.DataFrame: **DataFrame** c данными
+        """
+
+        return self._df_files_MBTI_job_match
+
+    @property
+    def df_files_MBTI_colleague_match_(self) -> pd.DataFrame:
+        """Получение DataFrame c ранжированными коллегами на основе MBTI
+
+        Returns:
+            pd.DataFrame: **DataFrame** c данными
+        """
+
+        return self._df_files_MBTI_colleague_match
+
+    @property
+    def df_files_MBTI_disorders_(self) -> pd.DataFrame:
+        """Получение DataFrame c ранжированными профессиональными расстройствами на основе MBTI
+
+        Returns:
+            pd.DataFrame: **DataFrame** c данными
+        """
+
+        return self._df_files_MBTI_disorders
+
+    @property
     def df_accuracy_(self) -> pd.DataFrame:
         """Получение DataFrame с результатами вычисления точности
 
@@ -993,7 +1050,11 @@ class Core(CoreMessages):
                 if type(message) is not str or not message:
                     raise TypeError
             except TypeError:
-                self._inv_args(__class__.__name__, self._notebook_display_markdown.__name__, out=out)
+                self._inv_args(
+                    __class__.__name__,
+                    self._notebook_display_markdown.__name__,
+                    out=out,
+                )
                 return None
 
             if type(last) is not bool:
@@ -1095,10 +1156,11 @@ class Core(CoreMessages):
             )
 
             author = generate_name_with_email(
-                oceanai.__author__ru__ if self.lang_ == "ru" else oceanai.__author__en__, oceanai.__email__
+                (oceanai.__author__ru__ if self.lang_ == "ru" else oceanai.__author__en__),
+                oceanai.__email__,
             )
             maintainer = generate_name_with_email(
-                oceanai.__maintainer__ru__ if self.lang_ == "ru" else oceanai.__maintainer__en__,
+                (oceanai.__maintainer__ru__ if self.lang_ == "ru" else oceanai.__maintainer__en__),
                 oceanai.__maintainer_email__,
             )
 
@@ -1420,7 +1482,9 @@ class Core(CoreMessages):
 
             # Отображение сообщения
             self._notebook_display_markdown(
-                "{}".format(f'<span style="color:{self.color_true_}">{b}{message}{b}</span>'), last, out
+                "{}".format(f'<span style="color:{self.color_true_}">{b}{message}{b}</span>'),
+                last,
+                out,
             )
 
     def _bold_wrapper(self, message: str) -> str:
@@ -1729,7 +1793,10 @@ class Core(CoreMessages):
             return ("{}" * 3).format(f'<span style="color:{self.color_err_}">', message, f"</span>")
 
     def _stat_acoustic_features(
-        self, last: bool = False, out: bool = True, **kwargs: Union[int, Tuple[int], tf.TensorShape]
+        self,
+        last: bool = False,
+        out: bool = True,
+        **kwargs: Union[int, Tuple[int], tf.TensorShape],
     ) -> None:
         """Сообщение со статистикой извлеченных признаков из акустического сигнала
 
@@ -1843,7 +1910,10 @@ class Core(CoreMessages):
                 return None
 
     def _stat_visual_features(
-        self, last: bool = False, out: bool = True, **kwargs: Union[int, Tuple[int], tf.TensorShape]
+        self,
+        last: bool = False,
+        out: bool = True,
+        **kwargs: Union[int, Tuple[int], tf.TensorShape],
     ) -> None:
         """Сообщение c статистикой извлеченных признаков из визуального сигнала
 
@@ -1962,7 +2032,10 @@ class Core(CoreMessages):
                 return None
 
     def _stat_text_features(
-        self, last: bool = False, out: bool = True, **kwargs: Union[int, Tuple[int], tf.TensorShape]
+        self,
+        last: bool = False,
+        out: bool = True,
+        **kwargs: Union[int, Tuple[int], tf.TensorShape],
     ) -> None:
         """Сообщение c статистикой извлеченных признаков из текста
 
@@ -2148,11 +2221,18 @@ class Core(CoreMessages):
 
             # Отображение сообщения
             self._notebook_display_markdown(
-                "{}".format(f'<span style="color:{self.color_simple_}">{b}{t}{b}</span>'), last, out
+                "{}".format(f'<span style="color:{self.color_simple_}">{b}{t}{b}</span>'),
+                last,
+                out,
             )
 
     def _progressbar(
-        self, message: str, progress: str, clear_out: bool = True, last: bool = False, out: bool = True
+        self,
+        message: str,
+        progress: str,
+        clear_out: bool = True,
+        last: bool = False,
+        out: bool = True,
     ) -> None:
         """Индикатор выполнения
 
@@ -2438,7 +2518,11 @@ class Core(CoreMessages):
                 ):
                     raise TypeError
             except TypeError:
-                self._inv_args(__class__.__name__, self._progressbar_union_predictions.__name__, out=out)
+                self._inv_args(
+                    __class__.__name__,
+                    self._progressbar_union_predictions.__name__,
+                    out=out,
+                )
                 return None
 
             self._progressbar(
@@ -2848,7 +2932,10 @@ class Core(CoreMessages):
                 try:
                     scandir = os.scandir(os.path.normpath(str(curr_path)))
                 except FileNotFoundError:
-                    self._other_error(self._folder_not_found.format(self._info_wrapper(str(curr_path))), out=out)
+                    self._other_error(
+                        self._folder_not_found.format(self._info_wrapper(str(curr_path))),
+                        out=out,
+                    )
                     return False
                 except Exception:
                     self._other_error(self._unknown_err, out=out)
@@ -2928,7 +3015,10 @@ class Core(CoreMessages):
             if create is True:
                 open(path_to_file, "a", encoding="utf-8").close()
 
-                self._other_error(self._file_not_found_create.format(os.path.basename(path_to_file)), out=out)
+                self._other_error(
+                    self._file_not_found_create.format(os.path.basename(path_to_file)),
+                    out=out,
+                )
                 return False
 
             self._other_error(self._file_not_found.format(os.path.basename(path_to_file)), out=out)
@@ -3046,7 +3136,12 @@ class Core(CoreMessages):
         try:
             if len(self._dict_of_files.keys()) != len(self.keys_dataset_):
                 # Словарь для DataFrame набора данных с данными
-                self._dict_of_files = dict(zip(self.keys_dataset_, [[] for _ in range(0, len(self.keys_dataset_))]))
+                self._dict_of_files = dict(
+                    zip(
+                        self.keys_dataset_,
+                        [[] for _ in range(0, len(self.keys_dataset_))],
+                    )
+                )
 
             self._dict_of_files[self.keys_dataset_[0]].append(path)
 
@@ -3165,7 +3260,10 @@ class Core(CoreMessages):
             if len(self._dict_of_accuracy.keys()) != len(self.keys_dataset_[1:]):
                 # Словарь для DataFrame набора данных с результатами вычисления точности
                 self._dict_of_accuracy = dict(
-                    zip(self.keys_dataset_[1:], [[] for _ in range(0, len(self.keys_dataset_[1:]))])
+                    zip(
+                        self.keys_dataset_[1:],
+                        [[] for _ in range(0, len(self.keys_dataset_[1:]))],
+                    )
                 )
 
             for i in range(len(preds)):
@@ -3401,6 +3499,7 @@ class Core(CoreMessages):
 
     def _candidate_ranking(
         self,
+        df_files: Optional[pd.DataFrame] = None,
         weigths_openness: int = 0,
         weigths_conscientiousness: int = 0,
         weigths_extraversion: int = 0,
@@ -3414,6 +3513,7 @@ class Core(CoreMessages):
             protected (защищенный метод)
 
         Args:
+            df_files (pd.DataFrame): **DataFrame** c данными
             weigths_openness (int): Вес для ранжирования персонального качества (открытость опыту)
             weigths_conscientiousness (int): Вес для ранжирования персонального качества (добросовестность)
             weigths_extraversion (int): Вес для ранжирования персонального качества (экстраверсия)
@@ -3427,6 +3527,9 @@ class Core(CoreMessages):
 
         # Сброс
         self._df_files_ranking = pd.DataFrame()  # Пустой DataFrame с ранжированными данными
+
+        if df_files is not None:
+            self._df_files = df_files
 
         try:
             # Проверка аргументов
@@ -3500,6 +3603,9 @@ class Core(CoreMessages):
                         self._df_files_ranking = self._df_files_ranking.sort_values(
                             by=self._keys_score, ascending=False
                         )
+                        self._df_files_ranking.index.name = self._keys_id
+                        self._df_files_ranking.index += 1
+                        self._df_files_ranking.index = self._df_files_ranking.index.map(str)
                     except Exception:
                         self._other_error(self._unknown_err, out=out)
                         return self._df_files_ranking
@@ -3508,6 +3614,7 @@ class Core(CoreMessages):
 
     def _priority_calculation(
         self,
+        df_files: Optional[pd.DataFrame] = None,
         correlation_coefficients: Optional[pd.DataFrame] = None,
         col_name_ocean: str = "Trait",
         threshold: float = 0.55,
@@ -3521,6 +3628,7 @@ class Core(CoreMessages):
             protected (защищенный метод)
 
         Args:
+            df_files (pd.DataFrame): **DataFrame** c данными
             correlation_coefficients (pd.DataFrame): **DataFrame** c коэффициентами корреляции
             col_name_ocean (str): Столбец с названиями персональных качеств личности человека
             threshold (float): Порог для оценок полярности качеств (например, интроверт < 0.55, экстраверт > 0.55)
@@ -3534,6 +3642,9 @@ class Core(CoreMessages):
 
         # Сброс
         self._df_files_priority = pd.DataFrame()  # Пустой DataFrame с ранжированными предпочтениями
+
+        if df_files is not None:
+            self._df_files = df_files
 
         try:
             # Проверка аргументов
@@ -3620,6 +3731,7 @@ class Core(CoreMessages):
 
     def _colleague_ranking(
         self,
+        df_files: Optional[pd.DataFrame] = None,
         correlation_coefficients: Optional[pd.DataFrame] = None,
         target_scores: List[float] = [0.47, 0.63, 0.35, 0.58, 0.51],
         colleague: str = "major",
@@ -3632,6 +3744,7 @@ class Core(CoreMessages):
             protected (защищенный метод)
 
         Args:
+            df_files (pd.DataFrame): **DataFrame** c данными
             correlation_coefficients (pd.DataFrame): **DataFrame** c коэффициентами корреляции
             target_scores (List[float]): Список оценок персональных качеств личности целевого человека
             colleague (str): Ранг коллеги по совместимости
@@ -3644,6 +3757,9 @@ class Core(CoreMessages):
 
         # Сброс
         self._df_files_colleague = pd.DataFrame()  # Пустой DataFrame с ранжированными коллегами
+
+        if df_files is not None:
+            self._df_files = df_files
 
         try:
             # Проверка аргументов
@@ -3708,6 +3824,9 @@ class Core(CoreMessages):
                     self._df_files_colleague = self._df_files_colleague.sort_values(
                         by=self._keys_colleague, ascending=False
                     )
+                    self._df_files_colleague.index.name = self._keys_id
+                    self._df_files_colleague.index += 1
+                    self._df_files_colleague.index = self._df_files_colleague.index.map(str)
                 except Exception:
                     self._other_error(self._unknown_err, out=out)
                     return self._df_files_colleague
@@ -3716,6 +3835,7 @@ class Core(CoreMessages):
 
     def _priority_skill_calculation(
         self,
+        df_files: Optional[pd.DataFrame] = None,
         correlation_coefficients: Optional[pd.DataFrame] = None,
         threshold: float = 0.55,
         out: bool = True,
@@ -3726,6 +3846,7 @@ class Core(CoreMessages):
             protected (защищенный метод)
 
         Args:
+            df_files (pd.DataFrame): **DataFrame** c данными
             correlation_coefficients (pd.DataFrame): **DataFrame** c коэффициентами корреляции
             threshold (float): Порог для оценок полярности качеств (например, интроверт < 0.55, экстраверт > 0.55)
             out (bool): Отображение
@@ -3736,6 +3857,9 @@ class Core(CoreMessages):
 
         # Сброс
         self._df_files_priority_skill = pd.DataFrame()  # Пустой DataFrame с ранжированными кандидатами
+
+        if df_files is not None:
+            self._df_files = df_files
 
         try:
             # Проверка аргументов
@@ -3780,7 +3904,12 @@ class Core(CoreMessages):
                             result[index_traits] = score * coefficient
 
                         new_list.append(
-                            np.hstack((self._df_files_priority_skill.iloc[index_person], np.mean(result, axis=0)))
+                            np.hstack(
+                                (
+                                    self._df_files_priority_skill.iloc[index_person],
+                                    np.mean(result, axis=0),
+                                )
+                            )
                         )
 
                     self._df_files_priority_skill = pd.DataFrame(
@@ -3798,6 +3927,345 @@ class Core(CoreMessages):
                     return self._df_files_priority_skill
                 else:
                     return self._df_files_priority_skill
+
+    def _compatibility_percentage(self, type1, type2):
+        count = sum(1 for x, y in zip(type1, type2) if x == y)
+        return count / 4 * 100
+
+    def _professional_match(
+        self,
+        df_files: Optional[pd.DataFrame] = None,
+        correlation_coefficients: Optional[pd.DataFrame] = None,
+        personality_type: Optional[str] = None,
+        col_name_ocean: str = "Trait",
+        threshold: float = 0.55,
+        out: bool = True,
+    ) -> pd.DataFrame:
+        """Ранжирование кандидатов по одному из шестнадцати персональных типов по версии MBTI
+
+        .. note::
+            protected (защищенный метод)
+
+        Args:
+            df_files (pd.DataFrame): **DataFrame** c данными
+            correlation_coefficients (pd.DataFrame): **DataFrame** c коэффициентами корреляции
+            personality_type (str): Персональный тип по версии MBTI
+            threshold (float): Порог для оценок полярности качеств (например, интроверт < 0.55, экстраверт > 0.55)
+            out (bool): Отображение
+
+        Returns:
+             pd.DataFrame: **DataFrame** c ранжированными кандидатами
+        """
+
+        # Сброс
+        self._df_files_MBTI_job_match = pd.DataFrame()  # Пустой DataFrame с ранжированными кандидатами
+
+        if df_files is not None:
+            self._df_files = df_files
+
+        try:
+            # Проверка аргументов
+            if (
+                type(correlation_coefficients) is not pd.DataFrame
+                or type(threshold) is not float
+                or not (0.0 <= threshold <= 1.0)
+                or type(out) is not bool
+            ):
+                raise TypeError
+        except TypeError:
+            self._inv_args(__class__.__name__, self._professional_match.__name__, out=out)
+            return self._df_files_MBTI_job_match
+        else:
+            try:
+                if len(self._df_files) == 0:
+                    raise TypeError
+            except TypeError:
+                self._other_error(self._dataframe_empty, out=out)
+                return self._df_files_MBTI_job_match
+            except Exception:
+                self._other_error(self._unknown_err, out=out)
+                return self._df_files_MBTI_job_match
+            else:
+                try:
+                    self._df_files_MBTI_job_match = self._df_files.copy()
+                    matrix = pd.DataFrame(correlation_coefficients.drop([col_name_ocean], axis=1)).values
+
+                    name_mbti = correlation_coefficients.columns[1:]
+
+                    need_type = self.dict_mbti[personality_type]
+
+                    for path in range(len(self._df_files)):
+                        curr_traits = self._df_files.iloc[path].values[1:]
+
+                        curr_traits = np.where(curr_traits < threshold, -1 * curr_traits, curr_traits).reshape(5, 1)
+
+                        curr_traits_matrix = curr_traits * matrix
+
+                        curr_weights = np.sum(curr_traits_matrix, axis=0)
+
+                        personality_type = "".join(
+                            [
+                                (name_mbti[idx_type][1] if curr_weights[idx_type] <= 0 else name_mbti[idx_type][0])
+                                for idx_type in range(len(curr_weights))
+                            ]
+                        )
+
+                        match = self._compatibility_percentage(need_type, personality_type)
+
+                        score = np.sum(np.abs(curr_weights))
+
+                        self._df_files_MBTI_job_match.loc[
+                            str(path + 1),
+                            name_mbti.tolist() + ["MBTI", "MBTI_Score", "Match"],
+                        ] = curr_weights.tolist() + [personality_type, score, match]
+
+                    self._df_files_MBTI_job_match = self._df_files_MBTI_job_match.sort_values(
+                        by=["Match", "MBTI", "MBTI_Score"], ascending=False
+                    )
+
+                    self._df_files_MBTI_job_match.index.name = self._keys_id
+                    self._df_files_MBTI_job_match.index += 1
+                    self._df_files_MBTI_job_match.index = self._df_files_MBTI_job_match.index.map(str)
+
+                except Exception:
+                    self._other_error(self._unknown_err, out=out)
+                    return self._df_files_MBTI_job_match
+                else:
+                    return self._df_files_MBTI_job_match
+
+    def _colleague_personality_type_match(
+        self,
+        df_files: Optional[pd.DataFrame] = None,
+        correlation_coefficients: Optional[pd.DataFrame] = None,
+        target_scores: List[float] = [0.47, 0.63, 0.35, 0.58, 0.51],
+        col_name_ocean: str = "Trait",
+        threshold: float = 0.55,
+        out: bool = True,
+    ) -> pd.DataFrame:
+        """Поиск коллег по совместимости персональных типов по версии MBTI
+
+        .. note::
+            protected (защищенный метод)
+
+        Args:
+            df_files (pd.DataFrame): **DataFrame** c данными
+            correlation_coefficients (pd.DataFrame): **DataFrame** c коэффициентами корреляции
+            target_scores (List[float]): Список оценок персональных качеств личности целевого человека
+            threshold (float): Порог для оценок полярности качеств (например, интроверт < 0.55, экстраверт > 0.55)
+            out (bool): Отображение
+
+        Returns:
+             pd.DataFrame: **DataFrame** c совместимостью коллег по персональным типам по версии MBTI
+        """
+
+        # Сброс
+        self._df_files_MBTI_colleague_match = pd.DataFrame()  # Пустой DataFrame с совместимостью коллег
+
+        if df_files is not None:
+            self._df_files = df_files
+
+        try:
+            # Проверка аргументов
+            if (
+                type(correlation_coefficients) is not pd.DataFrame
+                or type(threshold) is not float
+                or not (0.0 <= threshold <= 1.0)
+                or type(out) is not bool
+            ):
+                raise TypeError
+        except TypeError:
+            self._inv_args(
+                __class__.__name__,
+                self._colleague_personality_type_match.__name__,
+                out=out,
+            )
+            return self._df_files_MBTI_colleague_match
+        else:
+            try:
+                if len(self._df_files) == 0:
+                    raise TypeError
+            except TypeError:
+                self._other_error(self._dataframe_empty, out=out)
+                return self._df_files_MBTI_colleague_match
+            except Exception:
+                self._other_error(self._unknown_err, out=out)
+                return self._df_files_MBTI_colleague_match
+            else:
+                try:
+                    self._df_files_MBTI_colleague_match = self._df_files.copy()
+                    matrix = pd.DataFrame(correlation_coefficients.drop([col_name_ocean], axis=1)).values
+
+                    name_mbti = correlation_coefficients.columns[1:]
+
+                    target_score_new = np.array(target_scores)
+
+                    target_score_new = np.where(
+                        target_score_new < threshold,
+                        -1 * target_score_new,
+                        target_score_new,
+                    ).reshape(5, 1)
+                    target_score_matrix = target_score_new * matrix
+                    target_weights = np.sum(target_score_matrix, axis=0)
+                    target_personality_type = "".join(
+                        [
+                            (name_mbti[idx_type][1] if target_weights[idx_type] <= 0 else name_mbti[idx_type][0])
+                            for idx_type in range(len(target_weights))
+                        ]
+                    )
+
+                    for path in range(len(self._df_files)):
+                        curr_traits = self._df_files.iloc[path].values[1:]
+
+                        curr_traits = np.where(curr_traits < threshold, -1 * curr_traits, curr_traits).reshape(5, 1)
+
+                        curr_traits_matrix = curr_traits * matrix
+
+                        curr_weights = np.sum(curr_traits_matrix, axis=0)
+
+                        personality_type = "".join(
+                            [
+                                (name_mbti[idx_type][1] if curr_weights[idx_type] <= 0 else name_mbti[idx_type][0])
+                                for idx_type in range(len(curr_weights))
+                            ]
+                        )
+
+                        match = self._compatibility_percentage(target_personality_type, personality_type)
+
+                        self._df_files_MBTI_colleague_match.loc[
+                            str(path + 1),
+                            name_mbti.tolist() + ["MBTI", "Match"],
+                        ] = curr_weights.tolist() + [personality_type, match]
+
+                    self._df_files_MBTI_colleague_match = self._df_files_MBTI_colleague_match.sort_values(
+                        by=["Match"], ascending=False
+                    )
+
+                    self._df_files_MBTI_colleague_match.index.name = self._keys_id
+                    self._df_files_MBTI_colleague_match.index += 1
+                    self._df_files_MBTI_colleague_match.index = self._df_files_MBTI_colleague_match.index.map(str)
+
+                except Exception:
+                    self._other_error(self._unknown_err, out=out)
+                    return self._df_files_MBTI_colleague_match
+                else:
+                    return self._df_files_MBTI_colleague_match
+
+    def _colleague_personality_desorders(
+        self,
+        df_files: Optional[pd.DataFrame] = None,
+        correlation_coefficients_mbti: Optional[pd.DataFrame] = None,
+        correlation_coefficients_disorders: Optional[pd.DataFrame] = None,
+        personality_desorder_number: int = 3,
+        col_name_ocean: str = "Trait",
+        threshold: float = 0.55,
+        out: bool = True,
+    ) -> pd.DataFrame:
+        """Определение приоритетных профессиональных растройств по версии MBTI
+
+        .. note::
+            protected (защищенный метод)
+
+        Args:
+            df_files (pd.DataFrame): **DataFrame** c данными
+            correlation_coefficients_mbti (pd.DataFrame): **DataFrame** c коэффициентами корреляции для MBTI
+            correlation_coefficients_disorders (pd.DataFrame): **DataFrame** c коэффициентами корреляции для расстройств
+            target_scores (List[float]): Список оценок персональных качеств личности целевого человека
+            personality_desorder_number (int): Количество приоритетных расстройств
+            threshold (float): Порог для оценок полярности качеств (например, интроверт < 0.55, экстраверт > 0.55)
+            out (bool): Отображение
+
+        Returns:
+             pd.DataFrame: **DataFrame** c приоритетными расстройствами
+        """
+
+        # Сброс
+        self._df_files_MBTI_colleague_match = pd.DataFrame()  # Пустой DataFrame c приоритетными расстройствами
+
+        if df_files is not None:
+            self._df_files = df_files
+
+        try:
+            # Проверка аргументов
+            if (
+                type(correlation_coefficients_mbti) is not pd.DataFrame
+                or type(correlation_coefficients_disorders) is not pd.DataFrame
+                or type(threshold) is not float
+                or not (0.0 <= threshold <= 1.0)
+                or type(out) is not bool
+            ):
+                raise TypeError
+        except TypeError:
+            self._inv_args(
+                __class__.__name__,
+                self._colleague_personality_desorders.__name__,
+                out=out,
+            )
+            return self._df_files_MBTI_disorders
+        else:
+            try:
+                if len(self._df_files) == 0:
+                    raise TypeError
+            except TypeError:
+                self._other_error(self._dataframe_empty, out=out)
+                return self._df_files_MBTI_disorders
+            except Exception:
+                self._other_error(self._unknown_err, out=out)
+                return self._df_files_MBTI_disorders
+            else:
+                try:
+                    self._df_files_MBTI_disorders = self._df_files.copy()
+                    matrix = pd.DataFrame(correlation_coefficients_mbti.drop([col_name_ocean], axis=1)).values
+                    name_mbti = correlation_coefficients_mbti.columns[1:]
+                    name_pd = correlation_coefficients_disorders["Personality Disorder"].values
+
+                    for path in range(len(self._df_files)):
+                        curr_traits = self._df_files.iloc[path].values[1:]
+
+                        pd_matrix = correlation_coefficients_disorders[["EI", "SN", "TF", "JP"]].values
+
+                        curr_traits = np.where(curr_traits < threshold, -1 * curr_traits, curr_traits).reshape(5, 1)
+
+                        curr_traits_matrix = curr_traits * matrix
+
+                        curr_weights = np.sum(curr_traits_matrix, axis=0)
+
+                        for idx_type in range(len(curr_weights)):
+                            idx_curr_matrix = pd_matrix[:, idx_type]
+                            if curr_weights[idx_type] < 0:
+                                idx_curr_matrix = np.where(
+                                    idx_curr_matrix < 0,
+                                    np.abs(idx_curr_matrix) * np.abs(curr_weights[idx_type]),
+                                    0,
+                                )
+                            else:
+                                idx_curr_matrix = np.where(
+                                    idx_curr_matrix < 0,
+                                    0,
+                                    np.abs(idx_curr_matrix) * np.abs(curr_weights[idx_type]),
+                                )
+                            pd_matrix[:, idx_type] = idx_curr_matrix
+                        pd_matrix = np.sum(pd_matrix, axis=1)
+
+                        idx_max_values = np.argsort(-np.asarray(pd_matrix))[:personality_desorder_number]
+                        desorders = name_pd[idx_max_values]
+
+                        self._df_files_MBTI_disorders.loc[
+                            str(path + 1),
+                            name_mbti.tolist()
+                            + [("Disorder" + " {}").format(i + 1) for i in range(personality_desorder_number)],
+                        ] = (
+                            curr_weights.tolist() + desorders.tolist()
+                        )
+
+                    self._df_files_MBTI_disorders.index.name = self._keys_id
+                    self._df_files_MBTI_disorders.index += 1
+                    self._df_files_MBTI_disorders.index = self._df_files_MBTI_disorders.index.map(str)
+
+                except Exception:
+                    self._other_error(self._unknown_err, out=out)
+                    return self._df_files_MBTI_disorders
+                else:
+                    return self._df_files_MBTI_disorders
 
     # ------------------------------------------------------------------------------------------------------------------
     # Внешние методы

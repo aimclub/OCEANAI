@@ -31,7 +31,7 @@ REQUIRED_PACKAGES = [
     "torch == 2.0.1",
     "torchaudio == 2.0.2",
     "sacremoses >= 0.0.1",
-    "gradio >= 4.24.0",
+    "gradio == 4.23.0",
 ]
 
 CLASSIFIERS = """\
