@@ -165,7 +165,7 @@ class Video(VideoMessages):
         # ----------------------- Только для внутреннего использования внутри класса
 
         # Поддерживаемые видео форматы
-        self.__supported_video_formats: List[str] = ["mp4", "mov", "avi"]
+        self.__supported_video_formats: List[str] = ["mp4", "mov", "avi", "flv"]
 
         self.__mp_face_mesh: ModuleType = mp.solutions.face_mesh  # 468 3D-ориентиров лица
         self.__mp_drawing: ModuleType = mp.solutions.drawing_utils  # Утилиты MediaPipe

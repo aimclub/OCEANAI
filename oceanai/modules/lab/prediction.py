@@ -2260,7 +2260,6 @@ class Prediction(PredictionMessages):
                 if runtime:
                     self._r_end(out=out)
 
-
     def get_avt_predictions_gradio(
         self,
         paths: list[str] = [],
@@ -2409,14 +2408,11 @@ class Prediction(PredictionMessages):
 
                 last = False  # Замена последнего сообщения
 
-                # print(paths)
-
-                paths = [i for i in paths if i.endswith(('.mp4', '.avi'))]
+                paths = [i for i in paths if i.endswith((".mp4", ".avi", "mov", "flv"))]
                 self.__len_paths = len(paths)
 
                 # Проход по всем искомым файлов
                 for i, curr_path in enumerate(paths):
-                    # print(curr_path)
                     if i != 0:
                         last = True
 
@@ -2431,8 +2427,6 @@ class Prediction(PredictionMessages):
                         runtime=False,
                         run=run,
                     )
-
-                    # print(hc_audio_features, melspectrogram_audio_features)
 
                     # Извлечение признаков из визуального сигнала
                     hc_video_features, nn_video_features = self._get_visual_features(
@@ -2485,9 +2479,7 @@ class Prediction(PredictionMessages):
 
                         try:
                             # Оправка экспертных признаков в нейросетевую модель
-                            _, features_hc_audio = self.audio_model_hc_(
-                                np.array(hc_audio_features, dtype=np.float16)
-                            )
+                            _, features_hc_audio = self.audio_model_hc_(np.array(hc_audio_features, dtype=np.float16))
                         except TypeError:
                             code_error_pred_hc_audio = 1
                         except Exception:
@@ -2524,9 +2516,7 @@ class Prediction(PredictionMessages):
 
                         try:
                             # Оправка экспертных признаков в нейросетевую модель
-                            _, features_hc_video = self.video_model_hc_(
-                                np.array(hc_video_features, dtype=np.float16)
-                            )
+                            _, features_hc_video = self.video_model_hc_(np.array(hc_video_features, dtype=np.float16))
                         except TypeError:
                             code_error_pred_hc_video = 1
                         except Exception:
@@ -2534,9 +2524,7 @@ class Prediction(PredictionMessages):
 
                         try:
                             # Отправка нейросетевых признаков в нейросетевую модель
-                            _, features_nn_video = self.video_model_nn_(
-                                np.array(nn_video_features, dtype=np.float16)
-                            )
+                            _, features_nn_video = self.video_model_nn_(np.array(nn_video_features, dtype=np.float16))
                         except TypeError:
                             code_error_pred_nn_video = 1
                         except Exception:
@@ -2631,12 +2619,7 @@ class Prediction(PredictionMessages):
                                 true_traits.append(true_trait)
                     else:
                         # Добавление данных в словарь для DataFrame
-                        if (
-                            self._append_to_list_of_files(
-                                curr_path, [None] * len(self._b5["en"]), out
-                            )
-                            is False
-                        ):
+                        if self._append_to_list_of_files(curr_path, [None] * len(self._b5["en"]), out) is False:
                             return False
 
                         self._del_last_el_notebook_history_output()
@@ -2660,9 +2643,7 @@ class Prediction(PredictionMessages):
                     for cnt, name_b5 in enumerate(self._df_files.keys().tolist()[1:]):
                         try:
                             mae_curr.append(
-                                mean_absolute_error(
-                                    np.asarray(true_traits)[:, cnt], self._df_files[name_b5].to_list()
-                                )
+                                mean_absolute_error(np.asarray(true_traits)[:, cnt], self._df_files[name_b5].to_list())
                             )
                         except IndexError:
                             continue
@@ -2681,9 +2662,7 @@ class Prediction(PredictionMessages):
 
                     self._dict_of_accuracy.update({self.__df_accuracy_mean: [mae_mean, accuracy_mean]})
                     # Отображение в DataFrame с данными
-                    self._df_accuracy = pd.DataFrame.from_dict(
-                        data=self._dict_of_accuracy, orient="index"
-                    ).transpose()
+                    self._df_accuracy = pd.DataFrame.from_dict(data=self._dict_of_accuracy, orient="index").transpose()
                     self._df_accuracy.index = self.__df_accuracy_index
                     self._df_accuracy.index.name = self.__df_accuracy_index_name
 
@@ -2714,9 +2693,7 @@ class Prediction(PredictionMessages):
                     name_logs_file = self.get_avt_predictions.__name__
 
                     # Сохранение LOG
-                    res_save_logs_df_files = self._save_logs(
-                        self._df_files, name_logs_file + "_df_files_" + curr_ts
-                    )
+                    res_save_logs_df_files = self._save_logs(self._df_files, name_logs_file + "_df_files_" + curr_ts)
 
                     # Подсчет точности
                     if accuracy is True:
