@@ -102,6 +102,15 @@
 
 ---
 
+## Дополнительные материалы
+
+**[Описание программы](https://github.com/aimclub/OCEANAI/tree/main/supp_materials/R_N1_Program_description_OCEAN-AI.pdf)**
+**[Руководство программиста](https://github.com/aimclub/OCEANAI/tree/main/supp_materials/R_N1_Programmer's_guide_OCEAN_AI.pdf)**
+**[Текст программы](https://github.com/aimclub/OCEANAI/tree/main/supp_materials/R_N1_Program_text_OCEAN-AI.pdf)**
+**[Протокол испытаний](https://github.com/aimclub/OCEANAI/tree/main/supp_materials/R_N1_Test_protocol_OCEAN-AI.pdf)**
+
+---
+
 ## Публикации
 
 ### Журналы
