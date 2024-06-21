@@ -17,6 +17,7 @@
 ![PyPI - License](https://img.shields.io/pypi/l/oceanai)
 ![GitHub top language](https://img.shields.io/github/languages/top/dmitryryumin/oceanai)
 ![Documentation Status](https://readthedocs.org/projects/oceanai/badge/?version=latest)
+[![App](https://img.shields.io/badge/🤗-DEMO--OCEANAI-FFD21F.svg)]([https://huggingface.co/spaces/ElenaRyumina/AVCER](https://huggingface.co/spaces/ElenaRyumina/OCEANAI))
 
 ---
 
