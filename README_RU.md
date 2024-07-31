@@ -130,18 +130,6 @@
 ```
 
 ```bibtex
-@article{ryumina22_neurocomputing,
-    author = {Elena Ryumina and Denis Dresvyanskiy and Alexey Karpov},
-    title = {In Search of a Robust Facial Expressions Recognition Model: A Large-Scale Visual Cross-Corpus Study},
-    journal = {Neurocomputing},
-    volume = {514},
-    pages = {435--450},
-    year = {2022},
-    doi = {https://doi.org/10.1016/j.neucom.2022.10.013},
-}
-```
-
-```bibtex
 @article{ryumina24_eswa,
     author = {Elena Ryumina and Maxim Markitantov and Dmitry Ryumin and Alexey Karpov},
     title = {OCEAN-AI Framework with EmoFormer Cross-Hemiface Attention Approach for Personality Traits Assessment},
@@ -150,6 +138,18 @@
     pages = {122441},
     year = {2024},
     doi = {https://doi.org/10.1016/j.eswa.2023.122441},
+}
+```
+
+```bibtex
+@article{ryumina22_neurocomputing,
+    author = {Elena Ryumina and Denis Dresvyanskiy and Alexey Karpov},
+    title = {In Search of a Robust Facial Expressions Recognition Model: A Large-Scale Visual Cross-Corpus Study},
+    journal = {Neurocomputing},
+    volume = {514},
+    pages = {435--450},
+    year = {2022},
+    doi = {https://doi.org/10.1016/j.neucom.2022.10.013},
 }
 ```
 
