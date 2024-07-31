@@ -109,7 +109,7 @@ The **[OCEAN-AI](https://oceanai.readthedocs.io/en/latest/)** library was tested
     pages = {45--51},
     journal = {Pattern Recognition Letters},
     year = {2024},
-    issn = {0167-8655},
+    issn = {0167--8655},
     doi = {10.1016/j.patrec.2024.07.004},
     url = {https://www.sciencedirect.com/science/article/pii/S0167865524002071},
 }
@@ -121,7 +121,7 @@ The **[OCEAN-AI](https://oceanai.readthedocs.io/en/latest/)** library was tested
     title = {In Search of a Robust Facial Expressions Recognition Model: A Large-Scale Visual Cross-Corpus Study},
     journal = {Neurocomputing},
     volume = {514},
-    pages = {435-450},
+    pages = {435--450},
     year = {2022},
     doi = {https://doi.org/10.1016/j.neucom.2022.10.013},
 }
