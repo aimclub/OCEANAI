@@ -102,12 +102,26 @@
 
 .. code-block:: bibtex
 
+    @article{ryumina24_prl,
+        author = {Ryumina, Elena and Markitantov, Maxim and Ryumin, Dmitry and Karpov, Alexey},
+        title = {{Gated Siamese Fusion Network based on Multimodal Deep and Hand-Crafted Features for Personality Traits Assessment}},
+        volume = {185},
+        pages = {45--51},
+        journal = {Pattern Recognition Letters},
+        year = {2024},
+        issn = {0167-8655},
+        doi = {10.1016/j.patrec.2024.07.004},
+        url = {https://www.sciencedirect.com/science/article/pii/S0167865524002071},
+    }
+
+.. code-block:: bibtex
+
     @article{ryumina22_neurocomputing,
         author = {Elena Ryumina and Denis Dresvyanskiy and Alexey Karpov},
         title = {In Search of a Robust Facial Expressions Recognition Model: A Large-Scale Visual Cross-Corpus Study},
         journal = {Neurocomputing},
         volume = {514},
-        pages = {435-450},
+        pages = {435--450},
         year = {2022},
         doi = {https://doi.org/10.1016/j.neucom.2022.10.013},
     }
@@ -126,6 +140,17 @@
 
 Конференции
 -----------
+
+.. code-block:: bibtex
+
+    @inproceedings{ryumina24_interspeech,
+        author = {Elena Ryumina and Dmitry Ryumin and and Alexey Karpov},
+        title = {OCEAN-AI: Open Multimodal Framework for Personality Traits Assessment and HR-Processes Automatization},
+        year = {2024},
+        booktitle = {INTERSPEECH},
+        pages = {in press},
+        doi = {in press},
+    }
 
 .. code-block:: bibtex
 

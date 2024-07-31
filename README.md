@@ -42,8 +42,8 @@
 
 1. Audio Information Analysis Algorithm (AIA).
 2. Video Information Analysis Algorithm (VIA).
-2. Text Information Analysis Algorithm (TIA).
-3. Multimodal Information Fusion Algorithm (MIF).
+3. Text Information Analysis Algorithm (TIA).
+4. Multimodal Information Fusion Algorithm (MIF).
 
 The AIA, VIA and TIA algorithms implement the functions of strong artificial intelligence (AI) in terms of complexing acoustic, visual and linguistic features built on different principles (hand-crafted and deep features), i.e. these algorithms implement the approaches of composite (hybrid) AI. The necessary pre-processing of audio, video and text information, the calculation of visual, acoustic and linguistic features and the output of predictions of personality traits based on them are carried out in the algorithms.
 
@@ -102,6 +102,20 @@ The **[OCEAN-AI](https://oceanai.readthedocs.io/en/latest/)** library was tested
 ### Journals
 
 ```bibtex
+@article{ryumina24_prl,
+    author = {Ryumina, Elena and Markitantov, Maxim and Ryumin, Dmitry and Karpov, Alexey},
+    title = {{Gated Siamese Fusion Network based on Multimodal Deep and Hand-Crafted Features for Personality Traits Assessment}},
+    volume = {185},
+    pages = {45--51},
+    journal = {Pattern Recognition Letters},
+    year = {2024},
+    issn = {0167-8655},
+    doi = {10.1016/j.patrec.2024.07.004},
+    url = {https://www.sciencedirect.com/science/article/pii/S0167865524002071},
+}
+```
+
+```bibtex
 @article{ryumina22_neurocomputing,
     author = {Elena Ryumina and Denis Dresvyanskiy and Alexey Karpov},
     title = {In Search of a Robust Facial Expressions Recognition Model: A Large-Scale Visual Cross-Corpus Study},
@@ -126,6 +140,17 @@ The **[OCEAN-AI](https://oceanai.readthedocs.io/en/latest/)** library was tested
 ```
 
 ### Conferences
+
+```bibtex
+@inproceedings{ryumina24_interspeech,
+    author = {Elena Ryumina and Dmitry Ryumin and and Alexey Karpov},
+    title = {OCEAN-AI: Open Multimodal Framework for Personality Traits Assessment and HR-Processes Automatization},
+    year = {2024},
+    booktitle = {INTERSPEECH},
+    pages = {in press},
+    doi = {in press},
+}
+```
 
 ```bibtex
 @inproceedings{ryumina23_interspeech,
