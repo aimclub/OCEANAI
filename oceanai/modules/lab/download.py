@@ -470,14 +470,21 @@ class Download(DownloadMessages):
                 # https://requests.readthedocs.io/en/master/_modules/requests/exceptions/
                 requests.exceptions.MissingSchema,
                 requests.exceptions.InvalidSchema,
-                requests.exceptions.ConnectionError,
+                # requests.exceptions.ConnectionError,
                 requests.exceptions.InvalidURL,
             ):
                 self._other_error(self._could_not_process_url, out=out)
                 return 404
+            except requests.exceptions.ConnectionError:
+                url_filename = url.split("=")[-1]
+                local_file = os.path.join(self.path_to_save_, url_filename)
+                self._url_last_filename = local_file
+                return 200
+            
             except Exception:
                 self._other_error(self._unknown_err, out=out)
                 return 404
+
             else:
                 # Имя файла
                 if "Content-Disposition" in r.headers.keys():
@@ -603,7 +610,6 @@ class Download(DownloadMessages):
                                     ),
                                     out=out,
                                 )
-
                                 return 404
             finally:
                 if runtime:

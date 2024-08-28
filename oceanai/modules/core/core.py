@@ -3928,9 +3928,10 @@ class Core(CoreMessages):
                 else:
                     return self._df_files_priority_skill
 
-    def _compatibility_percentage(self, type1, type2):
-        count = sum(1 for x, y in zip(type1, type2) if x == y)
-        return count / 4 * 100
+    def _compatibility_percentage(self, type1, type2, weights):
+        match = sum(1 for x, y in zip(type1, type2) if x == y) / 4
+        score = sum(np.abs(weights[idx]) for idx, (x, y) in enumerate(zip(type1, type2)) if x == y)
+        return match * 100, score * match
 
     def _professional_match(
         self,
@@ -4010,7 +4011,7 @@ class Core(CoreMessages):
                             ]
                         )
 
-                        match = self._compatibility_percentage(need_type, personality_type)
+                        match, score = self._compatibility_percentage(need_type, personality_type, curr_weights)
 
                         score = np.sum(np.abs(curr_weights))
 
@@ -4020,7 +4021,7 @@ class Core(CoreMessages):
                         ] = curr_weights.tolist() + [personality_type, score, match]
 
                     self._df_files_MBTI_job_match = self._df_files_MBTI_job_match.sort_values(
-                        by=["Match", "MBTI", "MBTI_Score"], ascending=False
+                        by=["MBTI_Score"], ascending=False
                     )
 
                     self._df_files_MBTI_job_match.index.name = self._keys_id
@@ -4129,7 +4130,7 @@ class Core(CoreMessages):
                             ]
                         )
 
-                        match = self._compatibility_percentage(target_personality_type, personality_type)
+                        match, _ = self._compatibility_percentage(target_personality_type, personality_type)
 
                         self._df_files_MBTI_colleague_match.loc[
                             str(path + 1),
