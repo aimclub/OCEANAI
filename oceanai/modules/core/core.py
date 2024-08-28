@@ -4013,8 +4013,6 @@ class Core(CoreMessages):
 
                         match, score = self._compatibility_percentage(need_type, personality_type, curr_weights)
 
-                        score = np.sum(np.abs(curr_weights))
-
                         self._df_files_MBTI_job_match.loc[
                             str(path + 1),
                             name_mbti.tolist() + ["MBTI", "MBTI_Score", "Match"],
