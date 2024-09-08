@@ -161,8 +161,8 @@
     title = {OCEAN-AI: Open Multimodal Framework for Personality Traits Assessment and HR-Processes Automatization},
     year = {2024},
     booktitle = {INTERSPEECH},
-    pages = {in press},
-    doi = {in press},
+    pages = {3630--3631},
+    doi = {https://www.isca-archive.org/interspeech_2024/ryumina24_interspeech.html},
 }
 ```
 
