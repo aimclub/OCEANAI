@@ -43,12 +43,10 @@ from oceanai.modules.lab.text import Text  # Текст
 logging.disable(logging.WARNING)
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
-import tensorflow as tf  # Машинное обучение от Google
-import keras
+import torch.nn as  nn
+import torch
 
-from oceanai.modules.lab.utils.gfl import GFL  # Модуль внимания
-from oceanai.modules.lab.utils.addition import Concat
-
+from oceanai.modules.lab.architectures.fusion_architectures import av_model_b5, avt_model_b5
 
 # ######################################################################################################################
 # Сообщения
@@ -128,11 +126,11 @@ class Prediction(PredictionMessages):
         super().__post_init__()  # Выполнение конструктора из суперкласса
 
         # Нейросетевые модели **tf.keras.Model** для получения результатов оценки персональных качеств
-        self._av_models_b5: Dict[str, Optional[tf.keras.Model]] = dict(
+        self._av_models_b5: Dict[str, Optional[nn.Module]] = dict(
             zip(self._b5["en"], [None] * len(self._b5["en"]))
         )
 
-        self._avt_model_b5: Optional[tf.keras.Model] = None
+        self._avt_model_b5: Optional[nn.Module] = None
 
         # ----------------------- Только для внутреннего использования внутри класса
 
@@ -151,7 +149,7 @@ class Prediction(PredictionMessages):
     # ------------------------------------------------------------------------------------------------------------------
 
     @property
-    def av_models_b5_(self) -> Dict[str, Optional[tf.keras.Model]]:
+    def av_models_b5_(self) -> Dict[str, Optional[nn.Module]]:
         """Получение нейросетевых моделей **tf.keras.Model** для получения результатов оценки персональных качеств
 
         Returns:
@@ -224,7 +222,7 @@ class Prediction(PredictionMessages):
         return self._av_models_b5
 
     @property
-    def avt_model_b5_(self) -> Optional[tf.keras.Model]:
+    def avt_model_b5_(self) -> Optional[nn.Module]:
         """Получение нейросетевой модели **tf.keras.Model** для получения оценок персональных качеств
 
         Returns:
@@ -566,7 +564,7 @@ class Prediction(PredictionMessages):
                 if runtime:
                     self._r_end(out=out)
 
-    def __load_avt_model_b5(self, show_summary: bool = False, out: bool = True) -> Optional[tf.keras.Model]:
+    def __load_avt_model_b5(self, show_summary: bool = False, out: bool = True) -> Optional[nn.Module]:
         """Формирование нейросетевой архитектуры модели для получения оценок персональных качеств
 
         .. note::
@@ -590,42 +588,14 @@ class Prediction(PredictionMessages):
             self._inv_args(__class__.__name__, self.__load_av_model_b5.__name__, out=out)
             return None
         else:
-            i_hc_t_1 = tf.keras.Input(shape=(128,), name="hc_t")
-            i_nn_t_1 = tf.keras.Input(shape=(128,), name="nn_t")
-            i_hc_a_1 = tf.keras.Input(shape=(256,), name="hc_a")
-            i_nn_a_1 = tf.keras.Input(shape=(512,), name="nn_a")
-            i_hc_v_1 = tf.keras.Input(shape=(256,), name="hc_v")
-            i_nn_v_1 = tf.keras.Input(shape=(2048,), name="nn_v")
-
-            i_hc_t_1_n = tf.keras.layers.LayerNormalization(axis=1, name="ln_hc_t")(i_hc_t_1)
-            i_nn_t_1_n = tf.keras.layers.LayerNormalization(axis=1, name="ln_nn_t")(i_nn_t_1)
-            i_hc_a_1_n = tf.keras.layers.LayerNormalization(axis=1, name="ln_hc_a")(i_hc_a_1)
-            i_nn_a_1_n = tf.keras.layers.LayerNormalization(axis=1, name="ln_nn_a")(i_nn_a_1)
-            i_hc_v_1_n = tf.keras.layers.LayerNormalization(axis=1, name="ln_hc_v")(i_hc_v_1)
-            i_nn_v_1_n = tf.keras.layers.LayerNormalization(axis=1, name="ln_nn_v")(i_nn_v_1)
-
-            gf_ta = GFL(output_dim=64, kernel_initializer=tf.keras.initializers.TruncatedNormal(seed=42), name="gata")
-            gf_tv = GFL(output_dim=64, kernel_initializer=tf.keras.initializers.TruncatedNormal(seed=42), name="gatv")
-            gf_av = GFL(output_dim=64, kernel_initializer=tf.keras.initializers.TruncatedNormal(seed=42), name="gaav")
-
-            gf_ta_1 = gf_ta([i_hc_t_1_n, i_hc_a_1_n, i_nn_t_1_n, i_nn_a_1_n])
-            gf_tv_1 = gf_tv([i_hc_t_1_n, i_hc_v_1_n, i_nn_t_1_n, i_nn_v_1_n])
-            gf_av_1 = gf_av([i_hc_a_1_n, i_hc_v_1_n, i_nn_a_1_n, i_nn_v_1_n])
-
-            concat_1 = Concat()((gf_ta_1, gf_tv_1, gf_av_1))
-
-            dense = tf.keras.layers.Dense(50, activation="relu", name="dense")(concat_1)
-
-            dense = tf.keras.layers.Dense(5, activation="sigmoid", name="dence_cl")(dense)
-
-            model = tf.keras.Model(inputs=[i_hc_t_1, i_nn_t_1, i_hc_a_1, i_nn_a_1, i_hc_v_1, i_nn_v_1], outputs=dense)
+            model = avt_model_b5(input_shapes = [128, 128, 256, 512, 256, 2048])
 
             if show_summary and out:
-                model.summary()
+                print(model)
 
             return model
 
-    def __load_av_model_b5(self, show_summary: bool = False, out: bool = True) -> Optional[tf.keras.Model]:
+    def __load_av_model_b5(self, show_summary: bool = False, out: bool = True) -> Optional[nn.Module]:
         """Формирование нейросетевой архитектуры модели для получения результата оценки персонального качества
 
         .. note::
@@ -709,14 +679,10 @@ class Prediction(PredictionMessages):
             self._inv_args(__class__.__name__, self.__load_av_model_b5.__name__, out=out)
             return None
         else:
-            input_1 = tf.keras.Input(shape=(64,), name="input_1")
-            x = tf.keras.layers.Dense(units=1, name="dense_1")(input_1)
-            x = tf.keras.layers.Activation("sigmoid", name="activ_1")(x)
-
-            model = tf.keras.Model(inputs=input_1, outputs=x)
+            model = av_model_b5()
 
             if show_summary and out:
-                model.summary()
+                print(model)
 
             return model
 
@@ -1181,7 +1147,8 @@ class Prediction(PredictionMessages):
                             continue
 
                         try:
-                            self._av_models_b5[self._b5["en"][cnt]].load_weights(self._url_last_filename)
+                            self._av_models_b5[self._b5["en"][cnt]].load_state_dict(torch.load(self._url_last_filename))
+                            self._av_models_b5[self._b5["en"][cnt]].to(self._device).eval()
                         except Exception:
                             self._other_error(
                                 self._load_model_weights_error + " " + self._bold_wrapper(url[1].capitalize()), out=out
@@ -1400,176 +1367,185 @@ class Prediction(PredictionMessages):
 
                     last = False  # Замена последнего сообщения
 
-                    # Проход по всем искомым файлов
-                    for i, curr_path in enumerate(paths):
-                        if i != 0:
-                            last = True
+                    with torch.no_grad():
 
-                        # Индикатор выполнения
-                        self._progressbar_union_predictions(
-                            get_av_union_predictions_info,
-                            i,
-                            self.__local_path(curr_path),
-                            self.__len_paths,
-                            True,
-                            last,
-                            out,
-                        )
+                        # Проход по всем искомым файлов
+                        for i, curr_path in enumerate(paths):
+                            if i != 0:
+                                last = True
 
-                        # Извлечение признаков из акустического сигнала
-                        hc_audio_features, melspectrogram_audio_features = self._get_acoustic_features(
-                            path=str(curr_path.resolve()),
-                            sr=sr,
-                            window=window_audio,
-                            step=step_audio,
-                            last=True,
-                            out=False,
-                            runtime=False,
-                            run=run,
-                        )
-
-                        # Извлечение признаков из визуального сигнала
-                        hc_video_features, nn_video_features = self._get_visual_features(
-                            path=str(curr_path.resolve()),
-                            reduction_fps=reduction_fps,
-                            window=window_video,
-                            step=step_video,
-                            lang=lang,
-                            last=True,
-                            out=False,
-                            runtime=False,
-                            run=run,
-                        )
-
-                        # Признаки из акустического сигнала извлечены
-                        if (
-                            type(hc_audio_features) is list
-                            and type(melspectrogram_audio_features) is list
-                            and type(hc_video_features) is np.ndarray
-                            and type(nn_video_features) is np.ndarray
-                            and len(hc_audio_features) > 0
-                            and len(melspectrogram_audio_features) > 0
-                            and len(hc_video_features) > 0
-                            and len(nn_video_features) > 0
-                        ):
-                            # Коды ошибок нейросетевых моделей (аудио модальность)
-                            code_error_pred_hc_audio = -1
-                            code_error_pred_melspectrogram_audio = -1
-
-                            try:
-                                # Оправка экспертных признаков в нейросетевую модель
-                                pred_hc_audio, _ = self.audio_model_hc_(np.array(hc_audio_features, dtype=np.float16))
-                            except TypeError:
-                                code_error_pred_hc_audio = 1
-                            except Exception:
-                                code_error_pred_melspectrogram_audio = 2
-
-                            try:
-                                # Отправка нейросетевых признаков в нейросетевую модель
-                                pred_melspectrogram_audio, _ = self.audio_model_nn_(
-                                    np.array(melspectrogram_audio_features, dtype=np.float16)
-                                )
-                            except TypeError:
-                                code_error_pred_melspectrogram_audio = 1
-                            except Exception:
-                                code_error_pred_melspectrogram_audio = 2
-
-                            if code_error_pred_hc_audio != -1 and code_error_pred_melspectrogram_audio != -1:
-                                self._error(self._models_audio_not_formation, out=out)
-                                return False
-
-                            if code_error_pred_hc_audio != -1:
-                                self._error(self._model_audio_hc_not_formation, out=out)
-                                return False
-
-                            if code_error_pred_melspectrogram_audio != -1:
-                                self._error(self._model_audio_nn_not_formation, out=out)
-                                return False
-
-                            # Коды ошибок нейросетевых моделей (видео модальность)
-                            code_error_pred_hc_video = -1
-                            code_error_pred_nn_video = -1
-
-                            try:
-                                # Оправка экспертных признаков в нейросетевую модель
-                                pred_hc_video, _ = self.video_model_hc_(np.array(hc_video_features, dtype=np.float16))
-                            except TypeError:
-                                code_error_pred_hc_video = 1
-                            except Exception:
-                                code_error_pred_hc_video = 2
-
-                            try:
-                                # Отправка нейросетевых признаков в нейросетевую модель
-                                pred_nn_video, _ = self.video_model_nn_(np.array(nn_video_features, dtype=np.float16))
-                            except TypeError:
-                                code_error_pred_nn_video = 1
-                            except Exception:
-                                code_error_pred_nn_video = 2
-
-                            if code_error_pred_hc_video != -1 and code_error_pred_nn_video != -1:
-                                self._error(self._models_video_not_formation, out=out)
-                                return False
-
-                            if code_error_pred_hc_video != -1:
-                                self._error(self._model_video_hc_not_formation, out=out)
-                                return False
-
-                            if code_error_pred_nn_video != -1:
-                                self._error(self._model_video_nn_not_formation, out=out)
-                                return False
-
-                            # Конкатенация оценок по экспертным и нейросетевым признакам
-                            union_pred = self.__concat_pred_av(
-                                pred_hc_audio.numpy(),
-                                pred_melspectrogram_audio.numpy(),
-                                pred_hc_video.numpy(),
-                                pred_nn_video.numpy(),
-                                out=out,
+                            # Индикатор выполнения
+                            self._progressbar_union_predictions(
+                                get_av_union_predictions_info,
+                                i,
+                                self.__local_path(curr_path),
+                                self.__len_paths,
+                                True,
+                                last,
+                                out,
                             )
 
-                            if len(union_pred) == 0:
-                                return False
+                            # Извлечение признаков из акустического сигнала
+                            hc_audio_features, melspectrogram_audio_features = self._get_acoustic_features(
+                                path=str(curr_path.resolve()),
+                                sr=sr,
+                                window=window_audio,
+                                step=step_audio,
+                                last=True,
+                                out=False,
+                                runtime=False,
+                                run=run,
+                            )
 
-                            final_pred = []
+                            # Извлечение признаков из визуального сигнала
+                            hc_video_features, nn_video_features, _ = self._get_visual_features(
+                                path=str(curr_path.resolve()),
+                                reduction_fps=reduction_fps,
+                                window=window_video,
+                                step=step_video,
+                                lang=lang,
+                                last=True,
+                                out=False,
+                                runtime=False,
+                                run=run,
+                            )
 
-                            for cnt, (name_b5, model) in enumerate(self.av_models_b5_.items()):
-                                result = model(np.expand_dims(union_pred[cnt], axis=0)).numpy()[0][0]
-
-                                final_pred.append(result)
-
-                            # Добавление данных в словарь для DataFrame
-                            if self._append_to_list_of_files(str(curr_path.resolve()), final_pred, out) is False:
-                                return False
-
-                            # Вычисление точности
-                            if accuracy is True:
-                                try:
-                                    true_trait = (
-                                        data_true_traits[data_true_traits.NAME_VIDEO == curr_path.name][
-                                            list(self._b5["en"])
-                                        ]
-                                        .values[0]
-                                        .tolist()
-                                    )
-                                except IndexError:
-                                    self._other_error(self._expert_values_not_found, out=out)
-                                    return False
-                                except Exception:
-                                    self._other_error(self._unknown_err, out=out)
-                                    return False
-                                else:
-                                    true_traits.append(true_trait)
-                        else:
-                            # Добавление данных в словарь для DataFrame
+                            # Признаки из акустического сигнала извлечены
                             if (
-                                self._append_to_list_of_files(
-                                    str(curr_path.resolve()), [None] * len(self._b5["en"]), out
-                                )
-                                is False
+                                type(hc_audio_features) is list
+                                and type(melspectrogram_audio_features) is list
+                                and type(hc_video_features) is np.ndarray
+                                and type(nn_video_features) is np.ndarray
+                                and len(hc_audio_features) > 0
+                                and len(melspectrogram_audio_features) > 0
+                                and len(hc_video_features) > 0
+                                and len(nn_video_features) > 0
                             ):
-                                return False
+                                # Коды ошибок нейросетевых моделей (аудио модальность)
+                                code_error_pred_hc_audio = -1
+                                code_error_pred_melspectrogram_audio = -1
 
-                            self._del_last_el_notebook_history_output()
+                                try:
+                                    # Оправка экспертных признаков в нейросетевую модель
+                                    hc_audio_features = torch.from_numpy(np.array(hc_audio_features, dtype=np.float32))
+                                    pred_hc_audio, _ = self.audio_model_hc_(hc_audio_features.to(self._device))
+                                    pred_hc_audio = pred_hc_audio.detach().cpu()
+                                except TypeError:
+                                    code_error_pred_hc_audio = 1
+                                except Exception:
+                                    code_error_pred_melspectrogram_audio = 2
+
+                                try:
+                                    # Отправка нейросетевых признаков в нейросетевую модель
+                                    melspectrogram_audio_features = torch.from_numpy(np.array(melspectrogram_audio_features, dtype=np.float32))
+                                    pred_melspectrogram_audio, _ = self.audio_model_nn_(melspectrogram_audio_features.permute(0, 3, 1, 2).to(self._device))
+                                    pred_melspectrogram_audio = pred_melspectrogram_audio.detach().cpu()
+                                except TypeError:
+                                    code_error_pred_melspectrogram_audio = 1
+                                except Exception:
+                                    code_error_pred_melspectrogram_audio = 2
+
+                                if code_error_pred_hc_audio != -1 and code_error_pred_melspectrogram_audio != -1:
+                                    self._error(self._models_audio_not_formation, out=out)
+                                    return False
+
+                                if code_error_pred_hc_audio != -1:
+                                    self._error(self._model_audio_hc_not_formation, out=out)
+                                    return False
+
+                                if code_error_pred_melspectrogram_audio != -1:
+                                    self._error(self._model_audio_nn_not_formation, out=out)
+                                    return False
+
+                                # Коды ошибок нейросетевых моделей (видео модальность)
+                                code_error_pred_hc_video = -1
+                                code_error_pred_nn_video = -1
+
+                                try:
+                                    # Оправка экспертных признаков в нейросетевую модель
+                                    hc_video_features = torch.from_numpy(np.array(hc_video_features, dtype=np.float32))
+                                    pred_hc_video, _ = self.video_model_hc_(hc_video_features.to(self._device))
+                                    pred_hc_video = pred_hc_video.detach().cpu()
+                                except TypeError:
+                                    code_error_pred_hc_video = 1
+                                except Exception:
+                                    code_error_pred_hc_video = 2
+
+                                try:
+                                    # Отправка нейросетевых признаков в нейросетевую модель
+                                    nn_video_features = torch.from_numpy(np.array(nn_video_features, dtype=np.float32))
+                                    pred_nn_video, _ = self.video_model_nn_(nn_video_features.to(self._device))
+                                    pred_nn_video = pred_nn_video.detach().cpu()
+                                except TypeError:
+                                    code_error_pred_nn_video = 1
+                                except Exception:
+                                    code_error_pred_nn_video = 2
+
+                                if code_error_pred_hc_video != -1 and code_error_pred_nn_video != -1:
+                                    self._error(self._models_video_not_formation, out=out)
+                                    return False
+
+                                if code_error_pred_hc_video != -1:
+                                    self._error(self._model_video_hc_not_formation, out=out)
+                                    return False
+
+                                if code_error_pred_nn_video != -1:
+                                    self._error(self._model_video_nn_not_formation, out=out)
+                                    return False
+
+                                # Конкатенация оценок по экспертным и нейросетевым признакам
+                                union_pred = self.__concat_pred_av(
+                                    pred_hc_audio.numpy(),
+                                    pred_melspectrogram_audio.numpy(),
+                                    pred_hc_video.numpy(),
+                                    pred_nn_video.numpy(),
+                                    out=out,
+                                )
+
+                                if len(union_pred) == 0:
+                                    return False
+
+                                final_pred = []
+
+                                for cnt, (name_b5, model) in enumerate(self.av_models_b5_.items()):
+                                        curr_union_pred = torch.from_numpy(np.expand_dims(union_pred[cnt], axis=0))
+                                        result = model(curr_union_pred.to(self._device)).detach().cpu().numpy()[0][0]
+
+                                        final_pred.append(result)
+
+                                # Добавление данных в словарь для DataFrame
+                                if self._append_to_list_of_files(str(curr_path.resolve()), final_pred, out) is False:
+                                    return False
+
+                                # Вычисление точности
+                                if accuracy is True:
+                                    try:
+                                        true_trait = (
+                                            data_true_traits[data_true_traits.NAME_VIDEO == curr_path.name][
+                                                list(self._b5["en"])
+                                            ]
+                                            .values[0]
+                                            .tolist()
+                                        )
+                                    except IndexError:
+                                        self._other_error(self._expert_values_not_found, out=out)
+                                        return False
+                                    except Exception:
+                                        self._other_error(self._unknown_err, out=out)
+                                        return False
+                                    else:
+                                        true_traits.append(true_trait)
+                            else:
+                                # Добавление данных в словарь для DataFrame
+                                if (
+                                    self._append_to_list_of_files(
+                                        str(curr_path.resolve()), [None] * len(self._b5["en"]), out
+                                    )
+                                    is False
+                                ):
+                                    return False
+
+                                self._del_last_el_notebook_history_output()
 
                     # Индикатор выполнения
                     self._progressbar_union_predictions(
@@ -1707,7 +1683,8 @@ class Prediction(PredictionMessages):
 
         if self.__load_model_weights(url, force_reload, self._load_avt_model_weights_b5, out, False, run) is True:
             try:
-                self._avt_model_b5.load_weights(self._url_last_filename)
+                self._avt_model_b5.load_state_dict(torch.load(self._url_last_filename))
+                self._avt_model_b5.to(self._device).eval()
             except Exception:
                 self._error(self._model_avt_not_formation, out=out)
                 return False
@@ -1916,240 +1893,247 @@ class Prediction(PredictionMessages):
 
                     last = False  # Замена последнего сообщения
 
-                    # Проход по всем искомым файлов
-                    for i, curr_path in enumerate(paths):
-                        if i != 0:
-                            last = True
+                    with torch.no_grad():
 
-                        # Индикатор выполнения
-                        self._progressbar_union_predictions(
-                            get_avt_predictions_info,
-                            i,
-                            self.__local_path(curr_path),
-                            self.__len_paths,
-                            True,
-                            last,
-                            out,
-                        )
+                        # Проход по всем искомым файлов
+                        for i, curr_path in enumerate(paths):
+                            if i != 0:
+                                last = True
 
-                        # Извлечение признаков из акустического сигнала
-                        hc_audio_features, melspectrogram_audio_features = self._get_acoustic_features(
-                            path=str(curr_path.resolve()),
-                            sr=sr,
-                            window=window_audio,
-                            step=step_audio,
-                            last=True,
-                            out=False,
-                            runtime=False,
-                            run=run,
-                        )
-
-                        # Извлечение признаков из визуального сигнала
-                        hc_video_features, nn_video_features = self._get_visual_features(
-                            path=str(curr_path.resolve()),
-                            reduction_fps=reduction_fps,
-                            window=window_video,
-                            step=step_video,
-                            lang=lang,
-                            last=True,
-                            out=False,
-                            runtime=False,
-                            run=run,
-                        )
-
-                        # Извлечение признаков из текста
-                        hc_text_features, nn_text_features = self.get_text_features(
-                            path=str(curr_path.resolve()),
-                            asr=asr,
-                            lang=lang,
-                            show_text=False,
-                            out=False,
-                            runtime=False,
-                            run=run,
-                        )
-
-                        hc_text_features = np.expand_dims(hc_text_features, axis=0)
-                        nn_text_features = np.expand_dims(nn_text_features, axis=0)
-
-                        if (
-                            type(hc_audio_features) is list
-                            and type(melspectrogram_audio_features) is list
-                            and type(hc_video_features) is np.ndarray
-                            and type(nn_video_features) is np.ndarray
-                            and type(hc_text_features) is np.ndarray
-                            and type(nn_text_features) is np.ndarray
-                            and len(hc_audio_features) > 0
-                            and len(melspectrogram_audio_features) > 0
-                            and len(hc_video_features) > 0
-                            and len(nn_video_features) > 0
-                            and len(hc_text_features) > 0
-                            and len(nn_text_features) > 0
-                        ):
-                            feature_lambda = lambda feature: np.concatenate(
-                                (np.mean(feature, axis=0), np.std(feature, axis=0))
+                            # Индикатор выполнения
+                            self._progressbar_union_predictions(
+                                get_avt_predictions_info,
+                                i,
+                                self.__local_path(curr_path),
+                                self.__len_paths,
+                                True,
+                                last,
+                                out,
                             )
 
-                            # Коды ошибок нейросетевых моделей (аудио модальность)
-                            code_error_pred_hc_audio = -1
-                            code_error_pred_melspectrogram_audio = -1
+                            # Извлечение признаков из акустического сигнала
+                            hc_audio_features, melspectrogram_audio_features = self._get_acoustic_features(
+                                path=str(curr_path.resolve()),
+                                sr=sr,
+                                window=window_audio,
+                                step=step_audio,
+                                last=True,
+                                out=False,
+                                runtime=False,
+                                run=run,
+                            )
 
-                            try:
-                                # Оправка экспертных признаков в нейросетевую модель
-                                _, features_hc_audio = self.audio_model_hc_(
-                                    np.array(hc_audio_features, dtype=np.float16)
+                            # Извлечение признаков из визуального сигнала
+                            hc_video_features, nn_video_features, _ = self._get_visual_features(
+                                path=str(curr_path.resolve()),
+                                reduction_fps=reduction_fps,
+                                window=window_video,
+                                step=step_video,
+                                lang=lang,
+                                last=True,
+                                out=False,
+                                runtime=False,
+                                run=run,
+                            )
+
+                            # Извлечение признаков из текста
+                            hc_text_features, nn_text_features = self.get_text_features(
+                                path=str(curr_path.resolve()),
+                                asr=asr,
+                                lang=lang,
+                                show_text=False,
+                                out=False,
+                                runtime=False,
+                                run=run,
+                            )
+
+                            hc_text_features = np.expand_dims(hc_text_features, axis=0)
+                            nn_text_features = np.expand_dims(nn_text_features, axis=0)
+
+                            if (
+                                type(hc_audio_features) is list
+                                and type(melspectrogram_audio_features) is list
+                                and type(hc_video_features) is np.ndarray
+                                and type(nn_video_features) is np.ndarray
+                                and type(hc_text_features) is np.ndarray
+                                and type(nn_text_features) is np.ndarray
+                                and len(hc_audio_features) > 0
+                                and len(melspectrogram_audio_features) > 0
+                                and len(hc_video_features) > 0
+                                and len(nn_video_features) > 0
+                                and len(hc_text_features) > 0
+                                and len(nn_text_features) > 0
+                            ):
+                                feature_lambda = lambda feature: np.concatenate(
+                                    (np.mean(feature, axis=0), np.std(feature, axis=0))
                                 )
-                            except TypeError:
-                                code_error_pred_hc_audio = 1
-                            except Exception:
-                                code_error_pred_melspectrogram_audio = 2
 
-                            try:
-                                # Отправка нейросетевых признаков в нейросетевую модель
-                                _, features_nn_audio = self.audio_model_nn_(
-                                    np.array(melspectrogram_audio_features, dtype=np.float16)
-                                )
-                            except TypeError:
-                                code_error_pred_melspectrogram_audio = 1
-                            except Exception:
-                                code_error_pred_melspectrogram_audio = 2
+                                # Коды ошибок нейросетевых моделей (аудио модальность)
+                                code_error_pred_hc_audio = -1
+                                code_error_pred_melspectrogram_audio = -1
 
-                            if code_error_pred_hc_audio != -1 and code_error_pred_melspectrogram_audio != -1:
-                                self._error(self._models_audio_not_formation, out=out)
-                                return False
-
-                            if code_error_pred_hc_audio != -1:
-                                self._error(self._model_audio_hc_not_formation, out=out)
-                                return False
-
-                            if code_error_pred_melspectrogram_audio != -1:
-                                self._error(self._model_audio_nn_not_formation, out=out)
-                                return False
-
-                            features_hc_audio = np.expand_dims(feature_lambda(features_hc_audio.numpy()), axis=0)
-                            features_nn_audio = np.expand_dims(feature_lambda(features_nn_audio.numpy()), axis=0)
-
-                            # Коды ошибок нейросетевых моделей (видео модальность)
-                            code_error_pred_hc_video = -1
-                            code_error_pred_nn_video = -1
-
-                            try:
-                                # Оправка экспертных признаков в нейросетевую модель
-                                _, features_hc_video = self.video_model_hc_(
-                                    np.array(hc_video_features, dtype=np.float16)
-                                )
-                            except TypeError:
-                                code_error_pred_hc_video = 1
-                            except Exception:
-                                code_error_pred_hc_video = 2
-
-                            try:
-                                # Отправка нейросетевых признаков в нейросетевую модель
-                                _, features_nn_video = self.video_model_nn_(
-                                    np.array(nn_video_features, dtype=np.float16)
-                                )
-                            except TypeError:
-                                code_error_pred_nn_video = 1
-                            except Exception:
-                                code_error_pred_nn_video = 2
-
-                            if code_error_pred_hc_video != -1 and code_error_pred_nn_video != -1:
-                                self._error(self._models_video_not_formation, out=out)
-                                return False
-
-                            if code_error_pred_hc_video != -1:
-                                self._error(self._model_video_hc_not_formation, out=out)
-                                return False
-
-                            if code_error_pred_nn_video != -1:
-                                self._error(self._model_video_nn_not_formation, out=out)
-                                return False
-
-                            features_hc_video = np.expand_dims(feature_lambda(features_hc_video.numpy()), axis=0)
-                            features_nn_video = np.expand_dims(feature_lambda(features_nn_video.numpy()), axis=0)
-
-                            # Коды ошибок нейросетевых моделей (текст)
-                            code_error_pred_hc_text = -1
-                            code_error_pred_nn_text = -1
-
-                            try:
-                                # Оправка экспертных признаков в нейросетевую модель
-                                _, features_hc_text = self.text_model_hc_(np.array(hc_text_features, dtype=np.float16))
-                            except TypeError:
-                                code_error_pred_hc_text = 1
-                            except Exception:
-                                code_error_pred_hc_text = 2
-
-                            try:
-                                # Отправка нейросетевых признаков в нейросетевую модель
-                                _, features_nn_text = self.text_model_nn_(np.array(nn_text_features, dtype=np.float16))
-                            except TypeError:
-                                code_error_pred_nn_text = 1
-                            except Exception:
-                                code_error_pred_nn_text = 2
-
-                            if code_error_pred_hc_text != -1 and code_error_pred_nn_text != -1:
-                                self._error(self._model_text_not_formation, out=out)
-                                return False
-
-                            if code_error_pred_hc_text != -1:
-                                self._error(self._model_text_hc_not_formation, out=out)
-                                return False
-
-                            if code_error_pred_nn_text != -1:
-                                self._error(self._model_text_nn_not_formation, out=out)
-                                return False
-
-                            try:
-                                final_pred = (
-                                    self.avt_model_b5_(
-                                        [
-                                            features_hc_text.numpy(),
-                                            features_nn_text.numpy(),
-                                            features_hc_audio,
-                                            features_nn_audio,
-                                            features_hc_video,
-                                            features_nn_video,
-                                        ]
-                                    )
-                                    .numpy()[0]
-                                    .tolist()
-                                )
-                            except Exception:
-                                self._other_error(self._unknown_err, out=out)
-                                return False
-
-                            # Добавление данных в словарь для DataFrame
-                            if self._append_to_list_of_files(str(curr_path.resolve()), final_pred, out) is False:
-                                return False
-                            # Вычисление точности
-                            if accuracy is True:
                                 try:
-                                    true_trait = (
-                                        data_true_traits[data_true_traits.NAME_VIDEO == curr_path.name][
-                                            list(self._b5["en"])
-                                        ]
-                                        .values[0]
+                                    # Оправка экспертных признаков в нейросетевую модель
+                                    hc_audio_features = torch.from_numpy(np.array(hc_audio_features, dtype=np.float32))
+                                    _, features_hc_audio = self.audio_model_hc_(hc_audio_features.to(self._device))
+                                    features_hc_audio = features_hc_audio.detach().cpu()
+                                except TypeError:
+                                    code_error_pred_hc_audio = 1
+                                except Exception:
+                                    code_error_pred_melspectrogram_audio = 2
+
+                                try:
+                                    # Отправка нейросетевых признаков в нейросетевую модель
+                                    melspectrogram_audio_features = torch.from_numpy(np.array(melspectrogram_audio_features, dtype=np.float32))
+                                    _, features_nn_audio = self.audio_model_nn_(melspectrogram_audio_features.permute(0, 3, 1, 2).to(self._device))
+                                    features_nn_audio = features_nn_audio.detach().cpu()
+                                except TypeError:
+                                    code_error_pred_melspectrogram_audio = 1
+                                except Exception:
+                                    code_error_pred_melspectrogram_audio = 2
+
+                                if code_error_pred_hc_audio != -1 and code_error_pred_melspectrogram_audio != -1:
+                                    self._error(self._models_audio_not_formation, out=out)
+                                    return False
+
+                                if code_error_pred_hc_audio != -1:
+                                    self._error(self._model_audio_hc_not_formation, out=out)
+                                    return False
+
+                                if code_error_pred_melspectrogram_audio != -1:
+                                    self._error(self._model_audio_nn_not_formation, out=out)
+                                    return False
+
+                                features_hc_audio = np.expand_dims(feature_lambda(features_hc_audio.numpy()), axis=0)
+                                features_nn_audio = np.expand_dims(feature_lambda(features_nn_audio.numpy()), axis=0)
+
+                                # Коды ошибок нейросетевых моделей (видео модальность)
+                                code_error_pred_hc_video = -1
+                                code_error_pred_nn_video = -1
+
+                                try:
+                                    # Оправка экспертных признаков в нейросетевую модель
+                                    hc_video_features = torch.from_numpy(np.array(hc_video_features, dtype=np.float32))
+                                    _, features_hc_video = self.video_model_hc_(hc_video_features.to(self._device))
+                                    features_hc_video = features_hc_video.detach().cpu()
+                                except TypeError:
+                                    code_error_pred_hc_video = 1
+                                except Exception:
+                                    code_error_pred_hc_video = 2
+
+                                try:
+                                    # Отправка нейросетевых признаков в нейросетевую модель
+                                    nn_video_features = torch.from_numpy(np.array(nn_video_features, dtype=np.float32))
+                                    _, features_nn_video = self.video_model_nn_(nn_video_features.to(self._device))
+                                    features_nn_video = features_nn_video.detach().cpu()
+                                except TypeError:
+                                    code_error_pred_nn_video = 1
+                                except Exception:
+                                    code_error_pred_nn_video = 2
+
+                                if code_error_pred_hc_video != -1 and code_error_pred_nn_video != -1:
+                                    self._error(self._models_video_not_formation, out=out)
+                                    return False
+
+                                if code_error_pred_hc_video != -1:
+                                    self._error(self._model_video_hc_not_formation, out=out)
+                                    return False
+
+                                if code_error_pred_nn_video != -1:
+                                    self._error(self._model_video_nn_not_formation, out=out)
+                                    return False
+
+                                features_hc_video = np.expand_dims(feature_lambda(features_hc_video.numpy()), axis=0)
+                                features_nn_video = np.expand_dims(feature_lambda(features_nn_video.numpy()), axis=0)
+
+                                # Коды ошибок нейросетевых моделей (текст)
+                                code_error_pred_hc_text = -1
+                                code_error_pred_nn_text = -1
+
+                                try:
+                                    # Оправка экспертных признаков в нейросетевую модель
+                                    hc_text_features = torch.from_numpy(np.array(hc_text_features, dtype=np.float32))
+                                    _, features_hc_text = self.text_model_hc_(hc_text_features.to(self._device))
+                                    # features_hc_text = features_hc_text.detach().cpu()
+                                except TypeError:
+                                    code_error_pred_hc_text = 1
+                                except Exception:
+                                    code_error_pred_hc_text = 2
+
+                                try:
+                                    # Отправка нейросетевых признаков в нейросетевую модель
+                                    nn_text_features = torch.from_numpy(np.array(nn_text_features, dtype=np.float32))
+                                    _, features_nn_text = self.text_model_nn_(nn_text_features.to(self._device))
+                                    # features_nn_text = features_nn_text.detach().cpu()
+                                except TypeError:
+                                    code_error_pred_nn_text = 1
+                                except Exception:
+                                    code_error_pred_nn_text = 2
+
+                                if code_error_pred_hc_text != -1 and code_error_pred_nn_text != -1:
+                                    self._error(self._model_text_not_formation, out=out)
+                                    return False
+
+                                if code_error_pred_hc_text != -1:
+                                    self._error(self._model_text_hc_not_formation, out=out)
+                                    return False
+
+                                if code_error_pred_nn_text != -1:
+                                    self._error(self._model_text_nn_not_formation, out=out)
+                                    return False
+
+                                try:
+
+                                    final_pred = (
+                                        self.avt_model_b5_(
+                                                features_hc_text,
+                                                features_nn_text,
+                                                torch.from_numpy(features_hc_audio).to(self._device),
+                                                torch.from_numpy(features_nn_audio).to(self._device),
+                                                torch.from_numpy(features_hc_video).to(self._device),
+                                                torch.from_numpy(features_nn_video).to(self._device),
+                                        )
+                                        .detach()
+                                        .cpu()
+                                        .numpy()[0]
                                         .tolist()
                                     )
-                                except IndexError:
-                                    self._other_error(self._expert_values_not_found, out=out)
-                                    return False
                                 except Exception:
                                     self._other_error(self._unknown_err, out=out)
                                     return False
-                                else:
-                                    true_traits.append(true_trait)
-                        else:
-                            # Добавление данных в словарь для DataFrame
-                            if (
-                                self._append_to_list_of_files(
-                                    str(curr_path.resolve()), [None] * len(self._b5["en"]), out
-                                )
-                                is False
-                            ):
-                                return False
 
-                            self._del_last_el_notebook_history_output()
+                                # Добавление данных в словарь для DataFrame
+                                if self._append_to_list_of_files(str(curr_path.resolve()), final_pred, out) is False:
+                                    return False
+                                # Вычисление точности
+                                if accuracy is True:
+                                    try:
+                                        true_trait = (
+                                            data_true_traits[data_true_traits.NAME_VIDEO == curr_path.name][
+                                                list(self._b5["en"])
+                                            ]
+                                            .values[0]
+                                            .tolist()
+                                        )
+                                    except IndexError:
+                                        self._other_error(self._expert_values_not_found, out=out)
+                                        return False
+                                    except Exception:
+                                        self._other_error(self._unknown_err, out=out)
+                                        return False
+                                    else:
+                                        true_traits.append(true_trait)
+                            else:
+                                # Добавление данных в словарь для DataFrame
+                                if (
+                                    self._append_to_list_of_files(
+                                        str(curr_path.resolve()), [None] * len(self._b5["en"]), out
+                                    )
+                                    is False
+                                ):
+                                    return False
+
+                                self._del_last_el_notebook_history_output()
 
                     # Индикатор выполнения
                     self._progressbar_union_predictions(
@@ -2411,218 +2395,230 @@ class Prediction(PredictionMessages):
                 paths = [i for i in paths if i.endswith((".mp4", ".avi", "mov", "flv"))]
                 self.__len_paths = len(paths)
 
+                with torch.no_grad():
+
                 # Проход по всем искомым файлов
-                for i, curr_path in enumerate(paths):
-                    if i != 0:
-                        last = True
+                    for i, curr_path in enumerate(paths):
+                        if i != 0:
+                            last = True
 
-                    # Извлечение признаков из акустического сигнала
-                    hc_audio_features, melspectrogram_audio_features = self._get_acoustic_features(
-                        path=curr_path,
-                        sr=sr,
-                        window=window_audio,
-                        step=step_audio,
-                        last=True,
-                        out=True,
-                        runtime=False,
-                        run=run,
-                    )
-
-                    # Извлечение признаков из визуального сигнала
-                    hc_video_features, nn_video_features = self._get_visual_features(
-                        path=curr_path,
-                        reduction_fps=reduction_fps,
-                        window=window_video,
-                        step=step_video,
-                        lang=lang,
-                        last=True,
-                        out=False,
-                        runtime=False,
-                        run=run,
-                    )
-
-                    # Извлечение признаков из текста
-                    hc_text_features, nn_text_features = self.get_text_features(
-                        path=curr_path,
-                        asr=asr,
-                        lang=lang,
-                        show_text=False,
-                        out=False,
-                        runtime=False,
-                        run=run,
-                    )
-
-                    hc_text_features = np.expand_dims(hc_text_features, axis=0)
-                    nn_text_features = np.expand_dims(nn_text_features, axis=0)
-
-                    if (
-                        type(hc_audio_features) is list
-                        and type(melspectrogram_audio_features) is list
-                        and type(hc_video_features) is np.ndarray
-                        and type(nn_video_features) is np.ndarray
-                        and type(hc_text_features) is np.ndarray
-                        and type(nn_text_features) is np.ndarray
-                        and len(hc_audio_features) > 0
-                        and len(melspectrogram_audio_features) > 0
-                        and len(hc_video_features) > 0
-                        and len(nn_video_features) > 0
-                        and len(hc_text_features) > 0
-                        and len(nn_text_features) > 0
-                    ):
-                        feature_lambda = lambda feature: np.concatenate(
-                            (np.mean(feature, axis=0), np.std(feature, axis=0))
+                        # Извлечение признаков из акустического сигнала
+                        hc_audio_features, melspectrogram_audio_features = self._get_acoustic_features(
+                            path=curr_path,
+                            sr=sr,
+                            window=window_audio,
+                            step=step_audio,
+                            last=True,
+                            out=True,
+                            runtime=False,
+                            run=run,
                         )
 
-                        # Коды ошибок нейросетевых моделей (аудио модальность)
-                        code_error_pred_hc_audio = -1
-                        code_error_pred_melspectrogram_audio = -1
+                        # Извлечение признаков из визуального сигнала
+                        hc_video_features, nn_video_features, _ = self._get_visual_features(
+                            path=curr_path,
+                            reduction_fps=reduction_fps,
+                            window=window_video,
+                            step=step_video,
+                            lang=lang,
+                            last=True,
+                            out=False,
+                            runtime=False,
+                            run=run,
+                        )
 
-                        try:
-                            # Оправка экспертных признаков в нейросетевую модель
-                            _, features_hc_audio = self.audio_model_hc_(np.array(hc_audio_features, dtype=np.float16))
-                        except TypeError:
-                            code_error_pred_hc_audio = 1
-                        except Exception:
-                            code_error_pred_melspectrogram_audio = 2
+                        # Извлечение признаков из текста
+                        hc_text_features, nn_text_features = self.get_text_features(
+                            path=curr_path,
+                            asr=asr,
+                            lang=lang,
+                            show_text=False,
+                            out=False,
+                            runtime=False,
+                            run=run,
+                        )
 
-                        try:
-                            # Отправка нейросетевых признаков в нейросетевую модель
-                            _, features_nn_audio = self.audio_model_nn_(
-                                np.array(melspectrogram_audio_features, dtype=np.float16)
+                        hc_text_features = np.expand_dims(hc_text_features, axis=0)
+                        nn_text_features = np.expand_dims(nn_text_features, axis=0)
+
+                        if (
+                            type(hc_audio_features) is list
+                            and type(melspectrogram_audio_features) is list
+                            and type(hc_video_features) is np.ndarray
+                            and type(nn_video_features) is np.ndarray
+                            and type(hc_text_features) is np.ndarray
+                            and type(nn_text_features) is np.ndarray
+                            and len(hc_audio_features) > 0
+                            and len(melspectrogram_audio_features) > 0
+                            and len(hc_video_features) > 0
+                            and len(nn_video_features) > 0
+                            and len(hc_text_features) > 0
+                            and len(nn_text_features) > 0
+                        ):
+                            feature_lambda = lambda feature: np.concatenate(
+                                (np.mean(feature, axis=0), np.std(feature, axis=0))
                             )
-                        except TypeError:
-                            code_error_pred_melspectrogram_audio = 1
-                        except Exception:
-                            code_error_pred_melspectrogram_audio = 2
 
-                        if code_error_pred_hc_audio != -1 and code_error_pred_melspectrogram_audio != -1:
-                            self._error(self._models_audio_not_formation, out=out)
-                            return False
+                            # Коды ошибок нейросетевых моделей (аудио модальность)
+                            code_error_pred_hc_audio = -1
+                            code_error_pred_melspectrogram_audio = -1
 
-                        if code_error_pred_hc_audio != -1:
-                            self._error(self._model_audio_hc_not_formation, out=out)
-                            return False
-
-                        if code_error_pred_melspectrogram_audio != -1:
-                            self._error(self._model_audio_nn_not_formation, out=out)
-                            return False
-
-                        features_hc_audio = np.expand_dims(feature_lambda(features_hc_audio.numpy()), axis=0)
-                        features_nn_audio = np.expand_dims(feature_lambda(features_nn_audio.numpy()), axis=0)
-
-                        # Коды ошибок нейросетевых моделей (видео модальность)
-                        code_error_pred_hc_video = -1
-                        code_error_pred_nn_video = -1
-
-                        try:
-                            # Оправка экспертных признаков в нейросетевую модель
-                            _, features_hc_video = self.video_model_hc_(np.array(hc_video_features, dtype=np.float16))
-                        except TypeError:
-                            code_error_pred_hc_video = 1
-                        except Exception:
-                            code_error_pred_hc_video = 2
-
-                        try:
-                            # Отправка нейросетевых признаков в нейросетевую модель
-                            _, features_nn_video = self.video_model_nn_(np.array(nn_video_features, dtype=np.float16))
-                        except TypeError:
-                            code_error_pred_nn_video = 1
-                        except Exception:
-                            code_error_pred_nn_video = 2
-
-                        if code_error_pred_hc_video != -1 and code_error_pred_nn_video != -1:
-                            self._error(self._models_video_not_formation, out=out)
-                            return False
-
-                        if code_error_pred_hc_video != -1:
-                            self._error(self._model_video_hc_not_formation, out=out)
-                            return False
-
-                        if code_error_pred_nn_video != -1:
-                            self._error(self._model_video_nn_not_formation, out=out)
-                            return False
-
-                        features_hc_video = np.expand_dims(feature_lambda(features_hc_video.numpy()), axis=0)
-                        features_nn_video = np.expand_dims(feature_lambda(features_nn_video.numpy()), axis=0)
-
-                        # Коды ошибок нейросетевых моделей (текст)
-                        code_error_pred_hc_text = -1
-                        code_error_pred_nn_text = -1
-
-                        try:
-                            # Оправка экспертных признаков в нейросетевую модель
-                            _, features_hc_text = self.text_model_hc_(np.array(hc_text_features, dtype=np.float16))
-                        except TypeError:
-                            code_error_pred_hc_text = 1
-                        except Exception:
-                            code_error_pred_hc_text = 2
-
-                        try:
-                            # Отправка нейросетевых признаков в нейросетевую модель
-                            _, features_nn_text = self.text_model_nn_(np.array(nn_text_features, dtype=np.float16))
-                        except TypeError:
-                            code_error_pred_nn_text = 1
-                        except Exception:
-                            code_error_pred_nn_text = 2
-
-                        if code_error_pred_hc_text != -1 and code_error_pred_nn_text != -1:
-                            self._error(self._model_text_not_formation, out=out)
-                            return False
-
-                        if code_error_pred_hc_text != -1:
-                            self._error(self._model_text_hc_not_formation, out=out)
-                            return False
-
-                        if code_error_pred_nn_text != -1:
-                            self._error(self._model_text_nn_not_formation, out=out)
-                            return False
-
-                        try:
-                            final_pred = (
-                                self.avt_model_b5_(
-                                    [
-                                        features_hc_text.numpy(),
-                                        features_nn_text.numpy(),
-                                        features_hc_audio,
-                                        features_nn_audio,
-                                        features_hc_video,
-                                        features_nn_video,
-                                    ]
-                                )
-                                .numpy()[0]
-                                .tolist()
-                            )
-                        except Exception:
-                            self._other_error(self._unknown_err, out=out)
-                            return False
-
-                        # Добавление данных в словарь для DataFrame
-                        if self._append_to_list_of_files(curr_path, final_pred, out) is False:
-                            return False
-                        # Вычисление точности
-                        if accuracy is True:
                             try:
-                                true_trait = (
-                                    data_true_traits[data_true_traits.NAME_VIDEO == curr_path.name][
-                                        list(self._b5["en"])
-                                    ]
-                                    .values[0]
-                                    .tolist()
-                                )
-                            except IndexError:
-                                self._other_error(self._expert_values_not_found, out=out)
+                                # Оправка экспертных признаков в нейросетевую модель
+                                hc_audio_features = torch.from_numpy(np.array(hc_audio_features, dtype=np.float32))
+                                _, features_hc_audio = self.audio_model_hc_(hc_audio_features.to(self._device))
+                                features_hc_audio = features_hc_audio.detach().cpu()
+                            except TypeError:
+                                code_error_pred_hc_audio = 1
+                            except Exception:
+                                code_error_pred_melspectrogram_audio = 2
+
+                            try:
+                                # Отправка нейросетевых признаков в нейросетевую модель
+                                melspectrogram_audio_features = torch.from_numpy(np.array(melspectrogram_audio_features, dtype=np.float32))
+                                _, features_nn_audio = self.audio_model_nn_(melspectrogram_audio_features.permute(0, 3, 1, 2).to(self._device))
+                                features_nn_audio = features_nn_audio.detach().cpu()
+                            except TypeError:
+                                code_error_pred_melspectrogram_audio = 1
+                            except Exception:
+                                code_error_pred_melspectrogram_audio = 2
+
+                            if code_error_pred_hc_audio != -1 and code_error_pred_melspectrogram_audio != -1:
+                                self._error(self._models_audio_not_formation, out=out)
                                 return False
+
+                            if code_error_pred_hc_audio != -1:
+                                self._error(self._model_audio_hc_not_formation, out=out)
+                                return False
+
+                            if code_error_pred_melspectrogram_audio != -1:
+                                self._error(self._model_audio_nn_not_formation, out=out)
+                                return False
+
+                            features_hc_audio = np.expand_dims(feature_lambda(features_hc_audio.numpy()), axis=0)
+                            features_nn_audio = np.expand_dims(feature_lambda(features_nn_audio.numpy()), axis=0)
+
+                            # Коды ошибок нейросетевых моделей (видео модальность)
+                            code_error_pred_hc_video = -1
+                            code_error_pred_nn_video = -1
+
+                            try:
+                                # Оправка экспертных признаков в нейросетевую модель
+                                hc_video_features = torch.from_numpy(np.array(hc_video_features, dtype=np.float32))
+                                _, features_hc_video = self.video_model_hc_(hc_video_features.to(self._device))
+                                features_hc_video = features_hc_video.detach().cpu()
+                            except TypeError:
+                                code_error_pred_hc_video = 1
+                            except Exception:
+                                code_error_pred_hc_video = 2
+
+                            try:
+                                # Отправка нейросетевых признаков в нейросетевую модель
+                                nn_video_features = torch.from_numpy(np.array(nn_video_features, dtype=np.float32))
+                                _, features_nn_video = self.video_model_nn_(nn_video_features.to(self._device))
+                                features_nn_video = features_nn_video.detach().cpu()
+                            except TypeError:
+                                code_error_pred_nn_video = 1
+                            except Exception:
+                                code_error_pred_nn_video = 2
+
+                            if code_error_pred_hc_video != -1 and code_error_pred_nn_video != -1:
+                                self._error(self._models_video_not_formation, out=out)
+                                return False
+
+                            if code_error_pred_hc_video != -1:
+                                self._error(self._model_video_hc_not_formation, out=out)
+                                return False
+
+                            if code_error_pred_nn_video != -1:
+                                self._error(self._model_video_nn_not_formation, out=out)
+                                return False
+
+                            features_hc_video = np.expand_dims(feature_lambda(features_hc_video.numpy()), axis=0)
+                            features_nn_video = np.expand_dims(feature_lambda(features_nn_video.numpy()), axis=0)
+
+                            # Коды ошибок нейросетевых моделей (текст)
+                            code_error_pred_hc_text = -1
+                            code_error_pred_nn_text = -1
+
+                            try:
+                                # Оправка экспертных признаков в нейросетевую модель
+                                hc_text_features = torch.from_numpy(np.array(hc_text_features, dtype=np.float32))
+                                _, features_hc_text = self.text_model_hc_(hc_text_features.to(self._device))
+                                # features_hc_text = features_hc_text.detach().cpu()
+                            except TypeError:
+                                code_error_pred_hc_text = 1
+                            except Exception:
+                                code_error_pred_hc_text = 2
+
+                            try:
+                                # Отправка нейросетевых признаков в нейросетевую модель
+                                nn_text_features = torch.from_numpy(np.array(nn_text_features, dtype=np.float32))
+                                _, features_nn_text = self.text_model_nn_(nn_text_features.to(self._device))
+                                # features_nn_text = features_nn_text.detach().cpu()
+                            except TypeError:
+                                code_error_pred_nn_text = 1
+                            except Exception:
+                                code_error_pred_nn_text = 2
+
+                            if code_error_pred_hc_text != -1 and code_error_pred_nn_text != -1:
+                                self._error(self._model_text_not_formation, out=out)
+                                return False
+
+                            if code_error_pred_hc_text != -1:
+                                self._error(self._model_text_hc_not_formation, out=out)
+                                return False
+
+                            if code_error_pred_nn_text != -1:
+                                self._error(self._model_text_nn_not_formation, out=out)
+                                return False
+
+                            try:
+                                final_pred = (
+                                        self.avt_model_b5_(
+                                                features_hc_text,
+                                                features_nn_text,
+                                                torch.from_numpy(features_hc_audio).to(self._device),
+                                                torch.from_numpy(features_nn_audio).to(self._device),
+                                                torch.from_numpy(features_hc_video).to(self._device),
+                                                torch.from_numpy(features_nn_video).to(self._device),
+                                        )
+                                        .detach()
+                                        .cpu()
+                                        .numpy()[0]
+                                        .tolist()
+                                    )
                             except Exception:
                                 self._other_error(self._unknown_err, out=out)
                                 return False
-                            else:
-                                true_traits.append(true_trait)
-                    else:
-                        # Добавление данных в словарь для DataFrame
-                        if self._append_to_list_of_files(curr_path, [None] * len(self._b5["en"]), out) is False:
-                            return False
 
-                        self._del_last_el_notebook_history_output()
+                            # Добавление данных в словарь для DataFrame
+                            if self._append_to_list_of_files(curr_path, final_pred, out) is False:
+                                return False
+                            # Вычисление точности
+                            if accuracy is True:
+                                try:
+                                    true_trait = (
+                                        data_true_traits[data_true_traits.NAME_VIDEO == curr_path.name][
+                                            list(self._b5["en"])
+                                        ]
+                                        .values[0]
+                                        .tolist()
+                                    )
+                                except IndexError:
+                                    self._other_error(self._expert_values_not_found, out=out)
+                                    return False
+                                except Exception:
+                                    self._other_error(self._unknown_err, out=out)
+                                    return False
+                                else:
+                                    true_traits.append(true_trait)
+                        else:
+                            # Добавление данных в словарь для DataFrame
+                            if self._append_to_list_of_files(curr_path, [None] * len(self._b5["en"]), out) is False:
+                                return False
+
+                            self._del_last_el_notebook_history_output()
 
                 # Отображение в DataFrame с данными
                 self._df_files = pd.DataFrame.from_dict(data=self._dict_of_files, orient="index").transpose()
