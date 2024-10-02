@@ -39,10 +39,8 @@ from transformers import (
     AutoProcessor,
     WhisperForConditionalGeneration,
     BertTokenizer,
-    TFBertModel,
+    BertModel,
 )
-
-from keras import backend as K
 
 from urllib.parse import urlparse
 from pathlib import Path  # Работа с путями в файловой системе
@@ -52,6 +50,9 @@ from typing import List, Tuple, Optional, Union, Optional, Callable  # Типы 
 from types import FunctionType
 
 from IPython.display import clear_output
+
+import torch
+import torch.nn as  nn
 
 # Персональные
 from oceanai.modules.lab.download import Download  # Загрузка файлов
@@ -63,15 +64,7 @@ os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 # Игнорировать конкретное предупреждение TensorFlow
 warnings.filterwarnings("ignore", category=FutureWarning, module="tensorflow")
 
-import tensorflow as tf  # Машинное обучение от Google
-
-import keras
-
-from oceanai.modules.lab.utils.attention import Attention  # Модуль внимания
-
-# Слой статистических функционалов (средние значения и стандартные отклонения)
-from oceanai.modules.lab.utils.addition import Addition
-
+from oceanai.modules.lab.architectures.text_architectures import text_model_hc, text_model_nn, text_model_b5
 
 # ######################################################################################################################
 # Сообщения
@@ -171,16 +164,17 @@ class Text(TextMessages):
         super().__post_init__()  # Выполнение конструктора из суперкласса
 
         # Нейросетевая модель **tf.keras.Model** для получения оценок по экспертным признакам
-        self._text_model_hc: Optional[tf.keras.Model] = None
+        self._text_model_hc: Optional[nn.Module] = None
         # Нейросетевая модель **tf.keras.Model** для получения оценок по нейросетевым признакам
-        self._text_model_nn: Optional[tf.keras.Model] = None
-        self._text_model_b5: Optional[tf.keras.Model] = None
+        self._text_model_nn: Optional[nn.Module] = None
+        self._text_model_b5: Optional[nn.Module] = None
 
         # Словарь для формирования экспертных признаков
-        self._text_features: str = (
-            "https://download.sberdisk.ru/download/file/473268573?token=X3NB5VYGyPn8mjw&filename=LIWC2007.txt",
-        )
+        # self._text_features: str = "https://drive.usercontent.google.com/download?id=1A_WqDPXzEmLLxjpl8YYeftp2dA9OuBRp&export=download&authuser=2&confirm=t&uuid=d0bac80d-b9ef-4c00-aa15-95398e3af59d&at=AN_67v3V4MHMTjVFeALLLX-CXzfb:1727453279624"
+        self._text_features: str = "https://download.sberdisk.ru/download/file/473268573?token=X3NB5VYGyPn8mjw&filename=LIWC2007.txt"
+
         # BERT модель
+        # self._bert_multi_model: str = "https://drive.usercontent.google.com/download?id=1yedNslt8jjwXm4pa3K15VqUg-JISJMYf&export=download&authuser=2&confirm=t&uuid=4071942c-989a-4a24-8ddd-60e964def6ec&at=AN_67v2cav8P41yss1AlvWGxXCQk:1727453235831"
         self._bert_multi_model: str = "https://download.sberdisk.ru/download/file/473319508?token=p8hYNIjxacEARxl&filename=bert-base-multilingual-cased.zip"
 
         # Нейросетевая модель машинного перевода (RU -> EN)
@@ -190,7 +184,7 @@ class Text(TextMessages):
         self._traslate_model: Optional[MarianMTModel] = None  # Нейросетевая модель для машинного перевода
 
         self._bert_tokenizer: Optional[BertTokenizer] = None
-        self._bert_model: Optional[TFBertModel] = None
+        self._bert_model: Optional[BertModel] = None
 
         self._path_to_transriber = "openai/whisper-base"
 
@@ -347,7 +341,7 @@ class Text(TextMessages):
     # ------------------------------------------------------------------------------------------------------------------
 
     @property
-    def text_model_hc_(self) -> Optional[tf.keras.Model]:
+    def text_model_hc_(self) -> Optional[nn.Module]:
         """Получение нейросетевой модели **tf.keras.Model** для получения оценок по экспертным признакам
 
         Returns:
@@ -357,17 +351,17 @@ class Text(TextMessages):
         return self._text_model_hc
 
     @property
-    def text_model_nn_(self) -> Optional[tf.keras.Model]:
+    def text_model_nn_(self) -> Optional[nn.Module]:
         """Получение нейросетевой модели **tf.keras.Model** для получения оценок по нейросетевым признакам
 
         Returns:
-            Optional[tf.keras.Model]: Нейросетевая модель **tf.keras.Model** или None
+            Optional[tf.keras.Model]: Нейросетевая модель **tnn.Module** или None
         """
 
         return self._text_model_nn
 
     @property
-    def text_model_b5_(self) -> Optional[tf.keras.Model]:
+    def text_model_b5_(self) -> Optional[nn.Module]:
         """Получение нейросетевой модели **tf.keras.Model** для получения оценок персональных качеств
 
         Returns:
@@ -542,7 +536,6 @@ class Text(TextMessages):
                     raise requests.exceptions.InvalidURL
             except requests.exceptions.InvalidURL:
                 url = os.path.normpath(url)
-
                 try:
                     if os.path.isfile(url) is False:
                         raise FileNotFoundError  # Не файл
@@ -631,7 +624,6 @@ class Text(TextMessages):
                     raise requests.exceptions.InvalidURL
             except requests.exceptions.InvalidURL:
                 url = os.path.normpath(url)
-
                 try:
                     if os.path.isfile(url) is False:
                         raise FileNotFoundError  # Не файл
@@ -734,14 +726,19 @@ class Text(TextMessages):
         text = get_norm_text(text)
         translation = get_norm_text(translation)
 
-        encoded_input = self._bert_tokenizer(text, return_tensors="tf")
+        encoded_input = self._bert_tokenizer(text, return_tensors="pt")
         dict_new = {}
         if encoded_input["input_ids"].shape[1] > 512:
-            dict_new["input_ids"] = encoded_input["input_ids"][:, :512]
-            dict_new["token_type_ids"] = encoded_input["token_type_ids"][:, :512]
-            dict_new["attention_mask"] = encoded_input["attention_mask"][:, :512]
+            dict_new["input_ids"] = encoded_input["input_ids"][:, :512].to(self._device)
+            dict_new["token_type_ids"] = encoded_input["token_type_ids"][:, :512].to(self._device)
+            dict_new["attention_mask"] = encoded_input["attention_mask"][:, :512].to(self._device)
             encoded_input = dict_new
-        features_bert = self._bert_model(encoded_input)[0][0]
+        else:
+            dict_new["input_ids"] = encoded_input["input_ids"].to(self._device)
+            dict_new["token_type_ids"] = encoded_input["token_type_ids"].to(self._device)
+            dict_new["attention_mask"] = encoded_input["attention_mask"].to(self._device)
+            encoded_input = dict_new
+        features_bert = self._bert_model(**encoded_input)[0][0].detach().cpu().numpy()
 
         features_liwc = []
         for i in translation.split(" "):
@@ -775,8 +772,12 @@ class Text(TextMessages):
         return features_liwc, features_bert
 
     def __process_audio_and_extract_features(
-        self, path: str, win: int, lang: str, show_text: bool, last: bool, out: bool
+        self, path: str, win: int, lang: str, show_text: bool, last: bool, out: bool, url: str=None
     ) -> Tuple[np.ndarray, np.ndarray]:
+        
+        if url:
+            self._path_to_transriber = url
+
         if not self._processor:
             self._processor = AutoProcessor.from_pretrained(self._path_to_transriber)
             self._model_transcriptions = WhisperForConditionalGeneration.from_pretrained(self._path_to_transriber).to(
@@ -861,7 +862,7 @@ class Text(TextMessages):
 
             return self.__translate_and_extract_features(self.__text_pred, lang, show_text, last, out)
 
-    def __load_text_model_b5(self, show_summary: bool = False, out: bool = True) -> Optional[tf.keras.Model]:
+    def __load_text_model_b5(self, show_summary: bool = False, out: bool = True) -> Optional[nn.Module]:
         """Формирование нейросетевой архитектуры модели для получения оценок персональных качеств
 
         .. note::
@@ -885,15 +886,10 @@ class Text(TextMessages):
             self._inv_args(__class__.__name__, self.__load_text_model_b5.__name__, out=out)
             return None
         else:
-            input_1 = tf.keras.Input(shape=(5,))
-            input_2 = tf.keras.Input(shape=(5,))
-            X = tf.keras.backend.concatenate((input_1, input_2), axis=1)
-            X = tf.keras.layers.Dense(5, activation="sigmoid")(X)
-
-            model = tf.keras.models.Model(inputs=[input_1, input_2], outputs=X)
+            model = text_model_b5()
 
             if show_summary and out:
-                model.summary()
+                print(model)
 
             return model
 
@@ -1113,37 +1109,10 @@ class Text(TextMessages):
             else:
                 input_shape = (89, 64)
 
-            input_lstm = tf.keras.Input(shape=input_shape, name="model_hc_input")
-
-            x_lstm = tf.keras.layers.Bidirectional(
-                tf.keras.layers.LSTM(32, return_sequences=True), name="model_hc_bilstm_1"
-            )(input_lstm)
-
-            x_attention = Attention(use_scale=False, score_mode="dot", name="model_hc_attention")(x_lstm, x_lstm)
-
-            x_dence = tf.keras.layers.Dense(32 * 2, name="model_hc_dence_2", activation="relu")(input_lstm)
-            x_dence = tf.keras.layers.Bidirectional(
-                tf.keras.layers.LSTM(32, return_sequences=True), name="model_hc_bilstm_2"
-            )(x_dence)
-
-            x = tf.keras.layers.Add()([x_lstm, x_attention, x_dence])
-
-            # m = tf.reduce_mean(x, axis=1)
-            # s = tf.reduce_std(x, axis=1)
-            # m = tf.keras.backend.mean(x, axis=1)
-            # s = tf.keras.backend.std(x, axis=1)
-        # print('add', K.concatenate((m, s), axis=1).shape)
-            # x = tf.concate((m, s), axis=1)
-
-            # print(x.shape)
-
-            x = Addition(name="model_hc_add")(x)
-
-            x = tf.keras.layers.Dense(5, activation="sigmoid")(x)
-            self._text_model_hc = tf.keras.Model(input_lstm, outputs=x, name="model_hc")
+            self._text_model_hc = text_model_hc(input_shape)
 
             if show_summary and out:
-                self._text_model_hc.summary()
+                print(self._text_model_hc)
 
             if runtime:
                 self._r_end(out=out)
@@ -1206,23 +1175,10 @@ class Text(TextMessages):
             else:
                 input_shape = (104, 768)
 
-            input_lstm = tf.keras.Input(shape=input_shape, name="model_nn_input")
-
-            x = tf.keras.layers.Bidirectional(
-                tf.keras.layers.LSTM(32, return_sequences=True), name="model_nn_bilstm_1"
-            )(input_lstm)
-
-            x = Attention(use_scale=False, score_mode="dot", name="model_nn_attention")(x, x)
-
-            x = tf.keras.layers.Dense(128, name="model_nn_dence_2")(x)
-            x = Addition(name="model_nn_add")(x)
-            x = tf.keras.layers.Dense(128, name="model_nn_dence_3")(x)
-
-            x = tf.keras.layers.Dense(5, activation="sigmoid")(x)
-            self._text_model_nn = tf.keras.Model(input_lstm, outputs=x, name="model_nn")
+            self._text_model_nn = text_model_nn(input_shape)
 
             if show_summary and out:
-                self._text_model_nn.summary()
+                print(self._text_model_nn)
 
             if runtime:
                 self._r_end(out=out)
@@ -1303,11 +1259,8 @@ class Text(TextMessages):
 
         if self.__load_model_weights(url, force_reload, self._load_text_model_weights_hc, out, False, run) is True:
             try:
-                self._text_model_hc.load_weights(self._url_last_filename)
-                self._text_model_hc = tf.keras.models.Model(
-                    inputs=self._text_model_hc.input,
-                    outputs=[self._text_model_hc.output, self._text_model_hc.get_layer("model_hc_add").output],
-                )
+                self._text_model_hc.load_state_dict(torch.load(self._url_last_filename))
+                self._text_model_hc.to(self._device).eval()
 
             except Exception:
                 self._error(self._model_text_hc_not_formation, out=out)
@@ -1341,11 +1294,9 @@ class Text(TextMessages):
 
         if self.__load_model_weights(url, force_reload, self._load_text_model_weights_nn, out, False, run) is True:
             try:
-                self._text_model_nn.load_weights(self._url_last_filename)
-                self._text_model_nn = tf.keras.models.Model(
-                    inputs=self._text_model_nn.input,
-                    outputs=[self._text_model_nn.output, self._text_model_nn.get_layer("model_nn_dence_3").output],
-                )
+                self._text_model_nn.load_state_dict(torch.load(self._url_last_filename))
+                self._text_model_nn.to(self._device).eval()
+
             except Exception:
                 self._error(self._model_text_nn_not_formation, out=out)
                 return False
@@ -1383,7 +1334,8 @@ class Text(TextMessages):
 
         if self.__load_model_weights(url, force_reload, self._load_text_model_weights_b5, out, False, run) is True:
             try:
-                self._text_model_b5.load_weights(self._url_last_filename)
+                self._text_model_b5.load_state_dict(torch.load(self._url_last_filename))
+                self._text_model_b5.to(self._device).eval()
             except Exception:
                 self._error(self._model_text_not_formation, out=out)
                 return False
@@ -1396,11 +1348,12 @@ class Text(TextMessages):
         return False
 
     def load_text_features(
-        self, force_reload: bool = True, out: bool = True, runtime: bool = True, run: bool = True
+        self, url: str = None, force_reload: bool = True, out: bool = True, runtime: bool = True, run: bool = True
     ) -> bool:
         """Загрузка словаря с экспертными признаками
 
         Args:
+            url (str): Полный путь к лингвистическому словарю
             force_reload (bool): Принудительная загрузка файла с весами нейросетевой модели из сети
             out (bool): Отображение
             runtime (bool): Подсчет времени выполнения
@@ -1412,9 +1365,13 @@ class Text(TextMessages):
 
         if runtime:
             self._r_start()
+        
+        if url:
+            self._text_features = url
+            force_reload = False
 
         if (
-            self.__load_text_features(self._text_features[0], force_reload, self._load_text_features, out, False, run)
+            self.__load_text_features(self._text_features, force_reload, self._load_text_features, out, False, run)
             is True
         ):
             try:
@@ -1431,10 +1388,11 @@ class Text(TextMessages):
                 if runtime:
                     self._r_end(out=out)
 
-    def setup_translation_model(self, out: bool = True, runtime: bool = True, run: bool = True) -> bool:
+    def setup_translation_model(self, url: str = None, out: bool = True, runtime: bool = True, run: bool = True) -> bool:
         """Формирование токенизатора и нейросетевой модели машинного перевода
 
         Args:
+            url: Полный путь к файлу с моделью для перевода языка
             out (bool): Отображение
             runtime (bool): Подсчет времени выполнения
             run (bool): Блокировка выполнения
@@ -1464,6 +1422,9 @@ class Text(TextMessages):
             # Информационное сообщение
             self._info(self._load_translation_model, last=False, out=out)
 
+            if url:
+                self._translation_model = url
+
             try:
                 self._tokenizer = MarianTokenizer.from_pretrained(self._translation_model)
                 self._traslate_model = AutoModelForSeq2SeqLM.from_pretrained(self._translation_model).to(self._device)
@@ -1477,11 +1438,12 @@ class Text(TextMessages):
                 self._r_end(out=out)
 
     def setup_bert_encoder(
-        self, force_reload: bool = True, out: bool = True, runtime: bool = True, run: bool = True
+        self, url: str = None, force_reload: bool = True, out: bool = True, runtime: bool = True, run: bool = True
     ) -> bool:
         """Формирование токенизатора и нейросетевой модели BERT
 
         Args:
+            url: Полный путь к файлу с нейросетевой моделью BERT
             force_reload (bool): Принудительная загрузка файла с нейросетевой моделью BERT из сети
             out (bool): Отображение
             runtime (bool): Подсчет времени выполнения
@@ -1517,6 +1479,10 @@ class Text(TextMessages):
             # Информационное сообщение
             self._info(self._load_bert_model, last=False, out=out)
 
+            if url:
+                self._bert_multi_model = url 
+                force_reload = False
+
             if self.__load_bert_model(self._bert_multi_model, force_reload, out, False, run) is True:
                 try:
                     # Распаковка архива
@@ -1533,7 +1499,7 @@ class Text(TextMessages):
                     if res_unzip is True:
                         try:
                             self._bert_tokenizer = BertTokenizer.from_pretrained(Path(self._url_last_filename).stem)
-                            self._bert_model = TFBertModel.from_pretrained(Path(self._url_last_filename).stem)
+                            self._bert_model = BertModel.from_pretrained(Path(self._url_last_filename).stem).to(self._device)
                         except Exception:
                             self._other_error(self._unknown_err, out=out)
                             return False
@@ -1755,105 +1721,113 @@ class Text(TextMessages):
 
                     last = False  # Замена последнего сообщения
 
-                    # Проход по всем искомым файлов
-                    for i, curr_path in enumerate(paths):
-                        if i != 0:
-                            last = True
+                    with torch.no_grad():
 
-                        # Индикатор выполнения
-                        self._progressbar_union_predictions(
-                            get_text_union_predictions_info,
-                            i,
-                            self.__local_path(curr_path),
-                            self.__len_paths,
-                            True,
-                            last,
-                            out,
-                        )
+                        # Проход по всем искомым файлов
+                        for i, curr_path in enumerate(paths):
+                            if i != 0:
+                                last = True
 
-                        hc_features, nn_features = self.get_text_features(
-                            path=str(curr_path.resolve()),  # Путь к видеофайлу
-                            asr=asr,  # Распознавание речи
-                            lang=lang,  # Выбор языка
-                            show_text=True,  # Отображение текста
-                            out=False,  # Отображение
-                            runtime=False,  # Подсчет времени выполнения
-                            run=run,  # Блокировка выполнения
-                        )
+                            # Индикатор выполнения
+                            self._progressbar_union_predictions(
+                                get_text_union_predictions_info,
+                                i,
+                                self.__local_path(curr_path),
+                                self.__len_paths,
+                                True,
+                                last,
+                                out,
+                            )
 
-                        hc_features = np.expand_dims(hc_features, axis=0)
-                        nn_features = np.expand_dims(nn_features, axis=0)
+                            hc_features, nn_features = self.get_text_features(
+                                path=str(curr_path.resolve()),  # Путь к видеофайлу
+                                asr=asr,  # Распознавание речи
+                                lang=lang,  # Выбор языка
+                                show_text=True,  # Отображение текста
+                                out=False,  # Отображение
+                                runtime=False,  # Подсчет времени выполнения
+                                run=run,  # Блокировка выполнения
+                            )
 
-                        # Признаки из текста извлечены
-                        if len(hc_features) > 0 and len(nn_features) > 0:
-                            # Коды ошибок нейросетевых моделей
-                            code_error_pred_hc = -1
-                            code_error_pred_nn = -1
+                            hc_features = np.expand_dims(hc_features, axis=0)
+                            nn_features = np.expand_dims(nn_features, axis=0)
 
-                            try:
-                                # Оправка экспертных признаков в нейросетевую модель
-                                pred_hc, _ = self.text_model_hc_(np.array(hc_features, dtype=np.float16))
-                            except TypeError:
-                                code_error_pred_hc = 1
-                            except Exception:
-                                code_error_pred_hc = 2
+                            # Признаки из текста извлечены
+                            if len(hc_features) > 0 and len(nn_features) > 0:
+                                # Коды ошибок нейросетевых моделей
+                                code_error_pred_hc = -1
+                                code_error_pred_nn = -1
 
-                            try:
-                                # Отправка нейросетевых признаков в нейросетевую модель
-                                pred_nn, _ = self.text_model_nn_(np.array(nn_features, dtype=np.float16))
-                            except TypeError:
-                                code_error_pred_nn = 1
-                            except Exception:
-                                code_error_pred_nn = 2
-
-                            if code_error_pred_hc != -1 and code_error_pred_nn != -1:
-                                self._error(self._model_text_not_formation, out=out)
-                                return False
-
-                            if code_error_pred_hc != -1:
-                                self._error(self._model_text_hc_not_formation, out=out)
-                                return False
-
-                            if code_error_pred_nn != -1:
-                                self._error(self._model_text_nn_not_formation, out=out)
-                                return False
-
-                            # pred_hc = pred_hc.numpy()[0]
-                            # pred_nn = pred_nn.numpy()[0]
-
-                            final_pred = self._text_model_b5([pred_hc, pred_nn]).numpy()[0].tolist()
-
-                            # Добавление данных в словарь для DataFrame
-                            if self._append_to_list_of_files(str(curr_path.resolve()), final_pred, out) is False:
-                                return False
-
-                            # Вычисление точности
-                            if accuracy is True:
                                 try:
-                                    true_trait = (
-                                        data_true_traits[data_true_traits.NAME_VIDEO == curr_path.name][
-                                            list(self._b5["en"])
-                                        ]
-                                        .values[0]
-                                        .tolist()
-                                    )
-                                except IndexError:
-                                    self._other_error(self._expert_values_not_found, out=out)
-                                    return False
+                                    # Оправка экспертных признаков в нейросетевую модель
+                                    hc_features = torch.from_numpy(np.array(hc_features, dtype=np.float32))
+                                    pred_hc, _ = self.text_model_hc_(hc_features.to(self._device))
+                                    pred_hc = pred_hc.detach().cpu()
+                                except TypeError:
+                                    code_error_pred_hc = 1
                                 except Exception:
-                                    self._other_error(self._unknown_err, out=out)
+                                    code_error_pred_hc = 2
+
+                                try:
+                                    # Отправка нейросетевых признаков в нейросетевую модель
+                                    nn_features = torch.from_numpy(np.array(nn_features, dtype=np.float32))
+                                    pred_nn, _ = self.text_model_nn_(nn_features.to(self._device))
+                                    pred_nn = pred_nn.detach().cpu()
+                                except TypeError:
+                                    code_error_pred_nn = 1
+                                except Exception:
+                                    code_error_pred_nn = 2
+
+                                if code_error_pred_hc != -1 and code_error_pred_nn != -1:
+                                    self._error(self._model_text_not_formation, out=out)
                                     return False
-                                else:
-                                    true_traits.append(true_trait)
-                        else:
-                            # Добавление данных в словарь для DataFrame
-                            if (
-                                self._append_to_list_of_files(
-                                    str(curr_path.resolve()), [None] * len(self._b5["en"]), out
-                                )
-                                is False
-                            ):
-                                return False
+
+                                if code_error_pred_hc != -1:
+                                    self._error(self._model_text_hc_not_formation, out=out)
+                                    return False
+
+                                if code_error_pred_nn != -1:
+                                    self._error(self._model_text_nn_not_formation, out=out)
+                                    return False
+
+                                # pred_hc = pred_hc.numpy()[0]
+                                # pred_nn = pred_nn.numpy()[0]
+
+                                final_pred = self._text_model_b5(pred_hc.to(self._device), pred_nn.to(self._device))
+                                final_pred = final_pred.detach().cpu().numpy()[0].tolist()
+                                # final_pred = self._text_model_b5([pred_hc, pred_nn]).numpy()[0].tolist()
+
+                                # Добавление данных в словарь для DataFrame
+                                if self._append_to_list_of_files(str(curr_path.resolve()), final_pred, out) is False:
+                                    return False
+
+                                # Вычисление точности
+                                if accuracy is True:
+                                    try:
+                                        true_trait = (
+                                            data_true_traits[data_true_traits.NAME_VIDEO == curr_path.name][
+                                                list(self._b5["en"])
+                                            ]
+                                            .values[0]
+                                            .tolist()
+                                        )
+                                    except IndexError:
+                                        self._other_error(self._expert_values_not_found, out=out)
+                                        return False
+                                    except Exception:
+                                        self._other_error(self._unknown_err, out=out)
+                                        return False
+                                    else:
+                                        true_traits.append(true_trait)
+                            else:
+                                # Добавление данных в словарь для DataFrame
+                                if (
+                                    self._append_to_list_of_files(
+                                        str(curr_path.resolve()), [None] * len(self._b5["en"]), out
+                                    )
+                                    is False
+                                ):
+                                    return False
 
                     # Индикатор выполнения
                     self._progressbar_union_predictions(

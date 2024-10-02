@@ -48,17 +48,17 @@ from oceanai.modules.lab.download import Download  # Загрузка файло
 logging.disable(logging.WARNING)
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
-import tensorflow as tf  # Машинное обучение от Google
-import keras
+import torch
+import torch.nn as  nn
+from PIL import Image
+
 import cv2
 import mediapipe as mp  # Набор нейросетевых моделей и решений для компьютерного зрения
 
-# Исправленная версия Keras_VGGFace
-from oceanai.modules.lab.keras_vggface import utils
-from oceanai.modules.lab.keras_vggface.vggface import VGGFace
+from oceanai.modules.lab.architectures import utils
+from oceanai.modules.lab.architectures.video_architectures import ResNet50, video_model_hc, video_model_nn, video_model_b5
 
 mp.solutions.face_mesh.FaceMesh()  # Удаление сообщения: INFO: Created TensorFlow Lite XNNPACK delegate for CPU)
-
 
 # ######################################################################################################################
 # Сообщения
@@ -152,13 +152,13 @@ class Video(VideoMessages):
         super().__post_init__()  # Выполнение конструктора из суперкласса
 
         # Нейросетевая модель **tf.keras.Model** для получения оценок по экспертным признакам
-        self._video_model_hc: Optional[tf.keras.Model] = None
+        self._video_model_hc: Optional[nn.Module] = None
         # Нейросетевая модель **tf.keras.Model** для получения нейросетевых признаков
-        self._video_model_deep_fe: Optional[tf.keras.Model] = None
+        self._video_model_deep_fe: Optional[nn.Module] = None
         # Нейросетевая модель **tf.keras.Model** для получения оценок по нейросетевым признакам
-        self._video_model_nn: Optional[tf.keras.Model] = None
+        self._video_model_nn: Optional[nn.Module] = None
         # Нейросетевые модели **tf.keras.Model** для получения результатов оценки персональных качеств
-        self._video_models_b5: Dict[str, Optional[tf.keras.Model]] = dict(
+        self._video_models_b5: Dict[str, Optional[nn.Module]] = dict(
             zip(self._b5["en"], [None] * len(self._b5["en"]))
         )
 
@@ -334,7 +334,7 @@ class Video(VideoMessages):
     # ------------------------------------------------------------------------------------------------------------------
 
     @property
-    def video_model_hc_(self) -> Optional[tf.keras.Model]:
+    def video_model_hc_(self) -> Optional[nn.Module]:
         """Получение нейросетевой модели **tf.keras.Model** для получения оценок по экспертным признакам
 
         Returns:
@@ -394,7 +394,7 @@ class Video(VideoMessages):
         return self._video_model_hc
 
     @property
-    def video_model_nn_(self) -> Optional[tf.keras.Model]:
+    def video_model_nn_(self) -> Optional[nn.Module]:
         """Получение нейросетевой модели **tf.keras.Model** для получения оценок по нейросетевым признакам
 
         Returns:
@@ -454,7 +454,7 @@ class Video(VideoMessages):
         return self._video_model_nn
 
     @property
-    def video_model_deep_fe_(self) -> Optional[tf.keras.Model]:
+    def video_model_deep_fe_(self) -> Optional[nn.Module]:
         """Получение нейросетевой модели **tf.keras.Model** для получения нейросетевых признаков
 
         Returns:
@@ -514,7 +514,7 @@ class Video(VideoMessages):
         return self._video_model_deep_fe
 
     @property
-    def video_models_b5_(self) -> Dict[str, Optional[tf.keras.Model]]:
+    def video_models_b5_(self) -> Dict[str, Optional[nn.Module]]:
         """Получение нейросетевых моделей **tf.keras.Model** для получения результатов оценки персональных качеств
 
         Returns:
@@ -1192,7 +1192,7 @@ class Video(VideoMessages):
 
             return concat
 
-    def __load_video_model_b5(self, show_summary: bool = False, out: bool = True) -> Optional[tf.keras.Model]:
+    def __load_video_model_b5(self, show_summary: bool = False, out: bool = True) -> Optional[nn.Module]:
         """Формирование нейросетевой архитектуры модели для получения результата оценки персонального качества
 
         .. note::
@@ -1276,14 +1276,10 @@ class Video(VideoMessages):
             self._inv_args(__class__.__name__, self.__load_video_model_b5.__name__, out=out)
             return None
         else:
-            input_1 = tf.keras.Input(shape=(32,), name="input_1")
-            x = tf.keras.layers.Dense(units=1, name="dense_1")(input_1)
-            x = tf.keras.layers.Activation("sigmoid", name="activ_1")(x)
-
-            model = tf.keras.Model(inputs=input_1, outputs=x)
+            model = video_model_b5()
 
             if show_summary and out:
-                model.summary()
+                print(model)
 
             return model
 
@@ -1502,60 +1498,6 @@ class Video(VideoMessages):
                     self._other_error(self._unknown_err, out=out)
                     return np.empty([]), np.empty([])
                 else:
-                    # metadata = MediaInfo.parse(path).to_data()  # Meta данные
-
-                    # media_info = {}  # Словарь для meta данных
-
-                    # # Проход по всем meta словарям
-                    # for track in metadata["tracks"]:
-                    #     # Извлечение meta данных
-                    #     if track["track_type"] in [*self._type_meta_info]:
-                    #         media_info[track["track_type"]] = {}  # Словарь для meta данных определенного формата
-
-                    #         # Проход по всем необходимым meta данным
-                    #         for i, curr_necessary in enumerate(self._type_meta_info[track["track_type"]]):
-                    #             try:
-                    #                 val = track[curr_necessary]  # Текущее значение
-                    #             except Exception:
-                    #                 continue
-                    #             else:
-                    #                 try:
-                    #                     if curr_necessary == "encoded_date":
-                    #                         val = datetime.strptime(val.replace("UTC ", ""), "%Y-%m-%d %H:%M:%S")
-                    #                     if (
-                    #                         curr_necessary == "frame_rate"
-                    #                         or curr_necessary == "minimum_frame_rate"
-                    #                         or curr_necessary == "maximum_frame_rate"
-                    #                     ):
-                    #                         val = float(val)
-                    #                 except Exception:
-                    #                     continue
-
-                    #                 # Список в строку
-                    #                 if type(val) is list:
-                    #                     if len(val) < 2:
-                    #                         val = val[0]
-                    #                     else:
-                    #                         val = ", ".join([str(elem) for elem in val])
-
-                    #                 media_info[track["track_type"]][curr_necessary] = val
-
-                    # try:
-                    #     # Всего кадров в видеопотоке
-                    #     all_frames = int(media_info["Video"]["duration"] / 1000 * media_info["Video"]["frame_rate"])
-                    # except Exception:
-                    #     all_frames = 0
-
-                    # try:
-                    #     if all_frames == 0:
-                    #         raise ValueError
-                    # except ValueError:
-                    #     self._other_error(self._all_frames_is_zero.format(self._info_wrapper(str(all_frames))), out=out)
-                    #     return np.empty([]), np.empty([])
-                    # except Exception:
-                    #     self._other_error(self._unknown_err, out=out)
-                    #     return np.empty([]), np.empty([])
-                    # else:
                     cap = cv2.VideoCapture(path)  # Захват видеофайла для чтения
                     width_video = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))  # Ширина кадров в видеопотоке
                     height_video = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))  # Высота кадров в видеопотоке
@@ -1704,17 +1646,9 @@ class Video(VideoMessages):
                                                 int(start_y / reshape_img_coef) : int(end_y / reshape_img_coef),
                                                 int(start_x / reshape_img_coef) : int(end_x / reshape_img_coef),
                                             ]
-                                            # Приведение изображения с лицом в нужному размеру
-                                            bndbox_face = cv2.resize(
-                                                bndbox_face, self.__bndbox_face_size, interpolation=cv2.INTER_AREA
-                                            )
 
-                                            bndbox_face = tf.keras.preprocessing.image.img_to_array(bndbox_face)
+                                            bndbox_face = Image.fromarray(bndbox_face)
                                             bndbox_face = utils.preprocess_input(bndbox_face)
-
-                                            bndbox_face = bndbox_face.reshape(
-                                                -1, self.__bndbox_face_size[0], self.__bndbox_face_size[1], 3
-                                            )
 
                                             # 1) Координаты центра глаз
                                             # 2) Текущие экспертные признаки
@@ -1825,7 +1759,10 @@ class Video(VideoMessages):
 
                         try:
                             # Отправка областей с лицами в нейросетевую модель для получения нейросетевых признаков
-                            extract_deep_fe = self._video_model_deep_fe(np.vstack(bndbox_faces))
+                            bndbox_faces = torch.from_numpy(np.vstack(bndbox_faces))
+                            pred_emo, extract_deep_fe = self._video_model_deep_fe(bndbox_faces.to(self._device))
+                            extract_deep_fe = extract_deep_fe.detach().cpu()
+                            pred_emo = pred_emo.detach().cpu()
                         except TypeError:
                             code_error_pred_deep_fe = 1
                         except Exception:
@@ -1837,7 +1774,7 @@ class Video(VideoMessages):
 
                         # 1. Список с экспертными признаками
                         # 2. Список с нейросетевыми признаками
-                        hc_features, nn_features = [], []
+                        hc_features, nn_features, pred_emos = [], [], []
 
                         # Проход по всему набору экспертных и нейросетевых признаков
                         for idx_hc_nn in range(0, len(hcs) + 1, step):
@@ -1845,13 +1782,16 @@ class Video(VideoMessages):
 
                             # Текущие подвыборки
                             curr_seq_nn = extract_deep_fe[idx_hc_nn:last_idx__hc_nn].numpy().tolist()
+                            curr_pred_emos = pred_emo[idx_hc_nn:last_idx__hc_nn].numpy().tolist()
                             curr_seq_hc = hcs[idx_hc_nn:last_idx__hc_nn].tolist()
                             if len(curr_seq_nn) < window and len(curr_seq_nn) != 0:
                                 curr_seq_hc.extend([curr_seq_hc[-1]] * (window - len(curr_seq_hc)))
                                 curr_seq_nn.extend([curr_seq_nn[-1]] * (window - len(curr_seq_nn)))
+                                curr_pred_emos.extend([curr_pred_emos[-1]] * (window - len(curr_pred_emos)))
                             if len(curr_seq_nn) != 0:
                                 hc_features.append(curr_seq_hc)
                                 nn_features.append(curr_seq_nn)
+                                pred_emos.append(curr_pred_emos)
 
                         hc_features = stats.zscore(hc_features, axis=-1)
 
@@ -1868,7 +1808,7 @@ class Video(VideoMessages):
                                 fps_after=self._round_math(reduction_fps, out),
                             )
 
-                        return hc_features, np.asarray(nn_features)
+                        return hc_features, np.asarray(nn_features), np.asarray(pred_emos)
             finally:
                 if runtime:
                     self._r_end(out=out)
@@ -1973,22 +1913,11 @@ class Video(VideoMessages):
             self._info(self._formation_video_model_hc, last=False, out=False)
             if out:
                 self.show_notebook_history_output()  # Отображение истории вывода сообщений в ячейке Jupyter
-
-            if lang == self.__lang_traslate[0]:
-                input_lstm = tf.keras.Input(shape=(10, 109))
-            else:
-                input_lstm = tf.keras.Input(shape=(10, 115))
-
-            x = tf.keras.layers.LSTM(64, return_sequences=True)(input_lstm)
-            x = tf.keras.layers.Dropout(rate=0.2)(x)
-            x = tf.keras.layers.LSTM(128, return_sequences=False, name="lstm_128_v_hc")(x)
-            x = tf.keras.layers.Dropout(rate=0.2)(x)
-            x = tf.keras.layers.Dense(5, activation="linear")(x)
-
-            self._video_model_hc = tf.keras.Model(inputs=input_lstm, outputs=x)
+                
+            self._video_model_hc = video_model_hc(lang=lang)
 
             if show_summary and out:
-                self._video_model_hc.summary()
+                print(self._video_model_hc)
 
             if runtime:
                 self._r_end(out=out)
@@ -2543,21 +2472,10 @@ class Video(VideoMessages):
             if out:
                 self.show_notebook_history_output()  # Отображение истории вывода сообщений в ячейке Jupyter
 
-            basis_model = VGGFace(
-                model="resnet50", include_top=False, input_shape=(224, 224, 3), pooling="avg", weights=None
-            )
-
-            gauss_noise = tf.keras.layers.GaussianNoise(0.1)(basis_model.output)
-            x = tf.keras.layers.Dense(
-                units=512, kernel_regularizer=tf.keras.regularizers.l2(1e-4), activation="relu", name="dense_x"
-            )(gauss_noise)
-            x = tf.keras.layers.Dropout(0.5)(x)
-            x = tf.keras.layers.Dense(7, activation="softmax")(x)
-
-            self._video_model_deep_fe = tf.keras.Model(basis_model.input, x)
+            self._video_model_deep_fe = ResNet50(7, channels=3)
 
             if show_summary and out:
-                self._video_model_deep_fe.summary()
+                print(self._video_model_deep_fe)
 
             if runtime:
                 self._r_end(out=out)
@@ -2676,20 +2594,11 @@ class Video(VideoMessages):
             self._info(self._formation_video_model_nn, last=False, out=False)
             if out:
                 self.show_notebook_history_output()  # Отображение истории вывода сообщений в ячейке Jupyter
-
-            input_lstm = tf.keras.Input(shape=(10, 512))
-
-            x = tf.keras.layers.LSTM(
-                1024, return_sequences=False, kernel_regularizer=tf.keras.regularizers.l2(1e-3), name="lstm_1024_v_nn"
-            )(input_lstm)
-            x = tf.keras.layers.Dropout(rate=0.2)(x)
-            x = tf.keras.layers.Dense(units=5)(x)
-            x = tf.keras.layers.Activation("linear")(x)
-
-            self._video_model_nn = tf.keras.Model(inputs=input_lstm, outputs=x)
+                
+            self._video_model_nn = video_model_nn()
 
             if show_summary and out:
-                self._video_model_nn.summary()
+                print(self._video_model_nn)
 
             if runtime:
                 self._r_end(out=out)
@@ -2809,7 +2718,7 @@ class Video(VideoMessages):
                 self._video_models_b5[key] = self.__load_video_model_b5()
 
             if show_summary and out:
-                self._video_models_b5[key].summary()
+                print(self._video_models_b5[key])
 
             if runtime:
                 self._r_end(out=out)
@@ -2934,11 +2843,8 @@ class Video(VideoMessages):
 
         if self.__load_model_weights(url, force_reload, self._load_video_model_weights_hc, out, False, run) is True:
             try:
-                self._video_model_hc.load_weights(self._url_last_filename)
-                self._video_model_hc = tf.keras.models.Model(
-                    inputs=self._video_model_hc.input,
-                    outputs=[self._video_model_hc.output, self._video_model_hc.get_layer("lstm_128_v_hc").output],
-                )
+                self._video_model_hc.load_state_dict(torch.load(self._url_last_filename))
+                self._video_model_hc.to(self._device).eval()
             except Exception:
                 self._error(self._model_video_hc_not_formation, out=out)
                 return False
@@ -3071,11 +2977,10 @@ class Video(VideoMessages):
             is True
         ):
             try:
-                self._video_model_deep_fe.load_weights(self._url_last_filename)
-                self._video_model_deep_fe = tf.keras.Model(
-                    inputs=self._video_model_deep_fe.input,
-                    outputs=[self._video_model_deep_fe.get_layer("dense_x").output],
-                )
+                self._video_model_deep_fe.load_state_dict(torch.load(self._url_last_filename))
+                self._video_model_deep_fe.to(self._device).eval()
+                test_tensor = torch.randn((1, 3, 224, 224)).to(self._device)
+                _, _ = self._video_model_deep_fe(test_tensor)
             except Exception:
                 self._error(self._model_video_deep_fe_not_formation, out=out)
                 return False
@@ -3205,11 +3110,10 @@ class Video(VideoMessages):
 
         if self.__load_model_weights(url, force_reload, self._load_video_model_weights_nn, out, False, run) is True:
             try:
-                self._video_model_nn.load_weights(self._url_last_filename)
-                self._video_model_nn = tf.keras.models.Model(
-                    inputs=self._video_model_nn.input,
-                    outputs=[self._video_model_nn.output, self._video_model_nn.get_layer("lstm_1024_v_nn").output],
-                )
+                self._video_model_nn.load_state_dict(torch.load(self._url_last_filename))
+                self._video_model_nn.to(self._device).eval()
+                test_tensor = torch.randn((1, 10, 512)).to(self._device)
+                _, _ = self._video_model_nn(test_tensor)
             except Exception:
                 self._error(self._model_video_nn_not_formation, out=out)
                 return False
@@ -3503,7 +3407,10 @@ class Video(VideoMessages):
                             continue
 
                         try:
-                            self._video_models_b5[self._b5["en"][cnt]].load_weights(self._url_last_filename)
+                            self._video_models_b5[self._b5["en"][cnt]].load_state_dict(torch.load(self._url_last_filename))
+                            self._video_models_b5[self._b5["en"][cnt]].to(self._device).eval()
+                            test_tensor = torch.randn((1, 32)).to(self._device)
+                            _ = self._video_models_b5[self._b5["en"][cnt]](test_tensor)
                         except Exception:
                             self._other_error(
                                 self._load_model_weights_error + " " + self._bold_wrapper(url[1].capitalize()), out=out
@@ -3752,120 +3659,127 @@ class Video(VideoMessages):
 
                     last = False  # Замена последнего сообщения
 
-                    # Проход по всем искомым файлов
-                    for i, curr_path in enumerate(paths):
-                        if i != 0:
-                            last = True
+                    with torch.no_grad():
 
-                        # Индикатор выполнения
-                        self._progressbar_union_predictions(
-                            get_video_union_predictions_info,
-                            i,
-                            self.__local_path(curr_path),
-                            self.__len_paths,
-                            True,
-                            last,
-                            out,
-                        )
+                        # Проход по всем искомым файлов
+                        for i, curr_path in enumerate(paths):
+                            if i != 0:
+                                last = True
 
-                        # Извлечение признаков из визуального сигнала
-                        hc_features, nn_features = self._get_visual_features(
-                            path=str(curr_path.resolve()),
-                            reduction_fps=reduction_fps,
-                            window=window,
-                            step=step,
-                            lang=lang,
-                            last=True,
-                            out=False,
-                            runtime=False,
-                            run=run,
-                        )
+                            # Индикатор выполнения
+                            self._progressbar_union_predictions(
+                                get_video_union_predictions_info,
+                                i,
+                                self.__local_path(curr_path),
+                                self.__len_paths,
+                                True,
+                                last,
+                                out,
+                            )
 
-                        # Признаки из акустического сигнала извлечены
-                        if (
-                            type(hc_features) is np.ndarray
-                            and type(nn_features) is np.ndarray
-                            and len(hc_features) > 0
-                            and len(nn_features) > 0
-                        ):
-                            # Коды ошибок нейросетевых моделей
-                            code_error_pred_hc = -1
-                            code_error_pred_nn = -1
+                            # Извлечение признаков из визуального сигнала
+                            hc_features, nn_features, _ = self._get_visual_features(
+                                path=str(curr_path.resolve()),
+                                reduction_fps=reduction_fps,
+                                window=window,
+                                step=step,
+                                lang=lang,
+                                last=True,
+                                out=False,
+                                runtime=False,
+                                run=run,
+                            )
 
-                            try:
-                                # Оправка экспертных признаков в нейросетевую модель
-                                pred_hc, _ = self.video_model_hc_(np.array(hc_features, dtype=np.float16))
-                            except TypeError:
-                                code_error_pred_hc = 1
-                            except Exception:
-                                code_error_pred_hc = 2
-
-                            try:
-                                # Отправка нейросетевых признаков в нейросетевую модель
-                                pred_nn, _ = self.video_model_nn_(np.array(nn_features, dtype=np.float16))
-                            except TypeError:
-                                code_error_pred_nn = 1
-                            except Exception:
-                                code_error_pred_nn = 2
-
-                            if code_error_pred_hc != -1 and code_error_pred_nn != -1:
-                                self._error(self._models_video_not_formation, out=out)
-                                return False
-
-                            if code_error_pred_hc != -1:
-                                self._error(self._model_video_hc_not_formation, out=out)
-                                return False
-
-                            if code_error_pred_nn != -1:
-                                self._error(self._model_video_nn_not_formation, out=out)
-                                return False
-
-                            # Конкатенация оценок по экспертным и нейросетевым признакам
-                            union_pred = self.__concat_pred(pred_hc.numpy(), pred_nn.numpy(), out=out)
-
-                            if len(union_pred) == 0:
-                                return False
-
-                            final_pred = []
-
-                            for cnt, (name_b5, model) in enumerate(self.video_models_b5_.items()):
-                                result = model(np.expand_dims(union_pred[cnt], axis=0)).numpy()[0][0]
-
-                                final_pred.append(result)
-
-                            # Добавление данных в словарь для DataFrame
-                            if self._append_to_list_of_files(str(curr_path.resolve()), final_pred, out) is False:
-                                return False
-
-                            # Вычисление точности
-                            if accuracy is True:
-                                try:
-                                    true_trait = (
-                                        data_true_traits[data_true_traits.NAME_VIDEO == curr_path.name][
-                                            list(self._b5["en"])
-                                        ]
-                                        .values[0]
-                                        .tolist()
-                                    )
-                                except IndexError:
-                                    self._other_error(self._expert_values_not_found, out=out)
-                                    return False
-                                except Exception:
-                                    self._other_error(self._unknown_err, out=out)
-                                    return False
-                                else:
-                                    true_traits.append(true_trait)
-                        else:
-                            # Добавление данных в словарь для DataFrame
+                            # Признаки из акустического сигнала извлечены
                             if (
-                                self._append_to_list_of_files(
-                                    str(curr_path.resolve()), [None] * len(self._b5["en"]), out
-                                )
-                                is False
+                                type(hc_features) is np.ndarray
+                                and type(nn_features) is np.ndarray
+                                and len(hc_features) > 0
+                                and len(nn_features) > 0
                             ):
-                                return False
+                                # Коды ошибок нейросетевых моделей
+                                code_error_pred_hc = -1
+                                code_error_pred_nn = -1
 
-                            self._del_last_el_notebook_history_output()
+                                try:
+                                    # Оправка экспертных признаков в нейросетевую модель
+                                    hc_features = torch.from_numpy(np.array(hc_features, dtype=np.float32))
+                                    pred_hc, _ = self.video_model_hc_(hc_features.to(self._device))
+                                    pred_hc = pred_hc.detach().cpu()
+                                except TypeError:
+                                    code_error_pred_hc = 1
+                                except Exception:
+                                    code_error_pred_hc = 2
+
+                                try:
+                                    # Отправка нейросетевых признаков в нейросетевую модель
+                                    nn_features = torch.from_numpy(np.array(nn_features, dtype=np.float32))
+                                    pred_nn, _ = self.video_model_nn_(nn_features.to(self._device))
+                                    pred_nn = pred_nn.detach().cpu()
+                                except TypeError:
+                                    code_error_pred_nn = 1
+                                except Exception:
+                                    code_error_pred_nn = 2
+
+                                if code_error_pred_hc != -1 and code_error_pred_nn != -1:
+                                    self._error(self._models_video_not_formation, out=out)
+                                    return False
+
+                                if code_error_pred_hc != -1:
+                                    self._error(self._model_video_hc_not_formation, out=out)
+                                    return False
+
+                                if code_error_pred_nn != -1:
+                                    self._error(self._model_video_nn_not_formation, out=out)
+                                    return False
+
+                                # Конкатенация оценок по экспертным и нейросетевым признакам
+                                union_pred = self.__concat_pred(pred_hc.numpy(), pred_nn.numpy(), out=out)
+
+                                if len(union_pred) == 0:
+                                    return False
+
+                                final_pred = []
+
+                                for cnt, (name_b5, model) in enumerate(self.video_models_b5_.items()):
+                                    curr_union_pred = torch.from_numpy(np.expand_dims(union_pred[cnt], axis=0))
+                                    result = model(curr_union_pred.to(self._device)).detach().cpu().numpy()[0][0]
+
+                                    final_pred.append(result)
+
+                                # Добавление данных в словарь для DataFrame
+                                if self._append_to_list_of_files(str(curr_path.resolve()), final_pred, out) is False:
+                                    return False
+
+                                # Вычисление точности
+                                if accuracy is True:
+                                    try:
+                                        true_trait = (
+                                            data_true_traits[data_true_traits.NAME_VIDEO == curr_path.name][
+                                                list(self._b5["en"])
+                                            ]
+                                            .values[0]
+                                            .tolist()
+                                        )
+                                    except IndexError:
+                                        self._other_error(self._expert_values_not_found, out=out)
+                                        return False
+                                    except Exception:
+                                        self._other_error(self._unknown_err, out=out)
+                                        return False
+                                    else:
+                                        true_traits.append(true_trait)
+                            else:
+                                # Добавление данных в словарь для DataFrame
+                                if (
+                                    self._append_to_list_of_files(
+                                        str(curr_path.resolve()), [None] * len(self._b5["en"]), out
+                                    )
+                                    is False
+                                ):
+                                    return False
+
+                                self._del_last_el_notebook_history_output()
 
                     # Индикатор выполнения
                     self._progressbar_union_predictions(

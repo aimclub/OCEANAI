@@ -48,10 +48,10 @@ from oceanai.modules.core.exceptions import IsSmallWindowSizeError
 logging.disable(logging.WARNING)
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
-import tensorflow as tf  # Машинное обучение от Google
-import keras
+import torch
+import torch.nn as nn
 
-from tensorflow.keras.applications import VGG16
+from oceanai.modules.lab.architectures.audio_architectures import audio_model_hc, audio_model_nn, audio_model_b5
 
 # ######################################################################################################################
 # Настройки необходимых инструментов
@@ -142,11 +142,11 @@ class Audio(AudioMessages):
         super().__post_init__()  # Выполнение конструктора из суперкласса
 
         # Нейросетевая модель **tf.keras.Model** для получения оценок по экспертным признакам
-        self._audio_model_hc: Optional[tf.keras.Model] = None
+        self._audio_model_hc: Optional[nn.Module] = None
         # Нейросетевая модель **tf.keras.Model** для получения оценок по нейросетевым признакам
-        self._audio_model_nn: Optional[tf.keras.Model] = None
+        self._audio_model_nn: Optional[nn.Module] = None
         # Нейросетевые модели **tf.keras.Model** для получения результатов оценки персональных качеств
-        self._audio_models_b5: Dict[str, Optional[tf.keras.Model]] = dict(
+        self._audio_models_b5: Dict[str, Optional[nn.Module]] = dict(
             zip(self._b5["en"], [None] * len(self._b5["en"]))
         )
 
@@ -180,7 +180,7 @@ class Audio(AudioMessages):
     # ------------------------------------------------------------------------------------------------------------------
 
     @property
-    def audio_model_hc_(self) -> Optional[tf.keras.Model]:
+    def audio_model_hc_(self) -> Optional[nn.Module]:
         """Получение нейросетевой модели **tf.keras.Model** для получения оценок по экспертным признакам
 
         Returns:
@@ -240,7 +240,7 @@ class Audio(AudioMessages):
         return self._audio_model_hc
 
     @property
-    def audio_model_nn_(self) -> Optional[tf.keras.Model]:
+    def audio_model_nn_(self) -> Optional[nn.Module]:
         """Получение нейросетевой модели **tf.keras.Model** для получения оценок по нейросетевым признакам
 
         Returns:
@@ -300,7 +300,7 @@ class Audio(AudioMessages):
         return self._audio_model_nn
 
     @property
-    def audio_models_b5_(self) -> Dict[str, Optional[tf.keras.Model]]:
+    def audio_models_b5_(self) -> Dict[str, Optional[nn.Module]]:
         """Получение нейросетевых моделей **tf.keras.Model** для получения результатов оценки персональных качеств
 
         Returns:
@@ -945,7 +945,7 @@ class Audio(AudioMessages):
 
     def __load_audio_model_b5(
         self, show_summary: bool = False, out: bool = True
-    ) -> Optional[tf.keras.Model]:
+    ) -> Optional[nn.Module]:
         """Формирование нейросетевой архитектуры модели для получения результата оценки персонального качества
 
         .. note::
@@ -1029,14 +1029,10 @@ class Audio(AudioMessages):
             self._inv_args(__class__.__name__, self.__load_audio_model_b5.__name__, out=out)
             return None
         else:
-            input_1 = tf.keras.Input(shape=(32,), name="input_1")
-            x = tf.keras.layers.Dense(units=1, name="dense_1")(input_1)
-            x = tf.keras.layers.Activation("sigmoid", name="activ_1")(x)
-
-            model = tf.keras.Model(inputs=input_1, outputs=x)
+            model = audio_model_b5()
 
             if show_summary and out:
-                model.summary()
+                print(model)
 
             return model
 
@@ -1437,18 +1433,10 @@ class Audio(AudioMessages):
             if out:
                 self.show_notebook_history_output()  # Отображение истории вывода сообщений в ячейке Jupyter
 
-            input_lstm = tf.keras.Input(shape=(196, 25))
-
-            x = tf.keras.layers.LSTM(64, return_sequences=True)(input_lstm)
-            x = tf.keras.layers.Dropout(rate=0.2)(x)
-            x = tf.keras.layers.LSTM(128, return_sequences=False, name="lstm_128_a_hc")(x)
-            x = tf.keras.layers.Dropout(rate=0.2)(x)
-            x = tf.keras.layers.Dense(5, activation="linear")(x)
-
-            self._audio_model_hc = tf.keras.Model(inputs=input_lstm, outputs=x)
+            self._audio_model_hc = audio_model_hc()
 
             if show_summary and out:
-                self._audio_model_hc.summary()
+                print(self._audio_model_hc)
 
             if runtime:
                 self._r_end(out=out)
@@ -1606,19 +1594,10 @@ class Audio(AudioMessages):
             if out:
                 self.show_notebook_history_output()  # Отображение истории вывода сообщений в ячейке Jupyter
 
-            vgg_model = VGG16(weights=None, include_top=False, input_shape=(224, 224, 3))
-
-            x = vgg_model.output
-            x = tf.keras.layers.Flatten()(x)
-            x = tf.keras.layers.Dense(512, activation="relu")(x)
-            x = tf.keras.layers.Dropout(0.5)(x)
-            x = tf.keras.layers.Dense(256, activation="relu", name="dense_256")(x)
-            x = tf.keras.layers.Dense(5, activation="linear")(x)
-
-            self._audio_model_nn = tf.keras.models.Model(inputs=vgg_model.input, outputs=x)
+            self._audio_model_nn = audio_model_nn()
 
             if show_summary and out:
-                self._audio_model_nn.summary()
+                print(self._audio_model_nn)
 
             if runtime:
                 self._r_end(out=out)
@@ -1864,11 +1843,11 @@ class Audio(AudioMessages):
 
         if self.__load_model_weights(url, force_reload, self._load_audio_model_weights_hc, out, False, run) is True:
             try:
-                self._audio_model_hc.load_weights(self._url_last_filename)
-                self._audio_model_hc = tf.keras.models.Model(
-                    inputs=self._audio_model_hc.input,
-                    outputs=[self._audio_model_hc.output, self._audio_model_hc.get_layer("lstm_128_a_hc").output],
-                )
+                self._audio_model_hc.load_state_dict(torch.load(self._url_last_filename))
+                self._audio_model_hc.to(self._device).eval()
+                with torch.no_grad():
+                    test_tensor = torch.randn((1, 196, 25)).to(self._device)
+                    _, _ = self._audio_model_hc(test_tensor)
             except Exception:
                 self._error(self._model_audio_hc_not_formation, out=out)
                 return False
@@ -2000,11 +1979,11 @@ class Audio(AudioMessages):
 
         if self.__load_model_weights(url, force_reload, self._load_audio_model_weights_nn, out, False, run) is True:
             try:
-                self._audio_model_nn.load_weights(self._url_last_filename)
-                self._audio_model_nn = tf.keras.models.Model(
-                    inputs=self._audio_model_nn.input,
-                    outputs=[self._audio_model_nn.output, self._audio_model_nn.get_layer("dense_256").output],
-                )
+                self._audio_model_nn.load_state_dict(torch.load(self._url_last_filename))
+                self._audio_model_nn.to(self._device).eval()
+                with torch.no_grad():
+                    test_tensor = torch.randn((1, 3, 224, 224)).to(self._device)
+                    _, _ = self._audio_model_nn(test_tensor)
             except Exception:
                 self._error(self._model_audio_nn_not_formation, out=out)
                 return False
@@ -2306,7 +2285,11 @@ class Audio(AudioMessages):
                             continue
 
                         try:
-                            self._audio_models_b5[self._b5["en"][cnt]].load_weights(self._url_last_filename)
+                            self._audio_models_b5[self._b5["en"][cnt]].load_state_dict(torch.load(self._url_last_filename))
+                            self._audio_models_b5[self._b5["en"][cnt]].to(self._device).eval()
+                            with torch.no_grad():
+                                test_tensor = torch.randn((1, 32)).to(self._device)
+                                _ = self._audio_models_b5[self._b5["en"][cnt]](test_tensor)
                         except Exception:
                             self._other_error(
                                 self._load_model_weights_error + " " + self._bold_wrapper(url[1].capitalize()), out=out
@@ -2539,114 +2522,119 @@ class Audio(AudioMessages):
 
                     last = False  # Замена последнего сообщения
 
-                    # Проход по всем искомым файлов
-                    for i, curr_path in enumerate(paths):
-                        if i != 0:
-                            last = True
+                    with torch.no_grad():
 
-                        # Индикатор выполнения
-                        self._progressbar_union_predictions(
-                            get_audio_union_predictions_info,
-                            i,
-                            self.__local_path(curr_path),
-                            self.__len_paths,
-                            True,
-                            last,
-                            out,
-                        )
+                        # Проход по всем искомым файлов
+                        for i, curr_path in enumerate(paths):
+                            if i != 0:
+                                last = True
 
-                        # Извлечение признаков из акустического сигнала
-                        hc_features, melspectrogram_features = self._get_acoustic_features(
-                            path=str(curr_path.resolve()),
-                            sr=sr,
-                            window=window,
-                            step=step,
-                            last=True,
-                            out=False,
-                            runtime=False,
-                            run=run,
-                        )
+                            # Индикатор выполнения
+                            self._progressbar_union_predictions(
+                                get_audio_union_predictions_info,
+                                i,
+                                self.__local_path(curr_path),
+                                self.__len_paths,
+                                True,
+                                last,
+                                out,
+                            )
 
-                        # Признаки из акустического сигнала извлечены
-                        if len(hc_features) > 0 and len(melspectrogram_features) > 0:
-                            # Коды ошибок нейросетевых моделей
-                            code_error_pred_hc = -1
-                            code_error_pred_melspectrogram = -1
+                            # Извлечение признаков из акустического сигнала
+                            hc_features, melspectrogram_features = self._get_acoustic_features(
+                                path=str(curr_path.resolve()),
+                                sr=sr,
+                                window=window,
+                                step=step,
+                                last=True,
+                                out=False,
+                                runtime=False,
+                                run=run,
+                            )
 
-                            try:
-                                # Оправка экспертных признаков в нейросетевую модель
-                                pred_hc, _ = self.audio_model_hc_(np.array(hc_features, dtype=np.float16))
-                            except TypeError:
-                                code_error_pred_hc = 1
-                            except Exception:
-                                code_error_pred_hc = 2
+                            # Признаки из акустического сигнала извлечены
+                            if len(hc_features) > 0 and len(melspectrogram_features) > 0:
+                                # Коды ошибок нейросетевых моделей
+                                code_error_pred_hc = -1
+                                code_error_pred_melspectrogram = -1
 
-                            try:
-                                # Отправка нейросетевых признаков в нейросетевую модель
-                                pred_melspectrogram, _ = self.audio_model_nn_(
-                                    np.array(melspectrogram_features, dtype=np.float16)
-                                )
-                            except TypeError:
-                                code_error_pred_melspectrogram = 1
-                            except Exception:
-                                code_error_pred_melspectrogram = 2
-
-                            if code_error_pred_hc != -1 and code_error_pred_melspectrogram != -1:
-                                self._error(self._models_audio_not_formation, out=out)
-                                return False
-
-                            if code_error_pred_hc != -1:
-                                self._error(self._model_audio_hc_not_formation, out=out)
-                                return False
-
-                            if code_error_pred_melspectrogram != -1:
-                                self._error(self._model_audio_nn_not_formation, out=out)
-                                return False
-
-                            # Конкатенация оценок по экспертным и нейросетевым признакам
-                            union_pred = self.__concat_pred(pred_hc.numpy(), pred_melspectrogram.numpy(), out=out)
-
-                            if len(union_pred) == 0:
-                                return False
-
-                            final_pred = []
-
-                            for cnt, (name_b5, model) in enumerate(self.audio_models_b5_.items()):
-                                result = model(np.expand_dims(union_pred[cnt], axis=0)).numpy()[0][0]
-
-                                final_pred.append(result)
-
-                            # Добавление данных в словарь для DataFrame
-                            if self._append_to_list_of_files(str(curr_path.resolve()), final_pred, out) is False:
-                                return False
-
-                            # Вычисление точности
-                            if accuracy is True:
                                 try:
-                                    true_trait = (
-                                        data_true_traits[data_true_traits.NAME_VIDEO == curr_path.name][
-                                            list(self._b5["en"])
-                                        ]
-                                        .values[0]
-                                        .tolist()
-                                    )
-                                except IndexError:
-                                    self._other_error(self._expert_values_not_found, out=out)
-                                    return False
+                                    # Оправка экспертных признаков в нейросетевую модель
+                                    hc_features = torch.from_numpy(np.array(hc_features, dtype=np.float32))
+                                    pred_hc, _ = self.audio_model_hc_(hc_features.to(self._device))
+                                    pred_hc = pred_hc.detach().cpu()
+                                except TypeError:
+                                    code_error_pred_hc = 1
                                 except Exception:
-                                    self._other_error(self._unknown_err, out=out)
+                                    code_error_pred_hc = 2
+
+                                try:
+                                    # Отправка нейросетевых признаков в нейросетевую модель
+                                    melspectrogram_features = torch.from_numpy(np.array(melspectrogram_features, dtype=np.float32))
+                                    pred_melspectrogram, _ = self.audio_model_nn_(melspectrogram_features.permute(0, 3, 1, 2).to(self._device))
+                                    pred_melspectrogram = pred_melspectrogram.detach().cpu()
+                                except TypeError:
+                                    code_error_pred_melspectrogram = 1
+                                except Exception:
+                                    code_error_pred_melspectrogram = 2
+
+                                if code_error_pred_hc != -1 and code_error_pred_melspectrogram != -1:
+                                    self._error(self._models_audio_not_formation, out=out)
                                     return False
-                                else:
-                                    true_traits.append(true_trait)
-                        else:
-                            # Добавление данных в словарь для DataFrame
-                            if (
-                                self._append_to_list_of_files(
-                                    str(curr_path.resolve()), [None] * len(self._b5["en"]), out
-                                )
-                                is False
-                            ):
-                                return False
+
+                                if code_error_pred_hc != -1:
+                                    self._error(self._model_audio_hc_not_formation, out=out)
+                                    return False
+
+                                if code_error_pred_melspectrogram != -1:
+                                    self._error(self._model_audio_nn_not_formation, out=out)
+                                    return False
+
+                                # Конкатенация оценок по экспертным и нейросетевым признакам
+                                union_pred = self.__concat_pred(pred_hc.numpy(), pred_melspectrogram.numpy(), out=out)
+
+                                if len(union_pred) == 0:
+                                    return False
+
+                                final_pred = []
+
+                                for cnt, (name_b5, model) in enumerate(self.audio_models_b5_.items()):
+                                    curr_union_pred = torch.from_numpy(np.expand_dims(union_pred[cnt], axis=0))
+                                    result = model(curr_union_pred.to(self._device)).detach().cpu().numpy()[0][0]
+
+                                    final_pred.append(result)
+
+                                # Добавление данных в словарь для DataFrame
+                                if self._append_to_list_of_files(str(curr_path.resolve()), final_pred, out) is False:
+                                    return False
+
+                                # Вычисление точности
+                                if accuracy is True:
+                                    try:
+                                        true_trait = (
+                                            data_true_traits[data_true_traits.NAME_VIDEO == curr_path.name][
+                                                list(self._b5["en"])
+                                            ]
+                                            .values[0]
+                                            .tolist()
+                                        )
+                                    except IndexError:
+                                        self._other_error(self._expert_values_not_found, out=out)
+                                        return False
+                                    except Exception:
+                                        self._other_error(self._unknown_err, out=out)
+                                        return False
+                                    else:
+                                        true_traits.append(true_trait)
+                            else:
+                                # Добавление данных в словарь для DataFrame
+                                if (
+                                    self._append_to_list_of_files(
+                                        str(curr_path.resolve()), [None] * len(self._b5["en"]), out
+                                    )
+                                    is False
+                                ):
+                                    return False
 
                     # Индикатор выполнения
                     self._progressbar_union_predictions(
