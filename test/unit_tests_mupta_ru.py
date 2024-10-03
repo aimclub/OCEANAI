@@ -31,7 +31,8 @@ _b5.keys_dataset_ = ["Path", "Openness", "Conscientiousness", "Extraversion", "A
 _b5.ext_ = [".mov"]
 _b5.path_to_logs_ = "./logs"
 
-URL_ACCURACY = _b5.true_traits_[corpus]["sberdisk"]
+DISK = "googledisk"
+URL_ACCURACY = _b5.true_traits_[corpus][DISK]
 
 _b5.download_file_from_url(
     url="https://download.sberdisk.ru/download/file/477995980?token=jGPtBPS69uzFU6Y&filename=" + FILENAME_1, out=False
@@ -56,7 +57,7 @@ def test_get_visual_features():
     _b5.path_to_save_ = PATH_SAVE_MODELS
 
     _b5.load_video_model_deep_fe(out=False)
-    url = _b5.weights_for_big5_["video"][corpus]["fe"]["sberdisk"]
+    url = _b5.weights_for_big5_["video"][corpus]["fe"][DISK]
     _b5.load_video_model_weights_deep_fe(url=url, out=False)
 
     hc_features, nn_features = _b5.get_visual_features(
@@ -89,15 +90,15 @@ def test_get_text_union_predictions():
     _b5.setup_bert_encoder(force_reload=False, out=False)
 
     _b5.load_text_model_hc(corpus=corpus, out=False)
-    url = _b5.weights_for_big5_["text"][corpus]["hc"]["sberdisk"]
+    url = _b5.weights_for_big5_["text"][corpus]["hc"][DISK]
     _b5.load_text_model_weights_hc(url=url, out=False)
 
     _b5.load_text_model_nn(corpus=corpus, out=False)
-    url = _b5.weights_for_big5_["text"][corpus]["nn"]["sberdisk"]
+    url = _b5.weights_for_big5_["text"][corpus]["nn"][DISK]
     _b5.load_text_model_weights_nn(url=url, out=False)
 
     _b5.load_text_model_b5(out=False)
-    url = _b5.weights_for_big5_["text"][corpus]["b5"]["sberdisk"]
+    url = _b5.weights_for_big5_["text"][corpus]["b5"][DISK]
     _b5.load_text_model_weights_b5(url=url, out=False)
 
     _b5.get_text_union_predictions(lang=lang, url_accuracy=URL_ACCURACY, out=False)
@@ -112,23 +113,23 @@ def test_get_avt_predictions():
     _b5.load_audio_model_hc(out=False)
     _b5.load_audio_model_nn(out=False)
 
-    url = _b5.weights_for_big5_["audio"][corpus]["hc"]["sberdisk"]
+    url = _b5.weights_for_big5_["audio"][corpus]["hc"][DISK]
     _b5.load_audio_model_weights_hc(url=url, out=False)
 
-    url = _b5.weights_for_big5_["audio"][corpus]["nn"]["sberdisk"]
+    url = _b5.weights_for_big5_["audio"][corpus]["nn"][DISK]
     _b5.load_audio_model_weights_nn(url=url, out=False)
 
     _b5.load_video_model_hc(lang=lang, out=False)
     _b5.load_video_model_deep_fe(out=False)
     _b5.load_video_model_nn(out=False)
 
-    url = _b5.weights_for_big5_["video"][corpus]["hc"]["sberdisk"]
+    url = _b5.weights_for_big5_["video"][corpus]["hc"][DISK]
     _b5.load_video_model_weights_hc(url=url, out=False)
 
-    url = _b5.weights_for_big5_["video"][corpus]["fe"]["sberdisk"]
+    url = _b5.weights_for_big5_["video"][corpus]["fe"][DISK]
     _b5.load_video_model_weights_deep_fe(url=url, out=False)
 
-    url = _b5.weights_for_big5_["video"][corpus]["nn"]["sberdisk"]
+    url = _b5.weights_for_big5_["video"][corpus]["nn"][DISK]
     _b5.load_video_model_weights_nn(url=url, out=False)
 
     _b5.load_text_features(out=False)
@@ -136,15 +137,15 @@ def test_get_avt_predictions():
     _b5.setup_bert_encoder(force_reload=False, out=False)
 
     _b5.load_text_model_hc(corpus=corpus, out=False)
-    url = _b5.weights_for_big5_["text"][corpus]["hc"]["sberdisk"]
+    url = _b5.weights_for_big5_["text"][corpus]["hc"][DISK]
     _b5.load_text_model_weights_hc(url=url, out=False)
 
     _b5.load_text_model_nn(corpus=corpus, out=False)
-    url = _b5.weights_for_big5_["text"][corpus]["nn"]["sberdisk"]
+    url = _b5.weights_for_big5_["text"][corpus]["nn"][DISK]
     _b5.load_text_model_weights_nn(url=url, out=False)
 
     _b5.load_avt_model_b5(out=False)
-    url = _b5.weights_for_big5_["avt"][corpus]["b5"]["sberdisk"]
+    url = _b5.weights_for_big5_["avt"][corpus]["b5"][DISK]
     _b5.load_avt_model_weights_b5(url=url, out=False)
 
     _b5.get_avt_predictions(url_accuracy=URL_ACCURACY, lang=lang, out=False)
