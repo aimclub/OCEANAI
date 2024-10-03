@@ -27,6 +27,7 @@ import librosa  # Обработка аудио
 import audioread  # Декодирование звука
 import math
 import gradio
+import cv2
 
 from urllib.parse import urlparse
 from urllib.error import URLError
@@ -1314,8 +1315,9 @@ class Audio(AudioMessages):
                                 )
                             melspectrogram_to_db /= 255  # Линейная нормализация
                             melspectrogram_to_db = np.expand_dims(melspectrogram_to_db, axis=-1)
-                            melspectrogram_to_db = tf.image.resize(melspectrogram_to_db, (224, 224))  # Масштабирование
-                            melspectrogram_to_db = tf.repeat(melspectrogram_to_db, 3, axis=-1)  # GRAY -> RGB
+                            melspectrogram_to_db = cv2.resize(melspectrogram_to_db, (224, 224), interpolation=cv2.INTER_LINEAR)
+                            melspectrogram_to_db = np.expand_dims(melspectrogram_to_db, axis=-1)
+                            melspectrogram_to_db = np.repeat(melspectrogram_to_db, 3, axis=-1)
                             # Добавление лог мел-спектрограммы в список
                             melspectrogram_features.append(melspectrogram_to_db)
 
