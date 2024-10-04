@@ -60,7 +60,7 @@ def test_get_visual_features():
     url = _b5.weights_for_big5_["video"][corpus]["fe"][DISK]
     _b5.load_video_model_weights_deep_fe(url=url, out=False)
 
-    hc_features, nn_features = _b5.get_visual_features(
+    hc_features, nn_features, _ = _b5.get_visual_features(
         path=os.path.join(PATH_SAVE_VIDEO, FILENAME_1), lang=lang, out=False
     )
 
