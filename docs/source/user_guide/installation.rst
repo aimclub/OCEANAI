@@ -45,5 +45,6 @@
     "sentencepiece", "0.2.0", ".. image:: https://img.shields.io/pypi/v/sentencepiece"
     "torch", "2.2.2", ".. image:: https://img.shields.io/pypi/v/torch"
     "torchaudio", "2.2.2", ".. image:: https://img.shields.io/pypi/v/torchaudio"
+    "torchvision", "0.17.2", ".. image:: https://img.shields.io/pypi/v/torchvision"
     "sacremoses", "0.1.1", ".. image:: https://img.shields.io/pypi/v/sacremoses"
     "gradio", "4.44.1", ".. image:: https://img.shields.io/pypi/v/gradio"

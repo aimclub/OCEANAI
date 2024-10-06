@@ -27,6 +27,7 @@ REQUIRED_PACKAGES = [
     "sentencepiece >= 0.2.0",
     "torch >= 2.2.2",
     "torchaudio >= 2.2.2",
+    "torchvision >= 0.17.2",
     "sacremoses >= 0.1.1",
     "gradio == 4.44.1",
 ]

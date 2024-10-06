@@ -40,6 +40,7 @@ import transformers  # Доступ к Hugging Face Transformers
 import sentencepiece  # Обработка и токенизация текста с использованием SentencePiece
 import torch  # Машинное обучение от Facebook
 import torchaudio  # Работа с аудио от Facebook
+import torchvision
 
 from datetime import datetime  # Работа со временем
 from typing import List, Dict, Tuple, Union, Optional, Iterable  # Типы данных
@@ -4564,6 +4565,7 @@ class Core(CoreMessages):
                 | 15 | Sentencepiece | 0.2.0        |
                 | 16 | Torch         | 2.2.2        |
                 | 17 | Torchaudio    | 2.2.2        |
+                | 18 | Torchvision   | 0.17.2       |
                 |----|---------------|--------------|
                 --- Время выполнения: 0.005 сек. ---
 
@@ -4644,6 +4646,7 @@ class Core(CoreMessages):
                     "Sentencepiece",
                     "Torch",
                     "Torchaudio",
+                    "Torchvision",
                 ],
                 "Version": [
                     i.__version__
@@ -4665,6 +4668,7 @@ class Core(CoreMessages):
                         sentencepiece,
                         torch,
                         torchaudio,
+                        torchvision,
                     ]
                 ],
             }
