@@ -10,6 +10,7 @@ import torch
 from torchvision import transforms
 from PIL import Image
 
+
 def preprocess_input(fp):
     class PreprocessInput(torch.nn.Module):
         def init(self):

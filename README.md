@@ -69,7 +69,7 @@ The library solves practical tasks:
 
 **[OCEAN-AI](https://oceanai.readthedocs.io/en/latest/)** uses the latest open-source libraries for audio, video and text processing: **[librosa](https://librosa.org/)**, **[openSMILE](https://audeering.github.io/opensmile-python/)**, **[openCV](https://pypi.org/project/opencv-python/)**, **[mediapipe](https://google.github.io/mediapipe/getting_started/python)**, **[transformers](https://pypi.org/project/transformers)**.
 
-**[OCEAN-AI](https://oceanai.readthedocs.io/en/latest/)** is written in the **[python programming language](https://www.python.org/)**. Neural network models are implemented and trained using an open-source library code **[TensorFlow](https://www.tensorflow.org/)**.
+**[OCEAN-AI](https://oceanai.readthedocs.io/en/latest/)** is written in the **[python programming language](https://www.python.org/)**. Neural network models are implemented and trained using an open-source library code **[PyTorch](https://pytorch.org/)**.
 
 ---
 

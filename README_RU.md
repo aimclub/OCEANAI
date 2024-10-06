@@ -75,7 +75,7 @@
 **[OCEAN-AI](https://github.com/DmitryRyumin/oceanai)** написана на языке программирования
 **[python](https://www.python.org/)**. Нейросетевые модели
 реализованы и обучены с использованием библиотеки с открытым исходным кодом
-**[TensorFlow](https://www.tensorflow.org/)**.
+**[PyTorch](https://pytorch.org/)**.
 
 ---
 

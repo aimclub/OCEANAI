@@ -18,7 +18,6 @@ for warn in [UserWarning, FutureWarning]:
 from dataclasses import dataclass  # Класс данных
 
 import os  # Взаимодействие с файловой системой
-import logging
 import requests  # Отправка HTTP запросов
 import numpy as np  # Научные вычисления
 import pandas as pd  # Обработка и анализ данных
@@ -31,7 +30,6 @@ from pathlib import Path  # Работа с путями в файловой с�
 from scipy.spatial import distance
 from scipy import stats
 
-# from pymediainfo import MediaInfo  # Получение meta данных из медиафайлов
 from datetime import datetime  # Работа со временем
 from sklearn.metrics import mean_absolute_error
 
@@ -44,21 +42,23 @@ from IPython.display import clear_output
 # Персональные
 from oceanai.modules.lab.download import Download  # Загрузка файлов
 
-# Порог регистрации сообщений TensorFlow
-logging.disable(logging.WARNING)
-os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
-
 import torch
-import torch.nn as  nn
+import torch.nn as nn
 from PIL import Image
 
 import cv2
 import mediapipe as mp  # Набор нейросетевых моделей и решений для компьютерного зрения
 
 from oceanai.modules.lab.architectures import utils
-from oceanai.modules.lab.architectures.video_architectures import ResNet50, video_model_hc, video_model_nn, video_model_b5
+from oceanai.modules.lab.architectures.video_architectures import (
+    ResNet50,
+    video_model_hc,
+    video_model_nn,
+    video_model_b5,
+)
 
 mp.solutions.face_mesh.FaceMesh()  # Удаление сообщения: INFO: Created TensorFlow Lite XNNPACK delegate for CPU)
+
 
 # ######################################################################################################################
 # Сообщения
@@ -151,16 +151,14 @@ class Video(VideoMessages):
     def __post_init__(self):
         super().__post_init__()  # Выполнение конструктора из суперкласса
 
-        # Нейросетевая модель **tf.keras.Model** для получения оценок по экспертным признакам
+        # Нейросетевая модель **nn.Module** для получения оценок по экспертным признакам
         self._video_model_hc: Optional[nn.Module] = None
-        # Нейросетевая модель **tf.keras.Model** для получения нейросетевых признаков
+        # Нейросетевая модель **nn.Module** для получения нейросетевых признаков
         self._video_model_deep_fe: Optional[nn.Module] = None
-        # Нейросетевая модель **tf.keras.Model** для получения оценок по нейросетевым признакам
+        # Нейросетевая модель **nn.Module** для получения оценок по нейросетевым признакам
         self._video_model_nn: Optional[nn.Module] = None
-        # Нейросетевые модели **tf.keras.Model** для получения результатов оценки персональных качеств
-        self._video_models_b5: Dict[str, Optional[nn.Module]] = dict(
-            zip(self._b5["en"], [None] * len(self._b5["en"]))
-        )
+        # Нейросетевые модели **nn.Module** для получения результатов оценки персональных качеств
+        self._video_models_b5: Dict[str, Optional[nn.Module]] = dict(zip(self._b5["en"], [None] * len(self._b5["en"])))
 
         # ----------------------- Только для внутреннего использования внутри класса
 
@@ -335,10 +333,10 @@ class Video(VideoMessages):
 
     @property
     def video_model_hc_(self) -> Optional[nn.Module]:
-        """Получение нейросетевой модели **tf.keras.Model** для получения оценок по экспертным признакам
+        """Получение нейросетевой модели **nn.Module** для получения оценок по экспертным признакам
 
         Returns:
-            Optional[tf.keras.Model]: Нейросетевая модель **tf.keras.Model** или None
+            Optional[nn.Module]: Нейросетевая модель **nn.Module** или None
 
         .. dropdown:: Примеры
             :class-body: sd-pr-5
@@ -395,10 +393,10 @@ class Video(VideoMessages):
 
     @property
     def video_model_nn_(self) -> Optional[nn.Module]:
-        """Получение нейросетевой модели **tf.keras.Model** для получения оценок по нейросетевым признакам
+        """Получение нейросетевой модели **nn.Module** для получения оценок по нейросетевым признакам
 
         Returns:
-            Optional[tf.keras.Model]: Нейросетевая модель **tf.keras.Model** или None
+            Optional[nn.Module]: Нейросетевая модель **nn.Module** или None
 
         .. dropdown:: Примеры
             :class-body: sd-pr-5
@@ -455,10 +453,10 @@ class Video(VideoMessages):
 
     @property
     def video_model_deep_fe_(self) -> Optional[nn.Module]:
-        """Получение нейросетевой модели **tf.keras.Model** для получения нейросетевых признаков
+        """Получение нейросетевой модели **nn.Module** для получения нейросетевых признаков
 
         Returns:
-            Optional[tf.keras.Model]: Нейросетевая модель **tf.keras.Model** или None
+            Optional[nn.Module]: Нейросетевая модель **nn.Module** или None
 
         .. dropdown:: Примеры
             :class-body: sd-pr-5
@@ -515,10 +513,10 @@ class Video(VideoMessages):
 
     @property
     def video_models_b5_(self) -> Dict[str, Optional[nn.Module]]:
-        """Получение нейросетевых моделей **tf.keras.Model** для получения результатов оценки персональных качеств
+        """Получение нейросетевых моделей **nn.Module** для получения результатов оценки персональных качеств
 
         Returns:
-            Dict: Словарь с нейросетевыми моделями **tf.keras.Model**
+            Dict: Словарь с нейросетевыми моделями **nn.Module**
 
         .. dropdown:: Примеры
             :class-body: sd-pr-5
@@ -1203,9 +1201,9 @@ class Video(VideoMessages):
             out (bool): Отображение
 
         Returns:
-            Optional[tf.keras.Model]:
+            Optional[nn.Module]:
                 **None** если неверные типы или значения аргументов, в обратном случае нейросетевая модель
-                **tf.keras.Model** для получения результата оценки персонального качества
+                **nn.Module** для получения результата оценки персонального качества
 
         .. dropdown:: Примеры
             :class-body: sd-pr-5
@@ -1231,13 +1229,13 @@ class Video(VideoMessages):
 
                 Model: "model"
                 _________________________________________________________________
-                 Layer (type)                Output Shape              Param #
+                Layer (type)                Output Shape              Param #
                 =================================================================
-                 input_1 (InputLayer)        [(None, 32)]              0
+                input_1 (InputLayer)        [(None, 32)]              0
 
-                 dense_1 (Dense)             (None, 1)                 33
+                dense_1 (Dense)             (None, 1)                 33
 
-                 activ_1 (Activation)        (None, 1)                 0
+                activ_1 (Activation)        (None, 1)                 0
 
                 =================================================================
                 Total params: 33
@@ -1913,7 +1911,7 @@ class Video(VideoMessages):
             self._info(self._formation_video_model_hc, last=False, out=False)
             if out:
                 self.show_notebook_history_output()  # Отображение истории вывода сообщений в ячейке Jupyter
-                
+
             self._video_model_hc = video_model_hc(lang=lang)
 
             if show_summary and out:
@@ -1964,452 +1962,452 @@ class Video(VideoMessages):
 
                 Model: "model_1"
                 __________________________________________________________________________________________________
-                 Layer (type)                   Output Shape         Param #     Connected to
+                Layer (type)                   Output Shape         Param #     Connected to
                 ==================================================================================================
-                 input_2 (InputLayer)           [(None, 224, 224, 3  0           []
+                input_2 (InputLayer)           [(None, 224, 224, 3  0           []
                                                 )]
 
-                 conv1/7x7_s2 (Conv2D)          (None, 112, 112, 64  9408        ['input_2[0][0]']
+                conv1/7x7_s2 (Conv2D)          (None, 112, 112, 64  9408        ['input_2[0][0]']
                                                 )
 
-                 conv1/7x7_s2/bn (BatchNormaliz  (None, 112, 112, 64  256        ['conv1/7x7_s2[0][0]']
-                 ation)                         )
+                conv1/7x7_s2/bn (BatchNormaliz  (None, 112, 112, 64  256        ['conv1/7x7_s2[0][0]']
+                ation)                         )
 
-                 activation_49 (Activation)     (None, 112, 112, 64  0           ['conv1/7x7_s2/bn[0][0]']
+                activation_49 (Activation)     (None, 112, 112, 64  0           ['conv1/7x7_s2/bn[0][0]']
                                                 )
 
-                 max_pooling2d_1 (MaxPooling2D)  (None, 55, 55, 64)  0           ['activation_49[0][0]']
+                max_pooling2d_1 (MaxPooling2D)  (None, 55, 55, 64)  0           ['activation_49[0][0]']
 
-                 conv2_1_1x1_reduce (Conv2D)    (None, 55, 55, 64)   4096        ['max_pooling2d_1[0][0]']
+                conv2_1_1x1_reduce (Conv2D)    (None, 55, 55, 64)   4096        ['max_pooling2d_1[0][0]']
 
-                 conv2_1_1x1_reduce/bn (BatchNo  (None, 55, 55, 64)  256         ['conv2_1_1x1_reduce[0][0]']
-                 rmalization)
+                conv2_1_1x1_reduce/bn (BatchNo  (None, 55, 55, 64)  256         ['conv2_1_1x1_reduce[0][0]']
+                rmalization)
 
-                 activation_50 (Activation)     (None, 55, 55, 64)   0           ['conv2_1_1x1_reduce/bn[0][0]']
+                activation_50 (Activation)     (None, 55, 55, 64)   0           ['conv2_1_1x1_reduce/bn[0][0]']
 
-                 conv2_1_3x3 (Conv2D)           (None, 55, 55, 64)   36864       ['activation_50[0][0]']
+                conv2_1_3x3 (Conv2D)           (None, 55, 55, 64)   36864       ['activation_50[0][0]']
 
-                 conv2_1_3x3/bn (BatchNormaliza  (None, 55, 55, 64)  256         ['conv2_1_3x3[0][0]']
-                 tion)
+                conv2_1_3x3/bn (BatchNormaliza  (None, 55, 55, 64)  256         ['conv2_1_3x3[0][0]']
+                tion)
 
-                 activation_51 (Activation)     (None, 55, 55, 64)   0           ['conv2_1_3x3/bn[0][0]']
+                activation_51 (Activation)     (None, 55, 55, 64)   0           ['conv2_1_3x3/bn[0][0]']
 
-                 conv2_1_1x1_increase (Conv2D)  (None, 55, 55, 256)  16384       ['activation_51[0][0]']
+                conv2_1_1x1_increase (Conv2D)  (None, 55, 55, 256)  16384       ['activation_51[0][0]']
 
-                 conv2_1_1x1_proj (Conv2D)      (None, 55, 55, 256)  16384       ['max_pooling2d_1[0][0]']
+                conv2_1_1x1_proj (Conv2D)      (None, 55, 55, 256)  16384       ['max_pooling2d_1[0][0]']
 
-                 conv2_1_1x1_increase/bn (Batch  (None, 55, 55, 256)  1024       ['conv2_1_1x1_increase[0][0]']
-                 Normalization)
+                conv2_1_1x1_increase/bn (Batch  (None, 55, 55, 256)  1024       ['conv2_1_1x1_increase[0][0]']
+                Normalization)
 
-                 conv2_1_1x1_proj/bn (BatchNorm  (None, 55, 55, 256)  1024       ['conv2_1_1x1_proj[0][0]']
-                 alization)
+                conv2_1_1x1_proj/bn (BatchNorm  (None, 55, 55, 256)  1024       ['conv2_1_1x1_proj[0][0]']
+                alization)
 
-                 add_16 (Add)                   (None, 55, 55, 256)  0           ['conv2_1_1x1_increase/bn[0][0]',
-                                                                                  'conv2_1_1x1_proj/bn[0][0]']
+                add_16 (Add)                   (None, 55, 55, 256)  0           ['conv2_1_1x1_increase/bn[0][0]',
+                                                                                'conv2_1_1x1_proj/bn[0][0]']
 
-                 activation_52 (Activation)     (None, 55, 55, 256)  0           ['add_16[0][0]']
+                activation_52 (Activation)     (None, 55, 55, 256)  0           ['add_16[0][0]']
 
-                 conv2_2_1x1_reduce (Conv2D)    (None, 55, 55, 64)   16384       ['activation_52[0][0]']
+                conv2_2_1x1_reduce (Conv2D)    (None, 55, 55, 64)   16384       ['activation_52[0][0]']
 
-                 conv2_2_1x1_reduce/bn (BatchNo  (None, 55, 55, 64)  256         ['conv2_2_1x1_reduce[0][0]']
-                 rmalization)
+                conv2_2_1x1_reduce/bn (BatchNo  (None, 55, 55, 64)  256         ['conv2_2_1x1_reduce[0][0]']
+                rmalization)
 
-                 activation_53 (Activation)     (None, 55, 55, 64)   0           ['conv2_2_1x1_reduce/bn[0][0]']
+                activation_53 (Activation)     (None, 55, 55, 64)   0           ['conv2_2_1x1_reduce/bn[0][0]']
 
-                 conv2_2_3x3 (Conv2D)           (None, 55, 55, 64)   36864       ['activation_53[0][0]']
+                conv2_2_3x3 (Conv2D)           (None, 55, 55, 64)   36864       ['activation_53[0][0]']
 
-                 conv2_2_3x3/bn (BatchNormaliza  (None, 55, 55, 64)  256         ['conv2_2_3x3[0][0]']
-                 tion)
+                conv2_2_3x3/bn (BatchNormaliza  (None, 55, 55, 64)  256         ['conv2_2_3x3[0][0]']
+                tion)
 
-                 activation_54 (Activation)     (None, 55, 55, 64)   0           ['conv2_2_3x3/bn[0][0]']
+                activation_54 (Activation)     (None, 55, 55, 64)   0           ['conv2_2_3x3/bn[0][0]']
 
-                 conv2_2_1x1_increase (Conv2D)  (None, 55, 55, 256)  16384       ['activation_54[0][0]']
+                conv2_2_1x1_increase (Conv2D)  (None, 55, 55, 256)  16384       ['activation_54[0][0]']
 
-                 conv2_2_1x1_increase/bn (Batch  (None, 55, 55, 256)  1024       ['conv2_2_1x1_increase[0][0]']
-                 Normalization)
+                conv2_2_1x1_increase/bn (Batch  (None, 55, 55, 256)  1024       ['conv2_2_1x1_increase[0][0]']
+                Normalization)
 
-                 add_17 (Add)                   (None, 55, 55, 256)  0           ['conv2_2_1x1_increase/bn[0][0]',
-                                                                                  'activation_52[0][0]']
+                add_17 (Add)                   (None, 55, 55, 256)  0           ['conv2_2_1x1_increase/bn[0][0]',
+                                                                                'activation_52[0][0]']
 
-                 activation_55 (Activation)     (None, 55, 55, 256)  0           ['add_17[0][0]']
+                activation_55 (Activation)     (None, 55, 55, 256)  0           ['add_17[0][0]']
 
-                 conv2_3_1x1_reduce (Conv2D)    (None, 55, 55, 64)   16384       ['activation_55[0][0]']
+                conv2_3_1x1_reduce (Conv2D)    (None, 55, 55, 64)   16384       ['activation_55[0][0]']
 
-                 conv2_3_1x1_reduce/bn (BatchNo  (None, 55, 55, 64)  256         ['conv2_3_1x1_reduce[0][0]']
-                 rmalization)
+                conv2_3_1x1_reduce/bn (BatchNo  (None, 55, 55, 64)  256         ['conv2_3_1x1_reduce[0][0]']
+                rmalization)
 
-                 activation_56 (Activation)     (None, 55, 55, 64)   0           ['conv2_3_1x1_reduce/bn[0][0]']
+                activation_56 (Activation)     (None, 55, 55, 64)   0           ['conv2_3_1x1_reduce/bn[0][0]']
 
-                 conv2_3_3x3 (Conv2D)           (None, 55, 55, 64)   36864       ['activation_56[0][0]']
+                conv2_3_3x3 (Conv2D)           (None, 55, 55, 64)   36864       ['activation_56[0][0]']
 
-                 conv2_3_3x3/bn (BatchNormaliza  (None, 55, 55, 64)  256         ['conv2_3_3x3[0][0]']
-                 tion)
+                conv2_3_3x3/bn (BatchNormaliza  (None, 55, 55, 64)  256         ['conv2_3_3x3[0][0]']
+                tion)
 
-                 activation_57 (Activation)     (None, 55, 55, 64)   0           ['conv2_3_3x3/bn[0][0]']
+                activation_57 (Activation)     (None, 55, 55, 64)   0           ['conv2_3_3x3/bn[0][0]']
 
-                 conv2_3_1x1_increase (Conv2D)  (None, 55, 55, 256)  16384       ['activation_57[0][0]']
+                conv2_3_1x1_increase (Conv2D)  (None, 55, 55, 256)  16384       ['activation_57[0][0]']
 
-                 conv2_3_1x1_increase/bn (Batch  (None, 55, 55, 256)  1024       ['conv2_3_1x1_increase[0][0]']
-                 Normalization)
+                conv2_3_1x1_increase/bn (Batch  (None, 55, 55, 256)  1024       ['conv2_3_1x1_increase[0][0]']
+                Normalization)
 
-                 add_18 (Add)                   (None, 55, 55, 256)  0           ['conv2_3_1x1_increase/bn[0][0]',
-                                                                                  'activation_55[0][0]']
+                add_18 (Add)                   (None, 55, 55, 256)  0           ['conv2_3_1x1_increase/bn[0][0]',
+                                                                                'activation_55[0][0]']
 
-                 activation_58 (Activation)     (None, 55, 55, 256)  0           ['add_18[0][0]']
+                activation_58 (Activation)     (None, 55, 55, 256)  0           ['add_18[0][0]']
 
-                 conv3_1_1x1_reduce (Conv2D)    (None, 28, 28, 128)  32768       ['activation_58[0][0]']
+                conv3_1_1x1_reduce (Conv2D)    (None, 28, 28, 128)  32768       ['activation_58[0][0]']
 
-                 conv3_1_1x1_reduce/bn (BatchNo  (None, 28, 28, 128)  512        ['conv3_1_1x1_reduce[0][0]']
-                 rmalization)
+                conv3_1_1x1_reduce/bn (BatchNo  (None, 28, 28, 128)  512        ['conv3_1_1x1_reduce[0][0]']
+                rmalization)
 
-                 activation_59 (Activation)     (None, 28, 28, 128)  0           ['conv3_1_1x1_reduce/bn[0][0]']
+                activation_59 (Activation)     (None, 28, 28, 128)  0           ['conv3_1_1x1_reduce/bn[0][0]']
 
-                 conv3_1_3x3 (Conv2D)           (None, 28, 28, 128)  147456      ['activation_59[0][0]']
+                conv3_1_3x3 (Conv2D)           (None, 28, 28, 128)  147456      ['activation_59[0][0]']
 
-                 conv3_1_3x3/bn (BatchNormaliza  (None, 28, 28, 128)  512        ['conv3_1_3x3[0][0]']
-                 tion)
+                conv3_1_3x3/bn (BatchNormaliza  (None, 28, 28, 128)  512        ['conv3_1_3x3[0][0]']
+                tion)
 
-                 activation_60 (Activation)     (None, 28, 28, 128)  0           ['conv3_1_3x3/bn[0][0]']
+                activation_60 (Activation)     (None, 28, 28, 128)  0           ['conv3_1_3x3/bn[0][0]']
 
-                 conv3_1_1x1_increase (Conv2D)  (None, 28, 28, 512)  65536       ['activation_60[0][0]']
+                conv3_1_1x1_increase (Conv2D)  (None, 28, 28, 512)  65536       ['activation_60[0][0]']
 
-                 conv3_1_1x1_proj (Conv2D)      (None, 28, 28, 512)  131072      ['activation_58[0][0]']
+                conv3_1_1x1_proj (Conv2D)      (None, 28, 28, 512)  131072      ['activation_58[0][0]']
 
-                 conv3_1_1x1_increase/bn (Batch  (None, 28, 28, 512)  2048       ['conv3_1_1x1_increase[0][0]']
-                 Normalization)
+                conv3_1_1x1_increase/bn (Batch  (None, 28, 28, 512)  2048       ['conv3_1_1x1_increase[0][0]']
+                Normalization)
 
-                 conv3_1_1x1_proj/bn (BatchNorm  (None, 28, 28, 512)  2048       ['conv3_1_1x1_proj[0][0]']
-                 alization)
+                conv3_1_1x1_proj/bn (BatchNorm  (None, 28, 28, 512)  2048       ['conv3_1_1x1_proj[0][0]']
+                alization)
 
-                 add_19 (Add)                   (None, 28, 28, 512)  0           ['conv3_1_1x1_increase/bn[0][0]',
-                                                                                  'conv3_1_1x1_proj/bn[0][0]']
+                add_19 (Add)                   (None, 28, 28, 512)  0           ['conv3_1_1x1_increase/bn[0][0]',
+                                                                                'conv3_1_1x1_proj/bn[0][0]']
 
-                 activation_61 (Activation)     (None, 28, 28, 512)  0           ['add_19[0][0]']
+                activation_61 (Activation)     (None, 28, 28, 512)  0           ['add_19[0][0]']
 
-                 conv3_2_1x1_reduce (Conv2D)    (None, 28, 28, 128)  65536       ['activation_61[0][0]']
+                conv3_2_1x1_reduce (Conv2D)    (None, 28, 28, 128)  65536       ['activation_61[0][0]']
 
-                 conv3_2_1x1_reduce/bn (BatchNo  (None, 28, 28, 128)  512        ['conv3_2_1x1_reduce[0][0]']
-                 rmalization)
+                conv3_2_1x1_reduce/bn (BatchNo  (None, 28, 28, 128)  512        ['conv3_2_1x1_reduce[0][0]']
+                rmalization)
 
-                 activation_62 (Activation)     (None, 28, 28, 128)  0           ['conv3_2_1x1_reduce/bn[0][0]']
+                activation_62 (Activation)     (None, 28, 28, 128)  0           ['conv3_2_1x1_reduce/bn[0][0]']
 
-                 conv3_2_3x3 (Conv2D)           (None, 28, 28, 128)  147456      ['activation_62[0][0]']
+                conv3_2_3x3 (Conv2D)           (None, 28, 28, 128)  147456      ['activation_62[0][0]']
 
-                 conv3_2_3x3/bn (BatchNormaliza  (None, 28, 28, 128)  512        ['conv3_2_3x3[0][0]']
-                 tion)
+                conv3_2_3x3/bn (BatchNormaliza  (None, 28, 28, 128)  512        ['conv3_2_3x3[0][0]']
+                tion)
 
-                 activation_63 (Activation)     (None, 28, 28, 128)  0           ['conv3_2_3x3/bn[0][0]']
+                activation_63 (Activation)     (None, 28, 28, 128)  0           ['conv3_2_3x3/bn[0][0]']
 
-                 conv3_2_1x1_increase (Conv2D)  (None, 28, 28, 512)  65536       ['activation_63[0][0]']
+                conv3_2_1x1_increase (Conv2D)  (None, 28, 28, 512)  65536       ['activation_63[0][0]']
 
-                 conv3_2_1x1_increase/bn (Batch  (None, 28, 28, 512)  2048       ['conv3_2_1x1_increase[0][0]']
-                 Normalization)
+                conv3_2_1x1_increase/bn (Batch  (None, 28, 28, 512)  2048       ['conv3_2_1x1_increase[0][0]']
+                Normalization)
 
-                 add_20 (Add)                   (None, 28, 28, 512)  0           ['conv3_2_1x1_increase/bn[0][0]',
-                                                                                  'activation_61[0][0]']
+                add_20 (Add)                   (None, 28, 28, 512)  0           ['conv3_2_1x1_increase/bn[0][0]',
+                                                                                'activation_61[0][0]']
 
-                 activation_64 (Activation)     (None, 28, 28, 512)  0           ['add_20[0][0]']
+                activation_64 (Activation)     (None, 28, 28, 512)  0           ['add_20[0][0]']
 
-                 conv3_3_1x1_reduce (Conv2D)    (None, 28, 28, 128)  65536       ['activation_64[0][0]']
+                conv3_3_1x1_reduce (Conv2D)    (None, 28, 28, 128)  65536       ['activation_64[0][0]']
 
-                 conv3_3_1x1_reduce/bn (BatchNo  (None, 28, 28, 128)  512        ['conv3_3_1x1_reduce[0][0]']
-                 rmalization)
+                conv3_3_1x1_reduce/bn (BatchNo  (None, 28, 28, 128)  512        ['conv3_3_1x1_reduce[0][0]']
+                rmalization)
 
-                 activation_65 (Activation)     (None, 28, 28, 128)  0           ['conv3_3_1x1_reduce/bn[0][0]']
+                activation_65 (Activation)     (None, 28, 28, 128)  0           ['conv3_3_1x1_reduce/bn[0][0]']
 
-                 conv3_3_3x3 (Conv2D)           (None, 28, 28, 128)  147456      ['activation_65[0][0]']
+                conv3_3_3x3 (Conv2D)           (None, 28, 28, 128)  147456      ['activation_65[0][0]']
 
-                 conv3_3_3x3/bn (BatchNormaliza  (None, 28, 28, 128)  512        ['conv3_3_3x3[0][0]']
-                 tion)
+                conv3_3_3x3/bn (BatchNormaliza  (None, 28, 28, 128)  512        ['conv3_3_3x3[0][0]']
+                tion)
 
-                 activation_66 (Activation)     (None, 28, 28, 128)  0           ['conv3_3_3x3/bn[0][0]']
+                activation_66 (Activation)     (None, 28, 28, 128)  0           ['conv3_3_3x3/bn[0][0]']
 
-                 conv3_3_1x1_increase (Conv2D)  (None, 28, 28, 512)  65536       ['activation_66[0][0]']
+                conv3_3_1x1_increase (Conv2D)  (None, 28, 28, 512)  65536       ['activation_66[0][0]']
 
-                 conv3_3_1x1_increase/bn (Batch  (None, 28, 28, 512)  2048       ['conv3_3_1x1_increase[0][0]']
-                 Normalization)
+                conv3_3_1x1_increase/bn (Batch  (None, 28, 28, 512)  2048       ['conv3_3_1x1_increase[0][0]']
+                Normalization)
 
-                 add_21 (Add)                   (None, 28, 28, 512)  0           ['conv3_3_1x1_increase/bn[0][0]',
-                                                                                  'activation_64[0][0]']
+                add_21 (Add)                   (None, 28, 28, 512)  0           ['conv3_3_1x1_increase/bn[0][0]',
+                                                                                'activation_64[0][0]']
 
-                 activation_67 (Activation)     (None, 28, 28, 512)  0           ['add_21[0][0]']
+                activation_67 (Activation)     (None, 28, 28, 512)  0           ['add_21[0][0]']
 
-                 conv3_4_1x1_reduce (Conv2D)    (None, 28, 28, 128)  65536       ['activation_67[0][0]']
+                conv3_4_1x1_reduce (Conv2D)    (None, 28, 28, 128)  65536       ['activation_67[0][0]']
 
-                 conv3_4_1x1_reduce/bn (BatchNo  (None, 28, 28, 128)  512        ['conv3_4_1x1_reduce[0][0]']
-                 rmalization)
+            conv3_4_1x1_reduce/bn (BatchNo  (None, 28, 28, 128)  512        ['conv3_4_1x1_reduce[0][0]']
+                rmalization)
 
-                 activation_68 (Activation)     (None, 28, 28, 128)  0           ['conv3_4_1x1_reduce/bn[0][0]']
+                activation_68 (Activation)     (None, 28, 28, 128)  0           ['conv3_4_1x1_reduce/bn[0][0]']
 
-                 conv3_4_3x3 (Conv2D)           (None, 28, 28, 128)  147456      ['activation_68[0][0]']
+                conv3_4_3x3 (Conv2D)           (None, 28, 28, 128)  147456      ['activation_68[0][0]']
 
-                 conv3_4_3x3/bn (BatchNormaliza  (None, 28, 28, 128)  512        ['conv3_4_3x3[0][0]']
-                 tion)
+                conv3_4_3x3/bn (BatchNormaliza  (None, 28, 28, 128)  512        ['conv3_4_3x3[0][0]']
+                tion)
 
-                 activation_69 (Activation)     (None, 28, 28, 128)  0           ['conv3_4_3x3/bn[0][0]']
+                activation_69 (Activation)     (None, 28, 28, 128)  0           ['conv3_4_3x3/bn[0][0]']
 
-                 conv3_4_1x1_increase (Conv2D)  (None, 28, 28, 512)  65536       ['activation_69[0][0]']
+                conv3_4_1x1_increase (Conv2D)  (None, 28, 28, 512)  65536       ['activation_69[0][0]']
 
-                 conv3_4_1x1_increase/bn (Batch  (None, 28, 28, 512)  2048       ['conv3_4_1x1_increase[0][0]']
-                 Normalization)
+                conv3_4_1x1_increase/bn (Batch  (None, 28, 28, 512)  2048       ['conv3_4_1x1_increase[0][0]']
+                Normalization)
 
-                 add_22 (Add)                   (None, 28, 28, 512)  0           ['conv3_4_1x1_increase/bn[0][0]',
-                                                                                  'activation_67[0][0]']
+                add_22 (Add)                   (None, 28, 28, 512)  0           ['conv3_4_1x1_increase/bn[0][0]',
+                                                                                'activation_67[0][0]']
 
-                 activation_70 (Activation)     (None, 28, 28, 512)  0           ['add_22[0][0]']
+                activation_70 (Activation)     (None, 28, 28, 512)  0           ['add_22[0][0]']
 
-                 conv4_1_1x1_reduce (Conv2D)    (None, 14, 14, 256)  131072      ['activation_70[0][0]']
+                conv4_1_1x1_reduce (Conv2D)    (None, 14, 14, 256)  131072      ['activation_70[0][0]']
 
-                 conv4_1_1x1_reduce/bn (BatchNo  (None, 14, 14, 256)  1024       ['conv4_1_1x1_reduce[0][0]']
-                 rmalization)
+                conv4_1_1x1_reduce/bn (BatchNo  (None, 14, 14, 256)  1024       ['conv4_1_1x1_reduce[0][0]']
+                rmalization)
 
-                 activation_71 (Activation)     (None, 14, 14, 256)  0           ['conv4_1_1x1_reduce/bn[0][0]']
+                activation_71 (Activation)     (None, 14, 14, 256)  0           ['conv4_1_1x1_reduce/bn[0][0]']
 
-                 conv4_1_3x3 (Conv2D)           (None, 14, 14, 256)  589824      ['activation_71[0][0]']
+                conv4_1_3x3 (Conv2D)           (None, 14, 14, 256)  589824      ['activation_71[0][0]']
 
-                 conv4_1_3x3/bn (BatchNormaliza  (None, 14, 14, 256)  1024       ['conv4_1_3x3[0][0]']
-                 tion)
+                conv4_1_3x3/bn (BatchNormaliza  (None, 14, 14, 256)  1024       ['conv4_1_3x3[0][0]']
+                tion)
 
-                 activation_72 (Activation)     (None, 14, 14, 256)  0           ['conv4_1_3x3/bn[0][0]']
+                activation_72 (Activation)     (None, 14, 14, 256)  0           ['conv4_1_3x3/bn[0][0]']
 
-                 conv4_1_1x1_increase (Conv2D)  (None, 14, 14, 1024  262144      ['activation_72[0][0]']
+                conv4_1_1x1_increase (Conv2D)  (None, 14, 14, 1024  262144      ['activation_72[0][0]']
                                                 )
 
-                 conv4_1_1x1_proj (Conv2D)      (None, 14, 14, 1024  524288      ['activation_70[0][0]']
+                conv4_1_1x1_proj (Conv2D)      (None, 14, 14, 1024  524288      ['activation_70[0][0]']
                                                 )
 
-                 conv4_1_1x1_increase/bn (Batch  (None, 14, 14, 1024  4096       ['conv4_1_1x1_increase[0][0]']
-                 Normalization)                 )
+                conv4_1_1x1_increase/bn (Batch  (None, 14, 14, 1024  4096       ['conv4_1_1x1_increase[0][0]']
+                Normalization)                 )
 
-                 conv4_1_1x1_proj/bn (BatchNorm  (None, 14, 14, 1024  4096       ['conv4_1_1x1_proj[0][0]']
-                 alization)                     )
+                conv4_1_1x1_proj/bn (BatchNorm  (None, 14, 14, 1024  4096       ['conv4_1_1x1_proj[0][0]']
+                alization)                     )
 
-                 add_23 (Add)                   (None, 14, 14, 1024  0           ['conv4_1_1x1_increase/bn[0][0]',
+                add_23 (Add)                   (None, 14, 14, 1024  0           ['conv4_1_1x1_increase/bn[0][0]',
                                                 )                                 'conv4_1_1x1_proj/bn[0][0]']
 
-                 activation_73 (Activation)     (None, 14, 14, 1024  0           ['add_23[0][0]']
+                activation_73 (Activation)     (None, 14, 14, 1024  0           ['add_23[0][0]']
                                                 )
 
-                 conv4_2_1x1_reduce (Conv2D)    (None, 14, 14, 256)  262144      ['activation_73[0][0]']
+                conv4_2_1x1_reduce (Conv2D)    (None, 14, 14, 256)  262144      ['activation_73[0][0]']
 
-                 conv4_2_1x1_reduce/bn (BatchNo  (None, 14, 14, 256)  1024       ['conv4_2_1x1_reduce[0][0]']
-                 rmalization)
+                conv4_2_1x1_reduce/bn (BatchNo  (None, 14, 14, 256)  1024       ['conv4_2_1x1_reduce[0][0]']
+                rmalization)
 
-                 activation_74 (Activation)     (None, 14, 14, 256)  0           ['conv4_2_1x1_reduce/bn[0][0]']
+                activation_74 (Activation)     (None, 14, 14, 256)  0           ['conv4_2_1x1_reduce/bn[0][0]']
 
-                 conv4_2_3x3 (Conv2D)           (None, 14, 14, 256)  589824      ['activation_74[0][0]']
+                conv4_2_3x3 (Conv2D)           (None, 14, 14, 256)  589824      ['activation_74[0][0]']
 
-                 conv4_2_3x3/bn (BatchNormaliza  (None, 14, 14, 256)  1024       ['conv4_2_3x3[0][0]']
-                 tion)
+                conv4_2_3x3/bn (BatchNormaliza  (None, 14, 14, 256)  1024       ['conv4_2_3x3[0][0]']
+                tion)
 
-                 activation_75 (Activation)     (None, 14, 14, 256)  0           ['conv4_2_3x3/bn[0][0]']
+                activation_75 (Activation)     (None, 14, 14, 256)  0           ['conv4_2_3x3/bn[0][0]']
 
-                 conv4_2_1x1_increase (Conv2D)  (None, 14, 14, 1024  262144      ['activation_75[0][0]']
+                conv4_2_1x1_increase (Conv2D)  (None, 14, 14, 1024  262144      ['activation_75[0][0]']
                                                 )
 
-                 conv4_2_1x1_increase/bn (Batch  (None, 14, 14, 1024  4096       ['conv4_2_1x1_increase[0][0]']
-                 Normalization)                 )
+                conv4_2_1x1_increase/bn (Batch  (None, 14, 14, 1024  4096       ['conv4_2_1x1_increase[0][0]']
+                Normalization)                 )
 
-                 add_24 (Add)                   (None, 14, 14, 1024  0           ['conv4_2_1x1_increase/bn[0][0]',
+                add_24 (Add)                   (None, 14, 14, 1024  0           ['conv4_2_1x1_increase/bn[0][0]',
                                                 )                                 'activation_73[0][0]']
 
-                 activation_76 (Activation)     (None, 14, 14, 1024  0           ['add_24[0][0]']
+                activation_76 (Activation)     (None, 14, 14, 1024  0           ['add_24[0][0]']
                                                 )
 
-                 conv4_3_1x1_reduce (Conv2D)    (None, 14, 14, 256)  262144      ['activation_76[0][0]']
+                conv4_3_1x1_reduce (Conv2D)    (None, 14, 14, 256)  262144      ['activation_76[0][0]']
 
-                 conv4_3_1x1_reduce/bn (BatchNo  (None, 14, 14, 256)  1024       ['conv4_3_1x1_reduce[0][0]']
-                 rmalization)
+                conv4_3_1x1_reduce/bn (BatchNo  (None, 14, 14, 256)  1024       ['conv4_3_1x1_reduce[0][0]']
+                rmalization)
 
-                 activation_77 (Activation)     (None, 14, 14, 256)  0           ['conv4_3_1x1_reduce/bn[0][0]']
+                activation_77 (Activation)     (None, 14, 14, 256)  0           ['conv4_3_1x1_reduce/bn[0][0]']
 
-                 conv4_3_3x3 (Conv2D)           (None, 14, 14, 256)  589824      ['activation_77[0][0]']
+                conv4_3_3x3 (Conv2D)           (None, 14, 14, 256)  589824      ['activation_77[0][0]']
 
-                 conv4_3_3x3/bn (BatchNormaliza  (None, 14, 14, 256)  1024       ['conv4_3_3x3[0][0]']
-                 tion)
+                conv4_3_3x3/bn (BatchNormaliza  (None, 14, 14, 256)  1024       ['conv4_3_3x3[0][0]']
+                tion)
 
-                 activation_78 (Activation)     (None, 14, 14, 256)  0           ['conv4_3_3x3/bn[0][0]']
+                activation_78 (Activation)     (None, 14, 14, 256)  0           ['conv4_3_3x3/bn[0][0]']
 
-                 conv4_3_1x1_increase (Conv2D)  (None, 14, 14, 1024  262144      ['activation_78[0][0]']
+                conv4_3_1x1_increase (Conv2D)  (None, 14, 14, 1024  262144      ['activation_78[0][0]']
                                                 )
 
-                 conv4_3_1x1_increase/bn (Batch  (None, 14, 14, 1024  4096       ['conv4_3_1x1_increase[0][0]']
-                 Normalization)                 )
+                conv4_3_1x1_increase/bn (Batch  (None, 14, 14, 1024  4096       ['conv4_3_1x1_increase[0][0]']
+                Normalization)                 )
 
-                 add_25 (Add)                   (None, 14, 14, 1024  0           ['conv4_3_1x1_increase/bn[0][0]',
+                add_25 (Add)                   (None, 14, 14, 1024  0           ['conv4_3_1x1_increase/bn[0][0]',
                                                 )                                 'activation_76[0][0]']
 
-                 activation_79 (Activation)     (None, 14, 14, 1024  0           ['add_25[0][0]']
+                activation_79 (Activation)     (None, 14, 14, 1024  0           ['add_25[0][0]']
                                                 )
 
-                 conv4_4_1x1_reduce (Conv2D)    (None, 14, 14, 256)  262144      ['activation_79[0][0]']
+                conv4_4_1x1_reduce (Conv2D)    (None, 14, 14, 256)  262144      ['activation_79[0][0]']
 
-                 conv4_4_1x1_reduce/bn (BatchNo  (None, 14, 14, 256)  1024       ['conv4_4_1x1_reduce[0][0]']
-                 rmalization)
+                conv4_4_1x1_reduce/bn (BatchNo  (None, 14, 14, 256)  1024       ['conv4_4_1x1_reduce[0][0]']
+                rmalization)
 
-                 activation_80 (Activation)     (None, 14, 14, 256)  0           ['conv4_4_1x1_reduce/bn[0][0]']
+                activation_80 (Activation)     (None, 14, 14, 256)  0           ['conv4_4_1x1_reduce/bn[0][0]']
 
-                 conv4_4_3x3 (Conv2D)           (None, 14, 14, 256)  589824      ['activation_80[0][0]']
+                conv4_4_3x3 (Conv2D)           (None, 14, 14, 256)  589824      ['activation_80[0][0]']
 
-                 conv4_4_3x3/bn (BatchNormaliza  (None, 14, 14, 256)  1024       ['conv4_4_3x3[0][0]']
-                 tion)
+                conv4_4_3x3/bn (BatchNormaliza  (None, 14, 14, 256)  1024       ['conv4_4_3x3[0][0]']
+                tion)
 
-                 activation_81 (Activation)     (None, 14, 14, 256)  0           ['conv4_4_3x3/bn[0][0]']
+                activation_81 (Activation)     (None, 14, 14, 256)  0           ['conv4_4_3x3/bn[0][0]']
 
-                 conv4_4_1x1_increase (Conv2D)  (None, 14, 14, 1024  262144      ['activation_81[0][0]']
+                conv4_4_1x1_increase (Conv2D)  (None, 14, 14, 1024  262144      ['activation_81[0][0]']
                                                 )
 
-                 conv4_4_1x1_increase/bn (Batch  (None, 14, 14, 1024  4096       ['conv4_4_1x1_increase[0][0]']
-                 Normalization)                 )
+                conv4_4_1x1_increase/bn (Batch  (None, 14, 14, 1024  4096       ['conv4_4_1x1_increase[0][0]']
+                Normalization)                 )
 
-                 add_26 (Add)                   (None, 14, 14, 1024  0           ['conv4_4_1x1_increase/bn[0][0]',
+                add_26 (Add)                   (None, 14, 14, 1024  0           ['conv4_4_1x1_increase/bn[0][0]',
                                                 )                                 'activation_79[0][0]']
 
-                 activation_82 (Activation)     (None, 14, 14, 1024  0           ['add_26[0][0]']
+                activation_82 (Activation)     (None, 14, 14, 1024  0           ['add_26[0][0]']
                                                 )
 
-                 conv4_5_1x1_reduce (Conv2D)    (None, 14, 14, 256)  262144      ['activation_82[0][0]']
+                conv4_5_1x1_reduce (Conv2D)    (None, 14, 14, 256)  262144      ['activation_82[0][0]']
 
-                 conv4_5_1x1_reduce/bn (BatchNo  (None, 14, 14, 256)  1024       ['conv4_5_1x1_reduce[0][0]']
-                 rmalization)
+                conv4_5_1x1_reduce/bn (BatchNo  (None, 14, 14, 256)  1024       ['conv4_5_1x1_reduce[0][0]']
+                rmalization)
 
-                 activation_83 (Activation)     (None, 14, 14, 256)  0           ['conv4_5_1x1_reduce/bn[0][0]']
+                activation_83 (Activation)     (None, 14, 14, 256)  0           ['conv4_5_1x1_reduce/bn[0][0]']
 
-                 conv4_5_3x3 (Conv2D)           (None, 14, 14, 256)  589824      ['activation_83[0][0]']
+                conv4_5_3x3 (Conv2D)           (None, 14, 14, 256)  589824      ['activation_83[0][0]']
 
-                 conv4_5_3x3/bn (BatchNormaliza  (None, 14, 14, 256)  1024       ['conv4_5_3x3[0][0]']
-                 tion)
+                conv4_5_3x3/bn (BatchNormaliza  (None, 14, 14, 256)  1024       ['conv4_5_3x3[0][0]']
+                tion)
 
-                 activation_84 (Activation)     (None, 14, 14, 256)  0           ['conv4_5_3x3/bn[0][0]']
+                activation_84 (Activation)     (None, 14, 14, 256)  0           ['conv4_5_3x3/bn[0][0]']
 
-                 conv4_5_1x1_increase (Conv2D)  (None, 14, 14, 1024  262144      ['activation_84[0][0]']
+                conv4_5_1x1_increase (Conv2D)  (None, 14, 14, 1024  262144      ['activation_84[0][0]']
                                                 )
 
-                 conv4_5_1x1_increase/bn (Batch  (None, 14, 14, 1024  4096       ['conv4_5_1x1_increase[0][0]']
-                 Normalization)                 )
+                conv4_5_1x1_increase/bn (Batch  (None, 14, 14, 1024  4096       ['conv4_5_1x1_increase[0][0]']
+                Normalization)                 )
 
-                 add_27 (Add)                   (None, 14, 14, 1024  0           ['conv4_5_1x1_increase/bn[0][0]',
+                add_27 (Add)                   (None, 14, 14, 1024  0           ['conv4_5_1x1_increase/bn[0][0]',
                                                 )                                 'activation_82[0][0]']
 
-                 activation_85 (Activation)     (None, 14, 14, 1024  0           ['add_27[0][0]']
+                activation_85 (Activation)     (None, 14, 14, 1024  0           ['add_27[0][0]']
                                                 )
 
-                 conv4_6_1x1_reduce (Conv2D)    (None, 14, 14, 256)  262144      ['activation_85[0][0]']
+                conv4_6_1x1_reduce (Conv2D)    (None, 14, 14, 256)  262144      ['activation_85[0][0]']
 
-                 conv4_6_1x1_reduce/bn (BatchNo  (None, 14, 14, 256)  1024       ['conv4_6_1x1_reduce[0][0]']
-                 rmalization)
+                conv4_6_1x1_reduce/bn (BatchNo  (None, 14, 14, 256)  1024       ['conv4_6_1x1_reduce[0][0]']
+                rmalization)
 
-                 activation_86 (Activation)     (None, 14, 14, 256)  0           ['conv4_6_1x1_reduce/bn[0][0]']
+                activation_86 (Activation)     (None, 14, 14, 256)  0           ['conv4_6_1x1_reduce/bn[0][0]']
 
-                 conv4_6_3x3 (Conv2D)           (None, 14, 14, 256)  589824      ['activation_86[0][0]']
+                conv4_6_3x3 (Conv2D)           (None, 14, 14, 256)  589824      ['activation_86[0][0]']
 
-                 conv4_6_3x3/bn (BatchNormaliza  (None, 14, 14, 256)  1024       ['conv4_6_3x3[0][0]']
-                 tion)
+                conv4_6_3x3/bn (BatchNormaliza  (None, 14, 14, 256)  1024       ['conv4_6_3x3[0][0]']
+                tion)
 
-                 activation_87 (Activation)     (None, 14, 14, 256)  0           ['conv4_6_3x3/bn[0][0]']
+                activation_87 (Activation)     (None, 14, 14, 256)  0           ['conv4_6_3x3/bn[0][0]']
 
-                 conv4_6_1x1_increase (Conv2D)  (None, 14, 14, 1024  262144      ['activation_87[0][0]']
+                conv4_6_1x1_increase (Conv2D)  (None, 14, 14, 1024  262144      ['activation_87[0][0]']
                                                 )
 
-                 conv4_6_1x1_increase/bn (Batch  (None, 14, 14, 1024  4096       ['conv4_6_1x1_increase[0][0]']
-                 Normalization)                 )
+                conv4_6_1x1_increase/bn (Batch  (None, 14, 14, 1024  4096       ['conv4_6_1x1_increase[0][0]']
+                Normalization)                 )
 
-                 add_28 (Add)                   (None, 14, 14, 1024  0           ['conv4_6_1x1_increase/bn[0][0]',
+                add_28 (Add)                   (None, 14, 14, 1024  0           ['conv4_6_1x1_increase/bn[0][0]',
                                                 )                                 'activation_85[0][0]']
 
-                 activation_88 (Activation)     (None, 14, 14, 1024  0           ['add_28[0][0]']
+                activation_88 (Activation)     (None, 14, 14, 1024  0           ['add_28[0][0]']
                                                 )
 
-                 conv5_1_1x1_reduce (Conv2D)    (None, 7, 7, 512)    524288      ['activation_88[0][0]']
+                conv5_1_1x1_reduce (Conv2D)    (None, 7, 7, 512)    524288      ['activation_88[0][0]']
 
-                 conv5_1_1x1_reduce/bn (BatchNo  (None, 7, 7, 512)   2048        ['conv5_1_1x1_reduce[0][0]']
-                 rmalization)
+                conv5_1_1x1_reduce/bn (BatchNo  (None, 7, 7, 512)   2048        ['conv5_1_1x1_reduce[0][0]']
+                rmalization)
 
-                 activation_89 (Activation)     (None, 7, 7, 512)    0           ['conv5_1_1x1_reduce/bn[0][0]']
+                activation_89 (Activation)     (None, 7, 7, 512)    0           ['conv5_1_1x1_reduce/bn[0][0]']
 
-                 conv5_1_3x3 (Conv2D)           (None, 7, 7, 512)    2359296     ['activation_89[0][0]']
+                conv5_1_3x3 (Conv2D)           (None, 7, 7, 512)    2359296     ['activation_89[0][0]']
 
-                 conv5_1_3x3/bn (BatchNormaliza  (None, 7, 7, 512)   2048        ['conv5_1_3x3[0][0]']
-                 tion)
+                conv5_1_3x3/bn (BatchNormaliza  (None, 7, 7, 512)   2048        ['conv5_1_3x3[0][0]']
+                tion)
 
-                 activation_90 (Activation)     (None, 7, 7, 512)    0           ['conv5_1_3x3/bn[0][0]']
+                activation_90 (Activation)     (None, 7, 7, 512)    0           ['conv5_1_3x3/bn[0][0]']
 
-                 conv5_1_1x1_increase (Conv2D)  (None, 7, 7, 2048)   1048576     ['activation_90[0][0]']
+                conv5_1_1x1_increase (Conv2D)  (None, 7, 7, 2048)   1048576     ['activation_90[0][0]']
 
-                 conv5_1_1x1_proj (Conv2D)      (None, 7, 7, 2048)   2097152     ['activation_88[0][0]']
+                conv5_1_1x1_proj (Conv2D)      (None, 7, 7, 2048)   2097152     ['activation_88[0][0]']
 
-                 conv5_1_1x1_increase/bn (Batch  (None, 7, 7, 2048)  8192        ['conv5_1_1x1_increase[0][0]']
-                 Normalization)
+                conv5_1_1x1_increase/bn (Batch  (None, 7, 7, 2048)  8192        ['conv5_1_1x1_increase[0][0]']
+                Normalization)
 
-                 conv5_1_1x1_proj/bn (BatchNorm  (None, 7, 7, 2048)  8192        ['conv5_1_1x1_proj[0][0]']
-                 alization)
+                conv5_1_1x1_proj/bn (BatchNorm  (None, 7, 7, 2048)  8192        ['conv5_1_1x1_proj[0][0]']
+                alization)
 
-                 add_29 (Add)                   (None, 7, 7, 2048)   0           ['conv5_1_1x1_increase/bn[0][0]',
-                                                                                  'conv5_1_1x1_proj/bn[0][0]']
+                add_29 (Add)                   (None, 7, 7, 2048)   0           ['conv5_1_1x1_increase/bn[0][0]',
+                                                                                'conv5_1_1x1_proj/bn[0][0]']
 
-                 activation_91 (Activation)     (None, 7, 7, 2048)   0           ['add_29[0][0]']
+                activation_91 (Activation)     (None, 7, 7, 2048)   0           ['add_29[0][0]']
 
-                 conv5_2_1x1_reduce (Conv2D)    (None, 7, 7, 512)    1048576     ['activation_91[0][0]']
+                conv5_2_1x1_reduce (Conv2D)    (None, 7, 7, 512)    1048576     ['activation_91[0][0]']
 
-                 conv5_2_1x1_reduce/bn (BatchNo  (None, 7, 7, 512)   2048        ['conv5_2_1x1_reduce[0][0]']
-                 rmalization)
+                conv5_2_1x1_reduce/bn (BatchNo  (None, 7, 7, 512)   2048        ['conv5_2_1x1_reduce[0][0]']
+                rmalization)
 
-                 activation_92 (Activation)     (None, 7, 7, 512)    0           ['conv5_2_1x1_reduce/bn[0][0]']
+                activation_92 (Activation)     (None, 7, 7, 512)    0           ['conv5_2_1x1_reduce/bn[0][0]']
 
-                 conv5_2_3x3 (Conv2D)           (None, 7, 7, 512)    2359296     ['activation_92[0][0]']
+                conv5_2_3x3 (Conv2D)           (None, 7, 7, 512)    2359296     ['activation_92[0][0]']
 
-                 conv5_2_3x3/bn (BatchNormaliza  (None, 7, 7, 512)   2048        ['conv5_2_3x3[0][0]']
-                 tion)
+                conv5_2_3x3/bn (BatchNormaliza  (None, 7, 7, 512)   2048        ['conv5_2_3x3[0][0]']
+                tion)
 
-                 activation_93 (Activation)     (None, 7, 7, 512)    0           ['conv5_2_3x3/bn[0][0]']
+                activation_93 (Activation)     (None, 7, 7, 512)    0           ['conv5_2_3x3/bn[0][0]']
 
-                 conv5_2_1x1_increase (Conv2D)  (None, 7, 7, 2048)   1048576     ['activation_93[0][0]']
+                conv5_2_1x1_increase (Conv2D)  (None, 7, 7, 2048)   1048576     ['activation_93[0][0]']
 
-                 conv5_2_1x1_increase/bn (Batch  (None, 7, 7, 2048)  8192        ['conv5_2_1x1_increase[0][0]']
-                 Normalization)
+                conv5_2_1x1_increase/bn (Batch  (None, 7, 7, 2048)  8192        ['conv5_2_1x1_increase[0][0]']
+                Normalization)
 
-                 add_30 (Add)                   (None, 7, 7, 2048)   0           ['conv5_2_1x1_increase/bn[0][0]',
-                                                                                  'activation_91[0][0]']
+                add_30 (Add)                   (None, 7, 7, 2048)   0           ['conv5_2_1x1_increase/bn[0][0]',
+                                                                                'activation_91[0][0]']
 
-                 activation_94 (Activation)     (None, 7, 7, 2048)   0           ['add_30[0][0]']
+                activation_94 (Activation)     (None, 7, 7, 2048)   0           ['add_30[0][0]']
 
-                 conv5_3_1x1_reduce (Conv2D)    (None, 7, 7, 512)    1048576     ['activation_94[0][0]']
+                conv5_3_1x1_reduce (Conv2D)    (None, 7, 7, 512)    1048576     ['activation_94[0][0]']
 
-                 conv5_3_1x1_reduce/bn (BatchNo  (None, 7, 7, 512)   2048        ['conv5_3_1x1_reduce[0][0]']
-                 rmalization)
+                conv5_3_1x1_reduce/bn (BatchNo  (None, 7, 7, 512)   2048        ['conv5_3_1x1_reduce[0][0]']
+                rmalization)
 
-                 activation_95 (Activation)     (None, 7, 7, 512)    0           ['conv5_3_1x1_reduce/bn[0][0]']
+                activation_95 (Activation)     (None, 7, 7, 512)    0           ['conv5_3_1x1_reduce/bn[0][0]']
 
-                 conv5_3_3x3 (Conv2D)           (None, 7, 7, 512)    2359296     ['activation_95[0][0]']
+                conv5_3_3x3 (Conv2D)           (None, 7, 7, 512)    2359296     ['activation_95[0][0]']
 
-                 conv5_3_3x3/bn (BatchNormaliza  (None, 7, 7, 512)   2048        ['conv5_3_3x3[0][0]']
-                 tion)
+                conv5_3_3x3/bn (BatchNormaliza  (None, 7, 7, 512)   2048        ['conv5_3_3x3[0][0]']
+                tion)
 
-                 activation_96 (Activation)     (None, 7, 7, 512)    0           ['conv5_3_3x3/bn[0][0]']
+                activation_96 (Activation)     (None, 7, 7, 512)    0           ['conv5_3_3x3/bn[0][0]']
 
-                 conv5_3_1x1_increase (Conv2D)  (None, 7, 7, 2048)   1048576     ['activation_96[0][0]']
+                conv5_3_1x1_increase (Conv2D)  (None, 7, 7, 2048)   1048576     ['activation_96[0][0]']
 
-                 conv5_3_1x1_increase/bn (Batch  (None, 7, 7, 2048)  8192        ['conv5_3_1x1_increase[0][0]']
-                 Normalization)
+                conv5_3_1x1_increase/bn (Batch  (None, 7, 7, 2048)  8192        ['conv5_3_1x1_increase[0][0]']
+                Normalization)
 
-                 add_31 (Add)                   (None, 7, 7, 2048)   0           ['conv5_3_1x1_increase/bn[0][0]',
-                                                                                  'activation_94[0][0]']
+                add_31 (Add)                   (None, 7, 7, 2048)   0           ['conv5_3_1x1_increase/bn[0][0]',
+                                                                                'activation_94[0][0]']
 
-                 activation_97 (Activation)     (None, 7, 7, 2048)   0           ['add_31[0][0]']
+                activation_97 (Activation)     (None, 7, 7, 2048)   0           ['add_31[0][0]']
 
-                 avg_pool (AveragePooling2D)    (None, 1, 1, 2048)   0           ['activation_97[0][0]']
+                avg_pool (AveragePooling2D)    (None, 1, 1, 2048)   0           ['activation_97[0][0]']
 
-                 global_average_pooling2d_1 (Gl  (None, 2048)        0           ['avg_pool[0][0]']
-                 obalAveragePooling2D)
+                global_average_pooling2d_1 (Gl  (None, 2048)        0           ['avg_pool[0][0]']
+                obalAveragePooling2D)
 
-                 gaussian_noise_1 (GaussianNois  (None, 2048)        0           ['global_average_pooling2d_1[0][0
-                 e)                                                              ]']
+                gaussian_noise_1 (GaussianNois  (None, 2048)        0           ['global_average_pooling2d_1[0][0
+                e)                                                              ]']
 
-                 dense_x (Dense)                (None, 512)          1049088     ['gaussian_noise_1[0][0]']
+                dense_x (Dense)                (None, 512)          1049088     ['gaussian_noise_1[0][0]']
 
-                 dropout_1 (Dropout)            (None, 512)          0           ['dense_x[0][0]']
+                dropout_1 (Dropout)            (None, 512)          0           ['dense_x[0][0]']
 
-                 dense_1 (Dense)                (None, 7)            3591        ['dropout_1[0][0]']
+                dense_1 (Dense)                (None, 7)            3591        ['dropout_1[0][0]']
 
                 ==================================================================================================
                 Total params: 24,613,831
@@ -2522,17 +2520,17 @@ class Video(VideoMessages):
 
                 Model: "model"
                 _________________________________________________________________
-                 Layer (type)                Output Shape              Param #
+                Layer (type)                Output Shape              Param #
                 =================================================================
-                 input_1 (InputLayer)        [(None, 10, 512)]         0
+                input_1 (InputLayer)        [(None, 10, 512)]         0
 
-                 lstm (LSTM)                 (None, 1024)              6295552
+                lstm (LSTM)                 (None, 1024)              6295552
 
-                 dropout (Dropout)           (None, 1024)              0
+                dropout (Dropout)           (None, 1024)              0
 
-                 dense (Dense)               (None, 5)                 5125
+                dense (Dense)               (None, 5)                 5125
 
-                 activation (Activation)     (None, 5)                 0
+                activation (Activation)     (None, 5)                 0
 
                 =================================================================
                 Total params: 6,300,677
@@ -2594,7 +2592,7 @@ class Video(VideoMessages):
             self._info(self._formation_video_model_nn, last=False, out=False)
             if out:
                 self.show_notebook_history_output()  # Отображение истории вывода сообщений в ячейке Jupyter
-                
+
             self._video_model_nn = video_model_nn()
 
             if show_summary and out:
@@ -2645,13 +2643,13 @@ class Video(VideoMessages):
 
                 Model: "model_4"
                 _________________________________________________________________
-                 Layer (type)                Output Shape              Param #
+                Layer (type)                Output Shape              Param #
                 =================================================================
-                 input_1 (InputLayer)        [(None, 32)]              0
+                input_1 (InputLayer)        [(None, 32)]              0
 
-                 dense_1 (Dense)             (None, 1)                 33
+                dense_1 (Dense)             (None, 1)                 33
 
-                 activ_1 (Activation)        (None, 1)                 0
+                activ_1 (Activation)        (None, 1)                 0
 
                 =================================================================
                 Total params: 33
@@ -3407,7 +3405,9 @@ class Video(VideoMessages):
                             continue
 
                         try:
-                            self._video_models_b5[self._b5["en"][cnt]].load_state_dict(torch.load(self._url_last_filename))
+                            self._video_models_b5[self._b5["en"][cnt]].load_state_dict(
+                                torch.load(self._url_last_filename)
+                            )
                             self._video_models_b5[self._b5["en"][cnt]].to(self._device).eval()
                             test_tensor = torch.randn((1, 32)).to(self._device)
                             _ = self._video_models_b5[self._b5["en"][cnt]](test_tensor)

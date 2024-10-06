@@ -7,19 +7,20 @@
 
 from __future__ import print_function
 
-import torch.nn as  nn
+import torch.nn as nn
 import torchvision.models as models
+
 
 class audio_model_hc(nn.Module):
     def __init__(self, input_size=25):
         super(audio_model_hc, self).__init__()
-        
+
         self.lstm1 = nn.LSTM(input_size, 64, batch_first=True)
         self.dropout1 = nn.Dropout(0.2)
         self.lstm2 = nn.LSTM(64, 128, batch_first=True)
         self.dropout2 = nn.Dropout(0.2)
         self.fc = nn.Linear(128, 5)
-        
+
     def extract_features(self, x):
         x, _ = self.lstm1(x)
         x = self.dropout1(x)
@@ -31,11 +32,12 @@ class audio_model_hc(nn.Module):
         x = self.dropout2(features)
         x = self.fc(x)
         return x, features
-    
+
+
 class audio_model_nn(nn.Module):
     def __init__(self, input_size=512):
         super(audio_model_nn, self).__init__()
-        
+
         self.vgg = models.vgg16(pretrained=False)
         self.vgg.classifier = nn.Identity()
 
@@ -45,7 +47,7 @@ class audio_model_nn(nn.Module):
         self.dropout = nn.Dropout(0.5)
         self.fc2 = nn.Linear(512, 256)
         self.fc3 = nn.Linear(256, 5)
-        
+
     def extract_features(self, x):
         x = self.vgg.features(x)
         x = self.flatten(x.permute(0, 2, 3, 1))
@@ -58,6 +60,7 @@ class audio_model_nn(nn.Module):
         features = self.extract_features(x)
         x = self.fc3(features)
         return x, features
+
 
 class audio_model_b5(nn.Module):
     def __init__(self, input_size=32):

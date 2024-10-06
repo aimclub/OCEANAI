@@ -8,9 +8,10 @@
 from __future__ import print_function
 
 import torch
-import torch.nn as  nn
+import torch.nn as nn
 import torch.nn.functional as F
 import torch.nn.init as init
+
 
 class GFL(nn.Module):
     def __init__(self, output_dim, input_shapes):
@@ -20,7 +21,7 @@ class GFL(nn.Module):
         self.W_DF1 = nn.Parameter(torch.Tensor(input_shapes[2], output_dim))
         self.W_HCF2 = nn.Parameter(torch.Tensor(input_shapes[1], output_dim))
         self.W_DF2 = nn.Parameter(torch.Tensor(input_shapes[3], output_dim))
-        
+
         init.xavier_uniform_(self.W_HCF1)
         init.xavier_uniform_(self.W_DF1)
         init.xavier_uniform_(self.W_HCF2)
@@ -31,7 +32,7 @@ class GFL(nn.Module):
 
         self.W_HCF = nn.Parameter(torch.Tensor(dim_size1, output_dim))
         self.W_DF = nn.Parameter(torch.Tensor(dim_size2, output_dim))
-        
+
         init.xavier_uniform_(self.W_HCF)
         init.xavier_uniform_(self.W_DF)
 
@@ -50,6 +51,7 @@ class GFL(nn.Module):
 
         return h
 
+
 class LayerNormalization(nn.Module):
     def __init__(self, dim):
         super(LayerNormalization, self).__init__()
@@ -58,10 +60,11 @@ class LayerNormalization(nn.Module):
     def forward(self, x):
         return self.layer_norm(x)
 
+
 class avt_model_b5(nn.Module):
     def __init__(self, input_shapes, output_dim=64, hidden_states=50):
         super(avt_model_b5, self).__init__()
-        
+
         self.ln_hc_t = LayerNormalization(input_shapes[0])
         self.ln_nn_t = LayerNormalization(input_shapes[1])
         self.ln_hc_a = LayerNormalization(input_shapes[2])
@@ -69,9 +72,15 @@ class avt_model_b5(nn.Module):
         self.ln_hc_v = LayerNormalization(input_shapes[4])
         self.ln_nn_v = LayerNormalization(input_shapes[5])
 
-        self.gf_ta = GFL(output_dim=output_dim, input_shapes = [input_shapes[0], input_shapes[2], input_shapes[1], input_shapes[3]])
-        self.gf_tv = GFL(output_dim=output_dim, input_shapes = [input_shapes[0], input_shapes[4], input_shapes[1], input_shapes[5]])
-        self.gf_av = GFL(output_dim=output_dim, input_shapes = [input_shapes[2], input_shapes[4], input_shapes[3], input_shapes[5]])
+        self.gf_ta = GFL(
+            output_dim=output_dim, input_shapes=[input_shapes[0], input_shapes[2], input_shapes[1], input_shapes[3]]
+        )
+        self.gf_tv = GFL(
+            output_dim=output_dim, input_shapes=[input_shapes[0], input_shapes[4], input_shapes[1], input_shapes[5]]
+        )
+        self.gf_av = GFL(
+            output_dim=output_dim, input_shapes=[input_shapes[2], input_shapes[4], input_shapes[3], input_shapes[5]]
+        )
 
         self.fc1 = nn.Linear(output_dim * 3, hidden_states)
         self.fc2 = nn.Linear(hidden_states, 5)
@@ -95,6 +104,7 @@ class avt_model_b5(nn.Module):
 
         return output
 
+
 class av_model_b5(nn.Module):
     def __init__(self, input_size=64):
         super(av_model_b5, self).__init__()
@@ -105,4 +115,3 @@ class av_model_b5(nn.Module):
         x = self.fc(x)
         x = self.sigmoid(x)
         return x
-    

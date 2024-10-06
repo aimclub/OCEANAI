@@ -18,7 +18,6 @@ for warn in [UserWarning, FutureWarning]:
 from dataclasses import dataclass  # Класс данных
 
 import os  # Взаимодействие с файловой системой
-import logging
 import requests  # Отправка HTTP запросов
 import numpy as np  # Научные вычисления
 import pandas as pd  # Обработка и анализ данных
@@ -39,14 +38,11 @@ from oceanai.modules.lab.audio import Audio  # Аудио
 from oceanai.modules.lab.video import Video  # Видео
 from oceanai.modules.lab.text import Text  # Текст
 
-# Порог регистрации сообщений TensorFlow
-logging.disable(logging.WARNING)
-os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
-
-import torch.nn as  nn
+import torch.nn as nn
 import torch
 
 from oceanai.modules.lab.architectures.fusion_architectures import av_model_b5, avt_model_b5
+
 
 # ######################################################################################################################
 # Сообщения
@@ -125,10 +121,8 @@ class Prediction(PredictionMessages):
     def __post_init__(self):
         super().__post_init__()  # Выполнение конструктора из суперкласса
 
-        # Нейросетевые модели **tf.keras.Model** для получения результатов оценки персональных качеств
-        self._av_models_b5: Dict[str, Optional[nn.Module]] = dict(
-            zip(self._b5["en"], [None] * len(self._b5["en"]))
-        )
+        # Нейросетевые модели **nn.Module** для получения результатов оценки персональных качеств
+        self._av_models_b5: Dict[str, Optional[nn.Module]] = dict(zip(self._b5["en"], [None] * len(self._b5["en"])))
 
         self._avt_model_b5: Optional[nn.Module] = None
 
@@ -150,10 +144,10 @@ class Prediction(PredictionMessages):
 
     @property
     def av_models_b5_(self) -> Dict[str, Optional[nn.Module]]:
-        """Получение нейросетевых моделей **tf.keras.Model** для получения результатов оценки персональных качеств
+        """Получение нейросетевых моделей **nn.Module** для получения результатов оценки персональных качеств
 
         Returns:
-            Dict: Словарь с нейросетевыми моделями **tf.keras.Model**
+            Dict: Словарь с нейросетевыми моделями **nn.Module**
 
         .. dropdown:: Примеры
             :class-body: sd-pr-5
@@ -223,10 +217,10 @@ class Prediction(PredictionMessages):
 
     @property
     def avt_model_b5_(self) -> Optional[nn.Module]:
-        """Получение нейросетевой модели **tf.keras.Model** для получения оценок персональных качеств
+        """Получение нейросетевой модели **nn.Module** для получения оценок персональных качеств
 
         Returns:
-            Dict: Нейроаетевая модель **tf.keras.Model**
+            Dict: Нейроаетевая модель **nn.Module**
         """
 
         return self._avt_model_b5
@@ -575,9 +569,9 @@ class Prediction(PredictionMessages):
             out (bool): Отображение
 
         Returns:
-            Optional[tf.keras.Model]:
+            Optional[nn.Module]:
                 **None** если неверные типы или значения аргументов, в обратном случае нейросетевая модель
-                **tf.keras.Model** для получения оценок персональных качеств
+                **nn.Module** для получения оценок персональных качеств
         """
 
         try:
@@ -588,7 +582,7 @@ class Prediction(PredictionMessages):
             self._inv_args(__class__.__name__, self.__load_av_model_b5.__name__, out=out)
             return None
         else:
-            model = avt_model_b5(input_shapes = [128, 128, 256, 512, 256, 2048])
+            model = avt_model_b5(input_shapes=[128, 128, 256, 512, 256, 2048])
 
             if show_summary and out:
                 print(model)
@@ -606,9 +600,9 @@ class Prediction(PredictionMessages):
             out (bool): Отображение
 
         Returns:
-            Optional[tf.keras.Model]:
+            Optional[nn.Module]:
                 **None** если неверные типы или значения аргументов, в обратном случае нейросетевая модель
-                **tf.keras.Model** для получения результата оценки персонального качества
+                **nn.Module** для получения результата оценки персонального качества
 
         .. dropdown:: Примеры
             :class-body: sd-pr-5
@@ -634,13 +628,13 @@ class Prediction(PredictionMessages):
 
                 Model: "model"
                 _________________________________________________________________
-                 Layer (type)                Output Shape              Param #
+                Layer (type)                Output Shape              Param #
                 =================================================================
-                 input_1 (InputLayer)        [(None, 64)]              0
+                input_1 (InputLayer)        [(None, 64)]              0
 
-                 dense_1 (Dense)             (None, 1)                 65
+                dense_1 (Dense)             (None, 1)                 65
 
-                 activ_1 (Activation)        (None, 1)                 0
+                activ_1 (Activation)        (None, 1)                 0
 
                 =================================================================
                 Total params: 65
@@ -731,13 +725,13 @@ class Prediction(PredictionMessages):
 
                 Model: "model_4"
                 _________________________________________________________________
-                 Layer (type)                Output Shape              Param #
+                Layer (type)                Output Shape              Param #
                 =================================================================
-                 input_1 (InputLayer)        [(None, 64)]              0
+                input_1 (InputLayer)        [(None, 64)]              0
 
-                 dense_1 (Dense)             (None, 1)                 65
+                dense_1 (Dense)             (None, 1)                 65
 
-                 activ_1 (Activation)        (None, 1)                 0
+                activ_1 (Activation)        (None, 1)                 0
 
                 =================================================================
                 Total params: 65
@@ -1437,8 +1431,12 @@ class Prediction(PredictionMessages):
 
                                 try:
                                     # Отправка нейросетевых признаков в нейросетевую модель
-                                    melspectrogram_audio_features = torch.from_numpy(np.array(melspectrogram_audio_features, dtype=np.float32))
-                                    pred_melspectrogram_audio, _ = self.audio_model_nn_(melspectrogram_audio_features.permute(0, 3, 1, 2).to(self._device))
+                                    melspectrogram_audio_features = torch.from_numpy(
+                                        np.array(melspectrogram_audio_features, dtype=np.float32)
+                                    )
+                                    pred_melspectrogram_audio, _ = self.audio_model_nn_(
+                                        melspectrogram_audio_features.permute(0, 3, 1, 2).to(self._device)
+                                    )
                                     pred_melspectrogram_audio = pred_melspectrogram_audio.detach().cpu()
                                 except TypeError:
                                     code_error_pred_melspectrogram_audio = 1
@@ -1508,10 +1506,10 @@ class Prediction(PredictionMessages):
                                 final_pred = []
 
                                 for cnt, (name_b5, model) in enumerate(self.av_models_b5_.items()):
-                                        curr_union_pred = torch.from_numpy(np.expand_dims(union_pred[cnt], axis=0))
-                                        result = model(curr_union_pred.to(self._device)).detach().cpu().numpy()[0][0]
+                                    curr_union_pred = torch.from_numpy(np.expand_dims(union_pred[cnt], axis=0))
+                                    result = model(curr_union_pred.to(self._device)).detach().cpu().numpy()[0][0]
 
-                                        final_pred.append(result)
+                                    final_pred.append(result)
 
                                 # Добавление данных в словарь для DataFrame
                                 if self._append_to_list_of_files(str(curr_path.resolve()), final_pred, out) is False:
@@ -1984,8 +1982,12 @@ class Prediction(PredictionMessages):
 
                                 try:
                                     # Отправка нейросетевых признаков в нейросетевую модель
-                                    melspectrogram_audio_features = torch.from_numpy(np.array(melspectrogram_audio_features, dtype=np.float32))
-                                    _, features_nn_audio = self.audio_model_nn_(melspectrogram_audio_features.permute(0, 3, 1, 2).to(self._device))
+                                    melspectrogram_audio_features = torch.from_numpy(
+                                        np.array(melspectrogram_audio_features, dtype=np.float32)
+                                    )
+                                    _, features_nn_audio = self.audio_model_nn_(
+                                        melspectrogram_audio_features.permute(0, 3, 1, 2).to(self._device)
+                                    )
                                     features_nn_audio = features_nn_audio.detach().cpu()
                                 except TypeError:
                                     code_error_pred_melspectrogram_audio = 1
@@ -2086,12 +2088,12 @@ class Prediction(PredictionMessages):
 
                                     final_pred = (
                                         self.avt_model_b5_(
-                                                features_hc_text,
-                                                features_nn_text,
-                                                torch.from_numpy(features_hc_audio).to(self._device),
-                                                torch.from_numpy(features_nn_audio).to(self._device),
-                                                torch.from_numpy(features_hc_video).to(self._device),
-                                                torch.from_numpy(features_nn_video).to(self._device),
+                                            features_hc_text,
+                                            features_nn_text,
+                                            torch.from_numpy(features_hc_audio).to(self._device),
+                                            torch.from_numpy(features_nn_audio).to(self._device),
+                                            torch.from_numpy(features_hc_video).to(self._device),
+                                            torch.from_numpy(features_nn_video).to(self._device),
                                         )
                                         .detach()
                                         .cpu()
@@ -2397,7 +2399,7 @@ class Prediction(PredictionMessages):
 
                 with torch.no_grad():
 
-                # Проход по всем искомым файлов
+                    # Проход по всем искомым файлов
                     for i, curr_path in enumerate(paths):
                         if i != 0:
                             last = True
@@ -2475,8 +2477,12 @@ class Prediction(PredictionMessages):
 
                             try:
                                 # Отправка нейросетевых признаков в нейросетевую модель
-                                melspectrogram_audio_features = torch.from_numpy(np.array(melspectrogram_audio_features, dtype=np.float32))
-                                _, features_nn_audio = self.audio_model_nn_(melspectrogram_audio_features.permute(0, 3, 1, 2).to(self._device))
+                                melspectrogram_audio_features = torch.from_numpy(
+                                    np.array(melspectrogram_audio_features, dtype=np.float32)
+                                )
+                                _, features_nn_audio = self.audio_model_nn_(
+                                    melspectrogram_audio_features.permute(0, 3, 1, 2).to(self._device)
+                                )
                                 features_nn_audio = features_nn_audio.detach().cpu()
                             except TypeError:
                                 code_error_pred_melspectrogram_audio = 1
@@ -2575,19 +2581,19 @@ class Prediction(PredictionMessages):
 
                             try:
                                 final_pred = (
-                                        self.avt_model_b5_(
-                                                features_hc_text,
-                                                features_nn_text,
-                                                torch.from_numpy(features_hc_audio).to(self._device),
-                                                torch.from_numpy(features_nn_audio).to(self._device),
-                                                torch.from_numpy(features_hc_video).to(self._device),
-                                                torch.from_numpy(features_nn_video).to(self._device),
-                                        )
-                                        .detach()
-                                        .cpu()
-                                        .numpy()[0]
-                                        .tolist()
+                                    self.avt_model_b5_(
+                                        features_hc_text,
+                                        features_nn_text,
+                                        torch.from_numpy(features_hc_audio).to(self._device),
+                                        torch.from_numpy(features_nn_audio).to(self._device),
+                                        torch.from_numpy(features_hc_video).to(self._device),
+                                        torch.from_numpy(features_nn_video).to(self._device),
                                     )
+                                    .detach()
+                                    .cpu()
+                                    .numpy()[0]
+                                    .tolist()
+                                )
                             except Exception:
                                 self._other_error(self._unknown_err, out=out)
                                 return False

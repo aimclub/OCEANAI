@@ -288,6 +288,7 @@ class Download(DownloadMessages):
                     runtime = True,
                     run = True
                 )
+                res_download_file_from_url
 
             .. output-cell::
                 :execution-count: 1
@@ -480,7 +481,7 @@ class Download(DownloadMessages):
                 local_file = os.path.join(self.path_to_save_, url_filename)
                 self._url_last_filename = local_file
                 return 200
-            
+
             except Exception:
                 self._other_error(self._unknown_err, out=out)
                 return 404

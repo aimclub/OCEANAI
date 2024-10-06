@@ -18,7 +18,6 @@ for warn in [UserWarning, FutureWarning]:
 from dataclasses import dataclass  # Класс данных
 
 import os  # Взаимодействие с файловой системой
-import logging
 import requests  # Отправка HTTP запросов
 import liwc  # Анализатор лингвистических запросов и подсчета слов
 import numpy as np  # Научные вычисления
@@ -46,25 +45,19 @@ from urllib.parse import urlparse
 from pathlib import Path  # Работа с путями в файловой системе
 
 # Типы данных
-from typing import List, Tuple, Optional, Union, Optional, Callable  # Типы данных
+from typing import List, Tuple, Optional, Union, Callable  # Типы данных
 from types import FunctionType
 
 from IPython.display import clear_output
 
 import torch
-import torch.nn as  nn
+import torch.nn as nn
 
 # Персональные
 from oceanai.modules.lab.download import Download  # Загрузка файлов
 
-# Порог регистрации сообщений TensorFlow
-logging.disable(logging.WARNING)
-os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
-
-# Игнорировать конкретное предупреждение TensorFlow
-warnings.filterwarnings("ignore", category=FutureWarning, module="tensorflow")
-
 from oceanai.modules.lab.architectures.text_architectures import text_model_hc, text_model_nn, text_model_b5
+
 
 # ######################################################################################################################
 # Сообщения
@@ -163,19 +156,23 @@ class Text(TextMessages):
     def __post_init__(self):
         super().__post_init__()  # Выполнение конструктора из суперкласса
 
-        # Нейросетевая модель **tf.keras.Model** для получения оценок по экспертным признакам
+        # Нейросетевая модель **nn.Module** для получения оценок по экспертным признакам
         self._text_model_hc: Optional[nn.Module] = None
-        # Нейросетевая модель **tf.keras.Model** для получения оценок по нейросетевым признакам
+        # Нейросетевая модель **nn.Module** для получения оценок по нейросетевым признакам
         self._text_model_nn: Optional[nn.Module] = None
         self._text_model_b5: Optional[nn.Module] = None
 
         # Словарь для формирования экспертных признаков
         # self._text_features: str = "https://drive.usercontent.google.com/download?id=1A_WqDPXzEmLLxjpl8YYeftp2dA9OuBRp&export=download&authuser=2&confirm=t&uuid=d0bac80d-b9ef-4c00-aa15-95398e3af59d&at=AN_67v3V4MHMTjVFeALLLX-CXzfb:1727453279624"
-        self._text_features: str = "https://download.sberdisk.ru/download/file/473268573?token=X3NB5VYGyPn8mjw&filename=LIWC2007.txt"
+        self._text_features: str = (
+            "https://download.sberdisk.ru/download/file/473268573?token=X3NB5VYGyPn8mjw&filename=LIWC2007.txt"
+        )
 
         # BERT модель
         # self._bert_multi_model: str = "https://drive.usercontent.google.com/download?id=1yedNslt8jjwXm4pa3K15VqUg-JISJMYf&export=download&authuser=2&confirm=t&uuid=4071942c-989a-4a24-8ddd-60e964def6ec&at=AN_67v2cav8P41yss1AlvWGxXCQk:1727453235831"
-        self._bert_multi_model: str = "https://download.sberdisk.ru/download/file/473319508?token=p8hYNIjxacEARxl&filename=bert-base-multilingual-cased.zip"
+        self._bert_multi_model: str = (
+            "https://download.sberdisk.ru/download/file/473319508?token=p8hYNIjxacEARxl&filename=bert-base-multilingual-cased.zip"
+        )
 
         # Нейросетевая модель машинного перевода (RU -> EN)
         self._translation_model: str = "Helsinki-NLP/opus-mt-ru-en"
@@ -342,30 +339,30 @@ class Text(TextMessages):
 
     @property
     def text_model_hc_(self) -> Optional[nn.Module]:
-        """Получение нейросетевой модели **tf.keras.Model** для получения оценок по экспертным признакам
+        """Получение нейросетевой модели **nn.Module** для получения оценок по экспертным признакам
 
         Returns:
-            Optional[tf.keras.Model]: Нейросетевая модель **tf.keras.Model** или None
+            Optional[nn.Module]: Нейросетевая модель **nn.Module** или None
         """
 
         return self._text_model_hc
 
     @property
     def text_model_nn_(self) -> Optional[nn.Module]:
-        """Получение нейросетевой модели **tf.keras.Model** для получения оценок по нейросетевым признакам
+        """Получение нейросетевой модели **nn.Module** для получения оценок по нейросетевым признакам
 
         Returns:
-            Optional[tf.keras.Model]: Нейросетевая модель **tnn.Module** или None
+            Optional[nn.Module]: Нейросетевая модель **tnn.Module** или None
         """
 
         return self._text_model_nn
 
     @property
     def text_model_b5_(self) -> Optional[nn.Module]:
-        """Получение нейросетевой модели **tf.keras.Model** для получения оценок персональных качеств
+        """Получение нейросетевой модели **nn.Module** для получения оценок персональных качеств
 
         Returns:
-            Optional[tf.keras.Model]: Нейросетевая модель **tf.keras.Model** или None
+            Optional[nn.Module]: Нейросетевая модель **nn.Module** или None
         """
 
         return self._text_model_b5
@@ -772,9 +769,10 @@ class Text(TextMessages):
         return features_liwc, features_bert
 
     def __process_audio_and_extract_features(
-        self, path: str, win: int, lang: str, show_text: bool, last: bool, out: bool, url: str=None
+        self, path: str, win: int, lang: str, show_text: bool, last: bool, out: bool, url: str = None
     ) -> Tuple[np.ndarray, np.ndarray]:
-        
+
+        # TODO: ВНИМАНИЕ! добавить в аргументы
         if url:
             self._path_to_transriber = url
 
@@ -873,9 +871,9 @@ class Text(TextMessages):
             out (bool): Отображение
 
         Returns:
-            Optional[tf.keras.Model]:
+            Optional[nn.Module]:
                 **None** если неверные типы или значения аргументов, в обратном случае нейросетевая модель
-                **tf.keras.Model** для получения оценок персональных качеств
+                **nn.Module** для получения оценок персональных качеств
         """
 
         try:
@@ -933,7 +931,8 @@ class Text(TextMessages):
         try:
             # Проверка аргументов
             if (
-                (type(path) is not str or not path) and (type(path) is not gradio.utils.NamedString)
+                (type(path) is not str or not path)
+                and (type(path) is not gradio.utils.NamedString)
                 or type(asr) is not bool
                 or not isinstance(lang, str)
                 or lang not in self.__lang_traslate
@@ -1365,7 +1364,8 @@ class Text(TextMessages):
 
         if runtime:
             self._r_start()
-        
+
+        # TODO: ВНИМАНИЕ! добавить в аргументы
         if url:
             self._text_features = url
             force_reload = False
@@ -1388,7 +1388,9 @@ class Text(TextMessages):
                 if runtime:
                     self._r_end(out=out)
 
-    def setup_translation_model(self, url: str = None, out: bool = True, runtime: bool = True, run: bool = True) -> bool:
+    def setup_translation_model(
+        self, url: str = None, out: bool = True, runtime: bool = True, run: bool = True
+    ) -> bool:
         """Формирование токенизатора и нейросетевой модели машинного перевода
 
         Args:
@@ -1422,6 +1424,7 @@ class Text(TextMessages):
             # Информационное сообщение
             self._info(self._load_translation_model, last=False, out=out)
 
+            # TODO: ВНИМАНИЕ! добавить в аргументы
             if url:
                 self._translation_model = url
 
@@ -1479,8 +1482,9 @@ class Text(TextMessages):
             # Информационное сообщение
             self._info(self._load_bert_model, last=False, out=out)
 
+            # TODO: ВНИМАНИЕ! добавить в аргументы
             if url:
-                self._bert_multi_model = url 
+                self._bert_multi_model = url
                 force_reload = False
 
             if self.__load_bert_model(self._bert_multi_model, force_reload, out, False, run) is True:
@@ -1499,7 +1503,9 @@ class Text(TextMessages):
                     if res_unzip is True:
                         try:
                             self._bert_tokenizer = BertTokenizer.from_pretrained(Path(self._url_last_filename).stem)
-                            self._bert_model = BertModel.from_pretrained(Path(self._url_last_filename).stem).to(self._device)
+                            self._bert_model = BertModel.from_pretrained(Path(self._url_last_filename).stem).to(
+                                self._device
+                            )
                         except Exception:
                             self._other_error(self._unknown_err, out=out)
                             return False

@@ -77,27 +77,6 @@ msgstr ""
 msgid "3.5.0"
 msgstr ""
 
-#: ../../source/user_guide/installation.rst:1 5bc61bdc45d04aa798565ca404363aa5
-msgid "tensorflow"
-msgstr ""
-
-#: ../../source/user_guide/installation.rst:1 4270dfe6c2a04f80b53010212260dcd8
-#: f2268b0efae14ed9afdcc890da75d238
-msgid "2.11.0"
-msgstr ""
-
-#: ../../source/user_guide/installation.rst:1 cf87ebe408d5412c930de75e7677e719
-msgid "keras"
-msgstr ""
-
-#: ../../source/user_guide/installation.rst:1 4c0b9a86a6f849c5902bd78a9f989b54
-msgid "Keras-Applications"
-msgstr ""
-
-#: ../../source/user_guide/installation.rst:1 adfb62f4e3034911a8fd9915938dca71
-msgid "1.0.8"
-msgstr ""
-
 #: ../../source/user_guide/installation.rst:1 ac4666370460476ba637e9597ae95aa4
 msgid "numpy"
 msgstr ""

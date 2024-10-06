@@ -6,7 +6,7 @@
 Официальная документация:
     https://www.sphinx-doc.org/en/master/usage/configuration.html
 Сборка:
-    sphinx-build -a -b html ./doc/source ./doc/build
+    sphinx-build -a -b html ./docs/source ./docs/build
 """
 
 # ######################################################################################################################
@@ -39,11 +39,12 @@ class Mock(MagicMock):
 
 
 MOCK_MODULES = [
-    # 'tensorflow', 'keras', 'Keras-Applications', 'scipy', 'scipy.spatial', 'scipy.sparse', 'scipy.stats',
+    # 'scipy', 'scipy.spatial', 'scipy.sparse', 'scipy.stats',
     # 'scipy.ndimage', 'pandas', 'requests', 'requests.exceptions', 'requests.adapters', 'requests.structures',
-    # 'opensmile', 'librosa', 'librosa.display', 'audioread', 'soundfile', 'opencv-contrib-python', 'pymediainfo',
-    # 'mediapipe', 'sklearn'
-    "soundfile"
+    # 'opensmile', 'librosa', 'librosa.display', 'audioread', 'soundfile', 'opencv-contrib-python',
+    # 'sklearn'
+    "soundfile",
+    "mediapipe",
 ]
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
@@ -111,7 +112,7 @@ exclude_patterns = ["../build"]
 templates_path = ["_templates"]
 
 # Минимальная версия Sphinx
-needs_sphinx = "5.3.0"
+needs_sphinx = "7.4.7"
 
 # Способ представления подсказок
 autodoc_typehints = "both"

@@ -31,7 +31,7 @@ _b5.keys_dataset_ = ["Path", "Openness", "Conscientiousness", "Extraversion", "A
 _b5.ext_ = [".mp4"]
 _b5.path_to_logs_ = "./logs"
 
-DISK = 'googledisk'
+DISK = "googledisk"
 URL_ACCURACY = _b5.true_traits_[corpus][DISK]
 
 _b5.download_file_from_url(

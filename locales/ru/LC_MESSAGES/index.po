@@ -193,7 +193,7 @@ msgid ""
 "`OCEAN-AI <https://oceanai.readthedocs.io/ru/latest/>`_ написана на языке"
 " программирования `python <https://www.python.org/>`_. Нейросетевые "
 "модели реализованы и обучены с использованием библиотеки с открытым "
-"исходным кодом `TensorFlow <https://www.tensorflow.org/>`_."
+"исходным кодом `PyTorch <https://pytorch.org/>`_."
 msgstr ""
 
 #: ../../source/index.rst:76 fd26fe8558a94732822fb19b60b3ccd6

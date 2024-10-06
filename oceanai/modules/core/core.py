@@ -33,7 +33,6 @@ import sklearn  # Машинное обучение и интеллектуал�
 import cv2  # Алгоритмы компьютерного зрения
 import mediapipe as mp  # Набор нейросетевых моделей и решений для компьютерного зрения
 import IPython
-import logging
 import urllib.error  # Обработка ошибок URL
 import math
 import liwc  # Анализатор лингвистических запросов и подсчета слов
@@ -51,13 +50,6 @@ from IPython.display import Markdown, display, clear_output
 # Персональные
 import oceanai  # oceanai - персональные качества личности человека
 from oceanai.modules.core.settings import Settings  # Глобальный файл настроек
-
-# Порог регистрации сообщений TensorFlow
-logging.disable(logging.WARNING)
-os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
-
-import tensorflow as tf  # Машинное обучение от Google
-import keras
 
 
 # ######################################################################################################################
@@ -239,96 +231,75 @@ class Core(CoreMessages):
             "audio": {
                 "fi": {
                     "hc": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/400635799?token=MMRrak8fMsyzxLE&filename=weights_2022-05-05_11-27-55.h5",
-                        "googledisk": "https://drive.usercontent.google.com/download?id=11EeWmEzjBM2uVpDv1JTNlUPoUmYTc4ar&export=download&authuser=2&confirm=t&uuid=583e76db-450a-4bb7-b0ae-b454acb08613&at=AO7h07dsgtllWrkR2jZ0kRzdDHfc:1727270957484"
+                        "googledisk": "https://drive.usercontent.google.com/download?id=11EeWmEzjBM2uVpDv1JTNlUPoUmYTc4ar&export=download&authuser=2&confirm=t&uuid=583e76db-450a-4bb7-b0ae-b454acb08613&at=AO7h07dsgtllWrkR2jZ0kRzdDHfc:1727270957484",
                     },
                     "nn": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/400635678?token=W6LCtD33FQHnYEz&filename=weights_2022-05-03_07-46-14.h5",
-                        "googledisk": "https://drive.usercontent.google.com/download?id=1GQLVdYs0XhPYI-Hn7rYw2-LpOuWgBBzx&export=download&authuser=2&confirm=t&uuid=c82c6516-7da7-45c3-8705-2727a6c6ffb8&at=AO7h07ceFDOtg7sMb5Gdi2Mzqe_K:1727288160810"
+                        "googledisk": "https://drive.usercontent.google.com/download?id=1GQLVdYs0XhPYI-Hn7rYw2-LpOuWgBBzx&export=download&authuser=2&confirm=t&uuid=c82c6516-7da7-45c3-8705-2727a6c6ffb8&at=AO7h07ceFDOtg7sMb5Gdi2Mzqe_K:1727288160810",
                     },
                     "b5": {
                         "openness": {
-                            "sberdisk": "https://download.sberdisk.ru/download/file/405035301?token=443WRA9MFWqWBAE&filename=weights_2022-06-15_16-16-20.h5",
-                            "googledisk": "https://drive.usercontent.google.com/download?id=1RDQ_EyKv-GLEMUvs3w9o1cThClMjPQud&export=download&authuser=2&confirm=t&uuid=9c24908a-46dd-4772-bb37-5f2d5b1ceae3&at=AN_67v21iOtcNefAGCFlefTPqYGz:1727290092037"
+                            "googledisk": "https://drive.usercontent.google.com/download?id=1RDQ_EyKv-GLEMUvs3w9o1cThClMjPQud&export=download&authuser=2&confirm=t&uuid=9c24908a-46dd-4772-bb37-5f2d5b1ceae3&at=AN_67v21iOtcNefAGCFlefTPqYGz:1727290092037",
                         },
                         "conscientiousness": {
-                            "sberdisk": "https://download.sberdisk.ru/download/file/405034601?token=eDG28m3H6c8bWoE&filename=weights_2022-06-15_16-21-57.h5",
-                            "googledisk": "https://drive.usercontent.google.com/download?id=18M0kCW6Q9oD4B-JFRaECEL05U1FUShDB&export=download&authuser=2&confirm=t&uuid=e582c3c5-5dbc-4955-895c-3e52414a2a97&at=AN_67v1_K1HQXbRfwLnjbJbfgh6k:1727289934706"
+                            "googledisk": "https://drive.usercontent.google.com/download?id=18M0kCW6Q9oD4B-JFRaECEL05U1FUShDB&export=download&authuser=2&confirm=t&uuid=e582c3c5-5dbc-4955-895c-3e52414a2a97&at=AN_67v1_K1HQXbRfwLnjbJbfgh6k:1727289934706",
                         },
                         "extraversion": {
-                            "sberdisk": "https://download.sberdisk.ru/download/file/405034830?token=3daBSTYnmZaesee&filename=weights_2022-06-15_16-26-41.h5",
-                            "googledisk": "https://drive.usercontent.google.com/download?id=1qi2YVf25Bs5QfPfXlXXEO8x5hXu--WcA&export=download&authuser=2&confirm=t&uuid=6bdf3546-4672-46ef-b7fc-95d36105f5a1&at=AN_67v015u8YFSwjMXh9ygO5mtk_:1727289973929"
+                            "googledisk": "https://drive.usercontent.google.com/download?id=1qi2YVf25Bs5QfPfXlXXEO8x5hXu--WcA&export=download&authuser=2&confirm=t&uuid=6bdf3546-4672-46ef-b7fc-95d36105f5a1&at=AN_67v015u8YFSwjMXh9ygO5mtk_:1727289973929",
                         },
                         "agreeableness": {
-                            "sberdisk": "https://download.sberdisk.ru/download/file/405034397?token=52ZPHMjb4CFmdYa&filename=weights_2022-06-15_16-32-51.h5",
-                            "googledisk": "https://drive.usercontent.google.com/download?id=1glPO999kk7As81F-tc1-jpq1fbNeUQgA&export=download&authuser=2&confirm=t&uuid=0cc2d044-3616-4864-a2dc-8faac4151959&at=AN_67v24uko_8JufEMR3YyLS2fkQ:1727290023217"
+                            "googledisk": "https://drive.usercontent.google.com/download?id=1glPO999kk7As81F-tc1-jpq1fbNeUQgA&export=download&authuser=2&confirm=t&uuid=0cc2d044-3616-4864-a2dc-8faac4151959&at=AN_67v24uko_8JufEMR3YyLS2fkQ:1727290023217",
                         },
                         "non_neuroticism": {
-                            "sberdisk": "https://download.sberdisk.ru/download/file/405035156?token=q8CZJ99rZqcNxkM&filename=weights_2022-06-15_16-37-46.h5",
-                            "googledisk": "https://drive.usercontent.google.com/download?id=1Y89jPj_4vVfyBtE43gP16vyaateKP2Bb&export=download&authuser=2&confirm=t&uuid=bdea116a-d166-475c-8257-6482ad6391a9&at=AN_67v2rMxyCAy8hhgvFtWR751Wq:1727290055424"
+                            "googledisk": "https://drive.usercontent.google.com/download?id=1Y89jPj_4vVfyBtE43gP16vyaateKP2Bb&export=download&authuser=2&confirm=t&uuid=bdea116a-d166-475c-8257-6482ad6391a9&at=AN_67v2rMxyCAy8hhgvFtWR751Wq:1727290055424",
                         },
                     },
                 },
                 "mupta": {
                     "hc": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/477962562?token=pFKAlXd8koEngHa&filename=ahc_mupta_2022-06-18_08-32-05.h5",
-                        "googledisk": "https://drive.usercontent.google.com/download?id=151ISGwKvuPnKLvObeU9CS-2AsWV98cwI&export=download&authuser=2&confirm=t&uuid=0f2b7770-fdea-4434-b522-b9df66a92b5d&at=AO7h07epzz7_6h7alDMVoJspjyhz:1727271012853"
+                        "googledisk": "https://drive.usercontent.google.com/download?id=151ISGwKvuPnKLvObeU9CS-2AsWV98cwI&export=download&authuser=2&confirm=t&uuid=0f2b7770-fdea-4434-b522-b9df66a92b5d&at=AO7h07epzz7_6h7alDMVoJspjyhz:1727271012853",
                     },
                     "nn": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/477962561?token=lPCiioXg7ZeNUK8&filename=ann_mupta_2022-06-18_09-57-06.h5",
-                        "googledisk": "https://drive.usercontent.google.com/download?id=1ePwbNYottjpNW2Ehi45C8O2fm_H6HuXh&export=download&authuser=2&confirm=t&uuid=d7ece633-385c-4511-a4f0-58cdb9e02fe2&at=AO7h07e6sjR3UG7bTOaGEz5OUOT3:1727288215449"
+                        "googledisk": "https://drive.usercontent.google.com/download?id=1ePwbNYottjpNW2Ehi45C8O2fm_H6HuXh&export=download&authuser=2&confirm=t&uuid=d7ece633-385c-4511-a4f0-58cdb9e02fe2&at=AO7h07e6sjR3UG7bTOaGEz5OUOT3:1727288215449",
                     },
                 },
             },
             "video": {
                 "fi": {
                     "hc": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/412059444?token=JXerCfAjJZg6crD&filename=weights_2022-08-27_18-53-35.h5",
-                        "googledisk": "https://drive.usercontent.google.com/download?id=1Ug9b-vvnU9BQtyahlfj7no3CVSf2MUMB&export=download&authuser=2&confirm=t&uuid=5f135650-15b8-4ad0-9af4-68521a731c0a&at=AO7h07dLs9A6Jwf_4uJWAOysU4_y:1727105753033"
+                        "googledisk": "https://drive.usercontent.google.com/download?id=1Ug9b-vvnU9BQtyahlfj7no3CVSf2MUMB&export=download&authuser=2&confirm=t&uuid=5f135650-15b8-4ad0-9af4-68521a731c0a&at=AO7h07dLs9A6Jwf_4uJWAOysU4_y:1727105753033",
                     },
                     "nn": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/412059478?token=85KeW6q4QKy6kP8&filename=weights_2022-03-22_16-31-48.h5",
-                        "googledisk": "https://drive.usercontent.google.com/download?id=1QF7ReDQXpCciF7aWjbEt4Q-x06hwDrMZ&export=download&authuser=2&confirm=t&uuid=c2fd5a21-7af7-4b7f-8419-d7d628847768&at=AO7h07eilj-Bm5RIk0HwQBEr37ri:1727175670133"
+                        "googledisk": "https://drive.usercontent.google.com/download?id=1QF7ReDQXpCciF7aWjbEt4Q-x06hwDrMZ&export=download&authuser=2&confirm=t&uuid=c2fd5a21-7af7-4b7f-8419-d7d628847768&at=AO7h07eilj-Bm5RIk0HwQBEr37ri:1727175670133",
                     },
                     "fe": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/414207833?token=ygzxWEkndjSMnEL&filename=weights_2022-11-01_12-27-07.h5",
                         "googledisk": "https://drive.usercontent.google.com/download?id=1SOuDY_JGlu5vV26zz_zNjpYZOu751A3Y&export=download&authuser=2&confirm=t&uuid=4cec3ead-89af-45ce-9437-0b1eed463fdc&at=AO7h07cBxO6cNzloq6LmFdhUenNy:1727174252392",
-                        "googledisk_true": "https://drive.usercontent.google.com/download?id=1QTsOm7Qok5nV-_CqOViXcrvV25tb2_3d&export=download&authuser=2&confirm=t&uuid=fea24bdd-dd83-4a6c-b098-ec753162077c&at=AN_67v1HJxZ5oZvgoCrwkz7FMx1W:1727614664874"
                     },
                     "b5": {
                         "openness": {
-                            "sberdisk": "https://download.sberdisk.ru/download/file/415127050?token=rfpy9TLdbeXtiN7&filename=weights_2022-06-15_16-46-30.h5",
                             "googledisk": "https://drive.usercontent.google.com/download?id=1vnpHymFLm3pXeYoyTjGasrIvzz-xzKO3&export=download&authuser=2&confirm=t&uuid=a6e4bb96-53bf-4d4b-9a38-978665a51792&at=AO7h07eQ5SN8TN9gRdAGQZ5yh0im:1727181613809",
                         },
                         "conscientiousness": {
-                            "sberdisk": "https://download.sberdisk.ru/download/file/415126986?token=PnjzaHaR3wPg2RT&filename=weights_2022-06-15_16-48-50.h5",
                             "googledisk": "https://drive.usercontent.google.com/download?id=1HQrLYQBkRiNbKUoD9BpyelF6GQJcjLid&export=download&authuser=2&confirm=t&uuid=049a1f8d-87e2-4c49-800b-f7e7d9ac58c4&at=AO7h07e3Cpm8-4BVOsWcSEs9vhf9:1727181922083",
                         },
                         "extraversion": {
-                            "sberdisk": "https://download.sberdisk.ru/download/file/415127012?token=s5aTwbt8DBkt7G4&filename=weights_2022-06-15_16-54-06.h5",
                             "googledisk": "https://drive.usercontent.google.com/download?id=1xDowylrNjMQfnJk4KJkYNLoaK-33XKI0&export=download&authuser=2&confirm=t&uuid=88491cad-46ec-41c2-ae28-2b180e597fee&at=AO7h07fjaflK_FwdhLXBHH42uUXY:1727181953043",
                         },
                         "agreeableness": {
-                            "sberdisk": "https://download.sberdisk.ru/download/file/415126845?token=joN7TMHk59Gffsf&filename=weights_2022-06-15_17-02-03.h5",
                             "googledisk": "https://drive.usercontent.google.com/download?id=1AfRF1j5M_XkZRDaG6NjMz26iJV3tAmFi&export=download&authuser=2&confirm=t&uuid=443dc2d7-1c51-4418-b4fa-19dbbb17d624&at=AO7h07di_ajVQCpEcXb_XqU6ak2I:1727181988356",
                         },
                         "non_neuroticism": {
-                            "sberdisk": "https://download.sberdisk.ru/download/file/415127032?token=NEBSsE7mjyjen3o&filename=weights_2022-06-15_17-06-15.h5",
                             "googledisk": "https://drive.usercontent.google.com/download?id=1qB1iRbuTKLqKm-CH96rEBgabj-AnllIt&export=download&authuser=2&confirm=t&uuid=0a087c9a-4df6-408f-80cd-ef1f20390ce2&at=AO7h07dwQThSoBctwDwDDPfqre9T:1727182020902",
                         },
                     },
                 },
                 "mupta": {
                     "hc": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/477962567?token=oSMaqRe5xK8UBIP&filename=vhc_mupta_2022-07-22_10-02-37.h5",
                         "googledisk": "https://drive.usercontent.google.com/download?id=1Ybz6X5hNl3JCmZCpuLnLdzWY_W7Gnf5J&export=download&authuser=2&confirm=t&uuid=6dbd07bb-b9f6-40e8-88b2-d5adb34076c3&at=AO7h07eLQrKFVFfTFmiq7tYK2KZX:1727185527591",
                     },
                     "nn": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/477962568?token=TZWoSGYW3LPoKg4&filename=vnn_mupta_2022-06-25_18-12-38.h5",
                         "googledisk": "https://drive.usercontent.google.com/download?id=1gbRUh-4AYf8-4OpXj17gAv3SfmpCqv1V&export=download&authuser=2&confirm=t&uuid=9784f923-994e-4e27-8c82-82d603d5f1c5&at=AO7h07euCb37HT_H8rq9w_H4FdR-:1727185473779",
                     },
                     "fe": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/414207833?token=ygzxWEkndjSMnEL&filename=weights_2022-11-01_12-27-07.h5",
                         "googledisk": "https://drive.usercontent.google.com/download?id=1SOuDY_JGlu5vV26zz_zNjpYZOu751A3Y&export=download&authuser=2&confirm=t&uuid=4cec3ead-89af-45ce-9437-0b1eed463fdc&at=AO7h07cBxO6cNzloq6LmFdhUenNy:1727174252392",
                     },
                 },
@@ -336,30 +307,24 @@ class Core(CoreMessages):
             "text": {
                 "fi": {
                     "hc": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/472034034?token=59eA6DXo6GXWV77&filename=weights_2023-07-15_10-52-15.h5",
-                        "googledisk": "https://drive.usercontent.google.com/download?id=1QwHyCCgitWKuDPKxhylaD4aZJYuTEOF1&export=download&authuser=2&confirm=t&uuid=8ac05c03-b0b7-4898-bf02-14841a904111&at=AN_67v1y3k_bXdYkrUGxTQOwRUP0:1727456663203"
+                        "googledisk": "https://drive.usercontent.google.com/download?id=1QwHyCCgitWKuDPKxhylaD4aZJYuTEOF1&export=download&authuser=2&confirm=t&uuid=8ac05c03-b0b7-4898-bf02-14841a904111&at=AN_67v1y3k_bXdYkrUGxTQOwRUP0:1727456663203",
                     },
                     "nn": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/472139570?token=LpndWNlovMhxU3O&filename=weights_2023-07-03_15-01-08.h5",
-                        "googledisk": "https://drive.usercontent.google.com/download?id=1pbnumZzDSw9WifZUNhdvfY8azZAatapb&export=download&authuser=2&confirm=t&uuid=fad1e6b8-fe6e-4c61-bdcd-35164a4659f2&at=AN_67v1gjCWAv8ebAU1Q5EvTte7b:1727456849254"
+                        "googledisk": "https://drive.usercontent.google.com/download?id=1pbnumZzDSw9WifZUNhdvfY8azZAatapb&export=download&authuser=2&confirm=t&uuid=fad1e6b8-fe6e-4c61-bdcd-35164a4659f2&at=AN_67v1gjCWAv8ebAU1Q5EvTte7b:1727456849254",
                     },
                     "b5": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/477962564?token=3aCG3GRqbjkOBIK&filename=ft_fi_2023-12-09_14-25-13.h5",
-                        "googledisk": "https://drive.usercontent.google.com/download?id=16gw0AfZxPkZZgLXq2dvl2K809SYsxMUm&export=download&authuser=2&confirm=t&uuid=17138780-3b94-4cef-b80d-4fda11f7137e&at=AN_67v1kXjIJrQkgOcoY9fxfRhG9:1727456761067"
+                        "googledisk": "https://drive.usercontent.google.com/download?id=16gw0AfZxPkZZgLXq2dvl2K809SYsxMUm&export=download&authuser=2&confirm=t&uuid=17138780-3b94-4cef-b80d-4fda11f7137e&at=AN_67v1kXjIJrQkgOcoY9fxfRhG9:1727456761067",
                     },
                 },
                 "mupta": {
                     "hc": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/472042355?token=MUJ82JsJiRe6RIz&filename=weights_2023-07-15_10-53-38.h5",
-                        "googledisk": "https://drive.usercontent.google.com/download?id=11qDQPLOfoIkm6woMpHc2aZn2Pd6WP2Yp&export=download&authuser=2&confirm=t&uuid=869a2f77-70b2-4440-9e27-5c08e4b06e68&at=AN_67v09IFO8WjgKVGN7cZVW2bWK:1727456887637"
+                        "googledisk": "https://drive.usercontent.google.com/download?id=11qDQPLOfoIkm6woMpHc2aZn2Pd6WP2Yp&export=download&authuser=2&confirm=t&uuid=869a2f77-70b2-4440-9e27-5c08e4b06e68&at=AN_67v09IFO8WjgKVGN7cZVW2bWK:1727456887637",
                     },
                     "nn": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/472139571?token=DvEzGThzqaMl2pp&filename=weights_2023-07-16_18-12-01.h5",
-                        "googledisk": "https://drive.usercontent.google.com/download?id=1dyH4lqajNS7LOwNqcfj3YktxlJrbLSXf&export=download&authuser=2&confirm=t&uuid=f69981d0-9852-4e0e-8d49-91b55dae3da0&at=AN_67v1nGyJJ427XWPLc3ISlZxbx:1727456802847"
+                        "googledisk": "https://drive.usercontent.google.com/download?id=1dyH4lqajNS7LOwNqcfj3YktxlJrbLSXf&export=download&authuser=2&confirm=t&uuid=f69981d0-9852-4e0e-8d49-91b55dae3da0&at=AN_67v1nGyJJ427XWPLc3ISlZxbx:1727456802847",
                     },
                     "b5": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/477962566?token=sliTZG1OBMIrlwY&filename=ft_mupta_2023-12-09_14-25-13.h5",
-                        "googledisk": "https://drive.usercontent.google.com/download?id=1ZZqOdLdaH9IgZyHP8ko4nZ1SHTnF66dl&export=download&authuser=2&confirm=t&uuid=76bb23e4-42d2-4b12-befc-a5e72045fcb0&at=AN_67v3JssIUaLVilcAsJjXnjBdu:1727456716440"
+                        "googledisk": "https://drive.usercontent.google.com/download?id=1ZZqOdLdaH9IgZyHP8ko4nZ1SHTnF66dl&export=download&authuser=2&confirm=t&uuid=76bb23e4-42d2-4b12-befc-a5e72045fcb0&at=AN_67v3JssIUaLVilcAsJjXnjBdu:1727456716440",
                     },
                 },
             },
@@ -367,24 +332,19 @@ class Core(CoreMessages):
                 "fi": {
                     "b5": {
                         "openness": {
-                            "sberdisk": "https://download.sberdisk.ru/download/file/425515223?token=Btoo2flpzGewhry&filename=weights_2022-08-28_11-14-35.h5",
-                            "googledisk": "https://drive.usercontent.google.com/download?id=1XfpJewfYQ9Ge_CFkI15yaR42ezMRJmgV&export=download&authuser=2&confirm=t&uuid=a5dbbdeb-6459-4542-8c3c-2757c24b8cd6&at=AN_67v34zt7FGMCrrsTtNhSEVJ_M:1727615612517"
+                            "googledisk": "https://drive.usercontent.google.com/download?id=1XfpJewfYQ9Ge_CFkI15yaR42ezMRJmgV&export=download&authuser=2&confirm=t&uuid=a5dbbdeb-6459-4542-8c3c-2757c24b8cd6&at=AN_67v34zt7FGMCrrsTtNhSEVJ_M:1727615612517",
                         },
                         "conscientiousness": {
-                            "sberdisk": "https://download.sberdisk.ru/download/file/425515311?token=bUjloqk32e4wasj&filename=weights_2022-08-28_11-08-10.h5",
-                            "googledisk": "https://drive.usercontent.google.com/download?id=1cnNIWbAh9mm6YGN4IMax_3GNIWS5UJd1&export=download&authuser=2&confirm=t&uuid=aa6e7365-e39b-4aa7-89e5-04391a825e74&at=AN_67v25YKChbofCWOTQaIIZ0lOQ:1727615643757"
+                            "googledisk": "https://drive.usercontent.google.com/download?id=1cnNIWbAh9mm6YGN4IMax_3GNIWS5UJd1&export=download&authuser=2&confirm=t&uuid=aa6e7365-e39b-4aa7-89e5-04391a825e74&at=AN_67v25YKChbofCWOTQaIIZ0lOQ:1727615643757",
                         },
                         "extraversion": {
-                            "sberdisk": "https://download.sberdisk.ru/download/file/425515337?token=IC44ovFFcnj4DZl&filename=weights_2022-08-28_11-17-57.h5",
-                            "googledisk": "https://drive.usercontent.google.com/download?id=1xdEnwPaY0Gbonv9irx4jBbtCiMFmlzJ3&export=download&authuser=2&confirm=t&uuid=e427c375-46f1-43de-a9e5-c41c25431b05&at=AN_67v35vZ-z25nFZMbVq9yFE8gq:1727615666732"
+                            "googledisk": "https://drive.usercontent.google.com/download?id=1xdEnwPaY0Gbonv9irx4jBbtCiMFmlzJ3&export=download&authuser=2&confirm=t&uuid=e427c375-46f1-43de-a9e5-c41c25431b05&at=AN_67v35vZ-z25nFZMbVq9yFE8gq:1727615666732",
                         },
                         "agreeableness": {
-                            "sberdisk": "https://download.sberdisk.ru/download/file/425515346?token=gFjvtM2HIabtsvc&filename=weights_2022-08-28_11-25-11.h5",
-                            "googledisk": "https://drive.usercontent.google.com/download?id=1vpoyqPR3MsLdNjkAvP5_KKZdFIvJn45F&export=download&authuser=2&confirm=t&uuid=573effe5-e8d1-44ab-98f8-fc3f39b566d9&at=AN_67v1i_iaJOCQTVfAPFWjiDWUY:1727615685740"
+                            "googledisk": "https://drive.usercontent.google.com/download?id=1vpoyqPR3MsLdNjkAvP5_KKZdFIvJn45F&export=download&authuser=2&confirm=t&uuid=573effe5-e8d1-44ab-98f8-fc3f39b566d9&at=AN_67v1i_iaJOCQTVfAPFWjiDWUY:1727615685740",
                         },
                         "non_neuroticism": {
-                            "sberdisk": "https://download.sberdisk.ru/download/file/425515375?token=pPpzOQC9z6WMzNt&filename=weights_2022-06-14_21-44-09.h5",
-                            "googledisk": "https://drive.usercontent.google.com/download?id=16Kv55LfBuxUlL7fhY8lBtcgs1Xtfy7f4&export=download&authuser=2&confirm=t&uuid=e3252289-7223-42ad-ac20-231083bb508d&at=AN_67v3Pe1XkhJkfE3JndwkXTUd9:1727615583703"
+                            "googledisk": "https://drive.usercontent.google.com/download?id=16Kv55LfBuxUlL7fhY8lBtcgs1Xtfy7f4&export=download&authuser=2&confirm=t&uuid=e3252289-7223-42ad-ac20-231083bb508d&at=AN_67v3Pe1XkhJkfE3JndwkXTUd9:1727615583703",
                         },
                     },
                 },
@@ -395,14 +355,12 @@ class Core(CoreMessages):
             "avt": {
                 "fi": {
                     "b5": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/477962565?token=YSTP75aNv8eVtxf&filename=avt_fi_2023-12-03_11-36-51.h5",
-                        "googledisk": "https://drive.usercontent.google.com/download?id=1p4BVr55tchCReCGLZ4y39ttcp5v_cmYq&export=download&authuser=2&confirm=t&uuid=e62c020f-97fb-4975-9872-666dd8e548db&at=AN_67v0U3BmTKeqFSiEKi29moDbn:1727798300717"
+                        "googledisk": "https://drive.usercontent.google.com/download?id=1p4BVr55tchCReCGLZ4y39ttcp5v_cmYq&export=download&authuser=2&confirm=t&uuid=e62c020f-97fb-4975-9872-666dd8e548db&at=AN_67v0U3BmTKeqFSiEKi29moDbn:1727798300717",
                     },
                 },
                 "mupta": {
                     "b5": {
-                        "sberdisk": "https://download.sberdisk.ru/download/file/477962563?token=v5hUmyJEbhyPqic&filename=avt_mupta_2023-12-09_14-25-13.h5",
-                        "googledisk": "https://drive.usercontent.google.com/download?id=1HPFj8nv79H5rLLmjC32Hm76TIdo7GEH6&export=download&authuser=2&confirm=t&uuid=566a2d01-ef26-4cbd-8986-36b6a4a12e65&at=AN_67v1WOHojwdVTzowewJl0vWWz:1727798374011"
+                        "googledisk": "https://drive.usercontent.google.com/download?id=1HPFj8nv79H5rLLmjC32Hm76TIdo7GEH6&export=download&authuser=2&confirm=t&uuid=566a2d01-ef26-4cbd-8986-36b6a4a12e65&at=AN_67v1WOHojwdVTzowewJl0vWWz:1727798374011",
                     },
                 },
             },
@@ -412,11 +370,11 @@ class Core(CoreMessages):
         self._true_traits: Dict[str, str] = {
             "fi": {
                 "sberdisk": "https://download.sberdisk.ru/download/file/478675810?token=anU8umMha1GiWPQ&filename=data_true_traits_fi.csv",
-                "googledisk": "https://drive.usercontent.google.com/download?id=1O5dliseCG-MOPEjriASge3iXxqyc7dgX&export=download&authuser=2&confirm=t&uuid=d7821fcd-0692-4f26-95b2-dd1a6af81657&at=AO7h07dS-gJaqtjsbSpyLloAV1Wv:1727196204665"
+                "googledisk": "https://drive.usercontent.google.com/download?id=1O5dliseCG-MOPEjriASge3iXxqyc7dgX&export=download&authuser=2&confirm=t&uuid=d7821fcd-0692-4f26-95b2-dd1a6af81657&at=AO7h07dS-gJaqtjsbSpyLloAV1Wv:1727196204665",
             },
             "mupta": {
                 "sberdisk": "https://download.sberdisk.ru/download/file/478675811?token=hUMsrUSKjSRrV5e&filename=data_true_traits_mupta.csv",
-                "googledisk": "https://drive.usercontent.google.com/download?id=1s-2UhVFRaSZmTmqa3ztGPnaL_9dWFUlz&export=download&authuser=2&confirm=t&uuid=ef16d01d-40d9-4d30-a3c9-382eb4569f5a&at=AO7h07c4dLmma0g29tJXsrh2jLMF:1727196324559"
+                "googledisk": "https://drive.usercontent.google.com/download?id=1s-2UhVFRaSZmTmqa3ztGPnaL_9dWFUlz&export=download&authuser=2&confirm=t&uuid=ef16d01d-40d9-4d30-a3c9-382eb4569f5a&at=AO7h07c4dLmma0g29tJXsrh2jLMF:1727196324559",
             },
         }
 
@@ -663,24 +621,27 @@ class Core(CoreMessages):
                 :execution-count: 1
                 :linenos:
 
-                |----|--------------|---------|
-                |    | Package      | Version |
-                |----|--------------|---------|
-                | 1  | TensorFlow   | 2.11.0  |
-                | 2  | Keras        | 2.11.0  |
-                | 3  | OpenCV       | 4.6.0   |
-                | 4  | MediaPipe    | 0.9.0   |
-                | 5  | NumPy        | 1.23.5  |
-                | 6  | SciPy        | 1.9.3   |
-                | 7  | Pandas       | 1.5.2   |
-                | 8  | Scikit-learn | 1.1.3   |
-                | 9  | OpenSmile    | 2.4.1   |
-                | 10 | Librosa      | 0.9.2   |
-                | 11 | AudioRead    | 3.0.0   |
-                | 12 | IPython      | 8.7.0   |
-                | 14 | Requests     | 2.28.1  |
-                | 15 | JupyterLab   | 3.5.0   |
-                |----|--------------|---------|
+                |----|---------------|--------------|
+                |    | Package       | Version      |
+                |----|---------------|--------------|
+                | 1  | OpenCV        | 4.10.0       |
+                | 2  | MediaPipe     | 0.10.15      |
+                | 3  | NumPy         | 1.23.5       |
+                | 4  | SciPy         | 1.13.1       |
+                | 5  | Pandas        | 2.2.3        |
+                | 6  | Scikit-learn  | 1.5.2        |
+                | 7  | OpenSmile     | 2.5.0        |
+                | 8  | Librosa       | 0.10.2.post1 |
+                | 9  | AudioRead     | 3.0.1        |
+                | 10 | IPython       | 8.18.1       |
+                | 11 | Requests      | 2.32.3       |
+                | 12 | JupyterLab    | 4.2.5        |
+                | 13 | LIWC          | 0.5.0        |
+                | 14 | Transformers  | 4.45.1       |
+                | 15 | Sentencepiece | 0.2.0        |
+                | 16 | Torch         | 2.2.2        |
+                | 17 | Torchaudio    | 2.2.2        |
+                |----|---------------|--------------|
         """
 
         return self._df_pkgs
@@ -880,55 +841,138 @@ class Core(CoreMessages):
 
                 {
                     'audio': {
-                        'hc': {
-                            'sberdisk': 'https://download.sberdisk.ru/download/file/400635799?token=MMRrak8fMsyzxLE&filename=weights_2022-05-05_11-27-55.h5',
+                        'fi': {
+                            'hc': {
+                                'googledisk': 'https://drive.usercontent.google.com/download?id=11EeWmEzjBM2uVpDv1JTNlUPoUmYTc4ar&export=download&authuser=2&confirm=t&uuid=583e76db-450a-4bb7-b0ae-b454acb08613&at=AO7h07dsgtllWrkR2jZ0kRzdDHfc:1727270957484'
+                            },
+                            'nn': {
+                                'googledisk': 'https://drive.usercontent.google.com/download?id=1GQLVdYs0XhPYI-Hn7rYw2-LpOuWgBBzx&export=download&authuser=2&confirm=t&uuid=c82c6516-7da7-45c3-8705-2727a6c6ffb8&at=AO7h07ceFDOtg7sMb5Gdi2Mzqe_K:1727288160810'
+                            },
+                            'b5': {
+                                'openness': {
+                                    'googledisk': 'https://drive.usercontent.google.com/download?id=1RDQ_EyKv-GLEMUvs3w9o1cThClMjPQud&export=download&authuser=2&confirm=t&uuid=9c24908a-46dd-4772-bb37-5f2d5b1ceae3&at=AN_67v21iOtcNefAGCFlefTPqYGz:1727290092037'
+                                },
+                                'conscientiousness': {
+                                    'googledisk': 'https://drive.usercontent.google.com/download?id=18M0kCW6Q9oD4B-JFRaECEL05U1FUShDB&export=download&authuser=2&confirm=t&uuid=e582c3c5-5dbc-4955-895c-3e52414a2a97&at=AN_67v1_K1HQXbRfwLnjbJbfgh6k:1727289934706'
+                                },
+                                'extraversion': {
+                                    'googledisk': 'https://drive.usercontent.google.com/download?id=1qi2YVf25Bs5QfPfXlXXEO8x5hXu--WcA&export=download&authuser=2&confirm=t&uuid=6bdf3546-4672-46ef-b7fc-95d36105f5a1&at=AN_67v015u8YFSwjMXh9ygO5mtk_:1727289973929'
+                                },
+                                'agreeableness': {
+                                    'googledisk': 'https://drive.usercontent.google.com/download?id=1glPO999kk7As81F-tc1-jpq1fbNeUQgA&export=download&authuser=2&confirm=t&uuid=0cc2d044-3616-4864-a2dc-8faac4151959&at=AN_67v24uko_8JufEMR3YyLS2fkQ:1727290023217'
+                                },
+                                'non_neuroticism': {
+                                    'googledisk': 'https://drive.usercontent.google.com/download?id=1Y89jPj_4vVfyBtE43gP16vyaateKP2Bb&export=download&authuser=2&confirm=t&uuid=bdea116a-d166-475c-8257-6482ad6391a9&at=AN_67v2rMxyCAy8hhgvFtWR751Wq:1727290055424'
+                                }
+                            }
                         },
-                        'nn': {
-                            'sberdisk': 'https://download.sberdisk.ru/download/file/400635678?token=W6LCtD33FQHnYEz&filename=weights_2022-05-03_07-46-14.h5',
-                        },
-                        'b5': {
-                            'openness': {
-                                'sberdisk': 'https://download.sberdisk.ru/download/file/405035301?token=443WRA9MFWqWBAE&filename=weights_2022-06-15_16-16-20.h5',
+                        'mupta': {
+                            'hc': {
+                                'googledisk': 'https://drive.usercontent.google.com/download?id=151ISGwKvuPnKLvObeU9CS-2AsWV98cwI&export=download&authuser=2&confirm=t&uuid=0f2b7770-fdea-4434-b522-b9df66a92b5d&at=AO7h07epzz7_6h7alDMVoJspjyhz:1727271012853'
                             },
-                            'conscientiousness': {
-                                'sberdisk': 'https://download.sberdisk.ru/download/file/405034601?token=eDG28m3H6c8bWoE&filename=weights_2022-06-15_16-21-57.h5',
-                            },
-                            'extraversion': {
-                                'sberdisk': 'https://download.sberdisk.ru/download/file/405034830?token=3daBSTYnmZaesee&filename=weights_2022-06-15_16-26-41.h5',
-                            },
-                            'agreeableness': {
-                                'sberdisk': 'https://download.sberdisk.ru/download/file/405034397?token=52ZPHMjb4CFmdYa&filename=weights_2022-06-15_16-32-51.h5',
-                            },
-                            'non_neuroticism': {
-                                'sberdisk': 'https://download.sberdisk.ru/download/file/405035156?token=q8CZJ99rZqcNxkM&filename=weights_2022-06-15_16-37-46.h5',
-                            },
-                        },
+                            'nn': {
+                                'googledisk': 'https://drive.usercontent.google.com/download?id=1ePwbNYottjpNW2Ehi45C8O2fm_H6HuXh&export=download&authuser=2&confirm=t&uuid=d7ece633-385c-4511-a4f0-58cdb9e02fe2&at=AO7h07e6sjR3UG7bTOaGEz5OUOT3:1727288215449'
+                            }
+                        }
                     },
                     'video': {
-                        'hc': {
-                            'sberdisk': 'https://download.sberdisk.ru/download/file/412059444?token=JXerCfAjJZg6crD&filename=weights_2022-08-27_18-53-35.h5',
+                        'fi': {
+                            'hc': {
+                                'googledisk': 'https://drive.usercontent.google.com/download?id=1Ug9b-vvnU9BQtyahlfj7no3CVSf2MUMB&export=download&authuser=2&confirm=t&uuid=5f135650-15b8-4ad0-9af4-68521a731c0a&at=AO7h07dLs9A6Jwf_4uJWAOysU4_y:1727105753033'
+                            },
+                            'nn': {
+                                'googledisk': 'https://drive.usercontent.google.com/download?id=1QF7ReDQXpCciF7aWjbEt4Q-x06hwDrMZ&export=download&authuser=2&confirm=t&uuid=c2fd5a21-7af7-4b7f-8419-d7d628847768&at=AO7h07eilj-Bm5RIk0HwQBEr37ri:1727175670133'
+                            },
+                            'fe': {
+                                'googledisk': 'https://drive.usercontent.google.com/download?id=1SOuDY_JGlu5vV26zz_zNjpYZOu751A3Y&export=download&authuser=2&confirm=t&uuid=4cec3ead-89af-45ce-9437-0b1eed463fdc&at=AO7h07cBxO6cNzloq6LmFdhUenNy:1727174252392'
+                            },
+                            'b5': {
+                                'openness': {
+                                    'googledisk': 'https://drive.usercontent.google.com/download?id=1vnpHymFLm3pXeYoyTjGasrIvzz-xzKO3&export=download&authuser=2&confirm=t&uuid=a6e4bb96-53bf-4d4b-9a38-978665a51792&at=AO7h07eQ5SN8TN9gRdAGQZ5yh0im:1727181613809'
+                                },
+                                'conscientiousness': {
+                                    'googledisk': 'https://drive.usercontent.google.com/download?id=1HQrLYQBkRiNbKUoD9BpyelF6GQJcjLid&export=download&authuser=2&confirm=t&uuid=049a1f8d-87e2-4c49-800b-f7e7d9ac58c4&at=AO7h07e3Cpm8-4BVOsWcSEs9vhf9:1727181922083'
+                                },
+                                'extraversion': {
+                                    'googledisk': 'https://drive.usercontent.google.com/download?id=1xDowylrNjMQfnJk4KJkYNLoaK-33XKI0&export=download&authuser=2&confirm=t&uuid=88491cad-46ec-41c2-ae28-2b180e597fee&at=AO7h07fjaflK_FwdhLXBHH42uUXY:1727181953043'
+                                },
+                                'agreeableness': {
+                                    'googledisk': 'https://drive.usercontent.google.com/download?id=1AfRF1j5M_XkZRDaG6NjMz26iJV3tAmFi&export=download&authuser=2&confirm=t&uuid=443dc2d7-1c51-4418-b4fa-19dbbb17d624&at=AO7h07di_ajVQCpEcXb_XqU6ak2I:1727181988356'
+                                },
+                                'non_neuroticism': {
+                                    'googledisk': 'https://drive.usercontent.google.com/download?id=1qB1iRbuTKLqKm-CH96rEBgabj-AnllIt&export=download&authuser=2&confirm=t&uuid=0a087c9a-4df6-408f-80cd-ef1f20390ce2&at=AO7h07dwQThSoBctwDwDDPfqre9T:1727182020902'
+                                }
+                            }
                         },
-                        'nn': {
-                            'sberdisk': 'https://download.sberdisk.ru/download/file/412059478?token=85KeW6q4QKy6kP8&filename=weights_2022-03-22_16-31-48.h5',
+                        'mupta': {
+                            'hc': {
+                                'googledisk': 'https://drive.usercontent.google.com/download?id=1Ybz6X5hNl3JCmZCpuLnLdzWY_W7Gnf5J&export=download&authuser=2&confirm=t&uuid=6dbd07bb-b9f6-40e8-88b2-d5adb34076c3&at=AO7h07eLQrKFVFfTFmiq7tYK2KZX:1727185527591'
+                            },
+                            'nn': {
+                                'googledisk': 'https://drive.usercontent.google.com/download?id=1gbRUh-4AYf8-4OpXj17gAv3SfmpCqv1V&export=download&authuser=2&confirm=t&uuid=9784f923-994e-4e27-8c82-82d603d5f1c5&at=AO7h07euCb37HT_H8rq9w_H4FdR-:1727185473779'
+                            },
+                            'fe': {
+                                'googledisk': 'https://drive.usercontent.google.com/download?id=1SOuDY_JGlu5vV26zz_zNjpYZOu751A3Y&export=download&authuser=2&confirm=t&uuid=4cec3ead-89af-45ce-9437-0b1eed463fdc&at=AO7h07cBxO6cNzloq6LmFdhUenNy:1727174252392'
+                            }
+                        }
+                    },
+                    'text': {
+                        'fi': {
+                            'hc':
+                                'googledisk': 'https://drive.usercontent.google.com/download?id=1QwHyCCgitWKuDPKxhylaD4aZJYuTEOF1&export=download&authuser=2&confirm=t&uuid=8ac05c03-b0b7-4898-bf02-14841a904111&at=AN_67v1y3k_bXdYkrUGxTQOwRUP0:1727456663203'
+                            },
+                            'nn': {
+                                'googledisk': 'https://drive.usercontent.google.com/download?id=1pbnumZzDSw9WifZUNhdvfY8azZAatapb&export=download&authuser=2&confirm=t&uuid=fad1e6b8-fe6e-4c61-bdcd-35164a4659f2&at=AN_67v1gjCWAv8ebAU1Q5EvTte7b:1727456849254'
+                            },
+                            'b5': {
+                                'googledisk': 'https://drive.usercontent.google.com/download?id=16gw0AfZxPkZZgLXq2dvl2K809SYsxMUm&export=download&authuser=2&confirm=t&uuid=17138780-3b94-4cef-b80d-4fda11f7137e&at=AN_67v1kXjIJrQkgOcoY9fxfRhG9:1727456761067'
+                            }
                         },
-                        'fe': {
-                            'sberdisk': 'https://download.sberdisk.ru/download/file/414207833?token=ygzxWEkndjSMnEL&filename=weights_2022-11-01_12-27-07.h5'
+                        'mupta': {
+                            'hc': {
+                                'googledisk': 'https://drive.usercontent.google.com/download?id=11qDQPLOfoIkm6woMpHc2aZn2Pd6WP2Yp&export=download&authuser=2&confirm=t&uuid=869a2f77-70b2-4440-9e27-5c08e4b06e68&at=AN_67v09IFO8WjgKVGN7cZVW2bWK:1727456887637'
+                            },
+                            'nn': {
+                                'googledisk': 'https://drive.usercontent.google.com/download?id=1dyH4lqajNS7LOwNqcfj3YktxlJrbLSXf&export=download&authuser=2&confirm=t&uuid=f69981d0-9852-4e0e-8d49-91b55dae3da0&at=AN_67v1nGyJJ427XWPLc3ISlZxbx:1727456802847'
+                            },
+                            'b5': {
+                                'googledisk': 'https://drive.usercontent.google.com/download?id=1ZZqOdLdaH9IgZyHP8ko4nZ1SHTnF66dl&export=download&authuser=2&confirm=t&uuid=76bb23e4-42d2-4b12-befc-a5e72045fcb0&at=AN_67v3JssIUaLVilcAsJjXnjBdu:1727456716440'
+                            }
+                        }
+                    },
+                    'av': {
+                        'fi': {
+                            'b5': {
+                                'openness': {
+                                    'googledisk': 'https://drive.usercontent.google.com/download?id=1XfpJewfYQ9Ge_CFkI15yaR42ezMRJmgV&export=download&authuser=2&confirm=t&uuid=a5dbbdeb-6459-4542-8c3c-2757c24b8cd6&at=AN_67v34zt7FGMCrrsTtNhSEVJ_M:1727615612517'
+                                },
+                                'conscientiousness': {
+                                    'googledisk': 'https://drive.usercontent.google.com/download?id=1cnNIWbAh9mm6YGN4IMax_3GNIWS5UJd1&export=download&authuser=2&confirm=t&uuid=aa6e7365-e39b-4aa7-89e5-04391a825e74&at=AN_67v25YKChbofCWOTQaIIZ0lOQ:1727615643757'
+                                },
+                                'extraversion': {
+                                    'googledisk': 'https://drive.usercontent.google.com/download?id=1xdEnwPaY0Gbonv9irx4jBbtCiMFmlzJ3&export=download&authuser=2&confirm=t&uuid=e427c375-46f1-43de-a9e5-c41c25431b05&at=AN_67v35vZ-z25nFZMbVq9yFE8gq:1727615666732'
+                                },
+                                'agreeableness': {
+                                    'googledisk': 'https://drive.usercontent.google.com/download?id=1vpoyqPR3MsLdNjkAvP5_KKZdFIvJn45F&export=download&authuser=2&confirm=t&uuid=573effe5-e8d1-44ab-98f8-fc3f39b566d9&at=AN_67v1i_iaJOCQTVfAPFWjiDWUY:1727615685740'
+                                },
+                                'non_neuroticism': {
+                                    'googledisk': 'https://drive.usercontent.google.com/download?id=16Kv55LfBuxUlL7fhY8lBtcgs1Xtfy7f4&export=download&authuser=2&confirm=t&uuid=e3252289-7223-42ad-ac20-231083bb508d&at=AN_67v3Pe1XkhJkfE3JndwkXTUd9:1727615583703'
+                                }
+                            }
                         },
-                        'b5': {
-                            'openness': {
-                                'sberdisk': 'https://download.sberdisk.ru/download/file/415127050?token=rfpy9TLdbeXtiN7&filename=weights_2022-06-15_16-46-30.h5',
-                            },
-                            'conscientiousness': {
-                                'sberdisk': 'https://download.sberdisk.ru/download/file/415126986?token=PnjzaHaR3wPg2RT&filename=weights_2022-06-15_16-48-50.h5',
-                            },
-                            'extraversion': {
-                                'sberdisk': 'https://download.sberdisk.ru/download/file/415127012?token=s5aTwbt8DBkt7G4&filename=weights_2022-06-15_16-54-06.h5',
-                            },
-                            'agreeableness': {
-                                'sberdisk': 'https://download.sberdisk.ru/download/file/415126845?token=joN7TMHk59Gffsf&filename=weights_2022-06-15_17-02-03.h5',
-                            },
-                            'non_neuroticism': {
-                                'sberdisk': 'https://download.sberdisk.ru/download/file/415127032?token=NEBSsE7mjyjen3o&filename=weights_2022-06-15_17-06-15.h5',
+                        'mupta': {
+                            'b5': {}
+                        }
+                    },
+                    'avt': {
+                        'fi': {
+                            'b5': {
+                                'googledisk': 'https://drive.usercontent.google.com/download?id=1p4BVr55tchCReCGLZ4y39ttcp5v_cmYq&export=download&authuser=2&confirm=t&uuid=e62c020f-97fb-4975-9872-666dd8e548db&at=AN_67v0U3BmTKeqFSiEKi29moDbn:1727798300717'
+                            }
+                        },
+                        'mupta': {
+                            'b5': {
+                                'googledisk': 'https://drive.usercontent.google.com/download?id=1HPFj8nv79H5rLLmjC32Hm76TIdo7GEH6&export=download&authuser=2&confirm=t&uuid=566a2d01-ef26-4cbd-8986-36b6a4a12e65&at=AN_67v1WOHojwdVTzowewJl0vWWz:1727798374011'
                             }
                         }
                     }
@@ -965,7 +1009,14 @@ class Core(CoreMessages):
                 :tab-width: 12
 
                 {
-                    'sberdisk': 'https://download.sberdisk.ru/download/file/410305241?token=TFePK6w5CW6ADnq&filename=data_true_traits.csv'
+                    'fi': {
+                        'sberdisk': 'https://download.sberdisk.ru/download/file/478675810?token=anU8umMha1GiWPQ&filename=data_true_traits_fi.csv',
+                        'googledisk': 'https://drive.usercontent.google.com/download?id=1O5dliseCG-MOPEjriASge3iXxqyc7dgX&export=download&authuser=2&confirm=t&uuid=d7821fcd-0692-4f26-95b2-dd1a6af81657&at=AO7h07dS-gJaqtjsbSpyLloAV1Wv:1727196204665'
+                    },
+                    'mupta': {
+                        'sberdisk': 'https://download.sberdisk.ru/download/file/478675811?token=hUMsrUSKjSRrV5e&filename=data_true_traits_mupta.csv',
+                        'googledisk': 'https://drive.usercontent.google.com/download?id=1s-2UhVFRaSZmTmqa3ztGPnaL_9dWFUlz&export=download&authuser=2&confirm=t&uuid=ef16d01d-40d9-4d30-a3c9-382eb4569f5a&at=AO7h07c4dLmma0g29tJXsrh2jLMF:1727196324559'
+                    }
                 }
         """
 
@@ -1010,9 +1061,9 @@ class Core(CoreMessages):
                 :tab-width: 8
 
                 {
-                    'filename': '/var/folders/gw/w3k5kxtx0s3_nqdqw94zr8yh0000gn/T/ipykernel_22253/4179594971.py',
+                    'filename': '/var/folders/gw/w3k5kxtx0s3_nqdqw94zr8yh0000gn/T/ipykernel_3613/3289675153.py',
                     'lineno': 6,
-                    'name': '<cell line: 6>',
+                    'name': '<module>',
                     'type': 'Exception'
                 }
         """
@@ -1143,8 +1194,8 @@ class Core(CoreMessages):
                     Сопровождающие:
                         Рюмина Елена [ryumina_ev@mail.ru]
                         Рюмин Дмитрий [dl_03.03.1991@mail.ru]
-                    Версия: 1.0.0-a7
-                    Лицензия: GPLv3
+                    Версия: 1.0.0a37
+                    Лицензия: BSD License
 
             :bdg-warning:`Лучше так не делать` :bdg-light:`-- 1 --`
 
@@ -1170,8 +1221,8 @@ class Core(CoreMessages):
                     Сопровождающие:
                         Рюмина Елена [ryumina_ev@mail.ru]
                         Рюмин Дмитрий [dl_03.03.1991@mail.ru]
-                    Версия: 1.0.0-a7
-                    Лицензия: GPLv3
+                    Версия: 1.0.0a37
+                    Лицензия: BSD License
         """
 
         if self.is_notebook_ is True:
@@ -1714,18 +1765,18 @@ class Core(CoreMessages):
                 :execution-count: 1
                 :linenos:
 
-                [2022-10-14 16:25:11] Сообщение об ошибке 1
+                [2024-10-06 21:09:43] Сообщение об ошибке 1
 
-                    Файл: /var/folders/gw/w3k5kxtx0s3_nqdqw94zr8yh0000gn/T/ipykernel_20011/333478077.py
+                    Файл: /var/folders/gw/w3k5kxtx0s3_nqdqw94zr8yh0000gn/T/ipykernel_3613/1171760106.py
                     Линия: 5
-                    Метод: <cell line: 5>
+                    Метод: 1171760106.py
                     Тип ошибки: Exception
 
-                [2022-10-14 16:25:11] Сообщение об ошибке 2
+                [2024-10-06 21:09:43] Сообщение об ошибке 2
 
-                    Файл: /var/folders/gw/w3k5kxtx0s3_nqdqw94zr8yh0000gn/T/ipykernel_20011/333478077.py
+                    Файл: /var/folders/gw/w3k5kxtx0s3_nqdqw94zr8yh0000gn/T/ipykernel_3613/1171760106.py
                     Линия: 16
-                    Метод: <cell line: 16>
+                    Метод: 1171760106.py
                     Тип ошибки: Exception
 
             :bdg-danger:`Ошибка` :bdg-light:`-- 1 --`
@@ -1764,12 +1815,17 @@ class Core(CoreMessages):
 
             trac = self._traceback()  # Трассировка исключений
 
+            # Проверка на <module> и замена его на название модуля
+            method_name = trac["name"]
+            if method_name == "<module>":
+                method_name = trac["filename"].split("/")[-1]
+
             b = "**" if self.bold_text_ is True else ""
             cr = self.color_simple_
 
             # Отображение сообщения
             self._notebook_display_markdown(
-                ("{}" * 8).format(
+                ("{}" * 10).format(
                     f'<span style="color:{cr}">{b}[</span><span style="color:{self.color_err_}">',
                     datetime.now().strftime(self._format_time),
                     f'</span><span style="color:{cr}">]</span> ',
@@ -1777,7 +1833,7 @@ class Core(CoreMessages):
                     f"<p>",
                     f'<span style="color:{cr}">{self.__tab}{self._trac_file}: <u>{trac["filename"]}</u></span>',
                     f'<br /><span style="color:{cr}">{self.__tab}{self._trac_line}: <u>{trac["lineno"]}</u></span>',
-                    f'<br /><span style="color:{cr}">{self.__tab}{self._trac_method}: <u>{trac["name"]}</u></span>',
+                    f'<br /><span style="color:{cr}">{self.__tab}{self._trac_method}: <u>{method_name}</u></span>',
                     f'<br /><span style="color:{cr}">{self.__tab}{self._trac_type_err}: <u>{trac["type"]}</u></span>',
                     f"</p>",
                 ),
@@ -1832,7 +1888,7 @@ class Core(CoreMessages):
         self,
         last: bool = False,
         out: bool = True,
-        **kwargs: Union[int, Tuple[int], tf.TensorShape],
+        **kwargs: Union[int, Tuple[int]],
     ) -> None:
         """Сообщение со статистикой извлеченных признаков из акустического сигнала
 
@@ -1842,7 +1898,7 @@ class Core(CoreMessages):
         Args:
             last (bool): Замена последнего сообщения
             out (bool): Отображение
-            **kwargs (Union[int, Tuple[int], tf.TensorShape]): Дополнительные именованные аргументы
+            **kwargs (Union[int, Tuple[int]]): Дополнительные именованные аргументы
 
         Returns:
             None
@@ -1949,7 +2005,7 @@ class Core(CoreMessages):
         self,
         last: bool = False,
         out: bool = True,
-        **kwargs: Union[int, Tuple[int], tf.TensorShape],
+        **kwargs: Union[int, Tuple[int]],
     ) -> None:
         """Сообщение c статистикой извлеченных признаков из визуального сигнала
 
@@ -1959,7 +2015,7 @@ class Core(CoreMessages):
         Args:
             last (bool): Замена последнего сообщения
             out (bool): Отображение
-            **kwargs (Union[int, Tuple[int], tf.TensorShape]): Дополнительные именованные аргументы
+            **kwargs (Union[int, Tuple[int]]): Дополнительные именованные аргументы
 
         Returns:
             None
@@ -2071,7 +2127,7 @@ class Core(CoreMessages):
         self,
         last: bool = False,
         out: bool = True,
-        **kwargs: Union[int, Tuple[int], tf.TensorShape],
+        **kwargs: Union[int, Tuple[int]],
     ) -> None:
         """Сообщение c статистикой извлеченных признаков из текста
 
@@ -2081,7 +2137,7 @@ class Core(CoreMessages):
         Args:
             last (bool): Замена последнего сообщения
             out (bool): Отображение
-            **kwargs (Union[int, Tuple[int], tf.TensorShape]): Дополнительные именованные аргументы
+            **kwargs (Union[int, Tuple[int]]): Дополнительные именованные аргументы
 
         Returns:
             None
@@ -2531,7 +2587,7 @@ class Core(CoreMessages):
                 :execution-count: 3
                 :linenos:
 
-                [2022-10-20 16:55:15] Неверные типы или значения аргументов в "Audio._progressbar_union_predictions" ...
+                [2024-10-06 21:13:03] Неверные типы или значения аргументов в "Core._progressbar_union_predictions" ...
         """
 
         if self.is_notebook_ is True:
@@ -2739,7 +2795,7 @@ class Core(CoreMessages):
         """
 
         try:
-            last_el = self._notebook_history_output.pop()
+            _ = self._notebook_history_output.pop()
         except Exception:
             pass
 
@@ -2934,10 +2990,10 @@ class Core(CoreMessages):
                 :execution-count: 3
                 :linenos:
 
-                [2022-10-13 18:37:11] Ой! Что-то пошло не так ... директория "/Users/dl/GitHub/oceanai/oceanai/folder" не найдена ...
+                [2024-10-06 21:01:44] Что-то пошло не так ... директория "/Users/dl/GitHub/oceanai/oceanai/folder" не найдена ...
 
-                    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/core/core.py
-                    Линия: 1023
+                    Файл: /Users/dl/@DmitryRyumin/Python/envs/OCEANAI/lib/python3.9/site-packages/oceanai/modules/core/core.py
+                    Линия: 2964
                     Метод: _get_paths
                     Тип ошибки: FileNotFoundError
 
@@ -3152,10 +3208,10 @@ class Core(CoreMessages):
                 :execution-count: 2
                 :linenos:
 
-                [2022-10-13 18:22:40] Ой! Что-то пошло не так ... смотрите настройки ядра и цепочку выполнения действий ...
+                [2024-10-06 18:53:43] Что-то пошло не так ... смотрите настройки ядра и цепочку выполнения действий ...
 
-                    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/core/core.py
-                    Линия: 1105
+                    Файл: /Users/dl/@DmitryRyumin/Python/envs/OCEANAI/lib/python3.9/site-packages/oceanai/modules/core/core.py
+                    Линия: 3177
                     Метод: _append_to_list_of_files
                     Тип ошибки: KeyError
 
@@ -3276,19 +3332,19 @@ class Core(CoreMessages):
                 :execution-count: 2
                 :linenos:
 
-                [2022-12-03 23:08:15] Ой! Что-то пошло не так ... смотрите настройки ядра и цепочку выполнения действий ...
+                [2024-10-06 18:49:44] Что-то пошло не так ... смотрите настройки ядра и цепочку выполнения действий ...
 
-                    Файл: /Users/dl/GitHub/OCEANAI.private/oceanai/modules/core/core.py
-                    Линия: 2669
+                    Файл: /Users/dl/@DmitryRyumin/Python/envs/OCEANAI/lib/python3.9/site-packages/oceanai/modules/core/core.py
+                    Линия: 3300
                     Метод: _append_to_list_of_accuracy
                     Тип ошибки: KeyError
 
                 {
-                    'O': [0.5, 0.4],
-                    'C': [0.6, 0.5],
-                    'E': [0.2, 0.1],
-                    'A': [0.1, 0],
-                    'N': [0.8, 0.7]
+                    'O': [0.5],
+                    'C': [0.6],
+                    'E': [0.2],
+                    'A': [0.1],
+                    'N': [0.8]
                 }
         """
 
@@ -3450,7 +3506,7 @@ class Core(CoreMessages):
         Returns:
              Union[int, bool]: Округленное число если ошибок не выявлено, в обратном случае **False**
 
-        .. dropdown:: Пример
+        .. dropdown:: Примеры
             :class-body: sd-pr-5
 
             :bdg-success:`Верно` :bdg-light:`-- 1 --`
@@ -3559,6 +3615,82 @@ class Core(CoreMessages):
 
         Returns:
              pd.DataFrame: **DataFrame** c ранжированными данными
+
+        .. dropdown:: Примеры
+            :class-body: sd-pr-5
+
+            :bdg-success:`Верно` :bdg-light:`-- 1 --`
+
+            .. code-cell:: python
+                :execution-count: 1
+                :linenos:
+
+                import pandas as pd
+                from oceanai.modules.core.core import Core
+
+                df = pd.DataFrame({
+                    "Path": [
+                        "_plk5k7PBEg.003.mp4",
+                        "2d6btbaNdfo.000.mp4",
+                        "300gK3CnzW0.001.mp4"
+                    ],
+                    "Openness": [0.581159, 0.463991, 0.60707],
+                    "Conscientiousness": [0.628822, 0.418851, 0.591893],
+                    "Extraversion": [0.466609, 0.41301, 0.520662],
+                    "Agreeableness": [0.622129, 0.493329, 0.603938],
+                    "Non-Neuroticism": [0.553832, 0.423093, 0.565726]
+                })
+
+                core = Core()
+
+                core._candidate_ranking(df, 20, 25, 10, 10, 35)
+
+            .. output-cell::
+                :execution-count: 1
+                :linenos:
+
+                PersonID	Path	Openness	Conscientiousness	Extraversion	Agreeableness	Non-Neuroticism	Candidate score
+                3	300gK3CnzW0.001.mp4	0.607070	0.591893	0.520662	0.603938	0.565726	57.985135
+                1	_plk5k7PBEg.003.mp4	0.581159	0.628822	0.466609	0.622129	0.553832	57.615230
+                2	2d6btbaNdfo.000.mp4	0.463991	0.418851	0.413010	0.493329	0.423093	43.622740
+
+            :bdg-danger:`Ошибка` :bdg-light:`-- 1 --`
+
+            .. code-cell:: python
+                :execution-count: 3
+                :linenos:
+                :tab-width: 8
+
+                import pandas as pd
+                from oceanai.modules.core.core import Core
+
+                df = pd.DataFrame({
+                    "Path": [
+                        "_plk5k7PBEg.003.mp4",
+                        "2d6btbaNdfo.000.mp4",
+                        "300gK3CnzW0.001.mp4"
+                    ],
+                    "Openness": [0.581159, 0.463991, 0.60707],
+                    "Conscientiousness": [0.628822, 0.418851, 0.591893],
+                    "Extraversion": [0.466609, 0.41301, 0.520662],
+                    "Agreeableness": [0.622129, 0.493329, 0.603938],
+                    "Non-Neuroticism": [0.553832, 0.423093, 0.565726]
+                })
+
+                core = Core()
+
+                core._candidate_ranking(df, 0, 0, 0, 0,0)
+
+            .. output-cell::
+                :execution-count: 3
+                :linenos:
+
+                [2024-10-06 20:28:22] Что-то пошло не так ... сумма весов для ранжирования персональных качеств должна быть равна 100 ...
+
+                    Файл: /Users/dl/@DmitryRyumin/Python/envs/OCEANAI/lib/python3.9/site-packages/oceanai/modules/core/core.py
+                    Линия: 3597
+                    Метод: _candidate_ranking
+                    Тип ошибки: TypeError
         """
 
         # Сброс
@@ -3964,7 +4096,48 @@ class Core(CoreMessages):
                 else:
                     return self._df_files_priority_skill
 
-    def _compatibility_percentage(self, type1, type2, weights):
+    def _compatibility_percentage(self, type1: list, type2: list, weights: list) -> tuple[float, float]:
+        """Вычисление процента совместимости и оценки на основе сравнения двух типов
+
+        .. note::
+            protected (защищенный метод)
+
+        Args:
+            type1 (list): Первый тип, который необходимо сравнить
+            type2 (list): Второй тип для сравнения с первым
+            weights (list): Список весов, где каждый элемент соответствует значению в type1 и type2
+
+        Returns:
+            tuple:
+                - `match_percentage` (float): Процент совместимости, рассчитываемый как отношение совпадающих элементов к общему числу
+                - `weighted_score` (float): Взвешенная оценка совместимости, рассчитанная на основе совпадающих элементов и их весов
+
+        .. dropdown:: Пример
+            :class-body: sd-pr-5
+
+            :bdg-success:`Верно` :bdg-light:`-- 1 --`
+
+            .. code-cell:: python
+                :execution-count: 1
+                :linenos:
+
+                from oceanai.modules.core.core import Core
+
+                core = Core()
+
+                type1 = [1, 2, 3, 4]
+                type2 = [1, 2, 0, 4]
+                weights = [0.5, 1.0, 1.5, 2.0]
+
+                core._compatibility_percentage(type1, type2, weights)
+
+            .. output-cell::
+                :execution-count: 1
+                :linenos:
+
+                (75.0, 2.625)
+        """
+
         match = sum(1 for x, y in zip(type1, type2) if x == y) / 4
         score = sum(np.abs(weights[idx]) for idx, (x, y) in enumerate(zip(type1, type2)) if x == y)
         return match * 100, score * match
@@ -4371,29 +4544,27 @@ class Core(CoreMessages):
                 :execution-count: 1
                 :linenos:
 
-                |----|---------------|---------|
-                |    | Package       | Version |
-                |----|---------------|---------|
-                | 1  | TensorFlow    | 2.11.0  |
-                | 2  | Keras         | 2.11.0  |
-                | 3  | OpenCV        | 4.6.0   |
-                | 4  | MediaPipe     | 0.9.0   |
-                | 5  | NumPy         | 1.23.5  |
-                | 6  | SciPy         | 1.9.3   |
-                | 7  | Pandas        | 1.5.2   |
-                | 8  | Scikit-learn  | 1.1.3   |
-                | 9  | OpenSmile     | 2.4.1   |
-                | 10 | Librosa       | 0.9.2   |
-                | 11 | AudioRead     | 3.0.0   |
-                | 12 | IPython       | 8.7.0   |
-                | 14 | Requests      | 2.28.1  |
-                | 15 | JupyterLab    | 3.5.0   |
-                | 16 | LIWC          | 0.5.0   |
-                | 17 | Transformers  | 4.24.0  |
-                | 18 | Sentencepiece | 0.1.99  |
-                | 19 | Torch         | 1.12.1  |
-                | 20 | Torchaudio    | 0.12.1  |
-                |----|---------------|---------|
+                |----|---------------|--------------|
+                |    | Package       | Version      |
+                |----|---------------|--------------|
+                | 1  | OpenCV        | 4.10.0       |
+                | 2  | MediaPipe     | 0.10.15      |
+                | 3  | NumPy         | 1.23.5       |
+                | 4  | SciPy         | 1.13.1       |
+                | 5  | Pandas        | 2.2.3        |
+                | 6  | Scikit-learn  | 1.5.2        |
+                | 7  | OpenSmile     | 2.5.0        |
+                | 8  | Librosa       | 0.10.2.post1 |
+                | 9  | AudioRead     | 3.0.1        |
+                | 10 | IPython       | 8.18.1       |
+                | 11 | Requests      | 2.32.3       |
+                | 12 | JupyterLab    | 4.2.5        |
+                | 13 | LIWC          | 0.5.0        |
+                | 14 | Transformers  | 4.45.1       |
+                | 15 | Sentencepiece | 0.2.0        |
+                | 16 | Torch         | 2.2.2        |
+                | 17 | Torchaudio    | 2.2.2        |
+                |----|---------------|--------------|
                 --- Время выполнения: 0.005 сек. ---
 
             :bdg-light:`-- 2 --`
@@ -4456,8 +4627,6 @@ class Core(CoreMessages):
 
             pkgs = {
                 "Package": [
-                    "TensorFlow",
-                    "Keras",
                     "OpenCV",
                     "MediaPipe",
                     "NumPy",
@@ -4479,8 +4648,6 @@ class Core(CoreMessages):
                 "Version": [
                     i.__version__
                     for i in [
-                        tf,
-                        keras,
                         cv2,
                         mp,
                         np,

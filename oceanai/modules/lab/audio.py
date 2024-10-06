@@ -18,7 +18,6 @@ for warn in [UserWarning, FutureWarning]:
 from dataclasses import dataclass  # Класс данных
 
 import os  # Взаимодействие с файловой системой
-import logging
 import requests  # Отправка HTTP запросов
 import numpy as np  # Научные вычисления
 import pandas as pd  # Обработка и анализ данных
@@ -44,10 +43,6 @@ from IPython.display import clear_output
 # Персональные
 from oceanai.modules.lab.download import Download  # Загрузка файлов
 from oceanai.modules.core.exceptions import IsSmallWindowSizeError
-
-# Порог регистрации сообщений TensorFlow
-logging.disable(logging.WARNING)
-os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
 import torch
 import torch.nn as nn
@@ -142,14 +137,12 @@ class Audio(AudioMessages):
     def __post_init__(self):
         super().__post_init__()  # Выполнение конструктора из суперкласса
 
-        # Нейросетевая модель **tf.keras.Model** для получения оценок по экспертным признакам
+        # Нейросетевая модель **nn.Module** для получения оценок по экспертным признакам
         self._audio_model_hc: Optional[nn.Module] = None
-        # Нейросетевая модель **tf.keras.Model** для получения оценок по нейросетевым признакам
+        # Нейросетевая модель **nn.Module** для получения оценок по нейросетевым признакам
         self._audio_model_nn: Optional[nn.Module] = None
-        # Нейросетевые модели **tf.keras.Model** для получения результатов оценки персональных качеств
-        self._audio_models_b5: Dict[str, Optional[nn.Module]] = dict(
-            zip(self._b5["en"], [None] * len(self._b5["en"]))
-        )
+        # Нейросетевые модели **nn.Module** для получения результатов оценки персональных качеств
+        self._audio_models_b5: Dict[str, Optional[nn.Module]] = dict(zip(self._b5["en"], [None] * len(self._b5["en"])))
 
         self._smile: opensmile.core.smile.Smile = self.__smile()  # Извлечение функций OpenSmile
 
@@ -182,10 +175,10 @@ class Audio(AudioMessages):
 
     @property
     def audio_model_hc_(self) -> Optional[nn.Module]:
-        """Получение нейросетевой модели **tf.keras.Model** для получения оценок по экспертным признакам
+        """Получение нейросетевой модели **nn.Module** для получения оценок по экспертным признакам
 
         Returns:
-            Optional[tf.keras.Model]: Нейросетевая модель **tf.keras.Model** или None
+            Optional[nn.Module]: Нейросетевая модель **nn.Module** или None
 
         .. dropdown:: Примеры
             :class-body: sd-pr-5
@@ -212,11 +205,17 @@ class Audio(AudioMessages):
                 :execution-count: 1
                 :linenos:
 
-                [2022-10-17 13:54:35] Формирование нейросетевой архитектуры модели для получения оценок по экспертным признакам (аудио модальность) ...
+                [2024-10-06 22:49:58] Формирование нейросетевой архитектуры модели для получения оценок по экспертным признакам (аудио модальность) ...
 
-                --- Время выполнения: 0.509 сек. ---
+                --- Время выполнения: 0.011 сек. ---
 
-                <tf.keras.Model at 0x13dd600a0>
+                audio_model_hc(
+                    (lstm1): LSTM(25, 64, batch_first=True)
+                    (dropout1): Dropout(p=0.2, inplace=False)
+                    (lstm2): LSTM(64, 128, batch_first=True)
+                    (dropout2): Dropout(p=0.2, inplace=False)
+                    (fc): Linear(in_features=128, out_features=5, bias=True)
+                )
 
             :bdg-danger:`Ошибка` :bdg-light:`-- 1 --`
 
@@ -242,10 +241,10 @@ class Audio(AudioMessages):
 
     @property
     def audio_model_nn_(self) -> Optional[nn.Module]:
-        """Получение нейросетевой модели **tf.keras.Model** для получения оценок по нейросетевым признакам
+        """Получение нейросетевой модели **nn.Module** для получения оценок по нейросетевым признакам
 
         Returns:
-            Optional[tf.keras.Model]: Нейросетевая модель **tf.keras.Model** или None
+            Optional[nn.Module]: Нейросетевая модель **nn.Module** или None
 
         .. dropdown:: Примеры
             :class-body: sd-pr-5
@@ -272,11 +271,55 @@ class Audio(AudioMessages):
                 :execution-count: 1
                 :linenos:
 
-                [2022-10-17 13:58:29] Формирование нейросетевой архитектуры для получения оценок по нейросетевым признакам ...
+                [2024-10-06 22:57:46] Формирование нейросетевой архитектуры для получения оценок по нейросетевым признакам (аудио модальность) ...
 
-                --- Время выполнения: 0.444 сек. ---
+                --- Время выполнения: 1.59 сек. ---
 
-                <tf.keras.Model at 0x13db97760>
+                audio_model_nn(
+                (vgg): VGG(
+                    (features): Sequential(
+                    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (1): ReLU(inplace=True)
+                    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (3): ReLU(inplace=True)
+                    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+                    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (6): ReLU(inplace=True)
+                    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (8): ReLU(inplace=True)
+                    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+                    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (11): ReLU(inplace=True)
+                    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (13): ReLU(inplace=True)
+                    (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (15): ReLU(inplace=True)
+                    (16): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+                    (17): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (18): ReLU(inplace=True)
+                    (19): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (20): ReLU(inplace=True)
+                    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (22): ReLU(inplace=True)
+                    (23): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+                    (24): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (25): ReLU(inplace=True)
+                    (26): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (27): ReLU(inplace=True)
+                    (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (29): ReLU(inplace=True)
+                    (30): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+                    )
+                    (avgpool): AdaptiveAvgPool2d(output_size=(7, 7))
+                    (classifier): Identity()
+                )
+                (flatten): Flatten(start_dim=1, end_dim=-1)
+                (fc1): Linear(in_features=25088, out_features=512, bias=True)
+                (relu): ReLU()
+                (dropout): Dropout(p=0.5, inplace=False)
+                (fc2): Linear(in_features=512, out_features=256, bias=True)
+                (fc3): Linear(in_features=256, out_features=5, bias=True)
+                )
 
             :bdg-danger:`Ошибка` :bdg-light:`-- 1 --`
 
@@ -302,10 +345,10 @@ class Audio(AudioMessages):
 
     @property
     def audio_models_b5_(self) -> Dict[str, Optional[nn.Module]]:
-        """Получение нейросетевых моделей **tf.keras.Model** для получения результатов оценки персональных качеств
+        """Получение нейросетевых моделей **nn.Module** для получения результатов оценки персональных качеств
 
         Returns:
-            Dict: Словарь с нейросетевыми моделями **tf.keras.Model**
+            Dict: Словарь с нейросетевыми моделями **nn.Module**
 
         .. dropdown:: Примеры
             :class-body: sd-pr-5
@@ -332,18 +375,30 @@ class Audio(AudioMessages):
                 :execution-count: 1
                 :linenos:
 
-                [2022-10-19 15:45:35] Формирование нейросетевых архитектур моделей для получения результатов оценки
-                персональных качеств (аудио модальность) ...
+                [2024-10-06 22:58:27] Формирование нейросетевых архитектур моделей для получения результатов оценки персональных качеств (аудио модальность) ...
 
-                --- Время выполнения: 0.07 сек. ---
+                --- Время выполнения: 0.002 сек. ---
 
-                {
-                    'openness': <tf.keras.Model at 0x1481e03a0>,
-                    'conscientiousness': <tf.keras.Model at 0x147d13520>,
-                    'extraversion': <tf.keras.Model at 0x1481edfa0>,
-                    'agreeableness': <tf.keras.Model at 0x1481cfc40>,
-                    'non_neuroticism': <tf.keras.Model at 0x1481cffd0>
-                }
+                {'openness': audio_model_b5(
+                    (fc): Linear(in_features=32, out_features=1, bias=True)
+                    (sigmoid): Sigmoid()
+                ),
+                'conscientiousness': audio_model_b5(
+                    (fc): Linear(in_features=32, out_features=1, bias=True)
+                    (sigmoid): Sigmoid()
+                ),
+                'extraversion': audio_model_b5(
+                    (fc): Linear(in_features=32, out_features=1, bias=True)
+                    (sigmoid): Sigmoid()
+                ),
+                'agreeableness': audio_model_b5(
+                    (fc): Linear(in_features=32, out_features=1, bias=True)
+                    (sigmoid): Sigmoid()
+                ),
+                'non-neuroticism': audio_model_b5(
+                    (fc): Linear(in_features=32, out_features=1, bias=True)
+                    (sigmoid): Sigmoid()
+                )}
 
             :bdg-danger:`Ошибка` :bdg-light:`-- 1 --`
 
@@ -621,7 +676,7 @@ class Audio(AudioMessages):
             private (приватный метод)
 
         Returns:
-             opensmile.core.smile.Smile: Извлеченные функции OpenSmile
+            opensmile.core.smile.Smile: Извлеченные функции OpenSmile
 
         .. dropdown:: Пример
             :class-body: sd-pr-5
@@ -944,9 +999,7 @@ class Audio(AudioMessages):
 
             return concat
 
-    def __load_audio_model_b5(
-        self, show_summary: bool = False, out: bool = True
-    ) -> Optional[nn.Module]:
+    def __load_audio_model_b5(self, show_summary: bool = False, out: bool = True) -> Optional[nn.Module]:
         """Формирование нейросетевой архитектуры модели для получения результата оценки персонального качества
 
         .. note::
@@ -957,9 +1010,9 @@ class Audio(AudioMessages):
             out (bool): Отображение
 
         Returns:
-            Optional[tf.keras.Model]:
+            Optional[nn.Module]:
                 **None** если неверные типы или значения аргументов, в обратном случае нейросетевая модель
-                **tf.keras.Model** для получения результата оценки персонального качества
+                **nn.Module** для получения результата оценки персонального качества
 
         .. dropdown:: Примеры
             :class-body: sd-pr-5
@@ -983,22 +1036,14 @@ class Audio(AudioMessages):
                 :execution-count: 1
                 :linenos:
 
-                Model: "model"
-                _________________________________________________________________
-                 Layer (type)                Output Shape              Param #
-                =================================================================
-                 input_1 (InputLayer)        [(None, 32)]              0
-
-                 dense_1 (Dense)             (None, 1)                 33
-
-                 activ_1 (Activation)        (None, 1)                 0
-
-                =================================================================
-                Total params: 33
-                Trainable params: 33
-                Non-trainable params: 0
-                _________________________________________________________________
-                <tf.keras.Model at 0x13d442940>
+                audio_model_b5(
+                    (fc): Linear(in_features=32, out_features=1, bias=True)
+                    (sigmoid): Sigmoid()
+                )
+                audio_model_b5(
+                    (fc): Linear(in_features=32, out_features=1, bias=True)
+                    (sigmoid): Sigmoid()
+                )
 
             :bdg-danger:`Ошибка` :bdg-light:`-- 1 --`
 
@@ -1179,7 +1224,8 @@ class Audio(AudioMessages):
         try:
             # Проверка аргументов
             if (
-                (type(path) is not str or not path) and (type(path) is not gradio.utils.NamedString)
+                (type(path) is not str or not path)
+                and (type(path) is not gradio.utils.NamedString)
                 or type(sr) is not int
                 or sr < 1
                 or ((type(window) is not int or window < 1) and (type(window) is not float or window <= 0))
@@ -1315,7 +1361,9 @@ class Audio(AudioMessages):
                                 )
                             melspectrogram_to_db /= 255  # Линейная нормализация
                             melspectrogram_to_db = np.expand_dims(melspectrogram_to_db, axis=-1)
-                            melspectrogram_to_db = cv2.resize(melspectrogram_to_db, (224, 224), interpolation=cv2.INTER_LINEAR)
+                            melspectrogram_to_db = cv2.resize(
+                                melspectrogram_to_db, (224, 224), interpolation=cv2.INTER_LINEAR
+                            )
                             melspectrogram_to_db = np.expand_dims(melspectrogram_to_db, axis=-1)
                             melspectrogram_to_db = np.repeat(melspectrogram_to_db, 3, axis=-1)
                             # Добавление лог мел-спектрограммы в список
@@ -1472,6 +1520,7 @@ class Audio(AudioMessages):
                 from oceanai.modules.lab.audio import Audio
 
                 audio = Audio()
+
                 audio.load_audio_model_nn(
                     show_summary = True, out = True,
                     runtime = True, run = True
@@ -1481,66 +1530,54 @@ class Audio(AudioMessages):
                 :execution-count: 1
                 :linenos:
 
-                [2022-10-17 13:25:34] Формирование нейросетевой архитектуры для получения оценок по нейросетевым признакам (аудио модальность) ...
+                [2024-10-06 23:01:20] Формирование нейросетевой архитектуры для получения оценок по нейросетевым признакам (аудио модальность) ...
 
-                Model: "model"
-                _________________________________________________________________
-                 Layer (type)                Output Shape              Param #
-                =================================================================
-                 input_1 (InputLayer)        [(None, 224, 224, 3)]     0
-
-                 block1_conv1 (Conv2D)       (None, 224, 224, 64)      1792
-
-                 block1_conv2 (Conv2D)       (None, 224, 224, 64)      36928
-
-                 block1_pool (MaxPooling2D)  (None, 112, 112, 64)      0
-
-                 block2_conv1 (Conv2D)       (None, 112, 112, 128)     73856
-
-                 block2_conv2 (Conv2D)       (None, 112, 112, 128)     147584
-
-                 block2_pool (MaxPooling2D)  (None, 56, 56, 128)       0
-
-                 block3_conv1 (Conv2D)       (None, 56, 56, 256)       295168
-
-                 block3_conv2 (Conv2D)       (None, 56, 56, 256)       590080
-
-                 block3_conv3 (Conv2D)       (None, 56, 56, 256)       590080
-
-                 block3_pool (MaxPooling2D)  (None, 28, 28, 256)       0
-
-                 block4_conv1 (Conv2D)       (None, 28, 28, 512)       1180160
-
-                 block4_conv2 (Conv2D)       (None, 28, 28, 512)       2359808
-
-                 block4_conv3 (Conv2D)       (None, 28, 28, 512)       2359808
-
-                 block4_pool (MaxPooling2D)  (None, 14, 14, 512)       0
-
-                 block5_conv1 (Conv2D)       (None, 14, 14, 512)       2359808
-
-                 block5_conv2 (Conv2D)       (None, 14, 14, 512)       2359808
-
-                 block5_conv3 (Conv2D)       (None, 14, 14, 512)       2359808
-
-                 block5_pool (MaxPooling2D)  (None, 7, 7, 512)         0
-
-                 flatten (Flatten)           (None, 25088)             0
-
-                 dense (Dense)               (None, 512)               12845568
-
-                 dropout (Dropout)           (None, 512)               0
-
-                 dense_1 (Dense)             (None, 256)               131328
-
-                 dense_2 (Dense)             (None, 5)                 1285
-
-                =================================================================
-                Total params: 27,692,869
-                Trainable params: 27,692,869
-                Non-trainable params: 0
-                _________________________________________________________________
-                --- Время выполнения: 0.407 сек. ---
+                audio_model_nn(
+                (vgg): VGG(
+                    (features): Sequential(
+                    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (1): ReLU(inplace=True)
+                    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (3): ReLU(inplace=True)
+                    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+                    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (6): ReLU(inplace=True)
+                    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (8): ReLU(inplace=True)
+                    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+                    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (11): ReLU(inplace=True)
+                    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (13): ReLU(inplace=True)
+                    (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (15): ReLU(inplace=True)
+                    (16): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+                    (17): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (18): ReLU(inplace=True)
+                    (19): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (20): ReLU(inplace=True)
+                    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (22): ReLU(inplace=True)
+                    (23): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+                    (24): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (25): ReLU(inplace=True)
+                    (26): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (27): ReLU(inplace=True)
+                    (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                    (29): ReLU(inplace=True)
+                    (30): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+                    )
+                    (avgpool): AdaptiveAvgPool2d(output_size=(7, 7))
+                    (classifier): Identity()
+                )
+                (flatten): Flatten(start_dim=1, end_dim=-1)
+                (fc1): Linear(in_features=25088, out_features=512, bias=True)
+                (relu): ReLU()
+                (dropout): Dropout(p=0.5, inplace=False)
+                (fc2): Linear(in_features=512, out_features=256, bias=True)
+                (fc3): Linear(in_features=256, out_features=5, bias=True)
+                )
+                --- Время выполнения: 1.958 сек. ---
 
                 True
 
@@ -1642,25 +1679,13 @@ class Audio(AudioMessages):
                 :execution-count: 1
                 :linenos:
 
-                [2022-10-18 11:39:22] Формирование нейросетевых архитектур моделей для получения результатов оценки
-                персональных качеств (аудио модальность) ...
+                [2024-10-06 23:21:04] Формирование нейросетевых архитектур моделей для получения результатов оценки персональных качеств (аудио модальность) ...
 
-                Model: "model_4"
-                _________________________________________________________________
-                 Layer (type)                Output Shape              Param #
-                =================================================================
-                 input_1 (InputLayer)        [(None, 32)]              0
-
-                 dense_1 (Dense)             (None, 1)                 33
-
-                 activ_1 (Activation)        (None, 1)                 0
-
-                =================================================================
-                Total params: 33
-                Trainable params: 33
-                Non-trainable params: 0
-                _________________________________________________________________
-                --- Время выполнения: 0.163 сек. ---
+                audio_model_b5(
+                    (fc): Linear(in_features=32, out_features=1, bias=True)
+                    (sigmoid): Sigmoid()
+                )
+                --- Время выполнения: 0.003 сек. ---
 
                 True
 
@@ -1720,7 +1745,7 @@ class Audio(AudioMessages):
                 self._audio_models_b5[key] = self.__load_audio_model_b5()
 
             if show_summary and out:
-                self._audio_models_b5[key].summary()
+                print(self._audio_models_b5[key])
 
             if runtime:
                 self._r_end(out=out)
@@ -1779,7 +1804,7 @@ class Audio(AudioMessages):
                 audio.path_to_save_ = './models'
                 audio.chunk_size_ = 2000000
 
-                url = audio.weights_for_big5_['audio']['hc']['sberdisk']
+                url = audio.weights_for_big5_['audio']['fi']['hc']['googledisk']
 
                 audio.load_audio_model_weights_hc(
                     url = url,
@@ -1793,11 +1818,11 @@ class Audio(AudioMessages):
                 :execution-count: 2
                 :linenos:
 
-                [2022-10-17 14:24:30] Загрузка весов нейросетевой модели для получения оценок по экспертным признакам (аудио модальность) ...
+                [2024-10-06 23:05:53] Загрузка весов нейросетевой модели для получения оценок по экспертным признакам (аудио модальность) ...
 
-                [2022-10-17 14:24:30] Загрузка файла "weights_2022-05-05_11-27-55.h5" (100.0%) ...
+                [2024-10-06 23:05:56] Загрузка файла "weights_2022-05-05_11-27-55.pth" 100.0% ...
 
-                --- Время выполнения: 0.414 сек. ---
+                --- Время выполнения: 3.078 сек. ---
 
                 True
 
@@ -1815,7 +1840,7 @@ class Audio(AudioMessages):
                 audio.path_to_save_ = './models'
                 audio.chunk_size_ = 2000000
 
-                url = audio.weights_for_big5_['audio']['hc']['sberdisk']
+                url = audio.weights_for_big5_['audio']['fi']['hc']['googledisk']
 
                 audio.load_audio_model_weights_hc(
                     url = url,
@@ -1829,13 +1854,13 @@ class Audio(AudioMessages):
                 :execution-count: 3
                 :linenos:
 
-                [2022-10-17 15:21:13] Загрузка весов нейросетевой модели для получения оценок по экспертным признакам (аудио модальность) ...
+                [2024-10-06 23:07:25] Загрузка весов нейросетевой модели для получения оценок по экспертным признакам (аудио модальность) ...
 
-                [2022-10-17 15:21:14] Загрузка файла "weights_2022-05-05_11-27-55.h5" (100.0%) ...
+                [2024-10-06 23:07:28] Загрузка файла "weights_2022-05-05_11-27-55.pth" 100.0% ...
 
-                [2022-10-17 15:21:14] Что-то пошло не так ... нейросетевая архитектура модели для получения оценок по экспертным признакам не сформирована (аудио модальность) ...
+                [2024-10-06 23:07:28] Что-то пошло не так ... нейросетевая архитектура модели для получения оценок по экспертным признакам не сформирована (аудио модальность) ...
 
-                --- Время выполнения: 0.364 сек. ---
+                --- Время выполнения: 2.911 сек. ---
 
                 False
         """
@@ -1914,7 +1939,7 @@ class Audio(AudioMessages):
                 audio.path_to_save_ = './models'
                 audio.chunk_size_ = 2000000
 
-                url = audio.weights_for_big5_['audio']['nn']['sberdisk']
+                url = audio.weights_for_big5_['audio']['fi']['nn']['googledisk']
 
                 audio.load_audio_model_weights_nn(
                     url = url,
@@ -1928,12 +1953,11 @@ class Audio(AudioMessages):
                 :execution-count: 2
                 :linenos:
 
-                [2022-10-17 15:47:22] Загрузка весов нейросетевой модели для получения оценок по нейросетевым
-                признакам (аудио модальность) ...
+                [2024-10-06 23:22:33] Загрузка весов нейросетевой модели для получения оценок по нейросетевым признакам (аудио модальность) ...
 
-                [2022-10-17 15:47:26] Загрузка файла "weights_2022-05-03_07-46-14.h5" (100.0%) ...
+                [2024-10-06 23:22:39] Загрузка файла "weights_2022-05-03_07-46-14.pth" 100.0% ...
 
-                --- Время выполнения: 3.884 сек. ---
+                --- Время выполнения: 6.454 сек. ---
 
                 True
 
@@ -1965,13 +1989,13 @@ class Audio(AudioMessages):
                 :execution-count: 3
                 :linenos:
 
-                [2022-10-17 15:49:57] Загрузка весов нейросетевой модели для получения оценок по нейросетевым признакам (аудио модальность) ...
+                [2024-10-06 23:23:37] Загрузка весов нейросетевой модели для получения оценок по нейросетевым признакам (аудио модальность) ...
 
-                [2022-10-17 15:50:04] Загрузка файла "weights_2022-05-03_07-46-14.h5" (100.0%) ...
+                [2024-10-06 23:23:43] Загрузка файла "weights_2022-05-03_07-46-14.pth" 100.0% ...
 
-                [2022-10-17 15:50:04] Что-то пошло не так ... нейросетевая архитектура модели для получения оценок по нейросетевым признакам не сформирована (аудио модальность) ...
+                [2024-10-06 23:23:43] Что-то пошло не так ... нейросетевая архитектура модели для получения оценок по нейросетевым признакам не сформирована (аудио модальность) ...
 
-                --- Время выполнения: 6.786 сек. ---
+                --- Время выполнения: 5.639 сек. ---
 
                 False
         """
@@ -2063,11 +2087,11 @@ class Audio(AudioMessages):
                 audio.path_to_save_ = './models'
                 audio.chunk_size_ = 2000000
 
-                url_openness = audio.weights_for_big5_['audio']['b5']['openness']['sberdisk']
-                url_conscientiousness = audio.weights_for_big5_['audio']['b5']['conscientiousness']['sberdisk']
-                url_extraversion = audio.weights_for_big5_['audio']['b5']['extraversion']['sberdisk']
-                url_agreeableness = audio.weights_for_big5_['audio']['b5']['agreeableness']['sberdisk']
-                url_non_neuroticism = audio.weights_for_big5_['audio']['b5']['non_neuroticism']['sberdisk']
+                url_openness = audio.weights_for_big5_['audio']['fi']['b5']['openness']['googledisk']
+                url_conscientiousness = audio.weights_for_big5_['audio']['fi']['b5']['conscientiousness']['googledisk']
+                url_extraversion = audio.weights_for_big5_['audio']['fi']['b5']['extraversion']['googledisk']
+                url_agreeableness = audio.weights_for_big5_['audio']['fi']['b5']['agreeableness']['googledisk']
+                url_non_neuroticism = audio.weights_for_big5_['audio']['fi']['b5']['non_neuroticism']['googledisk']
 
                 audio.load_audio_models_weights_b5(
                     url_openness = url_openness,
@@ -2085,20 +2109,19 @@ class Audio(AudioMessages):
                 :execution-count: 2
                 :linenos:
 
-                [2022-10-18 23:08:37] Загрузка весов нейросетевых моделей для получения результатов оценки
-                персональных качеств (аудио модальность) ...
+                [2024-10-06 23:15:39] Загрузка весов нейросетевых моделей для получения результатов оценки персональных качеств (аудио модальность) ...
 
-                [2022-10-18 23:08:37] Загрузка файла "weights_2022-06-15_16-16-20.h5" (100.0%) ... Открытость опыту
+                [2024-10-06 23:15:42] Загрузка файла "weights_2022-06-15_16-16-20.pth" 100.0% ... Открытость опыту
 
-                [2022-10-18 23:08:38] Загрузка файла "weights_2022-06-15_16-21-57.h5" (100.0%) ... Добросовестность
+                [2024-10-06 23:15:45] Загрузка файла "weights_2022-06-15_16-21-57.pth" 100.0% ... Добросовестность
 
-                [2022-10-18 23:08:38] Загрузка файла "weights_2022-06-15_16-26-41.h5" (100.0%) ... Экстраверсия
+                [2024-10-06 23:15:47] Загрузка файла "weights_2022-06-15_16-26-41.pth" 100.0% ... Экстраверсия
 
-                [2022-10-18 23:08:38] Загрузка файла "weights_2022-06-15_16-32-51.h5" (100.0%) ... Доброжелательность
+                [2024-10-06 23:15:49] Загрузка файла "weights_2022-06-15_16-32-51.pth" 100.0% ... Доброжелательность
 
-                [2022-10-18 23:08:39] Загрузка файла "weights_2022-06-15_16-37-46.h5" (100.0%) ... Эмоциональная стабильность
+                [2024-10-06 23:15:52] Загрузка файла "weights_2022-06-15_16-37-46.pth" 100.0% ... Эмоциональная стабильность
 
-                --- Время выполнения: 1.611 сек. ---
+                --- Время выполнения: 12.466 сек. ---
 
                 True
 
@@ -2116,11 +2139,11 @@ class Audio(AudioMessages):
                 audio.path_to_save_ = './models'
                 audio.chunk_size_ = 2000000
 
-                url_openness = audio.weights_for_big5_['audio']['b5']['openness']['sberdisk']
-                url_conscientiousness = audio.weights_for_big5_['audio']['b5']['conscientiousness']['sberdisk']
-                url_extraversion = audio.weights_for_big5_['audio']['b5']['extraversion']['sberdisk']
-                url_agreeableness = audio.weights_for_big5_['audio']['b5']['agreeableness']['sberdisk']
-                url_non_neuroticism = audio.weights_for_big5_['audio']['b5']['non_neuroticism']['sberdisk']
+                url_openness = audio.weights_for_big5_['audio']['fi']['b5']['openness']['googledisk']
+                url_conscientiousness = audio.weights_for_big5_['audio']['fi']['b5']['conscientiousness']['googledisk']
+                url_extraversion = audio.weights_for_big5_['audio']['fi']['b5']['extraversion']['googledisk']
+                url_agreeableness = audio.weights_for_big5_['audio']['fi']['b5']['agreeableness']['googledisk']
+                url_non_neuroticism = audio.weights_for_big5_['audio']['fi']['b5']['non_neuroticism']['googledisk']
 
                 audio.load_audio_models_weights_b5(
                     url_openness = url_openness,
@@ -2138,60 +2161,54 @@ class Audio(AudioMessages):
                 :execution-count: 3
                 :linenos:
 
-                [2022-10-18 23:09:40] Загрузка весов нейросетевых моделей для получения результатов оценки
-                персональных качеств (аудио модальность) ...
+                [2024-10-06 23:17:35] Загрузка весов нейросетевых моделей для получения результатов оценки персональных качеств (аудио модальность) ...
 
-                [2022-10-18 23:09:41] Загрузка файла "weights_2022-06-15_16-16-20.h5" (100.0%) ...
+                [2024-10-06 23:17:37] Загрузка файла "weights_2022-06-15_16-16-20.pth" 100.0% ...
 
-                [2022-10-18 23:09:41] Что-то пошло не так ... не удалось загрузить веса нейросетевой модели ...
-                Открытость опыту
+                [2024-10-06 23:17:37] Что-то пошло не так ... не удалось загрузить веса нейросетевой модели ... Открытость опыту
 
-                    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/audio.py
-                    Линия: 1764
+                    Файл: /Users/dl/@DmitryRyumin/Python/envs/OCEANAI/lib/python3.9/site-packages/oceanai/modules/lab/audio.py
+                    Линия: 2284
                     Метод: load_audio_models_weights_b5
                     Тип ошибки: AttributeError
 
-                [2022-10-18 23:09:41] Загрузка файла "weights_2022-06-15_16-21-57.h5" (100.0%) ...
+                [2024-10-06 23:17:40] Загрузка файла "weights_2022-06-15_16-21-57.pth" 100.0% ...
 
-                [2022-10-18 23:09:41] Что-то пошло не так ... не удалось загрузить веса нейросетевой модели ...
-                Добросовестность
+                [2024-10-06 23:17:40] Что-то пошло не так ... не удалось загрузить веса нейросетевой модели ... Добросовестность
 
-                    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/audio.py
-                    Линия: 1764
+                    Файл: /Users/dl/@DmitryRyumin/Python/envs/OCEANAI/lib/python3.9/site-packages/oceanai/modules/lab/audio.py
+                    Линия: 2284
                     Метод: load_audio_models_weights_b5
                     Тип ошибки: AttributeError
 
-                [2022-10-18 23:09:41] Загрузка файла "weights_2022-06-15_16-26-41.h5" (100.0%) ...
+                [2024-10-06 23:17:42] Загрузка файла "weights_2022-06-15_16-26-41.pth" 100.0% ...
 
-                [2022-10-18 23:09:41] Что-то пошло не так ... не удалось загрузить веса нейросетевой модели ...
-                Экстраверсия
+                [2024-10-06 23:17:42] Что-то пошло не так ... не удалось загрузить веса нейросетевой модели ... Экстраверсия
 
-                    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/audio.py
-                    Линия: 1764
+                    Файл: /Users/dl/@DmitryRyumin/Python/envs/OCEANAI/lib/python3.9/site-packages/oceanai/modules/lab/audio.py
+                    Линия: 2284
                     Метод: load_audio_models_weights_b5
                     Тип ошибки: AttributeError
 
-                [2022-10-18 23:09:42] Загрузка файла "weights_2022-06-15_16-32-51.h5" (100.0%) ...
+                [2024-10-06 23:17:45] Загрузка файла "weights_2022-06-15_16-32-51.pth" 100.0% ...
 
-                [2022-10-18 23:09:42] Что-то пошло не так ... не удалось загрузить веса нейросетевой модели ...
-                Доброжелательность
+                [2024-10-06 23:17:45] Что-то пошло не так ... не удалось загрузить веса нейросетевой модели ... Доброжелательность
 
-                    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/audio.py
-                    Линия: 1764
+                    Файл: /Users/dl/@DmitryRyumin/Python/envs/OCEANAI/lib/python3.9/site-packages/oceanai/modules/lab/audio.py
+                    Линия: 2284
                     Метод: load_audio_models_weights_b5
                     Тип ошибки: AttributeError
 
-                [2022-10-18 23:09:42] Загрузка файла "weights_2022-06-15_16-37-46.h5" (100.0%) ...
+                [2024-10-06 23:17:47] Загрузка файла "weights_2022-06-15_16-37-46.pth" 100.0% ...
 
-                [2022-10-18 23:09:42] Что-то пошло не так ... не удалось загрузить веса нейросетевой модели ...
-                Эмоциональная стабильность
+                [2024-10-06 23:17:47] Что-то пошло не так ... не удалось загрузить веса нейросетевой модели ... Эмоциональная стабильность
 
-                    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/audio.py
-                    Линия: 1764
+                    Файл: /Users/dl/@DmitryRyumin/Python/envs/OCEANAI/lib/python3.9/site-packages/oceanai/modules/lab/audio.py
+                    Линия: 2284
                     Метод: load_audio_models_weights_b5
                     Тип ошибки: AttributeError
 
-                --- Время выполнения: 1.573 сек. ---
+                --- Время выполнения: 12.562 сек. ---
 
                 False
         """
@@ -2287,7 +2304,9 @@ class Audio(AudioMessages):
                             continue
 
                         try:
-                            self._audio_models_b5[self._b5["en"][cnt]].load_state_dict(torch.load(self._url_last_filename))
+                            self._audio_models_b5[self._b5["en"][cnt]].load_state_dict(
+                                torch.load(self._url_last_filename)
+                            )
                             self._audio_models_b5[self._b5["en"][cnt]].to(self._device).eval()
                             with torch.no_grad():
                                 test_tensor = torch.randn((1, 32)).to(self._device)
@@ -2572,8 +2591,12 @@ class Audio(AudioMessages):
 
                                 try:
                                     # Отправка нейросетевых признаков в нейросетевую модель
-                                    melspectrogram_features = torch.from_numpy(np.array(melspectrogram_features, dtype=np.float32))
-                                    pred_melspectrogram, _ = self.audio_model_nn_(melspectrogram_features.permute(0, 3, 1, 2).to(self._device))
+                                    melspectrogram_features = torch.from_numpy(
+                                        np.array(melspectrogram_features, dtype=np.float32)
+                                    )
+                                    pred_melspectrogram, _ = self.audio_model_nn_(
+                                        melspectrogram_features.permute(0, 3, 1, 2).to(self._device)
+                                    )
                                     pred_melspectrogram = pred_melspectrogram.detach().cpu()
                                 except TypeError:
                                     code_error_pred_melspectrogram = 1

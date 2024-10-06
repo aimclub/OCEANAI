@@ -24,7 +24,7 @@
 
 -----
 
-.. figure:: _static/Pipeline_OCEANAI.svg
+.. figure:: _static/Pipeline_OCEANAI.ru.svg
    :scale: 80 %
    :align: center
    :alt: Функциональная схема библиотеки OCEAN-AI
@@ -68,7 +68,7 @@
 `OCEAN-AI <https://oceanai.readthedocs.io/ru/latest/>`_ написана на языке программирования
 `python <https://www.python.org/>`_. Нейросетевые модели
 реализованы и обучены с использованием библиотеки с открытым исходным кодом
-`TensorFlow <https://www.tensorflow.org/>`_.
+`PyTorch <https://pytorch.org/>`_.
 
 -----
 

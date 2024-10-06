@@ -8,8 +8,9 @@
 from __future__ import print_function
 
 import torch
-import torch.nn as  nn
+import torch.nn as nn
 import torch.nn.functional as F
+
 
 class Attention(nn.Module):
     def __init__(self):
@@ -19,7 +20,8 @@ class Attention(nn.Module):
         scores = torch.matmul(query, key.transpose(-1, -2))
         scores = F.softmax(scores, dim=-1)
         return torch.matmul(scores, key)
-    
+
+
 class Addition(nn.Module):
     def __init__(self):
         super(Addition, self).__init__()
@@ -41,7 +43,7 @@ class Concat(nn.Module):
 class text_model_hc(nn.Module):
     def __init__(self, input_shape):
         super(text_model_hc, self).__init__()
-        
+
         self.lstm1 = nn.LSTM(input_size=input_shape[1], hidden_size=32, batch_first=True, bidirectional=True)
         self.attention = Attention()
         self.lstm2 = nn.LSTM(input_size=64, hidden_size=32, batch_first=True, bidirectional=True)
@@ -59,16 +61,17 @@ class text_model_hc(nn.Module):
         feat = self.addition(x)
         x = torch.sigmoid(self.final_dense(feat))
         return x, feat
-    
+
+
 class text_model_nn(nn.Module):
     def __init__(self, input_shape):
         super(text_model_nn, self).__init__()
-        
+
         self.lstm1 = nn.LSTM(input_size=input_shape[1], hidden_size=32, batch_first=True, bidirectional=True)
         self.attention = Attention()
         self.dense1 = nn.Linear(64, 128)
         self.addition = Addition()
-        self.dense2 = nn.Linear(128*2, 128)
+        self.dense2 = nn.Linear(128 * 2, 128)
         self.final_dense = nn.Linear(128, 5)
 
     def forward(self, x):
@@ -79,6 +82,7 @@ class text_model_nn(nn.Module):
         feat = self.dense2(x)
         x = torch.sigmoid(self.final_dense(feat))
         return x, feat
+
 
 class text_model_b5(nn.Module):
     def __init__(self):
