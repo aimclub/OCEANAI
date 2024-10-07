@@ -1141,7 +1141,7 @@ class Prediction(PredictionMessages):
                             continue
 
                         try:
-                            self._av_models_b5[self._b5["en"][cnt]].load_state_dict(torch.load(self._url_last_filename))
+                            self._av_models_b5[self._b5["en"][cnt]].load_state_dict(torch.load(self._url_last_filename, weights_only=True))
                             self._av_models_b5[self._b5["en"][cnt]].to(self._device).eval()
                         except Exception:
                             self._other_error(
@@ -1681,7 +1681,7 @@ class Prediction(PredictionMessages):
 
         if self.__load_model_weights(url, force_reload, self._load_avt_model_weights_b5, out, False, run) is True:
             try:
-                self._avt_model_b5.load_state_dict(torch.load(self._url_last_filename))
+                self._avt_model_b5.load_state_dict(torch.load(self._url_last_filename, weights_only=True))
                 self._avt_model_b5.to(self._device).eval()
             except Exception:
                 self._error(self._model_avt_not_formation, out=out)

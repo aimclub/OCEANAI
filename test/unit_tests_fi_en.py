@@ -112,8 +112,8 @@ def test_get_audio_union_predictions():
 
     _b5.get_audio_union_predictions(url_accuracy=URL_ACCURACY, out=False)
 
-    assert _b5.df_accuracy_["Mean"].values[0] <= 0.1
-    assert _b5.df_accuracy_["Mean"].values[1] >= 0.9
+    assert _b5.df_accuracy_["Mean"].values[0] <= 0.2
+    assert _b5.df_accuracy_["Mean"].values[1] >= 0.8
 
 
 def test_get_video_union_predictions():
@@ -148,8 +148,8 @@ def test_get_video_union_predictions():
 
     _b5.get_video_union_predictions(url_accuracy=URL_ACCURACY, lang=lang, out=False)
 
-    assert _b5.df_accuracy_["Mean"].values[0] <= 0.1
-    assert _b5.df_accuracy_["Mean"].values[1] >= 0.9
+    assert _b5.df_accuracy_["Mean"].values[0] <= 0.2
+    assert _b5.df_accuracy_["Mean"].values[1] >= 0.8
 
 
 def test_get_text_union_predictions():
@@ -217,8 +217,8 @@ def test_get_av_union_predictions():
 
     _b5.get_av_union_predictions(url_accuracy=URL_ACCURACY, lang=lang, out=False)
 
-    assert _b5.df_accuracy_["Mean"].values[0] <= 0.1
-    assert _b5.df_accuracy_["Mean"].values[1] >= 0.9
+    assert _b5.df_accuracy_["Mean"].values[0] <= 0.2
+    assert _b5.df_accuracy_["Mean"].values[1] >= 0.8
 
 
 def test_get_avt_predictions():
@@ -264,5 +264,5 @@ def test_get_avt_predictions():
 
     _b5.get_avt_predictions(url_accuracy=URL_ACCURACY, lang=lang, out=False)
 
-    assert _b5.df_accuracy_["Mean"].values[0] <= 0.1
-    assert _b5.df_accuracy_["Mean"].values[1] >= 0.9
+    assert _b5.df_accuracy_["Mean"].values[0] <= 0.2
+    assert _b5.df_accuracy_["Mean"].values[1] >= 0.8

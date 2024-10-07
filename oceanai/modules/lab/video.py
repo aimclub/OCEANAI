@@ -1296,7 +1296,7 @@ class Video(VideoMessages):
         out: bool = True,
         runtime: bool = True,
         run: bool = True,
-    ) -> Tuple[np.ndarray, np.ndarray]:
+    ) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
         """Извлечение признаков из визуального сигнала (без очистки истории вывода сообщений в ячейке Jupyter)
 
         .. note::
@@ -1314,10 +1314,11 @@ class Video(VideoMessages):
             run (bool): Блокировка выполнения
 
         Returns:
-            Tuple[np.ndarray, np.ndarray]: Кортеж с двумя np.ndarray:
+            Tuple[np.ndarray, np.ndarray, np.ndarray]: Кортеж с двумя np.ndarray:
 
                 1. np.ndarray с экспертными признаками
                 2. np.ndarray с нейросетевыми признаками
+                3. np.ndarray с эмоциональными предсказаниями
 
         .. dropdown:: Примеры
             :class-body: sd-pr-5
@@ -1381,7 +1382,7 @@ class Video(VideoMessages):
 
                 path = '/Users/dl/GitHub/oceanai/oceanai/dataset/test80_01/glgfB3vFewc.004.mp4'
 
-                hc_features, nn_features = video.get_visual_features(
+                hc_features, nn_features, _ = video.get_visual_features(
                     path = path, reduction_fps = 5,
                     window = 10, step = 5,
                     out = True, runtime = True, run = True
@@ -1416,7 +1417,7 @@ class Video(VideoMessages):
 
                 path = '/Users/dl/GitHub/oceanai/oceanai/dataset/test80_01/glgfB3vFewc.004.mp4'
 
-                hc_features, nn_features = video.get_visual_features(
+                hc_features, nn_features, _ = video.get_visual_features(
                     path = path, reduction_fps = 5,
                     window = 10, step = 5,
                     out = True, runtime = True, run = True
@@ -1454,12 +1455,12 @@ class Video(VideoMessages):
                 raise TypeError
         except TypeError:
             self._inv_args(__class__.__name__, self._get_visual_features.__name__, last=last, out=out)
-            return np.empty([]), np.empty([])
+            return np.empty([]), np.empty([]), np.empty([])
         else:
             # Блокировка выполнения
             if run is False:
                 self._error(self._lock_user, last=last, out=out)
-                return np.empty([]), np.empty([])
+                return np.empty([]), np.empty([]), np.empty([])
 
             if runtime:
                 self._r_start()
@@ -1475,10 +1476,10 @@ class Video(VideoMessages):
                     raise FileNotFoundError  # Не файл
             except FileNotFoundError:
                 self._other_error(self._file_not_found.format(self._info_wrapper(path)), last=last, out=out)
-                return np.empty([]), np.empty([])
+                return np.empty([]), np.empty([]), np.empty([])
             except Exception:
                 self._other_error(self._unknown_err, last=last, out=out)
-                return np.empty([]), np.empty([])
+                return np.empty([]), np.empty([]), np.empty([])
             else:
                 try:
                     # Расширение файла не соответствует расширению искомых файлов
@@ -1491,10 +1492,10 @@ class Video(VideoMessages):
                         ),
                         out=out,
                     )
-                    return np.empty([]), np.empty([])
+                    return np.empty([]), np.empty([]), np.empty([])
                 except Exception:
                     self._other_error(self._unknown_err, out=out)
-                    return np.empty([]), np.empty([])
+                    return np.empty([]), np.empty([]), np.empty([])
                 else:
                     cap = cv2.VideoCapture(path)  # Захват видеофайла для чтения
                     width_video = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))  # Ширина кадров в видеопотоке
@@ -1513,7 +1514,7 @@ class Video(VideoMessages):
                             raise ValueError
                     except ValueError:
                         self._other_error(self._calc_reshape_img_coef_error, out=out)
-                        return np.empty([]), np.empty([])
+                        return np.empty([]), np.empty([]), np.empty([])
                     else:
                         # Прореживание кадров
                         if reduction_fps > fps_cv2:
@@ -1748,19 +1749,36 @@ class Video(VideoMessages):
                         # Лицо не найдено не на одном кадре
                         if len(bndbox_faces) == 0:
                             self._error(self._faces_not_found, out=out)
-                            return np.empty([]), np.empty([])
+                            return np.empty([]), np.empty([]), np.empty([])
 
                         hcs = np.asarray(hcs)
 
                         # Коды ошибок нейросетевой модели
                         code_error_pred_deep_fe = -1
 
+                        batch_size_limit = 100
+
                         try:
                             # Отправка областей с лицами в нейросетевую модель для получения нейросетевых признаков
                             bndbox_faces = torch.from_numpy(np.vstack(bndbox_faces))
-                            pred_emo, extract_deep_fe = self._video_model_deep_fe(bndbox_faces.to(self._device))
-                            extract_deep_fe = extract_deep_fe.detach().cpu()
-                            pred_emo = pred_emo.detach().cpu()
+                            num_images = len(bndbox_faces)
+                            if num_images > batch_size_limit:
+                                all_extract_deep_fe = []
+                                all_pred_emo = []
+                                
+                                for i in range(0, num_images, batch_size_limit):
+                                    bndbox_subbatch = bndbox_faces[i:i + batch_size_limit].to(self._device)
+                                    pred_emo_sub, extract_deep_fe_sub = self._video_model_deep_fe(bndbox_subbatch)
+                                    extract_deep_fe_sub = extract_deep_fe_sub.detach().cpu()
+                                    pred_emo_sub = pred_emo_sub.detach().cpu()
+                                    all_extract_deep_fe.append(extract_deep_fe_sub)
+                                    all_pred_emo.append(pred_emo_sub)
+                                extract_deep_fe = torch.cat(all_extract_deep_fe, dim=0)
+                                pred_emo = torch.cat(all_pred_emo, dim=0)
+                            else:
+                                pred_emo, extract_deep_fe = self._video_model_deep_fe(bndbox_faces.to(self._device))
+                                extract_deep_fe = extract_deep_fe.detach().cpu()
+                                pred_emo = pred_emo.detach().cpu()
                         except TypeError:
                             code_error_pred_deep_fe = 1
                         except Exception:
@@ -1768,10 +1786,11 @@ class Video(VideoMessages):
 
                         if code_error_pred_deep_fe != -1:
                             self._error(self._model_video_deep_fe_not_formation, out=out)
-                            return np.empty([]), np.empty([])
+                            return np.empty([]), np.empty([]), np.empty([])
 
                         # 1. Список с экспертными признаками
                         # 2. Список с нейросетевыми признаками
+                        tnt(111, extract_deep_fe.shape, pred_emo.shape)
                         hc_features, nn_features, pred_emos = [], [], []
 
                         # Проход по всему набору экспертных и нейросетевых признаков
@@ -2841,7 +2860,7 @@ class Video(VideoMessages):
 
         if self.__load_model_weights(url, force_reload, self._load_video_model_weights_hc, out, False, run) is True:
             try:
-                self._video_model_hc.load_state_dict(torch.load(self._url_last_filename))
+                self._video_model_hc.load_state_dict(torch.load(self._url_last_filename, weights_only=True))
                 self._video_model_hc.to(self._device).eval()
             except Exception:
                 self._error(self._model_video_hc_not_formation, out=out)
@@ -2975,7 +2994,7 @@ class Video(VideoMessages):
             is True
         ):
             try:
-                self._video_model_deep_fe.load_state_dict(torch.load(self._url_last_filename))
+                self._video_model_deep_fe.load_state_dict(torch.load(self._url_last_filename, weights_only=True))
                 self._video_model_deep_fe.to(self._device).eval()
                 test_tensor = torch.randn((1, 3, 224, 224)).to(self._device)
                 _, _ = self._video_model_deep_fe(test_tensor)
@@ -3108,7 +3127,7 @@ class Video(VideoMessages):
 
         if self.__load_model_weights(url, force_reload, self._load_video_model_weights_nn, out, False, run) is True:
             try:
-                self._video_model_nn.load_state_dict(torch.load(self._url_last_filename))
+                self._video_model_nn.load_state_dict(torch.load(self._url_last_filename, weights_only=True))
                 self._video_model_nn.to(self._device).eval()
                 test_tensor = torch.randn((1, 10, 512)).to(self._device)
                 _, _ = self._video_model_nn(test_tensor)
@@ -3406,7 +3425,7 @@ class Video(VideoMessages):
 
                         try:
                             self._video_models_b5[self._b5["en"][cnt]].load_state_dict(
-                                torch.load(self._url_last_filename)
+                                torch.load(self._url_last_filename, weights_only=True)
                             )
                             self._video_models_b5[self._b5["en"][cnt]].to(self._device).eval()
                             test_tensor = torch.randn((1, 32)).to(self._device)
@@ -3443,7 +3462,7 @@ class Video(VideoMessages):
         out: bool = True,
         runtime: bool = True,
         run: bool = True,
-    ) -> Tuple[np.ndarray, np.ndarray]:
+    ) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
         """Извлечение признаков из визуального сигнала
 
         Args:
@@ -3457,10 +3476,11 @@ class Video(VideoMessages):
             run (bool): Блокировка выполнения
 
         Returns:
-            Tuple[np.ndarray, np.ndarray]: Кортеж с двумя np.ndarray:
+            Tuple[np.ndarray, np.ndarray, np.ndarray]: Кортеж с тремя np.ndarray:
 
                 1. np.ndarray с экспертными признаками
                 2. np.ndarray с нейросетевыми признаками
+                3. np.ndarray с эмоциональными предсказаниями
 
         :bdg-link-light:`Пример <../../user_guide/notebooks/Video-get_visual_features.ipynb>`
         """
