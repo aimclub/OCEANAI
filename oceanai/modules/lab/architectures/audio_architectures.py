@@ -38,7 +38,7 @@ class audio_model_nn(nn.Module):
     def __init__(self, input_size=512):
         super(audio_model_nn, self).__init__()
 
-        self.vgg = models.vgg16(pretrained=False)
+        self.vgg = models.vgg16(weights=None)
         self.vgg.classifier = nn.Identity()
 
         self.flatten = nn.Flatten()
