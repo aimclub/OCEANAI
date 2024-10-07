@@ -626,7 +626,7 @@ class Core(CoreMessages):
                 |    | Package       | Version      |
                 |----|---------------|--------------|
                 | 1  | OpenCV        | 4.10.0       |
-                | 2  | MediaPipe     | 0.10.15      |
+                | 2  | MediaPipe     | 0.10.14      |
                 | 3  | NumPy         | 1.23.5       |
                 | 4  | SciPy         | 1.13.1       |
                 | 5  | Pandas        | 2.2.3        |
@@ -4549,7 +4549,7 @@ class Core(CoreMessages):
                 |    | Package       | Version      |
                 |----|---------------|--------------|
                 | 1  | OpenCV        | 4.10.0       |
-                | 2  | MediaPipe     | 0.10.15      |
+                | 2  | MediaPipe     | 0.10.14      |
                 | 3  | NumPy         | 1.23.5       |
                 | 4  | SciPy         | 1.13.1       |
                 | 5  | Pandas        | 2.2.3        |
