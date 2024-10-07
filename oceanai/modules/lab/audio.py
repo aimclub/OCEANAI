@@ -1870,7 +1870,7 @@ class Audio(AudioMessages):
 
         if self.__load_model_weights(url, force_reload, self._load_audio_model_weights_hc, out, False, run) is True:
             try:
-                self._audio_model_hc.load_state_dict(torch.load(self._url_last_filename))
+                self._audio_model_hc.load_state_dict(torch.load(self._url_last_filename, weights_only=True))
                 self._audio_model_hc.to(self._device).eval()
                 with torch.no_grad():
                     test_tensor = torch.randn((1, 196, 25)).to(self._device)
@@ -2005,7 +2005,7 @@ class Audio(AudioMessages):
 
         if self.__load_model_weights(url, force_reload, self._load_audio_model_weights_nn, out, False, run) is True:
             try:
-                self._audio_model_nn.load_state_dict(torch.load(self._url_last_filename))
+                self._audio_model_nn.load_state_dict(torch.load(self._url_last_filename, weights_only=True))
                 self._audio_model_nn.to(self._device).eval()
                 with torch.no_grad():
                     test_tensor = torch.randn((1, 3, 224, 224)).to(self._device)
@@ -2305,7 +2305,7 @@ class Audio(AudioMessages):
 
                         try:
                             self._audio_models_b5[self._b5["en"][cnt]].load_state_dict(
-                                torch.load(self._url_last_filename)
+                                torch.load(self._url_last_filename, weights_only=True)
                             )
                             self._audio_models_b5[self._b5["en"][cnt]].to(self._device).eval()
                             with torch.no_grad():

@@ -1258,7 +1258,7 @@ class Text(TextMessages):
 
         if self.__load_model_weights(url, force_reload, self._load_text_model_weights_hc, out, False, run) is True:
             try:
-                self._text_model_hc.load_state_dict(torch.load(self._url_last_filename))
+                self._text_model_hc.load_state_dict(torch.load(self._url_last_filename, weights_only=True))
                 self._text_model_hc.to(self._device).eval()
 
             except Exception:
@@ -1293,7 +1293,7 @@ class Text(TextMessages):
 
         if self.__load_model_weights(url, force_reload, self._load_text_model_weights_nn, out, False, run) is True:
             try:
-                self._text_model_nn.load_state_dict(torch.load(self._url_last_filename))
+                self._text_model_nn.load_state_dict(torch.load(self._url_last_filename, weights_only=True))
                 self._text_model_nn.to(self._device).eval()
 
             except Exception:
@@ -1333,7 +1333,7 @@ class Text(TextMessages):
 
         if self.__load_model_weights(url, force_reload, self._load_text_model_weights_b5, out, False, run) is True:
             try:
-                self._text_model_b5.load_state_dict(torch.load(self._url_last_filename))
+                self._text_model_b5.load_state_dict(torch.load(self._url_last_filename, weights_only=True))
                 self._text_model_b5.to(self._device).eval()
             except Exception:
                 self._error(self._model_text_not_formation, out=out)
