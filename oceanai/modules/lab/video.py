@@ -1790,7 +1790,6 @@ class Video(VideoMessages):
 
                         # 1. Список с экспертными признаками
                         # 2. Список с нейросетевыми признаками
-                        tnt(111, extract_deep_fe.shape, pred_emo.shape)
                         hc_features, nn_features, pred_emos = [], [], []
 
                         # Проход по всему набору экспертных и нейросетевых признаков
