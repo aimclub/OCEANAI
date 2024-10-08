@@ -1756,7 +1756,7 @@ class Video(VideoMessages):
                         # Коды ошибок нейросетевой модели
                         code_error_pred_deep_fe = -1
 
-                        batch_size_limit = 50
+                        batch_size_limit = 30
 
                         try:
                             # Отправка областей с лицами в нейросетевую модель для получения нейросетевых признаков
