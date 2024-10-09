@@ -353,6 +353,7 @@ class Video(VideoMessages):
                 video = Video()
 
                 video.load_video_model_hc(
+                    lang = 'en',
                     show_summary = False, out = True,
                     runtime = True, run = True
                 )
@@ -363,11 +364,17 @@ class Video(VideoMessages):
                 :execution-count: 1
                 :linenos:
 
-                [2022-10-26 12:37:42] Формирование нейросетевой архитектуры модели для получения оценок по экспертным признакам (видео модальность) ...
+                [2024-10-09 13:19:24] Формирование нейросетевой архитектуры модели для получения оценок по экспертным признакам (видео модальность) ...
 
-                --- Время выполнения: 1.112 сек. ---
+                --- Время выполнения: 0.005 сек. ---
 
-                <tf.keras.Model at 0x1434eb1f0>
+                video_model_hc(
+                    (lstm1): LSTM(115, 64, batch_first=True)
+                    (dropout1): Dropout(p=0.2, inplace=False)
+                    (lstm2): LSTM(64, 128, batch_first=True)
+                    (dropout2): Dropout(p=0.2, inplace=False)
+                    (fc): Linear(in_features=128, out_features=5, bias=True)
+                )
 
             :bdg-danger:`Ошибка` :bdg-light:`-- 1 --`
 
@@ -423,11 +430,15 @@ class Video(VideoMessages):
                 :execution-count: 1
                 :linenos:
 
-                [2022-10-27 14:49:00] Формирование нейросетевой архитектуры для получения оценок по нейросетевым признакам (видео модальность) ...
+                [2024-10-09 13:20:47] Формирование нейросетевой архитектуры для получения оценок по нейросетевым признакам (видео модальность) ...
 
-                --- Время выполнения: 1.986 сек. ---
+                --- Время выполнения: 0.055 сек. ---
 
-                <tf.keras.Model at 0x13d5295b0>
+                video_model_nn(
+                    (lstm1): LSTM(512, 1024, batch_first=True)
+                    (dropout1): Dropout(p=0.2, inplace=False)
+                    (fc): Linear(in_features=1024, out_features=5, bias=True)
+                )
 
             :bdg-danger:`Ошибка` :bdg-light:`-- 1 --`
 
@@ -483,11 +494,188 @@ class Video(VideoMessages):
                 :execution-count: 1
                 :linenos:
 
-                [2022-11-01 12:12:35] Формирование нейросетевой архитектуры для получения нейросетевых признаков (видео модальность) ...
+                [2024-10-09 13:17:09] Формирование нейросетевой архитектуры для получения нейросетевых признаков (видео модальность) ...
 
-                --- Время выполнения: 1.468 сек. ---
+                --- Время выполнения: 0.228 сек. ---
 
-                <tf.keras.Model at 0x14e138100>
+                ResNet(
+                    (conv_layer_s2_same): Conv2dSame(3, 64, kernel_size=(7, 7), stride=(2, 2), bias=False)
+                    (batch_norm1): BatchNorm2d(64, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                    (relu): ReLU()
+                    (max_pool): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+                    (layer1): Sequential(
+                        (0): Bottleneck(
+                        (conv1): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(64, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(64, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (i_downsample): Sequential(
+                            (0): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                            (1): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        )
+                        (relu): ReLU()
+                        )
+                        (1): Bottleneck(
+                        (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(64, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(64, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (relu): ReLU()
+                        )
+                        (2): Bottleneck(
+                        (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(64, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(64, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (relu): ReLU()
+                        )
+                    )
+                    (layer2): Sequential(
+                        (0): Bottleneck(
+                        (conv1): Conv2d(256, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+                        (batch_norm1): BatchNorm2d(128, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(128, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(512, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (i_downsample): Sequential(
+                            (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+                            (1): BatchNorm2d(512, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        )
+                        (relu): ReLU()
+                        )
+                        (1): Bottleneck(
+                        (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(128, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(128, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(512, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (relu): ReLU()
+                        )
+                        (2): Bottleneck(
+                        (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(128, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(128, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(512, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (relu): ReLU()
+                        )
+                        (3): Bottleneck(
+                        (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(128, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(128, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(512, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (relu): ReLU()
+                        )
+                    )
+                    (layer3): Sequential(
+                        (0): Bottleneck(
+                        (conv1): Conv2d(512, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+                        (batch_norm1): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(1024, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (i_downsample): Sequential(
+                            (0): Conv2d(512, 1024, kernel_size=(1, 1), stride=(2, 2), bias=False)
+                            (1): BatchNorm2d(1024, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        )
+                        (relu): ReLU()
+                        )
+                        (1): Bottleneck(
+                        (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(1024, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (relu): ReLU()
+                        )
+                        (2): Bottleneck(
+                        (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(1024, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (relu): ReLU()
+                        )
+                        (3): Bottleneck(
+                        (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(1024, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (relu): ReLU()
+                        )
+                        (4): Bottleneck(
+                        (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(1024, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (relu): ReLU()
+                        )
+                        (5): Bottleneck(
+                        (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(1024, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (relu): ReLU()
+                        )
+                    )
+                    (layer4): Sequential(
+                        (0): Bottleneck(
+                        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+                        (batch_norm1): BatchNorm2d(512, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(512, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(2048, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (i_downsample): Sequential(
+                            (0): Conv2d(1024, 2048, kernel_size=(1, 1), stride=(2, 2), bias=False)
+                            (1): BatchNorm2d(2048, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        )
+                        (relu): ReLU()
+                        )
+                        (1): Bottleneck(
+                        (conv1): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(512, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(512, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(2048, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (relu): ReLU()
+                        )
+                        (2): Bottleneck(
+                        (conv1): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(512, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(512, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(2048, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (relu): ReLU()
+                        )
+                    )
+                    (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+                    (fc1): Linear(in_features=2048, out_features=512, bias=True)
+                    (relu1): ReLU()
+                    (fc2): Linear(in_features=512, out_features=7, bias=True)
+                )
 
             :bdg-danger:`Ошибка` :bdg-light:`-- 1 --`
 
@@ -543,17 +731,30 @@ class Video(VideoMessages):
                 :execution-count: 1
                 :linenos:
 
-                [2022-10-19 15:45:35] Формирование нейросетевых архитектур моделей для получения результатов оценки персональных качеств ...
+                [2024-10-09 13:21:52] Формирование нейросетевых архитектур моделей для получения результатов оценки персональных качеств (видео модальность) ...
 
-                --- Время выполнения: 0.07 сек. ---
+                --- Время выполнения: 0.004 сек. ---
 
-                {
-                    'openness': <tf.keras.Model at 0x1481e03a0>,
-                    'conscientiousness': <tf.keras.Model at 0x147d13520>,
-                    'extraversion': <tf.keras.Model at 0x1481edfa0>,
-                    'agreeableness': <tf.keras.Model at 0x1481cfc40>,
-                    'non_neuroticism': <tf.keras.Model at 0x1481cffd0>
-                }
+                {'openness': video_model_b5(
+                    (fc): Linear(in_features=32, out_features=1, bias=True)
+                    (sigmoid): Sigmoid()
+                ),
+                'conscientiousness': video_model_b5(
+                    (fc): Linear(in_features=32, out_features=1, bias=True)
+                    (sigmoid): Sigmoid()
+                ),
+                'extraversion': video_model_b5(
+                    (fc): Linear(in_features=32, out_features=1, bias=True)
+                    (sigmoid): Sigmoid()
+                ),
+                'agreeableness': video_model_b5(
+                    (fc): Linear(in_features=32, out_features=1, bias=True)
+                    (sigmoid): Sigmoid()
+                ),
+                'non-neuroticism': video_model_b5(
+                    (fc): Linear(in_features=32, out_features=1, bias=True)
+                    (sigmoid): Sigmoid()
+                )}
 
             :bdg-danger:`Ошибка` :bdg-light:`-- 1 --`
 
@@ -631,7 +832,7 @@ class Video(VideoMessages):
                 video.chunk_size_ = 2000000
 
                 video._Video__load_model_weights(
-                    url = 'https://download.sberdisk.ru/download/file/412059444?token=JXerCfAjJZg6crD&filename=weights_2022-08-27_18-53-35.h5',
+                    url = 'https://drive.usercontent.google.com/download?id=1QF7ReDQXpCciF7aWjbEt4Q-x06hwDrMZ&export=download&authuser=2&confirm=t&uuid=c2fd5a21-7af7-4b7f-8419-d7d628847768&at=AO7h07eilj-Bm5RIk0HwQBEr37ri:1727175670133',
                     force_reload = True,
                     info_text = 'Загрузка весов нейросетевой модели',
                     out = True, runtime = True, run = True
@@ -641,11 +842,11 @@ class Video(VideoMessages):
                 :execution-count: 1
                 :linenos:
 
-                [2022-10-27 12:46:55] Загрузка весов нейросетевой модели
+                [2024-10-09 11:42:21] Загрузка весов нейросетевой модели
 
-                [2022-10-27 12:46:55] Загрузка файла "weights_2022-08-27_18-53-35.h5" (100.0%) ...
+                [2024-10-09 11:42:25] Загрузка файла "weights_2022-03-22_16-31-48.pth" 100.0% ...
 
-                --- Время выполнения: 0.626 сек. ---
+                --- Время выполнения: 4.117 сек. ---
 
                 True
 
@@ -664,7 +865,7 @@ class Video(VideoMessages):
                 video.chunk_size_ = 2000000
 
                 video._Video__load_model_weights(
-                    url = './models/weights_2022-08-27_18-53-35.h5',
+                    url = './models/weights_2022-03-22_16-31-48.pth',
                     force_reload = True,
                     info_text = 'Загрузка весов нейросетевой модели',
                     out = True, runtime = True, run = True
@@ -674,9 +875,9 @@ class Video(VideoMessages):
                 :execution-count: 2
                 :linenos:
 
-                [2022-10-27 12:47:52] Загрузка весов нейросетевой модели
+                [2024-10-09 11:46:15] Загрузка весов нейросетевой модели
 
-                --- Время выполнения: 0.002 сек. ---
+                --- Время выполнения: 0.005 сек. ---
 
                 True
 
@@ -695,7 +896,7 @@ class Video(VideoMessages):
                 video.chunk_size_ = 2000000
 
                 video._Video__load_model_weights(
-                    url = 'https://download.sberdisk.ru/download/file/412059444?token=JXerCfAjJZg6crD&filename=weights_2022-08-27_18-53-35.h5',
+                    url = 'https://drive.usercontent.google.com/download?id=1QF7ReDQXpCciF7aWjbEt4Q-x06hwDrMZ&export=download&authuser=2&confirm=t&uuid=c2fd5a21-7af7-4b7f-8419-d7d628847768&at=AO7h07eilj-Bm5RIk0HwQBEr37ri:1727175670133',
                     force_reload = True, info_text = '',
                     out = True, runtime = True, run = True
                 )
@@ -1147,8 +1348,7 @@ class Video(VideoMessages):
                 :execution-count: 3
                 :linenos:
 
-                [2022-10-20 22:33:31] Ой! Что-то пошло не так ... конкатенация оценок по экспертным и нейросетевым
-                признакам не произведена (видео модальность) ...
+                [2024-10-09 11:34:39] Что-то пошло не так ... конкатенация оценок по экспертным и нейросетевым признакам не произведена (видео модальность) ...
 
                 []
         """
@@ -1227,22 +1427,14 @@ class Video(VideoMessages):
                 :execution-count: 1
                 :linenos:
 
-                Model: "model"
-                _________________________________________________________________
-                Layer (type)                Output Shape              Param #
-                =================================================================
-                input_1 (InputLayer)        [(None, 32)]              0
-
-                dense_1 (Dense)             (None, 1)                 33
-
-                activ_1 (Activation)        (None, 1)                 0
-
-                =================================================================
-                Total params: 33
-                Trainable params: 33
-                Non-trainable params: 0
-                _________________________________________________________________
-                <tf.keras.Model at 0x13d442940>
+                video_model_b5(
+                    (fc): Linear(in_features=32, out_features=1, bias=True)
+                    (sigmoid): Sigmoid()
+                )
+                video_model_b5(
+                    (fc): Linear(in_features=32, out_features=1, bias=True)
+                    (sigmoid): Sigmoid()
+                )
 
             :bdg-danger:`Ошибка` :bdg-light:`-- 1 --`
 
@@ -1357,7 +1549,7 @@ class Video(VideoMessages):
                 video.path_to_save_ = './models'
                 video.chunk_size_ = 2000000
 
-                url = video.weights_for_big5_['video']['fe']['sberdisk']
+                url = video.weights_for_big5_['video']['fi']['fe']['googledisk']
 
                 res_load_video_model_weights_deep_fe = video.load_video_model_weights_deep_fe(
                     url = url,
@@ -1369,11 +1561,11 @@ class Video(VideoMessages):
                 :execution-count: 2
                 :linenos:
 
-                [2022-11-03 16:39:10] Загрузка весов нейросетевой модели для получения нейросетевых признаков (видео модальность) ...
+                [2024-10-09 12:19:15] Загрузка весов нейросетевой модели для получения нейросетевых признаков (видео модальность) ...
 
-                [2022-11-03 16:39:14] Загрузка файла "weights_2022-11-01_12-27-07.h5" (100.0%) ...
+                [2024-10-09 12:19:20] Загрузка файла "weights_2022-11-01_12-27-07.pth" 100.0% ...
 
-                --- Время выполнения: 4.874 сек. ---
+                --- Время выполнения: 5.445 сек. ---
 
             .. code-cell:: python
                 :execution-count: 3
@@ -1392,17 +1584,17 @@ class Video(VideoMessages):
                 :execution-count: 3
                 :linenos:
 
-                [2022-11-03 16:56:52] Извлечение признаков (экспертных и нейросетевых) из визуального сигнала ...
+                [2024-10-09 12:20:39] Извлечение признаков (экспертных и нейросетевых) из визуального сигнала ...
 
-                [2022-11-03 16:56:58] Статистика извлеченных признаков из визуального сигнала:
+                [2024-10-09 12:20:46] Статистика извлеченных признаков из визуального сигнала:
                     Общее количество сегментов с:
                         1. экспертными признаками: 12
                         2. нейросетевыми признаками: 12
-                    Размерность матрицы экспертных признаков одного сегмента: 10 ✕ 115
-                    Размерность тензора с нейросетевыми признаками одного сегмента: 10 ✕ 512
+                    Размерность матрицы экспертных признаков одного сегмента: 10 ✕ 109
+                    Размерность матрицы с нейросетевыми признаками одного сегмента: 10 ✕ 512
                     Понижение кадровой частоты: с 30 до 5
 
-                --- Время выполнения: 6.109 сек. ---
+                --- Время выполнения: 7.123 сек. ---
 
             :bdg-danger:`Ошибка` :bdg-light:`-- 1 --`
 
@@ -1427,11 +1619,11 @@ class Video(VideoMessages):
                 :execution-count: 4
                 :linenos:
 
-                [2022-11-03 16:59:45] Извлечение признаков (экспертных и нейросетевых) из визуального сигнала ...
+                [2024-10-09 12:21:55] Извлечение признаков (экспертных и нейросетевых) из визуального сигнала ...
 
-                [2022-11-03 16:59:46] Ой! Что-то пошло не так ... нейросетевая архитектура модели для получения нейросетевых признаков не сформирована (видео модальность) ...
+                [2024-10-09 12:21:57] Что-то пошло не так ... нейросетевая архитектура модели для получения нейросетевых признаков не сформирована (видео модальность) ...
 
-                --- Время выполнения: 1.358 сек. ---
+                --- Время выполнения: 1.202 сек. ---
         """
 
         try:
@@ -1765,9 +1957,9 @@ class Video(VideoMessages):
                             if num_images > batch_size_limit:
                                 all_extract_deep_fe = []
                                 all_pred_emo = []
-                                
+
                                 for i in range(0, num_images, batch_size_limit):
-                                    bndbox_subbatch = bndbox_faces[i:i + batch_size_limit].to(self._device)
+                                    bndbox_subbatch = bndbox_faces[i : i + batch_size_limit].to(self._device)
                                     pred_emo_sub, extract_deep_fe_sub = self._video_model_deep_fe(bndbox_subbatch)
                                     extract_deep_fe_sub = extract_deep_fe_sub.detach().cpu()
                                     pred_emo_sub = pred_emo_sub.detach().cpu()
@@ -1834,7 +2026,7 @@ class Video(VideoMessages):
     # ------------------------------------------------------------------------------------------------------------------
 
     def load_video_model_hc(
-        self, lang: str, show_summary: bool = False, out: bool = True, runtime: bool = True, run: bool = True
+        self, lang: str = "ru", show_summary: bool = False, out: bool = True, runtime: bool = True, run: bool = True
     ) -> bool:
         """Формирование нейросетевой архитектуры модели для получения оценок по экспертным признакам
 
@@ -1862,6 +2054,7 @@ class Video(VideoMessages):
 
                 video = Video()
                 video.load_video_model_hc(
+                    lang = 'en',
                     show_summary = False, out = True,
                     runtime = True, run = True
                 )
@@ -1887,6 +2080,7 @@ class Video(VideoMessages):
 
                 video = Video()
                 video.load_video_model_hc(
+                    lang = 'en',
                     show_summary = 1, out = True,
                     runtime = True, run = True
                 )
@@ -1976,463 +2170,187 @@ class Video(VideoMessages):
                 :execution-count: 1
                 :linenos:
 
-                [2022-11-01 12:18:14] Формирование нейросетевой архитектуры для получения нейросетевых признаков (видео модальность) ...
-
-                Model: "model_1"
-                __________________________________________________________________________________________________
-                Layer (type)                   Output Shape         Param #     Connected to
-                ==================================================================================================
-                input_2 (InputLayer)           [(None, 224, 224, 3  0           []
-                                                )]
-
-                conv1/7x7_s2 (Conv2D)          (None, 112, 112, 64  9408        ['input_2[0][0]']
-                                                )
-
-                conv1/7x7_s2/bn (BatchNormaliz  (None, 112, 112, 64  256        ['conv1/7x7_s2[0][0]']
-                ation)                         )
-
-                activation_49 (Activation)     (None, 112, 112, 64  0           ['conv1/7x7_s2/bn[0][0]']
-                                                )
-
-                max_pooling2d_1 (MaxPooling2D)  (None, 55, 55, 64)  0           ['activation_49[0][0]']
-
-                conv2_1_1x1_reduce (Conv2D)    (None, 55, 55, 64)   4096        ['max_pooling2d_1[0][0]']
-
-                conv2_1_1x1_reduce/bn (BatchNo  (None, 55, 55, 64)  256         ['conv2_1_1x1_reduce[0][0]']
-                rmalization)
-
-                activation_50 (Activation)     (None, 55, 55, 64)   0           ['conv2_1_1x1_reduce/bn[0][0]']
-
-                conv2_1_3x3 (Conv2D)           (None, 55, 55, 64)   36864       ['activation_50[0][0]']
-
-                conv2_1_3x3/bn (BatchNormaliza  (None, 55, 55, 64)  256         ['conv2_1_3x3[0][0]']
-                tion)
-
-                activation_51 (Activation)     (None, 55, 55, 64)   0           ['conv2_1_3x3/bn[0][0]']
-
-                conv2_1_1x1_increase (Conv2D)  (None, 55, 55, 256)  16384       ['activation_51[0][0]']
-
-                conv2_1_1x1_proj (Conv2D)      (None, 55, 55, 256)  16384       ['max_pooling2d_1[0][0]']
-
-                conv2_1_1x1_increase/bn (Batch  (None, 55, 55, 256)  1024       ['conv2_1_1x1_increase[0][0]']
-                Normalization)
-
-                conv2_1_1x1_proj/bn (BatchNorm  (None, 55, 55, 256)  1024       ['conv2_1_1x1_proj[0][0]']
-                alization)
-
-                add_16 (Add)                   (None, 55, 55, 256)  0           ['conv2_1_1x1_increase/bn[0][0]',
-                                                                                'conv2_1_1x1_proj/bn[0][0]']
-
-                activation_52 (Activation)     (None, 55, 55, 256)  0           ['add_16[0][0]']
-
-                conv2_2_1x1_reduce (Conv2D)    (None, 55, 55, 64)   16384       ['activation_52[0][0]']
-
-                conv2_2_1x1_reduce/bn (BatchNo  (None, 55, 55, 64)  256         ['conv2_2_1x1_reduce[0][0]']
-                rmalization)
-
-                activation_53 (Activation)     (None, 55, 55, 64)   0           ['conv2_2_1x1_reduce/bn[0][0]']
-
-                conv2_2_3x3 (Conv2D)           (None, 55, 55, 64)   36864       ['activation_53[0][0]']
-
-                conv2_2_3x3/bn (BatchNormaliza  (None, 55, 55, 64)  256         ['conv2_2_3x3[0][0]']
-                tion)
-
-                activation_54 (Activation)     (None, 55, 55, 64)   0           ['conv2_2_3x3/bn[0][0]']
-
-                conv2_2_1x1_increase (Conv2D)  (None, 55, 55, 256)  16384       ['activation_54[0][0]']
-
-                conv2_2_1x1_increase/bn (Batch  (None, 55, 55, 256)  1024       ['conv2_2_1x1_increase[0][0]']
-                Normalization)
-
-                add_17 (Add)                   (None, 55, 55, 256)  0           ['conv2_2_1x1_increase/bn[0][0]',
-                                                                                'activation_52[0][0]']
-
-                activation_55 (Activation)     (None, 55, 55, 256)  0           ['add_17[0][0]']
-
-                conv2_3_1x1_reduce (Conv2D)    (None, 55, 55, 64)   16384       ['activation_55[0][0]']
-
-                conv2_3_1x1_reduce/bn (BatchNo  (None, 55, 55, 64)  256         ['conv2_3_1x1_reduce[0][0]']
-                rmalization)
-
-                activation_56 (Activation)     (None, 55, 55, 64)   0           ['conv2_3_1x1_reduce/bn[0][0]']
-
-                conv2_3_3x3 (Conv2D)           (None, 55, 55, 64)   36864       ['activation_56[0][0]']
-
-                conv2_3_3x3/bn (BatchNormaliza  (None, 55, 55, 64)  256         ['conv2_3_3x3[0][0]']
-                tion)
-
-                activation_57 (Activation)     (None, 55, 55, 64)   0           ['conv2_3_3x3/bn[0][0]']
-
-                conv2_3_1x1_increase (Conv2D)  (None, 55, 55, 256)  16384       ['activation_57[0][0]']
-
-                conv2_3_1x1_increase/bn (Batch  (None, 55, 55, 256)  1024       ['conv2_3_1x1_increase[0][0]']
-                Normalization)
-
-                add_18 (Add)                   (None, 55, 55, 256)  0           ['conv2_3_1x1_increase/bn[0][0]',
-                                                                                'activation_55[0][0]']
-
-                activation_58 (Activation)     (None, 55, 55, 256)  0           ['add_18[0][0]']
-
-                conv3_1_1x1_reduce (Conv2D)    (None, 28, 28, 128)  32768       ['activation_58[0][0]']
-
-                conv3_1_1x1_reduce/bn (BatchNo  (None, 28, 28, 128)  512        ['conv3_1_1x1_reduce[0][0]']
-                rmalization)
-
-                activation_59 (Activation)     (None, 28, 28, 128)  0           ['conv3_1_1x1_reduce/bn[0][0]']
-
-                conv3_1_3x3 (Conv2D)           (None, 28, 28, 128)  147456      ['activation_59[0][0]']
-
-                conv3_1_3x3/bn (BatchNormaliza  (None, 28, 28, 128)  512        ['conv3_1_3x3[0][0]']
-                tion)
-
-                activation_60 (Activation)     (None, 28, 28, 128)  0           ['conv3_1_3x3/bn[0][0]']
-
-                conv3_1_1x1_increase (Conv2D)  (None, 28, 28, 512)  65536       ['activation_60[0][0]']
-
-                conv3_1_1x1_proj (Conv2D)      (None, 28, 28, 512)  131072      ['activation_58[0][0]']
-
-                conv3_1_1x1_increase/bn (Batch  (None, 28, 28, 512)  2048       ['conv3_1_1x1_increase[0][0]']
-                Normalization)
-
-                conv3_1_1x1_proj/bn (BatchNorm  (None, 28, 28, 512)  2048       ['conv3_1_1x1_proj[0][0]']
-                alization)
-
-                add_19 (Add)                   (None, 28, 28, 512)  0           ['conv3_1_1x1_increase/bn[0][0]',
-                                                                                'conv3_1_1x1_proj/bn[0][0]']
-
-                activation_61 (Activation)     (None, 28, 28, 512)  0           ['add_19[0][0]']
-
-                conv3_2_1x1_reduce (Conv2D)    (None, 28, 28, 128)  65536       ['activation_61[0][0]']
-
-                conv3_2_1x1_reduce/bn (BatchNo  (None, 28, 28, 128)  512        ['conv3_2_1x1_reduce[0][0]']
-                rmalization)
-
-                activation_62 (Activation)     (None, 28, 28, 128)  0           ['conv3_2_1x1_reduce/bn[0][0]']
-
-                conv3_2_3x3 (Conv2D)           (None, 28, 28, 128)  147456      ['activation_62[0][0]']
-
-                conv3_2_3x3/bn (BatchNormaliza  (None, 28, 28, 128)  512        ['conv3_2_3x3[0][0]']
-                tion)
-
-                activation_63 (Activation)     (None, 28, 28, 128)  0           ['conv3_2_3x3/bn[0][0]']
-
-                conv3_2_1x1_increase (Conv2D)  (None, 28, 28, 512)  65536       ['activation_63[0][0]']
-
-                conv3_2_1x1_increase/bn (Batch  (None, 28, 28, 512)  2048       ['conv3_2_1x1_increase[0][0]']
-                Normalization)
-
-                add_20 (Add)                   (None, 28, 28, 512)  0           ['conv3_2_1x1_increase/bn[0][0]',
-                                                                                'activation_61[0][0]']
-
-                activation_64 (Activation)     (None, 28, 28, 512)  0           ['add_20[0][0]']
-
-                conv3_3_1x1_reduce (Conv2D)    (None, 28, 28, 128)  65536       ['activation_64[0][0]']
-
-                conv3_3_1x1_reduce/bn (BatchNo  (None, 28, 28, 128)  512        ['conv3_3_1x1_reduce[0][0]']
-                rmalization)
-
-                activation_65 (Activation)     (None, 28, 28, 128)  0           ['conv3_3_1x1_reduce/bn[0][0]']
-
-                conv3_3_3x3 (Conv2D)           (None, 28, 28, 128)  147456      ['activation_65[0][0]']
-
-                conv3_3_3x3/bn (BatchNormaliza  (None, 28, 28, 128)  512        ['conv3_3_3x3[0][0]']
-                tion)
-
-                activation_66 (Activation)     (None, 28, 28, 128)  0           ['conv3_3_3x3/bn[0][0]']
-
-                conv3_3_1x1_increase (Conv2D)  (None, 28, 28, 512)  65536       ['activation_66[0][0]']
-
-                conv3_3_1x1_increase/bn (Batch  (None, 28, 28, 512)  2048       ['conv3_3_1x1_increase[0][0]']
-                Normalization)
-
-                add_21 (Add)                   (None, 28, 28, 512)  0           ['conv3_3_1x1_increase/bn[0][0]',
-                                                                                'activation_64[0][0]']
-
-                activation_67 (Activation)     (None, 28, 28, 512)  0           ['add_21[0][0]']
-
-                conv3_4_1x1_reduce (Conv2D)    (None, 28, 28, 128)  65536       ['activation_67[0][0]']
-
-            conv3_4_1x1_reduce/bn (BatchNo  (None, 28, 28, 128)  512        ['conv3_4_1x1_reduce[0][0]']
-                rmalization)
-
-                activation_68 (Activation)     (None, 28, 28, 128)  0           ['conv3_4_1x1_reduce/bn[0][0]']
-
-                conv3_4_3x3 (Conv2D)           (None, 28, 28, 128)  147456      ['activation_68[0][0]']
-
-                conv3_4_3x3/bn (BatchNormaliza  (None, 28, 28, 128)  512        ['conv3_4_3x3[0][0]']
-                tion)
-
-                activation_69 (Activation)     (None, 28, 28, 128)  0           ['conv3_4_3x3/bn[0][0]']
-
-                conv3_4_1x1_increase (Conv2D)  (None, 28, 28, 512)  65536       ['activation_69[0][0]']
-
-                conv3_4_1x1_increase/bn (Batch  (None, 28, 28, 512)  2048       ['conv3_4_1x1_increase[0][0]']
-                Normalization)
-
-                add_22 (Add)                   (None, 28, 28, 512)  0           ['conv3_4_1x1_increase/bn[0][0]',
-                                                                                'activation_67[0][0]']
-
-                activation_70 (Activation)     (None, 28, 28, 512)  0           ['add_22[0][0]']
-
-                conv4_1_1x1_reduce (Conv2D)    (None, 14, 14, 256)  131072      ['activation_70[0][0]']
-
-                conv4_1_1x1_reduce/bn (BatchNo  (None, 14, 14, 256)  1024       ['conv4_1_1x1_reduce[0][0]']
-                rmalization)
-
-                activation_71 (Activation)     (None, 14, 14, 256)  0           ['conv4_1_1x1_reduce/bn[0][0]']
-
-                conv4_1_3x3 (Conv2D)           (None, 14, 14, 256)  589824      ['activation_71[0][0]']
-
-                conv4_1_3x3/bn (BatchNormaliza  (None, 14, 14, 256)  1024       ['conv4_1_3x3[0][0]']
-                tion)
-
-                activation_72 (Activation)     (None, 14, 14, 256)  0           ['conv4_1_3x3/bn[0][0]']
-
-                conv4_1_1x1_increase (Conv2D)  (None, 14, 14, 1024  262144      ['activation_72[0][0]']
-                                                )
-
-                conv4_1_1x1_proj (Conv2D)      (None, 14, 14, 1024  524288      ['activation_70[0][0]']
-                                                )
-
-                conv4_1_1x1_increase/bn (Batch  (None, 14, 14, 1024  4096       ['conv4_1_1x1_increase[0][0]']
-                Normalization)                 )
-
-                conv4_1_1x1_proj/bn (BatchNorm  (None, 14, 14, 1024  4096       ['conv4_1_1x1_proj[0][0]']
-                alization)                     )
-
-                add_23 (Add)                   (None, 14, 14, 1024  0           ['conv4_1_1x1_increase/bn[0][0]',
-                                                )                                 'conv4_1_1x1_proj/bn[0][0]']
-
-                activation_73 (Activation)     (None, 14, 14, 1024  0           ['add_23[0][0]']
-                                                )
-
-                conv4_2_1x1_reduce (Conv2D)    (None, 14, 14, 256)  262144      ['activation_73[0][0]']
-
-                conv4_2_1x1_reduce/bn (BatchNo  (None, 14, 14, 256)  1024       ['conv4_2_1x1_reduce[0][0]']
-                rmalization)
-
-                activation_74 (Activation)     (None, 14, 14, 256)  0           ['conv4_2_1x1_reduce/bn[0][0]']
-
-                conv4_2_3x3 (Conv2D)           (None, 14, 14, 256)  589824      ['activation_74[0][0]']
-
-                conv4_2_3x3/bn (BatchNormaliza  (None, 14, 14, 256)  1024       ['conv4_2_3x3[0][0]']
-                tion)
-
-                activation_75 (Activation)     (None, 14, 14, 256)  0           ['conv4_2_3x3/bn[0][0]']
-
-                conv4_2_1x1_increase (Conv2D)  (None, 14, 14, 1024  262144      ['activation_75[0][0]']
-                                                )
-
-                conv4_2_1x1_increase/bn (Batch  (None, 14, 14, 1024  4096       ['conv4_2_1x1_increase[0][0]']
-                Normalization)                 )
-
-                add_24 (Add)                   (None, 14, 14, 1024  0           ['conv4_2_1x1_increase/bn[0][0]',
-                                                )                                 'activation_73[0][0]']
-
-                activation_76 (Activation)     (None, 14, 14, 1024  0           ['add_24[0][0]']
-                                                )
-
-                conv4_3_1x1_reduce (Conv2D)    (None, 14, 14, 256)  262144      ['activation_76[0][0]']
-
-                conv4_3_1x1_reduce/bn (BatchNo  (None, 14, 14, 256)  1024       ['conv4_3_1x1_reduce[0][0]']
-                rmalization)
-
-                activation_77 (Activation)     (None, 14, 14, 256)  0           ['conv4_3_1x1_reduce/bn[0][0]']
-
-                conv4_3_3x3 (Conv2D)           (None, 14, 14, 256)  589824      ['activation_77[0][0]']
-
-                conv4_3_3x3/bn (BatchNormaliza  (None, 14, 14, 256)  1024       ['conv4_3_3x3[0][0]']
-                tion)
-
-                activation_78 (Activation)     (None, 14, 14, 256)  0           ['conv4_3_3x3/bn[0][0]']
-
-                conv4_3_1x1_increase (Conv2D)  (None, 14, 14, 1024  262144      ['activation_78[0][0]']
-                                                )
-
-                conv4_3_1x1_increase/bn (Batch  (None, 14, 14, 1024  4096       ['conv4_3_1x1_increase[0][0]']
-                Normalization)                 )
-
-                add_25 (Add)                   (None, 14, 14, 1024  0           ['conv4_3_1x1_increase/bn[0][0]',
-                                                )                                 'activation_76[0][0]']
-
-                activation_79 (Activation)     (None, 14, 14, 1024  0           ['add_25[0][0]']
-                                                )
-
-                conv4_4_1x1_reduce (Conv2D)    (None, 14, 14, 256)  262144      ['activation_79[0][0]']
-
-                conv4_4_1x1_reduce/bn (BatchNo  (None, 14, 14, 256)  1024       ['conv4_4_1x1_reduce[0][0]']
-                rmalization)
-
-                activation_80 (Activation)     (None, 14, 14, 256)  0           ['conv4_4_1x1_reduce/bn[0][0]']
-
-                conv4_4_3x3 (Conv2D)           (None, 14, 14, 256)  589824      ['activation_80[0][0]']
-
-                conv4_4_3x3/bn (BatchNormaliza  (None, 14, 14, 256)  1024       ['conv4_4_3x3[0][0]']
-                tion)
-
-                activation_81 (Activation)     (None, 14, 14, 256)  0           ['conv4_4_3x3/bn[0][0]']
-
-                conv4_4_1x1_increase (Conv2D)  (None, 14, 14, 1024  262144      ['activation_81[0][0]']
-                                                )
-
-                conv4_4_1x1_increase/bn (Batch  (None, 14, 14, 1024  4096       ['conv4_4_1x1_increase[0][0]']
-                Normalization)                 )
-
-                add_26 (Add)                   (None, 14, 14, 1024  0           ['conv4_4_1x1_increase/bn[0][0]',
-                                                )                                 'activation_79[0][0]']
-
-                activation_82 (Activation)     (None, 14, 14, 1024  0           ['add_26[0][0]']
-                                                )
-
-                conv4_5_1x1_reduce (Conv2D)    (None, 14, 14, 256)  262144      ['activation_82[0][0]']
-
-                conv4_5_1x1_reduce/bn (BatchNo  (None, 14, 14, 256)  1024       ['conv4_5_1x1_reduce[0][0]']
-                rmalization)
-
-                activation_83 (Activation)     (None, 14, 14, 256)  0           ['conv4_5_1x1_reduce/bn[0][0]']
-
-                conv4_5_3x3 (Conv2D)           (None, 14, 14, 256)  589824      ['activation_83[0][0]']
-
-                conv4_5_3x3/bn (BatchNormaliza  (None, 14, 14, 256)  1024       ['conv4_5_3x3[0][0]']
-                tion)
-
-                activation_84 (Activation)     (None, 14, 14, 256)  0           ['conv4_5_3x3/bn[0][0]']
-
-                conv4_5_1x1_increase (Conv2D)  (None, 14, 14, 1024  262144      ['activation_84[0][0]']
-                                                )
-
-                conv4_5_1x1_increase/bn (Batch  (None, 14, 14, 1024  4096       ['conv4_5_1x1_increase[0][0]']
-                Normalization)                 )
-
-                add_27 (Add)                   (None, 14, 14, 1024  0           ['conv4_5_1x1_increase/bn[0][0]',
-                                                )                                 'activation_82[0][0]']
-
-                activation_85 (Activation)     (None, 14, 14, 1024  0           ['add_27[0][0]']
-                                                )
-
-                conv4_6_1x1_reduce (Conv2D)    (None, 14, 14, 256)  262144      ['activation_85[0][0]']
-
-                conv4_6_1x1_reduce/bn (BatchNo  (None, 14, 14, 256)  1024       ['conv4_6_1x1_reduce[0][0]']
-                rmalization)
-
-                activation_86 (Activation)     (None, 14, 14, 256)  0           ['conv4_6_1x1_reduce/bn[0][0]']
-
-                conv4_6_3x3 (Conv2D)           (None, 14, 14, 256)  589824      ['activation_86[0][0]']
-
-                conv4_6_3x3/bn (BatchNormaliza  (None, 14, 14, 256)  1024       ['conv4_6_3x3[0][0]']
-                tion)
-
-                activation_87 (Activation)     (None, 14, 14, 256)  0           ['conv4_6_3x3/bn[0][0]']
-
-                conv4_6_1x1_increase (Conv2D)  (None, 14, 14, 1024  262144      ['activation_87[0][0]']
-                                                )
-
-                conv4_6_1x1_increase/bn (Batch  (None, 14, 14, 1024  4096       ['conv4_6_1x1_increase[0][0]']
-                Normalization)                 )
-
-                add_28 (Add)                   (None, 14, 14, 1024  0           ['conv4_6_1x1_increase/bn[0][0]',
-                                                )                                 'activation_85[0][0]']
-
-                activation_88 (Activation)     (None, 14, 14, 1024  0           ['add_28[0][0]']
-                                                )
-
-                conv5_1_1x1_reduce (Conv2D)    (None, 7, 7, 512)    524288      ['activation_88[0][0]']
-
-                conv5_1_1x1_reduce/bn (BatchNo  (None, 7, 7, 512)   2048        ['conv5_1_1x1_reduce[0][0]']
-                rmalization)
-
-                activation_89 (Activation)     (None, 7, 7, 512)    0           ['conv5_1_1x1_reduce/bn[0][0]']
-
-                conv5_1_3x3 (Conv2D)           (None, 7, 7, 512)    2359296     ['activation_89[0][0]']
-
-                conv5_1_3x3/bn (BatchNormaliza  (None, 7, 7, 512)   2048        ['conv5_1_3x3[0][0]']
-                tion)
-
-                activation_90 (Activation)     (None, 7, 7, 512)    0           ['conv5_1_3x3/bn[0][0]']
-
-                conv5_1_1x1_increase (Conv2D)  (None, 7, 7, 2048)   1048576     ['activation_90[0][0]']
-
-                conv5_1_1x1_proj (Conv2D)      (None, 7, 7, 2048)   2097152     ['activation_88[0][0]']
-
-                conv5_1_1x1_increase/bn (Batch  (None, 7, 7, 2048)  8192        ['conv5_1_1x1_increase[0][0]']
-                Normalization)
-
-                conv5_1_1x1_proj/bn (BatchNorm  (None, 7, 7, 2048)  8192        ['conv5_1_1x1_proj[0][0]']
-                alization)
-
-                add_29 (Add)                   (None, 7, 7, 2048)   0           ['conv5_1_1x1_increase/bn[0][0]',
-                                                                                'conv5_1_1x1_proj/bn[0][0]']
-
-                activation_91 (Activation)     (None, 7, 7, 2048)   0           ['add_29[0][0]']
-
-                conv5_2_1x1_reduce (Conv2D)    (None, 7, 7, 512)    1048576     ['activation_91[0][0]']
-
-                conv5_2_1x1_reduce/bn (BatchNo  (None, 7, 7, 512)   2048        ['conv5_2_1x1_reduce[0][0]']
-                rmalization)
-
-                activation_92 (Activation)     (None, 7, 7, 512)    0           ['conv5_2_1x1_reduce/bn[0][0]']
-
-                conv5_2_3x3 (Conv2D)           (None, 7, 7, 512)    2359296     ['activation_92[0][0]']
-
-                conv5_2_3x3/bn (BatchNormaliza  (None, 7, 7, 512)   2048        ['conv5_2_3x3[0][0]']
-                tion)
-
-                activation_93 (Activation)     (None, 7, 7, 512)    0           ['conv5_2_3x3/bn[0][0]']
-
-                conv5_2_1x1_increase (Conv2D)  (None, 7, 7, 2048)   1048576     ['activation_93[0][0]']
-
-                conv5_2_1x1_increase/bn (Batch  (None, 7, 7, 2048)  8192        ['conv5_2_1x1_increase[0][0]']
-                Normalization)
-
-                add_30 (Add)                   (None, 7, 7, 2048)   0           ['conv5_2_1x1_increase/bn[0][0]',
-                                                                                'activation_91[0][0]']
-
-                activation_94 (Activation)     (None, 7, 7, 2048)   0           ['add_30[0][0]']
-
-                conv5_3_1x1_reduce (Conv2D)    (None, 7, 7, 512)    1048576     ['activation_94[0][0]']
-
-                conv5_3_1x1_reduce/bn (BatchNo  (None, 7, 7, 512)   2048        ['conv5_3_1x1_reduce[0][0]']
-                rmalization)
-
-                activation_95 (Activation)     (None, 7, 7, 512)    0           ['conv5_3_1x1_reduce/bn[0][0]']
-
-                conv5_3_3x3 (Conv2D)           (None, 7, 7, 512)    2359296     ['activation_95[0][0]']
-
-                conv5_3_3x3/bn (BatchNormaliza  (None, 7, 7, 512)   2048        ['conv5_3_3x3[0][0]']
-                tion)
-
-                activation_96 (Activation)     (None, 7, 7, 512)    0           ['conv5_3_3x3/bn[0][0]']
-
-                conv5_3_1x1_increase (Conv2D)  (None, 7, 7, 2048)   1048576     ['activation_96[0][0]']
-
-                conv5_3_1x1_increase/bn (Batch  (None, 7, 7, 2048)  8192        ['conv5_3_1x1_increase[0][0]']
-                Normalization)
-
-                add_31 (Add)                   (None, 7, 7, 2048)   0           ['conv5_3_1x1_increase/bn[0][0]',
-                                                                                'activation_94[0][0]']
-
-                activation_97 (Activation)     (None, 7, 7, 2048)   0           ['add_31[0][0]']
-
-                avg_pool (AveragePooling2D)    (None, 1, 1, 2048)   0           ['activation_97[0][0]']
-
-                global_average_pooling2d_1 (Gl  (None, 2048)        0           ['avg_pool[0][0]']
-                obalAveragePooling2D)
-
-                gaussian_noise_1 (GaussianNois  (None, 2048)        0           ['global_average_pooling2d_1[0][0
-                e)                                                              ]']
-
-                dense_x (Dense)                (None, 512)          1049088     ['gaussian_noise_1[0][0]']
-
-                dropout_1 (Dropout)            (None, 512)          0           ['dense_x[0][0]']
-
-                dense_1 (Dense)                (None, 7)            3591        ['dropout_1[0][0]']
-
-                ==================================================================================================
-                Total params: 24,613,831
-                Trainable params: 24,560,711
-                Non-trainable params: 53,120
-                __________________________________________________________________________________________________
-                --- Время выполнения: 2.222 сек. ---
+                [2024-10-09 12:22:54] Формирование нейросетевой архитектуры для получения нейросетевых признаков (видео модальность) ...
+
+                ResNet(
+                    (conv_layer_s2_same): Conv2dSame(3, 64, kernel_size=(7, 7), stride=(2, 2), bias=False)
+                    (batch_norm1): BatchNorm2d(64, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                    (relu): ReLU()
+                    (max_pool): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+                    (layer1): Sequential(
+                        (0): Bottleneck(
+                        (conv1): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(64, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(64, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (i_downsample): Sequential(
+                            (0): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                            (1): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        )
+                        (relu): ReLU()
+                        )
+                        (1): Bottleneck(
+                        (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(64, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(64, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (relu): ReLU()
+                        )
+                        (2): Bottleneck(
+                        (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(64, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(64, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (relu): ReLU()
+                        )
+                    )
+                    (layer2): Sequential(
+                        (0): Bottleneck(
+                        (conv1): Conv2d(256, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+                        (batch_norm1): BatchNorm2d(128, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(128, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(512, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (i_downsample): Sequential(
+                            (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+                            (1): BatchNorm2d(512, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        )
+                        (relu): ReLU()
+                        )
+                        (1): Bottleneck(
+                        (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(128, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(128, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(512, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (relu): ReLU()
+                        )
+                        (2): Bottleneck(
+                        (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(128, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(128, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(512, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (relu): ReLU()
+                        )
+                        (3): Bottleneck(
+                        (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(128, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(128, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(512, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (relu): ReLU()
+                        )
+                    )
+                    (layer3): Sequential(
+                        (0): Bottleneck(
+                        (conv1): Conv2d(512, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+                        (batch_norm1): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(1024, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (i_downsample): Sequential(
+                            (0): Conv2d(512, 1024, kernel_size=(1, 1), stride=(2, 2), bias=False)
+                            (1): BatchNorm2d(1024, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        )
+                        (relu): ReLU()
+                        )
+                        (1): Bottleneck(
+                        (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(1024, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (relu): ReLU()
+                        )
+                        (2): Bottleneck(
+                        (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(1024, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (relu): ReLU()
+                        )
+                        (3): Bottleneck(
+                        (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(1024, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (relu): ReLU()
+                        )
+                        (4): Bottleneck(
+                        (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(1024, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (relu): ReLU()
+                        )
+                        (5): Bottleneck(
+                        (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(256, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(1024, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (relu): ReLU()
+                        )
+                    )
+                    (layer4): Sequential(
+                        (0): Bottleneck(
+                        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+                        (batch_norm1): BatchNorm2d(512, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(512, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(2048, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (i_downsample): Sequential(
+                            (0): Conv2d(1024, 2048, kernel_size=(1, 1), stride=(2, 2), bias=False)
+                            (1): BatchNorm2d(2048, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        )
+                        (relu): ReLU()
+                        )
+                        (1): Bottleneck(
+                        (conv1): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(512, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(512, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(2048, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (relu): ReLU()
+                        )
+                        (2): Bottleneck(
+                        (conv1): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm1): BatchNorm2d(512, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=same, bias=False)
+                        (batch_norm2): BatchNorm2d(512, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                        (batch_norm3): BatchNorm2d(2048, eps=0.001, momentum=0.99, affine=True, track_running_stats=True)
+                        (relu): ReLU()
+                        )
+                    )
+                    (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+                    (fc1): Linear(in_features=2048, out_features=512, bias=True)
+                    (relu1): ReLU()
+                    (fc2): Linear(in_features=512, out_features=7, bias=True)
+                )
+                --- Время выполнения: 0.222 сек. ---
 
                 True
 
@@ -2534,28 +2452,14 @@ class Video(VideoMessages):
                 :execution-count: 1
                 :linenos:
 
-                [2022-10-27 14:46:11] Формирование нейросетевой архитектуры для получения оценок по нейросетевым признакам (видео модальность) ...
+                [2024-10-09 12:49:36] Формирование нейросетевой архитектуры для получения оценок по нейросетевым признакам (видео модальность) ...
 
-                Model: "model"
-                _________________________________________________________________
-                Layer (type)                Output Shape              Param #
-                =================================================================
-                input_1 (InputLayer)        [(None, 10, 512)]         0
-
-                lstm (LSTM)                 (None, 1024)              6295552
-
-                dropout (Dropout)           (None, 1024)              0
-
-                dense (Dense)               (None, 5)                 5125
-
-                activation (Activation)     (None, 5)                 0
-
-                =================================================================
-                Total params: 6,300,677
-                Trainable params: 6,300,677
-                Non-trainable params: 0
-                _________________________________________________________________
-                --- Время выполнения: 2.018 сек. ---
+                video_model_nn(
+                    (lstm1): LSTM(512, 1024, batch_first=True)
+                    (dropout1): Dropout(p=0.2, inplace=False)
+                    (fc): Linear(in_features=1024, out_features=5, bias=True)
+                )
+                --- Время выполнения: 0.052 сек. ---
 
                 True
 
@@ -2657,24 +2561,13 @@ class Video(VideoMessages):
                 :execution-count: 1
                 :linenos:
 
-                [2022-11-04 15:29:26] Формирование нейросетевых архитектур моделей для получения результатов оценки персональных качеств (видео модальность) ...
+                [2024-10-09 13:12:19] Формирование нейросетевых архитектур моделей для получения результатов оценки персональных качеств (видео модальность) ...
 
-                Model: "model_4"
-                _________________________________________________________________
-                Layer (type)                Output Shape              Param #
-                =================================================================
-                input_1 (InputLayer)        [(None, 32)]              0
-
-                dense_1 (Dense)             (None, 1)                 33
-
-                activ_1 (Activation)        (None, 1)                 0
-
-                =================================================================
-                Total params: 33
-                Trainable params: 33
-                Non-trainable params: 0
-                _________________________________________________________________
-                --- Время выполнения: 0.116 сек. ---
+                video_model_b5(
+                (fc): Linear(in_features=32, out_features=1, bias=True)
+                (sigmoid): Sigmoid()
+                )
+                --- Время выполнения: 0.009 сек. ---
 
                 True
 
@@ -2771,6 +2664,7 @@ class Video(VideoMessages):
                 video = Video()
 
                 video.load_video_model_hc(
+                    lang = 'en',
                     show_summary = False, out = True,
                     runtime = True, run = True
                 )
@@ -2793,7 +2687,7 @@ class Video(VideoMessages):
                 video.path_to_save_ = './models'
                 video.chunk_size_ = 2000000
 
-                url = video.weights_for_big5_['video']['hc']['sberdisk']
+                url = video.weights_for_big5_['video']['fi']['hc']['googledisk']
 
                 video.load_video_model_weights_hc(
                     url = url,
@@ -2807,11 +2701,11 @@ class Video(VideoMessages):
                 :execution-count: 2
                 :linenos:
 
-                [2022-10-27 13:08:04] Загрузка весов нейросетевой модели для получения оценок по экспертным признакам (видео модальность) ...
+                [2024-10-09 13:06:56] Загрузка весов нейросетевой модели для получения оценок по экспертным признакам (видео модальность) ...
 
-                [2022-10-27 13:08:05] Загрузка файла "weights_2022-08-27_18-53-35.h5" (100.0%) ...
+                [2024-10-09 13:06:58] Загрузка файла "weights_2022-08-27_18-53-35.pth" 100.0% ...
 
-                --- Время выполнения: 0.493 сек. ---
+                --- Время выполнения: 2.49 сек. ---
 
                 True
 
@@ -2829,7 +2723,7 @@ class Video(VideoMessages):
                 video.path_to_save_ = './models'
                 video.chunk_size_ = 2000000
 
-                url = video.weights_for_big5_['video']['hc']['sberdisk']
+                url = video.weights_for_big5_['video']['fi']['hc']['googledisk']
 
                 video.load_video_model_weights_hc(
                     url = url,
@@ -2843,13 +2737,13 @@ class Video(VideoMessages):
                 :execution-count: 3
                 :linenos:
 
-                [2022-10-27 13:09:54] Загрузка весов нейросетевой модели для получения оценок по экспертным признакам (видео модальность) ...
+                [2024-10-09 13:07:56] Загрузка весов нейросетевой модели для получения оценок по экспертным признакам (видео модальность) ...
 
-                [2022-10-27 13:09:54] Загрузка файла "weights_2022-08-27_18-53-35.h5" (100.0%) ...
+                [2024-10-09 13:07:59] Загрузка файла "weights_2022-08-27_18-53-35.pth" 100.0% ...
 
-                [2022-10-27 13:09:54] Ой! Что-то пошло не так ... нейросетевая архитектура модели для получения оценок по экспертным признакам не сформирована (видео модальность) ...
+                [2024-10-09 13:07:59] Что-то пошло не так ... нейросетевая архитектура модели для получения оценок по экспертным признакам не сформирована (видео модальность) ...
 
-                --- Время выполнения: 0.424 сек. ---
+                --- Время выполнения: 2.381 сек. ---
 
                 False
         """
@@ -2924,7 +2818,7 @@ class Video(VideoMessages):
                 video.path_to_save_ = './models'
                 video.chunk_size_ = 2000000
 
-                url = video.weights_for_big5_['video']['fe']['sberdisk']
+                url = video.weights_for_big5_['video']['fi']['fe']['googledisk']
 
                 video.load_video_model_weights_deep_fe(
                     url = url,
@@ -2938,11 +2832,11 @@ class Video(VideoMessages):
                 :execution-count: 2
                 :linenos:
 
-                [2022-11-01 12:42:51] Загрузка весов нейросетевой модели для получения нейросетевых признаков (видео модальность) ...
+                [2024-10-09 13:00:35] Загрузка весов нейросетевой модели для получения нейросетевых признаков (видео модальность) ...
 
-                [2022-11-01 12:43:06] Загрузка файла "weights_2022-11-01_12-27-07.h5" (100.0%) ...
+                [2024-10-09 13:00:41] Загрузка файла "weights_2022-11-01_12-27-07.pth" 100.0% ...
 
-                --- Время выполнения: 14.781 сек. ---
+                --- Время выполнения: 5.557 сек. ---
 
                 True
 
@@ -2960,7 +2854,7 @@ class Video(VideoMessages):
                 video.path_to_save_ = './models'
                 video.chunk_size_ = 2000000
 
-                url = video.weights_for_big5_['video']['fe']['sberdisk']
+                url = video.weights_for_big5_['video']['fi']['fe']['googledisk']
 
                 video.load_video_model_weights_deep_fe(
                     url = url,
@@ -2974,13 +2868,13 @@ class Video(VideoMessages):
                 :execution-count: 3
                 :linenos:
 
-                [2022-11-01 12:44:14] Загрузка весов нейросетевой модели для получения нейросетевых признаков (видео модальность) ...
+                [2024-10-09 13:01:48] Загрузка весов нейросетевой модели для получения нейросетевых признаков (видео модальность) ...
 
-                [2022-11-01 12:44:28] Загрузка файла "weights_2022-11-01_12-27-07.h5" (100.0%) ...
+                [2024-10-09 13:01:53] Загрузка файла "weights_2022-11-01_12-27-07.pth" 100.0% ...
 
-                [2022-11-01 12:44:28] Ой! Что-то пошло не так ... нейросетевая архитектура модели для получения нейросетевых признаков не сформирована (видео модальность) ...
+                [2024-10-09 13:01:53] Что-то пошло не так ... нейросетевая архитектура модели для получения нейросетевых признаков не сформирована (видео модальность) ...
 
-                --- Время выполнения: 13.926 сек. ---
+                --- Время выполнения: 4.712 сек. ---
 
                 False
         """
@@ -3060,7 +2954,7 @@ class Video(VideoMessages):
                 video.path_to_save_ = './models'
                 video.chunk_size_ = 2000000
 
-                url = video.weights_for_big5_['video']['nn']['sberdisk']
+                url = video.weights_for_big5_['video']['fi']['nn']['googledisk']
 
                 video.load_video_model_weights_nn(
                     url = url,
@@ -3074,11 +2968,11 @@ class Video(VideoMessages):
                 :execution-count: 2
                 :linenos:
 
-                [2022-10-27 15:19:08] Загрузка весов нейросетевой модели для получения оценок по нейросетевым признакам (видео модальность) ...
+                [2024-10-09 13:09:03] Загрузка весов нейросетевой модели для получения оценок по нейросетевым признакам (видео модальность) ...
 
-                [2022-10-27 15:19:11] Загрузка файла "weights_2022-03-22_16-31-48.h5" (100.0%) ...
+                [2024-10-09 13:09:08] Загрузка файла "weights_2022-03-22_16-31-48.pth" 100.0% ...
 
-                --- Время выполнения: 3.423 сек. ---
+                --- Время выполнения: 5.798 сек. ---
 
                 True
 
@@ -3096,7 +2990,7 @@ class Video(VideoMessages):
                 video.path_to_save_ = './models'
                 video.chunk_size_ = 2000000
 
-                url = video.weights_for_big5_['video']['nn']['sberdisk']
+                url = video.weights_for_big5_['video']['fi']['nn']['googledisk']
 
                 video.load_video_model_weights_nn(
                     url = url,
@@ -3110,13 +3004,13 @@ class Video(VideoMessages):
                 :execution-count: 3
                 :linenos:
 
-                [2022-10-27 15:19:40] Загрузка весов нейросетевой модели для получения оценок по нейросетевым признакам (видео модальность) ...
+                [2024-10-09 13:09:56] Загрузка весов нейросетевой модели для получения оценок по нейросетевым признакам (видео модальность) ...
 
-                [2022-10-27 15:19:43] Загрузка файла "weights_2022-03-22_16-31-48.h5" (100.0%) ...
+                [2024-10-09 13:10:02] Загрузка файла "weights_2022-03-22_16-31-48.pth" 100.0% ...
 
-                [2022-10-27 15:19:43] Ой! Что-то пошло не так ... нейросетевая архитектура модели для получения оценок по нейросетевым признакам не сформирована (видео модальность) ...
+                [2024-10-09 13:10:02] Что-то пошло не так ... нейросетевая архитектура модели для получения оценок по нейросетевым признакам не сформирована (видео модальность) ...
 
-                --- Время выполнения: 3.469 сек. ---
+                --- Время выполнения: 5.9 сек. ---
 
                 False
         """
@@ -3206,11 +3100,11 @@ class Video(VideoMessages):
                 video.path_to_save_ = './models'
                 video.chunk_size_ = 2000000
 
-                url_openness = video.weights_for_big5_['video']['b5']['openness']['sberdisk']
-                url_conscientiousness = video.weights_for_big5_['video']['b5']['conscientiousness']['sberdisk']
-                url_extraversion = video.weights_for_big5_['video']['b5']['extraversion']['sberdisk']
-                url_agreeableness = video.weights_for_big5_['video']['b5']['agreeableness']['sberdisk']
-                url_non_neuroticism = video.weights_for_big5_['video']['b5']['non_neuroticism']['sberdisk']
+                url_openness = video.weights_for_big5_['video']['fi']['b5']['openness']['googledisk']
+                url_conscientiousness = video.weights_for_big5_['video']['fi']['b5']['conscientiousness']['googledisk']
+                url_extraversion = video.weights_for_big5_['video']['fi']['b5']['extraversion']['googledisk']
+                url_agreeableness = video.weights_for_big5_['video']['fi']['b5']['agreeableness']['googledisk']
+                url_non_neuroticism = video.weights_for_big5_['video']['fi']['b5']['non_neuroticism']['googledisk']
 
                 video.load_video_models_weights_b5(
                     url_openness = url_openness,
@@ -3228,19 +3122,19 @@ class Video(VideoMessages):
                 :execution-count: 2
                 :linenos:
 
-                [2022-11-04 18:58:59] Загрузка весов нейросетевых моделей для получения результатов оценки персональных качеств (видео модальность) ...
+                [2024-10-09 13:14:48] Загрузка весов нейросетевых моделей для получения результатов оценки персональных качеств (видео модальность) ...
 
-                [2022-11-04 18:59:00] Загрузка файла "weights_2022-06-15_16-46-30.h5" (100.0%) ... Открытость опыту
+                [2024-10-09 13:14:50] Загрузка файла "weights_2022-06-15_16-46-30.pth" 100.0% ... Открытость опыту
 
-                [2022-11-04 18:59:00] Загрузка файла "weights_2022-06-15_16-48-50.h5" (100.0%) ... Добросовестность
+                [2024-10-09 13:14:52] Загрузка файла "weights_2022-06-15_16-48-50.pth" 100.0% ... Добросовестность
 
-                [2022-11-04 18:59:00] Загрузка файла "weights_2022-06-15_16-54-06.h5" (100.0%) ... Экстраверсия
+                [2024-10-09 13:14:55] Загрузка файла "weights_2022-06-15_16-54-06.pth" 100.0% ... Экстраверсия
 
-                [2022-11-04 18:59:01] Загрузка файла "weights_2022-06-15_17-02-03.h5" (100.0%) ... Доброжелательность
+                [2024-10-09 13:14:57] Загрузка файла "weights_2022-06-15_17-02-03.pth" 100.0% ... Доброжелательность
 
-                [2022-11-04 18:59:01] Загрузка файла "weights_2022-06-15_17-06-15.h5" (100.0%) ... Эмоциональная стабильность
+                [2024-10-09 13:15:00] Загрузка файла "weights_2022-06-15_17-06-15.pth" 100.0% ... Эмоциональная стабильность
 
-                --- Время выполнения: 1.827 сек. ---
+                --- Время выполнения: 11.832 сек. ---
 
                 True
 
@@ -3258,11 +3152,11 @@ class Video(VideoMessages):
                 video.path_to_save_ = './models'
                 video.chunk_size_ = 2000000
 
-                url_openness = video.weights_for_big5_['video']['b5']['openness']['sberdisk']
-                url_conscientiousness = video.weights_for_big5_['video']['b5']['conscientiousness']['sberdisk']
-                url_extraversion = video.weights_for_big5_['video']['b5']['extraversion']['sberdisk']
-                url_agreeableness = video.weights_for_big5_['video']['b5']['agreeableness']['sberdisk']
-                url_non_neuroticism = video.weights_for_big5_['video']['b5']['non_neuroticism']['sberdisk']
+                url_openness = video.weights_for_big5_['video']['fi']['b5']['openness']['googledisk']
+                url_conscientiousness = video.weights_for_big5_['video']['fi']['b5']['conscientiousness']['googledisk']
+                url_extraversion = video.weights_for_big5_['video']['fi']['b5']['extraversion']['googledisk']
+                url_agreeableness = video.weights_for_big5_['video']['fi']['b5']['agreeableness']['googledisk']
+                url_non_neuroticism = video.weights_for_big5_['video']['fi']['b5']['non_neuroticism']['googledisk']
 
                 video.load_video_models_weights_b5(
                     url_openness = url_openness,
@@ -3280,54 +3174,54 @@ class Video(VideoMessages):
                 :execution-count: 3
                 :linenos:
 
-                [2022-11-04 19:02:32] Загрузка весов нейросетевых моделей для получения результатов оценки персональных качеств (видео модальность) ...
+                [2024-10-09 13:16:08] Загрузка весов нейросетевых моделей для получения результатов оценки персональных качеств (видео модальность) ...
 
-                [2022-11-04 19:02:32] Загрузка файла "weights_2022-06-15_16-46-30.h5" (100.0%) ...
+                [2024-10-09 13:16:10] Загрузка файла "weights_2022-06-15_16-46-30.pth" 100.0% ...
 
-                [2022-11-04 19:02:32] Ой! Что-то пошло не так ... не удалось загрузить веса нейросетевой модели ... Открытость опыту
+                [2024-10-09 13:16:10] Что-то пошло не так ... не удалось загрузить веса нейросетевой модели ... Открытость опыту
 
-                    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/video.py
-                    Линия: 2833
+                    Файл: /Users/dl/@DmitryRyumin/Python/envs/OCEANAI/lib/python3.9/site-packages/oceanai/modules/lab/video.py
+                    Линия: 3144
                     Метод: load_video_models_weights_b5
                     Тип ошибки: AttributeError
 
-                [2022-11-04 19:02:32] Загрузка файла "weights_2022-06-15_16-48-50.h5" (100.0%) ...
+                [2024-10-09 13:16:13] Загрузка файла "weights_2022-06-15_16-48-50.pth" 100.0% ...
 
-                [2022-11-04 19:02:32] Ой! Что-то пошло не так ... не удалось загрузить веса нейросетевой модели ... Добросовестность
+                [2024-10-09 13:16:13] Что-то пошло не так ... не удалось загрузить веса нейросетевой модели ... Добросовестность
 
-                    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/video.py
-                    Линия: 2833
+                    Файл: /Users/dl/@DmitryRyumin/Python/envs/OCEANAI/lib/python3.9/site-packages/oceanai/modules/lab/video.py
+                    Линия: 3144
                     Метод: load_video_models_weights_b5
                     Тип ошибки: AttributeError
 
-                [2022-11-04 19:02:33] Загрузка файла "weights_2022-06-15_16-54-06.h5" (100.0%) ...
+                [2024-10-09 13:16:16] Загрузка файла "weights_2022-06-15_16-54-06.pth" 100.0% ...
 
-                [2022-11-04 19:02:33] Ой! Что-то пошло не так ... не удалось загрузить веса нейросетевой модели ... Экстраверсия
+                [2024-10-09 13:16:16] Что-то пошло не так ... не удалось загрузить веса нейросетевой модели ... Экстраверсия
 
-                    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/video.py
-                    Линия: 2833
+                    Файл: /Users/dl/@DmitryRyumin/Python/envs/OCEANAI/lib/python3.9/site-packages/oceanai/modules/lab/video.py
+                    Линия: 3144
                     Метод: load_video_models_weights_b5
                     Тип ошибки: AttributeError
 
-                [2022-11-04 19:02:33] Загрузка файла "weights_2022-06-15_17-02-03.h5" (100.0%) ...
+                [2024-10-09 13:16:19] Загрузка файла "weights_2022-06-15_17-02-03.pth" 100.0% ...
 
-                [2022-11-04 19:02:33] Ой! Что-то пошло не так ... не удалось загрузить веса нейросетевой модели ... Доброжелательность
+                [2024-10-09 13:16:19] Что-то пошло не так ... не удалось загрузить веса нейросетевой модели ... Доброжелательность
 
-                    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/video.py
-                    Линия: 2833
+                    Файл: /Users/dl/@DmitryRyumin/Python/envs/OCEANAI/lib/python3.9/site-packages/oceanai/modules/lab/video.py
+                    Линия: 3144
                     Метод: load_video_models_weights_b5
                     Тип ошибки: AttributeError
 
-                [2022-11-04 19:02:34] Загрузка файла "weights_2022-06-15_17-06-15.h5" (100.0%) ...
+                [2024-10-09 13:16:21] Загрузка файла "weights_2022-06-15_17-06-15.pth" 100.0% ...
 
-                [2022-11-04 19:02:34] Ой! Что-то пошло не так ... не удалось загрузить веса нейросетевой модели ... Эмоциональная стабильность
+                [2024-10-09 13:16:21] Что-то пошло не так ... не удалось загрузить веса нейросетевой модели ... Эмоциональная стабильность
 
-                    Файл: /Users/dl/GitHub/oceanai/oceanai/modules/lab/video.py
-                    Линия: 2833
+                    Файл: /Users/dl/@DmitryRyumin/Python/envs/OCEANAI/lib/python3.9/site-packages/oceanai/modules/lab/video.py
+                    Линия: 3144
                     Метод: load_video_models_weights_b5
                     Тип ошибки: AttributeError
 
-                --- Время выполнения: 1.831 сек. ---
+                --- Время выполнения: 13.055 сек. ---
 
                 False
         """
