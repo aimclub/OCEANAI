@@ -1,5 +1,5 @@
 sphinx==7.4.7
-sphinx_rtd_theme==2.0.0
+sphinx_rtd_theme==3.0.0
 sphinx-toolbox==3.8.0
 sphinx_design==0.6.1
 sphinx-intl==2.2.0
@@ -24,6 +24,6 @@ sentencepiece >= 0.2.0
 torch >= 2.2.2
 torchaudio >= 2.2.2
 torchvision >= 0.17.2
-oceanai>=1.0.0a41
+oceanai>=1.0.0a42
 sacremoses>=0.1.1
 gradio==4.44.1
