@@ -112,7 +112,7 @@ exclude_patterns = ["../build"]
 templates_path = ["_templates"]
 
 # Минимальная версия Sphinx
-needs_sphinx = "7.4.7"
+needs_sphinx = "5.3.0"
 
 # Способ представления подсказок
 autodoc_typehints = "both"

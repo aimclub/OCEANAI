@@ -4161,6 +4161,7 @@ class Core(CoreMessages):
             df_files (pd.DataFrame): **DataFrame** c данными
             correlation_coefficients (pd.DataFrame): **DataFrame** c коэффициентами корреляции
             personality_type (str): Персональный тип по версии MBTI
+            col_name_ocean (str): Столбец с названиями персональных качеств личности человека
             threshold (float): Порог для оценок полярности качеств (например, интроверт < 0.55, экстраверт > 0.55)
             out (bool): Отображение
 
@@ -4260,6 +4261,7 @@ class Core(CoreMessages):
             df_files (pd.DataFrame): **DataFrame** c данными
             correlation_coefficients (pd.DataFrame): **DataFrame** c коэффициентами корреляции
             target_scores (List[float]): Список оценок персональных качеств личности целевого человека
+            col_name_ocean (str): Столбец с названиями персональных качеств личности человека
             threshold (float): Порог для оценок полярности качеств (например, интроверт < 0.55, экстраверт > 0.55)
             out (bool): Отображение
 
@@ -4380,6 +4382,7 @@ class Core(CoreMessages):
             correlation_coefficients_disorders (pd.DataFrame): **DataFrame** c коэффициентами корреляции для расстройств
             target_scores (List[float]): Список оценок персональных качеств личности целевого человека
             personality_desorder_number (int): Количество приоритетных расстройств
+            col_name_ocean (str): Столбец с названиями персональных качеств личности человека
             threshold (float): Порог для оценок полярности качеств (например, интроверт < 0.55, экстраверт > 0.55)
             out (bool): Отображение
 
