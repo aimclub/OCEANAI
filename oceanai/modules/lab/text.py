@@ -781,9 +781,7 @@ class Text(TextMessages):
             self._model_transcriptions = WhisperForConditionalGeneration.from_pretrained(self._path_to_transriber).to(
                 self._device
             )
-
-        if lang == self.__lang_traslate[0]:
-            self.__forced_decoder_ids = self._processor.get_decoder_prompt_ids(language=lang, task="transcribe")
+            self._model_transcriptions.config.forced_decoder_ids = None
 
         path_to_wav = os.path.join(str(Path(path).parent), Path(path).stem + "." + "wav")
 
@@ -794,71 +792,40 @@ class Text(TextMessages):
                 )
                 call_audio = subprocess.call(ff_audio, shell=True)
 
-                try:
-                    if call_audio == 1:
-                        raise OSError
-                except OSError:
+                if call_audio != 0:
                     self._other_error(self._unknown_err, last=last, out=out)
                     return np.empty([]), np.empty([])
-                except Exception:
-                    self._other_error(self._unknown_err, last=last, out=out)
-                    return np.empty([]), np.empty([])
-                else:
-                    wav, sr = torchaudio.load(path_to_wav)
 
-                    if wav.size(0) > 1:
-                        wav = wav.mean(dim=0, keepdim=True)
+        wav, sr = torchaudio.load(path_to_wav)
 
-                    if sr != 16000:
-                        transform = torchaudio.transforms.Resample(orig_freq=sr, new_freq=16000)
-                        wav = transform(wav)
-                        sr = 16000
+        if wav.size(0) > 1:
+            wav = wav.mean(dim=0, keepdim=True)
 
-                    wav = wav.squeeze(0)
+        if sr != 16000:
+            transform = torchaudio.transforms.Resample(orig_freq=sr, new_freq=16000)
+            wav = transform(wav)
+            sr = 16000
 
-                    for start in range(0, len(wav), win):
-                        inputs = self._processor(wav[start : start + win], sampling_rate=16000, return_tensors="pt")
-                        input_features = inputs.input_features.to(self._device)
-                        if lang == self.__lang_traslate[0]:
-                            generated_ids = self._model_transcriptions.generate(
-                                input_features=input_features,
-                                forced_decoder_ids=self.__forced_decoder_ids,
-                                max_new_tokens=448,
-                            )
-                        elif lang == self.__lang_traslate[1]:
-                            generated_ids = self._model_transcriptions.generate(
-                                input_features=input_features, max_new_tokens=448
-                            )
-                        transcription = self._processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
-                        self.__text_pred += transcription
+        wav = wav.squeeze(0)
 
-                    return self.__translate_and_extract_features(self.__text_pred, lang, show_text, last, out)
-        else:
-            wav, sr = torchaudio.load(path_to_wav)
+        for start in range(0, len(wav), win):
+            inputs = self._processor(wav[start : start + win], sampling_rate=16000, return_tensors="pt")
+            input_features = inputs.input_features.to(self._device)
+            if lang == self.__lang_traslate[0]:
+                generated_ids = self._model_transcriptions.generate(
+                    input_features=input_features,
+                )
+            elif lang == self.__lang_traslate[1]:
+                generated_ids = self._model_transcriptions.generate(
+                    input_features=input_features, language="en"
+                )
+            transcription = self._processor.batch_decode(generated_ids, skip_special_tokens=False)
+            transcription = re.findall(r'> ([^<>]+)', transcription[0])
+            self.__text_pred += transcription[0] + ' '
 
-            if wav.size(0) > 1:
-                wav = wav.mean(dim=0, keepdim=True)
-
-            if sr != 16000:
-                transform = torchaudio.transforms.Resample(orig_freq=sr, new_freq=16000)
-                wav = transform(wav)
-                sr = 16000
-
-            wav = wav.squeeze(0)
-
-            for start in range(0, len(wav), win):
-                inputs = self._processor(wav[start : start + win], sampling_rate=16000, return_tensors="pt")
-                input_features = inputs.input_features.to(self._device)
-                if lang == self.__lang_traslate[0]:
-                    generated_ids = self._model_transcriptions.generate(
-                        input_features=input_features, forced_decoder_ids=self.__forced_decoder_ids
-                    )
-                elif lang == self.__lang_traslate[1]:
-                    generated_ids = self._model_transcriptions.generate(input_features=input_features)
-                transcription = self._processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
-                self.__text_pred += transcription
-
-            return self.__translate_and_extract_features(self.__text_pred, lang, show_text, last, out)
+        self.__text_pred = self.__text_pred.strip()
+            
+        return self.__translate_and_extract_features(self.__text_pred, lang, show_text, last, out)
 
     def __load_text_model_b5(self, show_summary: bool = False, out: bool = True) -> Optional[nn.Module]:
         """Формирование нейросетевой архитектуры модели для получения оценок персональных качеств

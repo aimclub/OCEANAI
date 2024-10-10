@@ -4161,7 +4161,6 @@ class Core(CoreMessages):
             df_files (pd.DataFrame): **DataFrame** c данными
             correlation_coefficients (pd.DataFrame): **DataFrame** c коэффициентами корреляции
             personality_type (str): Персональный тип по версии MBTI
-            col_name_ocean (str): Столбец с названиями персональных качеств личности человека
             threshold (float): Порог для оценок полярности качеств (например, интроверт < 0.55, экстраверт > 0.55)
             out (bool): Отображение
 
@@ -4204,7 +4203,10 @@ class Core(CoreMessages):
 
                     name_mbti = correlation_coefficients.columns[1:]
 
-                    need_type = self.dict_mbti[personality_type]
+                    if len(personality_type) != 4:
+                        need_type = self.dict_mbti[personality_type]
+                    else:
+                        need_type = personality_type
 
                     for path in range(len(self._df_files)):
                         curr_traits = self._df_files.iloc[path].values[1:]
@@ -4233,9 +4235,9 @@ class Core(CoreMessages):
                         by=["MBTI_Score"], ascending=False
                     )
 
-                    self._df_files_MBTI_job_match.index.name = self._keys_id
-                    self._df_files_MBTI_job_match.index += 1
-                    self._df_files_MBTI_job_match.index = self._df_files_MBTI_job_match.index.map(str)
+                    # self._df_files_MBTI_job_match.index.name = self._keys_id
+                    # self._df_files_MBTI_job_match.index += 1
+                    # self._df_files_MBTI_job_match.index = self._df_files_MBTI_job_match.index.map(str)
 
                 except Exception:
                     self._other_error(self._unknown_err, out=out)
@@ -4261,7 +4263,6 @@ class Core(CoreMessages):
             df_files (pd.DataFrame): **DataFrame** c данными
             correlation_coefficients (pd.DataFrame): **DataFrame** c коэффициентами корреляции
             target_scores (List[float]): Список оценок персональных качеств личности целевого человека
-            col_name_ocean (str): Столбец с названиями персональных качеств личности человека
             threshold (float): Порог для оценок полярности качеств (например, интроверт < 0.55, экстраверт > 0.55)
             out (bool): Отображение
 
@@ -4340,7 +4341,7 @@ class Core(CoreMessages):
                             ]
                         )
 
-                        match, _ = self._compatibility_percentage(target_personality_type, personality_type)
+                        match, _ = self._compatibility_percentage(target_personality_type, personality_type, curr_weights)
 
                         self._df_files_MBTI_colleague_match.loc[
                             str(path + 1),
@@ -4351,9 +4352,9 @@ class Core(CoreMessages):
                         by=["Match"], ascending=False
                     )
 
-                    self._df_files_MBTI_colleague_match.index.name = self._keys_id
-                    self._df_files_MBTI_colleague_match.index += 1
-                    self._df_files_MBTI_colleague_match.index = self._df_files_MBTI_colleague_match.index.map(str)
+                    # self._df_files_MBTI_colleague_match.index.name = self._keys_id
+                    # self._df_files_MBTI_colleague_match.index += 1
+                    # self._df_files_MBTI_colleague_match.index = self._df_files_MBTI_colleague_match.index.map(str)
 
                 except Exception:
                     self._other_error(self._unknown_err, out=out)
@@ -4382,7 +4383,6 @@ class Core(CoreMessages):
             correlation_coefficients_disorders (pd.DataFrame): **DataFrame** c коэффициентами корреляции для расстройств
             target_scores (List[float]): Список оценок персональных качеств личности целевого человека
             personality_desorder_number (int): Количество приоритетных расстройств
-            col_name_ocean (str): Столбец с названиями персональных качеств личности человека
             threshold (float): Порог для оценок полярности качеств (например, интроверт < 0.55, экстраверт > 0.55)
             out (bool): Отображение
 
@@ -4441,6 +4441,13 @@ class Core(CoreMessages):
 
                         curr_weights = np.sum(curr_traits_matrix, axis=0)
 
+                        personality_type = "".join(
+                            [
+                                (name_mbti[idx_type][1] if curr_weights[idx_type] <= 0 else name_mbti[idx_type][0])
+                                for idx_type in range(len(curr_weights))
+                            ]
+                        )
+
                         for idx_type in range(len(curr_weights)):
                             idx_curr_matrix = pd_matrix[:, idx_type]
                             if curr_weights[idx_type] < 0:
@@ -4459,19 +4466,19 @@ class Core(CoreMessages):
                         pd_matrix = np.sum(pd_matrix, axis=1)
 
                         idx_max_values = np.argsort(-np.asarray(pd_matrix))[:personality_desorder_number]
-                        desorders = name_pd[idx_max_values]
+                        desorders = [name_pd[i] + ' ({})'.format(np.round(pd_matrix[i], 3)) for i in idx_max_values]
 
                         self._df_files_MBTI_disorders.loc[
                             str(path + 1),
-                            name_mbti.tolist()
-                            + [("Disorder" + " {}").format(i + 1) for i in range(personality_desorder_number)],
+                            ["MBTI"]
+                            + ["Disorder {}".format(i + 1) for i in range(personality_desorder_number)],
                         ] = (
-                            curr_weights.tolist() + desorders.tolist()
+                            [personality_type] + desorders
                         )
 
-                    self._df_files_MBTI_disorders.index.name = self._keys_id
-                    self._df_files_MBTI_disorders.index += 1
-                    self._df_files_MBTI_disorders.index = self._df_files_MBTI_disorders.index.map(str)
+                    # self._df_files_MBTI_disorders.index.name = self._keys_id
+                    # self._df_files_MBTI_disorders.index += 1
+                    # self._df_files_MBTI_disorders.index = self._df_files_MBTI_disorders.index.map(str)
 
                 except Exception:
                     self._other_error(self._unknown_err, out=out)
