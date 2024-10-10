@@ -4372,7 +4372,7 @@ class Core(CoreMessages):
         threshold: float = 0.55,
         out: bool = True,
     ) -> pd.DataFrame:
-        """Определение приоритетных профессиональных растройств по версии MBTI
+        """Определение степени выраженности персональных растройств по версии MBTI
 
         .. note::
             protected (защищенный метод)
@@ -4382,7 +4382,7 @@ class Core(CoreMessages):
             correlation_coefficients_mbti (pd.DataFrame): **DataFrame** c коэффициентами корреляции для MBTI
             correlation_coefficients_disorders (pd.DataFrame): **DataFrame** c коэффициентами корреляции для расстройств
             target_scores (List[float]): Список оценок персональных качеств личности целевого человека
-            personality_desorder_number (int): Количество приоритетных расстройств
+            personality_desorder_number (int): Количество расстройств для демонстрации
             threshold (float): Порог для оценок полярности качеств (например, интроверт < 0.55, экстраверт > 0.55)
             out (bool): Отображение
 
