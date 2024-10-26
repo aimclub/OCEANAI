@@ -814,10 +814,13 @@ class Text(TextMessages):
             if lang == self.__lang_traslate[0]:
                 generated_ids = self._model_transcriptions.generate(
                     input_features=input_features,
+                    language="ru", 
+                    forced_decoder_ids=None,
                 )
             elif lang == self.__lang_traslate[1]:
                 generated_ids = self._model_transcriptions.generate(
-                    input_features=input_features, language="en"
+                    input_features=input_features, 
+                    language="en"
                 )
             transcription = self._processor.batch_decode(generated_ids, skip_special_tokens=False)
             transcription = re.findall(r'> ([^<>]+)', transcription[0])
@@ -1396,7 +1399,7 @@ class Text(TextMessages):
                 self._translation_model = url
 
             try:
-                self._tokenizer = MarianTokenizer.from_pretrained(self._translation_model)
+                self._tokenizer = MarianTokenizer.from_pretrained(self._translation_model, clean_up_tokenization_spaces=True)
                 self._traslate_model = AutoModelForSeq2SeqLM.from_pretrained(self._translation_model).to(self._device)
             except Exception:
                 self._other_error(self._unknown_err, out=out)
