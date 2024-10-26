@@ -15,7 +15,7 @@ PATH_SAVE_MODELS = os.path.normpath("./models")
 
 CHUNK_SIZE = 2000000
 FILENAME_1 = "speaker_01_center_83.mov"
-FILENAME_2 = "speaker_10_center_83.mov"
+FILENAME_2 = "speaker_11_center_83.mov"
 
 corpus = "mupta"
 lang = "ru"
@@ -35,12 +35,11 @@ DISK = "googledisk"
 URL_ACCURACY = _b5.true_traits_[corpus][DISK]
 
 _b5.download_file_from_url(
-    url="https://download.sberdisk.ru/download/file/477995980?token=jGPtBPS69uzFU6Y&filename=" + FILENAME_1, out=False
+    url="https://drive.usercontent.google.com/download?id=1VP4pj6aIBfsDsi0nHt6FQp-TdzYsCzJS&export=download&authuser=2&confirm=t&uuid=57df0cf7-bf8d-4651-ab92-76b843342dee&at=AN_67v26vKpOpaF-TP4j1xlazsRO:1729970962189", out=False
 )
 _b5.download_file_from_url(
-    url="https://download.sberdisk.ru/download/file/477995963?token=bTpo96qNDPcwGqb&filename=" + FILENAME_2, out=False
+    url="https://drive.usercontent.google.com/download?id=1t4NK-AbdBGWTJtl3UMY-8hBSaoMRro8s&export=download&authuser=2&confirm=t&uuid=afe9bad8-f047-4eda-9d6b-e32bb8f9ea12&at=AN_67v3mIXBcPPwgrCVl2gK5oDPk:1729970859513", out=False
 )
-
 
 def test_get_acoustic_features():
     hc_features, melspectrogram_features = _b5.get_acoustic_features(
@@ -70,11 +69,11 @@ def test_get_visual_features():
 
 
 def test_get_text_features():
+    _b5.path_to_save_ = PATH_SAVE_MODELS
+
     _b5.load_text_features(out=False)
     _b5.setup_translation_model(out=False)
     _b5.setup_bert_encoder(out=False, force_reload=False)
-
-    _b5.path_to_save_ = PATH_SAVE_MODELS
 
     hc_features, nn_features = _b5.get_text_features(
         path=os.path.join(PATH_SAVE_VIDEO, FILENAME_1), asr=True, out=False, lang=lang
@@ -85,6 +84,8 @@ def test_get_text_features():
 
 
 def test_get_text_union_predictions():
+    _b5.path_to_save_ = PATH_SAVE_MODELS
+
     _b5.load_text_features(out=False)
     _b5.setup_translation_model(out=False)
     _b5.setup_bert_encoder(force_reload=False, out=False)
