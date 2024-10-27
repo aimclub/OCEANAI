@@ -23,7 +23,7 @@ REQUIRED_PACKAGES = [
     "opencv-contrib-python >= 4.10.0.84",
     "mediapipe >= 0.10.14",
     "liwc >= 0.5.0",
-    "transformers >= 4.45.1",
+    "transformers == 4.45.1",
     "sentencepiece >= 0.2.0",
     "torch >= 2.2.2",
     "torchaudio >= 2.2.2",
