@@ -24,6 +24,6 @@ sentencepiece >= 0.2.0
 torch >= 2.2.2
 torchaudio >= 2.2.2
 torchvision >= 0.17.2
-oceanai>=1.0.0a42
+oceanai>=1.0.0a43
 sacremoses>=0.1.1
-gradio==4.44.1
+gradio>=5.5.0
