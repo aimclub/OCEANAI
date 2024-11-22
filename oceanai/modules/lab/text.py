@@ -170,9 +170,10 @@ class Text(TextMessages):
 
         # BERT модель
         # self._bert_multi_model: str = "https://drive.usercontent.google.com/download?id=1yedNslt8jjwXm4pa3K15VqUg-JISJMYf&export=download&authuser=2&confirm=t&uuid=4071942c-989a-4a24-8ddd-60e964def6ec&at=AN_67v2cav8P41yss1AlvWGxXCQk:1727453235831"
-        self._bert_multi_model: str = (
-            "https://download.sberdisk.ru/download/file/473319508?token=p8hYNIjxacEARxl&filename=bert-base-multilingual-cased.zip"
-        )
+        # self._bert_multi_model: str = (
+        #     "https://download.sberdisk.ru/download/file/473319508?token=p8hYNIjxacEARxl&filename=bert-base-multilingual-cased.zip"
+        # )
+        self._bert_multi_model: str = "google-bert/bert-base-multilingual-cased"
 
         # Нейросетевая модель машинного перевода (RU -> EN)
         self._translation_model: str = "Helsinki-NLP/opus-mt-ru-en"
@@ -1457,32 +1458,43 @@ class Text(TextMessages):
                 self._bert_multi_model = url
                 force_reload = False
 
-            if self.__load_bert_model(self._bert_multi_model, force_reload, out, False, run) is True:
-                try:
-                    # Распаковка архива
-                    res_unzip = self._unzip(
-                        path_to_zipfile=os.path.join(self._url_last_filename),
-                        new_name=None,
-                        force_reload=force_reload,
-                    )
-                except Exception:
-                    self._other_error(self._unknown_err, out=out)
-                    return False
-                else:
-                    # Файл распакован
-                    if res_unzip is True:
-                        try:
-                            self._bert_tokenizer = BertTokenizer.from_pretrained(Path(self._url_last_filename).stem)
-                            self._bert_model = BertModel.from_pretrained(Path(self._url_last_filename).stem).to(
-                                self._device
-                            )
-                        except Exception:
-                            self._other_error(self._unknown_err, out=out)
-                            return False
-                        else:
-                            return True
-            else:
+            try:
+                self._bert_tokenizer = BertTokenizer.from_pretrained(self._bert_multi_model)
+                self._bert_model = BertModel.from_pretrained(self._bert_multi_model).to(
+                    self._device
+                )
+            except Exception:
+                self._other_error(self._unknown_err, out=out)
                 return False
+            else:
+                return True
+
+            # if self.__load_bert_model(self._bert_multi_model, force_reload, out, False, run) is True:
+            #     try:
+            #         # Распаковка архива
+            #         res_unzip = self._unzip(
+            #             path_to_zipfile=os.path.join(self._url_last_filename),
+            #             new_name=None,
+            #             force_reload=force_reload,
+            #         )
+            #     except Exception:
+            #         self._other_error(self._unknown_err, out=out)
+            #         return False
+            #     else:
+            #         # Файл распакован
+            #         if res_unzip is True:
+            #             try:
+            #                 self._bert_tokenizer = BertTokenizer.from_pretrained(Path(self._url_last_filename).stem)
+            #                 self._bert_model = BertModel.from_pretrained(Path(self._url_last_filename).stem).to(
+            #                     self._device
+            #                 )
+            #             except Exception:
+            #                 self._other_error(self._unknown_err, out=out)
+            #                 return False
+            #             else:
+            #                 return True
+            # else:
+            #     return False
         finally:
             if runtime:
                 self._r_end(out=out)
