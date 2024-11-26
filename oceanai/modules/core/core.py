@@ -4460,6 +4460,8 @@ class Core(CoreMessages):
                     person_personality = np.sum(norm_traits_copy[:, :-1], axis =1).tolist()
 
                     weights = norm_traits[:, :-1]
+                    weights[:, 1] = weights[:, 1]*-1 # "SN" to "NS"
+                    weights[:, 2] = weights[:, 2]*-1 # "TF" to "FT"
 
                     for idx, curr_weights in enumerate(weights):
                         pd_matrix_copy = pd_matrix.copy()
