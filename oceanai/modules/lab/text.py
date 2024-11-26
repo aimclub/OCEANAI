@@ -815,20 +815,17 @@ class Text(TextMessages):
             if lang == self.__lang_traslate[0]:
                 generated_ids = self._model_transcriptions.generate(
                     input_features=input_features,
-                    language="ru", 
+                    language="ru",
                     forced_decoder_ids=None,
                 )
             elif lang == self.__lang_traslate[1]:
-                generated_ids = self._model_transcriptions.generate(
-                    input_features=input_features, 
-                    language="en"
-                )
+                generated_ids = self._model_transcriptions.generate(input_features=input_features, language="en")
             transcription = self._processor.batch_decode(generated_ids, skip_special_tokens=False)
-            transcription = re.findall(r'> ([^<>]+)', transcription[0])
-            self.__text_pred += transcription[0] + ' '
+            transcription = re.findall(r"> ([^<>]+)", transcription[0])
+            self.__text_pred += transcription[0] + " "
 
         self.__text_pred = self.__text_pred.strip()
-            
+
         return self.__translate_and_extract_features(self.__text_pred, lang, show_text, last, out)
 
     def __load_text_model_b5(self, show_summary: bool = False, out: bool = True) -> Optional[nn.Module]:
@@ -1400,7 +1397,9 @@ class Text(TextMessages):
                 self._translation_model = url
 
             try:
-                self._tokenizer = MarianTokenizer.from_pretrained(self._translation_model, clean_up_tokenization_spaces=True)
+                self._tokenizer = MarianTokenizer.from_pretrained(
+                    self._translation_model, clean_up_tokenization_spaces=True
+                )
                 self._traslate_model = AutoModelForSeq2SeqLM.from_pretrained(self._translation_model).to(self._device)
             except Exception:
                 self._other_error(self._unknown_err, out=out)
@@ -1460,9 +1459,7 @@ class Text(TextMessages):
 
             try:
                 self._bert_tokenizer = BertTokenizer.from_pretrained(self._bert_multi_model)
-                self._bert_model = BertModel.from_pretrained(self._bert_multi_model).to(
-                    self._device
-                )
+                self._bert_model = BertModel.from_pretrained(self._bert_multi_model).to(self._device)
             except Exception:
                 self._other_error(self._unknown_err, out=out)
                 return False

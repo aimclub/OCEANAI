@@ -4097,7 +4097,7 @@ class Core(CoreMessages):
                     return self._df_files_priority_skill
                 else:
                     return self._df_files_priority_skill
-                
+
     def _professional_match(
         self,
         df_files: Optional[pd.DataFrame] = None,
@@ -4130,11 +4130,7 @@ class Core(CoreMessages):
 
         try:
             # Проверка аргументов
-            if (
-                type(threshold) is not float
-                or not (0.0 <= threshold <= 1.0)
-                or type(out) is not bool
-            ):
+            if type(threshold) is not float or not (0.0 <= threshold <= 1.0) or type(out) is not bool:
                 raise TypeError
         except TypeError:
             self._inv_args(__class__.__name__, self._professional_match.__name__, out=out)
@@ -4158,18 +4154,20 @@ class Core(CoreMessages):
                     else:
                         need_type = personality_type
 
-                    traits = self._df_files_MBTI_job_match[['Path', 'Extraversion', 'Openness', 'Agreeableness','Conscientiousness', 'Non-Neuroticism']].values[:, 1:]
-                    norm_traits = np.where(traits < threshold, traits-1, traits)
+                    traits = self._df_files_MBTI_job_match[
+                        ["Path", "Extraversion", "Openness", "Agreeableness", "Conscientiousness", "Non-Neuroticism"]
+                    ].values[:, 1:]
+                    norm_traits = np.where(traits < threshold, traits - 1, traits)
 
-                    name_mbti = ['EI','SN','FT','JP']
+                    name_mbti = ["EI", "SN", "FT", "JP"]
 
                     norm_traits_copy = norm_traits.copy()
-                    
+
                     for i in range(len(name_mbti)):
                         curr_traits = norm_traits[:, i]
                         norm_traits_copy[:, i] = np.where(curr_traits > 0, name_mbti[i][0], name_mbti[i][1])
 
-                    person_personality = np.sum(norm_traits_copy[:, :-1], axis =1).tolist()
+                    person_personality = np.sum(norm_traits_copy[:, :-1], axis=1).tolist()
                     weights = norm_traits[:, :-1]
 
                     for idx_type, curr_type in enumerate(person_personality):
@@ -4177,9 +4175,9 @@ class Core(CoreMessages):
                         match, score = self._compatibility_percentage(need_type, curr_type, curr_weights)
 
                         self._df_files_MBTI_job_match.loc[
-                                str(idx_type + 1),
-                                name_mbti + ["MBTI", "MBTI_Score", "Match"],
-                            ] = curr_weights.tolist() + [curr_type, np.round(score), np.round(match)]
+                            str(idx_type + 1),
+                            name_mbti + ["MBTI", "MBTI_Score", "Match"],
+                        ] = curr_weights.tolist() + [curr_type, np.round(score), np.round(match)]
 
                     self._df_files_MBTI_job_match = self._df_files_MBTI_job_match.sort_values(
                         by=["MBTI_Score"], ascending=False
@@ -4194,7 +4192,6 @@ class Core(CoreMessages):
                     return self._df_files_MBTI_job_match
                 else:
                     return self._df_files_MBTI_job_match
-
 
     def _compatibility_percentage(self, type1: str, type2: str, weights: list) -> tuple[float, float]:
         """Вычисление процента совместимости и оценки на основе сравнения двух типов
@@ -4302,32 +4299,43 @@ class Core(CoreMessages):
             else:
                 try:
                     self._df_files_MBTI_colleague_match = self._df_files.copy()
-                    name_mbti = ['EI','SN','FT','JP']
+                    name_mbti = ["EI", "SN", "FT", "JP"]
 
                     target_scores = np.array([0.34, 0.56, 0.42, 0.57, 0.56]).reshape(1, -1)
-                    traits = self._df_files_MBTI_colleague_match[['Path', 'Extraversion', 'Openness', 'Agreeableness','Conscientiousness', 'Non-Neuroticism']].values[:, 1:]
+                    traits = self._df_files_MBTI_colleague_match[
+                        ["Path", "Extraversion", "Openness", "Agreeableness", "Conscientiousness", "Non-Neuroticism"]
+                    ].values[:, 1:]
                     traits_with_target = np.vstack((traits, target_scores))
-                    norm_traits_with_target = np.where(traits_with_target < threshold, traits_with_target-1, traits_with_target)
+                    norm_traits_with_target = np.where(
+                        traits_with_target < threshold, traits_with_target - 1, traits_with_target
+                    )
                     norm_traits_with_target_copy = norm_traits_with_target.copy()
-                    self._df_files_MBTI_colleague_match.loc[str(len(self._df_files_MBTI_colleague_match)+1), ['Path', 'Openness', 'Conscientiousness', 'Extraversion','Agreeableness', 'Non-Neuroticism']] = ['Target_scores']+target_scores.tolist()[0]
+                    self._df_files_MBTI_colleague_match.loc[
+                        str(len(self._df_files_MBTI_colleague_match) + 1),
+                        ["Path", "Openness", "Conscientiousness", "Extraversion", "Agreeableness", "Non-Neuroticism"],
+                    ] = ["Target_scores"] + target_scores.tolist()[0]
                     for i in range(len(name_mbti)):
                         curr_traits = norm_traits_with_target[:, i]
                         norm_traits_with_target_copy[:, i] = np.where(curr_traits > 0, name_mbti[i][0], name_mbti[i][1])
 
-                    person_personality = np.sum(norm_traits_with_target_copy[:, :-1], axis =1).tolist()
+                    person_personality = np.sum(norm_traits_with_target_copy[:, :-1], axis=1).tolist()
                     need_type = person_personality[-1]
                     weights = norm_traits_with_target[:, :-1]
 
                     for idx_type, curr_type in enumerate(person_personality):
                         curr_weights = weights[idx_type]
                         match = sum(1 for x, y in zip(need_type, curr_type) if x == y) / 4
-                        score = sum(np.abs(norm_traits_with_target[:, :-1][idx_type][idx]) for idx, (x, y) in enumerate(zip(need_type, curr_type)) if x == y)
-                        match = match*100
-                        score = (score/4)*100
+                        score = sum(
+                            np.abs(norm_traits_with_target[:, :-1][idx_type][idx])
+                            for idx, (x, y) in enumerate(zip(need_type, curr_type))
+                            if x == y
+                        )
+                        match = match * 100
+                        score = (score / 4) * 100
                         self._df_files_MBTI_colleague_match.loc[
-                                str(idx_type+1),
-                                name_mbti + ["MBTI", "MBTI_Score", "Match"],
-                            ] = curr_weights.tolist() + [curr_type, np.round(score), np.round(match)]
+                            str(idx_type + 1),
+                            name_mbti + ["MBTI", "MBTI_Score", "Match"],
+                        ] = curr_weights.tolist() + [curr_type, np.round(score), np.round(match)]
 
                     self._df_files_MBTI_colleague_match = self._df_files_MBTI_colleague_match.sort_values(
                         by=["Match"], ascending=False
@@ -4372,7 +4380,9 @@ class Core(CoreMessages):
         """
 
         # Сброс
-        self._df_files_MBTI_colleague_match = pd.DataFrame()  # Пустой DataFrame c вероятностью выраженности персональных растройств
+        self._df_files_MBTI_colleague_match = (
+            pd.DataFrame()
+        )  # Пустой DataFrame c вероятностью выраженности персональных растройств
 
         if df_files is not None:
             self._df_files = df_files
@@ -4408,10 +4418,10 @@ class Core(CoreMessages):
                     self._df_files_MBTI_disorders = self._df_files.copy()
                     name_pd = correlation_coefficients_disorders["Personality Disorder"].values
                     pd_matrix = correlation_coefficients_disorders[["EI", "SN", "TF", "JP"]].values
-                    pd_matrix[:, 2] = pd_matrix[:, 2]*-1 # "TF" to "FT"
-                    name_mbti = ['EI','SN','FT','JP']
+                    pd_matrix[:, 2] = pd_matrix[:, 2] * -1  # "TF" to "FT"
+                    name_mbti = ["EI", "SN", "FT", "JP"]
                     combinations = list(itertools.product(*name_mbti))
-                    combinations = [''.join(comb) for comb in combinations]
+                    combinations = ["".join(comb) for comb in combinations]
 
                     sum_pd = {}
                     for comb in combinations:
@@ -4423,22 +4433,24 @@ class Core(CoreMessages):
                                     mask[i] = row[i] > 0
                                 else:
                                     mask[i] = row[i] < 0
-                        
+
                             row_sum = np.sum(np.abs(row) * mask)
                             if row_sum == 0:
                                 row_sum += 1e-6
                             comb_results.append(row_sum)
                         sum_pd[comb] = comb_results
 
-                    traits = self._df_files_MBTI_disorders[['Path', 'Extraversion', 'Openness', 'Agreeableness','Conscientiousness', 'Non-Neuroticism']].values[:, 1:]
-                    norm_traits = np.where(traits < threshold, traits-1, traits)
+                    traits = self._df_files_MBTI_disorders[
+                        ["Path", "Extraversion", "Openness", "Agreeableness", "Conscientiousness", "Non-Neuroticism"]
+                    ].values[:, 1:]
+                    norm_traits = np.where(traits < threshold, traits - 1, traits)
                     norm_traits_copy = norm_traits.copy()
 
                     for i in range(len(name_mbti)):
                         curr_traits = norm_traits[:, i]
                         norm_traits_copy[:, i] = np.where(curr_traits > 0, name_mbti[i][0], name_mbti[i][1])
 
-                    person_personality = np.sum(norm_traits_copy[:, :-1], axis =1).tolist()
+                    person_personality = np.sum(norm_traits_copy[:, :-1], axis=1).tolist()
 
                     weights = norm_traits[:, :-1]
 
@@ -4460,19 +4472,17 @@ class Core(CoreMessages):
                                 )
                             pd_matrix_copy[:, idx_type] = idx_curr_matrix
 
-                        pd_matrix_copy = np.sum(pd_matrix_copy, axis=1)/sum_pd[person_personality[idx]]
-                        
-                        idx_max_values = np.argsort(-np.asarray(pd_matrix_copy))[:personality_desorder_number]
-                        desorders = [name_pd[i] + ' ({})'.format(np.round(pd_matrix_copy[i], 3)) for i in idx_max_values]
+                        pd_matrix_copy = np.sum(pd_matrix_copy, axis=1) / sum_pd[person_personality[idx]]
 
+                        idx_max_values = np.argsort(-np.asarray(pd_matrix_copy))[:personality_desorder_number]
+                        desorders = [
+                            name_pd[i] + " ({})".format(np.round(pd_matrix_copy[i], 3)) for i in idx_max_values
+                        ]
 
                         self._df_files_MBTI_disorders.loc[
-                                    str(idx + 1),
-                                    ["MBTI"]
-                                    + ["Disorder {}".format(i + 1) for i in range(personality_desorder_number)],
-                                ] = (
-                                    [person_personality[idx]] + desorders
-                                )
+                            str(idx + 1),
+                            ["MBTI"] + ["Disorder {}".format(i + 1) for i in range(personality_desorder_number)],
+                        ] = [person_personality[idx]] + desorders
 
                     # self._df_files_MBTI_disorders.index.name = self._keys_id
                     # self._df_files_MBTI_disorders.index += 1
