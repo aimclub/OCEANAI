@@ -384,6 +384,7 @@ class Core(CoreMessages):
         self._df_files_ranking: pd.DataFrame = pd.DataFrame()  # DataFrame с ранжированными данными
         # DataFrame с ранжированными предпочтениями на основе данных
         self._df_files_priority: pd.DataFrame = pd.DataFrame()
+        self._df_files_priority_score: List[List[float]] = []
         # DataFrame с ранжированными коллегами на основе данных
         self._df_files_colleague: pd.DataFrame = pd.DataFrame()
         self._df_files_priority_skill: pd.DataFrame = pd.DataFrame()
@@ -3856,6 +3857,8 @@ class Core(CoreMessages):
                 else:
                     try:
 
+                        self._df_files_priority_score = []
+
                         self._df_files_priority = self._df_files.copy()
                         df_files_priority = self._df_files.copy()
 
@@ -3893,6 +3896,8 @@ class Core(CoreMessages):
                                     for i in range(number_importance_traits)
                                 ],
                             ] = importance_traits
+
+                            self._df_files_priority_score.append(curr_weights[idx_max_values])
                     except Exception:
                         self._other_error(self._unknown_err, out=out)
                         return self._df_files_priority
