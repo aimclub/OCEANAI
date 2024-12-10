@@ -4,41 +4,40 @@
 name: Python package
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    push:
+        branches: ['main']
+    pull_request:
+        branches: ['main']
 
 jobs:
-  build:
+    build:
+        runs-on: ubuntu-latest
+        strategy:
+            fail-fast: false
+            matrix:
+                python-version: ['3.10', '3.11', '3.12']
 
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        python-version: ["3.9", "3.10"]
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v3
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Setup FFmpeg
-      uses: FedericoCarboni/setup-ffmpeg@v2
-      id: setup-ffmpeg
-    - name: Install dependencies
-      run: |
-        sudo apt-get install -y autoconf automake pkg-config m4 libsndfile-dev libjack-dev libfftw3-dev libcairo2-dev libsamplerate0-dev
-        python -m pip install --upgrade pip
-        python -m pip install flake8 pytest
-        if [ -f docs/requirements.txt ]; then pip install -r docs/requirements.txt; fi
-    - name: Lint with flake8
-      run: |
-        # stop the build if there are Python syntax errors or undefined names
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Test with pytest
-      run: |
-        pytest test/unit_tests_fi_en.py test/unit_tests_mupta_ru.py
+        steps:
+            - uses: actions/checkout@v3
+            - name: Set up Python ${{ matrix.python-version }}
+              uses: actions/setup-python@v3
+              with:
+                  python-version: ${{ matrix.python-version }}
+            - name: Setup FFmpeg
+              uses: FedericoCarboni/setup-ffmpeg@v2
+              id: setup-ffmpeg
+            - name: Install dependencies
+              run: |
+                  sudo apt-get install -y autoconf automake pkg-config m4 libsndfile-dev libjack-dev libfftw3-dev libcairo2-dev libsamplerate0-dev
+                  python -m pip install --upgrade pip
+                  python -m pip install flake8 pytest
+                  if [ -f docs/requirements.txt ]; then pip install -r docs/requirements.txt; fi
+            - name: Lint with flake8
+              run: |
+                  # stop the build if there are Python syntax errors or undefined names
+                  flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+                  # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+                  flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+            - name: Test with pytest
+              run: |
+                  pytest test/unit_tests_fi_en.py test/unit_tests_mupta_ru.py
