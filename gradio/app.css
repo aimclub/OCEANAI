@@ -1,0 +1,283 @@
+.noti_err {
+    color: #B42E2C;
+}
+.noti_true {
+    color: #006900;
+}
+
+h1 > a {
+    display: contents;
+}
+
+div.app-flex-container {
+    display: flex;
+    gap: 6px;
+}
+
+div.media-container {
+    align-items: stretch;
+}
+
+div.video-column-container {
+    max-width: 640px;
+}
+
+div.video-sorted-container {
+    max-width: 640px;
+    max-height: 350px;
+}
+
+div.webcam,
+div.files-container {
+    height: 350px;
+    max-height: 350px;
+}
+
+div.webcam div[data-testid="video"] > div.wrap,
+div.webcam div[data-testid="video"] > div.upload-container {
+    height: 310px;
+}
+
+div.files-container tr {
+    padding-right: 20px;
+}
+
+div.files-container div.icon-buttons > button,
+div.video-sorted-container div.icon-buttons > button {
+    display: none;
+}
+
+div.webcam:hover label[data-testid="block-label"],
+div.video-container:hover label[data-testid="block-label"],
+div.files-container:hover label[data-testid="block-label"],
+div.video-container:hover label[data-testid="block-label"],
+div.video-sorted-container:hover label[data-testid="block-label"] {
+    display: none;
+}
+
+div.dataframe table > thead,
+div.dataframe table > tbody {
+    width: auto !important;
+    display: table-header-group;
+}
+
+div.dataframe div.table-wrap {
+    height: auto !important;
+}
+
+div.video-container div.file-preview-holder,
+div.files-container div.file-preview-holder {
+    overflow-y: scroll;
+    height: 100%;
+}
+
+div.webcam label[data-testid="block-label"],
+div.video-container label[data-testid="block-label"],
+div.files-container label[data-testid="block-label"] {
+    position: absolute;
+}
+
+.calculate_oceanai,
+.calculate_practical_task {
+    display: flex;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: var(--button-border-width) solid var(--button-primary-border-color);
+    background: var(--button-primary-background-fill);
+    color: var(--button-primary-text-color);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.examples_oceanai, .clear_oceanai {
+    display: flex;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.calculate_oceanai[disabled],
+.calculate_practical_task[disabled],
+.examples_oceanai[disabled],
+.clear_oceanai[disabled] {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.calculate_oceanai:hover:not([disabled]),
+.calculate_practical_task:hover:not([disabled]) {
+    border-color: var(--button-primary-border-color-hover);
+    background: var(--button-primary-background-fill-hover);
+    color: var(--button-primary-text-color-hover);
+}
+
+.calculate_oceanai:active:not([disabled]),
+.calculate_practical_task:active:not([disabled]),
+.examples_oceanai:active:not([disabled]),
+.clear_oceanai:active:not([disabled]) {
+    transform: scale(0.98);
+}
+
+.settings-container {
+    max-width: fit-content;
+}
+
+.number-container {
+    max-width: fit-content;
+    min-width: fit-content !important;
+}
+
+.dropdown-container {
+    max-width: fit-content;
+}
+
+div.notifications {
+    height: 85px;
+}
+
+div.languages-container_wrapper {
+    display: grid;
+    justify-content: end;
+    width: auto;
+    position: absolute;
+    right: 0px;
+    z-index: 10;
+}
+
+div.languages-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+}
+
+div.languages-container > div.country_flags {
+    display: contents;
+    min-width: none;
+}
+
+div.languages-container > div.country_flags > div.icon-buttons {
+    display: none;
+}
+
+div.languages-container > div.country_flags button {
+    width: fit-content;
+    cursor: default;
+}
+
+div.languages-container > div.country_flags div.image-container {
+    display: contents;
+    width: fit-content;
+}
+
+div.languages-container > div.country_flags div.image-container > button > div.image-frame > img {
+    height: 32px;
+}
+
+div.languages-container > div.country_flags div.image-container > div.icon-button-wrapper {
+    display: none;
+}
+
+.dropdown-language-container {
+    display: contents;
+}
+
+.dropdown-container > div > span[data-testid="block-info"] + div {
+    min-width: max-content;
+}
+
+div.gradio-container > div.main > div.wrap > div.contain > #component-0 > div.form {
+    display: flex;
+    width: fit-content;
+    float: left;
+    right: 0px;
+    position: absolute;
+    z-index: 2;
+}
+
+div.gradio-container > div.main > div.wrap > div.contain > #component-0 > div.tabs {
+    margin-top: 20px;
+}
+
+div.dataframe span.wrapper_mbti {
+    display: inline-block;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+div.dataframe span.wrapper_mbti > span.true, div.dataframe span.wrapper_mbti > span.err {
+    color: #FFFFFF;
+    display: inline-block;
+    padding: 2px;
+}
+
+div.dataframe span.wrapper_mbti > span.true {
+    background-color: #006900;
+}
+
+div.dataframe span.wrapper_mbti > span.err {
+    background-color: #B42E2C;
+}
+
+div.mbti-dataframe div.table-wrap {
+    --cell-width-0: 260px !important;
+}
+
+div.about_app pre {
+    text-wrap: wrap;
+}
+
+div.name-container, div.surname-container,
+div.email-container, div.phone-container {
+    gap: 4px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+div.name-container > div.metadata_name-logo,
+div.surname-container > div.metadata_surname-logo,
+div.email-container > div.metadata_email-logo,
+div.phone-container > div.metadata_phone-logo {
+    display: contents;
+    min-width: none;
+}
+
+div.name-container > div.metadata_name-logo button,
+div.surname-container > div.metadata_surname-logo button,
+div.email-container > div.metadata_email-logo button,
+div.phone-container > div.metadata_phone-logo button {
+    width: fit-content;
+    cursor: default;
+}
+
+div.name-container > div.metadata_name-logo div.image-container,
+div.surname-container > div.metadata_surname-logo div.image-container,
+div.email-container > div.metadata_email-logo div.image-container,
+div.phone-container > div.metadata_phone-logo div.image-container {
+    width: fit-content;
+    min-width: auto;
+}
+
+div.name-container > div.metadata_name-logo div.image-container > div.icon-button-wrapper,
+div.surname-container > div.metadata_surname-logo div.image-container > div.icon-button-wrapper,
+div.email-container > div.metadata_email-logo div.image-container > div.icon-button-wrapper,
+div.phone-container > div.metadata_phone-logo div.image-container > div.icon-button-wrapper {
+    display: none;
+}
+
+div.name-container > div.metadata_name-logo div.image-container > button > div > img,
+div.surname-container > div.metadata_surname-logo div.image-container > button > div > img,
+div.email-container > div.metadata_email-logo div.image-container > button > div > img,
+div.phone-container > div.metadata_phone-logo div.image-container > button > div > img {
+    height: 32px;
+}

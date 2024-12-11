@@ -1,0 +1,169 @@
+[AppSettings]
+APP_VERSION = "0.11.1"
+SERVER_NAME = "127.0.0.1"
+PORT = 7860
+CSS_PATH = "app.css"
+DEFAULT_LANG_ID = 0
+
+[InformationMessages]
+DESCRIPTIONS = [
+    "is an open-source framework for Big Five personality traits assessment and HR-processes automatization",
+    "- библиотека с открытым исходным кодом для оценивания большой пятерки качеств личности человека и автоматизации HR-процессов",
+]
+NOTI_VIDEOS = ["Select the video(s)", "Выберите видео"]
+PRACTICAL_TASKS_INFO = ["Choose a practical task", "Выберите практическую задачу"]
+PRACTICAL_SUBTASKS_INFO = ["Choose a practical subtask", "Выберите практическую подзадачу"]
+NOTI_IN_DEV = "In development"
+DROPDOWN_MBTI_INFO = "What personality type indicator are you interested in?"
+DROPDOWN_PROFESSIONAL_SKILLS_INFO = "What professional skill are you interested in?"
+DROPDOWN_DROPDOWN_COLLEAGUES_INFO = "What colleague are you interested in?"
+DROPDOWN_CANDIDATES_INFO = "What profession are you interested in?"
+DROPDOWN_LANGUAGES_INFO = "Select the language of the app"
+VALUE_FROM_TO_INFO = "Set value from {} to {}"
+SUM_WEIGHTS = "The sum of the weights of the personality traits should be 100, not {}"
+STEP_1 = [
+    "Step 1: Calculation of personality traits scores",
+    "Шаг 1: Вычисление оценок персональных качеств личности человека",
+]
+STEP_2 = [
+    "Step 2: Solving practical task",
+    "Шаг 2: Решение практической задачи",
+]
+
+[OtherMessages]
+VIDEO_FILES = ["Video Files", "Видеофайлы"]
+VIDEO_PLAYER = ["Video Player", "Видео проигрыватель"]
+CALCULATE_PT_SCORES = [
+    "Calculation of Big Five personality traits scores",
+    "Вычисление показателей Большой пятерки персональных качеств личности человека"
+]
+CALCULATE_PT_SCORES_ERR = [
+    "Personality traits scores have not been calculated. Ensure that there are uncovered face and speech of person in the video",
+    "Оценки персональных качеств личностей человека не были вычислены. Убедитесь, что в видео присутствует не перекрытое лицо и речь человека"
+]
+CALCULATE_PRACTICAL_TASK = "Solving practical task"
+CLEAR_APP = ["Clear", "Сброс"]
+EXAMPLES_APP = ["Examples", "Примеры"]
+EXAMPLE_APP = ["Example", "Пример"]
+EXPORT_PT_SCORES = [
+    "Export Big Five personality traits to a CSV file",
+    "Экспорт показателей Большой пятерки персональных качеств личности человека в CSV файл"]
+EXPORT_PG = "Export ranking professional groups results to a CSV file"
+EXPORT_PS = "Export ranking professional skill results to a CSV file"
+EXPORT_WT = "Export ranking effective work teams results to a CSV file"
+EXPORT_CP = "Export consumer preferences for industrial goods results to a CSV file"
+EXPORT_MBTI = "Export ranking personality type results to a CSV file"
+NOTI_CALCULATE = ["You can calculate Big Five personality traits scores", "Вы можете рассчитать показатели Большой пятерки персональных качеств личности человека"]
+SWITCHEHG_MODES_ONLINE = ["Webcam", "Веб-камера"]
+SWITCHEHG_MODES_OFFLINE = ["Video Files", "Видеофайлы"]
+
+[Labels]
+APP_LABEL = ["⭐ App", "⭐ Приложение"]
+ABOUT_APP_LABEL = ["💡 About the App", "💡 О приложении"]
+ABOUT_AUTHORS_LABEL = ["🎭 About the Authors", "🎭 Об авторах"]
+REQUIREMENTS_LABEL = ["📋 Requirements", "📋 Зависимости"]
+PRACTICAL_TASKS_LABEL = ["Practical tasks", "Практические задачи"]
+PRACTICAL_SUBTASKS_LABEL = ["Practical subtasks", "Практические подзадачи"]
+THRESHOLD_MBTI_LABEL = "Polarity traits threshold"
+THRESHOLD_PROFESSIONAL_SKILLS_LABEL = "Polarity traits threshold"
+TARGET_SCORE_OPE_LABEL = "Openness target score"
+TARGET_SCORE_CON_LABEL = "Conscientiousness target score"
+TARGET_SCORE_EXT_LABEL = "Extraversion target score"
+TARGET_SCORE_AGR_LABEL = "Agreeableness target score"
+TARGET_SCORE_NNEU_LABEL = "Non-Neuroticism target score"
+EQUAL_COEFFICIENT_LABEL = "Equal coefficient"
+THRESHOLD_TARGET_SCORE_LABEL = "Polarity traits threshold"
+NUMBER_PRIORITY_LABEL = "Priority number"
+NUMBER_IMPORTANCE_TRAITS_LABEL = "Importance traits number"
+NUMBER_IMPORTANCE_OPE_LABEL = "Openness weight"
+NUMBER_IMPORTANCE_CON_LABEL = "Conscientiousness weight"
+NUMBER_IMPORTANCE_EXT_LABEL = "Extraversion weight"
+NUMBER_IMPORTANCE_AGR_LABEL = "Agreeableness weight"
+NUMBER_IMPORTANCE_NNEU_LABEL = "Non-Neuroticism weight"
+THRESHOLD_CONSUMER_PREFERENCES_LABEL = "Polarity traits threshold"
+LANGUAGES_LABEL = "Languages"
+NOTE_MBTI_LABEL = "Note: What are Personality Types of MBTI?"
+APP_VERSION = ["Version", "Версия"]
+
+[TabCreators]
+"⭐ App" = "app_tab"
+"💡 About the App" = "about_app_tab"
+"🎭 About the Authors" = "about_authors_tab"
+"📋 Requirements" = "requirements_app_tab"
+
+[Filenames]
+PT_SCORES = "personality_traits_scores.csv"
+PT_SKILLS_SCORES = "personality_skills_scores.csv"
+COLLEAGUE_RANKING = "_colleague_ranking.csv"
+CAR_CHARACTERISTICS = "auto_characteristics_priorities.csv"
+MDA_CATEGORIES = "divice_characteristics_priorities.csv"
+POTENTIAL_CANDIDATES = "potential_candidates.csv"
+MBTI_JOB = "mbti_job_match.csv"
+
+[Dataframes]
+PT_SCORES = [
+    [
+        "Person ID", "Path", "Openness", "Conscientiousness", "Extraversion", "Agreeableness", "Non-Neuroticism"
+    ],
+    [
+        "Идентификатор", "Имя файла",
+        "Открытость к опыту", "Добросовестность", "Экстроверсия", "Доброжелательность", "Эмоциональная стабильность"
+    ]
+]
+
+[Images]
+LANGUAGES = ["UK.png", "RU.png"]
+
+[StaticPaths]
+IMAGES = "images/"
+
+[Settings]
+LANGUAGES_EN = ["English", "Russian"]
+LANGUAGES_RU = ["Английский", "Русский"]
+SHORT_PROFESSIONAL_SKILLS = ["OPE", "CON", "EXT", "AGR", "NNEU"]
+DROPDOWN_PROFESSIONAL_SKILLS = ["Analytical", "Interactive", "Routine", "Non-Routine"]
+DROPDOWN_COLLEAGUES = ["major", "minor"]
+DROPDOWN_CANDIDATES = [
+    "Managers/executives",
+    "Entrepreneurship",
+    "Social/Non profit making professions",
+    "Public sector professions",
+    "Scientists/researchers, and engineers",
+    "Custom",
+]
+DROPDOWN_MBTI = [
+    "The Inspector (ISTJ): Accountant, Auditor, Budget Analyst, Financial Manager, Developer, Systems Analyst, Librarian etc.",
+    "The Protector (ISFJ): Nurse, Doctor, Veterinarian or Veterinary Nurse/Assistant, Social Worker, Agricultural or Food Scientist, Secretary, Driver, etc.",
+    "The Counselor (INFJ): Psychologist, Human Resources Professional, Office Manager, Training Specialist, Graphic Designer, etc.",
+    "The Mastermind (INTJ): Animator, Architect, Content Writer, Photographer, TV Journalist, Video Editor, Business Development, Executive, Professor, etc.",
+    "The Crafter (ISTP): Engineer, Technician, Construction Worker, Inspector, Forensic Scientist, Software Engineer, Computer Programmer, etc.",
+    "The Composer (ISFP): Marketing Assistant, Dancer, Chef, Office Administrator, Artist, Interior Designer, Legal Secretary, Nurse, etc.",
+    "The Healer (INFP): Writer, Multimedia Designer, Customer Relations Manager, Special Education Teacher, Coach, Editor, Fashion Designer, etc.",
+    "The Architect (INTP): Technical Writer, Web Developer, Information Security Analyst, Researcher, Scientist, Lawyer, etc.",
+    "The Promoter (ESTP): Customer Care Specialist, Actor, Personal Trainer, Brand Ambassador, Manager, Entrepreneur, Creative Director, Police Officer, Marketing Officer, Manufacturer, etc.",
+    "The Performer (ESFP): Flight Attendant, Entertainer, Teacher, Public Relations Manager, Sales Representative, Event Planner, etc.",
+    "The Champion (ENFP): Healthcare Professional, Producer, Retail Sales Associate, Customer Service; Screenwriter; TV/Radio Host, etc.",
+    "The Visionary (ENTP): Engineer, Market Researcher, Social Media Manager, Management Analyst, Digital Marketing Executive, Business Consultant, Game Designer/Developer, Sales Manager, etc.",
+    "The Supervisor (ESTJ): Managing Director, Hotel Manager, Finance Officer, Judge, Real Estate Agent, Chief Executive Officer, Chef, Business Development Manager, Telemarketer, etc.",
+    "The Provider (ESFJ): Technical Support Specialist, Account Manager, College Professor, Medical Researcher, Bookkeeper, Photojournalist, etc.",
+    "The Teacher (ENFJ): Public Relations Manager, Sales Manager, Human Resource Director, Art Director, Counselor, etc.",
+    "The Commander (ENTJ): Construction Supervisor, Health Services Administrator, Financial Accountant, Auditor, Lawyer, School Principal, Chemical Engineer, Database Manager, etc.",
+]
+DROPDOWN_MBTI_DEL_COLS = ["EI", "SN", "TF", "JP", "Match"]
+DROPDOWN_MBTI_DEL_COLS_WEBCAM = ["Path"]
+SHOW_VIDEO_METADATA = true
+SUPPORTED_VIDEO_EXT = ["mp4", "mov", "avi", "flv"]
+TYPE_MODES = ["Files", "Web"]
+
+[Values]
+TARGET_SCORES = [0.527886, 0.522337, 0.458468, 0.51761, 0.444649]
+0_100 = [0, 100]
+
+[Links]
+PROFESSIONAL_SKILLS = "https://download.sberdisk.ru/download/file/478678231?token=0qiZwliLtHWWYMv&filename=professional_skills.csv"
+FINDING_COLLEAGUE = "https://download.sberdisk.ru/download/file/478675819?token=LuB7L1QsEY0UuSs&filename=colleague_ranking.csv"
+CAR_CHARACTERISTICS = "https://download.sberdisk.ru/download/file/478675818?token=EjfLMqOeK8cfnOu&filename=auto_characteristics.csv"
+MDA_CATEGORIES = "https://download.sberdisk.ru/download/file/478676690?token=7KcAxPqMpWiYQnx&filename=divice_characteristics.csv"
+CLOTHING_SC = "https://download.sberdisk.ru/download/file/493644097?token=KGtSGMxjZtWXmBz&filename=df_%D1%81lothing_style_correlation.csv"
+PROFESSIONS = "https://download.sberdisk.ru/download/file/478675798?token=fF5fNZVpthQlEV0&filename=traits_priority_for_professions.csv"
+MBTI = "https://download.sberdisk.ru/download/file/493644095?token=EX7hFxNJhMoLumI&filename=df_mbti_correlation.csv"
