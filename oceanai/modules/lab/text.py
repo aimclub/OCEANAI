@@ -163,10 +163,10 @@ class Text(TextMessages):
         self._text_model_b5: Optional[nn.Module] = None
 
         # Словарь для формирования экспертных признаков
-        # self._text_features: str = "https://drive.usercontent.google.com/download?id=1A_WqDPXzEmLLxjpl8YYeftp2dA9OuBRp&export=download&authuser=2&confirm=t&uuid=d0bac80d-b9ef-4c00-aa15-95398e3af59d&at=AN_67v3V4MHMTjVFeALLLX-CXzfb:1727453279624"
-        self._text_features: str = (
-            "https://download.sberdisk.ru/download/file/473268573?token=X3NB5VYGyPn8mjw&filename=LIWC2007.txt"
-        )
+        self._text_features: str = "https://drive.usercontent.google.com/download?id=1A_WqDPXzEmLLxjpl8YYeftp2dA9OuBRp&export=download&authuser=2&confirm=t&uuid=d0bac80d-b9ef-4c00-aa15-95398e3af59d&at=AN_67v3V4MHMTjVFeALLLX-CXzfb:1727453279624"
+        # self._text_features: str = (
+        #    "https://download.sberdisk.ru/download/file/473268573?token=X3NB5VYGyPn8mjw&filename=LIWC2007.txt"
+        #)
 
         # BERT модель
         # self._bert_multi_model: str = "https://drive.usercontent.google.com/download?id=1yedNslt8jjwXm4pa3K15VqUg-JISJMYf&export=download&authuser=2&confirm=t&uuid=4071942c-989a-4a24-8ddd-60e964def6ec&at=AN_67v2cav8P41yss1AlvWGxXCQk:1727453235831"
